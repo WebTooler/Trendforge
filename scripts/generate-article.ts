@@ -62,29 +62,60 @@ const prompt = buildArticlePrompt(brief);
 fs.mkdirSync('data', { recursive: true });
 fs.writeFileSync('data/article-brief.json', JSON.stringify({ generatedAt: new Date().toISOString(), brief, prompt }, null, 2));
 
-if (!process.env.OPENAI_API_KEY) { console.log('OPENAI_API_KEY is not configured. Brief created; publishing blocked.'); process.exit(0); }
+if (!process.env.OPENAI_API_KEY) {
+  console.log('OPENAI_API_KEY is not configured. Brief created; publishing blocked.');
+  process.exit(0);
+}
 
-const response = await fetch('https://api.openai.com/v1/responses', {
-  method: 'POST',
-  headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    model: process.env.OPENAI_MODEL || 'gpt-5.6-luna',
-    input: `${prompt}\n\nReturn ONLY valid JSON with keys: title, description, content. Content must be at least 1200 words, contain useful H2 headings, and be an original synthesis. Do not reproduce source sentences, paragraphs, or headlines. Do not invent facts, quotes, statistics, dates, or capabilities.`,
-  }),
-});
-if (!response.ok) throw new Error(`OpenAI API error: ${response.status} ${await response.text()}`);
-const result = await response.json() as { output_text?: string };
-if (!result.output_text) throw new Error('OpenAI returned no output text.');
+let response: Response;
+try {
+  response = await fetch('https://api.openai.com/v1/responses', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: process.env.OPENAI_MODEL || 'gpt-5.6-luna',
+      input: `${prompt}\n\nReturn ONLY valid JSON with keys: title, description, content. Content must be at least 1200 words, contain useful H2 headings, and be an original synthesis. Do not reproduce source sentences, paragraphs, or headlines. Do not invent facts, quotes, statistics, dates, or capabilities.`,
+    }),
+  });
+} catch (error) {
+  console.log(`OpenAI request could not be completed: ${error instanceof Error ? error.message : String(error)}. Publishing blocked.`);
+  process.exit(0);
+}
+
+if (!response.ok) {
+  const body = await response.text();
+  console.log(`OpenAI API returned ${response.status}: ${body.slice(0, 1000)}. Publishing blocked.`);
+  process.exit(0);
+}
+
+const result = await response.json() as {
+  output_text?: string;
+  output?: Array<{ type?: string; content?: Array<{ type?: string; text?: string }> }>;
+};
+
+const outputText = result.output_text || result.output
+  ?.flatMap((item) => item.content ?? [])
+  .filter((item) => item.type === 'output_text' && item.text)
+  .map((item) => item.text)
+  .join('') || '';
+
+if (!outputText.trim()) {
+  console.log('OpenAI returned no usable text. Publishing blocked.');
+  process.exit(0);
+}
 
 let generated: { title: string; description: string; content: string };
 try {
-  generated = JSON.parse(result.output_text);
+  const cleaned = outputText.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
+  generated = JSON.parse(cleaned);
 } catch {
-  throw new Error('AI output was not valid JSON; publishing blocked.');
+  console.log('AI output was not valid JSON; publishing blocked.');
+  process.exit(0);
 }
 
 if (!generated.title?.trim() || !generated.description?.trim() || !generated.content?.trim()) {
-  throw new Error('AI output is missing required article fields; publishing blocked.');
+  console.log('AI output is missing required article fields; publishing blocked.');
+  process.exit(0);
 }
 if (existingTitles.has(generated.title.toLowerCase().trim())) {
   console.log('Generated title already exists; publication blocked.');
