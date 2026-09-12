@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const basePath = '/Trendforge';
 const feedUrl = 'https://webtooler.github.io/Trendforge/feed.xml';
-const feedlyUrl = `https://feedly.com/i/subscription/feed/${encodeURIComponent(feedUrl)}`;
+const feedlyUrl = 'https://feedly.com/';
 
 export default function SubscribePage() {
   const [copied, setCopied] = useState(false);
@@ -24,25 +24,33 @@ export default function SubscribePage() {
     <section className="subscribe-page">
       <div className="eyebrow">TrendForge subscription</div>
       <h1>Get the signal.<br/><span>Skip the noise.</span></h1>
-      <p className="subscribe-lead">Follow TrendForge for useful AI, technology and digital-life stories. Pick the option that works best for you.</p>
+      <p className="subscribe-lead">Follow TrendForge for useful AI, technology and digital-life stories. Choose the reader you already use.</p>
 
       <div className="subscribe-options">
         <article className="subscribe-option">
           <div className="option-number">01</div>
-          <h2>Subscribe with Feedly</h2>
-          <p>One tap opens TrendForge in Feedly, where you can follow new articles alongside your other feeds.</p>
-          <a className="subscribe-button" href={feedlyUrl} target="_blank" rel="noreferrer">Add to Feedly ↗</a>
+          <h2>Add TrendForge to Feedly</h2>
+          <p>Open Feedly, go to <strong>Follow Sources</strong>, search for the RSS address below, then tap Follow. This reliable flow avoids depending on a Feedly deep link that can expire or be rejected.</p>
+          <a className="subscribe-button" href={feedlyUrl} target="_blank" rel="noreferrer">Open Feedly ↗</a>
+          <button className="notify-button light-button" type="button" onClick={copyFeed}>{copied ? 'Feed URL copied ✓' : 'Copy RSS feed URL'}</button>
         </article>
         <article className="subscribe-option">
           <div className="option-number">02</div>
           <h2>Use any RSS reader</h2>
-          <p>Copy the TrendForge feed address and paste it into Feedly, Inoreader or another RSS reader.</p>
+          <p>Copy the public TrendForge feed and paste it into Feedly, Inoreader, NetNewsWire or another RSS reader.</p>
           <button className="notify-button light-button" type="button" onClick={copyFeed}>{copied ? 'Feed URL copied ✓' : 'Copy RSS feed URL'}</button>
           <a className="plain-feed-link" href={`${basePath}/feed.xml`} target="_blank" rel="noreferrer">View RSS feed →</a>
         </article>
       </div>
 
-      <div className="subscribe-note"><strong>What about browser notifications?</strong><br/>The notification permission control is ready, but real push delivery needs a push service and subscriber storage. We will connect that as the next subscription upgrade.</div>
+      <div className="subscribe-steps">
+        <div><strong>1</strong><span>Open Feedly</span></div>
+        <div><strong>2</strong><span>Choose Follow Sources / search</span></div>
+        <div><strong>3</strong><span>Paste the copied RSS URL</span></div>
+        <div><strong>4</strong><span>Select TrendForge and tap Follow</span></div>
+      </div>
+
+      <div className="subscribe-note"><strong>Browser notifications</strong><br/>We are not pretending this is live push yet. Browser permission can be enabled, but real push delivery requires a push service and subscriber storage. That will be added only when the full delivery path is ready.</div>
     </section>
     <footer className="footer"><span>© 2026 TrendForge</span><span>AI · Technology · Digital Life · How-To</span></footer>
   </main>;
