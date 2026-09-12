@@ -36,12 +36,12 @@ export function buildArticlePrompt(brief: ArticleBrief): string {
   ].join('\n\n');
 }
 
-export function editorialGate(article: { title: string; description: string; content: string; sources: string[] }) {
+export function editorialGate(article: { title: string; description: string; content: string; sources: { url: string }[] }) {
   const checks = {
     title: article.title.trim().length >= 20 && article.title.trim().length <= 110,
     description: article.description.trim().length >= 80,
     content: article.content.trim().length >= 900,
-    sources: article.sources.length >= 2 && article.sources.every((url) => url.startsWith('https://')),
+    sources: article.sources.length >= 2 && article.sources.every((source) => source.url.startsWith('https://')),
   };
   const passed = Object.values(checks).every(Boolean);
   return { passed, checks };
