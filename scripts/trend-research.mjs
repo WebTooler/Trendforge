@@ -7,8 +7,19 @@ const feeds = [
   ['How-To', 'https://news.google.com/rss/search?q=how%20to%20software%20OR%20apps%20guide&hl=en-US&gl=US&ceid=US:en'],
 ];
 
-const decode = (s = '') => s.replace(/<!\[CDATA\[|\]\]>/g, '').replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').trim();
+const decode = (s = '') => s
+  .replace(/<!\[CDATA\[|\]\]>/g, '')
+  .replace(/<[^>]*>/g, '')
+  .replace(/&amp;/g, '&')
+  .replace(/&#39;/g, "'")
+  .replace(/&quot;/g, '"')
+  .trim();
+
 const tag = (xml, name) => [...xml.matchAll(new RegExp(`<${name}(?:[^>]*)>([\\s\\S]*?)<\\/${name}>`, 'i'))].map(m => decode(m[1]));
+const attrTag = (xml, name, attr) => {
+  const match = xml.match(new RegExp(`<${name}[^>]*\\b${attr}=["']([^"']+)["'][^>]*>([\\s\\S]*?)<\\/${name}>`, 'i'));
+  return match ? { value: decode(match[2]), attribute: match[1] } : null;
+};
 
 const items = [];
 for (const [category, url] of feeds) {
@@ -22,9 +33,26 @@ for (const [category, url] of feeds) {
       const link = tag(block, 'link')[0];
       const description = tag(block, 'description')[0] || '';
       const publishedAt = tag(block, 'pubDate')[0] || new Date().toISOString();
-      if (title && link) items.push({ title, link, source: category, publishedAt: new Date(publishedAt).toISOString(), category, description });
+      const sourceTag = attrTag(block, 'source', 'url');
+      if (!title || !link) continue;
+
+      let resolvedUrl = link;
+      try {
+        const articleResponse = await fetch(link, { method: 'HEAD', redirect: 'follow', headers: { 'user-agent': 'TrendForgeBot/1.0' } });
+        if (articleResponse.url?.startsWith('https://')) resolvedUrl = articleResponse.url;
+      } catch {}
+
+      items.push({
+        title,
+        link: resolvedUrl,
+        source: sourceTag?.value || 'Unknown publisher',
+        sourceUrl: sourceTag?.attribute || '',
+        publishedAt: new Date(publishedAt).toISOString(),
+        category,
+        description,
+      });
     }
-  } catch (error) {
+  } catch {
     console.log(`Feed failed: ${category}`);
   }
 }
