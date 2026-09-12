@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-09-12T19:01:03.449Z",
+  "provider": "Gemini",
+  "editorial": {
+    "passed": true,
+    "checks": {
+      "title": true,
+      "description": true,
+      "content": true,
+      "sources": true
+    }
+  },
+  "copyright": {
+    "passed": true,
+    "checks": {
+      "noSuspiciousTemplate": true,
+      "validSources": true,
+      "safeImages": true
+    }
+  }
+}
