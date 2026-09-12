@@ -28,6 +28,7 @@ export function buildArticlePrompt(brief: ArticleBrief): string {
     'Use clear H2 sections, short paragraphs, and practical takeaways where appropriate.',
     'Do not invent facts, quotes, statistics, dates, product capabilities, or sources.',
     'Every factual claim that depends on the supplied sources must be traceable to them.',
+    'Return clean article prose with Markdown H2 headings (## Heading). Do not return HTML tags.',
     `Title: ${brief.title}`,
     `Category: ${brief.category}`,
     `Editorial angle: ${brief.angle}`,
@@ -39,13 +40,15 @@ export function buildArticlePrompt(brief: ArticleBrief): string {
 export function editorialGate(article: { title: string; description: string; content: string; sources: { url: string }[] }) {
   const normalized = article.content.replace(/\s+/g, ' ').trim();
   const words = normalized.split(/\s+/).filter(Boolean).length;
-  const headings = (article.content.match(/(^|\n)#{2}\s+/g) || []).length;
+  const headings = (article.content.match(/(^|\n)#{2}\s+/g) || []).length + (article.content.match(/<h2\b/gi) || []).length;
+  const suspicious = /<script\b|<iframe\b|javascript\s*:/i.test(article.content);
   const checks = {
     title: article.title.trim().length >= 20 && article.title.trim().length <= 110,
     description: article.description.trim().length >= 80 && article.description.trim().length <= 320,
     content: normalized.length >= 900 && words >= 150,
-    structure: headings >= 2 || /<h2\b/i.test(article.content),
+    structure: headings >= 2,
     sources: article.sources.length >= 2 && article.sources.every((source) => /^https:\/\//.test(source.url)),
+    noUnsafeMarkup: !suspicious,
   };
   const passed = Object.values(checks).every(Boolean);
   return { passed, checks };
