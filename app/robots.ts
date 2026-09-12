@@ -1,5 +1,10 @@
 import type { MetadataRoute } from 'next';
 
+const base = 'https://webtooler.github.io/Trendforge';
+
 export default function robots(): MetadataRoute.Robots {
-  return { rules: { userAgent: '*', allow: '/' }, sitemap: 'https://trendforge.example/sitemap.xml' };
+  return {
+    rules: { userAgent: '*', allow: '/' },
+    sitemap: `${base}/sitemap.xml`,
+  };
 }
