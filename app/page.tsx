@@ -9,7 +9,7 @@ export default function Home() {
   const secondary = latestArticles.slice(1, 4);
 
   return <main className="site">
-    <header className="header"><nav className="nav"><a className="logo" href={`${basePath}/`}>Trend<span>Forge</span></a><div className="links"><a href="#latest">Latest</a><a href="#topics">Topics</a><a href={`${basePath}/about/`}>About</a><a className="nav-subscribe" href="#subscribe">Subscribe</a></div></nav></header>
+    <header className="header"><nav className="nav"><a className="logo" href={`${basePath}/`}>Trend<span>Forge</span></a><div className="links"><a href="#latest">Latest</a><a href="#topics">Topics</a><a href={`${basePath}/about/`}>About</a><a className="nav-subscribe" href={`${basePath}/subscribe/`}>Subscribe</a></div></nav></header>
     <section className="hero"><div className="eyebrow">Global tech & digital culture</div><h1>What matters.<br/><span>Explained simply.</span></h1><p>TrendForge turns fast-moving technology, AI and digital trends into useful stories you can understand and act on.</p></section>
 
     <SubscribePanel />
