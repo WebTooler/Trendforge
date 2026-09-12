@@ -35,8 +35,8 @@ const attr = (xml, name, attribute) => {
 };
 
 const extractBlocks = (xml) => [
-  ...(xml.match(/<item\\b[\\s\\S]*?<\\/item>/gi) ?? []),
-  ...(xml.match(/<entry\\b[\\s\\S]*?<\\/entry>/gi) ?? []),
+  ...(xml.match(/<item\b[\s\S]*?<\/item>/gi) ?? []),
+  ...(xml.match(/<entry\b[\s\S]*?<\/entry>/gi) ?? []),
 ];
 
 const extractLink = (block) => {
