@@ -1,0 +1,36 @@
+name: TrendForge AI Writer
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  writer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate article
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: node scripts/generate-with-openai.mjs
+
+      - name: Save generated draft
+        if: ${{ hashFiles('data/generated-article.json') != '' }}
+        run: |
+          git config user.name 'TrendForge Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/generated-article.json
+          git diff --cached --quiet || git commit -m 'chore: save generated article draft'
+          git push
