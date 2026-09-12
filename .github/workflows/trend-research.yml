@@ -1,0 +1,30 @@
+name: TrendForge Research
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Collect trending candidates
+        run: node scripts/trend-research.mjs
+      - name: Commit candidates
+        run: |
+          git config user.name 'TrendForge Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/trend-candidates.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore: refresh trend candidates'
+          git push
