@@ -1,4 +1,5 @@
 import { articles } from '@/lib/articles';
+import SubscribePanel from '@/app/components/SubscribePanel';
 
 const basePath = '/Trendforge';
 const latestArticles = [...articles].sort((a, b) => b.date.localeCompare(a.date));
@@ -8,8 +9,10 @@ export default function Home() {
   const secondary = latestArticles.slice(1, 4);
 
   return <main className="site">
-    <header className="header"><nav className="nav"><a className="logo" href={`${basePath}/`}>Trend<span>Forge</span></a><div className="links"><a href="#latest">Latest</a><a href="#topics">Topics</a><a href={`${basePath}/about/`}>About</a></div></nav></header>
+    <header className="header"><nav className="nav"><a className="logo" href={`${basePath}/`}>Trend<span>Forge</span></a><div className="links"><a href="#latest">Latest</a><a href="#topics">Topics</a><a href={`${basePath}/about/`}>About</a><a className="nav-subscribe" href="#subscribe">Subscribe</a></div></nav></header>
     <section className="hero"><div className="eyebrow">Global tech & digital culture</div><h1>What matters.<br/><span>Explained simply.</span></h1><p>TrendForge turns fast-moving technology, AI and digital trends into useful stories you can understand and act on.</p></section>
+
+    <SubscribePanel />
 
     <section className="grid" id="latest">
       {featured ? <article className="card featured"><div className="tag">{featured.category} · {featured.readTime}</div><h2>{featured.title}</h2><p>{featured.description}</p><a className="read-button" href={`${basePath}/article/${featured.slug}/`}>Read the story <span>→</span></a></article> : <article className="card featured"><div className="tag">Featured</div><h2>The internet changes every day. You don’t have to keep up with all of it.</h2><p>We research the signal, cut through the noise and explain what a trend means for you.</p></article>}
