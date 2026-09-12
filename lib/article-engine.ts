@@ -37,17 +37,23 @@ export function buildArticlePrompt(brief: ArticleBrief): string {
 }
 
 export function editorialGate(article: { title: string; description: string; content: string; sources: { url: string }[] }) {
+  const normalized = article.content.replace(/\s+/g, ' ').trim();
+  const words = normalized.split(/\s+/).filter(Boolean).length;
+  const headings = (article.content.match(/(^|\n)#{2}\s+/g) || []).length;
   const checks = {
     title: article.title.trim().length >= 20 && article.title.trim().length <= 110,
-    description: article.description.trim().length >= 80,
-    content: article.content.trim().length >= 900,
-    sources: article.sources.length >= 2 && article.sources.every((source) => source.url.startsWith('https://')),
+    description: article.description.trim().length >= 80 && article.description.trim().length <= 320,
+    content: normalized.length >= 900 && words >= 150,
+    structure: headings >= 2 || /<h2\b/i.test(article.content),
+    sources: article.sources.length >= 2 && article.sources.every((source) => /^https:\/\//.test(source.url)),
   };
   const passed = Object.values(checks).every(Boolean);
   return { passed, checks };
 }
 
 export function articleToMarkdown(article: GeneratedArticle): string {
+  const safeTitle = article.title.replace(/"/g, '\\"').replace(/\r?\n/g, ' ');
+  const safeDescription = article.description.replace(/"/g, '\\"').replace(/\r?\n/g, ' ');
   const sourceList = article.sources.map((s) => `- [${s.title}](${s.url})`).join('\n');
-  return `---\ntitle: "${article.title.replace(/"/g, '\\"')}"\ndescription: "${article.description.replace(/"/g, '\\"')}"\nslug: "${article.slug}"\ncategory: "${article.category}"\npublishedAt: "${article.generatedAt}"\n---\n\n${article.content.trim()}\n\n## Sources\n\n${sourceList}\n`;
+  return `---\ntitle: "${safeTitle}"\ndescription: "${safeDescription}"\nslug: "${article.slug}"\ncategory: "${article.category}"\npublishedAt: "${article.generatedAt}"\n---\n\n${article.content.trim()}\n\n## Sources\n\n${sourceList}\n`;
 }
