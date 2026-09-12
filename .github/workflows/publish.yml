@@ -1,0 +1,42 @@
+name: TrendForge Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Score trends
+        run: npx tsx scripts/score-trends.ts
+
+      - name: Generate article brief
+        run: npx tsx scripts/generate-article.ts
+
+      - name: Build site
+        run: npm run build
+
+      - name: Commit pipeline output
+        run: |
+          git config user.name 'trendforge-bot'
+          git config user.email 'trendforge-bot@users.noreply.github.com'
+          git add data content/articles
+          git diff --cached --quiet || git commit -m 'chore: update TrendForge content pipeline'
+          git push
