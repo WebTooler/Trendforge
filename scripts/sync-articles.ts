@@ -4,6 +4,11 @@ import path from 'node:path';
 const dir = 'content/articles';
 const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort() : [];
 
+if (files.length === 0) {
+  console.log('No generated articles found; preserving the existing article index.');
+  process.exit(0);
+}
+
 type Article = {
   slug: string;
   title: string;
