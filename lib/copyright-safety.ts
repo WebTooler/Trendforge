@@ -22,20 +22,24 @@ export function filterSafeImages(images: ImageCandidate[]): ImageCandidate[] {
 }
 
 export function copyrightSafetyGate(article: { content: string; sources: string[]; images: ImageCandidate[] }) {
-  const normalized = article.content.toLowerCase();
+  const normalized = article.content.toLowerCase().replace(/\s+/g, ' ').trim();
   const suspiciousPhrases = [
     'copy and paste',
-    'as reported by',
     'according to the article above',
     'reproduced from',
+    'verbatim from',
+    'copied from',
+    'this article says',
   ];
 
+  const sentenceCount = normalized.split(/[.!?]+/).map((s) => s.trim()).filter(Boolean).length;
+  const hasUsefulLength = normalized.length >= 900 && sentenceCount >= 6;
   const noSuspiciousTemplate = !suspiciousPhrases.some((phrase) => normalized.includes(phrase));
-  const validSources = article.sources.length >= 2 && article.sources.every((url) => url.startsWith('https://'));
+  const validSources = article.sources.length >= 2 && article.sources.every((url) => /^https:\/\//.test(url));
   const safeImages = article.images.every(isImageLicenseAllowed);
 
   return {
-    passed: noSuspiciousTemplate && validSources && safeImages,
-    checks: { noSuspiciousTemplate, validSources, safeImages },
+    passed: hasUsefulLength && noSuspiciousTemplate && validSources && safeImages,
+    checks: { hasUsefulLength, noSuspiciousTemplate, validSources, safeImages },
   };
 }
