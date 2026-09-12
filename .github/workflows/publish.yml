@@ -29,6 +29,38 @@ jobs:
         run: node scripts/trend-research.mjs
       - name: Score trends
         run: npx tsx scripts/score-trends.ts
+      - name: AI provider health check
+        run: |
+          node --input-type=module <<'NODE'
+          const prompt = 'Return ONLY valid JSON with exactly one key named ok. Its value must be true.';
+          async function call(name, fn) {
+            try {
+              const text = await fn();
+              const parsed = JSON.parse(text.replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'').trim());
+              if (parsed.ok !== true) throw new Error('invalid JSON response');
+              console.log(`AI provider health: ${name} PASS`);
+              return true;
+            } catch (e) {
+              console.log(`AI provider health: ${name} FAIL - ${e?.message || e}`);
+              return false;
+            }
+          }
+          const results = [];
+          if (process.env.GROQ_API_KEY) results.push(await call('Groq', async () => {
+            const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+              method:'POST', headers:{Authorization:`Bearer ${process.env.GROQ_API_KEY}`,'Content-Type':'application/json'},
+              body:JSON.stringify({model:process.env.GROQ_MODEL||'openai/gpt-oss-20b',max_completion_tokens:300,response_format:{type:'json_object'},messages:[{role:'user',content:prompt}]})
+            }); if(!r.ok) throw new Error(`${r.status}: ${(await r.text()).slice(0,300)}`);
+            return (await r.json()).choices?.[0]?.message?.content || '';
+          }));
+          if (process.env.GEMINI_API_KEY) results.push(await call('Gemini', async () => {
+            const model=process.env.GEMINI_MODEL||'gemini-3.6-flash';
+            const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{method:'POST',headers:{'x-goog-api-key':process.env.GEMINI_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{responseMimeType:'application/json'}})});
+            if(!r.ok) throw new Error(`${r.status}: ${(await r.text()).slice(0,300)}`);
+            return (await r.json()).candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('') || '';
+          }));
+          if (!results.some(Boolean)) { console.log('No AI provider health check could run.'); process.exit(1); }
+          NODE
       - name: Generate and quality-check article
         run: npx tsx scripts/generate-article.ts
       - name: Sync published articles into site
