@@ -14,6 +14,23 @@ type Trend = {
   score?: number;
 };
 
+const stopWords = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies']);
+const topicWords = (text = '') => new Set(text.toLowerCase().split(/[^a-z0-9]+/).filter((word) => word.length >= 4 && !stopWords.has(word)));
+
+// Google News uses one generic feed label, so recover the actual publisher from its RSS description when possible.
+const publisherName = (item: Trend) => {
+  const explicit = (item.sourceName || item.source || '').trim();
+  if (explicit && explicit.toLowerCase() !== 'google news') return explicit;
+  const match = item.description?.match(/<font[^>]*>([^<]+)<\/font>/i);
+  return match?.[1]?.trim() || explicit || 'Unknown publisher';
+};
+
+const blockedPublishers = new Set(['facebook.com', 'facebook', 'reddit', 'pinterest', 'youtube', 'tiktok', 'x.com']);
+const isCrediblePublisher = (name: string) => {
+  const normalized = name.toLowerCase().trim();
+  return normalized && !blockedPublishers.has(normalized) && !normalized.includes('facebook.com');
+};
+
 async function main() {
   const input = 'data/scored-trends.json';
   const outputDir = 'content/articles';
@@ -30,20 +47,36 @@ async function main() {
     }
   }
 
-  const stopWords = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence']);
-  const topicWords = (title: string) => new Set(title.toLowerCase().split(/[^a-z0-9]+/).filter((word) => word.length >= 4 && !stopWords.has(word)));
+  const eligible = trends
+    .filter((item) => item.eligible && !existingTitles.has(item.title.toLowerCase().trim()))
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
 
-  const trend = trends.find((item) => item.eligible && !existingTitles.has(item.title.toLowerCase().trim()));
-  if (!trend) { console.log('No new eligible trend found.'); process.exit(0); }
+  const trend = eligible.find((candidate) => {
+    const publisherA = publisherName(candidate);
+    if (!isCrediblePublisher(publisherA)) return false;
+    const words = topicWords(`${candidate.title} ${candidate.description ?? ''}`);
+    return eligible.some((item) => {
+      if (item === candidate || item.link === candidate.link || item.category !== candidate.category) return false;
+      const publisherB = publisherName(item);
+      if (!isCrediblePublisher(publisherB) || publisherA.toLowerCase() === publisherB.toLowerCase()) return false;
+      const titleOverlap = [...topicWords(item.title)].filter((word) => words.has(word)).length;
+      const descriptionOverlap = [...topicWords(item.description ?? '')].filter((word) => words.has(word)).length;
+      // Require either two meaningful shared topic terms or one strong title term plus contextual overlap.
+      return titleOverlap >= 2 || (titleOverlap >= 1 && descriptionOverlap >= 2);
+    });
+  });
 
-  const words = topicWords(trend.title);
-  const related = trends.find((item) => {
-    if (!item.eligible || item.link === trend.link || item.category !== trend.category) return false;
-    const publisherA = (trend.sourceName || trend.source || '').toLowerCase().trim();
-    const publisherB = (item.sourceName || item.source || '').toLowerCase().trim();
-    if (!publisherA || !publisherB || publisherA === publisherB) return false;
-    const overlap = [...topicWords(item.title)].filter((word) => words.has(word)).length;
-    return overlap >= 2;
+  if (!trend) { console.log('No new eligible trend with independent credible source coverage found.'); process.exit(0); }
+
+  const publisherA = publisherName(trend);
+  const words = topicWords(`${trend.title} ${trend.description ?? ''}`);
+  const related = eligible.find((item) => {
+    if (item === trend || item.link === trend.link || item.category !== trend.category) return false;
+    const publisherB = publisherName(item);
+    if (!isCrediblePublisher(publisherB) || publisherA.toLowerCase() === publisherB.toLowerCase()) return false;
+    const titleOverlap = [...topicWords(item.title)].filter((word) => words.has(word)).length;
+    const descriptionOverlap = [...topicWords(item.description ?? '')].filter((word) => words.has(word)).length;
+    return titleOverlap >= 2 || (titleOverlap >= 1 && descriptionOverlap >= 2);
   });
 
   if (!related) { console.log('No second independent publisher found for this topic; publication blocked.'); process.exit(0); }
@@ -54,8 +87,8 @@ async function main() {
     angle: 'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use the supplied sources as factual references only; write an original synthesis.',
     keyPoints: [trend.description ?? 'Use only verified source context.', related.description ?? 'Cross-check the development against the second independent publisher.'],
     sources: [
-      { title: `${trend.sourceName || trend.source}: ${trend.title}`, url: trend.link, publishedAt: trend.publishedAt },
-      { title: `${related.sourceName || related.source}: ${related.title}`, url: related.link, publishedAt: related.publishedAt },
+      { title: `${publisherA}: ${trend.title}`, url: trend.link, publishedAt: trend.publishedAt },
+      { title: `${publisherName(related)}: ${related.title}`, url: related.link, publishedAt: related.publishedAt },
     ],
   };
 
