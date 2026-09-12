@@ -3,6 +3,7 @@ import SubscribePanel from '@/app/components/SubscribePanel';
 
 const basePath = '/Trendforge';
 const latestArticles = [...articles].sort((a, b) => b.date.localeCompare(a.date));
+const categories = [...new Set(latestArticles.map((article) => article.category))];
 
 export default function Home() {
   const featured = latestArticles[0];
@@ -19,7 +20,7 @@ export default function Home() {
       <div className="side">{secondary.length > 0 ? secondary.map((article) => <article className="card" key={article.slug}><div className="tag">{article.category} · {article.readTime}</div><h3>{article.title}</h3><p>{article.description}</p><a className="read-button" href={`${basePath}/article/${article.slug}/`}>Read <span>→</span></a></article>) : <><article className="card"><div className="tag">AI</div><h3>AI is moving fast. Here’s what actually matters.</h3><p>Clear explanations, useful tools and the changes worth paying attention to — without the noise.</p></article><article className="card"><div className="tag">Technology</div><h3>The tech changes you can actually use</h3><p>Practical guides for smarter digital work, better tools and everyday problems.</p></article></>}</div>
     </section>
 
-    <section className="promise" id="topics"><div className="eyebrow">Our promise</div><h2>Original. Useful.<br/>Worth your time.</h2><p>Automation handles repetitive research and publishing work, while quality gates focus on accuracy, originality, source verification and reader value.</p></section>
-    <footer className="footer" id="about"><span>© 2026 TrendForge</span><span>AI · Technology · Digital Life · How-To</span></footer>
+    <section className="promise" id="topics"><div className="eyebrow">Explore topics</div><h2>Choose your signal.</h2><p>Browse focused sections instead of scrolling through everything.</p><div className="topic-links">{categories.map((category) => <a className="topic-link" key={category} href={`${basePath}/category/${category.toLowerCase().replace(/\s+/g, '-')}/`}>{category}<span>→</span></a>)}</div></section>
+    <footer className="footer"><span>© 2026 TrendForge</span><span><a href={`${basePath}/about/`}>About</a> · <a href={`${basePath}/privacy/`}>Privacy</a> · <a href={`${basePath}/terms/`}>Terms</a> · <a href={`${basePath}/subscribe/`}>Subscribe</a></span></footer>
   </main>
 }
