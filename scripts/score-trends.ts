@@ -9,7 +9,8 @@ if (!fs.existsSync(input)) {
   process.exit(0);
 }
 
-const candidates = JSON.parse(fs.readFileSync(input, 'utf8')) as TrendCandidate[];
+const payload = JSON.parse(fs.readFileSync(input, 'utf8')) as { candidates?: TrendCandidate[] };
+const candidates = payload.candidates ?? [];
 const scored = candidates
   .map((candidate) => scoreTrend(candidate))
   .sort((a, b) => b.score - a.score);
