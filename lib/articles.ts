@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export type Article = { slug:string; title:string; description:string; category:string; date:string; readTime:string; content:string[] };
+export type ArticleSource = { title: string; url: string };
+export type Article = { slug:string; title:string; description:string; category:string; date:string; readTime:string; content:string[]; sources: ArticleSource[] };
 
 const seedArticles: Article[] = [
  {slug:'what-is-ai-agent',title:'What Is an AI Agent? A Simple Guide for Everyone',description:'AI agents are moving from demos into everyday software. Here is what they actually do, how they differ from chatbots, and where they are useful.',category:'AI',date:'2026-09-12',readTime:'5 min read',content:[
@@ -9,7 +10,7 @@ const seedArticles: Article[] = [
  'A normal chatbot mainly responds to a prompt. An agent can work through a sequence: understand the goal, gather information, choose an action, check the result, and continue when necessary.',
  'The practical difference matters. Instead of asking an AI to write a list of tasks, you could give an agent a goal such as preparing a research brief. The agent could collect sources, organize findings and produce a draft for review.',
  'Agents are not magic. They can make incorrect assumptions, use unreliable information or take an unwanted action. Good systems therefore include source checks, permissions, clear limits and a human approval step for important decisions.',
- 'For everyday users, the useful question is not whether something is an agent. Ask what work it can reliably complete, what information it needs, and where you remain in control.' ]}
+ 'For everyday users, the useful question is not whether something is an agent. Ask what work it can reliably complete, what information it needs, and where you remain in control.' ],sources:[]}
 ];
 
 function readGeneratedArticles(): Article[] {
@@ -24,8 +25,13 @@ function readGeneratedArticles(): Article[] {
       const m = line.match(/^([A-Za-z]+):\s*"?(.*?)"?$/);
       if (m) meta[m[1]] = m[2].replace(/\\"/g, '"');
     }
+    const sourceBlock = match[2].match(/\n## Sources\n\n([\s\S]*)$/);
+    const sources: ArticleSource[] = sourceBlock ? sourceBlock[1].split('\n').map(line => {
+      const m = line.match(/^- \[(.*?)\]\((https:\/\/[^)]+)\)$/);
+      return m ? { title: m[1], url: m[2] } : null;
+    }).filter((s): s is ArticleSource => Boolean(s)) : [];
     const content = match[2].replace(/\n## Sources[\s\S]*$/, '').split(/\n\n+/).map(p => p.trim()).filter(Boolean);
-    return { slug: meta.slug || name.replace(/\.md$/,''), title: meta.title || '', description: meta.description || '', category: meta.category || 'Technology', date: (meta.publishedAt || '').slice(0,10), readTime: `${Math.max(1, Math.ceil(match[2].split(/\s+/).length / 220))} min read`, content };
+    return { slug: meta.slug || name.replace(/\.md$/,''), title: meta.title || '', description: meta.description || '', category: meta.category || 'Technology', date: (meta.publishedAt || '').slice(0,10), readTime: `${Math.max(1, Math.ceil(match[2].split(/\s+/).length / 220))} min read`, content, sources };
   }).filter((a): a is Article => Boolean(a && a.title && a.slug));
 }
 
