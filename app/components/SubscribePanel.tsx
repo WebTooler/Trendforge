@@ -25,8 +25,8 @@ export default function SubscribePanel() {
     const permission = await Notification.requestPermission();
     if (permission === 'granted') {
       setNotificationState('enabled');
-      new Notification('TrendForge notifications enabled', {
-        body: 'You can now use this device to receive TrendForge alerts when push delivery is connected.',
+      new Notification('TrendForge notifications allowed', {
+        body: 'Browser permission is enabled. Full push alerts will be connected when the push service is added.',
       });
     } else {
       setNotificationState('denied');
@@ -35,11 +35,11 @@ export default function SubscribePanel() {
 
   const notificationLabel =
     notificationState === 'enabled'
-      ? 'Alerts enabled ✓'
+      ? 'Notifications allowed ✓'
       : notificationState === 'denied'
-        ? 'Alerts blocked'
+        ? 'Notifications blocked'
         : notificationState === 'unsupported'
-          ? 'Alerts unavailable'
+          ? 'Notifications unavailable'
           : 'Get notified';
 
   return (
@@ -50,13 +50,13 @@ export default function SubscribePanel() {
         <p>Subscribe to TrendForge and keep up with useful AI, technology and digital-life stories.</p>
       </div>
       <div className="subscribe-actions">
-        <a className="subscribe-button" href={`${basePath}/feed.xml`} target="_blank" rel="noreferrer">
-          Subscribe via RSS <span>↗</span>
+        <a className="subscribe-button" href={`${basePath}/subscribe/`}>
+          Subscribe <span>→</span>
         </a>
         <button className="notify-button" type="button" onClick={enableNotifications} disabled={notificationState === 'enabled' || notificationState === 'unsupported'}>
           <span className="bell">◔</span> {notificationLabel}
         </button>
-        <small>RSS works with Feedly, Inoreader and most RSS readers. Browser alerts are prepared for push delivery.</small>
+        <small>Choose an RSS reader on the Subscribe page. Browser alerts require notification permission and a future push service.</small>
       </div>
     </section>
   );
