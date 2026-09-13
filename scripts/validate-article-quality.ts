@@ -37,7 +37,10 @@ for (const file of files) {
   const category = field(front, 'category');
   const words = main.split(/\s+/).filter(Boolean).length;
   const headings = (main.match(/^##\s+.+$/gm) || []).length;
-  const paragraphs = main.split(/\n\s*\n/).map((p) => p.trim()).filter((p) => p && !p.startsWith('## '));
+  const paragraphs = main
+    .split(/\n\s*\n/)
+    .map((block) => block.replace(/^##\s+.+\n?/, '').trim())
+    .filter((p) => p && !/^\d+\.\s+/.test(p));
   const sourceUrls = [...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map((m) => m[1]);
   const unsafe = /<script\b|<iframe\b|javascript\s*:/i.test(raw);
 
