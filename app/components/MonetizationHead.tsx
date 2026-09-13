@@ -8,7 +8,7 @@ export default function MonetizationHead() {
   return (
     <Script
       id="adsense-script"
-      strategy="beforeInteractive"
+      strategy="afterInteractive"
       async
       src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${clientId}`}
       crossOrigin="anonymous"
