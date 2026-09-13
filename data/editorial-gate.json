@@ -1,21 +1,30 @@
 {
-  "generatedAt": "2026-09-12T20:32:22.309Z",
-  "provider": "Groq",
+  "generatedAt": "2026-09-13T11:49:56.852Z",
+  "provider": "Gemini",
   "editorial": {
     "passed": true,
     "checks": {
       "title": true,
       "description": true,
       "content": true,
-      "sources": true
+      "structure": true,
+      "sources": true,
+      "noUnsafeMarkup": true
     }
   },
   "copyright": {
     "passed": true,
     "checks": {
+      "hasUsefulLength": true,
       "noSuspiciousTemplate": true,
       "validSources": true,
-      "safeImages": true
+      "safeImages": true,
+      "noHighSimilaritySource": true
+    },
+    "metrics": {
+      "normalizedLength": 6037,
+      "sentenceCount": 38,
+      "maxSourceSimilarity": 0
     }
   }
 }
