@@ -1,0 +1,51 @@
+name: TrendForge Performance Audit
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy TrendForge to GitHub Pages"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Lighthouse audit
+        run: |
+          npx --yes lighthouse https://webtooler.github.io/Trendforge/ \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --output=json \
+            --output-path=./lighthouse-report.json \
+            --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage"
+
+      - name: Summarize Lighthouse scores
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('./lighthouse-report.json', 'utf8'));
+          const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
+          console.log('TrendForge Lighthouse scores');
+          for (const key of categories) {
+            const score = report.categories?.[key]?.score;
+            console.log(`${key}: ${score == null ? 'n/a' : Math.round(score * 100)}`);
+          }
+          const audits = report.audits || {};
+          for (const id of ['largest-contentful-paint', 'cumulative-layout-shift', 'interaction-to-next-paint']) {
+            const audit = audits[id];
+            if (audit) console.log(`${audit.title}: ${audit.displayValue ?? audit.scoreDisplayMode}`);
+          }
+          NODE
+
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v4
+        with:
+          name: trendforge-lighthouse-report
+          path: lighthouse-report.json
+          retention-days: 14
