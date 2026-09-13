@@ -1,12 +1,15 @@
 {
-  "version": 1,
+  "version": 2,
   "policy": "copyright-safe-first",
-  "allowedLicenses": ["CC0", "Public Domain", "Pexels License", "Unsplash License", "Pixabay Content License"],
+  "allowedLicenses": ["CC0", "Public Domain", "Pexels License", "Unsplash License", "Pixabay Content License", "Original", "AI-generated original"],
   "rules": [
     "Never use an image discovered through a generic Google Images search.",
     "Never assume an image is free because a search result displays it.",
-    "Store source URL and license metadata for every image.",
-    "Reject images when license information cannot be verified.",
-    "Prefer original AI-generated visuals when no suitably licensed image exists."
+    "Store source URL and license metadata for every external image.",
+    "Reject external images when license information cannot be verified.",
+    "Every article must have an article-specific image before publication.",
+    "The image prompt or renderer must be derived from the article title, description, and category; never select a random stock image.",
+    "Prefer original AI-generated visuals when a suitable AI image provider is configured.",
+    "Use TrendForge original topic visuals as the free fallback when no AI image provider is configured."
   ]
 }
