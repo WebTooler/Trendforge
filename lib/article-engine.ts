@@ -14,6 +14,7 @@ export type GeneratedArticle = {
   content: string;
   sources: { title: string; url: string }[];
   generatedAt: string;
+  author?: string;
   image?: string;
   imageAlt?: string;
   imageSource?: string;
@@ -62,9 +63,10 @@ export function editorialGate(article: { title: string; description: string; con
 export function articleToMarkdown(article: GeneratedArticle): string {
   const safeTitle = article.title.replace(/"/g, '\\"').replace(/\r?\n/g, ' ');
   const safeDescription = article.description.replace(/"/g, '\\"').replace(/\r?\n/g, ' ');
+  const safeAuthor = (article.author || 'Tejendra Pal Singh').replace(/"/g, '\\"').replace(/\r?\n/g, ' ');
   const imageFields = article.image
     ? `image: "${article.image.replace(/"/g, '\\"')}"\nimageAlt: "${(article.imageAlt || article.title).replace(/"/g, '\\"')}"\nimageSource: "${(article.imageSource || '').replace(/"/g, '\\"')}"\nimageLicense: "${(article.imageLicense || '').replace(/"/g, '\\"')}"\nimageGeneratedBy: "${(article.imageGeneratedBy || '').replace(/"/g, '\\"')}"\n`
     : '';
   const sourceList = article.sources.map((s) => `- [${s.title}](${s.url})`).join('\n');
-  return `---\ntitle: "${safeTitle}"\ndescription: "${safeDescription}"\nslug: "${article.slug}"\ncategory: "${article.category}"\npublishedAt: "${article.generatedAt}"\n${imageFields}---\n\n${article.content.trim()}\n\n## Sources\n\n${sourceList}\n`;
+  return `---\ntitle: "${safeTitle}"\ndescription: "${safeDescription}"\nslug: "${article.slug}"\ncategory: "${article.category}"\nauthor: "${safeAuthor}"\npublishedAt: "${article.generatedAt}"\n${imageFields}---\n\n${article.content.trim()}\n\n## Sources\n\n${sourceList}\n`;
 }
