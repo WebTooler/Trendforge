@@ -67,6 +67,8 @@ jobs:
         run: npx tsx scripts/generate-article-image.ts
       - name: Validate article image safety gate
         run: npx tsx scripts/validate-article-assets.ts
+      - name: Validate centralized SEO
+        run: npx tsx scripts/validate-seo.ts
       - name: Sync published articles into site
         run: npx tsx scripts/sync-articles.ts
       - name: Build site
