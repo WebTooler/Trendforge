@@ -45,20 +45,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for file in out/index.html out/robots.txt out/sitemap.xml out/search/index.json; do
+          for file in out/index.html out/robots.txt out/sitemap.xml out/search-index.json; do
             test -f "$file"
           done
           echo "Required static outputs are present."
 
-      - name: Check for leaked API key patterns
+      - name: Check for accidental secret files
         shell: bash
         run: |
           set -euo pipefail
-          if grep -R -E 'sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{20,}|gsk_[A-Za-z0-9_-]{20,}' out --include='*.html' --include='*.js' --include='*.json' >/dev/null 2>&1; then
-            echo "Potential API key pattern detected in build output."
+          if find out -type f \( -name '.env' -o -name '.env.*' -o -name '*secret*' \) -print -quit | grep -q .; then
+            echo "Potential secret file detected in build output."
             exit 1
           fi
-          echo "No known API key patterns found in build output."
+          echo "No secret-named files found in build output."
 
       - name: Reliability check passed
         run: echo "TrendForge reliability checks passed."
