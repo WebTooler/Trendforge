@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 type SearchArticle = {
   slug: string;
@@ -21,20 +22,17 @@ function normalize(value: string) {
 function score(article: SearchArticle, query: string) {
   const terms = normalize(query).split(' ').filter((term) => term.length >= 2);
   if (!terms.length) return 0;
-
   const title = normalize(article.title);
   const description = normalize(article.description);
   const category = normalize(article.category);
   const content = normalize(article.content);
   let total = 0;
-
   for (const term of terms) {
     if (title.includes(term)) total += 12;
     if (description.includes(term)) total += 7;
     if (category.includes(term)) total += 8;
     if (content.includes(term)) total += 2;
   }
-
   if (title === normalize(query)) total += 30;
   return total;
 }
@@ -68,6 +66,23 @@ export default function SearchBox() {
       .map(({ article }) => article);
   }, [articles, category, query]);
 
+  useEffect(() => {
+    const normalizedQuery = normalize(query);
+    if (!normalizedQuery || loading) return;
+    const timer = window.setTimeout(() => {
+      trackEvent('search', { query: normalizedQuery.slice(0, 100), category, results: results.length });
+    }, 500);
+    return () => window.clearTimeout(timer);
+  }, [query, category, results.length, loading]);
+
+  function handleResultClick(article: SearchArticle) {
+    trackEvent('search_result_click', {
+      query: normalize(query).slice(0, 100),
+      category: article.category,
+      slug: article.slug,
+    });
+  }
+
   return <section className="search-panel" aria-labelledby="search-heading">
     <div className="search-controls">
       <label className="search-input-wrap">
@@ -89,9 +104,9 @@ export default function SearchBox() {
     {!loading && results.length > 0 ? <div className="search-results">
       {results.map((article) => <article className="search-result" key={article.slug}>
         <div className="tag">{article.category} · {article.readTime}</div>
-        <h2><a href={`${basePath}/article/${article.slug}/`}>{article.title}</a></h2>
+        <h2><a href={`${basePath}/article/${article.slug}/`} onClick={() => handleResultClick(article)}>{article.title}</a></h2>
         <p>{article.description}</p>
-        <a className="read-button" href={`${basePath}/article/${article.slug}/`}>Read story <span>→</span></a>
+        <a className="read-button" href={`${basePath}/article/${article.slug}/`} onClick={() => handleResultClick(article)}>Read story <span>→</span></a>
       </article>)}
     </div> : !loading ? <div className="search-empty"><h2>No matching stories</h2><p>Try a broader keyword or switch the category filter.</p></div> : null}
   </section>;
