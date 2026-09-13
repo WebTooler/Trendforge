@@ -63,6 +63,10 @@ jobs:
           NODE
       - name: Generate and quality-check article
         run: npx tsx scripts/generate-article.ts
+      - name: Generate article-specific images
+        run: npx tsx scripts/generate-article-image.ts
+      - name: Validate article image safety gate
+        run: npx tsx scripts/validate-article-assets.ts
       - name: Sync published articles into site
         run: npx tsx scripts/sync-articles.ts
       - name: Build site
@@ -71,7 +75,7 @@ jobs:
         run: |
           git config user.name 'trendforge-bot'
           git config user.email 'trendforge-bot@users.noreply.github.com'
-          git add data lib/articles.ts
+          git add data lib/articles.ts public/images/articles
           if [ -d content/articles ]; then git add content/articles; fi
           if git diff --cached --quiet; then
             echo 'No pipeline output changes to commit.'
