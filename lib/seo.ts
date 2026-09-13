@@ -30,13 +30,24 @@ export function seoDescription(article: Article) {
   return `${text.slice(0, 167).trimEnd()}…`;
 }
 
+const indexRobots = {
+  index: true,
+  follow: true,
+  'max-image-preview': 'large' as const,
+  'max-snippet': -1,
+  'max-video-preview': -1,
+};
+
 export function siteMetadata(): Metadata {
   return {
-    metadataBase: new URL(siteUrl), title: { default: siteTitle, template: '%s | TrendForge' },
+    metadataBase: new URL(`${siteUrl}/`),
+    title: { default: siteTitle, template: '%s | TrendForge' },
     description: defaultDescription,
     alternates: { canonical: '/', types: { 'application/rss+xml': `${siteUrl}/feed.xml` } },
-    openGraph: { type: 'website', siteName, title: siteTitle, description: defaultDescription, url: siteUrl },
-    twitter: { card: 'summary', title: siteTitle, description: defaultDescription }, robots: { index: true, follow: true },
+    openGraph: { type: 'website', siteName, title: siteTitle, description: defaultDescription, url: `${siteUrl}/` },
+    twitter: { card: 'summary_large_image', title: siteTitle, description: defaultDescription },
+    robots: indexRobots,
+    referrer: 'origin-when-cross-origin',
   };
 }
 
@@ -46,9 +57,17 @@ export function articleMetadata(article: Article): Metadata {
   const url = absoluteUrl(`/article/${article.slug}/`);
   const image = article.image ? absoluteUrl(article.image) : undefined;
   return {
-    title, description, alternates: { canonical: url },
-    openGraph: { type: 'article', title, description, url, siteName, publishedTime: article.date, section: article.category, ...(image ? { images: [{ url: image, alt: article.imageAlt || article.title, width: 1200, height: 630 }] } : {}) },
-    twitter: { card: image ? 'summary_large_image' : 'summary', title, description, ...(image ? { images: [image] } : {}) }, robots: { index: true, follow: true },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: 'article', title, description, url, siteName,
+      publishedTime: article.date, modifiedTime: article.date, section: article.category,
+      ...(image ? { images: [{ url: image, alt: article.imageAlt || article.title, width: 1200, height: 630 }] } : {}),
+    },
+    twitter: { card: image ? 'summary_large_image' : 'summary', title, description, ...(image ? { images: [image] } : {}) },
+    robots: indexRobots,
+    referrer: 'origin-when-cross-origin',
   };
 }
 
@@ -56,21 +75,41 @@ export function categoryMetadata(category: string): Metadata {
   const title = category.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   const url = absoluteUrl(`/category/${categorySlug(category)}/`);
   const description = `Useful ${title.toLowerCase()} stories and explainers from TrendForge.`;
-  return { title: `${title} — TrendForge`, description, alternates: { canonical: url }, openGraph: { type: 'website', title: `${title} — TrendForge`, description, url, siteName }, twitter: { card: 'summary', title: `${title} — TrendForge`, description }, robots: { index: true, follow: true } };
+  return {
+    title: `${title} — TrendForge`, description, alternates: { canonical: url },
+    openGraph: { type: 'website', title: `${title} — TrendForge`, description, url, siteName },
+    twitter: { card: 'summary_large_image', title: `${title} — TrendForge`, description },
+    robots: indexRobots,
+  };
 }
 
 export function articleJsonLd(article: Article) {
   const url = absoluteUrl(`/article/${article.slug}/`);
   const image = article.image ? absoluteUrl(article.image) : undefined;
-  return { '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: seoDescription(article), url, datePublished: article.date, dateModified: article.date, articleSection: article.category, author: { '@type': 'Organization', name: siteName, url: siteUrl }, publisher: { '@type': 'Organization', name: siteName, url: siteUrl }, ...(image ? { image: [image] } : {}), mainEntityOfPage: { '@type': 'WebPage', '@id': url } };
+  return {
+    '@context': 'https://schema.org', '@type': 'Article',
+    headline: article.title, description: seoDescription(article), url,
+    datePublished: article.date, dateModified: article.date, articleSection: article.category,
+    author: { '@type': 'Organization', name: siteName, url: `${siteUrl}/` },
+    publisher: { '@type': 'Organization', name: siteName, url: `${siteUrl}/` },
+    ...(image ? { image: [image] } : {}),
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  };
 }
 
 export function websiteJsonLd() {
-  return { '@context': 'https://schema.org', '@type': 'WebSite', name: siteName, url: `${siteUrl}/`, description: defaultDescription, publisher: { '@type': 'Organization', name: siteName, url: siteUrl } };
+  return {
+    '@context': 'https://schema.org', '@type': 'WebSite', name: siteName,
+    url: `${siteUrl}/`, description: defaultDescription,
+    publisher: { '@type': 'Organization', name: siteName, url: `${siteUrl}/` },
+  };
 }
 
 export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
-  return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: absoluteUrl(item.path) })) };
+  return {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: absoluteUrl(item.path) })),
+  };
 }
 
 export function safeJsonLd(value: unknown) {
