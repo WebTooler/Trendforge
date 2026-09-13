@@ -2,6 +2,8 @@ import { articles } from '@/lib/articles';
 
 const siteUrl = 'https://webtooler.github.io/Trendforge';
 
+export const dynamic = 'force-static';
+
 function escapeXml(value: string) {
   return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 }
