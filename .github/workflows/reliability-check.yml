@@ -38,6 +38,9 @@ jobs:
           done
           exit 1
 
+      - name: Generate search index
+        run: npx tsx scripts/generate-search-index.ts
+
       - name: Build production export
         run: npm run build
 
