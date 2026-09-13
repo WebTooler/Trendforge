@@ -1,27 +1,9 @@
 import './globals.css';
-import type { Metadata } from 'next';
-import { defaultDescription, siteName, siteUrl } from '@/lib/seo';
+import { siteMetadata, siteName, siteUrl, websiteJsonLd, safeJsonLd } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: { default: 'TrendForge — What Matters, Explained', template: '%s | TrendForge' },
-  description: defaultDescription,
-  alternates: { canonical: '/', types: { 'application/rss+xml': `${siteUrl}/feed.xml` } },
-  openGraph: {
-    type: 'website',
-    siteName,
-    title: 'TrendForge — What Matters, Explained',
-    description: defaultDescription,
-    url: siteUrl,
-  },
-  twitter: {
-    card: 'summary',
-    title: 'TrendForge — What Matters, Explained',
-    description: defaultDescription,
-  },
-  robots: { index: true, follow: true },
-};
+export const metadata = siteMetadata();
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+  const jsonLd = safeJsonLd(websiteJsonLd());
+  return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />{children}</body></html>;
 }
