@@ -2,6 +2,9 @@ name: TrendForge Pipeline
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/trend-research.mjs'
   schedule:
     - cron: '17 */6 * * *'
 
