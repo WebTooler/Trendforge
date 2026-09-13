@@ -79,14 +79,24 @@ jobs:
       - name: Build site
         run: npm run build
       - name: Commit pipeline output
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'trendforge-bot'
           git config user.email 'trendforge-bot@users.noreply.github.com'
           git add data lib/articles.ts public/images/articles
           if [ -d content/articles ]; then git add content/articles; fi
           if git diff --cached --quiet; then
             echo 'No pipeline output changes to commit.'
-          else
-            git commit -m 'chore: update TrendForge content pipeline'
-            git push
+            exit 0
           fi
+          git commit -m 'chore: update TrendForge content pipeline'
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt/3"
+            if git push origin HEAD:main; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase --autostash origin main
+              sleep $((attempt * 5))
+            fi
+          done
+          exit 1
