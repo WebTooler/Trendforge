@@ -18,6 +18,11 @@ type Article = {
   readTime: string;
   content: string[];
   sources: { title: string; url: string }[];
+  image: string;
+  imageAlt: string;
+  imageSource: string;
+  imageLicense: string;
+  imageGeneratedBy: string;
 };
 
 function field(text: string, key: string) {
@@ -50,13 +55,18 @@ for (const file of files) {
   const description = field(front, 'description');
   const category = field(front, 'category') || 'Technology';
   const date = field(front, 'publishedAt').slice(0, 10) || new Date().toISOString().slice(0, 10);
+  const image = field(front, 'image');
+  const imageAlt = field(front, 'imageAlt');
+  const imageSource = field(front, 'imageSource');
+  const imageLicense = field(front, 'imageLicense');
+  const imageGeneratedBy = field(front, 'imageGeneratedBy');
 
-  if (!title || !description || content.length === 0) continue;
-  articles.push({ slug, title, description, category, date, readTime: estimateReadTime(main), content, sources });
+  if (!title || !description || content.length === 0 || !image || !imageAlt || !imageSource || !imageLicense) continue;
+  articles.push({ slug, title, description, category, date, readTime: estimateReadTime(main), content, sources, image, imageAlt, imageSource, imageLicense, imageGeneratedBy });
 }
 
 const safe = JSON.stringify(articles, null, 2);
-const output = `export type Article = { slug: string; title: string; description: string; category: string; date: string; readTime: string; content: string[]; sources: { title: string; url: string }[] };\n\nexport const articles: Article[] = ${safe};\n\nexport function getArticle(slug: string) { return articles.find((a) => a.slug === slug); }\n`;
+const output = `export type Article = { slug: string; title: string; description: string; category: string; date: string; readTime: string; content: string[]; sources: { title: string; url: string }[]; image: string; imageAlt: string; imageSource: string; imageLicense: string; imageGeneratedBy: string };\n\nexport const articles: Article[] = ${safe};\n\nexport function getArticle(slug: string) { return articles.find((a) => a.slug === slug); }\n`;
 
 fs.writeFileSync('lib/articles.ts', output);
-console.log(`Synced ${articles.length} published articles into lib/articles.ts.`);
+console.log(`Synced ${articles.length} published articles with verified images into lib/articles.ts.`);
