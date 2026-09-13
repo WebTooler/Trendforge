@@ -1,4 +1,4 @@
-export type Article = { slug: string; title: string; description: string; category: string; date: string; readTime: string; content: string[]; sources: { title: string; url: string }[] };
+export type Article = { slug: string; title: string; description: string; category: string; date: string; readTime: string; content: string[]; sources: { title: string; url: string }[]; image: string; imageAlt: string; imageSource: string; imageLicense: string; imageGeneratedBy: string };
 
 export const articles: Article[] = [
   {
@@ -8,6 +8,11 @@ export const articles: Article[] = [
     category: "AI",
     date: "2026-09-12",
     readTime: "4 min read",
+    image: "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.svg",
+    imageAlt: "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry — TrendForge editorial image",
+    imageSource: "TrendForge original editorial visual",
+    imageLicense: "Original",
+    imageGeneratedBy: "TrendForge topic renderer",
     content: [
       "## The Moment of Caution\nIn a surprising move, Dario Amodei, the chief executive of Anthropic, publicly urged the artificial‑intelligence community to slow its pace of progress. The BBC reported that Amodei’s statement came as the company continued to push larger and more capable models. He warned that unchecked growth could lead to unforeseen risks and urged a more measured approach to scaling. The Guardian echoed this sentiment, framing it as a call to prioritize safety over speed.",
       "## Why a Pause Matters Now\nAI has already shifted many sectors—from customer service bots to medical diagnostics. Yet the rapid scaling of language models raises new safety, security, and ethical questions. Anthropic’s CEO highlighted that the technology’s power grows faster than our understanding of its limits. A slowdown could allow regulators, researchers, and companies to build more robust governance frameworks, reduce the chance of harmful misuse, and better anticipate societal impacts.",
@@ -23,7 +28,7 @@ export const articles: Article[] = [
     ],
     sources: [
       { title: "BBC: Anthropic boss Dario Amodei calls for AI development to slow down - BBC", url: "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrRjBnT05YelZFQXM0ejVFa0VZUDdYWENTbHowbzJSVmxwZWFpWEw2NFh4NHpjU01Ubi1jM21FQjhfWl82Z3JsczNTQnFIVFpkOWQyTXhQVzlGZw?oc=5" },
-      { title: "The Guardian: ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown - The Guardian", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXQ3RHZUeWozQnJxcHJra3ZwNXJ2WEVvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2Q0k5OE81Y1JPM0tmc08wWXc?oc=5" }
+      { title: "The Guardian: ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown - The Guardian", url: "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXQ3RHZUeWozQnJxcHJra3ZwNXJ2WEVvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2U0dBZV9welJMczBPR1ZWN0RVYkpMTk5BRDY2Q0k5OE81Y1JPM0tmc08wWXc?oc=5)" }
     ]
   }
 ];
