@@ -11,10 +11,15 @@ const SAFE_LICENSES = new Set([
   'Pexels License',
   'Unsplash License',
   'Pixabay Content License',
+  'Original',
+  'AI-generated original',
 ]);
 
 export function isImageLicenseAllowed(image: ImageCandidate): boolean {
-  return image.url.startsWith('https://') && SAFE_LICENSES.has(image.license);
+  const isLocalOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.source === 'TrendForge original editorial visual';
+  const isRemoteLicensed = image.url.startsWith('https://') && SAFE_LICENSES.has(image.license);
+  const isAiOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.license === 'AI-generated original';
+  return isLocalOriginal || isAiOriginal || isRemoteLicensed;
 }
 
 export function filterSafeImages(images: ImageCandidate[]): ImageCandidate[] {
@@ -54,7 +59,7 @@ export function copyrightSafetyGate(article: { content: string; sources: string[
   const hasUsefulLength = normalized.length >= 900 && sentenceCount >= 6;
   const noSuspiciousTemplate = !suspiciousPhrases.some(phrase => normalized.includes(phrase));
   const validSources = article.sources.length >= 2 && article.sources.every(url => /^https:\/\//.test(url));
-  const safeImages = article.images.every(isImageLicenseAllowed);
+  const safeImages = article.images.length > 0 && article.images.every(isImageLicenseAllowed);
   const sourceTexts = (article.sourceTexts ?? []).map(normalizeText).filter(Boolean);
   const maxSourceSimilarity = sourceTexts.length
     ? Math.max(...sourceTexts.map(source => sentenceSimilarity(normalized, source)))
