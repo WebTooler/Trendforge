@@ -20,7 +20,6 @@ const response = await fetch('https://api.openai.com/v1/responses', {
   body: JSON.stringify({
     model,
     input: prompt,
-    temperature: 0.3,
   }),
 });
 
