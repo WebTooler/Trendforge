@@ -4,6 +4,11 @@ description: "When Dario Amodei urged a pause in rapid AI development, the tech 
 slug: "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry"
 category: "AI"
 publishedAt: "2026-09-12T20:32:22.309Z"
+image: "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.svg"
+imageAlt: "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry — TrendForge editorial image"
+imageSource: "TrendForge original editorial visual"
+imageLicense: "Original"
+imageGeneratedBy: "TrendForge topic renderer"
 ---
 
 ## The Moment of Caution
