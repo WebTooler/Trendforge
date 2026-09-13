@@ -22,6 +22,6 @@ export default function Home() {
     </section>
 
     <section className="promise" id="topics" aria-labelledby="topics-heading"><div className="eyebrow">Explore topics</div><h2 id="topics-heading">Choose your signal.</h2><p>Browse focused sections instead of scrolling through everything.</p><div className="topic-links">{categories.map((category) => <a className="topic-link" key={category} href={`${basePath}/category/${category.toLowerCase().replace(/\s+/g, '-')}/`}>{category}<span>→</span></a>)}</div></section>
-    <footer className="footer"><span>© 2026 TrendForge</span><span><a href={`${basePath}/about/`}>About</a> · <a href={`${basePath}/privacy/`}>Privacy</a> · <a href={`${basePath}/terms/`}>Terms</a> · <a href={`${basePath}/subscribe/`}>Subscribe</a></span></footer>
+    <footer className="footer"><span>© 2026 TrendForge</span><span><a href={`${basePath}/about/`}>About</a> · <a href={`${basePath}/privacy/`}>Privacy</a> · <a href={`${basePath}/terms/`}>Terms</a> · <a href={`${basePath}/subscribe/`}>Subscribe</a> · <a href={`${basePath}/monetization/`}>Monetization</a></span></footer>
   </main>
 }
