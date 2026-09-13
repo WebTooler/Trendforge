@@ -47,7 +47,7 @@ export function articleMetadata(article: Article): Metadata {
   const image = article.image ? absoluteUrl(article.image) : undefined;
   return {
     title, description, alternates: { canonical: url },
-    openGraph: { type: 'article', title, description, url, siteName, publishedTime: article.date, section: article.category, ...(image ? { images: [{ url: image, alt: article.imageAlt || article.title }] } : {}) },
+    openGraph: { type: 'article', title, description, url, siteName, publishedTime: article.date, section: article.category, ...(image ? { images: [{ url: image, alt: article.imageAlt || article.title, width: 1200, height: 630 }] } : {}) },
     twitter: { card: image ? 'summary_large_image' : 'summary', title, description, ...(image ? { images: [image] } : {}) }, robots: { index: true, follow: true },
   };
 }
@@ -67,6 +67,10 @@ export function articleJsonLd(article: Article) {
 
 export function websiteJsonLd() {
   return { '@context': 'https://schema.org', '@type': 'WebSite', name: siteName, url: `${siteUrl}/`, description: defaultDescription, publisher: { '@type': 'Organization', name: siteName, url: siteUrl } };
+}
+
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: absoluteUrl(item.path) })) };
 }
 
 export function safeJsonLd(value: unknown) {
