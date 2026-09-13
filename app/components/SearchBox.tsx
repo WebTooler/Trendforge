@@ -1,0 +1,98 @@
+'use client';
+
+import { useEffect, useMemo, useState } from 'react';
+
+type SearchArticle = {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  date: string;
+  readTime: string;
+  content: string;
+};
+
+const basePath = '/Trendforge';
+
+function normalize(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function score(article: SearchArticle, query: string) {
+  const terms = normalize(query).split(' ').filter((term) => term.length >= 2);
+  if (!terms.length) return 0;
+
+  const title = normalize(article.title);
+  const description = normalize(article.description);
+  const category = normalize(article.category);
+  const content = normalize(article.content);
+  let total = 0;
+
+  for (const term of terms) {
+    if (title.includes(term)) total += 12;
+    if (description.includes(term)) total += 7;
+    if (category.includes(term)) total += 8;
+    if (content.includes(term)) total += 2;
+  }
+
+  if (title === normalize(query)) total += 30;
+  return total;
+}
+
+export default function SearchBox() {
+  const [articles, setArticles] = useState<SearchArticle[]>([]);
+  const [query, setQuery] = useState('');
+  const [category, setCategory] = useState('All');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${basePath}/search-index.json`)
+      .then((response) => {
+        if (!response.ok) throw new Error('Search index unavailable');
+        return response.json() as Promise<SearchArticle[]>;
+      })
+      .then(setArticles)
+      .catch(() => setArticles([]))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const categories = useMemo(() => ['All', ...Array.from(new Set(articles.map((article) => article.category))).sort()], [articles]);
+
+  const results = useMemo(() => {
+    const normalizedQuery = normalize(query);
+    return articles
+      .filter((article) => category === 'All' || article.category === category)
+      .map((article) => ({ article, score: normalizedQuery ? score(article, normalizedQuery) : 1 }))
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score || b.article.date.localeCompare(a.article.date))
+      .map(({ article }) => article);
+  }, [articles, category, query]);
+
+  return <section className="search-panel" aria-labelledby="search-heading">
+    <div className="search-controls">
+      <label className="search-input-wrap">
+        <span className="sr-only">Search articles</span>
+        <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search AI, technology, guides..." type="search" autoComplete="off" />
+      </label>
+      <label className="search-filter">
+        <span className="sr-only">Filter by category</span>
+        <select value={category} onChange={(event) => setCategory(event.target.value)} aria-label="Filter by category">
+          {categories.map((item) => <option key={item} value={item}>{item}</option>)}
+        </select>
+      </label>
+    </div>
+
+    <div className="search-summary" id="search-heading" aria-live="polite">
+      {loading ? 'Loading stories...' : query ? `${results.length} ${results.length === 1 ? 'story' : 'stories'} found` : `${results.length} ${results.length === 1 ? 'story' : 'stories'} available`}
+    </div>
+
+    {!loading && results.length > 0 ? <div className="search-results">
+      {results.map((article) => <article className="search-result" key={article.slug}>
+        <div className="tag">{article.category} · {article.readTime}</div>
+        <h2><a href={`${basePath}/article/${article.slug}/`}>{article.title}</a></h2>
+        <p>{article.description}</p>
+        <a className="read-button" href={`${basePath}/article/${article.slug}/`}>Read story <span>→</span></a>
+      </article>)}
+    </div> : !loading ? <div className="search-empty"><h2>No matching stories</h2><p>Try a broader keyword or switch the category filter.</p></div> : null}
+  </section>;
+}
