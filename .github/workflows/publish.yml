@@ -2,9 +2,6 @@ name: TrendForge Pipeline
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/publish.yml'
   schedule:
     - cron: '17 */6 * * *'
 
