@@ -61,8 +61,10 @@ jobs:
           }));
           if (!results.some(Boolean)) { console.log('No AI provider health check could run.'); process.exit(1); }
           NODE
-      - name: Generate and quality-check article
+      - name: Generate article
         run: npx tsx scripts/generate-article.ts
+      - name: Validate content quality gate
+        run: npx tsx scripts/validate-article-quality.ts
       - name: Generate article-specific images
         run: npx tsx scripts/generate-article-image.ts
       - name: Validate article image safety gate
