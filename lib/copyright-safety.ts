@@ -16,9 +16,9 @@ const SAFE_LICENSES = new Set([
 ]);
 
 export function isImageLicenseAllowed(image: ImageCandidate): boolean {
-  const isLocalOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.source === 'TrendForge original editorial visual';
+  const isLocalOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.source === 'TrendForge original editorial visual' && image.license === 'Original';
+  const isAiOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.source === 'TrendForge AI image generator' && image.license === 'AI-generated original';
   const isRemoteLicensed = image.url.startsWith('https://') && SAFE_LICENSES.has(image.license);
-  const isAiOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.license === 'AI-generated original';
   return isLocalOriginal || isAiOriginal || isRemoteLicensed;
 }
 
@@ -44,7 +44,7 @@ function sentenceSimilarity(a: string, b: string): number {
   return overlap / Math.max(1, Math.min(left.size, right.size));
 }
 
-export function copyrightSafetyGate(article: { content: string; sources: string[]; images: ImageCandidate[]; sourceTexts?: string[] }) {
+export function copyrightSafetyGate(article: { content: string; sources: string[]; images: ImageCandidate[]; sourceTexts?: string[] }, options: { requireImages?: boolean } = {}) {
   const normalized = normalizeText(article.content);
   const suspiciousPhrases = [
     'copy and paste',
@@ -59,7 +59,7 @@ export function copyrightSafetyGate(article: { content: string; sources: string[
   const hasUsefulLength = normalized.length >= 900 && sentenceCount >= 6;
   const noSuspiciousTemplate = !suspiciousPhrases.some(phrase => normalized.includes(phrase));
   const validSources = article.sources.length >= 2 && article.sources.every(url => /^https:\/\//.test(url));
-  const safeImages = article.images.length > 0 && article.images.every(isImageLicenseAllowed);
+  const safeImages = article.images.every(isImageLicenseAllowed) && (!options.requireImages || article.images.length > 0);
   const sourceTexts = (article.sourceTexts ?? []).map(normalizeText).filter(Boolean);
   const maxSourceSimilarity = sourceTexts.length
     ? Math.max(...sourceTexts.map(source => sentenceSimilarity(normalized, source)))
