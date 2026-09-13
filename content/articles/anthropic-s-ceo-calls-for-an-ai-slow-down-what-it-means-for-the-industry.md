@@ -3,6 +3,7 @@ title: "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the 
 description: "When Dario Amodei urged a pause in rapid AI development, the tech world paused to consider the implications. This editorial examines the shift, the uncertainties, and what investors, developers, and policy makers should watch next."
 slug: "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry"
 category: "AI"
+author: "Tejendra Pal Singh"
 publishedAt: "2026-09-12T20:32:22.309Z"
 image: "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.svg"
 imageAlt: "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry — TrendForge editorial image"
@@ -50,4 +51,4 @@ Dario Amodei’s call for a slowdown is a turning point for the AI field. It rem
 ## Sources
 
 - [BBC: Anthropic boss Dario Amodei calls for AI development to slow down - BBC](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrRjBnT05YelZFQXM0ejVFa0VZUDdYWENTbHowbzJSVmxwZWFpWEw2NFh4NHpjU01Ubi1jM21FQjhfWl82Z3JsczNTQnFIVFpkOWQyTXhQVzlGZw?oc=5)
-- [The Guardian: ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown - The Guardian](https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXQ3RHZUeWozQnJxcHJra3ZwNXJ2WEVvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2U0dBZV9welJMczBPR1ZWN0RVYkpMTk5BRDY2Q0k5OE81Y1JPM0tmc08wWXc?oc=5)
+- [The Guardian: ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown - The Guardian](https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXc3RHZUeWozQnJxcHJra3ZwNXJ2WEVvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2Y1JPM0tmc08wWXc?oc=5)
