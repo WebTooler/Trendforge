@@ -1,5 +1,5 @@
 import './globals.css';
-import { siteMetadata, siteName, siteUrl, websiteJsonLd, safeJsonLd } from '@/lib/seo';
+import { siteMetadata, websiteJsonLd, safeJsonLd } from '@/lib/seo';
 
 export const metadata = siteMetadata();
 
