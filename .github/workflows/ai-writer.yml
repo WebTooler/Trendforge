@@ -2,10 +2,6 @@ name: TrendForge AI Writer
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/ai-writer.yml'
-      - 'scripts/generate-with-openai.mjs'
   schedule:
     - cron: '30 */6 * * *'
 
