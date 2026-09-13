@@ -3,6 +3,8 @@ import { articles } from '@/lib/articles';
 
 const base = 'https://webtooler.github.io/Trendforge';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const categories = [...new Set(articles.map((article) => article.category.toLowerCase().replace(/\s+/g, '-')))];
 
