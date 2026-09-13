@@ -2,6 +2,9 @@ name: TrendForge AI Writer
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/ai-writer.yml'
   schedule:
     - cron: '30 */6 * * *'
 
