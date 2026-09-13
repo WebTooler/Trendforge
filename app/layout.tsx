@@ -1,24 +1,23 @@
 import './globals.css';
 import type { Metadata } from 'next';
-
-const siteUrl = 'https://webtooler.github.io/Trendforge';
+import { defaultDescription, siteName, siteUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: 'TrendForge — What Matters, Explained', template: '%s | TrendForge' },
-  description: 'Smart, useful stories about AI, technology, digital life and how-to guides.',
+  description: defaultDescription,
   alternates: { canonical: '/', types: { 'application/rss+xml': `${siteUrl}/feed.xml` } },
   openGraph: {
     type: 'website',
-    siteName: 'TrendForge',
+    siteName,
     title: 'TrendForge — What Matters, Explained',
-    description: 'Smart, useful stories about AI, technology, digital life and how-to guides.',
+    description: defaultDescription,
     url: siteUrl,
   },
   twitter: {
     card: 'summary',
     title: 'TrendForge — What Matters, Explained',
-    description: 'Smart, useful stories about AI, technology, digital life and how-to guides.',
+    description: defaultDescription,
   },
   robots: { index: true, follow: true },
 };
