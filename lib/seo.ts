@@ -39,6 +39,7 @@ const indexRobots = {
 };
 
 export function siteMetadata(): Metadata {
+  const googleVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
   return {
     metadataBase: new URL(`${siteUrl}/`),
     title: { default: siteTitle, template: '%s | TrendForge' },
@@ -48,6 +49,7 @@ export function siteMetadata(): Metadata {
     twitter: { card: 'summary_large_image', title: siteTitle, description: defaultDescription },
     robots: indexRobots,
     referrer: 'origin-when-cross-origin',
+    ...(googleVerification ? { verification: { google: googleVerification } } : {}),
   };
 }
 
