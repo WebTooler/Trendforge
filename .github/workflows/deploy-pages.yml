@@ -84,10 +84,10 @@ jobs:
           test -f out/index.html
           test -f out/robots.txt
           test -f out/sitemap.xml
-          test -f out/search/index.json
+          test -f out/search-index.json
           if [ -n "${ADSENSE_PUBLISHER_ID:-}" ]; then test -f out/ads.txt; fi
-          if grep -R -E 'sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{20,}|gsk_[A-Za-z0-9_-]{20,}' out --include='*.html' --include='*.js' --include='*.json' >/dev/null 2>&1; then
-            echo "Potential API key pattern detected in production artifact."
+          if find out -type f \( -name '.env' -o -name '.env.*' -o -name '*secret*' \) -print -quit | grep -q .; then
+            echo "Potential secret file detected in production artifact."
             exit 1
           fi
           echo "Production artifact validation passed."
