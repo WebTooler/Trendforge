@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import NewsletterSignup from '@/app/components/NewsletterSignup';
 
 const basePath = '/Trendforge';
 const feedUrl = 'https://webtooler.github.io/Trendforge/feed.xml';
@@ -19,7 +20,8 @@ export default function SubscribePage() {
     <section className="subscribe-page">
       <div className="eyebrow">TrendForge subscription</div>
       <h1>Get the signal.<br/><span>Skip the noise.</span></h1>
-      <p className="subscribe-lead">Follow TrendForge in the reader you already use. RSS is the simple, open way to receive new stories without creating another account.</p>
+      <p className="subscribe-lead">Choose email for a simple inbox newsletter, or use RSS with the reader you already trust.</p>
+      <NewsletterSignup />
       <article className="subscribe-option" style={{maxWidth:'720px'}}>
         <div className="option-number">RSS FEED</div>
         <h2>Follow TrendForge with Feedly or another RSS reader</h2>
@@ -27,8 +29,8 @@ export default function SubscribePage() {
         <button className="notify-button light-button" type="button" onClick={copyFeed}>{copied ? 'RSS address copied ✓' : 'Copy RSS feed address'}</button>
         <a className="plain-feed-link" href={`${basePath}/feed.xml`} target="_blank" rel="noreferrer">Open the TrendForge RSS feed →</a>
       </article>
-      <div className="subscribe-steps"><div><strong>1</strong><span>Copy the RSS address</span></div><div><strong>2</strong><span>Open Feedly or your RSS reader</span></div><div><strong>3</strong><span>Paste the address</span></div><div><strong>4</strong><span>Follow TrendForge</span></div></div>
-      <div className="subscribe-note"><strong>About RSS</strong><br/>RSS is a standard feed that lets reader apps collect new posts from a website. TrendForge publishes the feed; your chosen RSS reader handles the subscription and updates.</div>
+      <div className="subscribe-steps"><div><strong>1</strong><span>Choose email or RSS</span></div><div><strong>2</strong><span>Subscribe or copy the feed</span></div><div><strong>3</strong><span>Confirm with your reader/provider</span></div><div><strong>4</strong><span>Receive new TrendForge stories</span></div></div>
+      <div className="subscribe-note"><strong>Privacy by design</strong><br/>TrendForge does not keep a subscriber database. Email signups go directly to the configured newsletter provider; RSS subscriptions stay with your chosen RSS reader.</div>
     </section>
     <footer className="footer"><span>© 2026 TrendForge</span><span><a href={`${basePath}/about/`}>About</a> · <a href={`${basePath}/privacy/`}>Privacy</a> · <a href={`${basePath}/terms/`}>Terms</a> · <a href={`${basePath}/subscribe/`}>Subscribe</a></span></footer>
   </main>;
