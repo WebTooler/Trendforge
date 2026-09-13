@@ -1,5 +1,5 @@
 import { articles } from '../lib/articles';
-import { absoluteUrl, categorySlug, siteName, siteUrl } from '../lib/seo';
+import { absoluteUrl, categorySlug, seoDescription, seoTitle, siteName, siteUrl } from '../lib/seo';
 
 const errors: string[] = [];
 const seenSlugs = new Set<string>();
@@ -19,10 +19,12 @@ for (const article of articles) {
   if (seenUrls.has(canonical)) fail(`Duplicate canonical URL: ${canonical}`);
   seenUrls.add(canonical);
 
+  const title = seoTitle(article);
+  const description = seoDescription(article);
   if (!article.title.trim()) fail(`${article.slug}: missing title.`);
-  if (article.title.length > 70) fail(`${article.slug}: SEO title is ${article.title.length} chars; keep it <= 70.`);
-  if (!article.description.trim()) fail(`${article.slug}: missing meta description.`);
-  if (article.description.length < 50 || article.description.length > 170) fail(`${article.slug}: meta description should be 50–170 chars; got ${article.description.length}.`);
+  if (title.length < 10 || title.length > 70) fail(`${article.slug}: generated SEO title is ${title.length} chars; expected 10–70.`);
+  if (!article.description.trim()) fail(`${article.slug}: missing source description.`);
+  if (description.length < 50 || description.length > 170) fail(`${article.slug}: generated meta description is ${description.length} chars; expected 50–170.`);
   if (!article.category.trim()) fail(`${article.slug}: missing category.`);
   if (categorySlug(article.category) !== article.category.toLowerCase().trim().replace(/\s+/g, '-')) fail(`${article.slug}: category slug normalization mismatch.`);
 
