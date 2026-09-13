@@ -25,7 +25,7 @@ for (const file of files) {
   const imageSource = field(front, 'imageSource');
   const imageLicense = field(front, 'imageLicense');
   const slug = field(front, 'slug') || file.replace(/\.md$/, '');
-  const localPath = image.startsWith('/Trendforge/') ? path.join('.', image.slice('/Trendforge/'.length)) : '';
+  const localPath = image.startsWith('/Trendforge/') ? path.join('public', image.slice('/Trendforge/'.length)) : '';
   const candidate: ImageCandidate = { url: image, source: imageSource, license: imageLicense };
   const gate = copyrightSafetyGate({ content: body, sources: [...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map(m => m[1]), images: [candidate] }, { requireImages: true });
   const ok = Boolean(image && imageAlt && imageSource && imageLicense && localPath && fs.existsSync(localPath) && gate.checks.safeImages);
