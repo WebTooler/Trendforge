@@ -1,4 +1,4 @@
-export type Article = { slug: string; title: string; description: string; category: string; date: string; readTime: string; content: string[]; sources: { title: string; url: string }[]; image: string; imageAlt: string; imageSource: string; imageLicense: string; imageGeneratedBy: string };
+export type Article = { slug: string; title: string; description: string; category: string; date: string; publishedAt?: string; author: string; readTime: string; content: string[]; sources: { title: string; url: string }[]; image: string; imageAlt: string; imageSource: string; imageLicense: string; imageGeneratedBy: string };
 
 export const articles: Article[] = [
   {
@@ -7,6 +7,8 @@ export const articles: Article[] = [
     "description": "When Dario Amodei urged a pause in rapid AI development, the tech world paused to consider the implications. This editorial examines the shift, the uncertainties, and what investors, developers, and policy makers should watch next.",
     "category": "AI",
     "date": "2026-09-12",
+    "publishedAt": "2026-09-12T20:32:22.309Z",
+    "author": "Tejendra Pal Singh",
     "readTime": "4 min read",
     "content": [
       "## The Moment of Caution\nIn a surprising move, Dario Amodei, the chief executive of Anthropic, publicly urged the artificial‑intelligence community to slow its pace of progress. The BBC reported that Amodei’s statement came as the company continued to push larger and more capable models. He warned that unchecked growth could lead to unforeseen risks and urged a more measured approach to scaling. The Guardian echoed this sentiment, framing it as a call to prioritize safety over speed.",
@@ -22,14 +24,8 @@ export const articles: Article[] = [
       "## Conclusion\nDario Amodei’s call for a slowdown is a turning point for the AI field. It reminds us that technological ambition must be balanced with a realistic understanding of risks. While the exact form of the slowdown remains to be seen, the conversation it has sparked will shape how companies, regulators, and society navigate the next phase of AI development. For stakeholders across the ecosystem, the coming months will be critical: they must decide whether to accelerate, adjust, or pause the march toward ever more powerful models. The choices made now will influence the trust, safety, and prosperity that AI can ultimately deliver."
     ],
     "sources": [
-      {
-        "title": "BBC: Anthropic boss Dario Amodei calls for AI development to slow down - BBC",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrRjBnT05YelZFQXM0ejVFa0VZUDdYWENTbHowbzJSVmxwZWFpWEw2NFh4NHpjU01Ubi1jM21FQjhfWl82Z3JsczNTQnFIVFpkOWQyTXhQVzlGZw?oc=5"
-      },
-      {
-        "title": "The Guardian: ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown - The Guardian",
-        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXQ3RHZUeWozQnJxcHJra3ZwNXJ2WEVvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2U0dBZV9welJMczBPR1ZWN0RVYkpMTk5BRDY2Q0k5OE81Y1JPM0tmc08wWXc?oc=5"
-      }
+      {"title": "BBC: Anthropic boss Dario Amodei calls for AI development to slow down - BBC", "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBrRjBnT05YelZFQXM0ejVFa0VZUDdYWENTbHowbzJSVmxwZWFpWEw2NFh4NHpjU01Ubi1jM21FQjhfWl82Z3JsczNTQnFIVFpkOWQyTXhQVzlGZw?oc=5"},
+      {"title": "The Guardian: ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown - The Guardian", "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXQ3RHZUeWozQnJxcHJra3ZwNXJ2WEVvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2U0dBZV9welJMczBPR1ZWN0RVYkpMTk5BRDY2Q0k5OE81Y1JPM0tmc08wWXc?oc=5"}
     ],
     "image": "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.svg",
     "imageAlt": "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry — TrendForge editorial image",
