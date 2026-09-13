@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: absoluteUrl('/'), lastModified: now, changeFrequency: 'daily', priority: 1 },
+    { url: absoluteUrl('/search/'), lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
     { url: absoluteUrl('/subscribe/'), lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
     ...categories.map((category) => ({ url: absoluteUrl(`/category/${category}/`), lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8 })),
     { url: absoluteUrl('/about/'), lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
