@@ -97,4 +97,4 @@ await fs.mkdir('data', { recursive: true });
 await fs.writeFile('data/trend-candidates.json', JSON.stringify({ generatedAt: new Date().toISOString(), candidates }, null, 2));
 console.log(`Collected ${candidates.length} unique trend candidates from ${feeds.length} feeds.`);
 
-// Manual pipeline trigger marker; no runtime behavior change.
+// Manual pipeline trigger marker v2; no runtime behavior change.
