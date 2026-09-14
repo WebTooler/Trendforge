@@ -113,12 +113,12 @@ jobs:
           fi
           git commit -m 'chore: update TrendForge content pipeline'
 
-          # The scheduled pipeline is a producer of generated state, while code
-          # changes can legitimately land on main during a long run. A plain
-          # pull --rebase can fail on generated JSONL/JSON files even though the
-          # pipeline output itself is valid. Rebase onto the newest main and,
-          # only for generated pipeline paths, keep this run's output. Any
-          # conflict in source code or workflow files remains a hard failure.
+          # Generated pipeline output is intentionally allowed to win over an
+          # older generated-state snapshot when main advances during this run.
+          # IMPORTANT: during rebase, --theirs is the commit being replayed
+          # (this pipeline run); --ours is origin/main. The previous implementation
+          # used --ours, which discarded this run's generated output and could still
+          # leave the rebase unresolved. Source/workflow conflicts remain fatal.
           generated_paths=(
             'data/'
             'lib/articles.ts'
@@ -148,7 +148,7 @@ jobs:
               [ -z "$path" ] && continue
               if is_generated_path "$path"; then
                 echo "Resolving generated conflict with this run's output: $path"
-                git checkout --ours -- "$path"
+                git checkout --theirs -- "$path"
                 git add -- "$path"
               else
                 echo "Unexpected source conflict; refusing automatic resolution: $path"
