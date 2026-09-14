@@ -52,11 +52,17 @@ async function discoverRelatedSources(trend, seedSources) {
     const description = clean((item.match(/<description>([\s\S]*?)<\/description>/i) || [,''])[1]);
     const link = normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\/link>/i) || [,''])[1]));
     if (!link || !title) continue;
-    const domain = domainOf(link);
-    if (!domain || MIRROR_DOMAINS.has(domain) || seeds.has(domain)) continue;
+
+    // Google News links are only discovery pointers. Resolve them before deciding
+    // whether the publisher is an independent source; never count Google itself.
+    const resolved = await fetchText(link);
+    const finalUrl = normalizeUrl(resolved?.finalUrl || link);
+    const domain = domainOf(finalUrl);
+    if (!finalUrl || !domain || MIRROR_DOMAINS.has(domain) || seeds.has(domain)) continue;
+
     const overlap = topicOverlap(`${trend.title} ${trend.description || ''}`, `${title} ${description}`);
     if (overlap < MIN_DISCOVERY_OVERLAP) continue;
-    discovered.push({ title, url: link, sourceName: domain, discovered: true, relevanceOverlap: overlap });
+    discovered.push({ title, url: finalUrl, sourceName: domain, discovered: true, relevanceOverlap: overlap });
     if (discovered.length >= DISCOVERY_LIMIT) break;
   }
   return discovered;
@@ -87,7 +93,7 @@ for (const trend of trends) {
     : [{ title: trend.sourceName || trend.title, url: trend.sourceUrl || trend.link }];
   const seedSources = rawSources.map(source => ({ ...source, url: normalizeUrl(source.url) })).filter(source => source.url);
 
-  // Candidate-scoped discovery only. Google News is an index, never evidence.
+  // Candidate-scoped discovery only. No source is imported from another candidate/category.
   const discovered = await discoverRelatedSources(trend, seedSources);
   const combined = [...seedSources, ...discovered];
   const deduped = [];
@@ -130,7 +136,7 @@ for (const trend of trends) {
     credibleSourceCount: credible.length, uniqueDomainCount: uniqueDomains.size,
     independentReachableDomains: [...uniqueDomains], relevantReachableSourceCount: relevantReachable.length,
     confidence, status: confidence >= 70 ? 'verified' : confidence >= 45 ? 'partial' : 'unverified',
-    discovery: { enabled: true, queryTitle: trend.title, sameStoryOnly: true, minTopicOverlap: MIN_DISCOVERY_OVERLAP, googleNewsIsIndexOnly: true },
+    discovery: { enabled: true, queryTitle: trend.title, sameStoryOnly: true, minTopicOverlap: MIN_DISCOVERY_OVERLAP, googleNewsIsIndexOnly: true, resolvedPublisherLinks: true },
     sources: checks,
   });
 }
@@ -142,4 +148,4 @@ const verified = records.filter(record => record.status === 'verified').length;
 const partial = records.filter(record => record.status === 'partial').length;
 const unverified = records.filter(record => record.status === 'unverified').length;
 console.log(`Source Verification v2: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
-console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts.`);
+console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher links resolved.`);
