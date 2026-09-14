@@ -40,10 +40,10 @@ const ranked = trends
   .filter(x => x?.eligible && !existingTitles.has(String(x.title || '').toLowerCase().trim()))
   .sort((a,b) => (b.decisionScore ?? b.score ?? 0) - (a.decisionScore ?? a.score ?? 0));
 
-console.log(`Native fallback: all providers unavailable; testing ${Math.min(ranked.length, 12)} evidence-backed candidate(s).`);
+console.log(`Native fallback: all providers unavailable; testing ${Math.min(ranked.length, 12)} isolated evidence-backed candidate(s).`);
 
 for (const candidate of ranked.slice(0, 12)) {
-  const result = await generateNativeArticle({ candidate, trends, existingTitles });
+  const result = await generateNativeArticle({ candidate, existingTitles });
   if (!result.ok) {
     console.log(`Native fallback skipped: ${candidate.category} — ${candidate.title} — ${result.reason}`);
     continue;
@@ -56,7 +56,12 @@ for (const candidate of ranked.slice(0, 12)) {
     author: 'Tejendra Pal Singh',
   };
   const editorial = editorialGate(article);
-  const copyright = copyrightSafetyGate({ content: article.content, sources: article.sources.map(s => s.url), images: [] });
+  const copyright = copyrightSafetyGate({
+    content: article.content,
+    sources: article.sources.map(s => s.url),
+    sourceTexts: article.sourceTexts,
+    images: []
+  });
   if (!editorial.passed || !copyright.passed) {
     console.log(`Native fallback rejected by downstream gates: ${candidate.title}`);
     continue;
@@ -66,7 +71,7 @@ for (const candidate of ranked.slice(0, 12)) {
   fs.writeFileSync(`${outputDir}/${article.slug}.md`, articleToMarkdown(article));
   fs.mkdirSync('data', { recursive: true });
   fs.writeFileSync(marker, JSON.stringify({
-    version: '1.0',
+    version: '2.0',
     generatedAt: new Date().toISOString(),
     candidate: { title: candidate.title, category: candidate.category, link: candidate.link },
     diagnostics: result.diagnostics,
@@ -77,5 +82,5 @@ for (const candidate of ranked.slice(0, 12)) {
   process.exit(0);
 }
 
-console.log('Native fallback: no candidate had enough independent evidence for responsible publication.');
+console.log('Native fallback: no candidate had enough isolated, topic-relevant evidence for responsible publication.');
 process.exit(0);
