@@ -5,6 +5,9 @@ on:
   push:
     paths:
       - 'scripts/trend-research.mjs'
+      - 'scripts/generate-article.ts'
+      - 'scripts/generate-article-image.ts'
+      - 'scripts/validate-article-assets.ts'
   schedule:
     - cron: '17 */6 * * *'
 
