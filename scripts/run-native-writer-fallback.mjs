@@ -5,6 +5,7 @@ import { articleToMarkdown, editorialGate, slugify } from '../lib/article-engine
 import { copyrightSafetyGate } from '../lib/copyright-safety.ts';
 
 const input = 'data/scored-trends.json';
+const verificationInput = 'data/source-verification.json';
 const outputDir = 'content/articles';
 const marker = 'data/native-writer-published.json';
 
@@ -19,7 +20,13 @@ if (!fs.existsSync(input)) {
 }
 
 const payload = JSON.parse(fs.readFileSync(input, 'utf8'));
-const trends = payload.trends ?? [];
+const verification = fs.existsSync(verificationInput) ? JSON.parse(fs.readFileSync(verificationInput, 'utf8')) : { records: [] };
+const verifiedByLink = new Map((verification.records ?? []).map(r => [r.link, r]));
+const rawTrends = payload.trends ?? [];
+const trends = rawTrends.map(item => {
+  const record = verifiedByLink.get(item.link);
+  return record?.sources?.length ? { ...item, sources: record.sources.filter(s => s.ok && s.url) } : item;
+});
 const existingTitles = new Set();
 if (fs.existsSync(outputDir)) {
   for (const file of fs.readdirSync(outputDir).filter(n => n.endsWith('.md'))) {
