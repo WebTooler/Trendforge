@@ -2,6 +2,11 @@ name: TrendForge Native Writer Capability Test
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/trendforge-native-writer.mjs'
+      - 'scripts/test-native-writer-capability.mjs'
+      - '.github/workflows/native-writer-capability-test.yml'
 
 permissions:
   contents: read
