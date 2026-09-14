@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'scripts/trendforge-native-writer.mjs'
+      - 'scripts/trendforge-native-writer-v23.mjs'
       - 'scripts/test-native-writer-capability.mjs'
       - '.github/workflows/native-writer-capability-test.yml'
 
