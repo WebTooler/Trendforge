@@ -86,6 +86,48 @@ export const articles: Article[] = [
     "imageGeneratedBy": "TrendForge topic illustration engine v2"
   },
   {
+    "slug": "certara-s-software-focus-and-the-rise-of-sovereign-open-weight-ai",
+    "title": "Certara's Software Focus and the Rise of Sovereign Open-Weight AI",
+    "description": "A strategic look at Certara's workforce restructuring towards software growth and Mistral AI's focus on sovereign open-weight technology.",
+    "category": "Technology",
+    "date": "2026-09-14",
+    "publishedAt": "2026-09-14T04:53:59.627Z",
+    "author": "Tejendra Pal Singh",
+    "readTime": "2 min read",
+    "content": [
+      "## Strategic Realignment in the Technology Sector",
+      "The technology landscape is undergoing a visible strategic shift as organizations adjust operational models to emphasize software scalability and strategic autonomy. Recent developments highlight two key trends shaping enterprise strategy: Certara (CERT) initiating workforce reductions while doubling down on software growth, and Mistral AI championing sovereign, open-weight AI as a defining technology frontier.",
+      "These moves reflect broader pressures across tech enterprise operations. Organizations are increasingly evaluating where capital and talent yield the highest leverage, leading to cost discipline in labor-intensive areas alongside concentrated investment in scalable software platforms and open architecture models.",
+      "## Why Software Growth and Sovereignty Matter",
+      "For specialized tech providers like Certara, prioritizing software efficiency over higher operational overhead represents an effort to strengthen long-term positioning and recurring delivery. Software platforms offer scalable expansion that manual or services-heavy operations struggle to match during shifting economic conditions.",
+      "At the same time, the push toward sovereign, open-weight AI highlighted by Mistral AI addresses critical concerns regarding data control, technological autonomy, and developer access. Open-weight architectures allow enterprise users and sovereign entities to deploy sophisticated intelligence tools while maintaining direct governance over their data and infrastructure.",
+      "Together, these developments underscore a core market priority: building resilient, highly scalable technology foundations that reduce operational friction while preserving independence and domain control.",
+      "## What Is Known Versus What Remains Uncertain",
+      "Evaluating these market shifts requires separating confirmed strategic directions from broader execution questions.",
+      "**What is known:**\n- Certara has implemented job cuts as part of a strategic pivot toward software growth.\n- Mistral AI is framing sovereign, open-weight AI models as a critical frontier for modern technological infrastructure.",
+      "**What remains uncertain:**\n- The timeline and exact margin trajectory resulting from Certara's structural pivot toward software.\n- How rapidly enterprise adoption of sovereign open-weight models will match or surpass proprietary AI alternatives in high-compliance sectors.\n- The legal and regulatory frameworks that distinct jurisdictions will establish around sovereign AI architectures.",
+      "## Practical Takeaways for Enterprise Leaders",
+      "As leadership teams navigate ongoing corporate realignments and technological changes, several practical steps can guide decision-making:",
+      "1. **Prioritize Scalable Platforms:** Focus internal investments on software and tools that scale revenue and capability without proportional headcount expansion.\n2. **Assess Data Sovereignty:** Review AI and enterprise software dependencies to ensure alignment with local regulatory trends and data ownership needs.\n3. **Balance Efficiency with Agility:** Ensure workforce restructuring aligns directly with strategic core competencies rather than short-term cost targets.",
+      "Tracking how software transitions unfold across specialized enterprise platforms and open AI ecosystems will provide essential signals for future digital strategy."
+    ],
+    "sources": [
+      {
+        "title": "Yahoo Finance: Certara (CERT) Slashes Jobs While Doubling Down On Software Growth - Yahoo Finance",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbDhyeGdCRHIwaG83anhSWTF6NWF4d2lac3hJbWpCV2NYaV9fcXZ6MkRiXzV1bHJYZHFEc1J6QXRoc0ZEc193RG5xa0dnQklfOUNMWENUSXA1VjR4SVBmTU1wSXFta2ZDY0hheG9zMW9IU3hidFVjSXhsNVZKVWk3VTZwRWMtOUVUNTZOaDJ3blhWWm9yUm5xaDMtUnU?oc=5"
+      },
+      {
+        "title": "mistral.ai: Making sovereign, open-weight AI the technology frontier - mistral.ai",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRzU0cTlwNHctb0FiY092UVlJZFh4UmxsQ2lPLTdkVEU2SlRzVU12VzI2RGRYWEFqS2NMcVlXdXNTUGczTjFTbjZGMXY4bHhZYXN6bVpGQ0M0cndmMmthYjhUcGhPWlZsb1ZWeHhHOUdZWE93bTdUMjBNMzZQNTR6Mw?oc=5"
+      }
+    ],
+    "image": "/Trendforge/images/articles/certara-s-software-focus-and-the-rise-of-sovereign-open-weight-ai.svg",
+    "imageAlt": "Original ai illustration for Certara's Software Focus and the Rise of Sovereign Open-Weight AI",
+    "imageSource": "TrendForge original editorial visual",
+    "imageLicense": "Original",
+    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+  },
+  {
     "slug": "how-to-move-passwords-and-passkeys-between-managers-on-android",
     "title": "How to Move Passwords and Passkeys Between Managers on Android",
     "description": "Android now offers a safer way to move passwords and passkeys between supported password managers without first creating a downloadable credential file. Here is how the new transfer flow works and what to check before switching.",
@@ -122,6 +164,45 @@ export const articles: Article[] = [
     ],
     "image": "/Trendforge/images/articles/how-to-move-passwords-and-passkeys-between-managers-on-android.svg",
     "imageAlt": "Original howto illustration for How to Move Passwords and Passkeys Between Managers on Android",
+    "imageSource": "TrendForge original editorial visual",
+    "imageLicense": "Original",
+    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+  },
+  {
+    "slug": "how-to-set-up-a-passkey-for-your-google-account",
+    "title": "How to Set Up a Passkey for Your Google Account",
+    "description": "Passkeys let you sign in to a Google Account using your device screen lock, fingerprint or face unlock. Here is how to create one and the security checks to make before using it.",
+    "category": "How-To",
+    "date": "2026-09-14",
+    "publishedAt": "2026-09-14T04:53:59.646Z",
+    "author": "Tejendra Pal Singh",
+    "readTime": "2 min read",
+    "content": [
+      "## What a passkey changes",
+      "A passkey gives you another way to sign in without typing a traditional password. Google Account Help says a passkey can use a fingerprint, face scan or phone screen lock such as a PIN. The biometric information used to unlock the device stays on the device rather than being shared with Google.",
+      "Passkeys are designed to make sign-in easier while providing stronger protection against phishing than a password alone. Google also continues to support other account recovery and security methods, so creating a passkey does not simply erase the rest of your account protections.",
+      "## How to create a passkey",
+      "Start from your Google Account sign-in options and open the passkeys section. Google provides the direct setup path at **myaccount.google.com/signinoptions/passkeys**. Choose **Create a passkey** and follow the device's instructions to verify that you own and can unlock it.",
+      "Before creating one, make sure you are using a personal device that you control. Google specifically warns against creating a passkey on a shared device because anyone who can unlock that device could potentially use the passkey.",
+      "## What you should check first",
+      "Your phone or computer needs a supported operating system and browser, and your device should have a screen lock enabled. If you are setting up a passkey on a phone for use with another computer, Bluetooth may also be required for the cross-device sign-in flow.",
+      "It is also worth keeping your existing recovery information current. A passkey is convenient, but account recovery still matters if a device is lost or replaced.",
+      "## When a passkey is a good choice",
+      "For people who regularly use a modern phone or computer, a passkey can reduce password fatigue while making phishing harder. Google says passkeys are now one of the tools it recommends alongside protections such as 2-Step Verification and recovery options.",
+      "The safest approach is not to treat a passkey as a magic replacement for every security measure. Use a personal, protected device, keep recovery methods current and review the passkeys listed in your Google Account from time to time."
+    ],
+    "sources": [
+      {
+        "title": "Google Account Help: Sign in with a passkey instead of a password",
+        "url": "https://support.google.com/accounts/answer/13548313?hl=en"
+      },
+      {
+        "title": "Google Security Blog: 5 helpful tools from Google to keep your accounts safe",
+        "url": "https://blog.google/innovation-and-ai/technology/safety-security/world-password-day-2026/"
+      }
+    ],
+    "image": "/Trendforge/images/articles/how-to-set-up-a-passkey-for-your-google-account.svg",
+    "imageAlt": "Original cyber illustration for How to Set Up a Passkey for Your Google Account",
     "imageSource": "TrendForge original editorial visual",
     "imageLicense": "Original",
     "imageGeneratedBy": "TrendForge topic illustration engine v2"

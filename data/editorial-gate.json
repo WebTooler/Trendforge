@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T02:26:21.371Z",
+  "generatedAt": "2026-09-14T04:53:59.628Z",
   "provider": "Gemini",
   "editorial": {
     "passed": true,
@@ -22,10 +22,11 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3320,
-      "sentenceCount": 18,
+      "normalizedLength": 3337,
+      "sentenceCount": 22,
       "maxSourceSimilarity": 0
     }
   },
-  "semanticDuplicateCheck": "passed"
+  "semanticDuplicateCheck": "passed",
+  "sourceRelationshipCheck": "passed"
 }
