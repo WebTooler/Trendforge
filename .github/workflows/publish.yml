@@ -7,6 +7,7 @@ on:
       - 'scripts/trend-research.mjs'
       - 'scripts/score-trends.ts'
       - 'scripts/trend-decision-engine.mjs'
+      - 'scripts/verify-trend-sources.mjs'
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
@@ -42,6 +43,8 @@ jobs:
         run: node scripts/trend-research.mjs
       - name: Score trends
         run: npx tsx scripts/score-trends.ts
+      - name: Verify trend sources
+        run: node scripts/verify-trend-sources.mjs
       - name: AI provider health check
         run: |
           node --input-type=module <<'NODE'
