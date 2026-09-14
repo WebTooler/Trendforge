@@ -11,6 +11,7 @@ const credibleDomains = new Set([
 const DISCOVERY_TIMEOUT_MS = 7000;
 const DISCOVERY_LIMIT = 6;
 const MIN_DISCOVERY_OVERLAP = 3;
+const DISCOVERY_MIN_SCORE = 70;
 const CANDIDATE_CONCURRENCY = 6;
 const MIRROR_DOMAINS = new Set(['news.google.com', 'google.com', 'google.co.uk']);
 
@@ -47,23 +48,29 @@ async function discoverRelatedSources(trend, seedSources) {
   if (!result) return [];
   const items = [...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m => m[1]);
   const seeds = new Set(seedSources.map(s => domainOf(s.url)).filter(Boolean));
-  const discovered = [];
-  for (const item of items) {
+
+  // Filter by story relevance before any network resolution. This prevents
+  // unrelated RSS items from consuming redirect/fetch time.
+  const relevantItems = items.map(item => {
     const title = clean((item.match(/<title>([\s\S]*?)<\/title>/i) || [,''])[1]);
     const description = clean((item.match(/<description>([\s\S]*?)<\/description>/i) || [,''])[1]);
     const link = normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\/link>/i) || [,''])[1]));
-    if (!link || !title) continue;
+    const overlap = topicOverlap(`${trend.title} ${trend.description || ''}`, `${title} ${description}`);
+    return { title, description, link, overlap };
+  })
+    .filter(item => item.link && item.title && item.overlap >= MIN_DISCOVERY_OVERLAP)
+    .sort((a, b) => b.overlap - a.overlap)
+    .slice(0, DISCOVERY_LIMIT);
 
-    // Google News links are only discovery pointers. Resolve them before deciding
-    // whether the publisher is an independent source; never count Google itself.
-    const resolved = await fetchText(link);
-    const finalUrl = normalizeUrl(resolved?.finalUrl || link);
+  const discovered = [];
+  for (const item of relevantItems) {
+    // Google News links are discovery pointers. Resolve only already-relevant
+    // items before deciding whether the publisher is independent.
+    const resolved = await fetchText(item.link);
+    const finalUrl = normalizeUrl(resolved?.finalUrl || item.link);
     const domain = domainOf(finalUrl);
     if (!finalUrl || !domain || MIRROR_DOMAINS.has(domain) || seeds.has(domain)) continue;
-
-    const overlap = topicOverlap(`${trend.title} ${trend.description || ''}`, `${title} ${description}`);
-    if (overlap < MIN_DISCOVERY_OVERLAP) continue;
-    discovered.push({ title, url: finalUrl, sourceName: domain, discovered: true, relevanceOverlap: overlap });
+    discovered.push({ title: item.title, url: finalUrl, sourceName: domain, discovered: true, relevanceOverlap: item.overlap });
     if (discovered.length >= DISCOVERY_LIMIT) break;
   }
   return discovered;
@@ -84,9 +91,15 @@ async function verifyCandidate(trend) {
     ? trend.sources
     : [{ title: trend.sourceName || trend.title, url: trend.sourceUrl || trend.link }];
   const seedSources = rawSources.map(source => ({ ...source, url: normalizeUrl(source.url) })).filter(source => source.url);
+  const seedDomains = new Set(seedSources.map(source => domainOf(source.url)).filter(domain => domain && !MIRROR_DOMAINS.has(domain)));
 
-  // Candidate-scoped discovery only. No source is imported from another candidate/category.
-  const discovered = await discoverRelatedSources(trend, seedSources);
+  // Discovery is an expensive enrichment path. Only candidates with a strong
+  // score and fewer than two independent seed domains need it; all others keep
+  // normal seed verification without unnecessary network discovery.
+  const discoveryEligible = (Number(trend.score ?? trend.finalScore ?? trend.priorityScore ?? 0) >= DISCOVERY_MIN_SCORE)
+    && seedDomains.size < 2;
+  const discovered = discoveryEligible ? await discoverRelatedSources(trend, seedSources) : [];
+
   const combined = [...seedSources, ...discovered];
   const deduped = [];
   const seenUrls = new Set();
@@ -128,7 +141,12 @@ async function verifyCandidate(trend) {
     credibleSourceCount: credible.length, uniqueDomainCount: uniqueDomains.size,
     independentReachableDomains: [...uniqueDomains], relevantReachableSourceCount: relevantReachable.length,
     confidence, status: confidence >= 70 ? 'verified' : confidence >= 45 ? 'partial' : 'unverified',
-    discovery: { enabled: true, queryTitle: trend.title, sameStoryOnly: true, minTopicOverlap: MIN_DISCOVERY_OVERLAP, googleNewsIsIndexOnly: true, resolvedPublisherLinks: true },
+    discovery: {
+      enabled: discoveryEligible, queryTitle: discoveryEligible ? trend.title : null,
+      sameStoryOnly: true, minTopicOverlap: MIN_DISCOVERY_OVERLAP,
+      googleNewsIsIndexOnly: true, resolvedPublisherLinks: true,
+      minScore: DISCOVERY_MIN_SCORE, seedDomainCount: seedDomains.size,
+    },
     sources: checks,
   };
 }
@@ -159,14 +177,16 @@ const records = await mapWithConcurrency(trends, CANDIDATE_CONCURRENCY, verifyCa
 const durationMs = Date.now() - startedAt;
 
 fs.mkdirSync('data', { recursive: true });
-fs.writeFileSync(outputPath, `${JSON.stringify({ version: 2, generatedAt: new Date().toISOString(), durationMs, candidateConcurrency: CANDIDATE_CONCURRENCY, records }, null, 2)}\n`);
+fs.writeFileSync(outputPath, `${JSON.stringify({ version: 2, generatedAt: new Date().toISOString(), durationMs, candidateConcurrency: CANDIDATE_CONCURRENCY, discoveryMinScore: DISCOVERY_MIN_SCORE, records }, null, 2)}\n`);
 
 const verified = records.filter(record => record.status === 'verified').length;
 const partial = records.filter(record => record.status === 'partial').length;
 const unverified = records.filter(record => record.status === 'unverified').length;
 const discovered = records.reduce((sum, record) => sum + record.discoveredSourceCount, 0);
 const independentDomains = records.reduce((sum, record) => sum + record.uniqueDomainCount, 0);
+const discoveryEnabled = records.filter(record => record.discovery?.enabled).length;
 console.log(`Source Verification v2: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
 console.log(`Evidence discovery: ${discovered} discovered publisher source(s), ${independentDomains} candidate-level independent reachable domain(s).`);
+console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE}, fewer than 2 independent seed domains).`);
 console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher links resolved.`);
 console.log(`Evidence discovery runtime: ${durationMs}ms with bounded candidate concurrency ${CANDIDATE_CONCURRENCY}.`);
