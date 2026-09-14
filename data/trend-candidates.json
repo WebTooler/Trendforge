@@ -1,5 +1,59 @@
 {
-  "generatedAt": "2026-09-14T11:05:16.372Z",
+  "generatedAt": "2026-09-14T11:20:22.454Z",
+  "discoveryPolicy": {
+    "version": 2,
+    "supportedCategories": [
+      "AI",
+      "Technology",
+      "How-To",
+      "Innovation",
+      "Product Launches",
+      "Digital Life",
+      "Crypto"
+    ],
+    "categoryAwareDiscovery": true,
+    "categoryMinResearchTarget": 8,
+    "categoryMaxResearchTarget": 24,
+    "publishQuota": false,
+    "note": "Discovery seeks representation across categories; downstream evidence, editorial, duplicate, safety and SEO gates decide publication."
+  },
+  "categoryStats": [
+    {
+      "category": "AI",
+      "discovered": 40,
+      "researchTarget": 24
+    },
+    {
+      "category": "Technology",
+      "discovered": 50,
+      "researchTarget": 24
+    },
+    {
+      "category": "How-To",
+      "discovered": 20,
+      "researchTarget": 20
+    },
+    {
+      "category": "Innovation",
+      "discovered": 20,
+      "researchTarget": 20
+    },
+    {
+      "category": "Product Launches",
+      "discovered": 20,
+      "researchTarget": 20
+    },
+    {
+      "category": "Digital Life",
+      "discovered": 29,
+      "researchTarget": 24
+    },
+    {
+      "category": "Crypto",
+      "discovered": 20,
+      "researchTarget": 20
+    }
+  ],
   "candidates": [
     {
       "title": "What are the five pros and cons of artificial intelligence? - Al Jazeera",
@@ -20,6 +74,15 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQM1FUWERnbmM3dlBucFJQMmJmSEp5UVlXUVp0UEI0eU9aV1VzSnVoX3pNZUtWcFZsXzAtNUVXQmdOakFVNUYzZWVwSm9laXBTU2pvRXVaendNSFU3XzJmeGxrdDlKN0N3OUwxd1VSSEhfcWVTQTRNMV9hRnZkVk9WaUowMmtPdC1HTmhIOG9BRHpucDZHTk1KTnVLdXRfU1NVclVibTlCU1hjQQ?oc=5\" target=\"_blank\">How China is preparing for the risk of AI escaping human control</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>"
     },
     {
+      "title": "Obama Urges Democrats to Move A.I. Oversight to the Center of Their Agenda - The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4wV0pYQmdFdDdtdzZyUExENUJfM18tUEJud2Y2aUpNeG9SV2loa3FwMFFQWEhoTktGQnBkQWwxY1gtU0UyYWFYX24wNVMwZnlJbHIzRkFGbDBONlFvdlNJUHhrY01VdU5MSndvUUdkdmdMODF2UEdENG1n?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-13T04:03:58.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE4wV0pYQmdFdDdtdzZyUExENUJfM18tUEJud2Y2aUpNeG9SV2loa3FwMFFQWEhoTktGQnBkQWwxY1gtU0UyYWFYX24wNVMwZnlJbHIzRkFGbDBONlFvdlNJUHhrY01VdU5MSndvUUdkdmdMODF2UEdENG1n?oc=5\" target=\"_blank\">Obama Urges Democrats to Move A.I. Oversight to the Center of Their Agenda</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>"
+    },
+    {
       "title": "New warnings about the risks of AI to humanity revive a long-running debate - ABC News - Breaking News, Latest News and Videos",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNd0xYYkd0WFJiNU9GSFFqNC0xMzB3ZUpXZWxteVI1WkwwZkNkVFlNOGVDUTVfZm1fVUJQeTVwYXlFTEdxNzJCd2xQUFVrZkhCOXg5dVZQMS1sSVZhUTNiUHpud3lDeFVGUTg0S213ZVVpdVZkOW1kanRxV2dmSHBRUk9RQk5VbE8wZmprVkhWaUR5UEhuWDVBZdIBngFBVV95cUxPUUxMQ3FnTUdrbVpJRXdadlJfTWJiTHphR3NQNldwTmxCRGRBbk4tYjBNdnhzMVlhS2NpOGIwdkpNc0JOdVUwUV9JOEZXQktkckd6MUFpdlhOOFdBYjlMb1pqbHVRQ0FmNGRBcC1kb01wNmRhamJUczlvSWJ2SmZSME1Kb2xXNGIyTWhxMVRlUUQ2b3N6ZDVFaGY1X1pDQQ?oc=5",
       "source": "Google News",
@@ -38,31 +101,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOUzlDMS14ekNidjBCaUU2WVdmMTFnWnJoN3BYWDlKY0lPN2FqNVBMcDJlckVmMnM4ajFmZFF1Rk4zdTVJcFBiemgwQVhnUUliZEt0d3RaamNYbW1ldXNOX2I4RC1wVWpuTUJvMkpxamxUYk9adGk2NGs0bzZTQ2xxdA?oc=5\" target=\"_blank\">Beijing hits back at Anthropic CEO's call to curb China's AI development</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>"
     },
     {
-      "title": "Obama Urges Democrats to Move A.I. Oversight to the Center of Their Agenda - The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4wV0pYQmdFdDdtdzZyUExENUJfM18tUEJud2Y2aUpNeG9SV2loa3FwMFFQWEhoTktGQnBkQWwxY1gtU0UyYWFYX24wNVMwZnlJbHIzRkFGbDBONlFvdlNJUHhrY01VdU5MSndvUUdkdmdMODF2UEdENG1n?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-13T04:03:58.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE4wV0pYQmdFdDdtdzZyUExENUJfM18tUEJud2Y2aUpNeG9SV2loa3FwMFFQWEhoTktGQnBkQWwxY1gtU0UyYWFYX24wNVMwZnlJbHIzRkFGbDBONlFvdlNJUHhrY01VdU5MSndvUUdkdmdMODF2UEdENG1n?oc=5\" target=\"_blank\">Obama Urges Democrats to Move A.I. Oversight to the Center of Their Agenda</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>"
-    },
-    {
-      "title": "Obama says Democrats should have a ‘very clear plan’ on AI policy - NBC News",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORzJRbGVPWkg4d1FkdjFvOUFJajI2RUpHa1FIMjJQamFTWHRVc200NDlSZDg5OXJIdmM5OC1BdnZkSjBHVGxDcEllelFnQWpqYV9HbHJkNHBBX0hxYzRQQ2dHeUk3QW14dEJYVW5yejVfZmQ2ck9VcUVJcTdKb284YW1HOGM1M3RvLUpZUUpfc1ROSTc5amdRRThR?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-13T21:56:43.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxORzJRbGVPWkg4d1FkdjFvOUFJajI2RUpHa1FIMjJQamFTWHRVc200NDlSZDg5OXJIdmM5OC1BdnZkSjBHVGxDcEllelFnQWpqYV9HbHJkNHBBX0hxYzRQQ2dHeUk3QW14dEJYVW5yejVfZmQ2ck9VcUVJcTdKb284YW1HOGM1M3RvLUpZUUpfc1ROSTc5amdRRThR?oc=5\" target=\"_blank\">Obama says Democrats should have a ‘very clear plan’ on AI policy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>"
-    },
-    {
-      "title": "Cybersecurity Is the Next Big Market for Artificial Intelligence (AI), According to Jensen Huang. This Super Stock-Split Stock Is the One to Own. - finance.yahoo.com",
+      "title": "Cybersecurity Is the Next Big Market for Artificial Intelligence (AI), According to Jensen Huang. This Super Stock-Split Stock Is the One to Own. - Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNa2JhNFVwa1U3Z1NlVV9LZEhDSmFGT3oyVzlpemVwQzNlVmdHeGM3V2NHMTZibklDdzRWVkF1UnBsUDBUTU9LMEw0TUNzUm5XcXRwTTRNdU5OaEI0cUhBa3lhWkRydFh5VVg3Y3JDaExqLWhDT1JrRTJvV0Z2NVRsQWlmc21oWmVNSDBLdU53a191Q05qUWZ3NndxLUZkc0w0d05oRTlCaw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-13T21:50:00.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNa2JhNFVwa1U3Z1NlVV9LZEhDSmFGT3oyVzlpemVwQzNlVmdHeGM3V2NHMTZibklDdzRWVkF1UnBsUDBUTU9LMEw0TUNzUm5XcXRwTTRNdU5OaEI0cUhBa3lhWkRydFh5VVg3Y3JDaExqLWhDT1JrRTJvV0Z2NVRsQWlmc21oWmVNSDBLdU53a191Q05qUWZ3NndxLUZkc0w0d05oRTlCaw?oc=5\" target=\"_blank\">Cybersecurity Is the Next Big Market for Artificial Intelligence (AI), According to Jensen Huang. This Super Stock-Split Stock Is the One to Own.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">finance.yahoo.com</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNa2JhNFVwa1U3Z1NlVV9LZEhDSmFGT3oyVzlpemVwQzNlVmdHeGM3V2NHMTZibklDdzRWVkF1UnBsUDBUTU9LMEw0TUNzUm5XcXRwTTRNdU5OaEI0cUhBa3lhWkRydFh5VVg3Y3JDaExqLWhDT1JrRTJvV0Z2NVRsQWlmc21oWmVNSDBLdU53a191Q05qUWZ3NndxLUZkc0w0d05oRTlCaw?oc=5\" target=\"_blank\">Cybersecurity Is the Next Big Market for Artificial Intelligence (AI), According to Jensen Huang. This Super Stock-Split Stock Is the One to Own.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>"
     },
     {
       "title": "AI CEOs say they need to slow the pace of development. But will they? - The Guardian",
@@ -74,15 +119,6 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE5XQlp1T0FKUFNtVnFFME44cGFabC1iYlp4YXVWaWtXaWtfR0l3b1FRbEh1NTd2RmxjazNmcGIzX1lJQm1Ub2pMNDR3R0VYbG8tUGpOUXFuTUZXQWpiSERMOUdscExGZS05NzA3cWtmZWFjODFRZzg3YlFEWWNEQQ?oc=5\" target=\"_blank\">AI CEOs say they need to slow the pace of development. But will they?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>"
     },
     {
-      "title": "Dreamforce welcomes more than 43,000 to San Francisco amid debate over pace of AI development - ABC7 Bay Area",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTDFNd2ppSmlFeS0xaGhZaFNtd1A3WjFkUVRheC1uYmxLQzJDdXRMSnlUYmdQUks3WFpVdFd3dS1HOWJyNFNCMGJGdW9uUDVJdkVwTy1tYTJCaFhNaWpldlhGUEtUeTIwZ2pzaUVXQ0ZmX1J1b0lWVFMtcmJ3MHczczBwejY0eG9pNXFuMjRhVkpnZGIxRFVoRDZPTDNyaGpka2dLTGdlM0RzSEJHZGU2S0tn0gG3AUFVX3lxTE1GMV9rcW1TMDlmY0hPZGFlZzVhUWZfUzhDbi1GRXNhdzFMSmJKYlBSMjJfNTUxWExoOFZsaEpGQ1ZMamtSTzl6NDRXWmpxMWpaSURlRThjdVNrZktraXZCRkhyU3JyS1pSYVJGODA0MEpzYlRSOTgwdFlGN1JKNG1JZ0s3WXU0NDAzbXhTTWc3MG1HTHdXcHRGbzN5SUJEaFBoRjRlWk5iUjl0VFJBWjYwN0dJZm5HZw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T03:18:34.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNTDFNd2ppSmlFeS0xaGhZaFNtd1A3WjFkUVRheC1uYmxLQzJDdXRMSnlUYmdQUks3WFpVdFd3dS1HOWJyNFNCMGJGdW9uUDVJdkVwTy1tYTJCaFhNaWpldlhGUEtUeTIwZ2pzaUVXQ0ZmX1J1b0lWVFMtcmJ3MHczczBwejY0eG9pNXFuMjRhVkpnZGIxRFVoRDZPTDNyaGpka2dLTGdlM0RzSEJHZGU2S0tn0gG3AUFVX3lxTE1GMV9rcW1TMDlmY0hPZGFlZzVhUWZfUzhDbi1GRXNhdzFMSmJKYlBSMjJfNTUxWExoOFZsaEpGQ1ZMamtSTzl6NDRXWmpxMWpaSURlRThjdVNrZktraXZCRkhyU3JyS1pSYVJGODA0MEpzYlRSOTgwdFlGN1JKNG1JZ0s3WXU0NDAzbXhTTWc3MG1HTHdXcHRGbzN5SUJEaFBoRjRlWk5iUjl0VFJBWjYwN0dJZm5HZw?oc=5\" target=\"_blank\">Dreamforce welcomes more than 43,000 to San Francisco amid debate over pace of AI development</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC7 Bay Area</font>"
-    },
-    {
       "title": "Chip Roy is leaving Congress — but not before warning his colleagues about AI - Politico",
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVUtPejZuR19NLTEzS2RqWXZTa3pETU5XVURfaVhKRjlmdVluY185Y2xjOFEzSzNKaVRncnVyaE95eW5xUEx5am9EVmRodFREeWhQQVcwVVBWMTdVMVFrQlowWDBGaE9MeWRKRFZLT2g2eHdiV2tWUXNRbVR2dF9uOWxDT3AyQQ?oc=5",
       "source": "Google News",
@@ -90,6 +126,15 @@
       "publishedAt": "2026-09-13T18:41:00.000Z",
       "category": "AI",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOVUtPejZuR19NLTEzS2RqWXZTa3pETU5XVURfaVhKRjlmdVluY185Y2xjOFEzSzNKaVRncnVyaE95eW5xUEx5am9EVmRodFREeWhQQVcwVVBWMTdVMVFrQlowWDBGaE9MeWRKRFZLT2g2eHdiV2tWUXNRbVR2dF9uOWxDT3AyQQ?oc=5\" target=\"_blank\">Chip Roy is leaving Congress — but not before warning his colleagues about AI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>"
+    },
+    {
+      "title": "Dreamforce welcomes more than 43,000 to San Francisco amid debate over pace of AI development - ABC7 Bay Area",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTDFNd2ppSmlFeS0xaGhZaFNtd1A3WjFkUVRheC1uYmxLQzJDdXRMSnlUYmdQUks3WFpVdFd3dS1HOWJyNFNCMGJGdW9uUDVJdkVwTy1tYTJCaFhNaWpldlhGUEtUeTIwZ2pzaUVXQ0ZmX1J1b0lWVFMtcmJ3MHczczBwejY0eG9pNXFuMjRhVkpnZGIxRFVoRDZPTDNyaGpka2dLTGdlM0RzSEJHZGU2S0tn0gG3AUFVX3lxTE1GMV9rcW1TMDlmY0hPZGFlZzVhUWZfUzhDbi1GRXNhdzFMSmJKYlBSMjJfNTUxWExoOFZsaEpGQ1ZMamtSTzl6NDRXWmpxMWpaSURlRThjdVNrZktraXZCRkhyU3JyS1pSYVJGODA0MEpzYlRSOTgwdFlGN1JKNG1JZ0s3WXU0NDAzbXhTTWc3MG1HTHdXcHRGbzN5SUJEaFBoRjRlWk5iUjl0VFJBWjYwN0dJZm5HZw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T03:18:34.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNTDFNd2ppSmlFeS0xaGhZaFNtd1A3WjFkUVRheC1uYmxLQzJDdXRMSnlUYmdQUks3WFpVdFd3dS1HOWJyNFNCMGJGdW9uUDVJdkVwTy1tYTJCaFhNaWpldlhGUEtUeTIwZ2pzaUVXQ0ZmX1J1b0lWVFMtcmJ3MHczczBwejY0eG9pNXFuMjRhVkpnZGIxRFVoRDZPTDNyaGpka2dLTGdlM0RzSEJHZGU2S0tn0gG3AUFVX3lxTE1GMV9rcW1TMDlmY0hPZGFlZzVhUWZfUzhDbi1GRXNhdzFMSmJKYlBSMjJfNTUxWExoOFZsaEpGQ1ZMamtSTzl6NDRXWmpxMWpaSURlRThjdVNrZktraXZCRkhyU3JyS1pSYVJGODA0MEpzYlRSOTgwdFlGN1JKNG1JZ0s3WXU0NDAzbXhTTWc3MG1HTHdXcHRGbzN5SUJEaFBoRjRlWk5iUjl0VFJBWjYwN0dJZm5HZw?oc=5\" target=\"_blank\">Dreamforce welcomes more than 43,000 to San Francisco amid debate over pace of AI development</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC7 Bay Area</font>"
     },
     {
       "title": "AI safety warnings grow as New York officials weigh oversight - ABC7 New York",
@@ -128,13 +173,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQb2VZT2RaOHpEM0RneENGMFBIQk93Y0oxYmhqYnBIeDdRcGpRajBpTFhybzFqMHpSRHBmbGpxdUthMU1iNkxydUpoU2hHUUxvUmU0RkVyc0lpVUpQbDgtb2drdnYxNXcyWVhCR2lYMnVYd0s1QW5YdTVpR0lldnlKbnV0QndvRGdWc1ZabQ?oc=5\" target=\"_blank\">Inside the Discussions at AI Companies Over a Superintelligence Doomsday</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>"
     },
     {
-      "title": "If I Could Only Buy 1 Artificial Intelligence (AI) Stock, This Would Be It - finance.yahoo.com",
+      "title": "If I Could Only Buy 1 Artificial Intelligence (AI) Stock, This Would Be It - Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQY1BiRGFjYjdyMmJwR2dqYUJHeGRQeW44SmgwZVIyb28tcTJ0alBScGp3RDZWTk5QbmFoc2cwaG9tSWpvdmxsSVpjS2s4RFI1TkVDY2RCQXhuVHkycE03RmRldzA3amVITkNMWFZBRVFfcmplSkgwVlEySEUzTG41NXp1RWo5Y2I2ckNQSHZwN25ybG45TldZ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-13T20:46:00.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQY1BiRGFjYjdyMmJwR2dqYUJHeGRQeW44SmgwZVIyb28tcTJ0alBScGp3RDZWTk5QbmFoc2cwaG9tSWpvdmxsSVpjS2s4RFI1TkVDY2RCQXhuVHkycE03RmRldzA3amVITkNMWFZBRVFfcmplSkgwVlEySEUzTG41NXp1RWo5Y2I2ckNQSHZwN25ybG45TldZ?oc=5\" target=\"_blank\">If I Could Only Buy 1 Artificial Intelligence (AI) Stock, This Would Be It</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">finance.yahoo.com</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQY1BiRGFjYjdyMmJwR2dqYUJHeGRQeW44SmgwZVIyb28tcTJ0alBScGp3RDZWTk5QbmFoc2cwaG9tSWpvdmxsSVpjS2s4RFI1TkVDY2RCQXhuVHkycE03RmRldzA3amVITkNMWFZBRVFfcmplSkgwVlEySEUzTG41NXp1RWo5Y2I2ckNQSHZwN25ybG45TldZ?oc=5\" target=\"_blank\">If I Could Only Buy 1 Artificial Intelligence (AI) Stock, This Would Be It</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>"
     },
     {
       "title": "OpenAI boss and Elon Musk back calls to put brakes on ‘reckless’ AI development - The Guardian",
@@ -180,6 +225,15 @@
       "publishedAt": "2026-09-14T01:03:00.000Z",
       "category": "AI",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQOE1BV1Q4UUYxLVRfaDNJVXVRbnNaQmdUMjBzbWJWRWtTcjlROWZqUjAtVGlob2NHVlB1NHVfRU5FY1dWT1UxR3RHakpVUTdzSGdvRmR2UFR2dzZxdHJ0ZXlMb0NsMVd1MDM1aUZ2VlpPeG9zSDZxRFpFWjNhQ0psM2RVYW8tM0ZKdTdDdG93?oc=5\" target=\"_blank\">Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>"
+    },
+    {
+      "title": "Artificial Intelligence Testbeds at DOE - Department of Energy (.gov)",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9ZUmNYR2dxUjNhcVkzb0Q2aGg4R1V3NVNSNWw5Tl9vbFJHSm4xaXZOXzZRNFFLRkhRUUowQVdfTEhXSnlKM0FQYjF4THVmblZaVkRobjkycnRyTlJsRFkwU19TdjFoeGlaRG8zZ1ozNXg?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-10T16:21:28.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9ZUmNYR2dxUjNhcVkzb0Q2aGg4R1V3NVNSNWw5Tl9vbFJHSm4xaXZOXzZRNFFLRkhRUUowQVdfTEhXSnlKM0FQYjF4THVmblZaVkRobjkycnRyTlJsRFkwU19TdjFoeGlaRG8zZ1ozNXg?oc=5\" target=\"_blank\">Artificial Intelligence Testbeds at DOE</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Department of Energy (.gov)</font>"
     },
     {
       "title": "We Must Pace the Frontier - darioamodei.com",
@@ -245,13 +299,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxORTdxSTVlYlkwYUN0blRCNEFKc0V5OEsyQ0dGZXp4eGNnTEkwTzJoTURhMW1QNzQ2WmVWZmQtV1FPbUNYLUFSZHg5Y0RPbXU5dWRaWTNYcEtOMUNEYi1uMm95UDQwZVlZendjWE8zREw5RmtHUmZYdm1hdWo4UDRMeUswX3J0WEoyclFjQkl5YkJfdGlTbjFSRFJtcGp0dw?oc=5\" target=\"_blank\">Toyota expands hydrogen fuel cell technology for heavy-duty transport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsroom Toyota Europe</font>"
     },
     {
-      "title": "Thales Technology Summit: \"Where we have capability that can be reused, we maximise it for our customers’ benefit\" - Thales",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPUGYyZUZ6d19jSHczb0dVcldGV2hRVjRZdGhIek05cDZoYm1LYVFIM0JiWTdGUnVZM24zaGhXRENpRDZoNjVSNEZ0NUcyQ0M2aUJ2cVdTc0pybk5mMzFyY2lYWUlwM1FYNDMyekpVU3ZvQmZXdEJISkxOU2h1WXZOLV83ZXM0ZGpNdzV6XzJORFI0dGo1VXFWZXpuVjZ2OFhyNjlweTdXU2h3eW1KRmxiTTRmTGQ1N1U0d3NHa2tWZXJUTF9vOUJwVG5n?oc=5",
+      "title": "Fortaegis Raises $50 Million to Commercialize Chip-Based Security Technology - The Quantum Insider",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZUgzLVRJdWVNSDMyejcycnIyazFTajRJb08wcDdEQ1hxaG10b1g4MzB0czJ4c0xDd0xqVG5ub1lGaG1CaTR6RzVza0ZRZEQxdmhtU3poNnUyam9iaEIwZG11RFJVY2ViOE1KS3h1c0lxOHdYcEZZN2REdVdZU3FkUVY4aWNkam1obTJ6ajFGLUlBNGV1SHRxY3dXOTFhRzBEcDc1OUR6N0w4S21OZVhpZlFaWEU0eTBW?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T09:04:21.000Z",
+      "publishedAt": "2026-09-14T08:00:16.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPUGYyZUZ6d19jSHczb0dVcldGV2hRVjRZdGhIek05cDZoYm1LYVFIM0JiWTdGUnVZM24zaGhXRENpRDZoNjVSNEZ0NUcyQ0M2aUJ2cVdTc0pybk5mMzFyY2lYWUlwM1FYNDMyekpVU3ZvQmZXdEJISkxOU2h1WXZOLV83ZXM0ZGpNdzV6XzJORFI0dGo1VXFWZXpuVjZ2OFhyNjlweTdXU2h3eW1KRmxiTTRmTGQ1N1U0d3NHa2tWZXJUTF9vOUJwVG5n?oc=5\" target=\"_blank\">Thales Technology Summit: \"Where we have capability that can be reused, we maximise it for our customers’ benefit\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Thales</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZUgzLVRJdWVNSDMyejcycnIyazFTajRJb08wcDdEQ1hxaG10b1g4MzB0czJ4c0xDd0xqVG5ub1lGaG1CaTR6RzVza0ZRZEQxdmhtU3poNnUyam9iaEIwZG11RFJVY2ViOE1KS3h1c0lxOHdYcEZZN2REdVdZU3FkUVY4aWNkam1obTJ6ajFGLUlBNGV1SHRxY3dXOTFhRzBEcDc1OUR6N0w4S21OZVhpZlFaWEU0eTBW?oc=5\" target=\"_blank\">Fortaegis Raises $50 Million to Commercialize Chip-Based Security Technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Quantum Insider</font>"
     },
     {
       "title": "Solidion Technology Announces Stock Buyback Program - PR Newswire",
@@ -272,13 +326,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE13TTlLeURLZ01hZXlFMFpXZVh2OFRZeV9FS1BPREhWWHRCbTV2cEtlNnJlNlo0V2ZsNFlUZW9mSENPXzMwaFVVbTFYM1BuekM5SnMzSFFYWHR3RkQzbUFBSDh6SEY0akdCWmpDYkk3NGdXaEZuLWNydg?oc=5\" target=\"_blank\">Office Technology News, September 8 – 11, 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thecannatareport.com</font>"
     },
     {
-      "title": "Fortaegis Raises $50 Million to Commercialize Chip-Based Security Technology - The Quantum Insider",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZUgzLVRJdWVNSDMyejcycnIyazFTajRJb08wcDdEQ1hxaG10b1g4MzB0czJ4c0xDd0xqVG5ub1lGaG1CaTR6RzVza0ZRZEQxdmhtU3poNnUyam9iaEIwZG11RFJVY2ViOE1KS3h1c0lxOHdYcEZZN2REdVdZU3FkUVY4aWNkam1obTJ6ajFGLUlBNGV1SHRxY3dXOTFhRzBEcDc1OUR6N0w4S21OZVhpZlFaWEU0eTBW?oc=5",
+      "title": "Used Farm Equipment Prices Split as Technology Drives Late-Model Values - Successful Farming",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQUmRqT1J2Y3ZVRkpPUTRiX29yQzl4TzRERE5LcEI5OHQ5VjVBT2VkdmVueEtuVTVuQjB6Y0w0SGsxbEk2YkU1d1Z4bjE0UDJCX2RLMENhUVkzTms2NDVBOHV5MllTMnk0c0hFajVxYXo0OEV6UUlyMmFmZ2NWSVRvMnlhTTlWUjBuSHBsZGpIMHktWllESF9tZHBRdXQ2Ml9BaHVqVElwdlNfZVg4?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T08:00:16.000Z",
+      "publishedAt": "2026-09-14T11:00:00.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZUgzLVRJdWVNSDMyejcycnIyazFTajRJb08wcDdEQ1hxaG10b1g4MzB0czJ4c0xDd0xqVG5ub1lGaG1CaTR6RzVza0ZRZEQxdmhtU3poNnUyam9iaEIwZG11RFJVY2ViOE1KS3h1c0lxOHdYcEZZN2REdVdZU3FkUVY4aWNkam1obTJ6ajFGLUlBNGV1SHRxY3dXOTFhRzBEcDc1OUR6N0w4S21OZVhpZlFaWEU0eTBW?oc=5\" target=\"_blank\">Fortaegis Raises $50 Million to Commercialize Chip-Based Security Technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Quantum Insider</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQUmRqT1J2Y3ZVRkpPUTRiX29yQzl4TzRERE5LcEI5OHQ5VjVBT2VkdmVueEtuVTVuQjB6Y0w0SGsxbEk2YkU1d1Z4bjE0UDJCX2RLMENhUVkzTms2NDVBOHV5MllTMnk0c0hFajVxYXo0OEV6UUlyMmFmZ2NWSVRvMnlhTTlWUjBuSHBsZGpIMHktWllESF9tZHBRdXQ2Ml9BaHVqVElwdlNfZVg4?oc=5\" target=\"_blank\">Used Farm Equipment Prices Split as Technology Drives Late-Model Values</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Successful Farming</font>"
     },
     {
       "title": "Despite police department ban, facial recognition technology lingers in Milwaukee’s criminal justice system - Madison365",
@@ -308,13 +362,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5\" target=\"_blank\">Energy Technology Innovation Partnership Project</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Department of Energy (.gov)</font>"
     },
     {
-      "title": "The Zacks Analyst Blog Highlights Amkor Technology, Ultra Clean, FormFactor, Taiwan Semiconducto and NVIDIA - finance.yahoo.com",
+      "title": "The Zacks Analyst Blog Highlights Amkor Technology, Ultra Clean, FormFactor, Taiwan Semiconducto and NVIDIA - Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRFh5cFpWZXFSVmFiTk00cFNPR2phbzFyRDlDUi1sMkhUV2FxZFd3ZmRVWjRvSGxnTklCeklWVnBwdmNHcDZhUEFaVWgtdHNPUXdnUkRXSjJacHVFUlhpMkJocGU0RThTaGlkbTVSWHpSNmotQ0k4N1BjVzJZUThEQ1BsS3FwT05ab055Rm5iQjFzWVV6d0cxWFh6WU9lM3I3SWc?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-14T10:06:00.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPRFh5cFpWZXFSVmFiTk00cFNPR2phbzFyRDlDUi1sMkhUV2FxZFd3ZmRVWjRvSGxnTklCeklWVnBwdmNHcDZhUEFaVWgtdHNPUXdnUkRXSjJacHVFUlhpMkJocGU0RThTaGlkbTVSWHpSNmotQ0k4N1BjVzJZUThEQ1BsS3FwT05ab055Rm5iQjFzWVV6d0cxWFh6WU9lM3I3SWc?oc=5\" target=\"_blank\">The Zacks Analyst Blog Highlights Amkor Technology, Ultra Clean, FormFactor, Taiwan Semiconducto and NVIDIA</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">finance.yahoo.com</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPRFh5cFpWZXFSVmFiTk00cFNPR2phbzFyRDlDUi1sMkhUV2FxZFd3ZmRVWjRvSGxnTklCeklWVnBwdmNHcDZhUEFaVWgtdHNPUXdnUkRXSjJacHVFUlhpMkJocGU0RThTaGlkbTVSWHpSNmotQ0k4N1BjVzJZUThEQ1BsS3FwT05ab055Rm5iQjFzWVV6d0cxWFh6WU9lM3I3SWc?oc=5\" target=\"_blank\">The Zacks Analyst Blog Highlights Amkor Technology, Ultra Clean, FormFactor, Taiwan Semiconducto and NVIDIA</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>"
     },
     {
       "title": "Gartner Reveals Top Technology Trends in Government - Gartner",
@@ -344,15 +398,6 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOekZPcVUxenFXMndmemlPa3o2aGo4R3poaWEzRk1Qa1NKNFpqYnhXZks3VjBCVWdKOEFvUjZaQ2JGQjFLMmViS0xVNXhJSXlzUDlvX0pqVmc5cHBDLTdqMENpb2lOZDJzMXpYRkpPVFU4Tm5Vc3l2TG5sYTBVRmJyc0tlck5WbmpWOUpKUS1rR1BnX2pJMGhzNjdDaVZtaDNMNlFhU210X2U1T2NEU0xNQzJn?oc=5\" target=\"_blank\">Newsom Signed 13 New Laws to Protect Kids from Technology. Will They Work?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Santa Barbara Independent</font>"
     },
     {
-      "title": "Dutch start-up completes funding round for encrypted silicon technology - Financial Times",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZ2I3MUxLWHNfV0NRZjZzZU1zWFRnVUNhdEdyYWdDeEM5NUYtMk9fTXhremYzMk51dGZCT3ZhTkJ3aHh1TThrdmdnb3JtdnFpS09mMWdNSU5RZVo0R0VVVGJpSENQXzVzeVkxREdfa0FtLU8xc2JyWjEyN2ZzQV9MVHBYY2k?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-13T19:51:43.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQZ2I3MUxLWHNfV0NRZjZzZU1zWFRnVUNhdEdyYWdDeEM5NUYtMk9fTXhremYzMk51dGZCT3ZhTkJ3aHh1TThrdmdnb3JtdnFpS09mMWdNSU5RZVo0R0VVVGJpSENQXzVzeVkxREdfa0FtLU8xc2JyWjEyN2ZzQV9MVHBYY2k?oc=5\" target=\"_blank\">Dutch start-up completes funding round for encrypted silicon technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>"
-    },
-    {
       "title": "China says AI CEOs' call for a slowdown is 'fear mongering' - CNBC",
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBwRkFLWmM4WktDc1AwSzhzZXNGQUVSWkRseHpXMW9EY3JFWTJwaGtiVkx0UWhhUmRVUEpFaWxKOGJaeHhPV2tlcFF3OUpSMC1DTmdSbHU5WkplMWFFdzhJQk5tdDZ5Q1hxMDgtSDA3UlVhMUlBUUHSAXtBVV95cUxObC1qcTY0aFdYUXJPNEdtUEt0bU15STYtcmRsTEpHY19uNGxuY0hXejZhdW82bFRQbXRHei0yZlgwTTBqZWItTGJCV010dVg3SmNGV2w4ZmdubndITTBLbi1Bb2ZwSEhzamEwX0lxbWRLNjBuVWk4NE53RjA?oc=5",
       "source": "Google News",
@@ -360,6 +405,15 @@
       "publishedAt": "2026-09-14T09:36:27.000Z",
       "category": "Technology",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBwRkFLWmM4WktDc1AwSzhzZXNGQUVSWkRseHpXMW9EY3JFWTJwaGtiVkx0UWhhUmRVUEpFaWxKOGJaeHhPV2tlcFF3OUpSMC1DTmdSbHU5WkplMWFFdzhJQk5tdDZ5Q1hxMDgtSDA3UlVhMUlBUUHSAXtBVV95cUxObC1qcTY0aFdYUXJPNEdtUEt0bU15STYtcmRsTEpHY19uNGxuY0hXejZhdW82bFRQbXRHei0yZlgwTTBqZWItTGJCV010dVg3SmNGV2w4ZmdubndITTBLbi1Bb2ZwSEhzamEwX0lxbWRLNjBuVWk4NE53RjA?oc=5\" target=\"_blank\">China says AI CEOs' call for a slowdown is 'fear mongering'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>"
+    },
+    {
+      "title": "Wall Street’s new pair trade: Long software, short chips - Investing.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQOE93Q2E0aklkSGRMUUx3MkZkSS1JWjNxMWZlcV9rdjR2c0gzV0FWOEJ0bVQ3Zzk4MGFRQzU3WXN3N1B5RkFTTjhVNUN5YlpaeDh1WXZtcUhFVDJyaEtkRllLYUUxWHhRRGVvMHctVk51N1l2NkxNQXBkZk1ETHBFSmNRa2lUZElpb0NTR3VIZkk0UjAwajhVYi1kcVdwdVpkNmpkdEItbGNPUy16bFBF?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T09:15:42.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQOE93Q2E0aklkSGRMUUx3MkZkSS1JWjNxMWZlcV9rdjR2c0gzV0FWOEJ0bVQ3Zzk4MGFRQzU3WXN3N1B5RkFTTjhVNUN5YlpaeDh1WXZtcUhFVDJyaEtkRllLYUUxWHhRRGVvMHctVk51N1l2NkxNQXBkZk1ETHBFSmNRa2lUZElpb0NTR3VIZkk0UjAwajhVYi1kcVdwdVpkNmpkdEItbGNPUy16bFBF?oc=5\" target=\"_blank\">Wall Street’s new pair trade: Long software, short chips</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investing.com</font>"
     },
     {
       "title": "Homeland Security secretary has become Trump’s leading pugilist in fight over November elections - Votebeat",
@@ -380,13 +434,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVVJrTjBjTElpZ2ZKek1RekdpX1dJZmNUdk1sSnBlNUFUTkJXNEtwY2xRdnVocUhCaEIyRWc5UE83UVZNYXZTaU5tX3RmdTBrMTZqLXFhT05MUzhjYWVwSlozQVZvVTU4THFWRzNLVlh1YmZGTl9jb2doREZ4XzR3OGI1cnJ4eG9fampHbzFTejk0VDMyd0p5Zno2MFluTGxfOFRPM1hocGpqUkx0Ymd0SmJnYnQ5VVRT?oc=5\" target=\"_blank\">National Security Agency launches historic restructuring</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>"
     },
     {
-      "title": "China’s spy agency warns of AI risk to national security - Financial Times",
+      "title": "China’s spy agency warns of AI risk to national security - ft.com",
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOcUpTd2twTEt1dVBNcmY4eEliTmxPejdLNW9ieGw2T0gweHBtNWdxTmVxdTVPOG0wOVBQWmxzNHdBM1cxUFR2V1lRbTM1M3VXN3QxVjdSb1NwWjJCSVU3TjBIRGxRRDhxUjhDbHVCcUI5S1lLM3lfU3lJclFtWk1rdmNHZmo?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T05:16:55.000Z",
+      "publishedAt": "2026-09-14T05:15:49.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOcUpTd2twTEt1dVBNcmY4eEliTmxPejdLNW9ieGw2T0gweHBtNWdxTmVxdTVPOG0wOVBQWmxzNHdBM1cxUFR2V1lRbTM1M3VXN3QxVjdSb1NwWjJCSVU3TjBIRGxRRDhxUjhDbHVCcUI5S1lLM3lfU3lJclFtWk1rdmNHZmo?oc=5\" target=\"_blank\">China’s spy agency warns of AI risk to national security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOcUpTd2twTEt1dVBNcmY4eEliTmxPejdLNW9ieGw2T0gweHBtNWdxTmVxdTVPOG0wOVBQWmxzNHdBM1cxUFR2V1lRbTM1M3VXN3QxVjdSb1NwWjJCSVU3TjBIRGxRRDhxUjhDbHVCcUI5S1lLM3lfU3lJclFtWk1rdmNHZmo?oc=5\" target=\"_blank\">China’s spy agency warns of AI risk to national security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ft.com</font>"
     },
     {
       "title": "Federal judge rules Homeland Security plan for 50% FEMA staffing cuts was unlawful - PBS",
@@ -398,13 +452,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNN2w5ZDk5TXNJSDVwYWhPdW9Mci1YRkhvalhIOHRWam5qZ2pfTzlPQlI0LVJhbk02T1NSQXJfeVJNMUI5d1d0WEVHUjBRSjVuV0Qyckc1bHlobkpxVEZfcmFXalhqeFNLYmdxOHZoZHl4bVE1R1FKWHZGNE1oOWhQbHFpdWZZTnozMUZoMnlxTUhGdjNnU0pCUmFORVIzOXVNMXd5UmFVMVFob2JIcUNtWTNkRzJxdm5wSlRF?oc=5\" target=\"_blank\">Federal judge rules Homeland Security plan for 50% FEMA staffing cuts was unlawful</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PBS</font>"
     },
     {
-      "title": "Opinion | We put a security camera outside our house in the wrong place. Then someone reported us. - Star Tribune",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX1h1bWtiazB2Rmk5eEZiazVhWlBfLVl3Z2Q0bmpFVm5nZkN2azNhZGFPVVVTN0Vrb3lpYm9QMXctdUZMcmZJekFydkR0UlVFdnRnczIycGMtVFhWRVktMVAxN0FHN3FPQmFnMjBITVlraGF3MmpMZHpyRm56VkhWbFZKX3Q?oc=5",
+      "title": "Flock cameras escalate the battle between privacy and safety in St. Louis - STLPR",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZTA1T3dHd0dyc2VqSjd5cHZUMVhHaUtralVnbnI2NnZkQXZ1R0R6NWltYWpUZU12WE50dkhFTG91RGJ6UGIwdGU0ZDlRZ3BDN0Fxbld0MUdRbjhPWkpJa192Ul84cWZINW51TFVuaHNQbVRCcEJ0TjFLaWdMWHA2NGNGcWNSQjlkVTI5YXJoZjZVUXhRcm5VMk5wWEVsZlV3M3FTaVFRWTMxSmZZLXl5SmYtZVRleGloY0d4ZWZCZ2RoUnRWQ1hoeFVMMEQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T09:58:00.000Z",
+      "publishedAt": "2026-09-14T10:00:00.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPX1h1bWtiazB2Rmk5eEZiazVhWlBfLVl3Z2Q0bmpFVm5nZkN2azNhZGFPVVVTN0Vrb3lpYm9QMXctdUZMcmZJekFydkR0UlVFdnRnczIycGMtVFhWRVktMVAxN0FHN3FPQmFnMjBITVlraGF3MmpMZHpyRm56VkhWbFZKX3Q?oc=5\" target=\"_blank\">Opinion | We put a security camera outside our house in the wrong place. Then someone reported us.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Star Tribune</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQZTA1T3dHd0dyc2VqSjd5cHZUMVhHaUtralVnbnI2NnZkQXZ1R0R6NWltYWpUZU12WE50dkhFTG91RGJ6UGIwdGU0ZDlRZ3BDN0Fxbld0MUdRbjhPWkpJa192Ul84cWZINW51TFVuaHNQbVRCcEJ0TjFLaWdMWHA2NGNGcWNSQjlkVTI5YXJoZjZVUXhRcm5VMk5wWEVsZlV3M3FTaVFRWTMxSmZZLXl5SmYtZVRleGloY0d4ZWZCZ2RoUnRWQ1hoeFVMMEQ?oc=5\" target=\"_blank\">Flock cameras escalate the battle between privacy and safety in St. Louis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">STLPR</font>"
     },
     {
       "title": "US pushes AI guardrails as China weighs security risks - CNN",
@@ -414,6 +468,15 @@
       "publishedAt": "2026-09-14T07:28:37.000Z",
       "category": "Digital Life",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOMm1JV1MzcHcxcnBDVUVFejRValNyb25XWDlBT3ZMNWgzaGhaMEZTX3UwZENTWmlJeXh1S0RWUDBLX0pVWHlTbV93Qk9fWGNpRVdmendtcTlFbF9DSVVqeVRuSS1TbElfWFRCbmRfal9LcV9hNFlOOUtaQVJNdzQwOVlnRTgtcUpuZF9aRkkzNjBqVFBVNmV0cWVFcHZDalZ2M3dHQWpycHN2TEJYT0FSdTlaWmUtWTcyRFFUSDZPd0hwUQ?oc=5\" target=\"_blank\">US pushes AI guardrails as China weighs security risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>"
+    },
+    {
+      "title": "Opinion | We put a security camera outside our house in the wrong place. Then someone reported us. - Star Tribune",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX1h1bWtiazB2Rmk5eEZiazVhWlBfLVl3Z2Q0bmpFVm5nZkN2azNhZGFPVVVTN0Vrb3lpYm9QMXctdUZMcmZJekFydkR0UlVFdnRnczIycGMtVFhWRVktMVAxN0FHN3FPQmFnMjBITVlraGF3MmpMZHpyRm56VkhWbFZKX3Q?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T09:58:00.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPX1h1bWtiazB2Rmk5eEZiazVhWlBfLVl3Z2Q0bmpFVm5nZkN2azNhZGFPVVVTN0Vrb3lpYm9QMXctdUZMcmZJekFydkR0UlVFdnRnczIycGMtVFhWRVktMVAxN0FHN3FPQmFnMjBITVlraGF3MmpMZHpyRm56VkhWbFZKX3Q?oc=5\" target=\"_blank\">Opinion | We put a security camera outside our house in the wrong place. Then someone reported us.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Star Tribune</font>"
     },
     {
       "title": "Man dies after alleged scuffle with security guard at bar in Orange - NBC Los Angeles",
@@ -443,15 +506,6 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMi-wFBVV95cUxNNHpWVkJGUVI5TE5za1hPRF9memNLUTZXM2xBRk1PbnlNOTBCQXZILXVQdVF2Zm80NlQ0bDJGTHhGMUcxcGgzTmZiU1RDQ3Z2dkJXLS01TEpEMHFIUWt3VGdCclRwSEp2RXBjd1RzT3FURW9qRmJ2RFIyU2xHc1JGME1PSDBQbkdiOVNTVncwVXAzTjRHTGFJZGozMlRVTVF3b1JVZ00tWnozU3BUZncxaFNmT2Rtem9lM2hoQWpoWEJyeERmZDVpc3pscUV5WWd5WVAxamxnRi1IRVU2RTV1NVNPd204LVhqRzN4S3J6SE82ZmdsbVJNWkRqMA?oc=5\" target=\"_blank\">Zambia’s cancellation of six critics’ passports on national security grounds raises human rights concerns, Amnesty International says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Jurist.org</font>"
     },
     {
-      "title": "Flock cameras escalate the battle between privacy and safety in St. Louis - STLPR",
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZTA1T3dHd0dyc2VqSjd5cHZUMVhHaUtralVnbnI2NnZkQXZ1R0R6NWltYWpUZU12WE50dkhFTG91RGJ6UGIwdGU0ZDlRZ3BDN0Fxbld0MUdRbjhPWkpJa192Ul84cWZINW51TFVuaHNQbVRCcEJ0TjFLaWdMWHA2NGNGcWNSQjlkVTI5YXJoZjZVUXhRcm5VMk5wWEVsZlV3M3FTaVFRWTMxSmZZLXl5SmYtZVRleGloY0d4ZWZCZ2RoUnRWQ1hoeFVMMEQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T10:00:00.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQZTA1T3dHd0dyc2VqSjd5cHZUMVhHaUtralVnbnI2NnZkQXZ1R0R6NWltYWpUZU12WE50dkhFTG91RGJ6UGIwdGU0ZDlRZ3BDN0Fxbld0MUdRbjhPWkpJa192Ul84cWZINW51TFVuaHNQbVRCcEJ0TjFLaWdMWHA2NGNGcWNSQjlkVTI5YXJoZjZVUXhRcm5VMk5wWEVsZlV3M3FTaVFRWTMxSmZZLXl5SmYtZVRleGloY0d4ZWZCZ2RoUnRWQ1hoeFVMMEQ?oc=5\" target=\"_blank\">Flock cameras escalate the battle between privacy and safety in St. Louis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">STLPR</font>"
-    },
-    {
       "title": "Permify: Open-source authorization as a service - Help Net Security",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeW5RSW9Ndy04UmRxYkQ4d3lmLVFscXhXSGpoV2RzZWFtbmR0VUUwcURNbGhUWTJoNTVsMGRsbUpNNnRMSGFmVGRmNHZINmRvYXlUdFZvWnFrX0dXMXBpTUxBV3dKSGttTVdLR0dMV1BBLXhvT21IanBXZ0duUVY4b09aT0YyQndtcS1Jc3c0eFRfR0ty?oc=5",
       "source": "Google News",
@@ -470,6 +524,15 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOYW51MWNmZ0ZUZzFmV21MMEhuVUxIT1FjT3pZWVBldDh4RjdQMlkyX2wwVVVUbGdCMXozRVlzb0R4S3RJODFueEwwbzJTOU5VYXhvbGVNQ1hqdnJramtxS1lWVlRfa1kxRTYwNWhfUWdRTXZDc3liTXZFaWtKbThMbVNPdDNBUkoteTJlc3ppaUl4Nl95V19DZ0NNY3FBa3Axc2kxb3Z5b1FSTF9aSG0xUWdGUGZleWc?oc=5\" target=\"_blank\">39-year-old man killed during altercation with security guard at Orange County bar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>"
     },
     {
+      "title": "European leaders meet as Arctic thaw opens shipping routes and Russian buildup stokes security fears - ABC News - Breaking News, Latest News and Videos",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNY3VJSHY1YWVyWk1UV0xQOUFvNWptMW5kdjE2Y0VLSzdGUFFyTmdwX19pcXpBUDQyREdBc0p2Q3Q2NVQwcDRua3BGanA3LVJfd2tnbmZ0d3lzMk85Vkh1cXYxMWRJMmxIcXhSNEdMY3FmOExka0t6REl2VnpfMDh4bW80bkZCLWpaSnVFcDRZMHFfeVNLZWZvZGMyeFk5eUw0RFdmeU5WTk80cDNqUWfSAbMBQVVfeXFMTi1mWWdUTnVuN1NqaXVxVXJPbFpiX0E1bDUzRDhuT19uLVB3bGJPSlpVU05pMW1SRXJzc29EVXFpemo5b0FpYks1WmZXWkxqbmhlYmNDcGZRTndTWExLdGlCZVREOGtnUHk0MW1ud0plMGZfNXNrdnhzOWswWEowSXZfOFFPaWpTWXl0OXZoVUtLVVNaREhXTUx0X2dmLS1GVmY5VnBXckY2ZXZxQlh4YTRUU28?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T10:29:27.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNY3VJSHY1YWVyWk1UV0xQOUFvNWptMW5kdjE2Y0VLSzdGUFFyTmdwX19pcXpBUDQyREdBc0p2Q3Q2NVQwcDRua3BGanA3LVJfd2tnbmZ0d3lzMk85Vkh1cXYxMWRJMmxIcXhSNEdMY3FmOExka0t6REl2VnpfMDh4bW80bkZCLWpaSnVFcDRZMHFfeVNLZWZvZGMyeFk5eUw0RFdmeU5WTk80cDNqUWfSAbMBQVVfeXFMTi1mWWdUTnVuN1NqaXVxVXJPbFpiX0E1bDUzRDhuT19uLVB3bGJPSlpVU05pMW1SRXJzc29EVXFpemo5b0FpYks1WmZXWkxqbmhlYmNDcGZRTndTWExLdGlCZVREOGtnUHk0MW1ud0plMGZfNXNrdnhzOWswWEowSXZfOFFPaWpTWXl0OXZoVUtLVVNaREhXTUx0X2dmLS1GVmY5VnBXckY2ZXZxQlh4YTRUU28?oc=5\" target=\"_blank\">European leaders meet as Arctic thaw opens shipping routes and Russian buildup stokes security fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC News - Breaking News, Latest News and Videos</font>"
+    },
+    {
       "title": "Trump Keeps Using “National Security” to Do What He Wants - motherjones.com",
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPY1hmVFduNk56cllsZGVuS2NqUmFycEs1V2Jxb1NiWHNHLVV6ODFmU0FrM2M4ZDBJUHp6SVVqSnFhaGZXV3RqbzhuQTFDdmFhb0RJNWNyQ1hPWDlVdjF3N3hOSXZzbTR4TVdXaHVxUTFzQXFvZGUxTjdTd0RYOEMteWVJT0FGN3ZOOUhLNHRNeFJoRDRhZUJHdlBWdXY3YzFoMDZmNF9QdkVrdVRJbnV5d1FKakNRXzM5QTJEQkhmSHpiOGhsNkNz?oc=5",
       "source": "Google News",
@@ -479,6 +542,15 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPY1hmVFduNk56cllsZGVuS2NqUmFycEs1V2Jxb1NiWHNHLVV6ODFmU0FrM2M4ZDBJUHp6SVVqSnFhaGZXV3RqbzhuQTFDdmFhb0RJNWNyQ1hPWDlVdjF3N3hOSXZzbTR4TVdXaHVxUTFzQXFvZGUxTjdTd0RYOEMteWVJT0FGN3ZOOUhLNHRNeFJoRDRhZUJHdlBWdXY3YzFoMDZmNF9QdkVrdVRJbnV5d1FKakNRXzM5QTJEQkhmSHpiOGhsNkNz?oc=5\" target=\"_blank\">Trump Keeps Using “National Security” to Do What He Wants</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">motherjones.com</font>"
     },
     {
+      "title": "Stop the spam: Unwanted loan calls flood consumer phones, raising privacy concerns - Boston 25 News",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMGhWbndfV3FpMGNjX1k1QjdwZEE5MUFYdThld3RURU90eWRYX280aWdsdTYtbEh6Tl9NLWJZVTZQakFLZHJGaHBHNUpJZ3E1eFNEeFhBNkVTNVdiZUUwcHR4R0l2UG9MazRLeFRWbzVGY1U0cUo4UGh0b3RCODJRbU9KVUJic2xsbF84YXAtTlgzOEdmQTNTVmlHbTY4M204dU1SLVFZd3QzNWpDNGVMUkhyQ3U1OXUzWVExbU9paFFUb1o5eVJkTDB1VW5hRWk4Wk5XOEhWUjJ6Z3FE0gHwAUFVX3lxTE1SaF9uUnVqdzZsUkxPR3ZLbWdhYTZONGRGNmJSREE1NTBhdjVTWm9JdHhnRmRscTM4NHdIUnJOZzN4cFREbE9wa210cUZFdm5OUFZBVjIyczBsNjBaNWVKUWNMN3pwSUpvT0EtdWZxdzhnamZ3QW1SampJbmhNNzJiZmVfcWhhT01fQmxJa2tEeksyWXphNU5ZUUdIYy1keTdJTlJOTWdmRDRSQlhXRV8wYUUyMGx5a2ZUNkplUTM4Vlo5R0Jhb3QwSWFPRTNpeV9DRk5MN1hJSk16VEhVUlg3Y3c2cmhiYWpjNk1LeUNvVw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T10:40:33.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMGhWbndfV3FpMGNjX1k1QjdwZEE5MUFYdThld3RURU90eWRYX280aWdsdTYtbEh6Tl9NLWJZVTZQakFLZHJGaHBHNUpJZ3E1eFNEeFhBNkVTNVdiZUUwcHR4R0l2UG9MazRLeFRWbzVGY1U0cUo4UGh0b3RCODJRbU9KVUJic2xsbF84YXAtTlgzOEdmQTNTVmlHbTY4M204dU1SLVFZd3QzNWpDNGVMUkhyQ3U1OXUzWVExbU9paFFUb1o5eVJkTDB1VW5hRWk4Wk5XOEhWUjJ6Z3FE0gHwAUFVX3lxTE1SaF9uUnVqdzZsUkxPR3ZLbWdhYTZONGRGNmJSREE1NTBhdjVTWm9JdHhnRmRscTM4NHdIUnJOZzN4cFREbE9wa210cUZFdm5OUFZBVjIyczBsNjBaNWVKUWNMN3pwSUpvT0EtdWZxdzhnamZ3QW1SampJbmhNNzJiZmVfcWhhT01fQmxJa2tEeksyWXphNU5ZUUdIYy1keTdJTlJOTWdmRDRSQlhXRV8wYUUyMGx5a2ZUNkplUTM4Vlo5R0Jhb3QwSWFPRTNpeV9DRk5MN1hJSk16VEhVUlg3Y3c2cmhiYWpjNk1LeUNvVw?oc=5\" target=\"_blank\">Stop the spam: Unwanted loan calls flood consumer phones, raising privacy concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Boston 25 News</font>"
+    },
+    {
       "title": "How to level up from security pro to security leader - csoonline.com",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQUWRaX0JrVndNdDM5aVVFcUNMQmViZURlWkh5NmtYckI4MTZGV3lyU2wzNE5MX09kRk5WY3B4OG1lTnRyX3Z2WFlRSVFqVVJvWWJnRXBtQ3VWSkQwTi1QWUxER0c3VG4yU1FnSTlmcldCSExqbG9pR0l2aE43NG9qazZqd1VhbUxXcEZZRXkyWnBXZ2FzUHZybk91OGpIM1ZF?oc=5",
       "source": "Google News",
@@ -486,15 +558,6 @@
       "publishedAt": "2026-09-14T08:27:44.000Z",
       "category": "Digital Life",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQUWRaX0JrVndNdDM5aVVFcUNMQmViZURlWkh5NmtYckI4MTZGV3lyU2wzNE5MX09kRk5WY3B4OG1lTnRyX3Z2WFlRSVFqVVJvWWJnRXBtQ3VWSkQwTi1QWUxER0c3VG4yU1FnSTlmcldCSExqbG9pR0l2aE43NG9qazZqd1VhbUxXcEZZRXkyWnBXZ2FzUHZybk91OGpIM1ZF?oc=5\" target=\"_blank\">How to level up from security pro to security leader</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">csoonline.com</font>"
-    },
-    {
-      "title": "European leaders meet as Arctic thaw opens shipping routes and Russian buildup stokes security fears - ABC News - Breaking News, Latest News and Videos",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNY3VJSHY1YWVyWk1UV0xQOUFvNWptMW5kdjE2Y0VLSzdGUFFyTmdwX19pcXpBUDQyREdBc0p2Q3Q2NVQwcDRua3BGanA3LVJfd2tnbmZ0d3lzMk85Vkh1cXYxMWRJMmxIcXhSNEdMY3FmOExka0t6REl2VnpfMDh4bW80bkZCLWpaSnVFcDRZMHFfeVNLZWZvZGMyeFk5eUw0RFdmeU5WTk80cDNqUWfSAbMBQVVfeXFMTi1mWWdUTnVuN1NqaXVxVXJPbFpiX0E1bDUzRDhuT19uLVB3bGJPSlpVU05pMW1SRXJzc29EVXFpemo5b0FpYks1WmZXWkxqbmhlYmNDcGZRTndTWExLdGlCZVREOGtnUHk0MW1ud0plMGZfNXNrdnhzOWswWEowSXZfOFFPaWpTWXl0OXZoVUtLVVNaREhXTUx0X2dmLS1GVmY5VnBXckY2ZXZxQlh4YTRUU28?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T10:29:27.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNY3VJSHY1YWVyWk1UV0xQOUFvNWptMW5kdjE2Y0VLSzdGUFFyTmdwX19pcXpBUDQyREdBc0p2Q3Q2NVQwcDRua3BGanA3LVJfd2tnbmZ0d3lzMk85Vkh1cXYxMWRJMmxIcXhSNEdMY3FmOExka0t6REl2VnpfMDh4bW80bkZCLWpaSnVFcDRZMHFfeVNLZWZvZGMyeFk5eUw0RFdmeU5WTk80cDNqUWfSAbMBQVVfeXFMTi1mWWdUTnVuN1NqaXVxVXJPbFpiX0E1bDUzRDhuT19uLVB3bGJPSlpVU05pMW1SRXJzc29EVXFpemo5b0FpYks1WmZXWkxqbmhlYmNDcGZRTndTWExLdGlCZVREOGtnUHk0MW1ud0plMGZfNXNrdnhzOWswWEowSXZfOFFPaWpTWXl0OXZoVUtLVVNaREhXTUx0X2dmLS1GVmY5VnBXckY2ZXZxQlh4YTRUU28?oc=5\" target=\"_blank\">European leaders meet as Arctic thaw opens shipping routes and Russian buildup stokes security fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC News - Breaking News, Latest News and Videos</font>"
     },
     {
       "title": "EUAM RCA contributes to forward-looking security coordination at the Petit COCEM - EEAS",
@@ -513,24 +576,6 @@
       "publishedAt": "2026-09-14T07:00:00.000Z",
       "category": "Digital Life",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNLXVpOHhGMHZ2bkVGWXdTOUpFd0ZFMDFrTFMzNG9nWnlGOEZoS0dfdFU4LW9HTHNzZUduOHR1TFdNdk44MllxREdYV1BSZ1JKQjc0OTFOWFZxNFg2NTc2M0ZSdTdTbGw0bHFQSGtVa3ZWUWI5d0xEZElPUDc3Z2RGVHZabEdSN2tRc0xVQXdSMDBIakZRYnFQd1ZNendUWHF1YXNwSG5QeGgxUjFlM1Z6MnNXZVRaQTBsUENWOHJyMXVYemZIWFN0cV93?oc=5\" target=\"_blank\">Thales Builds Cryptographic Security for the Age of AI and Post-Quantum Computing</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Thales</font>"
-    },
-    {
-      "title": "Terra: “The researcher of the future isn't competing with agents on speed” - calcalistech.com",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmUWdTX25nTlh6V25UWjJwcUpxR1hleUh5OGxfdjQ0Vkd5UjVkM210d2J0REdnS0xmUEVLOVRMMnltWjF4R0M2UGRXZWV3SWNGbi1HM2ticGtLWV96aHQweG1VUVRLVWM?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T10:09:00.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBmUWdTX25nTlh6V25UWjJwcUpxR1hleUh5OGxfdjQ0Vkd5UjVkM210d2J0REdnS0xmUEVLOVRMMnltWjF4R0M2UGRXZWV3SWNGbi1HM2ticGtLWV96aHQweG1VUVRLVWM?oc=5\" target=\"_blank\">Terra: “The researcher of the future isn't competing with agents on speed”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">calcalistech.com</font>"
-    },
-    {
-      "title": "Stop the spam: Unwanted loan calls flood consumer phones, raising privacy concerns - Boston 25 News",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMGhWbndfV3FpMGNjX1k1QjdwZEE5MUFYdThld3RURU90eWRYX280aWdsdTYtbEh6Tl9NLWJZVTZQakFLZHJGaHBHNUpJZ3E1eFNEeFhBNkVTNVdiZUUwcHR4R0l2UG9MazRLeFRWbzVGY1U0cUo4UGh0b3RCODJRbU9KVUJic2xsbF84YXAtTlgzOEdmQTNTVmlHbTY4M204dU1SLVFZd3QzNWpDNGVMUkhyQ3U1OXUzWVExbU9paFFUb1o5eVJkTDB1VW5hRWk4Wk5XOEhWUjJ6Z3FE0gHwAUFVX3lxTE1SaF9uUnVqdzZsUkxPR3ZLbWdhYTZONGRGNmJSREE1NTBhdjVTWm9JdHhnRmRscTM4NHdIUnJOZzN4cFREbE9wa210cUZFdm5OUFZBVjIyczBsNjBaNWVKUWNMN3pwSUpvT0EtdWZxdzhnamZ3QW1SampJbmhNNzJiZmVfcWhhT01fQmxJa2tEeksyWXphNU5ZUUdIYy1keTdJTlJOTWdmRDRSQlhXRV8wYUUyMGx5a2ZUNkplUTM4Vlo5R0Jhb3QwSWFPRTNpeV9DRk5MN1hJSk16VEhVUlg3Y3c2cmhiYWpjNk1LeUNvVw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T10:16:01.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxOMGhWbndfV3FpMGNjX1k1QjdwZEE5MUFYdThld3RURU90eWRYX280aWdsdTYtbEh6Tl9NLWJZVTZQakFLZHJGaHBHNUpJZ3E1eFNEeFhBNkVTNVdiZUUwcHR4R0l2UG9MazRLeFRWbzVGY1U0cUo4UGh0b3RCODJRbU9KVUJic2xsbF84YXAtTlgzOEdmQTNTVmlHbTY4M204dU1SLVFZd3QzNWpDNGVMUkhyQ3U1OXUzWVExbU9paFFUb1o5eVJkTDB1VW5hRWk4Wk5XOEhWUjJ6Z3FE0gHwAUFVX3lxTE1SaF9uUnVqdzZsUkxPR3ZLbWdhYTZONGRGNmJSREE1NTBhdjVTWm9JdHhnRmRscTM4NHdIUnJOZzN4cFREbE9wa210cUZFdm5OUFZBVjIyczBsNjBaNWVKUWNMN3pwSUpvT0EtdWZxdzhnamZ3QW1SampJbmhNNzJiZmVfcWhhT01fQmxJa2tEeksyWXphNU5ZUUdIYy1keTdJTlJOTWdmRDRSQlhXRV8wYUUyMGx5a2ZUNkplUTM4Vlo5R0Jhb3QwSWFPRTNpeV9DRk5MN1hJSk16VEhVUlg3Y3c2cmhiYWpjNk1LeUNvVw?oc=5\" target=\"_blank\">Stop the spam: Unwanted loan calls flood consumer phones, raising privacy concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Boston 25 News</font>"
     },
     {
       "title": "Debian 13.7 ships the fixes behind 92 security advisories, updates 106 packages - Help Net Security",
@@ -578,13 +623,13 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOcjFrX3EwNU43U0hOb1VlV1puMDIyTzloMFFJQ1dSem1GOVJIdVZCbXVPd19WZzN4M0ZoaEloc2p3bW9lRWtVQzRNNG1LSTVGZ2ZNYTdULVp1UDBkcS1VUWF1dFJMS0NzOU1oZ1V4STFMNU1oa0lta3htZVJtUFVjMWI1dUZhUQ?oc=5\" target=\"_blank\">Cost of Project Management Software: 2026 Buyer Guide</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">tech.co</font>"
     },
     {
-      "title": "6 money-saving apps to help you grow your wealth - finance.yahoo.com",
+      "title": "6 money-saving apps to help you grow your wealth - Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0VNeThCTW9EcUhRQkxsdld5RjU1S090TE1ZOG5PWTVyODNYLWNRWFkwY3VkX0cyMnQ0SXNLd2hPM09tREx3eFA3eDJ6RUdCT3JUU3ptN3ZTSnBiQVowZFd6amRPWF9RNXRtNld5MEZYTTRDQUlXRjZmcnNfeDBaY0R0R1U2R2V0Z0s4RnoyWTZMWjAxeEE?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=how%20to%20software%20OR%20apps%20guide&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-04T07:00:00.000Z",
       "category": "How-To",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0VNeThCTW9EcUhRQkxsdld5RjU1S090TE1ZOG5PWTVyODNYLWNRWFkwY3VkX0cyMnQ0SXNLd2hPM09tREx3eFA3eDJ6RUdCT3JUU3ptN3ZTSnBiQVowZFd6amRPWF9RNXRtNld5MEZYTTRDQUlXRjZmcnNfeDBaY0R0R1U2R2V0Z0s4RnoyWTZMWjAxeEE?oc=5\" target=\"_blank\">6 money-saving apps to help you grow your wealth</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">finance.yahoo.com</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOQ0VNeThCTW9EcUhRQkxsdld5RjU1S090TE1ZOG5PWTVyODNYLWNRWFkwY3VkX0cyMnQ0SXNLd2hPM09tREx3eFA3eDJ6RUdCT3JUU3ptN3ZTSnBiQVowZFd6amRPWF9RNXRtNld5MEZYTTRDQUlXRjZmcnNfeDBaY0R0R1U2R2V0Z0s4RnoyWTZMWjAxeEE?oc=5\" target=\"_blank\">6 money-saving apps to help you grow your wealth</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>"
     },
     {
       "title": "Software Composition Analysis: A Complete Guide for 2026 - wiz.io",
@@ -713,13 +758,553 @@
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOU0VDTldRWFg0R1lULXVOenlOZXJ6WE1LYnVTSS1qVXVHTlNQQk9ia2RiM0dDNWdfR2tWdnJyWUVUQ05sR3BKeVJ2S2tzM3ZNd0s5QmFaU1JaaEtjNkx5bk5yUTFVME1BejRyMlloMFV2dENaakw0SjZDUXBqTGNZX0p1eUxfdlJJ?oc=5\" target=\"_blank\">Novee brings continuous AI pentesting to mobile apps</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Help Net Security</font>"
     },
     {
-      "title": "Guide to peer-to-peer (P2P) payment apps: Everything you need to know before sending money - finance.yahoo.com",
+      "title": "Guide to peer-to-peer (P2P) payment apps: Everything you need to know before sending money - Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObXNqMklKNmd1aUxPamF4TmpBQnZLOXhSWlE2bTNFSjViWlJXcm1FWGdwLWpsOXZtT21hV0FJdDhsYjc5MFlDMllUVE1FcFJ5cXJ1ZDhmb29BSThHejlJMTNMZE00SW5wT2lfLU1CNHJGQ1lESUNwU0VqcWxsZDJ0azA1NUxaOEU0N0xiZERYV1pCUm81QU1HS291S3dOUnh6bHFLRGNodDBvOFlCUVo2MzRR?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=how%20to%20software%20OR%20apps%20guide&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-08-10T07:00:00.000Z",
       "category": "How-To",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxObXNqMklKNmd1aUxPamF4TmpBQnZLOXhSWlE2bTNFSjViWlJXcm1FWGdwLWpsOXZtT21hV0FJdDhsYjc5MFlDMllUVE1FcFJ5cXJ1ZDhmb29BSThHejlJMTNMZE00SW5wT2lfLU1CNHJGQ1lESUNwU0VqcWxsZDJ0azA1NUxaOEU0N0xiZERYV1pCUm81QU1HS291S3dOUnh6bHFLRGNodDBvOFlCUVo2MzRR?oc=5\" target=\"_blank\">Guide to peer-to-peer (P2P) payment apps: Everything you need to know before sending money</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">finance.yahoo.com</font>"
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxObXNqMklKNmd1aUxPamF4TmpBQnZLOXhSWlE2bTNFSjViWlJXcm1FWGdwLWpsOXZtT21hV0FJdDhsYjc5MFlDMllUVE1FcFJ5cXJ1ZDhmb29BSThHejlJMTNMZE00SW5wT2lfLU1CNHJGQ1lESUNwU0VqcWxsZDJ0azA1NUxaOEU0N0xiZERYV1pCUm81QU1HS291S3dOUnh6bHFLRGNodDBvOFlCUVo2MzRR?oc=5\" target=\"_blank\">Guide to peer-to-peer (P2P) payment apps: Everything you need to know before sending money</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>"
+    },
+    {
+      "title": "From Edison’s Invention Factory to the new architecture of innovation - science.org",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-07-02T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5\" target=\"_blank\">From Edison’s Invention Factory to the new architecture of innovation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">science.org</font>"
+    },
+    {
+      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-08-13T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5\" target=\"_blank\">Innovation, Invention and Impact: NJIT Undergrads Present Summer Research</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NJIT News</font>"
+    },
+    {
+      "title": "America's true innovation advantage: we don't just invent technologies — we reinvent how innovation works - Fortune",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-05-11T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5\" target=\"_blank\">America's true innovation advantage: we don't just invent technologies — we reinvent how innovation works</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fortune</font>"
+    },
+    {
+      "title": "A History of Invention and Innovation - Boston University",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-03-25T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5\" target=\"_blank\">A History of Invention and Innovation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Boston University</font>"
+    },
+    {
+      "title": "Leaders at Davos 2026 on how we can deploy innovation and technology at scale and responsibly - The World Economic Forum",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-01-28T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5\" target=\"_blank\">Leaders at Davos 2026 on how we can deploy innovation and technology at scale and responsibly</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The World Economic Forum</font>"
+    },
+    {
+      "title": "From Invention to Innovation in Global Governance - UNU | United Nations University",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBPa0Jmbk5NRFZEVG1hc05Ldk9COW8tYjY2YTBORmpRTkk5NnFqaEVmaWZMdmFDR2ViZGhHTzdjOVV4VnVRS3U3R1M0Qjh6XzQzREJnN3ZTNmNZek9yU0k1UFpoM3BiVTJMWTFlVWJCNlFqZ1NZ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-08-13T21:02:11.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTFBPa0Jmbk5NRFZEVG1hc05Ldk9COW8tYjY2YTBORmpRTkk5NnFqaEVmaWZMdmFDR2ViZGhHTzdjOVV4VnVRS3U3R1M0Qjh6XzQzREJnN3ZTNmNZek9yU0k1UFpoM3BiVTJMWTFlVWJCNlFqZ1NZ?oc=5\" target=\"_blank\">From Invention to Innovation in Global Governance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UNU | United Nations University</font>"
+    },
+    {
+      "title": "News | The University of Alabama in Huntsville - The University of Alabama in Huntsville",
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-02-11T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5\" target=\"_blank\">News | The University of Alabama in Huntsville</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The University of Alabama in Huntsville</font>"
+    },
+    {
+      "title": "NLR Battery Innovation Awarded NASA’s Invention of the Year - nlr.gov",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWlFEeGZad0JTSzliMHJSdTllN3VaR08zVFFfRHMxTkpJOWR1TC1jT2dqQW1Hci1XTkRaQ3VvbzduMlJac0Q1VEkzbFN5NzAyVDdFWFU3bGRZVTZpUWkwWTdmSEJmYUpRYWhLWmRhei1tRUNCb0FSdkFqVV8wRndpRHp1bzFMSUpkU3loMGJUTjR5akwyenBQMkYxV3hzWW1tOU1PVHpR?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-04-28T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQWlFEeGZad0JTSzliMHJSdTllN3VaR08zVFFfRHMxTkpJOWR1TC1jT2dqQW1Hci1XTkRaQ3VvbzduMlJac0Q1VEkzbFN5NzAyVDdFWFU3bGRZVTZpUWkwWTdmSEJmYUpRYWhLWmRhei1tRUNCb0FSdkFqVV8wRndpRHp1bzFMSUpkU3loMGJUTjR5akwyenBQMkYxV3hzWW1tOU1PVHpR?oc=5\" target=\"_blank\">NLR Battery Innovation Awarded NASA’s Invention of the Year</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">nlr.gov</font>"
+    },
+    {
+      "title": "Challenges of protecting innovation in an artificial (intelligence) world - McAfee & Taft",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMENfMjlBQ2RaRzZ2anFzZmtuZzdHLVViN2dlanlyMzFyYjYwNU9hU3BmdkxtZ09LYWlJd3g1eWZsNEtWQVg3V2w4VWVESVpCUFk2dlVPVFlFUG1xUjhyTGJScXZfY2hEYjZxbnFpVHdnLXcyeDMtQUNJSFRzLVMxZUdNMzdjUFZteGlWMzhxeVVDczJENEtGd1hZQXJwNWJP?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-01-15T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNMENfMjlBQ2RaRzZ2anFzZmtuZzdHLVViN2dlanlyMzFyYjYwNU9hU3BmdkxtZ09LYWlJd3g1eWZsNEtWQVg3V2w4VWVESVpCUFk2dlVPVFlFUG1xUjhyTGJScXZfY2hEYjZxbnFpVHdnLXcyeDMtQUNJSFRzLVMxZUdNMzdjUFZteGlWMzhxeVVDczJENEtGd1hZQXJwNWJP?oc=5\" target=\"_blank\">Challenges of protecting innovation in an artificial (intelligence) world</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">McAfee & Taft</font>"
+    },
+    {
+      "title": "iQIYI Reaches New Heights: 880 Invention Patents Filed in 2025, Over Half Driven by AI Innovation, Further Building Up Its AIGC Leadership - PR Newswire",
+      "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPT1pqOGxHUWI5YkxVbWhwb0NoVFpSZmRyVWloY2FLUGNVcmlaUEx6QWZZQUFoMmxNR2F5bFoxTnhJa25iU194bWN2WnNNc1RJbjhvYmplck83Xy1udWdjT2NVMGwtY2N4a1BPWXk5RHVQTmsyajBSY1lUVG5iQ2hpM2g3eXZQQjAxdXpxalRGbjVLb2c0X0JSV0kwOGMydVlfbEpYV09Sa3ZWRUVtUzVQbG5QRFd5RXNtMTJYOUJLaDl4bmNZSDZaV2lvUEpiRkQ0UDFJS0hLQ2JFWVlxanE2VTRnYlJLRlNvU3pGa2JmRUtaYlFXWEMyNVAyald2eS1XbEhkNmFKM0tOWmdJQ1N5TmtvY0ZZY0prUjZF?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-01-30T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwJBVV95cUxPT1pqOGxHUWI5YkxVbWhwb0NoVFpSZmRyVWloY2FLUGNVcmlaUEx6QWZZQUFoMmxNR2F5bFoxTnhJa25iU194bWN2WnNNc1RJbjhvYmplck83Xy1udWdjT2NVMGwtY2N4a1BPWXk5RHVQTmsyajBSY1lUVG5iQ2hpM2g3eXZQQjAxdXpxalRGbjVLb2c0X0JSV0kwOGMydVlfbEpYV09Sa3ZWRUVtUzVQbG5QRFd5RXNtMTJYOUJLaDl4bmNZSDZaV2lvUEpiRkQ0UDFJS0hLQ2JFWVlxanE2VTRnYlJLRlNvU3pGa2JmRUtaYlFXWEMyNVAyald2eS1XbEhkNmFKM0tOWmdJQ1N5TmtvY0ZZY0prUjZF?oc=5\" target=\"_blank\">iQIYI Reaches New Heights: 880 Invention Patents Filed in 2025, Over Half Driven by AI Innovation, Further Building Up Its AIGC Leadership</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PR Newswire</font>"
+    },
+    {
+      "title": "The Netherlands take a step towards establishing a Dutch Darpa - sciencebusiness.net",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR08yYzN5SDdENWJmT1BXQUZYU3RwdDBydGt1OFdZNE9PaUx3bVg1eGtZbGRlVktRdlQ3bFFFbFc2TmoySW5YQ2tMTzluWnZJeENIWkRYdGQ0MDlxbDdUNG9oWTBkSEhNMFZnUlQtNEVZNjFqbEttMEhQdWtRNE5Kd2pOOGdCbmN4WEdlZTAwaTh6eUw3UXZnWFMwTFA?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2025-12-18T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPR08yYzN5SDdENWJmT1BXQUZYU3RwdDBydGt1OFdZNE9PaUx3bVg1eGtZbGRlVktRdlQ3bFFFbFc2TmoySW5YQ2tMTzluWnZJeENIWkRYdGQ0MDlxbDdUNG9oWTBkSEhNMFZnUlQtNEVZNjFqbEttMEhQdWtRNE5Kd2pOOGdCbmN4WEdlZTAwaTh6eUw3UXZnWFMwTFA?oc=5\" target=\"_blank\">The Netherlands take a step towards establishing a Dutch Darpa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sciencebusiness.net</font>"
+    },
+    {
+      "title": "Palo Alto Networks joins UAH Invention to Innovation Center as Corporate Innovation Partner | Newswise - Newswise",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWF9ydjNUVE54eS1wSUNDdVphNl9reDBUUzI4YnNjamRDYU1mUEVUUk8zRGk3b3p3aXZIck5UTUwtSlUtNzhvMERDTTVQWUZtU3Zqd255OC0xa19XQm0xN0V2bXpYT3pHZnVfd2k1NGVhRFVrakEySVhwTFRJR0JqLUhkTVdaNEgwUk13RG5KajdCRXlEc0Nub3pwY0F2YUEzS3g1S3VKX3RuZXM3R0N1UXQwRG1iQjZvZDJ3RWtSdmlNaTjSAcMBQVVfeXFMUFhfcnYzVFROeHktcElDQ3VaYTZfa3gwVFMyOGJzY2pkQ2FNZlBFVFJPM0RpN296d2l2SHJOVE1MLUpVLTc4bzBEQ001UFlGbVN2andueTgtMWtfV0JtMTdFdm16WE96R2Z1X3dpNTRlYURVa2pBMklYcExUSUdCai1IZE1XWjRIMFJNd0RuSmo3QkV5RHNDbm96cGNBdmFBM0t4NUt1Sl90bmVzN0dDdVF0MERtYkI2b2Qyd0VrUnZpTWk4?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-04-16T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWF9ydjNUVE54eS1wSUNDdVphNl9reDBUUzI4YnNjamRDYU1mUEVUUk8zRGk3b3p3aXZIck5UTUwtSlUtNzhvMERDTTVQWUZtU3Zqd255OC0xa19XQm0xN0V2bXpYT3pHZnVfd2k1NGVhRFVrakEySVhwTFRJR0JqLUhkTVdaNEgwUk13RG5KajdCRXlEc0Nub3pwY0F2YUEzS3g1S3VKX3RuZXM3R0N1UXQwRG1iQjZvZDJ3RWtSdmlNaTjSAcMBQVVfeXFMUFhfcnYzVFROeHktcElDQ3VaYTZfa3gwVFMyOGJzY2pkQ2FNZlBFVFJPM0RpN296d2l2SHJOVE1MLUpVLTc4bzBEQ001UFlGbVN2andueTgtMWtfV0JtMTdFdm16WE96R2Z1X3dpNTRlYURVa2pBMklYcExUSUdCai1IZE1XWjRIMFJNd0RuSmo3QkV5RHNDbm96cGNBdmFBM0t4NUt1Sl90bmVzN0dDdVF0MERtYkI2b2Qyd0VrUnZpTWk4?oc=5\" target=\"_blank\">Palo Alto Networks joins UAH Invention to Innovation Center as Corporate Innovation Partner | Newswise</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newswise</font>"
+    },
+    {
+      "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - South China Morning Post",
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-06-29T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5\" target=\"_blank\">From invention to impact: Hong Kong Science Fair gives young innovators a wider stage</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">South China Morning Post</font>"
+    },
+    {
+      "title": "Innovation beyond invention will bring novel medicines to Europe’s patients - pharmaphorum.com",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeGNzcmIteUo2YXdxbHlGS1k0YTlQRThCNXFpQUFZYkowNUZsamdReWQ4WmYxSVU2RXd6UUhXLWNUZUxkdW1SUFdiUlhIUzVlMF9UMWx2ZUJuWl9hdk1uU2tYck1uaVp1WlFkRmNuOFpFQTRfalpnYWZxbjN0RW5WLTZXZ3lPN3VmTlRla1Q0d0pJVWVINVVkcWdzQ2xISWhMc2tHWGVNc2xZM0NCbzVZ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-05-12T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNeGNzcmIteUo2YXdxbHlGS1k0YTlQRThCNXFpQUFZYkowNUZsamdReWQ4WmYxSVU2RXd6UUhXLWNUZUxkdW1SUFdiUlhIUzVlMF9UMWx2ZUJuWl9hdk1uU2tYck1uaVp1WlFkRmNuOFpFQTRfalpnYWZxbjN0RW5WLTZXZ3lPN3VmTlRla1Q0d0pJVWVINVVkcWdzQ2xISWhMc2tHWGVNc2xZM0NCbzVZ?oc=5\" target=\"_blank\">Innovation beyond invention will bring novel medicines to Europe’s patients</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">pharmaphorum.com</font>"
+    },
+    {
+      "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - University of Waterloo",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-04-22T15:41:24.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5\" target=\"_blank\">Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">University of Waterloo</font>"
+    },
+    {
+      "title": "China has invented a whole new way to do innovation - Noahpinion",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1aTkhGdkFRcFlGa1BzZU9NbnV1aFVYT0FoVU5LREVTanViY2swbWRmWXEyeGZ6amR4OTBSUGJBcGRDUnZtY2RwbW9xaW1Wc3BDMW05LW9pTWJNNnBXbG5sQzZTRGxaZ3NHTl90OWVORHNwdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2025-12-04T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE1aTkhGdkFRcFlGa1BzZU9NbnV1aFVYT0FoVU5LREVTanViY2swbWRmWXEyeGZ6amR4OTBSUGJBcGRDUnZtY2RwbW9xaW1Wc3BDMW05LW9pTWJNNnBXbG5sQzZTRGxaZ3NHTl90OWVORHNwdw?oc=5\" target=\"_blank\">China has invented a whole new way to do innovation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Noahpinion</font>"
+    },
+    {
+      "title": "The 50 greatest innovations of 2025 - Popular Science",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9OTENGRkVmRTlJdFdVVnJrWTVmWXNfOGhxXzc2cW9OSFJMWHhYQ0hLdkFLaTVaMFRfS2I0S2F2UDhxemFmUUF6dEtiRi1hMlJ6WmI0QW1xMUhjc0RNRlJVdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2025-12-10T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE9OTENGRkVmRTlJdFdVVnJrWTVmWXNfOGhxXzc2cW9OSFJMWHhYQ0hLdkFLaTVaMFRfS2I0S2F2UDhxemFmUUF6dEtiRi1hMlJ6WmI0QW1xMUhjc0RNRlJVdw?oc=5\" target=\"_blank\">The 50 greatest innovations of 2025</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Popular Science</font>"
+    },
+    {
+      "title": "A hub of invention - news.uci.edu",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfMl9KTXo5T3llMWZDUU5NMUlLdmd4dHBERWt5eElhdnlaR0ZRQUh5TUJGYWwtZnVZaTFzbjc1b2lDVUMwQjAwQlpPVmFsS3hKN2pYOGlEUEp4VHNzdFlWaQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2025-10-23T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfMl9KTXo5T3llMWZDUU5NMUlLdmd4dHBERWt5eElhdnlaR0ZRQUh5TUJGYWwtZnVZaTFzbjc1b2lDVUMwQjAwQlpPVmFsS3hKN2pYOGlEUEp4VHNzdFlWaQ?oc=5\" target=\"_blank\">A hub of invention</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.uci.edu</font>"
+    },
+    {
+      "title": "Husband and wife invent new wind turbine technology - Enlit World",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpKX0ZNT2R5SmROOGl4cFE3VUFoYTZFZHY2eC1ubjFsRUMwWGljMXZvY2YtOVdST0Vja0hZVHM1Q0hPdDkzc3RZT3RvVHh4bGwtOHVRa3p6WmRwOTRtUUNwbHM4aUxUT3dQelUtN0c2elgwTFhVTG51ZUZWQkJVblpqdkM5TjkwOFQw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-06-15T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpKX0ZNT2R5SmROOGl4cFE3VUFoYTZFZHY2eC1ubjFsRUMwWGljMXZvY2YtOVdST0Vja0hZVHM1Q0hPdDkzc3RZT3RvVHh4bGwtOHVRa3p6WmRwOTRtUUNwbHM4aUxUT3dQelUtN0c2elgwTFhVTG51ZUZWQkJVblpqdkM5TjkwOFQw?oc=5\" target=\"_blank\">Husband and wife invent new wind turbine technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Enlit World</font>"
+    },
+    {
+      "title": "Innovative nurses, sisters invent new device for heart patients - news.sanfordhealth.org",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTkNRT05yUV9hTHdob2EzUzNfZEVjb1dnWWdHcjJVdGc2VzhYSkQ2eXZsTGFuTzhKQzlMZ0gybEJZaHFoYVBMOWZ0UlNxZGRkRHBpWHRNaVBBZHhLR2gteExEbjVvSjFsWDJlaERGcDJkc251NVduZjFIM3E4bVZTMl90MUx6ZlZHem92RTR3WU52OVRIaTRjZExIY19DeU1zY05aaUtCbTEzb1dlTjdKaV9CV18xeXFFY3I2aURXSjA1VWc?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-02-23T08:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTkNRT05yUV9hTHdob2EzUzNfZEVjb1dnWWdHcjJVdGc2VzhYSkQ2eXZsTGFuTzhKQzlMZ0gybEJZaHFoYVBMOWZ0UlNxZGRkRHBpWHRNaVBBZHhLR2gteExEbjVvSjFsWDJlaERGcDJkc251NVduZjFIM3E4bVZTMl90MUx6ZlZHem92RTR3WU52OVRIaTRjZExIY19DeU1zY05aaUtCbTEzb1dlTjdKaV9CV18xeXFFY3I2aURXSjA1VWc?oc=5\" target=\"_blank\">Innovative nurses, sisters invent new device for heart patients</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.sanfordhealth.org</font>"
+    },
+    {
+      "title": "5 Apple product launches we still expect to see in 2026 - mashable.com",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1kb0NwNTBkV2laNEljU2VPTlk5ZFV1bm5RR29wN2RVYklkcGdHSlJOdWptR3ZnRzF3anJzdFE3bHJadXI5Y0t3T25LektaQUVodmRKZkFfUk04dmd3S2ZZNko1TEg2Mnp5WVMtUE1R?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T21:10:44.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE1kb0NwNTBkV2laNEljU2VPTlk5ZFV1bm5RR29wN2RVYklkcGdHSlJOdWptR3ZnRzF3anJzdFE3bHJadXI5Y0t3T25LektaQUVodmRKZkFfUk04dmd3S2ZZNko1TEg2Mnp5WVMtUE1R?oc=5\" target=\"_blank\">5 Apple product launches we still expect to see in 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mashable.com</font>"
+    },
+    {
+      "title": "The 8 biggest Apple announcements from its launch event - Business Insider",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQU0ljTUNhMWlkdU1LY2dLREhBZVlMdnBoWHhoRWpucDUycXhudWp4a1hnbDE2b2JMc2oyVnJtWGVLcmdTc2NjVmxHMDJjYUdlVVJhQzZIRVNxQnEzSkpBZzlaMVhXTnI0aUtDNkdqVHJucXFORmhVWjloWDk4RktHRUFGR1FDVzNfMk4tei1ydzBBbWVHUUQ3aWZPTlI0aDZjMjVnUkpQQ3k?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T21:38:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQU0ljTUNhMWlkdU1LY2dLREhBZVlMdnBoWHhoRWpucDUycXhudWp4a1hnbDE2b2JMc2oyVnJtWGVLcmdTc2NjVmxHMDJjYUdlVVJhQzZIRVNxQnEzSkpBZzlaMVhXTnI0aUtDNkdqVHJucXFORmhVWjloWDk4RktHRUFGR1FDVzNfMk4tei1ydzBBbWVHUUQ3aWZPTlI0aDZjMjVnUkpQQ3k?oc=5\" target=\"_blank\">The 8 biggest Apple announcements from its launch event</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Business Insider</font>"
+    },
+    {
+      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - Apple",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T19:23:08.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5\" target=\"_blank\">Apple debuts iPhone 18 Pro and iPhone 18 Pro Max</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Apple</font>"
+    },
+    {
+      "title": "Apple unveils $2,000 iPhone Duo, its first foldable smartphone - Fortune",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNM0tDWlNLeG1ubFpLUkF2YkNuNzZTVXJEcElndks0UWJmOGFzVmpxbU0yTHo2am82QS01UEVVUndDMTY0U2dIUjdWV21RbER2dEpKQ21UaXY2ZDZSQURHZW56ejVKb01ySk5UaFcxcXNwVW1ZUndJb1czUk5kQ0lpcXg2Q0k2aFQ1MXZRWVZkQmM3OGM?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T07:05:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNM0tDWlNLeG1ubFpLUkF2YkNuNzZTVXJEcElndks0UWJmOGFzVmpxbU0yTHo2am82QS01UEVVUndDMTY0U2dIUjdWV21RbER2dEpKQ21UaXY2ZDZSQURHZW56ejVKb01ySk5UaFcxcXNwVW1ZUndJb1czUk5kQ0lpcXg2Q0k2aFQ1MXZRWVZkQmM3OGM?oc=5\" target=\"_blank\">Apple unveils $2,000 iPhone Duo, its first foldable smartphone</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fortune</font>"
+    },
+    {
+      "title": "New Apple TV with Siri AI could launch at any time in the fall - AppleInsider",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeW82TVhjWXNsQ3RjbkN6QjF5Y1dJcFpkXzZoQnJYZ2IwNUNTLWQ4MGM2S2xrZnpjQTdZQThPNDEwakpwYWNWOHl4WGlqcjBRc0Z3czZkMW5kMXhYdHNtSnZnQmZWaDlCR3pXbm0wVkJmRndSSjJ2NmQ2OXdmRGpVZkJPZkpvandrSldQeXF2WkQyYlozNnZEZXpJVl80ZHF0WE9GOFNiU0w?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-13T14:25:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeW82TVhjWXNsQ3RjbkN6QjF5Y1dJcFpkXzZoQnJYZ2IwNUNTLWQ4MGM2S2xrZnpjQTdZQThPNDEwakpwYWNWOHl4WGlqcjBRc0Z3czZkMW5kMXhYdHNtSnZnQmZWaDlCR3pXbm0wVkJmRndSSjJ2NmQ2OXdmRGpVZkJPZkpvandrSldQeXF2WkQyYlozNnZEZXpJVl80ZHF0WE9GOFNiU0w?oc=5\" target=\"_blank\">New Apple TV with Siri AI could launch at any time in the fall</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AppleInsider</font>"
+    },
+    {
+      "title": "Apple will launch six major new products next week, here’s what’s coming - 9to5Mac",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOR01KVF8xb2JaZ3JyVUJQRzA2b2Fvci0tcmRGeUhiSl82T2p1VUVWU3l3UjBjUXh5U0RTaksySklTNDV5RkFSR2xaQ0JTX0FPRTNwUVl2akVkLTNSTTBhR1NDR0JBZElqUjV0VHBkUjZEWHhpRFpUNzJtcDNkWFZYUHhnWEIzRkZZNE5WNDZyOVFyLVIzU0d2WDl4ZUpRdFFDeU1Z?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-03T07:00:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOR01KVF8xb2JaZ3JyVUJQRzA2b2Fvci0tcmRGeUhiSl82T2p1VUVWU3l3UjBjUXh5U0RTaksySklTNDV5RkFSR2xaQ0JTX0FPRTNwUVl2akVkLTNSTTBhR1NDR0JBZElqUjV0VHBkUjZEWHhpRFpUNzJtcDNkWFZYUHhnWEIzRkZZNE5WNDZyOVFyLVIzU0d2WDl4ZUpRdFFDeU1Z?oc=5\" target=\"_blank\">Apple will launch six major new products next week, here’s what’s coming</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">9to5Mac</font>"
+    },
+    {
+      "title": "Brittany Mahomes Makes Personal Announcement Before Chiefs-Broncoos Game - heavy.com",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdTdSbFhiYXR5QzZOVTliZ1EtYjF0T29jZ0dieC0tLS0tbGJ0Y3Via0dUaGxFaFpFNVhCSkoyNllTcDNVR1lRb3A2ZjNERTZPejB4OUZzdkNadHFZUWxKeXZESVpNUEV6UnNvVFE3Vm4xLU1TcFlfSmg3VGVPdkVRc05xV1ZVdEgtVzloc09KMGV1c0NuVzBYa1RGR19FZXRfU1d2SDVOQU5RYkY0NzN2VllCVkFoOU9rTW4wOQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T06:05:16.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQdTdSbFhiYXR5QzZOVTliZ1EtYjF0T29jZ0dieC0tLS0tbGJ0Y3Via0dUaGxFaFpFNVhCSkoyNllTcDNVR1lRb3A2ZjNERTZPejB4OUZzdkNadHFZUWxKeXZESVpNUEV6UnNvVFE3Vm4xLU1TcFlfSmg3VGVPdkVRc05xV1ZVdEgtVzloc09KMGV1c0NuVzBYa1RGR19FZXRfU1d2SDVOQU5RYkY0NzN2VllCVkFoOU9rTW4wOQ?oc=5\" target=\"_blank\">Brittany Mahomes Makes Personal Announcement Before Chiefs-Broncoos Game</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">heavy.com</font>"
+    },
+    {
+      "title": "Apple's Next App Store Change Brings New Product Page Art This Fall, and a Developer Center in Berlin - The Mac Observer",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMEhmU3ZjVnZMZldtUXFqX0JIUWVLTGtZU1BHRzNxNDMzU3E5WWRWWnhDM1JmTGNhRmFlUXJNZFo4QXFDZENiNnlSbm9fTXAxLWxobHQ4NG9IdEVvXzVsWENiN3RGbDFLcG5YQk50S2IwcmxUV3Q2SkxPX0RYaWFYdXFwRDcwY3FRandBM2FscmhKMWhraDZ5SlRB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-13T18:42:20.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQMEhmU3ZjVnZMZldtUXFqX0JIUWVLTGtZU1BHRzNxNDMzU3E5WWRWWnhDM1JmTGNhRmFlUXJNZFo4QXFDZENiNnlSbm9fTXAxLWxobHQ4NG9IdEVvXzVsWENiN3RGbDFLcG5YQk50S2IwcmxUV3Q2SkxPX0RYaWFYdXFwRDcwY3FRandBM2FscmhKMWhraDZ5SlRB?oc=5\" target=\"_blank\">Apple's Next App Store Change Brings New Product Page Art This Fall, and a Developer Center in Berlin</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Mac Observer</font>"
+    },
+    {
+      "title": "Apple iPhone 18 event — all the new products expected to launch at the 'Surprise and shine' event - Tom's Guide",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWWZiTDR6S1pvWXhwMFFCbmhCTW5abjRmLVRTcWFxUzVrdUJxSWN2Smh0b3BVRU02aDlIaHVTQ3dJNHphcnhXRFY2dVI4SXZ5VlhhWjVEZ3l3bWlKa1pJNWRWSWtxR2gtc3d3aGE1ZldkQjMxdFNFZzFHZXhpWm1tR1RwanJ1TFBpRHhjVlpIYWNydDJSSzZJaVhhMTlRczJPS0kweG9jUEtDNmFWN0x1X3ZhYVpHUQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-08T09:11:26.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNWWZiTDR6S1pvWXhwMFFCbmhCTW5abjRmLVRTcWFxUzVrdUJxSWN2Smh0b3BVRU02aDlIaHVTQ3dJNHphcnhXRFY2dVI4SXZ5VlhhWjVEZ3l3bWlKa1pJNWRWSWtxR2gtc3d3aGE1ZldkQjMxdFNFZzFHZXhpWm1tR1RwanJ1TFBpRHhjVlpIYWNydDJSSzZJaVhhMTlRczJPS0kweG9jUEtDNmFWN0x1X3ZhYVpHUQ?oc=5\" target=\"_blank\">Apple iPhone 18 event — all the new products expected to launch at the 'Surprise and shine' event</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Tom's Guide</font>"
+    },
+    {
+      "title": "Previewing GPT-5.6 Sol: a next-generation model - OpenAI",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9BR2ZzcDRMbGphY1pfMF9mVWVCZGUyV25mbHpZMnRjQUxWWWgtWGZqSk93eXEweHNlOU1MTW85d2hLc3NvT2E4Znd4ZG5DR1diQTZPcFExTi1wcC1t?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-10T15:00:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9BR2ZzcDRMbGphY1pfMF9mVWVCZGUyV25mbHpZMnRjQUxWWWgtWGZqSk93eXEweHNlOU1MTW85d2hLc3NvT2E4Znd4ZG5DR1diQTZPcFExTi1wcC1t?oc=5\" target=\"_blank\">Previewing GPT-5.6 Sol: a next-generation model</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">OpenAI</font>"
+    },
+    {
+      "title": "How to improve medical device marketing strategies and accelerate product adoption - WSOC TV",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMG1IQ2lfeEpmYkE1ak9raUhiSS1HUkhxZmpKeTBqenQtX2tSQ2tzbGhYOVhZTzAyNGJ3UTFKTmZMaUZ1cjc2Qjg3M0lkVHIxUkF4eFRCWjk1ZE5YcXhTLVpBQndVa3A5V21jS1dSUjJDYlhBREpMNjhUY1ZuQ1VhQWN3NzN4bnNxelHSAZ4BQVVfeXFMUFJoZkIwQXZlb21BUkhjTXVKdnhpdl9QREtReVVxU1lqdXBRRHNUNTRFUFB4aDg5TW5kZG0xcGhwRzgtMnBXelJHa2hfR3NQTHFQeU9SNWZoOV9fWEpyY3g5cmhCRzZOMGotRWRJOFY5NzFaMFBmYkZlcVVBOVlTZVpZeU1qTHZvUE9ta2RKWUMtbDlfeUR1VGtGLVhmV1E?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-11T16:31:02.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQMG1IQ2lfeEpmYkE1ak9raUhiSS1HUkhxZmpKeTBqenQtX2tSQ2tzbGhYOVhZTzAyNGJ3UTFKTmZMaUZ1cjc2Qjg3M0lkVHIxUkF4eFRCWjk1ZE5YcXhTLVpBQndVa3A5V21jS1dSUjJDYlhBREpMNjhUY1ZuQ1VhQWN3NzN4bnNxelHSAZ4BQVVfeXFMUFJoZkIwQXZlb21BUkhjTXVKdnhpdl9QREtReVVxU1lqdXBRRHNUNTRFUFB4aDg5TW5kZG0xcGhwRzgtMnBXelJHa2hfR3NQTHFQeU9SNWZoOV9fWEpyY3g5cmhCRzZOMGotRWRJOFY5NzFaMFBmYkZlcVVBOVlTZVpZeU1qTHZvUE9ta2RKWUMtbDlfeUR1VGtGLVhmV1E?oc=5\" target=\"_blank\">How to improve medical device marketing strategies and accelerate product adoption</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSOC TV</font>"
+    },
+    {
+      "title": "Apple unveils iPhone Duo - Apple",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T18:18:57.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5\" target=\"_blank\">Apple unveils iPhone Duo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Apple</font>"
+    },
+    {
+      "title": "Apple’s September 9 launch is coming. Here’s what B2B leaders should watch - MarketScale",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNQkxfNTV3VFk1b3AwVURCdmltblRWb012QTNXUUJjSEhWNnRYcHctNGwxVGY4TGhLX0dBZTZvd3lweGxXNnlzZFVRZDhuN1dQUWt5WFNjNzM2M1hZaXhVbkl0RWJJbnYyTVV0UTJVWnBGaGl2aWRFcWhDOTBwZkVMd2tBS00xRU9fWEdDNGR0eFAyZ20zeHRSTVNWOXVLeHREQk1VbHZOZHhlSWZTbnhyZDFQQ2xadnpsZWZpOG9mQ2Q3UUJ6?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T22:01:57.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNQkxfNTV3VFk1b3AwVURCdmltblRWb012QTNXUUJjSEhWNnRYcHctNGwxVGY4TGhLX0dBZTZvd3lweGxXNnlzZFVRZDhuN1dQUWt5WFNjNzM2M1hZaXhVbkl0RWJJbnYyTVV0UTJVWnBGaGl2aWRFcWhDOTBwZkVMd2tBS00xRU9fWEdDNGR0eFAyZ20zeHRSTVNWOXVLeHREQk1VbHZOZHhlSWZTbnhyZDFQQ2xadnpsZWZpOG9mQ2Q3UUJ6?oc=5\" target=\"_blank\">Apple’s September 9 launch is coming. Here’s what B2B leaders should watch</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MarketScale</font>"
+    },
+    {
+      "title": "Apple unveils $1,999 iPhone Duo, its first foldable phone - Al Jazeera",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3UyWW9zTUswX3BSWng0ZGRTUldTVkpEc2ZoelpXaFBDeHZNMWJ6RnlrT0YyZVdNN0ZOTFRpdFg2N1EzRkJLN3ZVMThwZFRUcjN6MUxmSnUwZndHRGJWUVlTZi1kOU5IYW9hdVlVZktyVWFNX1ROakVkWERRYTZRQnZWQmhUZEVoRk9Pd0xzVUk3YnZWeHJMTUVrdG5fZXEtNmpFTdIBqgFBVV95cUxQRlRIMWU4ZFRQdjMxa0tyV1k3XzlTSEEwVjlCc2NRNjdjRzYySi1mYzdoNWtPM2N0cjBqaThsWjRMRm5sM0RhYjFzaWVGc3ZsOVd5b1h4MEhPMTJHRHBzUVJtZ25vUTFBWHhpRVpFWWJfd3c0TmFzcE1mV1JkQjk4cklUdTNhY294SlRHdTl4NnNndkcxTGQ1WlpvdGtVTXM4ek5aNTBhb05pdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T20:00:51.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3UyWW9zTUswX3BSWng0ZGRTUldTVkpEc2ZoelpXaFBDeHZNMWJ6RnlrT0YyZVdNN0ZOTFRpdFg2N1EzRkJLN3ZVMThwZFRUcjN6MUxmSnUwZndHRGJWUVlTZi1kOU5IYW9hdVlVZktyVWFNX1ROakVkWERRYTZRQnZWQmhUZEVoRk9Pd0xzVUk3YnZWeHJMTUVrdG5fZXEtNmpFTdIBqgFBVV95cUxQRlRIMWU4ZFRQdjMxa0tyV1k3XzlTSEEwVjlCc2NRNjdjRzYySi1mYzdoNWtPM2N0cjBqaThsWjRMRm5sM0RhYjFzaWVGc3ZsOVd5b1h4MEhPMTJHRHBzUVJtZ25vUTFBWHhpRVpFWWJfd3c0TmFzcE1mV1JkQjk4cklUdTNhY294SlRHdTl4NnNndkcxTGQ1WlpvdGtVTXM4ek5aNTBhb05pdw?oc=5\" target=\"_blank\">Apple unveils $1,999 iPhone Duo, its first foldable phone</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al Jazeera</font>"
+    },
+    {
+      "title": "Apple is about to launch five new products that I’m very excited for - 9to5Mac",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-08-24T07:00:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5\" target=\"_blank\">Apple is about to launch five new products that I’m very excited for</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">9to5Mac</font>"
+    },
+    {
+      "title": "New product identifiers show up in Apple's backend, don't indicate release timing - AppleInsider",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbmlKWWxnQzVUbTIxMVhhTVd4a2cycVpqaHEtNkZseDFtNk5RUzRPeVhVb1hkaS1HZUh0WFRkMUx6LVM2a3UzZjJSeDAxVE1aaWctMkZMT2J6cmtZZXNfRjVNM3JZckxfYmJYN19EXzNFclVQZHl4eVpjS3RjcDJ4QkRkY3ZXYnlPY3Bxb1dXUXdNckE4cXpCOW1qaUUzbFphYjlTbUgtSDVmbFJDenZvb0VDbmpDNUVVc3FRQXlR?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T00:24:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQbmlKWWxnQzVUbTIxMVhhTVd4a2cycVpqaHEtNkZseDFtNk5RUzRPeVhVb1hkaS1HZUh0WFRkMUx6LVM2a3UzZjJSeDAxVE1aaWctMkZMT2J6cmtZZXNfRjVNM3JZckxfYmJYN19EXzNFclVQZHl4eVpjS3RjcDJ4QkRkY3ZXYnlPY3Bxb1dXUXdNckE4cXpCOW1qaUUzbFphYjlTbUgtSDVmbFJDenZvb0VDbmpDNUVVc3FRQXlR?oc=5\" target=\"_blank\">New product identifiers show up in Apple's backend, don't indicate release timing</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AppleInsider</font>"
+    },
+    {
+      "title": "Apple will launch 15+ new products this fall, here’s what’s coming - 9to5Mac",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWXlqTWJneVp6Zk1wNThKc3FZeVZWTlpBanMwYWNWeW52UmFwYk10SzY3WW1YTmcxdVJsLXpodS1OYlpNb3h1NFhaN2RDQVNpdVlQZHhGOTFBMlFFQnRNZkNPUXpDd3VENDVRYmZMc2tLREM0cU53U25NS0R4MkJERjh1N1ptd3VDQm8tNzBzXzF6MjVFcG4zS2pR?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-08-28T07:00:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNWXlqTWJneVp6Zk1wNThKc3FZeVZWTlpBanMwYWNWeW52UmFwYk10SzY3WW1YTmcxdVJsLXpodS1OYlpNb3h1NFhaN2RDQVNpdVlQZHhGOTFBMlFFQnRNZkNPUXpDd3VENDVRYmZMc2tLREM0cU53U25NS0R4MkJERjh1N1ptd3VDQm8tNzBzXzF6MjVFcG4zS2pR?oc=5\" target=\"_blank\">Apple will launch 15+ new products this fall, here’s what’s coming</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">9to5Mac</font>"
+    },
+    {
+      "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - Apple",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5\" target=\"_blank\">Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Apple</font>"
+    },
+    {
+      "title": "Apple will launch 10+ new products soon, with September event coming - 9to5Mac",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQX2tZa0xCdTNpQVNSLXZ1WlN6MUMxSHNxUnBKQzVHM2lQMHFENDF3T1RYd19PaWJWN2F4R0RTeDRIclZrRmZJYjVqT1ZBUVN6U1NpZXR1TENKS1lNVlBDakg5Q3NWTXBYN2RxY29Bb1I0RnNmTklFazJQZ0ZsVHRnLUM1Qks5eV9ob0hYaUlfTVhxRm5teVE3clZJTDRsbGM?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-08-19T07:00:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQX2tZa0xCdTNpQVNSLXZ1WlN6MUMxSHNxUnBKQzVHM2lQMHFENDF3T1RYd19PaWJWN2F4R0RTeDRIclZrRmZJYjVqT1ZBUVN6U1NpZXR1TENKS1lNVlBDakg5Q3NWTXBYN2RxY29Bb1I0RnNmTklFazJQZ0ZsVHRnLUM1Qks5eV9ob0hYaUlfTVhxRm5teVE3clZJTDRsbGM?oc=5\" target=\"_blank\">Apple will launch 10+ new products soon, with September event coming</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">9to5Mac</font>"
+    },
+    {
+      "title": "Apple added 37 new hardware identifiers just before its new product launch event, including 7 iPhone-related ones and 3 for home accessories. - GIGAZINE",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9FQUlfMDN3My1nTDhYWXRtX1R3cXNieEZZYzNkRWRLaXdYNFZ4V2pGOFJJYUtkV0U5Ukd0a29Gcnd0cF9UWkY4dG9MTmUxcnh0VXQ3MkprMzBLMDQxbS1LS3hUSXlfM2VIby04dzZvU2RydzhVdl9vUzBfajU?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T02:25:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE9FQUlfMDN3My1nTDhYWXRtX1R3cXNieEZZYzNkRWRLaXdYNFZ4V2pGOFJJYUtkV0U5Ukd0a29Gcnd0cF9UWkY4dG9MTmUxcnh0VXQ3MkprMzBLMDQxbS1LS3hUSXlfM2VIby04dzZvU2RydzhVdl9vUzBfajU?oc=5\" target=\"_blank\">Apple added 37 new hardware identifiers just before its new product launch event, including 7 iPhone-related ones and 3 for home accessories.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">GIGAZINE</font>"
+    },
+    {
+      "title": "Clarity Act faces make-or-break Senate vote on Tuesday as crypto industry pushes for bill - CNBC",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxONk8wYkc3Z3BtOG4tYVlGRjRzWmE2NEhrb29KTWxrdE5tMTZwS3pweWcyZUhYTHgxeDh4RGhwWW5DZzZuSmNwWXhhTVVJdHlMSE1YQVJ3ZmpyR0JNbDRXa1JWbV9tWjhwX2FiNld0VzhGVS1SWUV6RkhNYTNCbHF3c0JQTV_SAYoBQVVfeXFMTlVMOFJ2TW9JTUEyUWJvVVVWTjVWdmJSX3htNGhfUUg2YWF0ODRnWmQ1bzRMMlB4dHhzVFFWQTBmdzZPaUlhOE1UUG1WVVlISUppSWhhdDc1NDdJVkdvTzlzZThoN0Q4YVRrUVVpclE3NVpqTEl0cTRCbE85VkRmbVNQUGVJY3Jxdm9n?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T10:30:01.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxONk8wYkc3Z3BtOG4tYVlGRjRzWmE2NEhrb29KTWxrdE5tMTZwS3pweWcyZUhYTHgxeDh4RGhwWW5DZzZuSmNwWXhhTVVJdHlMSE1YQVJ3ZmpyR0JNbDRXa1JWbV9tWjhwX2FiNld0VzhGVS1SWUV6RkhNYTNCbHF3c0JQTV_SAYoBQVVfeXFMTlVMOFJ2TW9JTUEyUWJvVVVWTjVWdmJSX3htNGhfUUg2YWF0ODRnWmQ1bzRMMlB4dHhzVFFWQTBmdzZPaUlhOE1UUG1WVVlISUppSWhhdDc1NDdJVkdvTzlzZThoN0Q4YVRrUVVpclE3NVpqTEl0cTRCbE85VkRmbVNQUGVJY3Jxdm9n?oc=5\" target=\"_blank\">Clarity Act faces make-or-break Senate vote on Tuesday as crypto industry pushes for bill</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>"
+    },
+    {
+      "title": "Trump agrees to new bipartisan ethics provision in massive crypto bill, Republican senators say - AP News",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQV084Tm9mTUhuZ1Z4bm9OOGFwM1BQeF9zcVltcTRVcHVDanNpRWtOZW1KNWlRRUNzWnp6djFDaUI4YTBxT1ptMy1HR2ZPRnNkUndVd0xwc0lIdXJCNmRtZUZpSFBpMEtkRU1YYm5NblA2aW1FMWt1dXJNNk9xWE4zWlBqM3RDSUUwV096bVhzX1J2WFFYdnpDZDdn?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T02:37:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQV084Tm9mTUhuZ1Z4bm9OOGFwM1BQeF9zcVltcTRVcHVDanNpRWtOZW1KNWlRRUNzWnp6djFDaUI4YTBxT1ptMy1HR2ZPRnNkUndVd0xwc0lIdXJCNmRtZUZpSFBpMEtkRU1YYm5NblA2aW1FMWt1dXJNNk9xWE4zWlBqM3RDSUUwV096bVhzX1J2WFFYdnpDZDdn?oc=5\" target=\"_blank\">Trump agrees to new bipartisan ethics provision in massive crypto bill, Republican senators say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>"
+    },
+    {
+      "title": "Crypto’s political clout meets resistance on the left - Politico",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOajM1WFowaHdPbEYzRlFiOHdNOXVDbkJDbHl0c1RmX0J2OFpRY1YwbnQ2aDMtYkZWSG5XSTdCYTBEd0hETFdGUnJaRG9JaVI1eUxHTTA0RUtQbml1YlhfYUlxbGhDMlk5UWFvd0lHeHRIbmdobHFYTlVZcmpHN3FFamhmeUI?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T08:45:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOajM1WFowaHdPbEYzRlFiOHdNOXVDbkJDbHl0c1RmX0J2OFpRY1YwbnQ2aDMtYkZWSG5XSTdCYTBEd0hETFdGUnJaRG9JaVI1eUxHTTA0RUtQbml1YlhfYUlxbGhDMlk5UWFvd0lHeHRIbmdobHFYTlVZcmpHN3FFamhmeUI?oc=5\" target=\"_blank\">Crypto’s political clout meets resistance on the left</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>"
+    },
+    {
+      "title": "Bitcoin's late summer rally set to face off against the Fed, Congress - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZEV1dXlZWDh3VTJpMHVvclNtOWY1WVZXSGFIM3JZa1h0bDYyNVUzd0lvcUFpdVJtVjFZemVZSGotMnJmR3Q5aDN5MzVaenluWUhseElqVEltb2RBQU8zTnktd3hOaWZnQ20yTG5OY3ltMjlXZU9ta0tvTkpnTlhncW1DcEg0bl9BNWdnVEdJOFc5THpPZmZYNjFNZEhPdEVvU1ZtWW5vWUlVMFp5VDd2RXpBcw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T10:23:45.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQZEV1dXlZWDh3VTJpMHVvclNtOWY1WVZXSGFIM3JZa1h0bDYyNVUzd0lvcUFpdVJtVjFZemVZSGotMnJmR3Q5aDN5MzVaenluWUhseElqVEltb2RBQU8zTnktd3hOaWZnQ20yTG5OY3ltMjlXZU9ta0tvTkpnTlhncW1DcEg0bl9BNWdnVEdJOFc5THpPZmZYNjFNZEhPdEVvU1ZtWW5vWUlVMFp5VDd2RXpBcw?oc=5\" target=\"_blank\">Bitcoin's late summer rally set to face off against the Fed, Congress</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>"
+    },
+    {
+      "title": "Ether Futures - CME Group",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jaW1GTW9ROWRLanNYdDlnU1l6S1FpLWpXUnNZamtYdms0YnlNUTAxOElrTXRkeGNYR04zeVppcTRQbmZfclFVWUc2MUpUUi1aN0JrQlB3cTJXZEpvNjhxSzJERGpFc0Q5RnRnU1hB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-11T17:01:48.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5jaW1GTW9ROWRLanNYdDlnU1l6S1FpLWpXUnNZamtYdms0YnlNUTAxOElrTXRkeGNYR04zeVppcTRQbmZfclFVWUc2MUpUUi1aN0JrQlB3cTJXZEpvNjhxSzJERGpFc0Q5RnRnU1hB?oc=5\" target=\"_blank\">Ether Futures</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CME Group</font>"
+    },
+    {
+      "title": "Trump’s Crypto Push Opens Perpetuals Race to Singapore Exchange - Bloomberg.com",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUTZ4RWozVjdlMS1UZjlmeVI3WXAxQzFTMTVJUmg2am5QV3ZXN3pvbldOSzdoMGt4Q1RnZFRKN1FsWHZLTE40OU52V0tGWGRCcjA2SnZ4ZDlPZndCUEM5NFdzMEdZTEhoZW5sX21RSUZkZmVRbEFEZ3lPOGZ3SW9LZkxMaFl1N1R2bFRvcWFfajh6NE1qclp5SlIyODBWYXV1WTZOTXdPd19VUzNTZzVlR1h0Z20?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T09:46:41.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPUTZ4RWozVjdlMS1UZjlmeVI3WXAxQzFTMTVJUmg2am5QV3ZXN3pvbldOSzdoMGt4Q1RnZFRKN1FsWHZLTE40OU52V0tGWGRCcjA2SnZ4ZDlPZndCUEM5NFdzMEdZTEhoZW5sX21RSUZkZmVRbEFEZ3lPOGZ3SW9LZkxMaFl1N1R2bFRvcWFfajh6NE1qclp5SlIyODBWYXV1WTZOTXdPd19VUzNTZzVlR1h0Z20?oc=5\" target=\"_blank\">Trump’s Crypto Push Opens Perpetuals Race to Singapore Exchange</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>"
+    },
+    {
+      "title": "Did a Crypto Bro Pay $4.5 Million to Marry a Movie Star? A Scandal Grips China - WSJ",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBZVGJtQVRiUXlmb3d3MXozeWlIMkthTjVXbmlZWURUdGRQV2NpR0FqM2NOdDA5eGVXMGJyeEVfd2NQdTBiRTZBYlQ3RXM1a1hlcmNKelJaR1Z2M1FCVEoyNVFIOXFmMVlRQjB2Z2ExX1N2WERXQ1VpSzJ5Zw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T03:00:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBZVGJtQVRiUXlmb3d3MXozeWlIMkthTjVXbmlZWURUdGRQV2NpR0FqM2NOdDA5eGVXMGJyeEVfd2NQdTBiRTZBYlQ3RXM1a1hlcmNKelJaR1Z2M1FCVEoyNVFIOXFmMVlRQjB2Z2ExX1N2WERXQ1VpSzJ5Zw?oc=5\" target=\"_blank\">Did a Crypto Bro Pay $4.5 Million to Marry a Movie Star? A Scandal Grips China</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>"
+    },
+    {
+      "title": "BTC price climbs while tech stocks, gold and silver decline: Crypto Markets Today - CoinDesk",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV25uSzBsbWJNVlo2bzlkQXdreHNpT0xGWXZlZFVUZVhYa1lEZE9FbHZXcFFhVndaVFFEc20wT0VZZmR5ajFVaDVVNlh0TmptSDBLMUdqZ1MzT2MtMEtId3oteUtZYmtma29hZW5BQkFsUkhPa2I2c2RMWEFRZGc1ZlBrc3Y4ZGZCcFFGSlFPbUdtcnVxa2lBd3l0ZUsycFI4ZVBpdmQ5VTc?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T10:09:41.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV25uSzBsbWJNVlo2bzlkQXdreHNpT0xGWXZlZFVUZVhYa1lEZE9FbHZXcFFhVndaVFFEc20wT0VZZmR5ajFVaDVVNlh0TmptSDBLMUdqZ1MzT2MtMEtId3oteUtZYmtma29hZW5BQkFsUkhPa2I2c2RMWEFRZGc1ZlBrc3Y4ZGZCcFFGSlFPbUdtcnVxa2lBd3l0ZUsycFI4ZVBpdmQ5VTc?oc=5\" target=\"_blank\">BTC price climbs while tech stocks, gold and silver decline: Crypto Markets Today</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CoinDesk</font>"
+    },
+    {
+      "title": "SEC Crypto Proposal Wouldn’t Clear Up Howey Ruling’s Uncertainty - Bloomberg Law News",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNbnRuTDBQNWQ5Tm9ISTBGRU9iX3p5WHdxRzNlMGhRUk51TGdpcExxR3lJUTJVajFoRzZSRHdXSmkzWG9SNWF6cFRLcG4wbWNwME54UUNEazhQcERGdmwzMDZaTjhDbldhSW02czFuTy1lMTRjdVpTTHBzNmNsWVpmTDlvWHItQXhHU25oRmQtN1NEMndKaUpnTm1fTHdGdm5pM1ZXVk5ZV1ZpcmoyTXJTU3d1aWYxMy1RWDZFMGZKdDJkZHZSUDlpU1JDdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T08:30:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxNbnRuTDBQNWQ5Tm9ISTBGRU9iX3p5WHdxRzNlMGhRUk51TGdpcExxR3lJUTJVajFoRzZSRHdXSmkzWG9SNWF6cFRLcG4wbWNwME54UUNEazhQcERGdmwzMDZaTjhDbldhSW02czFuTy1lMTRjdVpTTHBzNmNsWVpmTDlvWHItQXhHU25oRmQtN1NEMndKaUpnTm1fTHdGdm5pM1ZXVk5ZV1ZpcmoyTXJTU3d1aWYxMy1RWDZFMGZKdDJkZHZSUDlpU1JDdw?oc=5\" target=\"_blank\">SEC Crypto Proposal Wouldn’t Clear Up Howey Ruling’s Uncertainty</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg Law News</font>"
+    },
+    {
+      "title": "Crypto Wealth Holds Up In 2026 – Study - Wealth Briefing",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTFZCUEw4YktiYUxVZzhINTdUbzNDdC1DNVJFa3hVZld3UEJEQzZ6czlUektOb2dNS3pXSzIwUG05UV9aOFNCeFVzcFhycEdUMm1DeTVwSXdUc2JQMUl4Z19xTndiNU1XM0padXRNaVNpa002VVBINjUyZUlES0w5YUxWbEZJNENOaHpaQnNWaw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T07:43:44.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQTFZCUEw4YktiYUxVZzhINTdUbzNDdC1DNVJFa3hVZld3UEJEQzZ6czlUektOb2dNS3pXSzIwUG05UV9aOFNCeFVzcFhycEdUMm1DeTVwSXdUc2JQMUl4Z19xTndiNU1XM0padXRNaVNpa002VVBINjUyZUlES0w5YUxWbEZJNENOaHpaQnNWaw?oc=5\" target=\"_blank\">Crypto Wealth Holds Up In 2026 – Study</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Wealth Briefing</font>"
+    },
+    {
+      "title": "Trump Pushes Crypto Bill, Deepening Industry’s Spat With Banks - news.bloombergtax.com",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdEUyMzRQbWxPMExtZmRvTklkUjRNS1RMQzJDZG1lcUhmSFFmUjdqeHktTXlzdEpZV3JqUmVwakhYQnhsMFZkWkpDLUNDTFcwcFFkbERwdWloT2lUcXBYVnFibDREaEZtdGVoU0lFNDRmYU9IVGh1MFk3bFpCSkZPMVJFajBrYXJWZlR0SXFqS0s1U2FHX3lEak1nRmc1ck1La2tYaVpQVWY3cW9obEFrbw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T10:30:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNdEUyMzRQbWxPMExtZmRvTklkUjRNS1RMQzJDZG1lcUhmSFFmUjdqeHktTXlzdEpZV3JqUmVwakhYQnhsMFZkWkpDLUNDTFcwcFFkbERwdWloT2lUcXBYVnFibDREaEZtdGVoU0lFNDRmYU9IVGh1MFk3bFpCSkZPMVJFajBrYXJWZlR0SXFqS0s1U2FHX3lEak1nRmc1ck1La2tYaVpQVWY3cW9obEFrbw?oc=5\" target=\"_blank\">Trump Pushes Crypto Bill, Deepening Industry’s Spat With Banks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.bloombergtax.com</font>"
+    },
+    {
+      "title": "Tom Lee Explains Ethereum's Killer Application as ETH Bucks Market Downturn - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdU56NEw4ZGFwZzA4bjFlS2J1UXdVaVg4c3BhRWhSal9MaklUdVJSWi0tNjdqcWNBZmtxSHdrWE1oWW9OWjBLaGRJWG5wOVczX3MtRHd4QmNEcGFvUmF1WEI2Z2NJUkFGXzJqR0hCcVFkVFNTNlV1bGQwNEFjZF8tam9aVzdHOXJUd2JWR2Y3aWFPQ0JtYUt1M20tUDRaN1U?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T04:43:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQdU56NEw4ZGFwZzA4bjFlS2J1UXdVaVg4c3BhRWhSal9MaklUdVJSWi0tNjdqcWNBZmtxSHdrWE1oWW9OWjBLaGRJWG5wOVczX3MtRHd4QmNEcGFvUmF1WEI2Z2NJUkFGXzJqR0hCcVFkVFNTNlV1bGQwNEFjZF8tam9aVzdHOXJUd2JWR2Y3aWFPQ0JtYUt1M20tUDRaN1U?oc=5\" target=\"_blank\">Tom Lee Explains Ethereum's Killer Application as ETH Bucks Market Downturn</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>"
+    },
+    {
+      "title": "Republicans’ time crunch: Data centers, sports, crypto - Semafor",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTjBKbm95RUpwekdKT3RWX3FIVVhQc2xWR1lNV2NzM1VGelRwOUdBMlQ2bVdNd1JYUmtuTktuRTBxb0pvc1MwU1BjRHA4UWMxdTZPMlQtZEJsaGROX0x2MWV2X3FtMzEtdUo0blptU1BwckQ5Y0pLbG45RWszNnJ2Uy1uc1BsaXZJY0h2TTU5M1FqLWVpS1VVVQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T08:54:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOTjBKbm95RUpwekdKT3RWX3FIVVhQc2xWR1lNV2NzM1VGelRwOUdBMlQ2bVdNd1JYUmtuTktuRTBxb0pvc1MwU1BjRHA4UWMxdTZPMlQtZEJsaGROX0x2MWV2X3FtMzEtdUo0blptU1BwckQ5Y0pLbG45RWszNnJ2Uy1uc1BsaXZJY0h2TTU5M1FqLWVpS1VVVQ?oc=5\" target=\"_blank\">Republicans’ time crunch: Data centers, sports, crypto</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Semafor</font>"
+    },
+    {
+      "title": "Tribes Press for Prediction-Market Curbs in Senate Crypto Bill - Bloomberg Government News",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNkllNUtUSS1FRmVMdFJ0cDlDWVR1bUhQZmlvMXoyaVpzQWxaWjBZTzFKTnpjeEhEV1VSNVBIUjNVdGJobWc5cE9nM0Zpb2ktekpDR2llNWp1MGwtNVNwYzFzMkE3aTIxZ1hUZzJNVF9xbEpQMHZJTlhmaTh5SlJiZmVmcnRkVGdENHZvSmNkTWJ0bkxQcC1DQjVhSW44ejMwd1Q2RHBkMkRBMVpWMGNj?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T09:00:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQNkllNUtUSS1FRmVMdFJ0cDlDWVR1bUhQZmlvMXoyaVpzQWxaWjBZTzFKTnpjeEhEV1VSNVBIUjNVdGJobWc5cE9nM0Zpb2ktekpDR2llNWp1MGwtNVNwYzFzMkE3aTIxZ1hUZzJNVF9xbEpQMHZJTlhmaTh5SlJiZmVmcnRkVGdENHZvSmNkTWJ0bkxQcC1DQjVhSW44ejMwd1Q2RHBkMkRBMVpWMGNj?oc=5\" target=\"_blank\">Tribes Press for Prediction-Market Curbs in Senate Crypto Bill</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg Government News</font>"
+    },
+    {
+      "title": "Bitcoin Futures - CME Group",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Db1M3SWg3WG9OOU9xZ1QwTjlKUDZvSVpVektnRnFTSXFvdXBmQm5lS2h5ODFwdWl2eFlQT0hRZWR1ZUxfdzFHVXhBZUNKRl9Semw3NG55S0lrUXFXNFR4eVZwdHFtLVZxU1NZeS1Va0RZNU0?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-12T00:00:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE9Db1M3SWg3WG9OOU9xZ1QwTjlKUDZvSVpVektnRnFTSXFvdXBmQm5lS2h5ODFwdWl2eFlQT0hRZWR1ZUxfdzFHVXhBZUNKRl9Semw3NG55S0lrUXFXNFR4eVZwdHFtLVZxU1NZeS1Va0RZNU0?oc=5\" target=\"_blank\">Bitcoin Futures</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CME Group</font>"
+    },
+    {
+      "title": "Bitcoin rises as AI stocks decline, Brent crude climbs to $107 - CoinDesk",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNUw3VDlOeHJPaUR4dmVtVU1uTWtnT2FTeURwRURwTTlUTE0xNUJoZjVuQmJjUTRtZ1otVnlfaC1WaFJZRGIzamg0RHptRnM1Um5FNW5oRkFXenlIb0YyRkN1eDNqendZeGhwbHpfeGJ4YnRDSm5yY244U2RCWUp0YjhpV2pXd3o4VkFMZDZ6QTNfbkRJVUpEUWttdFZaUlFHVUZxd0xjZVRQZjZZ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T08:07:16.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPNUw3VDlOeHJPaUR4dmVtVU1uTWtnT2FTeURwRURwTTlUTE0xNUJoZjVuQmJjUTRtZ1otVnlfaC1WaFJZRGIzamg0RHptRnM1Um5FNW5oRkFXenlIb0YyRkN1eDNqendZeGhwbHpfeGJ4YnRDSm5yY244U2RCWUp0YjhpV2pXd3o4VkFMZDZ6QTNfbkRJVUpEUWttdFZaUlFHVUZxd0xjZVRQZjZZ?oc=5\" target=\"_blank\">Bitcoin rises as AI stocks decline, Brent crude climbs to $107</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CoinDesk</font>"
+    },
+    {
+      "title": "Hidden crypto farm in Mexican mountains puts spotlight on cartel funding - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNU3JWY0h1VnVaSWl6MW5nYnlmcktHNS1uTVM0WHNnYnVPREdhalFjSnRNWUpsV3pXdGVCWjltLUttTW5qbXZLZjZQaDZwVENpY3JkbjhRSEZCRXZjOHpURjdsVmZLbEZoaHVLYXdXemE1QlpCWG5kc0lDWWVNem84ZjRWOVM4ZEZaeHRfMFFCeDVlWjhSN185U0ZaR2N6cVBxb0tiT0swU0xBRDczU2x2cWR2R0poQjRi?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-12T11:06:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNU3JWY0h1VnVaSWl6MW5nYnlmcktHNS1uTVM0WHNnYnVPREdhalFjSnRNWUpsV3pXdGVCWjltLUttTW5qbXZLZjZQaDZwVENpY3JkbjhRSEZCRXZjOHpURjdsVmZLbEZoaHVLYXdXemE1QlpCWG5kc0lDWWVNem84ZjRWOVM4ZEZaeHRfMFFCeDVlWjhSN185U0ZaR2N6cVBxb0tiT0swU0xBRDczU2x2cWR2R0poQjRi?oc=5\" target=\"_blank\">Hidden crypto farm in Mexican mountains puts spotlight on cartel funding</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>"
+    },
+    {
+      "title": "Robinhood's New Blockchain Is Now Making More Money Than Ethereum. Does That Make Robinhood Stock a Buy? - Currently.com",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQcVNYT2tKWXBZR2pkR0oyNjJWYkJWVUV0c0FsR2ZPd2FPSUltNzVaQ3M5ZHhlYnJ0WGxDdERhWWFrREtobUF3VmFtbThwZW1DWG9vM01ZQjUxbEswZW9DVHNWaEdEOUpzTlQwM0wzcTU1X0cyMGRVMkFUZHZVRFB0TXpOZVQzVFRXa3otNTN6Y0dDZw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T09:56:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQcVNYT2tKWXBZR2pkR0oyNjJWYkJWVUV0c0FsR2ZPd2FPSUltNzVaQ3M5ZHhlYnJ0WGxDdERhWWFrREtobUF3VmFtbThwZW1DWG9vM01ZQjUxbEswZW9DVHNWaEdEOUpzTlQwM0wzcTU1X0cyMGRVMkFUZHZVRFB0TXpOZVQzVFRXa3otNTN6Y0dDZw?oc=5\" target=\"_blank\">Robinhood's New Blockchain Is Now Making More Money Than Ethereum. Does That Make Robinhood Stock a Buy?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Currently.com</font>"
+    },
+    {
+      "title": "Trump Pushes Crypto Bill, Deepening Industry’s Spat With Banks - Bloomberg Law News",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQWTlzbkNBcmV4bjZDdmRTMy1MblFNY0Q1V0RMbGpqWTBQcXhUenJrV1UtenczT3Y0d2Q0TkVORHcxZjQ2aEV5bTFybUNRVEJhemhNLWhERUJHbGZxR0hDWW9PT0VjNmoxWkNtdUVabkNRSk9McDl1NnY3M29ZanphRVZIc2RETEtQc05wZk9GUkM0U3ZwUUpfcGhXTzh6dw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T10:30:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQWTlzbkNBcmV4bjZDdmRTMy1MblFNY0Q1V0RMbGpqWTBQcXhUenJrV1UtenczT3Y0d2Q0TkVORHcxZjQ2aEV5bTFybUNRVEJhemhNLWhERUJHbGZxR0hDWW9PT0VjNmoxWkNtdUVabkNRSk9McDl1NnY3M29ZanphRVZIc2RETEtQc05wZk9GUkM0U3ZwUUpfcGhXTzh6dw?oc=5\" target=\"_blank\">Trump Pushes Crypto Bill, Deepening Industry’s Spat With Banks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg Law News</font>"
+    },
+    {
+      "title": "Bitcoin is back, but potential Clarity Act fail and Dem midterms win could come for crypto prices - CNBC",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZWdQS3QwTUFlRXBkY3FIWk1oSjBlcHlXMW8xOUhEM2Y5VlFjQ3JVVzF6c0txTjBSMkswSV94NlI4bTZYRy1NQk1Jdi15YkdpcVZyVFRTR0V3S3dpVEl6OXlsRDR2TWw4SWRQU3BHR0J3SW9CbzB0b2RPa2RBdndZNGpUUXjSAYoBQVVfeXFMUGl5WUJ0dVBFbHZXS0lQZU9uV2FWQ0NiSnBPMUluNnZPaUU2bFJ5aFJIemQ1amRmYlVKRUpCb2RVekFmS2YyYzhVbFQ3NnpFR01udGpxM0tvTTc5eTRmUS1adlh1NFM1SE9Qd0JmTVh6akEyODVzNHRoVGU0THY4VXA3NmdDY2lrM3ln?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-11T16:46:07.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPZWdQS3QwTUFlRXBkY3FIWk1oSjBlcHlXMW8xOUhEM2Y5VlFjQ3JVVzF6c0txTjBSMkswSV94NlI4bTZYRy1NQk1Jdi15YkdpcVZyVFRTR0V3S3dpVEl6OXlsRDR2TWw4SWRQU3BHR0J3SW9CbzB0b2RPa2RBdndZNGpUUXjSAYoBQVVfeXFMUGl5WUJ0dVBFbHZXS0lQZU9uV2FWQ0NiSnBPMUluNnZPaUU2bFJ5aFJIemQ1amRmYlVKRUpCb2RVekFmS2YyYzhVbFQ3NnpFR01udGpxM0tvTTc5eTRmUS1adlh1NFM1SE9Qd0JmTVh6akEyODVzNHRoVGU0THY4VXA3NmdDY2lrM3ln?oc=5\" target=\"_blank\">Bitcoin is back, but potential Clarity Act fail and Dem midterms win could come for crypto prices</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>"
     },
     {
       "title": "Insight Partners&#8217; Deven Parekh on why the firm is diversifying while everyone else bets the farm on OpenAI and Anthropic",
@@ -1172,15 +1757,6 @@
       "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. What OpenAI’s latest controversy tells us about the future of math OpenAI says its agents have solved one of the most important open problems in mathematics. Under normal circumstances, that would&#8230;"
     },
     {
-      "title": "What happens after a town de-Flocks",
-      "link": "https://www.theverge.com/policy/994414/cities-ditching-flock-cameras-controversy",
-      "source": "The Verge",
-      "sourceUrl": "https://www.theverge.com/rss/index.xml",
-      "publishedAt": "2026-09-14T11:00:00.000Z",
-      "category": "Digital Life",
-      "description": "From Florida to Washington state, local governments across the country are canceling their contracts with Flock, the company behind the controversial AI-enabled license plate readers, in response to public outcry. But ending the contracts doesn't necessarily mean the cameras will come down immediately - or that the information they've gathered will be deleted anytime soon. [&#8230;]"
-    },
-    {
       "title": "Trump and Mike Johnson think the AI industry is overreacting",
       "link": "https://www.theverge.com/ai-artificial-intelligence/994441/trump-mike-johnson-ai-industry-overreacting",
       "source": "The Verge",
@@ -1260,6 +1836,15 @@
       "publishedAt": "2026-09-12T21:16:28.000Z",
       "category": "Digital Life",
       "description": "OpenAI CEO Sam Altman confirmed that there would be no OpenAI IPO in 2026 during an interview with Fortune. Over the course of 45 minutes, Altman discussed a variety of subjects including the Hugging Face hacking incident, recursive self-improvement, and the possibility of building an AI that was beyond human control. On the latter, he [&#8230;]"
+    },
+    {
+      "title": "StarCraft returns in 2030 as an open-world shooter",
+      "link": "https://www.theverge.com/games/994371/starcraft-returns-in-2030-as-an-open-world-shooter",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/rss/index.xml",
+      "publishedAt": "2026-09-12T20:08:09.000Z",
+      "category": "Digital Life",
+      "description": "Blizzard originally tried to bring the StarCraft universe to the world of 3D shooters way back in 2002 with StarCraft: Ghost. It sat in development hell for years until Blizzard president Mike Morhaime confirmed that it had been canceled in 2014. Now Blizzard is giving it another go with the simply titled StarCraft. Dan Hay, [&#8230;]"
     }
   ]
 }

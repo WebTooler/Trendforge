@@ -2,23 +2,23 @@
   "version": 1,
   "providers": {
     "Groq": {
-      "failures": 1,
-      "quotaBlockedUntil": 0,
-      "lastStatus": 400,
-      "lastError": "400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}}\n"
+      "failures": 2,
+      "quotaBlockedUntil": 1789406513063,
+      "lastStatus": 429,
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5794, Requested 2698. Please try again in 3.69s. Need more tokens? Upgrade to Dev Tier today at https://c"
     },
     "Gemini": {
-      "failures": 0,
-      "quotaBlockedUntil": 0,
-      "lastStatus": null,
-      "lastError": null
+      "failures": 2,
+      "quotaBlockedUntil": 1789406513063,
+      "lastStatus": 429,
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quo"
     },
     "OpenAI": {
-      "failures": 0,
-      "quotaBlockedUntil": 0,
-      "lastStatus": null,
-      "lastError": null
+      "failures": 1,
+      "quotaBlockedUntil": 1789406429712,
+      "lastStatus": 429,
+      "lastError": "429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}"
     }
   },
-  "updatedAt": "2026-09-14T11:05:26.748Z"
+  "updatedAt": "2026-09-14T11:21:53.634Z"
 }
