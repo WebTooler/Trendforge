@@ -4,6 +4,7 @@ import { spawnSync } from 'node:child_process';
 const scoredPath = 'data/scored-trends.json';
 const articlesDir = 'content/articles';
 const decisionPath = 'data/decision-queue.json';
+const nativeMarker = 'data/native-writer-published.json';
 
 if (!fs.existsSync(scoredPath)) {
   console.log(`No ${scoredPath}; nothing to publish.`);
@@ -81,6 +82,26 @@ for (const candidate of queue) {
 
 // Restore the research output before any fallback work so later pipeline steps see the real research data.
 fs.writeFileSync(scoredPath, JSON.stringify(original, null, 2));
+
+// If provider-backed generation exhausted the available providers (including quota cooldowns),
+// give the bounded Native Writer one final chance using the same verified evidence and downstream
+// quality gates. This closes the provider-exhaustion gap without forcing publication.
+if (!published && !fs.existsSync(nativeMarker)) {
+  console.log('Adaptive generation exhausted without publication; checking for post-exhaustion Native Writer fallback.');
+  const nativeRun = spawnSync('npx', ['tsx', 'scripts/run-native-writer-fallback.mjs'], {
+    stdio: 'inherit',
+    env: process.env,
+  });
+  if (nativeRun.error) {
+    console.log(`Post-exhaustion Native Writer failed to execute: ${nativeRun.error.message}`);
+  }
+  if (fs.existsSync(nativeMarker)) {
+    console.log('Post-exhaustion Native Writer published a gated article; skipping evergreen fallback.');
+    published = true;
+  } else {
+    console.log('Post-exhaustion Native Writer produced no publishable article; continuing safely.');
+  }
+}
 
 // Last-resort evergreen/current fallback. This is deliberately source-backed and deterministic so
 // publishing does not depend on an AI provider being available. It is only used when every researched
