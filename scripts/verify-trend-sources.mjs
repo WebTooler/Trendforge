@@ -52,17 +52,24 @@ async function discoverRelatedSources(trend, seedSources) {
     const title = clean((item.match(/<title>([\s\S]*?)<\/title>/i) || [,''])[1]);
     const description = clean((item.match(/<description>([\s\S]*?)<\/description>/i) || [,''])[1]);
     const link = normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\/link>/i) || [,''])[1]));
+    const sourceMatch = item.match(/<source\b[^>]*\burl=["']([^"']+)["'][^>]*>/i);
+    const publisherUrl = normalizeUrl(clean(sourceMatch?.[1] || ''));
     const overlap = topicOverlap(`${trend.title} ${trend.description || ''}`, `${title} ${description}`);
-    return { title, description, link, overlap };
+    return { title, description, link, publisherUrl, overlap };
   })
-    .filter(item => item.link && item.title && item.overlap >= MIN_DISCOVERY_OVERLAP)
+    .filter(item => item.title && item.overlap >= MIN_DISCOVERY_OVERLAP && (item.publisherUrl || item.link))
     .sort((a, b) => b.overlap - a.overlap)
     .slice(0, DISCOVERY_LIMIT);
 
   const discovered = [];
   for (const item of relevantItems) {
-    const resolved = await fetchText(item.link);
-    const finalUrl = normalizeUrl(resolved?.finalUrl || item.link);
+    // Prefer Google's RSS <source url> because it is already the publisher
+    // URL. Fall back to resolving the Google News article pointer when needed.
+    const publisher = item.publisherUrl && !MIRROR_DOMAINS.has(domainOf(item.publisherUrl))
+      ? item.publisherUrl
+      : item.link;
+    const resolved = await fetchText(publisher);
+    const finalUrl = normalizeUrl(resolved?.finalUrl || publisher);
     const domain = domainOf(finalUrl);
     if (!finalUrl || !domain || MIRROR_DOMAINS.has(domain) || seeds.has(domain)) continue;
     discovered.push({ title: item.title, url: finalUrl, sourceName: domain, discovered: true, relevanceOverlap: item.overlap });
@@ -109,8 +116,8 @@ async function verifyCandidate(trend) {
     const finalDomain = domainOf(check.finalUrl || source.url);
     checks.push({
       title: source.title || '', url: source.url, domain: finalDomain || domain,
-      credibleDomain: credibleDomains.has(finalDomain || domain),
-      discovered: Boolean(source.discovered), relevanceOverlap: source.relevanceOverlap || 0, ...check,
+      credibleDomain: credibleDomains.has(finalDomain || domain), discovered: Boolean(source.discovered),
+      relevanceOverlap: source.relevanceOverlap || 0, ...check,
     });
   }
 
