@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-const OUTPUT_VERSION = '2.1';
+const OUTPUT_VERSION = '2.2';
 const MIN_EVIDENCE = 2;
 const FETCH_TIMEOUT_MS = 7000;
 const STOP = new Set('a an and are as at be been but by can could for from has have if in into is it its may more most no not of on or our said should so than that the their there these they this to was were what when where which who will with would you your technology tech digital latest news update updates guide how today artificial intelligence company companies industry development developments according reported'.split(' '));
@@ -15,6 +15,7 @@ const clean = (value = '') => String(value)
   .replace(/&(?:amp;)?#8230;|&#x2026;|&hellip;/gi, '…')
   .replace(/&nbsp;|&#160;/gi, ' ')
   .replace(/&amp;/gi, '&').replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'")
+  .replace(/\\u003c/gi, '<').replace(/\\u003e/gi, '>').replace(/\\u0026/gi, '&')
   .replace(/\[[^\]]*…[^\]]*\]/g, ' ')
   .replace(/\s+/g, ' ').trim();
 
@@ -40,39 +41,115 @@ function absoluteUrl(href, baseUrl) {
   try { return new URL(href, baseUrl).toString(); } catch { return ''; }
 }
 
-function extractLinkedArticleUrls(html, baseUrl, topic) {
-  const links = [];
-  for (const match of html.matchAll(/<a\b([^>]*?)href=["']([^"']+)["']([^>]*)>([\s\S]*?)<\/a>/gi)) {
-    const attrs = `${match[1]} ${match[3]}`;
-    const text = clean(match[4]);
-    const href = absoluteUrl(match[2], baseUrl);
-    if (!href || !/^https?:\/\//i.test(href) || !text || BOILERPLATE.test(text)) continue;
-    const score = overlap(topic, text);
-    if (score >= 3) links.push({ url: href, text, score });
-  }
-  return links.sort((a, b) => b.score - a.score).slice(0, 8);
+function metaValue(html, attr, value) {
+  const re = new RegExp(`<meta[^>]+${attr}=["']${value}["'][^>]+content=["']([\\s\\S]*?)["'][^>]*>`, 'i');
+  const reverse = new RegExp(`<meta[^>]+content=["']([\\s\\S]*?)["'][^>]+${attr}=["']${value}["'][^>]*>`, 'i');
+  return clean((html.match(re) || html.match(reverse) || [,''])[1]);
 }
 
-async function fetchSource(url, topic = '') {
+function extractJsonLd(html) {
+  const records = [];
+  for (const match of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\\s\\S]*?)<\/script>/gi)) {
+    let raw = match[1].trim().replace(/^<!--|-->$/g, '');
+    try {
+      const parsed = JSON.parse(raw);
+      const visit = (node) => {
+        if (!node || typeof node !== 'object') return;
+        if (Array.isArray(node)) { node.forEach(visit); return; }
+        records.push(node);
+        for (const value of Object.values(node)) visit(value);
+      };
+      visit(parsed);
+    } catch {
+      const bodyMatches = [...raw.matchAll(/"articleBody"\s*:\s*"((?:\\.|[^"\\])*)"/gi)];
+      for (const m of bodyMatches) {
+        try { records.push({ articleBody: JSON.parse(`"${m[1]}"`) }); } catch { records.push({ articleBody: m[1] }); }
+      }
+    }
+  }
+  return records;
+}
+
+function jsonLdArticleBodies(records) {
+  return records.flatMap(r => {
+    if (typeof r?.articleBody === 'string') return [r.articleBody];
+    return [];
+  });
+}
+
+function jsonLdArticleMeta(records) {
+  const out = [];
+  for (const r of records) {
+    if (!r || typeof r !== 'object') continue;
+    const type = Array.isArray(r['@type']) ? r['@type'].join(' ') : String(r['@type'] || '');
+    if (/article|newsarticle|report/i.test(type) || r.articleBody) {
+      out.push({
+        headline: clean(r.headline || r.name || ''),
+        description: clean(r.description || ''),
+        url: clean(typeof r.url === 'string' ? r.url : r.mainEntityOfPage?.['@id'] || r.mainEntityOfPage?.url || ''),
+        type,
+      });
+    }
+  }
+  return out;
+}
+
+function extractLinkedArticleUrls(html, baseUrl, topic, preferredTitle = '') {
+  const links = [];
+  const add = (href, text = '') => {
+    const url = absoluteUrl(href, baseUrl);
+    const label = clean(text);
+    if (!url || !/^https?:\/\//i.test(url) || !label || BOILERPLATE.test(label)) return;
+    const score = Math.max(overlap(topic, label), overlap(preferredTitle, label));
+    if (score >= 3) links.push({ url, text: label, score });
+  };
+
+  for (const match of html.matchAll(/<a\b([^>]*?)href=["']([^"']+)["']([^>]*)>([\s\S]*?)<\/a>/gi)) {
+    add(match[2], match[4]);
+  }
+
+  for (const record of extractJsonLd(html)) {
+    if (!record || typeof record !== 'object') continue;
+    if (typeof record.url === 'string') add(record.url, record.name || record.headline || '');
+    if (Array.isArray(record.itemListElement)) {
+      for (const item of record.itemListElement) {
+        if (typeof item === 'string') add(item, '');
+        else add(item?.url || item?.item?.url || '', item?.name || item?.item?.name || item?.headline || '');
+      }
+    }
+  }
+
+  const seen = new Set();
+  return links.filter(x => {
+    const key = x.url.split('#')[0];
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  }).sort((a, b) => b.score - a.score).slice(0, 10);
+}
+
+async function fetchSource(url, topic = '', preferredTitle = '') {
   if (!/^https?:\/\//i.test(url || '')) return null;
   try {
-    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-native-writer/2.1' } });
+    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-native-writer/2.2', accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,text/xml;q=0.8,*/*;q=0.5' } });
     if (!r.ok) return null;
     const html = await r.text();
     const finalUrl = r.url || url;
-    const title = clean((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,''])[1]);
-    const description = clean((html.match(/<meta[^>]+(?:name|property)=["'](?:description|og:description)["'][^>]+content=["']([\s\S]*?)["']/i) || [,''])[1]);
+    const records = extractJsonLd(html);
+    const articleMeta = jsonLdArticleMeta(records);
+    const jsonHeadline = articleMeta.find(x => x.headline)?.headline || '';
+    const title = clean((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,''])[1]) || jsonHeadline;
+    const description = metaValue(html, 'name', 'description') || metaValue(html, 'property', 'og:description') || articleMeta.find(x => x.description)?.description || '';
+    const canonical = metaValue(html, 'property', 'og:url') || clean((html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["'][^>]*>/i) || [,''])[1]);
     const articleBody = clean((html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i) || [,''])[1]);
-    const jsonBodies = [...html.matchAll(/"articleBody"\s*:\s*"((?:\\.|[^"\\])*)"/gi)].map(m => {
-      try { return JSON.parse(`"${m[1]}"`); } catch { return m[1]; }
-    });
+    const jsonBodies = jsonLdArticleBodies(records);
     const paragraphs = unique([
       ...[...html.matchAll(/<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/gi)].map(m => clean(m[1])),
       ...[articleBody],
       ...jsonBodies,
     ]).filter(p => p.length >= 50 && p.length <= 1800 && !BOILERPLATE.test(p));
     const sentences = unique(paragraphs.flatMap(sentenceSplit)).filter(s => !BOILERPLATE.test(s));
-    return { url, finalUrl, domain: domain(finalUrl), title, description, paragraphs, sentences, linkedArticles: extractLinkedArticleUrls(html, finalUrl, topic) };
+    const links = extractLinkedArticleUrls(html, finalUrl, topic, preferredTitle);
+    return { url, finalUrl, canonical, domain: domain(finalUrl), title, description, paragraphs, sentences, linkedArticles: links, articleBodyLength: jsonBodies.join(' ').length + articleBody.length };
   } catch { return null; }
 }
 
@@ -96,23 +173,29 @@ async function hydrateSources(candidate, sources) {
   for (const source of sources) {
     if (seen.has(source.url)) continue;
     seen.add(source.url);
-    const fetched = await fetchSource(source.url, topic);
+    const fetched = await fetchSource(source.url, topic, source.title);
     if (!fetched) continue;
-    const sourceTitleOverlap = overlap(topic, fetched.title);
-    const looksLikeArticle = fetched.sentences.length >= 3 && sourceTitleOverlap >= 2;
-    if (looksLikeArticle) {
+    const sourceTitleOverlap = Math.max(overlap(topic, fetched.title), overlap(source.title, fetched.title));
+    const hasArticleBody = fetched.articleBodyLength >= 700;
+    const looksLikeArticle = (fetched.sentences.length >= 3 && sourceTitleOverlap >= 2) || (hasArticleBody && sourceTitleOverlap >= 2);
+    if (looksLikeArticle && !/^news\.google\./i.test(fetched.domain)) {
       hydrated.push(fetched);
       continue;
     }
-    for (const linked of fetched.linkedArticles || []) {
+
+    const sourceDomain = fetched.domain;
+    const linkedCandidates = (fetched.linkedArticles || []).filter(linked => domain(linked.url) === sourceDomain || /^news\.google\./i.test(sourceDomain));
+    let followed = 0;
+    for (const linked of linkedCandidates) {
       if (seen.has(linked.url)) continue;
       seen.add(linked.url);
-      const linkedFetched = await fetchSource(linked.url, topic);
+      const linkedFetched = await fetchSource(linked.url, topic, source.title || linked.text);
       if (!linkedFetched) continue;
-      const linkedOverlap = Math.max(overlap(topic, linked.text), overlap(topic, linkedFetched.title));
-      if (linkedOverlap >= 3 && linkedFetched.sentences.length >= 3) {
-        hydrated.push({ ...linkedFetched, resolvedFromPublisherPage: true, sourcePage: source.url });
-        break;
+      const linkedOverlap = Math.max(overlap(topic, linked.text), overlap(source.title, linked.text), overlap(topic, linkedFetched.title), overlap(source.title, linkedFetched.title));
+      if (linkedOverlap >= 3 && linkedFetched.sentences.length >= 3 && (!sourceDomain || domain(linkedFetched.finalUrl) === sourceDomain)) {
+        hydrated.push({ ...linkedFetched, resolvedFromPublisherPage: true, sourcePage: source.url, sourceHintTitle: source.title });
+        followed += 1;
+        if (followed >= 2) break;
       }
     }
   }
@@ -125,7 +208,7 @@ function evidenceFor(fetched) {
     if (!f) continue;
     if (f.title && !BOILERPLATE.test(f.title)) evidence.push({ text: f.title, source: f });
     if (f.description && !BOILERPLATE.test(f.description)) evidence.push({ text: f.description, source: f });
-    for (const s of f.sentences.slice(0, 60)) evidence.push({ text: s, source: f });
+    for (const s of f.sentences.slice(0, 80)) evidence.push({ text: s, source: f });
   }
   return unique(evidence.map(e => e.text)).map(text => evidence.find(e => clean(e.text).toLowerCase() === text.toLowerCase()));
 }
@@ -224,8 +307,8 @@ export async function generateNativeArticle({ candidate, existingTitles = new Se
   const description = `A source-backed TrendForge briefing on ${title.toLowerCase()}, using only evidence tied to the selected story and clearly marking what remains uncertain.`;
   return {
     ok:true,
-    article:{ title, description, content, category:candidate.category, sources: usable.map(s => ({ title:s.title || s.domain || 'Cited source', url:s.finalUrl || s.url })).slice(0,4), sourceTexts: usable.map(s => [...(s.title ? [s.title] : []), ...(s.description ? [s.description] : []), ...s.sentences].join(' ')) },
-    diagnostics:{ version:OUTPUT_VERSION, evidenceItems:evidence.length, relevantEvidenceItems:evidence.length, reachableSources:usable.length, independentDomains:[...independentDomains], relevantDomains:[...relevantDomains], hydratedArticlePages:usable.filter(s => s.resolvedFromPublisherPage).length, sourceIsolation:true, relatedCandidateMixing:false, ...metrics }
+    article:{ title, description, content, category:candidate.category, sources: usable.map(s => ({ title:s.title || s.domain || 'Cited source', url:s.finalUrl || s.canonical || s.url })).slice(0,4), sourceTexts: usable.map(s => [...(s.title ? [s.title] : []), ...(s.description ? [s.description] : []), ...s.sentences].join(' ')) },
+    diagnostics:{ version:OUTPUT_VERSION, evidenceItems:evidence.length, relevantEvidenceItems:evidence.length, reachableSources:usable.length, independentDomains:[...independentDomains], relevantDomains:[...relevantDomains], hydratedArticlePages:usable.filter(s => s.resolvedFromPublisherPage).length, structuredArticleBodies:usable.filter(s => s.articleBodyLength >= 700).length, sourceIsolation:true, relatedCandidateMixing:false, ...metrics }
   };
 }
 
