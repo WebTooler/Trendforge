@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 
-const OUTPUT_VERSION = '2.0';
+const OUTPUT_VERSION = '2.1';
 const MIN_EVIDENCE = 2;
 const FETCH_TIMEOUT_MS = 7000;
 const STOP = new Set('a an and are as at be been but by can could for from has have if in into is it its may more most no not of on or our said should so than that the their there these they this to was were what when where which who will with would you your technology tech digital latest news update updates guide how today artificial intelligence company companies industry development developments according reported'.split(' '));
+const CRITICAL = new Set(['ai', 'btc', 'eth', 'xrp', 'uk', 'us', 'eu']);
 const BOILERPLATE = /(newsletter|subscribe|sign up|opt in|in your inbox|follow us|advertisement|cookie|privacy policy|terms of use|podcast|listen now|read more|this is .*weekly|weekly newsletter)/i;
 const PLACEHOLDER = /(^|\b)(source|unknown|n\/a|undefined|null)(\b|$)/i;
 
@@ -17,7 +18,7 @@ const clean = (value = '') => String(value)
   .replace(/\[[^\]]*…[^\]]*\]/g, ' ')
   .replace(/\s+/g, ' ').trim();
 
-const words = (text = '') => clean(text).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !STOP.has(w));
+const words = (text = '') => clean(text).toLowerCase().split(/[^a-z0-9]+/).filter(w => (w.length > 3 && !STOP.has(w)) || CRITICAL.has(w));
 const overlap = (a, b) => {
   const A = new Set(words(a)); const B = new Set(words(b));
   return [...A].filter(x => B.has(x)).length;
@@ -35,18 +36,43 @@ function domain(url = '') {
   try { return new URL(url).hostname.replace(/^www\./, '').toLowerCase(); } catch { return ''; }
 }
 
-async function fetchSource(url) {
+function absoluteUrl(href, baseUrl) {
+  try { return new URL(href, baseUrl).toString(); } catch { return ''; }
+}
+
+function extractLinkedArticleUrls(html, baseUrl, topic) {
+  const links = [];
+  for (const match of html.matchAll(/<a\b([^>]*?)href=["']([^"']+)["']([^>]*)>([\s\S]*?)<\/a>/gi)) {
+    const attrs = `${match[1]} ${match[3]}`;
+    const text = clean(match[4]);
+    const href = absoluteUrl(match[2], baseUrl);
+    if (!href || !/^https?:\/\//i.test(href) || !text || BOILERPLATE.test(text)) continue;
+    const score = overlap(topic, text);
+    if (score >= 3) links.push({ url: href, text, score });
+  }
+  return links.sort((a, b) => b.score - a.score).slice(0, 8);
+}
+
+async function fetchSource(url, topic = '') {
   if (!/^https?:\/\//i.test(url || '')) return null;
   try {
-    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-native-writer/2.0' } });
+    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-native-writer/2.1' } });
     if (!r.ok) return null;
     const html = await r.text();
+    const finalUrl = r.url || url;
     const title = clean((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,''])[1]);
     const description = clean((html.match(/<meta[^>]+(?:name|property)=["'](?:description|og:description)["'][^>]+content=["']([\s\S]*?)["']/i) || [,''])[1]);
-    const paragraphs = unique([...html.matchAll(/<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/gi)].map(m => clean(m[1])))
-      .filter(p => p.length >= 50 && p.length <= 1800 && !BOILERPLATE.test(p));
+    const articleBody = clean((html.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i) || [,''])[1]);
+    const jsonBodies = [...html.matchAll(/"articleBody"\s*:\s*"((?:\\.|[^"\\])*)"/gi)].map(m => {
+      try { return JSON.parse(`"${m[1]}"`); } catch { return m[1]; }
+    });
+    const paragraphs = unique([
+      ...[...html.matchAll(/<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/gi)].map(m => clean(m[1])),
+      ...[articleBody],
+      ...jsonBodies,
+    ]).filter(p => p.length >= 50 && p.length <= 1800 && !BOILERPLATE.test(p));
     const sentences = unique(paragraphs.flatMap(sentenceSplit)).filter(s => !BOILERPLATE.test(s));
-    return { url, finalUrl: r.url || url, domain: domain(r.url || url), title, description, paragraphs, sentences };
+    return { url, finalUrl, domain: domain(finalUrl), title, description, paragraphs, sentences, linkedArticles: extractLinkedArticleUrls(html, finalUrl, topic) };
   } catch { return null; }
 }
 
@@ -63,23 +89,55 @@ function candidateSources(candidate) {
   return list.slice(0, 10);
 }
 
-function evidenceFor(candidate, fetched) {
+async function hydrateSources(candidate, sources) {
+  const topic = `${candidate.title} ${candidate.description || ''}`;
+  const hydrated = [];
+  const seen = new Set();
+  for (const source of sources) {
+    if (seen.has(source.url)) continue;
+    seen.add(source.url);
+    const fetched = await fetchSource(source.url, topic);
+    if (!fetched) continue;
+    const sourceTitleOverlap = overlap(topic, fetched.title);
+    const looksLikeArticle = fetched.sentences.length >= 3 && sourceTitleOverlap >= 2;
+    if (looksLikeArticle) {
+      hydrated.push(fetched);
+      continue;
+    }
+    for (const linked of fetched.linkedArticles || []) {
+      if (seen.has(linked.url)) continue;
+      seen.add(linked.url);
+      const linkedFetched = await fetchSource(linked.url, topic);
+      if (!linkedFetched) continue;
+      const linkedOverlap = Math.max(overlap(topic, linked.text), overlap(topic, linkedFetched.title));
+      if (linkedOverlap >= 3 && linkedFetched.sentences.length >= 3) {
+        hydrated.push({ ...linkedFetched, resolvedFromPublisherPage: true, sourcePage: source.url });
+        break;
+      }
+    }
+  }
+  return hydrated;
+}
+
+function evidenceFor(fetched) {
   const evidence = [];
   for (const f of fetched) {
     if (!f) continue;
     if (f.title && !BOILERPLATE.test(f.title)) evidence.push({ text: f.title, source: f });
     if (f.description && !BOILERPLATE.test(f.description)) evidence.push({ text: f.description, source: f });
-    for (const s of f.sentences.slice(0, 40)) evidence.push({ text: s, source: f });
+    for (const s of f.sentences.slice(0, 60)) evidence.push({ text: s, source: f });
   }
   return unique(evidence.map(e => e.text)).map(text => evidence.find(e => clean(e.text).toLowerCase() === text.toLowerCase()));
 }
 
-function chooseFacts(evidence, topic, limit = 16) {
+function chooseFacts(evidence, topic, limit = 18) {
   const topicWords = new Set(words(topic));
+  const topicPhrases = clean(topic).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
   return evidence.map((e, i) => {
     const textWords = new Set(words(e.text));
     const shared = [...topicWords].filter(x => textWords.has(x));
-    const relevance = shared.length;
+    const phraseBoost = topicPhrases.some(p => p.length >= 6 && clean(e.text).toLowerCase().includes(p)) ? 2 : 0;
+    const relevance = shared.length + phraseBoost;
     const sourceDomain = e.source?.domain || '';
     return { ...e, relevance, shared, score: relevance * 8 + Math.min(e.text.length / 120, 4) - i * 0.01, sourceDomain };
   })
@@ -135,13 +193,13 @@ export async function generateNativeArticle({ candidate, existingTitles = new Se
   if (!candidate?.title || !candidate?.category) return { ok:false, reason:'missing candidate' };
   const sources = candidateSources(candidate);
   if (sources.length < MIN_EVIDENCE) return { ok:false, reason:'candidate has fewer than 2 source inputs; no cross-candidate source mixing allowed' };
-  const fetched = (await Promise.all(sources.map(s => fetchSource(s.url)))).filter(Boolean);
+  const fetched = await hydrateSources(candidate, sources);
   const usable = fetched.filter(x => x.sentences.length || x.description || x.title);
   const independentDomains = new Set(usable.map(x => x.domain).filter(Boolean));
   if (independentDomains.size < MIN_EVIDENCE) return { ok:false, reason:`native writer needs ${MIN_EVIDENCE} independent reachable sources for this candidate; found ${independentDomains.size}` };
 
   const topic = `${candidate.title} ${candidate.description || ''}`;
-  const evidence = chooseFacts(evidenceFor(candidate, usable), topic, 18);
+  const evidence = chooseFacts(evidenceFor(usable), topic, 18);
   if (evidence.length < 10) return { ok:false, reason:`insufficient topic-relevant source evidence; found ${evidence.length} relevant evidence items` };
   const relevantDomains = new Set(evidence.map(e => e.sourceDomain).filter(Boolean));
   if (relevantDomains.size < MIN_EVIDENCE) return { ok:false, reason:`topic-relevant evidence comes from only ${relevantDomains.size} independent domain(s)` };
@@ -167,7 +225,7 @@ export async function generateNativeArticle({ candidate, existingTitles = new Se
   return {
     ok:true,
     article:{ title, description, content, category:candidate.category, sources: usable.map(s => ({ title:s.title || s.domain || 'Cited source', url:s.finalUrl || s.url })).slice(0,4), sourceTexts: usable.map(s => [...(s.title ? [s.title] : []), ...(s.description ? [s.description] : []), ...s.sentences].join(' ')) },
-    diagnostics:{ version:OUTPUT_VERSION, evidenceItems:evidence.length, relevantEvidenceItems:evidence.length, reachableSources:usable.length, independentDomains:[...independentDomains], relevantDomains:[...relevantDomains], sourceIsolation:true, relatedCandidateMixing:false, ...metrics }
+    diagnostics:{ version:OUTPUT_VERSION, evidenceItems:evidence.length, relevantEvidenceItems:evidence.length, reachableSources:usable.length, independentDomains:[...independentDomains], relevantDomains:[...relevantDomains], hydratedArticlePages:usable.filter(s => s.resolvedFromPublisherPage).length, sourceIsolation:true, relatedCandidateMixing:false, ...metrics }
   };
 }
 
