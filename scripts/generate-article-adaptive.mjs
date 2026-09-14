@@ -3,6 +3,7 @@ import { spawnSync } from 'node:child_process';
 
 const scoredPath = 'data/scored-trends.json';
 const articlesDir = 'content/articles';
+const decisionPath = 'data/decision-queue.json';
 
 if (!fs.existsSync(scoredPath)) {
   console.log(`No ${scoredPath}; nothing to publish.`);
@@ -13,18 +14,33 @@ const original = JSON.parse(fs.readFileSync(scoredPath, 'utf8'));
 const trends = original.trends ?? [];
 const preferredFallbackCategories = new Set(['How-To', 'Technology', 'Innovation', 'Product Launches', 'Digital Life', 'AI', 'Crypto']);
 
+// V2 Phase 1: let the Decision Engine rank and diagnose candidates. The existing generator gates remain authoritative.
+const decisionRun = spawnSync('node', ['scripts/trend-decision-engine.mjs'], {
+  stdio: 'inherit',
+  env: process.env,
+});
+if (decisionRun.error) console.log(`Decision Engine unavailable: ${decisionRun.error.message}`);
+
+let decisionQueue = null;
+if (fs.existsSync(decisionPath)) {
+  try { decisionQueue = JSON.parse(fs.readFileSync(decisionPath, 'utf8')); } catch { decisionQueue = null; }
+}
+
 const before = new Set(
   fs.existsSync(articlesDir)
     ? fs.readdirSync(articlesDir).filter((name) => name.endsWith('.md'))
     : [],
 );
 
-const ranked = [...trends]
-  .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+const trendByLink = new Map(trends.map((item) => [item.link, item]));
+const decisionRanked = (decisionQueue?.decisions ?? [])
+  .map((decision) => ({ ...trendByLink.get(decision.link), ...decision }))
+  .filter((item) => item.link);
+const ranked = (decisionRanked.length ? decisionRanked : [...trends].sort((a, b) => (b.score ?? 0) - (a.score ?? 0)))
   .filter((candidate, index, all) => all.findIndex((item) => item.link === candidate.link) === index);
 
-const primary = ranked.filter((item) => item.eligible);
-const fallback = ranked.filter((item) => !item.eligible && preferredFallbackCategories.has(item.category));
+const primary = ranked.filter((item) => item.eligible && item.decision !== 'reject');
+const fallback = ranked.filter((item) => !item.eligible && preferredFallbackCategories.has(item.category) && item.decision !== 'reject');
 const queue = [...primary, ...fallback].slice(0, 12);
 
 console.log(`Adaptive publishing queue: ${queue.length} candidate(s).`);
@@ -37,6 +53,9 @@ for (const candidate of queue) {
   const attemptTrends = trends.map((item) => ({ ...item, eligible: item.link === candidate.link }));
   fs.writeFileSync(scoredPath, JSON.stringify({ ...original, trends: attemptTrends }, null, 2));
   console.log(`Attempt ${attempted}/${queue.length}: ${candidate.category} — ${candidate.title}`);
+  if (candidate.decisionScore !== undefined) {
+    console.log(`Decision Engine: ${candidate.decision} | score ${candidate.decisionScore}/100 | confidence ${candidate.confidence}/100 | ${candidate.reasons.join('; ')}`);
+  }
 
   const result = spawnSync('npx', ['tsx', 'scripts/generate-article.ts'], {
     stdio: 'inherit',
