@@ -276,10 +276,30 @@ function buildSections(category) {
 function makeSections(facts, category) {
   const sections = buildSections(category);
   const pool = facts.slice();
-  return sections.map(([heading, lead]) => {
-    const chosen = [pool.shift(), pool.shift()].filter(Boolean);
-    return chosen.length ? { heading, paragraph: chosen.map(fact => factSentence(fact, lead)).filter(Boolean).join(' ') } : null;
-  }).filter(Boolean);
+  const built = sections.map(([heading, lead]) => ({
+    heading,
+    lead,
+    facts: [pool.shift(), pool.shift()].filter(Boolean),
+  }));
+
+  const renderWords = () => built.reduce((total, section) => total + words(section.facts.map(fact => factSentence(fact, section.lead)).join(' ')).length, 0);
+  let cursor = 0;
+  const targetSectionWords = MIN_WORDS - 60;
+
+  while (pool.length && renderWords() < targetSectionWords) {
+    const section = built[cursor % built.length];
+    const next = pool.shift();
+    if (next) section.facts.push(next);
+    cursor += 1;
+  }
+
+  return built
+    .filter(section => section.facts.length)
+    .map(section => ({
+      heading: section.heading,
+      paragraph: section.facts.map(fact => factSentence(fact, section.lead)).filter(Boolean).join(' '),
+    }))
+    .filter(section => section.paragraph);
 }
 
 function qualityAudit(content, title, candidateTitle, sourceTexts) {
