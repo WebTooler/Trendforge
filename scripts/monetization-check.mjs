@@ -10,5 +10,6 @@ const checks=[
   {name:'site privacy page',ok:fs.existsSync('app/privacy/page.tsx')||fs.existsSync('pages/privacy.tsx')||fs.existsSync('content/privacy.md')},
 ];
 const result={version:1,generatedAt:new Date().toISOString(),mode:'readiness_only',checks,readyForAdSenseFoundation:checks.every(c=>c.ok),note:'Actual AdSense approval, crawling and ad serving remain controlled by Google and are not simulated by the pipeline.'};
-fs.mkdirSync('data',{recursive:true});fs.writeFileSync(outputPath,JSON.stringify(result,null,2)+'\\n');
+fs.mkdirSync('data',{recursive:true});
+fs.writeFileSync(outputPath,JSON.stringify(result,null,2));
 console.log(`Monetization readiness: ${result.readyForAdSenseFoundation?'PASS':'CHECK REQUIRED'} (${checks.filter(c=>c.ok).length}/${checks.length}).`);
