@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import { available } from './ai-provider-router.mjs';
 import { generateNativeArticle } from './trendforge-native-writer.mjs';
-import { articleToMarkdown, editorialGate, slugify } from '../lib/article-engine.js';
-import { copyrightSafetyGate } from '../lib/copyright-safety.js';
+import { articleToMarkdown, editorialGate, slugify } from '../lib/article-engine.ts';
+import { copyrightSafetyGate } from '../lib/copyright-safety.ts';
 
 const input = 'data/scored-trends.json';
 const outputDir = 'content/articles';
