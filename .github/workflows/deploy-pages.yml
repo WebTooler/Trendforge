@@ -27,19 +27,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     env:
       NEXT_PUBLIC_NEWSLETTER_FORM_ACTION: ${{ vars.NEXT_PUBLIC_NEWSLETTER_FORM_ACTION }}
-      NEXT_PUBLIC_ADSENSE_CLIENT_ID: ${{ vars.NEXT_PUBLIC_ADSENSE_CLIENT_ID }}
+      NEXT_PUBLIC_ADSENSE_CLIENT_ID: ${{ vars.ADSENSE_CLIENT_ID }}
       ADSENSE_PUBLISHER_ID: ${{ vars.ADSENSE_PUBLISHER_ID }}
     steps:
       - name: Checkout latest main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 1
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
+          package-manager-cache: false
 
       - name: Install dependencies with retry
         shell: bash
@@ -56,6 +57,9 @@ jobs:
           done
           echo "npm install failed after 3 attempts"
           exit 1
+
+      - name: Sync article source into runtime index
+        run: npx tsx scripts/sync-articles.ts
 
       - name: Generate search index
         run: npx tsx scripts/generate-search-index.ts
