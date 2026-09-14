@@ -1,8 +1,9 @@
 import fs from 'node:fs';
 
-const OUTPUT_VERSION = '1.0';
+const OUTPUT_VERSION = '1.1';
 const MIN_EVIDENCE = 2;
 const FETCH_TIMEOUT_MS = 7000;
+const MAX_RELATED = 5;
 const STOP = new Set('a an and are as at be been but by can could for from has have if in into is it its may more most no not of on or our said should so than that the their there these they this to was were what when where which who will with would you your'.split(' '));
 
 const clean = (value = '') => String(value)
@@ -35,7 +36,7 @@ function domain(url = '') {
 async function fetchSource(url) {
   if (!/^https?:\/\//i.test(url || '')) return null;
   try {
-    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-native-writer/1.0' } });
+    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-native-writer/1.1' } });
     if (!r.ok) return null;
     const html = await r.text();
     const title = clean((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,''])[1]);
@@ -51,15 +52,23 @@ function candidateSources(candidate, related) {
     if (!item) continue;
     const url = item.link || item.sourceUrl;
     if (url && !list.some(x => x.url === url)) list.push({ title: clean(item.title), url, publisher: publisher(item), description: clean(item.description) });
-    if (Array.isArray(item.sources)) for (const s of item.sources.slice(0, 4)) if (s?.url && !list.some(x => x.url === s.url)) list.push({ title: clean(s.title || item.title), url: s.url, publisher: publisher({ ...item, sourceName: s.sourceName }), description: clean(s.description || item.description) });
+    if (Array.isArray(item.sources)) for (const s of item.sources.slice(0, 8)) if (s?.url && !list.some(x => x.url === s.url)) list.push({ title: clean(s.title || item.title), url: s.url, publisher: publisher({ ...item, sourceName: s.sourceName }), description: clean(s.description || item.description) });
   }
-  return list.slice(0, 6);
+  return list.slice(0, 10);
 }
 
 function relatedCandidate(candidate, trends) {
   const same = (trends || []).filter(x => x && x.link !== candidate.link && x.category === candidate.category);
   const cp = `${candidate.title} ${candidate.description || ''}`;
-  return same.map(x => ({ x, score: overlap(cp, `${x.title} ${x.description || ''}`) + (x.score || 0) / 100 })).sort((a,b) => b.score - a.score)[0]?.x || null;
+  const matches = same.map(x => ({ x, score: overlap(cp, `${x.title} ${x.description || ''}`) + (x.score || 0) / 100 }))
+    .sort((a,b) => b.score - a.score).slice(0, MAX_RELATED).map(({ x }) => x);
+  if (!matches.length) return null;
+  const sources = matches.flatMap(x => Array.isArray(x.sources) ? x.sources : []).filter(s => s?.url);
+  return {
+    title: matches[0].title,
+    description: matches.map(x => x.description).filter(Boolean).join(' '),
+    sources,
+  };
 }
 
 function evidenceFor(candidate, related, fetched) {
@@ -167,7 +176,7 @@ export async function generateNativeArticle({ candidate, related = null, trends 
   return {
     ok:true,
     article:{ title, description, content, category:candidate.category, sources: usable.map(s => ({ title:s.title || s.domain || 'Source', url:s.finalUrl || s.url })).slice(0,4) },
-    diagnostics:{ version:OUTPUT_VERSION, evidenceItems:evidence.length, reachableSources:usable.length, independentDomains:[...independentDomains], ...metrics }
+    diagnostics:{ version:OUTPUT_VERSION, evidenceItems:evidence.length, reachableSources:usable.length, independentDomains:[...independentDomains], relatedCandidates: related?.sources?.length ? MAX_RELATED : 0, ...metrics }
   };
 }
 
