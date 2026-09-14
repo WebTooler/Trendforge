@@ -23,9 +23,13 @@ jobs:
           package-manager-cache: false
       - name: Install dependencies
         run: npm install
-      - name: Verify fresh evidence
+      - name: Regenerate fresh evidence discovery
         run: |
-          node -e "const fs=require('fs'); for(const p of ['data/decision-queue.json','data/source-verification.json']){if(!fs.existsSync(p))throw new Error('Missing '+p)}; console.log('Fresh evidence files present.');"
+          test -f data/scored-trends.json
+          rm -f data/source-verification.json data/decision-queue.json
+          node scripts/verify-trend-sources.mjs
+          node scripts/trend-decision-engine.mjs
+          node -e "const fs=require('fs'); for(const p of ['data/source-verification.json','data/decision-queue.json']){if(!fs.existsSync(p))throw new Error('Evidence regeneration failed: '+p)}; const v=JSON.parse(fs.readFileSync('data/source-verification.json','utf8')); const q=JSON.parse(fs.readFileSync('data/decision-queue.json','utf8')); if(!v.records?.length)throw new Error('Evidence regeneration produced no records'); if(!q.decisions?.length)throw new Error('Decision regeneration produced no decisions'); console.log('Fresh evidence discovery and decision queue regenerated successfully.');"
       - name: Run Native Writer quality and production-gate test
         run: node scripts/test-native-writer-capability.mjs
       - name: Upload Native Writer proof
