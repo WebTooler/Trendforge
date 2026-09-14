@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-14T12:17:19.141Z",
+  "generatedAt": "2026-09-14T12:42:53.170Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 6,
+    "totalArticles": 5,
     "averageEditorialScore": 79,
-    "editorialReviewCount": 5,
+    "editorialReviewCount": 4,
     "refreshCandidates": 0
   },
   "categoryMix": [
     {
       "category": "AI",
       "count": 1,
-      "share": 16.7
+      "share": 20
     },
     {
       "category": "Technology",
-      "count": 1,
-      "share": 16.7
+      "count": 0,
+      "share": 0
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 50
+      "share": 60
     },
     {
       "category": "Innovation",
@@ -41,7 +41,7 @@
     {
       "category": "Digital Life",
       "count": 1,
-      "share": 16.7
+      "share": 20
     },
     {
       "category": "Crypto",
@@ -50,6 +50,7 @@
     }
   ],
   "missingCategories": [
+    "Technology",
     "Innovation",
     "Product Launches",
     "Crypto"
@@ -58,20 +59,15 @@
     "How-To"
   ],
   "recommendations": [
-    "Prioritize missing categories: Innovation, Product Launches, Crypto.",
+    "Prioritize missing categories: Technology, Innovation, Product Launches, Crypto.",
     "Reduce short-term concentration in: How-To.",
-    "5 article(s) are in editorial review; improve them before treating them as growth winners."
+    "4 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
     {
       "title": "How to Set Up a Passkey for Your Google Account",
       "category": "How-To",
       "publishedAt": "2026-09-14T04:53:59.646Z"
-    },
-    {
-      "title": "Certara's Software Focus and the Rise of Sovereign Open-Weight AI",
-      "category": "Technology",
-      "publishedAt": "2026-09-14T04:53:59.627Z"
     },
     {
       "title": "How to Update Android Apps Safely and Keep Them Current",
