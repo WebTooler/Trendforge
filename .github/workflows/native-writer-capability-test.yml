@@ -1,0 +1,36 @@
+name: TrendForge Native Writer Capability Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native-writer-capability:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ''
+      GROQ_API_KEY: ''
+      OPENAI_API_KEY: ''
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install dependencies
+        run: npm install
+      - name: Verify fresh evidence
+        run: |
+          node -e "const fs=require('fs'); for(const p of ['data/decision-queue.json','data/source-verification.json']){if(!fs.existsSync(p))throw new Error('Missing '+p)}; console.log('Fresh evidence files present.');"
+      - name: Run Native Writer quality and production-gate test
+        run: node scripts/test-native-writer-capability.mjs
+      - name: Upload Native Writer proof
+        if: always() && hashFiles('native-writer-capability-result.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-writer-capability-proof
+          path: native-writer-capability-result.json
