@@ -6,6 +6,8 @@ const scripts = [
   'scripts/verify-trend-sources.mjs',
   'scripts/verify-article-claims.mjs',
   'scripts/editorial-intelligence.mjs',
+  'scripts/ai-provider-router.mjs',
+  'scripts/trendforge-writer-engine.mjs',
   'scripts/generate-article-adaptive.mjs',
   'scripts/article-lifecycle.mjs',
   'scripts/growth-intelligence.mjs',
