@@ -1,14 +1,6 @@
 import { available, mark } from './ai-provider-router.mjs';
 
-const profiles={
-  AI:'Lead with the concrete development, explain the technology and its implications, separate evidence from interpretation, and avoid hype.',
-  Technology:'Explain the product or technical change in plain language, focusing on practical impact, limitations, and what changes for readers.',
-  'How-To':'Use a task-first structure with clear steps, prerequisites, safety notes, and a short verification/check section. Do not invent UI labels or device-specific behavior.',
-  Innovation:'Explain the problem, the new approach, evidence of progress, limitations, and what would need to happen next.',
-  'Product Launches':'Explain what launched, availability, notable capabilities, pricing or access only when sourced, and meaningful alternatives or limitations.',
-  'Digital Life':'Prioritize practical reader value, privacy/security implications, compatibility caveats, and actionable takeaways.',
-  Crypto:'Separate confirmed facts from market interpretation. Never invent prices, partnerships, token utility, or forecasts; clearly label uncertainty.'
-};
+const profiles={AI:'Lead with the concrete development, explain the technology and its implications, separate evidence from interpretation, and avoid hype.',Technology:'Explain the product or technical change in plain language, focusing on practical impact, limitations, and what changes for readers.','How-To':'Use a task-first structure with clear steps, prerequisites, safety notes, and a short verification/check section. Do not invent UI labels or device-specific behavior.',Innovation:'Explain the problem, the new approach, evidence of progress, limitations, and what would need to happen next.','Product Launches':'Explain what launched, availability, notable capabilities, pricing or access only when sourced, and meaningful alternatives or limitations.','Digital Life':'Prioritize practical reader value, privacy/security implications, compatibility caveats, and actionable takeaways.',Crypto:'Separate confirmed facts from market interpretation. Never invent prices, partnerships, token utility, or forecasts; clearly label uncertainty.'};
 
 const request=async(provider,prompt)=>{
   if(provider==='Groq'){
@@ -24,9 +16,10 @@ const request=async(provider,prompt)=>{
   if(!r.ok)throw new Error(`${r.status}: ${(await r.text()).slice(0,500)}`); const j=await r.json(); return j.output_text||j.output?.flatMap(x=>x.content||[]).filter(x=>x.type==='output_text'&&x.text).map(x=>x.text).join('')||'';
 };
 
-export async function generateWithTrendForgeWriter({prompt,category='Technology'}){
-  const style=profiles[category]||profiles.Technology;
-  const enginePrompt=`TRENDForge WRITER ENGINE\nCategory: ${category}\nEditorial profile: ${style}\n\nWriter contract:\n- Use the supplied sources/research as the factual boundary.\n- Distinguish sourced facts, reasonable synthesis, and uncertainty.\n- Do not invent quotes, statistics, dates, product capabilities, prices, or events.\n- Do not copy source wording or headlines.\n- Prefer specific, natural sentences over generic AI filler.\n- Make every section add reader value.\n- Return ONLY valid JSON with exactly: title, description, content.\n\n${prompt}`;
+export async function generateWithTrendForgeWriter({prompt,category}){
+  const inferred=category||prompt.match(/(?:category|section)\s*[:=]\s*([A-Za-z][A-Za-z -]{2,40})/i)?.[1]?.trim()||'Technology';
+  const style=profiles[inferred]||profiles.Technology;
+  const enginePrompt=`TRENDFORGE WRITER ENGINE\nCategory: ${inferred}\nEditorial profile: ${style}\n\nWriter contract:\n- Use the supplied sources/research as the factual boundary.\n- Distinguish sourced facts, reasonable synthesis, and uncertainty.\n- Do not invent quotes, statistics, dates, product capabilities, prices, or events.\n- Do not copy source wording or headlines.\n- Prefer specific, natural sentences over generic AI filler.\n- Make every section add reader value.\n- Return ONLY valid JSON with exactly: title, description, content.\n\n${prompt}`;
   for(const provider of available){
     const key=provider==='Groq'?'GROQ_API_KEY':provider==='Gemini'?'GEMINI_API_KEY':'OPENAI_API_KEY';
     if(!process.env[key])continue;
