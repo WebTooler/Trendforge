@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 
 const briefPath = 'data/article-brief.json';
+const nativeMarkerPath = 'data/native-writer-published.json';
 const articleDir = 'content/articles';
 const outputPath = 'data/claim-verification.json';
 const STOP = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies','industry','development','developments','according','reported']);
@@ -13,7 +14,7 @@ const normalizeUrl = (u) => { try { return new URL(u).toString(); } catch { retu
 const isGoogleNews = (u='') => { try { const x=new URL(u); return x.hostname === 'news.google.com' && x.pathname.includes('/rss/articles/'); } catch { return false; } };
 
 async function request(url, accept='text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8') {
-  return fetch(url,{redirect:'follow',signal:AbortSignal.timeout(10000),headers:{'user-agent':'Mozilla/5.0 (compatible; TrendForge-claim-verifier/1.2)','accept':accept,'accept-language':'en-US,en;q=0.9'}});
+  return fetch(url,{redirect:'follow',signal:AbortSignal.timeout(10000),headers:{'user-agent':'Mozilla/5.0 (compatible; TrendForge-claim-verifier/1.3)','accept':accept,'accept-language':'en-US,en;q=0.9'}});
 }
 
 async function fetchGoogleNewsFallback(source) {
@@ -68,24 +69,34 @@ const evidenceScore = (claim, sourceText) => {
   return {score:Math.round(Math.min(100,coverage*75+density*25)),shared:shared.slice(0,20)};
 };
 
-if (!fs.existsSync(briefPath)) { console.log('No article brief; claim verification skipped.'); process.exit(0); }
-const brief = JSON.parse(fs.readFileSync(briefPath,'utf8'));
+if (!fs.existsSync(briefPath) && !fs.existsSync(nativeMarkerPath)) { console.log('No article brief or native publication marker; claim verification skipped.'); process.exit(0); }
+const brief = fs.existsSync(briefPath) ? JSON.parse(fs.readFileSync(briefPath,'utf8')) : { brief: {} };
+const nativePublished = fs.existsSync(nativeMarkerPath) ? JSON.parse(fs.readFileSync(nativeMarkerPath,'utf8')) : null;
 const files = fs.existsSync(articleDir) ? fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(`${articleDir}/${b}`).mtimeMs-fs.statSync(`${articleDir}/${a}`).mtimeMs) : [];
 if (!files.length) { console.log('No generated article; claim verification skipped.'); process.exit(0); }
 const articlePath=`${articleDir}/${files[0]}`;
 const raw=fs.readFileSync(articlePath,'utf8');
 const frontmatterTitle=(raw.match(/^---[\s\S]*?\n(?:title|headline):\s*["']?(.+?)["']?\s*\n[\s\S]*?---/i)?.[1]||'').trim();
 const briefSourceTitle=(brief.brief?.title||'').trim();
-const articleTitleTokens=tokenize(frontmatterTitle); const briefTitleTokens=tokenize(briefSourceTitle);
+const nativeSourceTitle=(nativePublished?.candidate?.title||'').trim();
+const nativeArticleSlug=String(nativePublished?.candidate?.title||'').replace(/\s+-\s+[^-]+$/,'').trim();
+const articleTitleTokens=tokenize(frontmatterTitle);
+const briefTitleTokens=tokenize(briefSourceTitle);
+const nativeTitleTokens=tokenize(nativeArticleSlug || nativeSourceTitle);
 const titleOverlap=[...articleTitleTokens].filter(x=>briefTitleTokens.has(x)).length;
-if (frontmatterTitle && briefSourceTitle && titleOverlap < 2) {
+const nativeTitleOverlap=[...articleTitleTokens].filter(x=>nativeTitleTokens.has(x)).length;
+const isNativeCurrentArticle=Boolean(nativePublished && nativeTitleOverlap >= 2 && frontmatterTitle);
+if (frontmatterTitle && briefSourceTitle && titleOverlap < 2 && !isNativeCurrentArticle) {
   console.log(`No matching generated article for current brief; latest article is '${frontmatterTitle}'. Claim verification skipped safely.`);
-  fs.writeFileSync(outputPath,JSON.stringify({version:2,generatedAt:new Date().toISOString(),status:'skipped_no_matching_generated_article',articlePath,articleTitle:frontmatterTitle,briefTitle:briefSourceTitle},null,2)+'\n');
+  fs.writeFileSync(outputPath,JSON.stringify({version:3,generatedAt:new Date().toISOString(),status:'skipped_no_matching_generated_article',articlePath,articleTitle:frontmatterTitle,briefTitle:briefSourceTitle},null,2)+'\n');
   process.exit(0);
 }
 const body=raw.replace(/^---[\s\S]*?---/,'').replace(/^\s*##\s+Sources[\s\S]*$/i,'').trim();
 const claims=splitSentences(body).filter(factualClaim).slice(0,30);
-const sourceInputs=(brief.brief?.sources||[]).map(s=>({title:s.title||'',url:normalizeUrl(s.url),publishedAt:s.publishedAt||null})).filter(s=>s.url);
+const sourceSection=raw.match(/##\s+Sources\s*\n([\s\S]*?)(?:\n##\s|$)/i)?.[1]||'';
+const articleSources=[...sourceSection.matchAll(/-\s+\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g)].map(m=>({title:m[1],url:normalizeUrl(m[2]),publishedAt:null})).filter(s=>s.url);
+const briefSources=(brief.brief?.sources||[]).map(s=>({title:s.title||'',url:normalizeUrl(s.url),publishedAt:s.publishedAt||null})).filter(s=>s.url);
+const sourceInputs=isNativeCurrentArticle ? articleSources : briefSources;
 const sources=[];
 for(const source of sourceInputs){ const result=await fetchSource(source); sources.push({...source,...result}); }
 const usable=sources.filter(s=>s.ok&&s.text.length>120);
@@ -101,8 +112,8 @@ const unsupported=verifiedClaims.filter(c=>c.status==='unsupported').length;
 const unavailable=verifiedClaims.filter(c=>c.status==='source_unavailable').length;
 const average=verifiedClaims.length?Math.round(verifiedClaims.reduce((n,c)=>n+c.confidence,0)/verifiedClaims.length):0;
 const pass=claims.length===0 || (usable.length>0&&unsupported===0&&unavailable===0&&average>=60);
-const result={version:2,generatedAt:new Date().toISOString(),articlePath,sourceCount:sourceInputs.length,usableSourceCount:usable.length,claimCount:claims.length,verified,partial,unsupported,sourceUnavailable:unavailable,averageConfidence:average,pass,policy:{verifiedMin:65,partialMin:45,blockUnsupported:true,blockUnavailable:true,minimumAverageConfidence:60},sources:sources.map(({text,...s})=>s),claims:verifiedClaims};
+const result={version:3,generatedAt:new Date().toISOString(),articlePath,verificationMode:isNativeCurrentArticle?'native-publication-sources':'brief-sources',sourceCount:sourceInputs.length,usableSourceCount:usable.length,claimCount:claims.length,verified,partial,unsupported,sourceUnavailable:unavailable,averageConfidence:average,pass,policy:{verifiedMin:65,partialMin:45,blockUnsupported:true,blockUnavailable:true,minimumAverageConfidence:60},sources:sources.map(({text,...s})=>s),claims:verifiedClaims};
 fs.mkdirSync('data',{recursive:true});
 fs.writeFileSync(outputPath,`${JSON.stringify(result,null,2)}\n`);
-console.log(`Claim Verification v2: ${claims.length} claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${unavailable} source-unavailable; average confidence ${average}; ${pass?'PASS':'BLOCK'}.`);
+console.log(`Claim Verification v3: ${claims.length} claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${unavailable} source-unavailable; average confidence ${average}; ${pass?'PASS':'BLOCK'} (${isNativeCurrentArticle?'native publication sources':'brief sources'}).`);
 if(!pass) process.exit(1);
