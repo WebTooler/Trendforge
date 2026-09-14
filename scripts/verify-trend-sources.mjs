@@ -63,16 +63,28 @@ async function discoverRelatedSources(trend, seedSources) {
 
   const discovered = [];
   for (const item of relevantItems) {
-    // Prefer Google's RSS <source url> because it is already the publisher
-    // URL. Fall back to resolving the Google News article pointer when needed.
-    const publisher = item.publisherUrl && !MIRROR_DOMAINS.has(domainOf(item.publisherUrl))
+    // Resolve the Google News article pointer first. The RSS <source url> is
+    // normally the publisher homepage, which is useful for identity but not
+    // sufficient evidence for the Native Writer. Fall back to the publisher
+    // URL only when the article pointer cannot resolve to a real publisher.
+    const articleResolved = item.link ? await fetchText(item.link) : null;
+    const articleFinalUrl = normalizeUrl(articleResolved?.finalUrl || '');
+    const articleDomain = domainOf(articleFinalUrl);
+    const articleIsPublisher = Boolean(articleFinalUrl && articleDomain && !MIRROR_DOMAINS.has(articleDomain) && !seeds.has(articleDomain));
+    const publisher = item.publisherUrl && !MIRROR_DOMAINS.has(domainOf(item.publisherUrl)) && !seeds.has(domainOf(item.publisherUrl))
       ? item.publisherUrl
-      : item.link;
-    const resolved = await fetchText(publisher);
-    const finalUrl = normalizeUrl(resolved?.finalUrl || publisher);
+      : null;
+    const finalUrl = articleIsPublisher ? articleFinalUrl : publisher;
     const domain = domainOf(finalUrl);
     if (!finalUrl || !domain || MIRROR_DOMAINS.has(domain) || seeds.has(domain)) continue;
-    discovered.push({ title: item.title, url: finalUrl, sourceName: domain, discovered: true, relevanceOverlap: item.overlap });
+    discovered.push({
+      title: item.title,
+      url: finalUrl,
+      sourceName: domain,
+      discovered: true,
+      relevanceOverlap: item.overlap,
+      resolvedFrom: articleIsPublisher ? 'google-news-article-link' : 'publisher-url-fallback',
+    });
     if (discovered.length >= DISCOVERY_LIMIT) break;
   }
   return discovered;
@@ -117,7 +129,7 @@ async function verifyCandidate(trend) {
     checks.push({
       title: source.title || '', url: source.url, domain: finalDomain || domain,
       credibleDomain: credibleDomains.has(finalDomain || domain), discovered: Boolean(source.discovered),
-      relevanceOverlap: source.relevanceOverlap || 0, ...check,
+      relevanceOverlap: source.relevanceOverlap || 0, resolvedFrom: source.resolvedFrom || 'seed', ...check,
     });
   }
 
@@ -186,5 +198,5 @@ const discoveryEnabled = records.filter(record => record.discovery?.enabled).len
 console.log(`Source Verification v2: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
 console.log(`Evidence discovery: ${discovered} discovered publisher source(s), ${independentDomains} candidate-level independent reachable domain(s).`);
 console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE} or no independent seed domain).`);
-console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher links resolved.`);
+console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher article links resolved.`);
 console.log(`Evidence discovery runtime: ${durationMs}ms with bounded candidate concurrency ${CANDIDATE_CONCURRENCY}.`);
