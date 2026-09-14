@@ -4,114 +4,68 @@ import path from 'node:path';
 const articleDir = 'content/articles';
 const publicDir = 'public/images/articles';
 const manifestPath = 'data/image-manifest.json';
+const VISUAL_VERSION = 2;
 
 function field(text: string, key: string) {
   const match = text.match(new RegExp(`^${key}:\\s*"([\\s\\S]*?)"\\s*$`, 'm'));
   return match ? match[1].replace(/\\"/g, '"') : '';
 }
-
-function yamlEscape(value: string) {
-  return value.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\r?\n/g, ' ');
-}
-
-function xmlEscape(value: string) {
-  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-function slugify(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 90);
-}
-
+function yamlEscape(value: string) { return value.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\r?\n/g, ' '); }
+function xmlEscape(value: string) { return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function slugify(value: string) { return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 90); }
+function hash(input: string) { let h = 2166136261; for (let i = 0; i < input.length; i++) { h ^= input.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+function rand(seed: number) { const n = Math.sin(seed * 12.9898) * 43758.5453; return n - Math.floor(n); }
 function keywords(title: string, description: string, category: string) {
   const stop = new Set(['the','and','for','with','from','what','this','that','into','about','after','your','will','how','why','are','was','has','have','its','their','industry','latest']);
-  return [...new Set(`${title} ${description} ${category}`.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length >= 4 && !stop.has(w)))].slice(0, 5);
+  return [...new Set(`${title} ${description} ${category}`.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length >= 4 && !stop.has(w)))].slice(0, 8);
 }
-
-function makeSvg(title: string, description: string, category: string) {
-  const safeTitle = xmlEscape(title);
-  const safeCategory = xmlEscape(category.toUpperCase());
-  const chips = keywords(title, description, category);
-  const chipSvg = chips.map((word, i) => {
-    const x = 90 + (i % 3) * 285;
-    const y = 455 + Math.floor(i / 3) * 62;
-    return `<g><rect x="${x}" y="${y}" width="250" height="42" rx="21" fill="#ffffff" fill-opacity="0.10"/><text x="${x + 125}" y="${y + 27}" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600" fill="#ffffff">${xmlEscape(word)}</text></g>`;
-  }).join('');
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">${safeTitle}</title>
-  <desc id="desc">Original TrendForge editorial cover for ${safeTitle}, focused on ${safeCategory}.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#183b68"/></linearGradient>
-    <radialGradient id="glow"><stop offset="0" stop-color="#67e8f9" stop-opacity="0.55"/><stop offset="1" stop-color="#67e8f9" stop-opacity="0"/></radialGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="1040" cy="90" r="310" fill="url(#glow)"/>
-  <circle cx="1040" cy="90" r="180" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
-  <circle cx="1040" cy="90" r="115" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
-  <path d="M820 160 C930 105 1040 180 1125 120" fill="none" stroke="#67e8f9" stroke-opacity="0.55" stroke-width="5" stroke-linecap="round"/>
-  <rect x="72" y="70" width="230" height="44" rx="22" fill="#67e8f9"/>
-  <text x="187" y="99" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="800" fill="#07111f">${safeCategory}</text>
-  <text x="72" y="215" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="800" fill="#ffffff">TrendForge</text>
-  <text x="72" y="295" font-family="Inter,Arial,sans-serif" font-size="40" font-weight="700" fill="#ffffff">${safeTitle.slice(0, 62)}</text>
-  ${title.length > 62 ? `<text x="72" y="345" font-family="Inter,Arial,sans-serif" font-size="40" font-weight="700" fill="#ffffff">${xmlEscape(title.slice(62, 124))}</text>` : ''}
-  ${chipSvg}
-  <text x="72" y="585" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600" fill="#cbd5e1">Original editorial visual • Generated from this article's topic metadata</text>
-</svg>`;
+function visualFamily(title: string, description: string, category: string) {
+  const t = `${title} ${description} ${category}`.toLowerCase();
+  if (/drone|uav|counter-drone/.test(t)) return 'drone';
+  if (/cyber|vulnerab|malware|security|attack|exploit/.test(t)) return 'cyber';
+  if (/crypto|bitcoin|ethereum|blockchain|token|defi/.test(t)) return 'crypto';
+  if (/product|launch|release|unveil|debut|device|phone|laptop|chip/.test(t)) return 'product';
+  if (/policy|govern|regulat|lawmaker|oversight|safety|risk|anthropic|openai|ai /.test(t)) return 'ai-governance';
+  if (/ai|model|neural|robot|machine learning/.test(t)) return 'ai';
+  if (/how-to|how to|guide|tutorial|step|setup|install|fix|troubleshoot/.test(t)) return 'howto';
+  if (/innovation|prototype|research|lab|scient|breakthrough|invention/.test(t)) return 'innovation';
+  if (/server|cloud|data center|database|software|app|technology|tech/.test(t)) return 'technology';
+  return category.toLowerCase().includes('digital') ? 'cyber' : 'technology';
 }
-
-function updateFrontmatter(raw: string, values: Record<string, string>) {
-  const separator = raw.indexOf('---', 3);
-  if (separator < 0) return raw;
-  const front = raw.slice(3, separator).trim();
-  const body = raw.slice(separator + 3);
-  const lines = front.split(/\r?\n/).filter(Boolean);
-  for (const [key, value] of Object.entries(values)) {
-    const index = lines.findIndex(line => line.startsWith(`${key}:`));
-    const line = `${key}: "${yamlEscape(value)}"`;
-    if (index >= 0) lines[index] = line;
-    else lines.push(line);
-  }
-  return `---\n${lines.join('\n')}\n---${body}`;
+function palette(family: string) {
+  const map: Record<string,[string,string,string,string]> = {
+    'ai-governance':['#071a2b','#2dd4bf','#a7f3d0','#f8fafc'], ai:['#081a2e','#38bdf8','#c4b5fd','#f8fafc'],
+    drone:['#1c1510','#fb923c','#fde68a','#f8fafc'], cyber:['#071b18','#34d399','#99f6e4','#f8fafc'],
+    crypto:['#17120a','#f59e0b','#fde68a','#fff7ed'], product:['#1a1022','#e879f9','#f5d0fe','#fff7ed'],
+    howto:['#111827','#60a5fa','#bfdbfe','#f8fafc'], innovation:['#15110a','#facc15','#fef08a','#fff7ed'],
+    technology:['#0b1520','#818cf8','#c7d2fe','#f8fafc']
+  }; return map[family] || map.technology;
 }
-
-fs.mkdirSync(publicDir, { recursive: true });
-fs.mkdirSync('data', { recursive: true });
-const manifest: Record<string, unknown> = {};
-const files = fs.existsSync(articleDir) ? fs.readdirSync(articleDir).filter(f => f.endsWith('.md')).sort() : [];
-
-for (const file of files) {
-  const full = path.join(articleDir, file);
-  let raw = fs.readFileSync(full, 'utf8');
-  const title = field(raw, 'title');
-  const description = field(raw, 'description');
-  const category = field(raw, 'category') || 'Technology';
-  const slug = field(raw, 'slug') || slugify(title) || file.replace(/\.md$/, '');
-  if (!title || !description) continue;
-
-  const imageFile = `${slug}.svg`;
-  const imagePath = path.join(publicDir, imageFile);
-  if (!fs.existsSync(imagePath)) fs.writeFileSync(imagePath, makeSvg(title, description, category));
-
-  const imageUrl = `/Trendforge/images/articles/${imageFile}`;
-  const imageAlt = `${title} — TrendForge editorial image`;
-  raw = updateFrontmatter(raw, {
-    image: imageUrl,
-    imageAlt,
-    imageSource: 'TrendForge original editorial visual',
-    imageLicense: 'Original',
-    imageGeneratedBy: 'TrendForge topic renderer',
-  });
-  fs.writeFileSync(full, raw);
-
-  manifest[slug] = {
-    image: imageUrl,
-    alt: imageAlt,
-    source: 'TrendForge original editorial visual',
-    license: 'Original',
-    generatedBy: 'TrendForge topic renderer',
-    relatedTo: { title, category, keywords: keywords(title, description, category) },
-  };
+function commonBg(bg:string, accent:string, glow:string) { return `<rect width="1200" height="630" fill="${bg}"/><circle cx="980" cy="110" r="300" fill="${accent}" opacity="0.08"/><circle cx="980" cy="110" r="170" fill="${accent}" opacity="0.07"/><path d="M0 500 C260 420 420 610 700 500 S1030 390 1200 470" fill="none" stroke="${glow}" stroke-opacity="0.12" stroke-width="90"/>`; }
+function grid(accent:string) { let s=''; for(let x=80;x<1200;x+=80)s+=`<path d="M${x} 0V630" stroke="${accent}" stroke-opacity="0.045"/>`; for(let y=70;y<630;y+=70)s+=`<path d="M0 ${y}H1200" stroke="${accent}" stroke-opacity="0.045"/>`; return s; }
+function node(x:number,y:number,r:number,fill:string,stroke:string) { return `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="3"/><circle cx="${x}" cy="${y}" r="${Math.max(2,r/4)}" fill="${stroke}" opacity="0.8"/>`; }
+function aiScene(a:string,b:string,c:string,seed:number) {
+  const points = [[690,145],[820,95],[955,170],[1060,105],[770,255],[930,275],[1090,245]]; const lines=points.map((p,i)=>points.slice(i+1).filter((_,j)=>((i+j+seed)%3===0)).map(q=>`<path d="M${p[0]} ${p[1]}L${q[0]} ${q[1]}" stroke="${a}" stroke-opacity="0.5" stroke-width="3"/>`).join('')).join('');
+  return `${lines}${points.map((p,i)=>node(p[0],p[1],10+(i%3)*3,b,a)).join('')}<path d="M180 390 C180 300 255 245 335 270 C410 245 480 310 470 395 C460 470 395 520 325 515 C245 525 180 475 180 390Z" fill="none" stroke="${c}" stroke-width="12" opacity="0.9"/><path d="M255 370 C285 330 360 330 405 375 M250 420 C300 455 370 455 420 415" fill="none" stroke="${a}" stroke-width="7" stroke-linecap="round"/><path d="M600 470H1110V520H600Z" fill="${c}" opacity="0.14" stroke="${a}" stroke-width="4"/>`;
 }
+function droneScene(a:string,b:string,c:string,seed:number) {
+  const y=150+(seed%100); const rot=seed%20-10; return `<path d="M0 455 Q230 360 430 450 T850 430 T1200 455V630H0Z" fill="${a}" opacity="0.22"/><path d="M0 500 Q230 390 430 480 T850 465 T1200 490" fill="none" stroke="${c}" stroke-opacity="0.25" stroke-width="7"/><g transform="translate(760 ${y}) rotate(${rot})"><path d="M-105 0H105L55 35H-55Z" fill="${b}" stroke="${c}" stroke-width="6"/><circle cx="-105" cy="0" r="42" fill="none" stroke="${b}" stroke-width="6"/><circle cx="105" cy="0" r="42" fill="none" stroke="${b}" stroke-width="6"/><path d="M-130 -45L-80 0M130 -45L80 0" stroke="${c}" stroke-width="5"/><circle cx="0" cy="15" r="14" fill="${c}"/></g><rect x="105" y="155" width="340" height="210" rx="16" fill="${c}" fill-opacity="0.08" stroke="${b}" stroke-opacity="0.65" stroke-width="5"/><path d="M135 320L225 245L300 295L390 205" fill="none" stroke="${b}" stroke-width="8"/><circle cx="225" cy="245" r="10" fill="${b}"/><circle cx="300" cy="295" r="10" fill="${b}"/>`;
+}
+function cyberScene(a:string,b:string,c:string,seed:number) {
+  const racks = Array.from({length:4},(_,i)=>{const x=650+i*115;return `<rect x="${x}" y="120" width="85" height="390" rx="10" fill="${c}" fill-opacity="0.07" stroke="${a}" stroke-width="4"/><path d="M${x+15} 175H${x+70}M${x+15} 235H${x+70}M${x+15} 295H${x+70}M${x+15} 355H${x+70}M${x+15} 415H${x+70}" stroke="${b}" stroke-width="8" stroke-linecap="round"/>`;}).join(''); return `${racks}<path d="M120 360 C190 280 300 270 390 335 S520 430 590 335" fill="none" stroke="${b}" stroke-width="9" stroke-linecap="round"/><path d="M120 360L155 405H215L250 350L315 395L360 330L430 385L485 310L550 350" fill="none" stroke="${c}" stroke-width="5"/><path d="M220 140L285 105L350 140V215L285 250L220 215Z" fill="${b}" fill-opacity="0.13" stroke="${b}" stroke-width="5"/><path d="M250 155L285 135L320 155V200L285 220L250 200Z" fill="${a}" fill-opacity="0.35"/>`;
+}
+function productScene(a:string,b:string,c:string,seed:number) { const tilt=seed%12-6; return `<ellipse cx="805" cy="535" rx="310" ry="45" fill="${a}" opacity="0.18"/><g transform="translate(805 325) rotate(${tilt})"><rect x="-210" y="-135" width="420" height="270" rx="34" fill="${c}" fill-opacity="0.08" stroke="${b}" stroke-width="8"/><rect x="-170" y="-95" width="340" height="190" rx="18" fill="${a}" fill-opacity="0.18" stroke="${c}" stroke-width="4"/><circle cx="0" cy="0" r="55" fill="${b}" fill-opacity="0.22" stroke="${b}" stroke-width="7"/><circle cx="0" cy="0" r="24" fill="${c}"/><path d="M-265 -65L-330 -20L-265 25M265 -65L330 -20L265 25" fill="none" stroke="${b}" stroke-width="8" stroke-linecap="round"/></g><path d="M120 490 C180 410 255 395 335 445" fill="none" stroke="${b}" stroke-width="12" stroke-linecap="round"/>`; }
+function cryptoScene(a:string,b:string,c:string,seed:number) { const blocks=Array.from({length:5},(_,i)=>{const x=650+i*105,y=220+((i+seed)%2)*75;return `<g transform="translate(${x} ${y})"><rect width="78" height="78" rx="14" fill="${b}" fill-opacity="0.14" stroke="${b}" stroke-width="5"/><path d="M20 39H58M39 20V58" stroke="${c}" stroke-width="5"/></g>`;}).join(''); return `${blocks}<path d="M690 259L755 334L860 259L965 334L1070 259" fill="none" stroke="${b}" stroke-width="6" stroke-dasharray="12 10"/><circle cx="250" cy="315" r="125" fill="${b}" fill-opacity="0.12" stroke="${b}" stroke-width="9"/><path d="M250 225L285 270V365L250 405L215 365V270Z" fill="${c}" fill-opacity="0.2" stroke="${c}" stroke-width="6"/><path d="M215 315H285M250 270V365" stroke="${c}" stroke-width="5"/>`; }
+function innovationScene(a:string,b:string,c:string,seed:number) { return `<path d="M150 500H520" stroke="${c}" stroke-width="10" stroke-linecap="round"/><path d="M210 490V335L255 275H415L460 335V490" fill="${a}" fill-opacity="0.08" stroke="${b}" stroke-width="7"/><path d="M255 275H415" stroke="${b}" stroke-width="7"/><path d="M290 360 C330 320 365 320 405 360 C365 400 330 400 290 360Z" fill="${c}" fill-opacity="0.2" stroke="${c}" stroke-width="6"/><circle cx="930" cy="310" r="120" fill="none" stroke="${b}" stroke-width="10"/><path d="M930 190V430M810 310H1050M845 225L1015 395M1015 225L845 395" stroke="${b}" stroke-width="5" opacity="0.7"/><circle cx="930" cy="310" r="32" fill="${c}"/>`; }
+function howtoScene(a:string,b:string,c:string,seed:number) { return `<rect x="125" y="110" width="650" height="390" rx="28" fill="${c}" fill-opacity="0.07" stroke="${b}" stroke-width="8"/><rect x="165" y="150" width="570" height="300" rx="16" fill="${a}" fill-opacity="0.18"/><path d="M215 235H460M215 285H610M215 335H520" stroke="${c}" stroke-width="12" stroke-linecap="round"/><circle cx="960" cy="220" r="75" fill="${b}" fill-opacity="0.15" stroke="${b}" stroke-width="8"/><path d="M925 220L950 245L1005 185" fill="none" stroke="${c}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M825 420H1090M860 375L930 305L1000 350L1070 280" fill="none" stroke="${b}" stroke-width="8"/>`; }
+function technologyScene(a:string,b:string,c:string,seed:number) { return `<path d="M120 180H470V430H120Z" fill="${c}" fill-opacity="0.07" stroke="${b}" stroke-width="8"/><path d="M160 220H430V390H160Z" fill="${a}" fill-opacity="0.2"/><circle cx="295" cy="305" r="58" fill="${b}" fill-opacity="0.18" stroke="${b}" stroke-width="7"/><path d="M295 220V165M295 445V390M210 305H155M435 305H380M235 245L195 205M355 365L395 405M355 245L395 205M235 365L195 405" stroke="${c}" stroke-width="7" stroke-linecap="round"/><path d="M620 170L1060 170L1110 230V500L620 500Z" fill="${c}" fill-opacity="0.05" stroke="${b}" stroke-width="7"/><path d="M680 255H1040M680 325H980M680 395H1015" stroke="${b}" stroke-opacity="0.7" stroke-width="9" stroke-linecap="round"/>`; }
+function makeSvg(title:string, description:string, category:string) {
+  const seed=hash(`${title}|${description}|${category}`); const family=visualFamily(title,description,category); const [bg,accent,glow,light]=palette(family); const scene = family==='ai-governance'||family==='ai' ? aiScene(accent,glow,light,seed) : family==='drone' ? droneScene(accent,glow,light,seed) : family==='cyber' ? cyberScene(accent,glow,light,seed) : family==='product' ? productScene(accent,glow,light,seed) : family==='crypto' ? cryptoScene(accent,glow,light,seed) : family==='innovation' ? innovationScene(accent,glow,light,seed) : family==='howto' ? howtoScene(accent,glow,light,seed) : technologyScene(accent,glow,light,seed);
+  const safeTitle=xmlEscape(title); const safeDesc=xmlEscape(`Original TrendForge ${family} illustration. ${description}`);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc"><title id="title">${safeTitle}</title><desc id="desc">${safeDesc}</desc><rect width="1200" height="630" fill="${bg}"/>${grid(accent)}${commonBg(bg,accent,glow)}${scene}<path d="M0 600H1200" stroke="${accent}" stroke-opacity="0.2" stroke-width="3"/><circle cx="110" cy="95" r="22" fill="${accent}" opacity="0.8"/><circle cx="110" cy="95" r="8" fill="${bg}"/><circle cx="155" cy="95" r="8" fill="${glow}" opacity="0.8"/></svg>`;
+}
+function updateFrontmatter(raw:string,values:Record<string,string>){const separator=raw.indexOf('---',3);if(separator<0)return raw;const front=raw.slice(3,separator).trim();const body=raw.slice(separator+3);const lines=front.split(/\r?\n/).filter(Boolean);for(const [key,value] of Object.entries(values)){const index=lines.findIndex(line=>line.startsWith(`${key}:`));const line=`${key}: "${yamlEscape(value)}"`;if(index>=0)lines[index]=line;else lines.push(line);}return `---\n${lines.join('\n')}\n---${body}`;}
 
-fs.writeFileSync(manifestPath, JSON.stringify({ version: 1, generatedAt: new Date().toISOString(), images: manifest }, null, 2) + '\n');
-console.log(`Image pipeline complete: ${Object.keys(manifest).length} article image(s) verified.`);
+fs.mkdirSync(publicDir,{recursive:true});fs.mkdirSync('data',{recursive:true});const manifest:Record<string,unknown>={};const files=fs.existsSync(articleDir)?fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort():[];
+for(const file of files){const full=path.join(articleDir,file);let raw=fs.readFileSync(full,'utf8');const title=field(raw,'title');const description=field(raw,'description');const category=field(raw,'category')||'Technology';const slug=field(raw,'slug')||slugify(title)||file.replace(/\.md$/,'');if(!title||!description)continue;const family=visualFamily(title,description,category);const imageFile=`${slug}.svg`;const imagePath=path.join(publicDir,imageFile);const currentGenerator=field(raw,'imageGeneratedBy');const needsRegeneration=currentGenerator!=='TrendForge topic illustration engine v2' || !fs.existsSync(imagePath);if(needsRegeneration)fs.writeFileSync(imagePath,makeSvg(title,description,category));const imageUrl=`/Trendforge/images/articles/${imageFile}`;const imageAlt=`Original ${family} illustration for ${title}`;raw=updateFrontmatter(raw,{image:imageUrl,imageAlt,imageSource:'TrendForge original editorial visual',imageLicense:'Original',imageGeneratedBy:'TrendForge topic illustration engine v2'});fs.writeFileSync(full,raw);manifest[slug]={image:imageUrl,alt:imageAlt,source:'TrendForge original editorial visual',license:'Original',generatedBy:'TrendForge topic illustration engine v2',visualVersion:VISUAL_VERSION,visualFamily:family,relatedTo:{title,category,keywords:keywords(title,description,category)}};}
+fs.writeFileSync(manifestPath,JSON.stringify({version:VISUAL_VERSION,generatedAt:new Date().toISOString(),images:manifest},null,2)+'\n');console.log(`Image pipeline complete: ${Object.keys(manifest).length} topic-specific illustration(s) generated/verified.`);
