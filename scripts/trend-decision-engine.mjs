@@ -67,7 +67,9 @@ function saveMemory(memory) {
 
 function appendLog(records) {
   fs.mkdirSync('data', { recursive: true });
-  fs.appendFileSync(logPath, records.map((record) => JSON.stringify(record)).join('\n') + '\n');
+  const existing = fs.existsSync(logPath) ? fs.readFileSync(logPath, 'utf8').trim().split('\n').filter(Boolean) : [];
+  const next = [...existing, ...records.map((record) => JSON.stringify(record))].slice(-1000);
+  fs.writeFileSync(logPath, next.length ? `${next.join('\n')}\n` : '');
 }
 
 if (!fs.existsSync(scoredPath)) {
@@ -84,9 +86,14 @@ for (const article of existing) if (categoryCounts[article.category] !== undefin
 
 const decisions = trends.map((item, index) => {
   const category = inferCategory(item);
-  const sourceCount = Array.isArray(item.sources) ? item.sources.length : (item.source ? 1 : 0);
+  const sourceCount = Array.isArray(item.sources) && item.sources.length
+    ? item.sources.length
+    : (item.sourceName || item.source || item.sourceUrl ? 1 : 0);
   const baseScore = clamp(Number(item.score) || 0);
-  const freshness = clamp(Number(item.freshnessScore ?? item.freshness ?? 0));
+  const ageHours = Number.isFinite(new Date(item.publishedAt).getTime())
+    ? Math.max(0, (Date.now() - new Date(item.publishedAt).getTime()) / 36e5)
+    : 9999;
+  const freshness = clamp(ageHours <= 6 ? 100 : ageHours <= 24 ? 80 : ageHours <= 72 ? 48 : ageHours <= 168 ? 20 : 0);
   const sourceConfidence = clamp(sourceCount >= 2 ? 95 : sourceCount === 1 ? 70 : 35);
   const titleDuplicate = existing.find((article) => normalize(article.title) === normalize(item.title));
   const maxSimilarity = existing.reduce((max, article) => Math.max(max, overlap(item.title, article.title)), 0);
@@ -100,6 +107,7 @@ const decisions = trends.map((item, index) => {
   if (item.eligible) reasons.push('research eligibility passed');
   else reasons.push('research eligibility is not yet proven');
   reasons.push(`${sourceCount} source(s) detected`);
+  reasons.push(`topic freshness ${freshness}/100`);
   reasons.push(`topic novelty ${novelty}/100`);
   reasons.push(`source confidence ${sourceConfidence}/100`);
   if (categoryNeed >= 90) reasons.push(`category gap detected: ${category}`);
