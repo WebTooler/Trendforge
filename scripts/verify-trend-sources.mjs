@@ -11,7 +11,7 @@ const credibleDomains = new Set([
 const DISCOVERY_TIMEOUT_MS = 7000;
 const DISCOVERY_LIMIT = 6;
 const MIN_DISCOVERY_OVERLAP = 3;
-const DISCOVERY_MIN_SCORE = 70;
+const DISCOVERY_MIN_SCORE = 50;
 const CANDIDATE_CONCURRENCY = 6;
 const MIRROR_DOMAINS = new Set(['news.google.com', 'google.com', 'google.co.uk']);
 
@@ -49,8 +49,6 @@ async function discoverRelatedSources(trend, seedSources) {
   const items = [...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m => m[1]);
   const seeds = new Set(seedSources.map(s => domainOf(s.url)).filter(Boolean));
 
-  // Filter by story relevance before any network resolution. This prevents
-  // unrelated RSS items from consuming redirect/fetch time.
   const relevantItems = items.map(item => {
     const title = clean((item.match(/<title>([\s\S]*?)<\/title>/i) || [,''])[1]);
     const description = clean((item.match(/<description>([\s\S]*?)<\/description>/i) || [,''])[1]);
@@ -64,8 +62,6 @@ async function discoverRelatedSources(trend, seedSources) {
 
   const discovered = [];
   for (const item of relevantItems) {
-    // Google News links are discovery pointers. Resolve only already-relevant
-    // items before deciding whether the publisher is independent.
     const resolved = await fetchText(item.link);
     const finalUrl = normalizeUrl(resolved?.finalUrl || item.link);
     const domain = domainOf(finalUrl);
@@ -93,11 +89,11 @@ async function verifyCandidate(trend) {
   const seedSources = rawSources.map(source => ({ ...source, url: normalizeUrl(source.url) })).filter(source => source.url);
   const seedDomains = new Set(seedSources.map(source => domainOf(source.url)).filter(domain => domain && !MIRROR_DOMAINS.has(domain)));
 
-  // Discovery is an expensive enrichment path. Only candidates with a strong
-  // score and fewer than two independent seed domains need it; all others keep
-  // normal seed verification without unnecessary network discovery.
-  const discoveryEligible = (Number(trend.score ?? trend.finalScore ?? trend.priorityScore ?? 0) >= DISCOVERY_MIN_SCORE)
-    && seedDomains.size < 2;
+  const score = Number(trend.score ?? trend.finalScore ?? trend.priorityScore ?? 0);
+  // Discovery is evidence-driven: promising candidates with weak source
+  // diversity get enrichment. Candidates already backed by 2+ independent seed
+  // domains do not need the extra network work.
+  const discoveryEligible = (score >= DISCOVERY_MIN_SCORE || seedDomains.size < 2) && seedDomains.size < 2;
   const discovered = discoveryEligible ? await discoverRelatedSources(trend, seedSources) : [];
 
   const combined = [...seedSources, ...discovered];
