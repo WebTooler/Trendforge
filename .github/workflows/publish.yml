@@ -91,8 +91,6 @@ jobs:
           set -euo pipefail
           git config user.name 'trendforge-bot'
           git config user.email 'trendforge-bot@users.noreply.github.com'
-          git fetch origin main
-          git rebase origin/main
           git add data lib/articles.ts public/images/articles
           if [ -d content/articles ]; then git add content/articles; fi
           echo '--- staged changes ---'
@@ -104,15 +102,11 @@ jobs:
           git commit -m 'chore: update TrendForge content pipeline'
           for attempt in 1 2 3; do
             echo "Push attempt $attempt/3"
-            git fetch origin main
-            if git rebase origin/main; then
-              if git push origin HEAD:main; then exit 0; fi
-            else
-              git rebase --abort || true
+            if git push origin HEAD:main; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then
               git pull --rebase --autostash origin main
-              if git push origin HEAD:main; then exit 0; fi
+              sleep $((attempt * 5))
             fi
-            if [ "$attempt" -lt 3 ]; then sleep $((attempt * 5)); fi
           done
           echo 'Unable to push pipeline output after 3 attempts.'
           exit 1
