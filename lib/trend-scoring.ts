@@ -17,7 +17,10 @@ const KEYWORDS: Record<string, string[]> = {
   AI: ['ai', 'artificial intelligence', 'model', 'agent', 'chatgpt', 'gemini', 'copilot'],
   Technology: ['technology', 'chip', 'semiconductor', 'software', 'apple', 'google', 'microsoft', 'meta'],
   'Digital Life': ['privacy', 'security', 'app', 'social media', 'smartphone', 'internet'],
-  'How-To': ['how to', 'guide', 'tutorial', 'tips', 'explained'],
+  'How-To': ['how to', 'guide', 'tutorial', 'tips', 'explained', 'setup', 'set up'],
+  Innovation: ['innovation', 'breakthrough', 'invention', 'discovery', 'research', 'prototype', 'new technology'],
+  'Product Launches': ['launch', 'launched', 'unveils', 'unveiled', 'announces', 'announced', 'release', 'released', 'new product', 'device'],
+  Crypto: ['crypto', 'bitcoin', 'ethereum', 'blockchain', 'stablecoin', 'defi', 'token', 'web3'],
 };
 
 function keywordScore(title: string, category: string): number {
