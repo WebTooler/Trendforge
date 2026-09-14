@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - '.github/workflows/publish.yml'
       - 'scripts/trend-research.mjs'
       - 'scripts/score-trends.ts'
       - 'scripts/trend-decision-engine.mjs'
@@ -117,8 +118,8 @@ jobs:
           # older generated-state snapshot when main advances during this run.
           # IMPORTANT: during rebase, --theirs is the commit being replayed
           # (this pipeline run); --ours is origin/main. The previous implementation
-          # used --ours, which discarded this run's generated output and could still
-          # leave the rebase unresolved. Source/workflow conflicts remain fatal.
+          # used --ours, which could discard this run's generated output.
+          # Source/workflow conflicts remain fatal.
           generated_paths=(
             'data/'
             'lib/articles.ts'
