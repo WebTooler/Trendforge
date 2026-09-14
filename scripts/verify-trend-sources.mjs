@@ -48,7 +48,6 @@ async function discoverRelatedSources(trend, seedSources) {
   if (!result) return [];
   const items = [...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m => m[1]);
   const seeds = new Set(seedSources.map(s => domainOf(s.url)).filter(Boolean));
-
   const relevantItems = items.map(item => {
     const title = clean((item.match(/<title>([\s\S]*?)<\/title>/i) || [,''])[1]);
     const description = clean((item.match(/<description>([\s\S]*?)<\/description>/i) || [,''])[1]);
@@ -88,12 +87,8 @@ async function verifyCandidate(trend) {
     : [{ title: trend.sourceName || trend.title, url: trend.sourceUrl || trend.link }];
   const seedSources = rawSources.map(source => ({ ...source, url: normalizeUrl(source.url) })).filter(source => source.url);
   const seedDomains = new Set(seedSources.map(source => domainOf(source.url)).filter(domain => domain && !MIRROR_DOMAINS.has(domain)));
-
   const score = Number(trend.score ?? trend.finalScore ?? trend.priorityScore ?? 0);
-  // Discovery is evidence-driven: promising candidates with weak source
-  // diversity get enrichment. Candidates already backed by 2+ independent seed
-  // domains do not need the extra network work.
-  const discoveryEligible = (score >= DISCOVERY_MIN_SCORE || seedDomains.size < 2) && seedDomains.size < 2;
+  const discoveryEligible = seedDomains.size < 2 && (score >= DISCOVERY_MIN_SCORE || seedDomains.size === 0);
   const discovered = discoveryEligible ? await discoverRelatedSources(trend, seedSources) : [];
 
   const combined = [...seedSources, ...discovered];
@@ -183,6 +178,6 @@ const independentDomains = records.reduce((sum, record) => sum + record.uniqueDo
 const discoveryEnabled = records.filter(record => record.discovery?.enabled).length;
 console.log(`Source Verification v2: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
 console.log(`Evidence discovery: ${discovered} discovered publisher source(s), ${independentDomains} candidate-level independent reachable domain(s).`);
-console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE}, fewer than 2 independent seed domains).`);
+console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE} or no independent seed domain).`);
 console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher links resolved.`);
 console.log(`Evidence discovery runtime: ${durationMs}ms with bounded candidate concurrency ${CANDIDATE_CONCURRENCY}.`);
