@@ -1,5 +1,4 @@
 import fs from 'node:fs';
-import { execFileSync } from 'node:child_process';
 import { generateNativeArticle } from './trendforge-native-writer.mjs';
 import { articleToMarkdown, editorialGate, slugify } from '../lib/article-engine.ts';
 import { copyrightSafetyGate } from '../lib/copyright-safety.ts';
@@ -35,9 +34,24 @@ if (fs.existsSync(articleDir)) {
 }
 
 const candidates = decisions
-  .map(d => ({ ...d, verification: byLink.get(d.link) }))
-  .filter(d => d.verification)
+  .map(d => {
+    const v = byLink.get(d.link);
+    if (!v) return null;
+    // The decision engine proves evidence readiness from verification, but the
+    // Native Writer must receive the actual verified article URLs, not merely
+    // the seed Google News pointer or publisher homepage.
+    const verifiedSources = (v.sources ?? []).filter(s => s.ok && s.url && !/^https?:\/\/(news\.)?google\./i.test(s.url));
+    return { ...d, verification: v, sources: verifiedSources.map(s => ({
+      title: s.title || d.title,
+      url: s.finalUrl || s.url,
+      sourceName: s.domain,
+      description: '',
+      discovered: Boolean(s.discovered),
+    })) };
+  })
+  .filter(Boolean)
   .filter(d => d.evidenceReady === true || (Number(d.verification.reachableSourceCount || 0) >= 2 && Number(d.verification.uniqueDomainCount || 0) >= 2))
+  .filter(d => d.sources.length >= 2)
   .filter(d => !existingTitles.has(String(d.title || '').toLowerCase().trim()))
   .sort((a, b) => Number(b.decisionScore || 0) - Number(a.decisionScore || 0));
 
@@ -65,29 +79,14 @@ function semanticAudit(candidate, result) {
   const artifactHits = (body.match(/&amp;#|&#\d+;|\bSource\b,?\s+(reports|says|indicates)|\bUnknown\b|\bundefined\b/gi) || []).length;
   const h2 = headings(body);
   const wc = words(body).length;
-  const evidenceTarget = Math.max(4, Math.ceil(sectionBodies.length * 0.7));
-  const passed = titleOverlap >= 2 && wc >= 700 && h2 >= 4 && ps.length >= 6 && evidenceBackedParagraphs >= evidenceTarget && unrelatedParagraphs === 0 && duplicateParagraphs === 0 && fillerHits === 0 && artifactHits === 0;
-  return { passed, wordCount: wc, h2Count: h2, paragraphCount: ps.length, titleOverlap, evidenceBackedParagraphs, evidenceParagraphTarget: evidenceTarget, unrelatedParagraphs, duplicateParagraphs, fillerHits, artifactHits };
+  const passed = titleOverlap >= 2 && wc >= 700 && h2 >= 4 && ps.length >= 6 && evidenceBackedParagraphs >= Math.max(4, Math.ceil(sectionBodies.length * 0.7)) && unrelatedParagraphs === 0 && duplicateParagraphs === 0 && fillerHits === 0 && artifactHits === 0;
+  return { passed, wordCount: wc, h2Count: h2, paragraphCount: ps.length, titleOverlap, evidenceBackedParagraphs, evidenceParagraphTarget: Math.max(4, Math.ceil(sectionBodies.length * 0.7)), unrelatedParagraphs, duplicateParagraphs, fillerHits, artifactHits };
 }
 
-for (const selected of candidates.slice(0, 5)) {
-  const record = selected.verification;
-  // The production fallback must consume the complete candidate-scoped verified source set,
-  // including discovered publisher sources, not just the original seed links.
-  const verifiedSources = [
-    ...(Array.isArray(record.sources) ? record.sources : []),
-    ...(Array.isArray(record.discoveredSources) ? record.discoveredSources : []),
-    ...(Array.isArray(record.reachableSources) ? record.reachableSources : []),
-  ]
-    .filter(s => s && typeof s.url === 'string' && s.url.startsWith('http'))
-    .filter((s, i, arr) => arr.findIndex(x => x.url === s.url) === i)
-    .slice(0, 10);
-  const candidate = { ...selected, sources: verifiedSources };
-
+for (const candidate of candidates.slice(0, 5)) {
   console.log(`NATIVE_TEST candidate: ${candidate.category} — ${candidate.title}`);
-  console.log(`NATIVE_TEST evidence: ${record.reachableSourceCount ?? 0} reachable source(s), ${record.uniqueDomainCount ?? 0} independent domain(s), ${record.discoveredSourceCount ?? 0} discovered source(s).`);
-  console.log(`NATIVE_TEST source set: ${verifiedSources.length} candidate-scoped verified/reachable source URL(s).`);
-
+  console.log(`NATIVE_TEST evidence: ${candidate.verification.reachableSourceCount ?? 0} reachable source(s), ${candidate.verification.uniqueDomainCount ?? 0} independent domain(s), ${candidate.verification.discoveredSourceCount ?? 0} discovered source(s).`);
+  console.log(`NATIVE_TEST source set: ${candidate.sources.length} candidate-scoped verified/reachable source URL(s).`);
   const result = await generateNativeArticle({ candidate, existingTitles });
   if (!result.ok) {
     blocked.push({ title: candidate.title, category: candidate.category, reason: result.reason });
@@ -106,21 +105,13 @@ for (const selected of candidates.slice(0, 5)) {
   fs.mkdirSync('data', { recursive: true });
   fs.writeFileSync(markerPath, JSON.stringify({ version: '2.0-native-test', generatedAt: new Date().toISOString(), candidate: { title: candidate.title, category: candidate.category, link: candidate.link }, diagnostics: result.diagnostics, editorial, copyright }, null, 2) + '\n');
 
-  let writerGate = { passed: false, output: '' };
-  let qualityGate = { passed: false, output: '' };
-  let claimGate = { passed: false, output: '' };
-  try {
-    writerGate.output = execFileSync('node', ['scripts/validate-writer-output.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
-    writerGate.passed = true;
-  } catch (e) { writerGate.output = `${e.stdout || ''}${e.stderr || ''}`; }
-  try {
-    qualityGate.output = execFileSync('npx', ['tsx', 'scripts/validate-article-quality.ts'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
-    qualityGate.passed = true;
-  } catch (e) { qualityGate.output = `${e.stdout || ''}${e.stderr || ''}`; }
-  try {
-    claimGate.output = execFileSync('node', ['scripts/verify-article-claims.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
-    claimGate.passed = true;
-  } catch (e) { claimGate.output = `${e.stdout || ''}${e.stderr || ''}`; }
+  const gate = (fn, label) => {
+    try { const output = fn(); return { passed: true, output }; }
+    catch (e) { return { passed: false, output: `${e.stdout || ''}${e.stderr || ''}` }; }
+  };
+  const writerGate = gate(() => require('node:child_process').execFileSync('node', ['scripts/validate-writer-output.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }), 'writer');
+  const qualityGate = gate(() => require('node:child_process').execFileSync('npx', ['tsx', 'scripts/validate-article-quality.ts'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }), 'quality');
+  const claimGate = gate(() => require('node:child_process').execFileSync('node', ['scripts/verify-article-claims.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }), 'claims');
 
   const allTextualGates = writerGate.passed && qualityGate.passed && claimGate.passed && editorial.passed && copyright.passed && semantic.passed;
   generated.push({
@@ -139,7 +130,7 @@ for (const selected of candidates.slice(0, 5)) {
 
 const winner = generated.find(x => x.gates.allTextualGates);
 const passed = Boolean(winner);
-const result = { version: '1.0', generatedAt: new Date().toISOString(), mode: 'provider-outage-native-writer-quality-test', passed, publication: 'NOT_PERFORMED', candidatesConsidered: candidates.slice(0, 5).length, blocked, generated };
+const result = { version: '1.1', generatedAt: new Date().toISOString(), mode: 'provider-outage-native-writer-quality-test', passed, publication: 'NOT_PERFORMED', candidatesConsidered: candidates.slice(0, 5).length, blocked, generated };
 fs.writeFileSync(resultPath, JSON.stringify(result, null, 2) + '\n');
 
 if (passed) {
