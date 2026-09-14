@@ -7,7 +7,7 @@ const outputPath='data/growth-intelligence.json';
 const categories=['AI','Technology','How-To','Innovation','Product Launches','Digital Life','Crypto'];
 
 const front=(raw,key)=>raw.match(new RegExp(`^${key}:\\s*[\"']?(.+?)[\"']?\\s*$`,'mi'))?.[1]?.trim()||'';
-const normalize=(s='')=>s.toLowerCase().replace(/[^a-z0-9\\s]/g,' ').replace(/\\s+/g,' ').trim();
+const normalize=(s='')=>s.toLowerCase().replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
 const files=fs.existsSync(articlesDir)?fs.readdirSync(articlesDir).filter(f=>f.endsWith('.md')):[];
 const articles=files.map(file=>{const raw=fs.readFileSync(`${articlesDir}/${file}`,'utf8');return {file,title:front(raw,'title')||file,category:front(raw,'category')||'Technology',description:front(raw,'description'),publishedAt:front(raw,'publishedAt')};});
 const counts=Object.fromEntries(categories.map(c=>[c,0]));
@@ -32,5 +32,6 @@ if(refreshCount)recommendations.push(`${refreshCount} older/incomplete article(s
 if(!recommendations.length)recommendations.push('Category mix is balanced; continue prioritizing high-confidence, novel topics.');
 
 const result={version:1,generatedAt:new Date().toISOString(),policy:{privacyFirst:true,noPersonalTracking:true,noPaidTrafficRequired:true},summary:{totalArticles:articles.length,averageEditorialScore:avgEditorial,editorialReviewCount:reviewCount,refreshCandidates:refreshCount},categoryMix,missingCategories:missing,overrepresentedCategories:overrepresented,recommendations,recentArticles:articles.sort((a,b)=>(Date.parse(b.publishedAt)||0)-(Date.parse(a.publishedAt)||0)).slice(0,10).map(a=>({title:a.title,category:a.category,publishedAt:a.publishedAt}))};
-fs.mkdirSync('data',{recursive:true});fs.writeFileSync(outputPath,JSON.stringify(result,null,2)+'\\n');
+fs.mkdirSync('data',{recursive:true});
+fs.writeFileSync(outputPath,JSON.stringify(result,null,2));
 console.log(`Growth Intelligence v1: ${articles.length} article(s), avg editorial score ${avgEditorial??'n/a'}, ${missing.length} missing categor${missing.length===1?'y':'ies'}.`);
