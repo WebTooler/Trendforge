@@ -33,9 +33,20 @@ const topicOverlap = (a, b) => {
   return [...A].filter(x => B.has(x)).length;
 };
 
+function extractDescriptionLinks(rawDescription) {
+  const links = [];
+  for (const match of String(rawDescription || '').matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const url = normalizeUrl(match[1]);
+    const text = clean(match[2]);
+    if (!url || !text || /^https?:\/\/news\.google\./i.test(url)) continue;
+    links.push({ url, text });
+  }
+  return links;
+}
+
 async function fetchText(url) {
   try {
-    const response = await fetch(url, { method: 'GET', redirect: 'follow', signal: AbortSignal.timeout(DISCOVERY_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-source-discovery/2.0' } });
+    const response = await fetch(url, { method: 'GET', redirect: 'follow', signal: AbortSignal.timeout(DISCOVERY_TIMEOUT_MS), headers: { 'user-agent': 'TrendForge-source-discovery/2.1' } });
     if (!response.ok) return null;
     return { text: await response.text(), finalUrl: response.url || url };
   } catch { return null; }
@@ -50,40 +61,64 @@ async function discoverRelatedSources(trend, seedSources) {
   const seeds = new Set(seedSources.map(s => domainOf(s.url)).filter(Boolean));
   const relevantItems = items.map(item => {
     const title = clean((item.match(/<title>([\s\S]*?)<\/title>/i) || [,''])[1]);
-    const description = clean((item.match(/<description>([\s\S]*?)<\/description>/i) || [,''])[1]);
+    const rawDescription = (item.match(/<description>([\s\S]*?)<\/description>/i) || [,''])[1];
+    const description = clean(rawDescription);
     const link = normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\/link>/i) || [,''])[1]));
     const sourceMatch = item.match(/<source\b[^>]*\burl=["']([^"']+)["'][^>]*>/i);
     const publisherUrl = normalizeUrl(clean(sourceMatch?.[1] || ''));
+    const descriptionLinks = extractDescriptionLinks(rawDescription);
     const overlap = topicOverlap(`${trend.title} ${trend.description || ''}`, `${title} ${description}`);
-    return { title, description, link, publisherUrl, overlap };
+    return { title, description, link, publisherUrl, descriptionLinks, overlap };
   })
-    .filter(item => item.title && item.overlap >= MIN_DISCOVERY_OVERLAP && (item.publisherUrl || item.link))
+    .filter(item => item.title && item.overlap >= MIN_DISCOVERY_OVERLAP && (item.publisherUrl || item.link || item.descriptionLinks.length))
     .sort((a, b) => b.overlap - a.overlap)
     .slice(0, DISCOVERY_LIMIT);
 
   const discovered = [];
   for (const item of relevantItems) {
-    // Resolve the Google News article pointer first. The RSS <source url> is
-    // normally the publisher homepage, which is useful for identity but not
-    // sufficient evidence for the Native Writer. Fall back to the publisher
-    // URL only when the article pointer cannot resolve to a real publisher.
-    const articleResolved = item.link ? await fetchText(item.link) : null;
-    const articleFinalUrl = normalizeUrl(articleResolved?.finalUrl || '');
-    const articleDomain = domainOf(articleFinalUrl);
-    const articleIsPublisher = Boolean(articleFinalUrl && articleDomain && !MIRROR_DOMAINS.has(articleDomain) && !seeds.has(articleDomain));
-    const publisher = item.publisherUrl && !MIRROR_DOMAINS.has(domainOf(item.publisherUrl)) && !seeds.has(domainOf(item.publisherUrl))
-      ? item.publisherUrl
-      : null;
-    const finalUrl = articleIsPublisher ? articleFinalUrl : publisher;
-    const domain = domainOf(finalUrl);
-    if (!finalUrl || !domain || MIRROR_DOMAINS.has(domain) || seeds.has(domain)) continue;
+    const candidates = [];
+    // Google News descriptions often contain related-story anchors with real
+    // publisher URLs. Prefer an anchor whose text matches the current story.
+    for (const link of item.descriptionLinks) {
+      const linkDomain = domainOf(link.url);
+      if (!linkDomain || MIRROR_DOMAINS.has(linkDomain) || seeds.has(linkDomain)) continue;
+      const linkOverlap = topicOverlap(`${trend.title} ${trend.description || ''}`, link.text);
+      candidates.push({ url: link.url, score: linkOverlap + item.overlap, resolvedFrom: 'google-news-description-link' });
+    }
+    candidates.sort((a, b) => b.score - a.score);
+
+    // Resolve the Google News article pointer when possible. A plain HTTP
+    // fetch may remain on Google's wrapper, so it is never counted unless the
+    // final URL is a genuine non-Google publisher URL.
+    if (item.link) {
+      const articleResolved = await fetchText(item.link);
+      const articleFinalUrl = normalizeUrl(articleResolved?.finalUrl || '');
+      const articleDomain = domainOf(articleFinalUrl);
+      if (articleFinalUrl && articleDomain && !MIRROR_DOMAINS.has(articleDomain) && !seeds.has(articleDomain)) {
+        candidates.push({ url: articleFinalUrl, score: item.overlap + 1, resolvedFrom: 'google-news-article-link' });
+      }
+    }
+
+    // Publisher <source url> is identity metadata and therefore only a final
+    // fallback. It is deliberately lower priority than an article URL.
+    const publisherDomain = domainOf(item.publisherUrl);
+    if (item.publisherUrl && publisherDomain && !MIRROR_DOMAINS.has(publisherDomain) && !seeds.has(publisherDomain)) {
+      candidates.push({ url: item.publisherUrl, score: 1, resolvedFrom: 'publisher-url-fallback' });
+    }
+
+    const chosen = candidates.find(candidate => {
+      const d = domainOf(candidate.url);
+      return candidate.url && d && !MIRROR_DOMAINS.has(d) && !seeds.has(d);
+    });
+    if (!chosen) continue;
+    const domain = domainOf(chosen.url);
     discovered.push({
       title: item.title,
-      url: finalUrl,
+      url: chosen.url,
       sourceName: domain,
       discovered: true,
       relevanceOverlap: item.overlap,
-      resolvedFrom: articleIsPublisher ? 'google-news-article-link' : 'publisher-url-fallback',
+      resolvedFrom: chosen.resolvedFrom,
     });
     if (discovered.length >= DISCOVERY_LIMIT) break;
   }
@@ -93,7 +128,7 @@ async function discoverRelatedSources(trend, seedSources) {
 async function checkUrl(url) {
   const started = Date.now();
   try {
-    const response = await fetch(url, { method: 'GET', redirect: 'follow', signal: AbortSignal.timeout(8000), headers: { 'user-agent': 'TrendForge-source-verifier/2.0' } });
+    const response = await fetch(url, { method: 'GET', redirect: 'follow', signal: AbortSignal.timeout(8000), headers: { 'user-agent': 'TrendForge-source-verifier/2.1' } });
     return { ok: response.ok, status: response.status, finalUrl: response.url || url, latencyMs: Date.now() - started };
   } catch (error) {
     return { ok: false, status: 0, finalUrl: url, latencyMs: Date.now() - started, error: error?.message || String(error) };
@@ -155,6 +190,7 @@ async function verifyCandidate(trend) {
       enabled: discoveryEligible, queryTitle: discoveryEligible ? trend.title : null,
       sameStoryOnly: true, minTopicOverlap: MIN_DISCOVERY_OVERLAP,
       googleNewsIsIndexOnly: true, resolvedPublisherLinks: true,
+      descriptionArticleLinksEnabled: true,
       minScore: DISCOVERY_MIN_SCORE, seedDomainCount: seedDomains.size,
     },
     sources: checks,
@@ -199,4 +235,5 @@ console.log(`Source Verification v2: ${records.length} candidate(s) checked — 
 console.log(`Evidence discovery: ${discovered} discovered publisher source(s), ${independentDomains} candidate-level independent reachable domain(s).`);
 console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE} or no independent seed domain).`);
 console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher article links resolved.`);
+console.log(`Evidence discovery: Google News description article-link recovery enabled.`);
 console.log(`Evidence discovery runtime: ${durationMs}ms with bounded candidate concurrency ${CANDIDATE_CONCURRENCY}.`);
