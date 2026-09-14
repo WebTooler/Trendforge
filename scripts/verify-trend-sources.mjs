@@ -11,6 +11,7 @@ const credibleDomains = new Set([
 const DISCOVERY_TIMEOUT_MS = 7000;
 const DISCOVERY_LIMIT = 6;
 const MIN_DISCOVERY_OVERLAP = 3;
+const CANDIDATE_CONCURRENCY = 6;
 const MIRROR_DOMAINS = new Set(['news.google.com', 'google.com', 'google.co.uk']);
 
 const normalizeUrl = (value) => {
@@ -78,16 +79,7 @@ async function checkUrl(url) {
   }
 }
 
-if (!fs.existsSync(inputPath)) {
-  console.log(`No ${inputPath}; source verification skipped.`);
-  process.exit(0);
-}
-
-const research = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
-const trends = research.trends ?? [];
-const records = [];
-
-for (const trend of trends) {
+async function verifyCandidate(trend) {
   const rawSources = Array.isArray(trend.sources) && trend.sources.length
     ? trend.sources
     : [{ title: trend.sourceName || trend.title, url: trend.sourceUrl || trend.link }];
@@ -129,7 +121,7 @@ for (const trend of trends) {
     Math.min(relevantReachable.length / 2, 1) * 10,
   );
 
-  records.push({
+  return {
     link: trend.link, title: trend.title, category: trend.category,
     verifiedAt: new Date().toISOString(), sourceCount: checks.length,
     discoveredSourceCount: discovered.length, reachableSourceCount: reachable.length,
@@ -138,14 +130,43 @@ for (const trend of trends) {
     confidence, status: confidence >= 70 ? 'verified' : confidence >= 45 ? 'partial' : 'unverified',
     discovery: { enabled: true, queryTitle: trend.title, sameStoryOnly: true, minTopicOverlap: MIN_DISCOVERY_OVERLAP, googleNewsIsIndexOnly: true, resolvedPublisherLinks: true },
     sources: checks,
-  });
+  };
 }
 
+async function mapWithConcurrency(items, limit, worker) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+  async function runWorker() {
+    while (true) {
+      const index = nextIndex++;
+      if (index >= items.length) return;
+      results[index] = await worker(items[index], index);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, () => runWorker()));
+  return results;
+}
+
+if (!fs.existsSync(inputPath)) {
+  console.log(`No ${inputPath}; source verification skipped.`);
+  process.exit(0);
+}
+
+const research = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+const trends = research.trends ?? [];
+const startedAt = Date.now();
+const records = await mapWithConcurrency(trends, CANDIDATE_CONCURRENCY, verifyCandidate);
+const durationMs = Date.now() - startedAt;
+
 fs.mkdirSync('data', { recursive: true });
-fs.writeFileSync(outputPath, `${JSON.stringify({ version: 2, generatedAt: new Date().toISOString(), records }, null, 2)}\n`);
+fs.writeFileSync(outputPath, `${JSON.stringify({ version: 2, generatedAt: new Date().toISOString(), durationMs, candidateConcurrency: CANDIDATE_CONCURRENCY, records }, null, 2)}\n`);
 
 const verified = records.filter(record => record.status === 'verified').length;
 const partial = records.filter(record => record.status === 'partial').length;
 const unverified = records.filter(record => record.status === 'unverified').length;
+const discovered = records.reduce((sum, record) => sum + record.discoveredSourceCount, 0);
+const independentDomains = records.reduce((sum, record) => sum + record.uniqueDomainCount, 0);
 console.log(`Source Verification v2: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
+console.log(`Evidence discovery: ${discovered} discovered publisher source(s), ${independentDomains} candidate-level independent reachable domain(s).`);
 console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher links resolved.`);
+console.log(`Evidence discovery runtime: ${durationMs}ms with bounded candidate concurrency ${CANDIDATE_CONCURRENCY}.`);
