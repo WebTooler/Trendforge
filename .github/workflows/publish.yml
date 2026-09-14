@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - 'scripts/trend-research.mjs'
+      - 'scripts/score-trends.ts'
+      - 'scripts/trend-decision-engine.mjs'
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
