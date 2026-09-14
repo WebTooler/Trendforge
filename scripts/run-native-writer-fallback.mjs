@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { available } from './ai-provider-router.mjs';
-import { generateNativeArticle } from './trendforge-native-writer.mjs';
+import { generateNativeArticle } from './trendforge-native-writer-v23.mjs';
 import { articleToMarkdown, editorialGate, slugify } from '../lib/article-engine.ts';
 import { copyrightSafetyGate } from '../lib/copyright-safety.ts';
 
@@ -9,8 +9,8 @@ const verificationInput = 'data/source-verification.json';
 const outputDir = 'content/articles';
 const marker = 'data/native-writer-published.json';
 
-// Production runtime guard: Native Writer quality thresholds remain unchanged,
-// but network-heavy hydration must never hold the pipeline indefinitely.
+// Production runtime guard: Native Writer quality thresholds remain bounded,
+// and network-heavy hydration must never hold the pipeline indefinitely.
 const CANDIDATE_BUDGET_MS = 12000;
 const TOTAL_BUDGET_MS = 90000;
 const MAX_CANDIDATES = 12;
@@ -48,6 +48,7 @@ const trends = rawTrends.map(item => {
   const record = verifiedByLink.get(item.link);
   return record?.sources?.length ? { ...item, sources: record.sources.filter(s => s.ok && s.url) } : item;
 });
+
 const existingTitles = new Set();
 if (fs.existsSync(outputDir)) {
   for (const file of fs.readdirSync(outputDir).filter(n => n.endsWith('.md'))) {
@@ -62,7 +63,8 @@ const ranked = trends
   .sort((a,b) => (b.decisionScore ?? b.score ?? 0) - (a.decisionScore ?? a.score ?? 0));
 
 console.log(`Native fallback: all providers unavailable; testing ${Math.min(ranked.length, MAX_CANDIDATES)} isolated evidence-backed candidate(s).`);
-console.log(`Native fallback runtime guard: ${CANDIDATE_BUDGET_MS}ms/candidate, ${TOTAL_BUDGET_MS}ms total; quality thresholds unchanged.`);
+console.log(`Native fallback runtime guard: ${CANDIDATE_BUDGET_MS}ms/candidate, ${TOTAL_BUDGET_MS}ms total.`);
+console.log('Native Writer v2.3: RSS/article-link recovery enabled; source-limited minimum 450 words; no padding.');
 
 for (const candidate of ranked.slice(0, MAX_CANDIDATES)) {
   const elapsed = Date.now() - startedAt;
@@ -72,10 +74,7 @@ for (const candidate of ranked.slice(0, MAX_CANDIDATES)) {
   }
 
   const remaining = Math.min(CANDIDATE_BUDGET_MS, TOTAL_BUDGET_MS - elapsed);
-  const result = await withTimeout(
-    generateNativeArticle({ candidate, existingTitles }),
-    remaining,
-  );
+  const result = await withTimeout(generateNativeArticle({ candidate, existingTitles }), remaining);
 
   if (!result.ok) {
     console.log(`Native fallback skipped: ${candidate.category} — ${candidate.title} — ${result.reason}`);
@@ -97,6 +96,7 @@ for (const candidate of ranked.slice(0, MAX_CANDIDATES)) {
   });
   if (!editorial.passed || !copyright.passed) {
     console.log(`Native fallback rejected by downstream gates: ${candidate.title}`);
+    console.log(`Native fallback gate detail: editorial=${editorial.passed ? 'PASS' : 'FAIL'} copyright=${copyright.passed ? 'PASS' : 'FAIL'}`);
     continue;
   }
 
@@ -104,7 +104,7 @@ for (const candidate of ranked.slice(0, MAX_CANDIDATES)) {
   fs.writeFileSync(`${outputDir}/${article.slug}.md`, articleToMarkdown(article));
   fs.mkdirSync('data', { recursive: true });
   fs.writeFileSync(marker, JSON.stringify({
-    version: '2.0',
+    version: '2.3',
     generatedAt: new Date().toISOString(),
     candidate: { title: candidate.title, category: candidate.category, link: candidate.link },
     diagnostics: result.diagnostics,
