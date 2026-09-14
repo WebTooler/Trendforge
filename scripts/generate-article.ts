@@ -1,3 +1,4 @@
+// TrendForge quality-pipeline validation marker v2
 import fs from 'node:fs';
 import { articleToMarkdown, buildArticlePrompt, editorialGate, slugify, type ArticleBrief } from '../lib/article-engine';
 import { copyrightSafetyGate } from '../lib/copyright-safety';
@@ -8,8 +9,6 @@ const topicWords = (text='') => new Set(text.toLowerCase().split(/[^a-z0-9]+/).f
 const publisherName=(item:Trend)=>{const explicit=(item.sourceName||item.source||'').trim();if(explicit&&explicit.toLowerCase()!=='google news')return explicit;const m=item.description?.match(/<font[^>]*>([^<]+)<\/font>/i);return m?.[1]?.trim()||explicit||'Unknown publisher';};
 const blockedPublishers=new Set(['facebook.com','facebook','reddit','pinterest','youtube','tiktok','x.com']);
 const isCrediblePublisher=(name:string)=>{const n=name.toLowerCase().trim();return !!n&&!blockedPublishers.has(n)&&!n.includes('facebook.com');};
-
-// Semantic concepts catch the same story even when headlines use different wording.
 const conceptGroups: Record<string,string[]> = {
   ai_pacing:['slowdown','slowing','slow','pacing','restraint','restrain','caution','cautious','measured','pace','accelerate','acceleration'],
   ai_governance:['governance','policy','policies','regulation','regulatory','oversight','lawmakers','policymakers','government'],
@@ -19,24 +18,8 @@ const conceptGroups: Record<string,string[]> = {
   product_launch:['launch','launched','release','released','unveiled','debut','availability'],
   crypto:['bitcoin','ethereum','crypto','blockchain','token','tokens','defi'],
 };
-const profile=(text:string)=>{
-  const words=topicWords(text);
-  const concepts=new Set<string>();
-  for(const [group,variants] of Object.entries(conceptGroups)) if(variants.some(v=>words.has(v))) concepts.add(group);
-  const entities=new Set<string>();
-  for(const match of text.matchAll(/\b(?:OpenAI|Anthropic|Google|Microsoft|Meta|Amazon|Apple|NVIDIA|Tesla|xAI|Mistral|DeepMind|Sam Altman|Dario Amodei|Barack Obama|Donald Trump)\b/gi)) entities.add(match[0].toLowerCase());
-  return {words,concepts,entities};
-};
-const semanticDuplicate=(candidateText:string,existingText:string)=>{
-  const a=profile(candidateText),b=profile(existingText);
-  const sharedConcepts=[...a.concepts].filter(x=>b.concepts.has(x));
-  const sharedEntities=[...a.entities].filter(x=>b.entities.has(x));
-  const sharedWords=[...a.words].filter(x=>b.words.has(x));
-  const union=new Set([...a.words,...b.words]).size||1;
-  const jaccard=sharedWords.length/union;
-  const duplicate=(sharedEntities.length>=1&&sharedConcepts.length>=2) || (sharedEntities.length>=2&&sharedConcepts.length>=1) || (sharedConcepts.length>=3&&sharedWords.length>=5) || (sharedWords.length>=8&&jaccard>=0.28);
-  return {duplicate,sharedConcepts,sharedEntities,sharedWords:jaccard>=0.2?sharedWords:sharedWords.slice(0,4)};
-};
+const profile=(text:string)=>{const words=topicWords(text);const concepts=new Set<string>();for(const [group,variants] of Object.entries(conceptGroups))if(variants.some(v=>words.has(v)))concepts.add(group);const entities=new Set<string>();for(const match of text.matchAll(/\b(?:OpenAI|Anthropic|Google|Microsoft|Meta|Amazon|Apple|NVIDIA|Tesla|xAI|Mistral|DeepMind|Sam Altman|Dario Amodei|Barack Obama|Donald Trump)\b/gi))entities.add(match[0].toLowerCase());return{words,concepts,entities};};
+const semanticDuplicate=(candidateText:string,existingText:string)=>{const a=profile(candidateText),b=profile(existingText);const sharedConcepts=[...a.concepts].filter(x=>b.concepts.has(x));const sharedEntities=[...a.entities].filter(x=>b.entities.has(x));const sharedWords=[...a.words].filter(x=>b.words.has(x));const union=new Set([...a.words,...b.words]).size||1;const jaccard=sharedWords.length/union;const duplicate=(sharedEntities.length>=1&&sharedConcepts.length>=2)||(sharedEntities.length>=2&&sharedConcepts.length>=1)||(sharedConcepts.length>=3&&sharedWords.length>=5)||(sharedWords.length>=8&&jaccard>=0.28);return{duplicate,sharedConcepts,sharedEntities,sharedWords:jaccard>=0.2?sharedWords:sharedWords.slice(0,4)};};
 const existingTopicMatches=(candidate:Trend,existing:string[])=>existing.some(text=>semanticDuplicate(`${candidate.title} ${candidate.description??''}`,text).duplicate);
 
 type ProviderResult={text:string;provider:string};
@@ -47,14 +30,12 @@ const generateWithProviders=async(prompt:string):Promise<ProviderResult>=>{
   if(process.env.OPENAI_API_KEY){try{const r=await fetch('https://api.openai.com/v1/responses',{method:'POST',headers:{Authorization:`Bearer ${process.env.OPENAI_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({model:process.env.OPENAI_MODEL||'gpt-5.6-luna',input:prompt})});if(!r.ok)throw new Error(`${r.status}: ${(await r.text()).slice(0,500)}`);const j=await r.json() as any;const text=j.output_text||j.output?.flatMap((x:any)=>x.content||[]).filter((x:any)=>x.type==='output_text'&&x.text).map((x:any)=>x.text).join('')||'';if(text.trim())return{text,provider:'OpenAI'};}catch(e){console.log(`OpenAI failed: ${e instanceof Error?e.message:String(e)}.`);}}
   throw new Error('No AI provider is currently available.');
 };
-
 const parseModelJson=(raw:string):{title:string;description:string;content:string}=>{const text=raw.trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'').trim();try{return JSON.parse(text);}catch{}const start=text.indexOf('{'),end=text.lastIndexOf('}');if(start>=0&&end>start){try{return JSON.parse(text.slice(start,end+1));}catch{}}throw new Error('AI output was not valid JSON');};
-
 async function main(){
  const input='data/scored-trends.json',outputDir='content/articles';if(!fs.existsSync(input))process.exit(0);const payload=JSON.parse(fs.readFileSync(input,'utf8')) as {trends?:Trend[]};const trends=payload.trends??[];const existingTitles=new Set<string>();const existingTopics:string[]=[];if(fs.existsSync(outputDir))for(const file of fs.readdirSync(outputDir).filter(n=>n.endsWith('.md'))){const raw=fs.readFileSync(`${outputDir}/${file}`,'utf8');const title=raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1];if(title)existingTitles.add(title.toLowerCase().trim());const category=raw.match(/^category:\s*"([\s\S]*?)"\s*$/m)?.[1]||'';const body=raw.replace(/^---[\s\S]*?---/,'').slice(0,6500);existingTopics.push(`${category} ${title??''} ${body}`);}
  const eligible=trends.filter(i=>i.eligible&&!existingTitles.has(i.title.toLowerCase().trim())&&!existingTopicMatches(i,existingTopics)).sort((a,b)=>(b.score??0)-(a.score??0));
  const findRelated=(candidate:Trend)=>{const pa=publisherName(candidate),words=topicWords(`${candidate.title} ${candidate.description??''}`);return trends.filter(item=>{if(item===candidate||item.link===candidate.link||existingTopicMatches(item,existingTopics))return false;const pb=publisherName(item);if(!isCrediblePublisher(pb)||pa.toLowerCase()===pb.toLowerCase())return false;const to=[...topicWords(item.title)].filter(w=>words.has(w)).length;const d=[...topicWords(item.description??'')].filter(w=>words.has(w)).length;return to>=2||(to>=1&&d>=2);}).sort((a,b)=>(b.score??0)-(a.score??0))[0];};
- const trend=eligible.find(candidate=>{const related=findRelated(candidate);if(!related)return false;return !semanticDuplicate(`${candidate.title} ${candidate.description??''} ${related.title} ${related.description??''}`,existingTopics.join('\n')).duplicate;});
+ const trend=eligible.find(candidate=>{const related=findRelated(candidate);if(!related)return false;const combined=`${candidate.title} ${candidate.description??''} ${related.title} ${related.description??''}`;return !existingTopics.some(existing=>semanticDuplicate(combined,existing).duplicate);});
  if(!trend){console.log('No new eligible trend with independent credible source coverage and semantic uniqueness found.');process.exit(0);}const pa=publisherName(trend),related=findRelated(trend);if(!related){console.log('No second independent publisher found for this topic; publication blocked.');process.exit(0);}
  const brief:ArticleBrief={title:trend.title,category:trend.category,angle:'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use supplied sources as factual references only; write an original synthesis.',keyPoints:[trend.description??'Use only verified source context.',related.description??'Cross-check the development against the second independent publisher.'],sources:[{title:`${pa}: ${trend.title}`,url:trend.link,publishedAt:trend.publishedAt},{title:`${publisherName(related)}: ${related.title}`,url:related.link,publishedAt:related.publishedAt}]};
  const prompt=buildArticlePrompt(brief)+`\n\nOUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Keep the article concise enough to fit the editorial gate. Aim for about 900-1100 words, with useful H2 headings. Write an original synthesis; never reproduce source sentences, paragraphs, or headlines. Do not invent facts, quotes, statistics, dates, or capabilities. If the selected topic is materially similar to an existing article, do not write it.`;fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt},null,2));
