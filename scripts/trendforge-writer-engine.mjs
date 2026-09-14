@@ -16,7 +16,8 @@ const request=async(provider,prompt)=>{
 };
 
 export async function generateWithTrendForgeWriter({prompt,category='Technology'}){
-  const contract=buildWriterContract(category);
+  const inferred=category&&category!=='Technology'?category:prompt.match(/(?:category|section)\s*[:=]\s*(AI|Technology|How-To|Innovation|Product Launches|Digital Life|Crypto)/i)?.[1]||category;
+  const contract=buildWriterContract(inferred);
   const enginePrompt=`${contract}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nFINAL INSTRUCTION:\nWrite the strongest useful article supported by the supplied evidence. Do not pad to hit a word count. If the evidence cannot support a complete article, return empty title, description and content rather than inventing material.`;
   for(const provider of available){
     const key=provider==='Groq'?'GROQ_API_KEY':provider==='Gemini'?'GEMINI_API_KEY':'OPENAI_API_KEY';
