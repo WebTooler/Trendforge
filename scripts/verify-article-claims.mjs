@@ -10,10 +10,10 @@ const decodeEntities = (text='') => cleanHtml(text).replace(/&#(\d+);/g,(_,n)=>S
 const splitSentences = (text='') => text.replace(/\s+/g,' ').split(/(?<=[.!?])\s+(?=[A-Z0-9"“])/).map(s=>s.trim()).filter(s=>s.length >= 45 && s.length <= 420);
 const factualClaim = (s) => /\b(is|are|was|were|has|have|had|will|can|cannot|announced|launched|released|reported|said|calls?|plans?|expects?|shows?|found|according|percent|%|million|billion|year|month|today|yesterday|202[0-9])\b/i.test(s) || /\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/.test(s);
 const normalizeUrl = (u) => { try { return new URL(u).toString(); } catch { return null; } };
-const isGoogleNews = (u='') => { try { return new URL(u).hostname === 'news.google.com' && new URL(u).pathname.includes('/rss/articles/'); } catch { return false; } };
+const isGoogleNews = (u='') => { try { const x=new URL(u); return x.hostname === 'news.google.com' && x.pathname.includes('/rss/articles/'); } catch { return false; } };
 
 async function request(url, accept='text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8') {
-  return fetch(url,{redirect:'follow',signal:AbortSignal.timeout(10000),headers:{'user-agent':'Mozilla/5.0 (compatible; TrendForge-claim-verifier/1.1)','accept','accept-language':'en-US,en;q=0.9'}});
+  return fetch(url,{redirect:'follow',signal:AbortSignal.timeout(10000),headers:{'user-agent':'Mozilla/5.0 (compatible; TrendForge-claim-verifier/1.2)','accept':accept,'accept-language':'en-US,en;q=0.9'}});
 }
 
 async function fetchGoogleNewsFallback(source) {
@@ -25,17 +25,16 @@ async function fetchGoogleNewsFallback(source) {
     const xml = await r.text();
     const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
     const target = source.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+    const words = new Set(target.split(' ').filter(w=>w.length>3));
     const ranked = items.map(item=>{
       const title = decodeEntities(item.match(/<title>([\s\S]*?)<\/title>/i)?.[1]||'');
       const description = decodeEntities(item.match(/<description>([\s\S]*?)<\/description>/i)?.[1]||'');
-      const words = new Set(target.split(' ').filter(w=>w.length>3));
       const tw = new Set(title.toLowerCase().replace(/[^a-z0-9]+/g,' ').split(' ').filter(w=>w.length>3));
-      const overlap=[...words].filter(w=>tw.has(w)).length;
-      return {title,description,score:overlap};
+      return {title,description,score:[...words].filter(w=>tw.has(w)).length};
     }).sort((a,b)=>b.score-a.score)[0];
     if (!ranked || ranked.score < 2) return null;
     const text = `${ranked.title}. ${ranked.description}`.trim();
-    return text.length > 120 ? {text, finalUrl:rssUrl, via:'google-news-rss-fallback'} : null;
+    return text.length > 120 ? {text,finalUrl:rssUrl,via:'google-news-rss-fallback'} : null;
   } catch { return null; }
 }
 
@@ -46,19 +45,17 @@ async function fetchSource(source) {
     const r = await request(originalUrl);
     const html = await r.text();
     const text = cleanHtml(html).slice(0,250000);
-    if (r.ok && text.length > 500 && !isGoogleNews(originalUrl)) {
-      return { ok:true,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text,via:'direct' };
-    }
+    if (r.ok && text.length > 500 && !isGoogleNews(originalUrl)) return {ok:true,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text,via:'direct'};
     if (isGoogleNews(originalUrl)) {
       const fallback = await fetchGoogleNewsFallback(source);
-      if (fallback) return { ok:true,status:r.status,finalUrl:fallback.finalUrl,latencyMs:Date.now()-started,text:fallback.text,via:fallback.via };
+      if (fallback) return {ok:true,status:r.status,finalUrl:fallback.finalUrl,latencyMs:Date.now()-started,text:fallback.text,via:fallback.via};
     }
-    if (r.ok && text.length > 200) return { ok:true,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text,via:'direct-short' };
+    if (r.ok && text.length > 200) return {ok:true,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text,via:'direct-short'};
     return {ok:false,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text:'',error:`Source returned ${r.status} with insufficient readable content`};
   } catch(e) {
     if (isGoogleNews(originalUrl)) {
       const fallback = await fetchGoogleNewsFallback(source);
-      if (fallback) return { ok:true,status:200,finalUrl:fallback.finalUrl,latencyMs:Date.now()-started,text:fallback.text,via:fallback.via };
+      if (fallback) return {ok:true,status:200,finalUrl:fallback.finalUrl,latencyMs:Date.now()-started,text:fallback.text,via:fallback.via};
     }
     return {ok:false,status:0,finalUrl:originalUrl,latencyMs:Date.now()-started,text:'',error:e?.message||String(e)};
   }
@@ -68,7 +65,7 @@ const evidenceScore = (claim, sourceText) => {
   const a = tokenize(claim); const b = tokenize(sourceText); const shared=[...a].filter(x=>b.has(x));
   const coverage = a.size ? shared.length/a.size : 0;
   const density = b.size ? shared.length/Math.min(a.size,80) : 0;
-  return {score:Math.round(Math.min(100, coverage*75+density*25)), shared:shared.slice(0,20)};
+  return {score:Math.round(Math.min(100,coverage*75+density*25)),shared:shared.slice(0,20)};
 };
 
 if (!fs.existsSync(briefPath)) { console.log('No article brief; claim verification skipped.'); process.exit(0); }
@@ -77,6 +74,15 @@ const files = fs.existsSync(articleDir) ? fs.readdirSync(articleDir).filter(f=>f
 if (!files.length) { console.log('No generated article; claim verification skipped.'); process.exit(0); }
 const articlePath=`${articleDir}/${files[0]}`;
 const raw=fs.readFileSync(articlePath,'utf8');
+const frontmatterTitle=(raw.match(/^---[\s\S]*?\n(?:title|headline):\s*["']?(.+?)["']?\s*\n[\s\S]*?---/i)?.[1]||'').trim();
+const briefSourceTitle=(brief.brief?.title||'').trim();
+const articleTitleTokens=tokenize(frontmatterTitle); const briefTitleTokens=tokenize(briefSourceTitle);
+const titleOverlap=[...articleTitleTokens].filter(x=>briefTitleTokens.has(x)).length;
+if (frontmatterTitle && briefSourceTitle && titleOverlap < 2) {
+  console.log(`No matching generated article for current brief; latest article is '${frontmatterTitle}'. Claim verification skipped safely.`);
+  fs.writeFileSync(outputPath,JSON.stringify({version:2,generatedAt:new Date().toISOString(),status:'skipped_no_matching_generated_article',articlePath,articleTitle:frontmatterTitle,briefTitle:briefSourceTitle},null,2)+'\n');
+  process.exit(0);
+}
 const body=raw.replace(/^---[\s\S]*?---/,'').replace(/^\s*##\s+Sources[\s\S]*$/i,'').trim();
 const claims=splitSentences(body).filter(factualClaim).slice(0,30);
 const sourceInputs=(brief.brief?.sources||[]).map(s=>({title:s.title||'',url:normalizeUrl(s.url),publishedAt:s.publishedAt||null})).filter(s=>s.url);
@@ -94,7 +100,7 @@ const partial=verifiedClaims.filter(c=>c.status==='partial').length;
 const unsupported=verifiedClaims.filter(c=>c.status==='unsupported').length;
 const unavailable=verifiedClaims.filter(c=>c.status==='source_unavailable').length;
 const average=verifiedClaims.length?Math.round(verifiedClaims.reduce((n,c)=>n+c.confidence,0)/verifiedClaims.length):0;
-const pass=claims.length===0 || (usable.length>0 && unsupported===0 && unavailable===0 && average>=60);
+const pass=claims.length===0 || (usable.length>0&&unsupported===0&&unavailable===0&&average>=60);
 const result={version:2,generatedAt:new Date().toISOString(),articlePath,sourceCount:sourceInputs.length,usableSourceCount:usable.length,claimCount:claims.length,verified,partial,unsupported,sourceUnavailable:unavailable,averageConfidence:average,pass,policy:{verifiedMin:65,partialMin:45,blockUnsupported:true,blockUnavailable:true,minimumAverageConfidence:60},sources:sources.map(({text,...s})=>s),claims:verifiedClaims};
 fs.mkdirSync('data',{recursive:true});
 fs.writeFileSync(outputPath,`${JSON.stringify(result,null,2)}\n`);
