@@ -17,6 +17,8 @@ on:
       - 'scripts/v2-self-check.mjs'
       - 'scripts/ai-provider-router.mjs'
       - 'scripts/trendforge-writer-engine.mjs'
+      - 'scripts/trendforge-native-writer.mjs'
+      - 'scripts/run-native-writer-fallback.mjs'
       - 'scripts/trendforge-editorial-policy.mjs'
       - 'scripts/validate-writer-output.mjs'
       - 'scripts/generate-article.ts'
@@ -60,7 +62,13 @@ jobs:
       - name: AI provider state check
         run: node scripts/ai-provider-router.mjs
       - name: Generate article
-        run: node scripts/generate-article-adaptive.mjs
+        run: |
+          npx tsx scripts/run-native-writer-fallback.mjs
+          if [ -f data/native-writer-published.json ]; then
+            echo 'Native Writer Engine produced the article; skipping provider-dependent generator.'
+            exit 0
+          fi
+          node scripts/generate-article-adaptive.mjs
       - name: Validate Writer Engine output
         run: node scripts/validate-writer-output.mjs
       - name: Verify article claims
