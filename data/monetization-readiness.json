@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-14T10:56:22.615Z",
+  "mode": "readiness_only",
+  "checks": [
+    {
+      "name": "AdSense client configuration",
+      "ok": false
+    },
+    {
+      "name": "AdSense publisher configuration",
+      "ok": false
+    },
+    {
+      "name": "ads.txt",
+      "ok": false
+    },
+    {
+      "name": "site privacy page",
+      "ok": true
+    }
+  ],
+  "readyForAdSenseFoundation": false,
+  "note": "Actual AdSense approval, crawling and ad serving remain controlled by Google and are not simulated by the pipeline."
+}
