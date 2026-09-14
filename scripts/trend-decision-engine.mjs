@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 
 const scoredPath = 'data/scored-trends.json';
+const verificationPath = 'data/source-verification.json';
 const articlesDir = 'content/articles';
 const outputPath = 'data/decision-queue.json';
 const memoryPath = 'data/decision-memory.json';
@@ -61,6 +62,16 @@ function loadMemory() {
   try { return JSON.parse(fs.readFileSync(memoryPath, 'utf8')); } catch { return { version: 1, decisions: [], categoryStats: {}, recentTopics: [] }; }
 }
 
+function loadSourceVerification() {
+  if (!fs.existsSync(verificationPath)) return new Map();
+  try {
+    const payload = JSON.parse(fs.readFileSync(verificationPath, 'utf8'));
+    return new Map((payload.records ?? []).map((record) => [record.link, record]));
+  } catch {
+    return new Map();
+  }
+}
+
 function saveMemory(memory) {
   fs.mkdirSync('data', { recursive: true });
   fs.writeFileSync(memoryPath, `${JSON.stringify(memory, null, 2)}\n`);
@@ -80,6 +91,7 @@ if (!fs.existsSync(scoredPath)) {
 
 const research = JSON.parse(fs.readFileSync(scoredPath, 'utf8'));
 const trends = research.trends ?? [];
+const verificationByLink = loadSourceVerification();
 const existing = loadExistingArticles();
 const memory = loadMemory();
 const categoryCounts = Object.fromEntries(Object.keys(categoryKeywords).map((category) => [category, 0]));
@@ -93,15 +105,31 @@ const recentCategories = existing
 
 const decisions = trends.map((item, index) => {
   const category = inferCategory(item);
-  const sourceCount = Array.isArray(item.sources) && item.sources.length
+  const verification = verificationByLink.get(item.link);
+  const originalSourceCount = Array.isArray(item.sources) && item.sources.length
     ? item.sources.length
     : (item.sourceName || item.source || item.sourceUrl ? 1 : 0);
+  const reachableSourceCount = Number(verification?.relevantReachableSourceCount ?? verification?.reachableSourceCount ?? 0);
+  const discoveredSourceCount = Number(verification?.discoveredSourceCount ?? 0);
+  const independentDomainCount = Number(verification?.uniqueDomainCount ?? 0);
+  // Evidence Discovery is now authoritative input to prioritization. Original feed
+  // sources remain the fallback when verification data is unavailable.
+  const sourceCount = verification
+    ? Math.max(originalSourceCount, reachableSourceCount)
+    : originalSourceCount;
   const baseScore = clamp(Number(item.score) || 0);
   const ageHours = Number.isFinite(new Date(item.publishedAt).getTime())
     ? Math.max(0, (Date.now() - new Date(item.publishedAt).getTime()) / 36e5)
     : 9999;
   const freshness = clamp(ageHours <= 6 ? 100 : ageHours <= 24 ? 80 : ageHours <= 72 ? 48 : ageHours <= 168 ? 20 : 0);
-  const sourceConfidence = clamp(sourceCount >= 2 ? 95 : sourceCount === 1 ? 70 : 35);
+  const originalSourceConfidence = clamp(originalSourceCount >= 2 ? 95 : originalSourceCount === 1 ? 70 : 35);
+  const evidenceConfidence = verification
+    ? clamp(Number(verification.confidence) || 0)
+    : originalSourceConfidence;
+  const sourceConfidence = verification
+    ? Math.max(originalSourceConfidence, evidenceConfidence)
+    : originalSourceConfidence;
+  const evidenceReady = independentDomainCount >= 2 && reachableSourceCount >= 2;
   const titleDuplicate = existing.find((article) => normalize(article.title) === normalize(item.title));
   const maxSimilarity = existing.reduce((max, article) => Math.max(max, overlap(item.title, article.title)), 0);
   const novelty = clamp(100 - Math.round(maxSimilarity * 100));
@@ -118,6 +146,12 @@ const decisions = trends.map((item, index) => {
   if (item.eligible) reasons.push('research eligibility passed');
   else reasons.push('research eligibility is not yet proven');
   reasons.push(`${sourceCount} source(s) detected`);
+  if (verification) {
+    reasons.push(`evidence verification: ${reachableSourceCount} relevant reachable source(s), ${independentDomainCount} independent domain(s)`);
+    if (discoveredSourceCount > 0) reasons.push(`${discoveredSourceCount} discovered publisher source(s) available`);
+    if (evidenceReady) reasons.push('multi-source evidence ready');
+    else reasons.push('multi-source evidence not yet proven');
+  }
   reasons.push(`topic freshness ${freshness}/100`);
   reasons.push(`topic novelty ${novelty}/100`);
   reasons.push(`source confidence ${sourceConfidence}/100`);
@@ -130,7 +164,7 @@ const decisions = trends.map((item, index) => {
 
   let decision = 'hold';
   if (titleDuplicate || maxSimilarity >= 0.75) decision = 'reject';
-  else if (decisionScore >= 80 && confidence >= 70) decision = 'publish_candidate';
+  else if (decisionScore >= 80 && confidence >= 70 && (!verification || evidenceReady)) decision = 'publish_candidate';
   else if (decisionScore >= 65 && confidence >= 55) decision = 'review';
 
   return {
@@ -140,6 +174,11 @@ const decisions = trends.map((item, index) => {
     description: item.description || '',
     category,
     sourceCount,
+    originalSourceCount,
+    reachableSourceCount,
+    discoveredSourceCount,
+    independentDomainCount,
+    evidenceReady,
     baseScore,
     confidence,
     novelty,
@@ -156,16 +195,19 @@ for (const [index, decision] of decisions.entries()) decision.rank = index + 1;
 
 const now = new Date().toISOString();
 const queue = {
-  version: 2,
+  version: 3,
   generatedAt: now,
+  evidenceIntegrated: verificationByLink.size > 0,
   policy: {
     publishCandidateMinScore: 80,
     reviewMinScore: 65,
     minimumConfidenceForPublishCandidate: 70,
+    minimumIndependentDomainsForPublishCandidate: 2,
+    minimumReachableSourcesForPublishCandidate: 2,
     hardRejectSimilarity: 0.75,
     adaptiveCategoryBalance: true,
     recentCategoryPenalty: true,
-    note: 'Decision engine prioritizes candidates; existing research, quality, duplicate, safety and SEO gates remain authoritative.'
+    note: 'Decision engine consumes verified, candidate-scoped evidence when available. Existing research, writer, quality, duplicate, safety and SEO gates remain authoritative.'
   },
   summary: {
     total: decisions.length,
@@ -201,9 +243,14 @@ appendLog(decisions.map((d) => ({
   adaptivePriority: d.adaptivePriority,
   confidence: d.confidence,
   novelty: d.novelty,
+  evidenceReady: d.evidenceReady,
+  reachableSourceCount: d.reachableSourceCount,
+  discoveredSourceCount: d.discoveredSourceCount,
+  independentDomainCount: d.independentDomainCount,
   reasons: d.reasons,
 })));
 
-console.log(`Decision Engine v2: ${decisions.length} candidate(s) evaluated.`);
+console.log(`Decision Engine v3: ${decisions.length} candidate(s) evaluated; evidence integration ${verificationByLink.size ? 'active' : 'fallback-only'}.`);
 console.log(`Decision summary: ${queue.summary.publishCandidates} publish candidate(s), ${queue.summary.review} review, ${queue.summary.hold} hold, ${queue.summary.reject} reject.`);
+console.log(`Decision evidence: ${decisions.filter((d) => d.evidenceReady).length} candidate(s) have >=2 relevant reachable sources across >=2 independent domains.`);
 if (decisions[0]) console.log(`Top adaptive decision: ${decisions[0].decision} — ${decisions[0].title} (${decisions[0].adaptivePriority}/100 priority, decision ${decisions[0].decisionScore}/100, confidence ${decisions[0].confidence}/100).`);
