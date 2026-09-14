@@ -1,4 +1,3 @@
-import fs from 'node:fs';
 import { available, mark } from './ai-provider-router.mjs';
 
 const profiles={
@@ -34,7 +33,5 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
     try{const text=await request(provider,enginePrompt);if(text.trim()){console.log(`TrendForge Writer Engine provider: ${provider}`);return{text,provider};}mark(provider,200,'Empty model response');}
     catch(e){const message=e instanceof Error?e.message:String(e);console.log(`TrendForge Writer Engine: ${provider} failed; router recorded ${message}.`);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);}
   }
-  fs.mkdirSync('data',{recursive:true});
-  fs.writeFileSync('data/ai-provider-state.json',JSON.stringify({version:1,providers:Object.fromEntries(available.map(p=>[p,{status:'attempted'}])),updatedAt:new Date().toISOString()},null,2)+'\n',{flag:'a'});
   throw new Error('TrendForge Writer Engine: no available AI provider.');
 }
