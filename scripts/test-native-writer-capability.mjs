@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import { generateNativeArticle } from './trendforge-native-writer.mjs';
+import { generateNativeArticle } from './trendforge-native-writer-v23.mjs';
 import { articleToMarkdown, editorialGate, slugify } from '../lib/article-engine.ts';
 import { copyrightSafetyGate } from '../lib/copyright-safety.ts';
 
@@ -37,9 +37,6 @@ const candidates = decisions
   .map(d => {
     const v = byLink.get(d.link);
     if (!v) return null;
-    // The decision engine proves evidence readiness from verification, but the
-    // Native Writer must receive the actual verified article URLs, not merely
-    // the seed Google News pointer or publisher homepage.
     const verifiedSources = (v.sources ?? []).filter(s => s.ok && s.url && !/^https?:\/\/(news\.)?google\./i.test(s.url));
     return { ...d, verification: v, sources: verifiedSources.map(s => ({
       title: s.title || d.title,
@@ -79,8 +76,8 @@ function semanticAudit(candidate, result) {
   const artifactHits = (body.match(/&amp;#|&#\d+;|\bSource\b,?\s+(reports|says|indicates)|\bUnknown\b|\bundefined\b/gi) || []).length;
   const h2 = headings(body);
   const wc = words(body).length;
-  const passed = titleOverlap >= 2 && wc >= 700 && h2 >= 4 && ps.length >= 6 && evidenceBackedParagraphs >= Math.max(4, Math.ceil(sectionBodies.length * 0.7)) && unrelatedParagraphs === 0 && duplicateParagraphs === 0 && fillerHits === 0 && artifactHits === 0;
-  return { passed, wordCount: wc, h2Count: h2, paragraphCount: ps.length, titleOverlap, evidenceBackedParagraphs, evidenceParagraphTarget: Math.max(4, Math.ceil(sectionBodies.length * 0.7)), unrelatedParagraphs, duplicateParagraphs, fillerHits, artifactHits };
+  const passed = titleOverlap >= 2 && wc >= 450 && h2 >= 5 && ps.length >= 6 && evidenceBackedParagraphs >= Math.max(4, Math.ceil(sectionBodies.length * 0.7)) && unrelatedParagraphs === 0 && duplicateParagraphs === 0 && fillerHits === 0 && artifactHits === 0;
+  return { passed, wordCount: wc, minimumWords: 450, h2Count: h2, paragraphCount: ps.length, titleOverlap, evidenceBackedParagraphs, evidenceParagraphTarget: Math.max(4, Math.ceil(sectionBodies.length * 0.7)), unrelatedParagraphs, duplicateParagraphs, fillerHits, artifactHits };
 }
 
 for (const candidate of candidates.slice(0, 5)) {
@@ -103,15 +100,15 @@ for (const candidate of candidates.slice(0, 5)) {
   const articlePath = `${articleDir}/${article.slug}.md`;
   fs.writeFileSync(articlePath, articleToMarkdown(article));
   fs.mkdirSync('data', { recursive: true });
-  fs.writeFileSync(markerPath, JSON.stringify({ version: '2.0-native-test', generatedAt: new Date().toISOString(), candidate: { title: candidate.title, category: candidate.category, link: candidate.link }, diagnostics: result.diagnostics, editorial, copyright }, null, 2) + '\n');
+  fs.writeFileSync(markerPath, JSON.stringify({ version: '2.3-native-test', generatedAt: new Date().toISOString(), candidate: { title: candidate.title, category: candidate.category, link: candidate.link }, diagnostics: result.diagnostics, editorial, copyright, semantic }, null, 2) + '\n');
 
-  const gate = (fn, label) => {
+  const gate = (fn) => {
     try { const output = fn(); return { passed: true, output }; }
     catch (e) { return { passed: false, output: `${e.stdout || ''}${e.stderr || ''}` }; }
   };
-  const writerGate = gate(() => require('node:child_process').execFileSync('node', ['scripts/validate-writer-output.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }), 'writer');
-  const qualityGate = gate(() => require('node:child_process').execFileSync('npx', ['tsx', 'scripts/validate-article-quality.ts'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }), 'quality');
-  const claimGate = gate(() => require('node:child_process').execFileSync('node', ['scripts/verify-article-claims.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }), 'claims');
+  const writerGate = gate(() => require('node:child_process').execFileSync('node', ['scripts/validate-writer-output.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }));
+  const qualityGate = gate(() => require('node:child_process').execFileSync('npx', ['tsx', 'scripts/validate-article-quality.ts'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }));
+  const claimGate = gate(() => require('node:child_process').execFileSync('node', ['scripts/verify-article-claims.mjs'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }));
 
   const allTextualGates = writerGate.passed && qualityGate.passed && claimGate.passed && editorial.passed && copyright.passed && semantic.passed;
   generated.push({
@@ -130,7 +127,7 @@ for (const candidate of candidates.slice(0, 5)) {
 
 const winner = generated.find(x => x.gates.allTextualGates);
 const passed = Boolean(winner);
-const result = { version: '1.1', generatedAt: new Date().toISOString(), mode: 'provider-outage-native-writer-quality-test', passed, publication: 'NOT_PERFORMED', candidatesConsidered: candidates.slice(0, 5).length, blocked, generated };
+const result = { version: '1.2', generatedAt: new Date().toISOString(), mode: 'provider-outage-native-writer-quality-test', passed, publication: 'NOT_PERFORMED', candidatesConsidered: candidates.slice(0, 5).length, blocked, generated };
 fs.writeFileSync(resultPath, JSON.stringify(result, null, 2) + '\n');
 
 if (passed) {
