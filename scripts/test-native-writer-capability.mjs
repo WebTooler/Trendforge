@@ -43,7 +43,6 @@ const candidates = decisions
 
 if (!candidates.length) throw new Error('NATIVE_WRITER_TEST_BLOCKED: no fresh candidate meets the multi-source evidence requirement.');
 
-const originalArticles = fs.existsSync(articleDir) ? fs.readdirSync(articleDir).filter(f => f.endsWith('.md')) : [];
 const generated = [];
 const blocked = [];
 
@@ -66,13 +65,29 @@ function semanticAudit(candidate, result) {
   const artifactHits = (body.match(/&amp;#|&#\d+;|\bSource\b,?\s+(reports|says|indicates)|\bUnknown\b|\bundefined\b/gi) || []).length;
   const h2 = headings(body);
   const wc = words(body).length;
-  const passed = titleOverlap >= 2 && wc >= 700 && h2 >= 4 && ps.length >= 6 && evidenceBackedParagraphs >= Math.max(4, Math.ceil(sectionBodies.length * 0.7)) && unrelatedParagraphs === 0 && duplicateParagraphs === 0 && fillerHits === 0 && artifactHits === 0;
-  return { passed, wordCount: wc, h2Count: h2, paragraphCount: ps.length, titleOverlap, evidenceBackedParagraphs, evidenceParagraphTarget: Math.max(4, Math.ceil(sectionBodies.length * 0.7)), unrelatedParagraphs, duplicateParagraphs, fillerHits, artifactHits };
+  const evidenceTarget = Math.max(4, Math.ceil(sectionBodies.length * 0.7));
+  const passed = titleOverlap >= 2 && wc >= 700 && h2 >= 4 && ps.length >= 6 && evidenceBackedParagraphs >= evidenceTarget && unrelatedParagraphs === 0 && duplicateParagraphs === 0 && fillerHits === 0 && artifactHits === 0;
+  return { passed, wordCount: wc, h2Count: h2, paragraphCount: ps.length, titleOverlap, evidenceBackedParagraphs, evidenceParagraphTarget: evidenceTarget, unrelatedParagraphs, duplicateParagraphs, fillerHits, artifactHits };
 }
 
-for (const candidate of candidates.slice(0, 5)) {
+for (const selected of candidates.slice(0, 5)) {
+  const record = selected.verification;
+  // The production fallback must consume the complete candidate-scoped verified source set,
+  // including discovered publisher sources, not just the original seed links.
+  const verifiedSources = [
+    ...(Array.isArray(record.sources) ? record.sources : []),
+    ...(Array.isArray(record.discoveredSources) ? record.discoveredSources : []),
+    ...(Array.isArray(record.reachableSources) ? record.reachableSources : []),
+  ]
+    .filter(s => s && typeof s.url === 'string' && s.url.startsWith('http'))
+    .filter((s, i, arr) => arr.findIndex(x => x.url === s.url) === i)
+    .slice(0, 10);
+  const candidate = { ...selected, sources: verifiedSources };
+
   console.log(`NATIVE_TEST candidate: ${candidate.category} — ${candidate.title}`);
-  console.log(`NATIVE_TEST evidence: ${candidate.verification.reachableSourceCount ?? 0} reachable source(s), ${candidate.verification.uniqueDomainCount ?? 0} independent domain(s), ${candidate.verification.discoveredSourceCount ?? 0} discovered source(s).`);
+  console.log(`NATIVE_TEST evidence: ${record.reachableSourceCount ?? 0} reachable source(s), ${record.uniqueDomainCount ?? 0} independent domain(s), ${record.discoveredSourceCount ?? 0} discovered source(s).`);
+  console.log(`NATIVE_TEST source set: ${verifiedSources.length} candidate-scoped verified/reachable source URL(s).`);
+
   const result = await generateNativeArticle({ candidate, existingTitles });
   if (!result.ok) {
     blocked.push({ title: candidate.title, category: candidate.category, reason: result.reason });
@@ -119,14 +134,12 @@ for (const candidate of candidates.slice(0, 5)) {
 
   console.log(`NATIVE_TEST gates: writer=${writerGate.passed ? 'PASS' : 'FAIL'} editorial=${editorial.passed ? 'PASS' : 'FAIL'} copyright=${copyright.passed ? 'PASS' : 'FAIL'} quality=${qualityGate.passed ? 'PASS' : 'FAIL'} claims=${claimGate.passed ? 'PASS' : 'FAIL'} semantic=${semantic.passed ? 'PASS' : 'FAIL'}`);
   console.log(`NATIVE_TEST article: ${article.title} — ${semantic.wordCount} words, ${semantic.h2Count} H2, ${semantic.evidenceBackedParagraphs}/${semantic.evidenceParagraphTarget} evidence-backed paragraphs.`);
-
-  // The test article is intentionally not published or committed. It exists only so the exact production writer/quality/claim gates can inspect it.
   break;
 }
 
 const winner = generated.find(x => x.gates.allTextualGates);
 const passed = Boolean(winner);
-const result = { version: '1.0', generatedAt: new Date().toISOString(), mode: 'provider-outage-native-writer-quality-test', passed, publication: 'NOT_PERFORMED', candidatesConsidered: candidates.slice(0, 5).length, blocked, generated: generated.map(x => ({ ...x, article: x.article })) };
+const result = { version: '1.0', generatedAt: new Date().toISOString(), mode: 'provider-outage-native-writer-quality-test', passed, publication: 'NOT_PERFORMED', candidatesConsidered: candidates.slice(0, 5).length, blocked, generated };
 fs.writeFileSync(resultPath, JSON.stringify(result, null, 2) + '\n');
 
 if (passed) {
