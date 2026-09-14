@@ -51,7 +51,8 @@ function loadExistingArticles() {
       const raw = fs.readFileSync(`${articlesDir}/${name}`, 'utf8');
       const title = raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1] || name.replace(/\.md$/, '');
       const category = raw.match(/^category:\s*"([\s\S]*?)"\s*$/m)?.[1] || '';
-      return { title, category };
+      const publishedAt = raw.match(/^publishedAt:\s*"([\s\S]*?)"\s*$/m)?.[1] || '';
+      return { title, category, publishedAt };
     });
 }
 
@@ -83,6 +84,12 @@ const existing = loadExistingArticles();
 const memory = loadMemory();
 const categoryCounts = Object.fromEntries(Object.keys(categoryKeywords).map((category) => [category, 0]));
 for (const article of existing) if (categoryCounts[article.category] !== undefined) categoryCounts[article.category] += 1;
+const totalPublished = Math.max(1, existing.length);
+const recentCategories = existing
+  .map((article) => ({ category: article.category, time: new Date(article.publishedAt).getTime() || 0 }))
+  .sort((a, b) => b.time - a.time)
+  .slice(0, 3)
+  .map((item) => item.category);
 
 const decisions = trends.map((item, index) => {
   const category = inferCategory(item);
@@ -102,6 +109,10 @@ const decisions = trends.map((item, index) => {
   const eligibility = item.eligible ? 100 : 55;
   const confidence = Math.round(sourceConfidence * 0.45 + freshness * 0.20 + novelty * 0.20 + eligibility * 0.15);
   const decisionScore = Math.round(baseScore * 0.45 + confidence * 0.30 + novelty * 0.15 + categoryNeed * 0.10);
+  const categoryShare = categoryCounts[category] / totalPublished;
+  const balanceBonus = categoryShare < 0.10 ? 8 : categoryShare > 0.35 ? -8 : 0;
+  const recentPenalty = recentCategories[0] === category ? 12 : recentCategories.includes(category) ? 5 : 0;
+  const adaptivePriority = clamp(decisionScore + (categoryNeed >= 90 ? 8 : 0) + balanceBonus - recentPenalty);
 
   const reasons = [];
   if (item.eligible) reasons.push('research eligibility passed');
@@ -111,6 +122,9 @@ const decisions = trends.map((item, index) => {
   reasons.push(`topic novelty ${novelty}/100`);
   reasons.push(`source confidence ${sourceConfidence}/100`);
   if (categoryNeed >= 90) reasons.push(`category gap detected: ${category}`);
+  if (balanceBonus > 0) reasons.push(`underrepresented category bonus +${balanceBonus}`);
+  if (balanceBonus < 0) reasons.push(`overrepresented category adjustment ${balanceBonus}`);
+  if (recentPenalty > 0) reasons.push(`recent category penalty -${recentPenalty}`);
   if (titleDuplicate) reasons.push('exact title duplicate detected');
   if (maxSimilarity >= 0.55) reasons.push('high title similarity with an existing article');
 
@@ -131,23 +145,26 @@ const decisions = trends.map((item, index) => {
     novelty,
     categoryNeed,
     decisionScore,
+    adaptivePriority,
     decision,
     reasons,
   };
 });
 
-decisions.sort((a, b) => b.decisionScore - a.decisionScore);
+decisions.sort((a, b) => b.adaptivePriority - a.adaptivePriority || b.decisionScore - a.decisionScore);
 for (const [index, decision] of decisions.entries()) decision.rank = index + 1;
 
 const now = new Date().toISOString();
 const queue = {
-  version: 1,
+  version: 2,
   generatedAt: now,
   policy: {
     publishCandidateMinScore: 80,
     reviewMinScore: 65,
     minimumConfidenceForPublishCandidate: 70,
     hardRejectSimilarity: 0.75,
+    adaptiveCategoryBalance: true,
+    recentCategoryPenalty: true,
     note: 'Decision engine prioritizes candidates; existing research, quality, duplicate, safety and SEO gates remain authoritative.'
   },
   summary: {
@@ -166,7 +183,7 @@ fs.writeFileSync(outputPath, `${JSON.stringify(queue, null, 2)}\n`);
 const nextMemory = {
   version: 1,
   updatedAt: now,
-  decisions: [...memory.decisions, ...decisions.slice(0, 20).map((d) => ({ timestamp: now, title: d.title, category: d.category, decision: d.decision, score: d.decisionScore, confidence: d.confidence }))].slice(-200),
+  decisions: [...memory.decisions, ...decisions.slice(0, 20).map((d) => ({ timestamp: now, title: d.title, category: d.category, decision: d.decision, score: d.decisionScore, adaptivePriority: d.adaptivePriority, confidence: d.confidence }))].slice(-200),
   categoryStats: Object.fromEntries(Object.keys(categoryCounts).map((category) => [category, {
     publishedCount: categoryCounts[category],
     queuedCount: decisions.filter((d) => d.category === category && d.decision === 'publish_candidate').length,
@@ -181,11 +198,12 @@ appendLog(decisions.map((d) => ({
   category: d.category,
   decision: d.decision,
   score: d.decisionScore,
+  adaptivePriority: d.adaptivePriority,
   confidence: d.confidence,
   novelty: d.novelty,
   reasons: d.reasons,
 })));
 
-console.log(`Decision Engine v1: ${decisions.length} candidate(s) evaluated.`);
+console.log(`Decision Engine v2: ${decisions.length} candidate(s) evaluated.`);
 console.log(`Decision summary: ${queue.summary.publishCandidates} publish candidate(s), ${queue.summary.review} review, ${queue.summary.hold} hold, ${queue.summary.reject} reject.`);
-if (decisions[0]) console.log(`Top decision: ${decisions[0].decision} — ${decisions[0].title} (${decisions[0].decisionScore}/100, confidence ${decisions[0].confidence}/100).`);
+if (decisions[0]) console.log(`Top adaptive decision: ${decisions[0].decision} — ${decisions[0].title} (${decisions[0].adaptivePriority}/100 priority, decision ${decisions[0].decisionScore}/100, confidence ${decisions[0].confidence}/100).`);
