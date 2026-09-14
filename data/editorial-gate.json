@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-13T11:49:56.852Z",
-  "provider": "Gemini",
+  "generatedAt": "2026-09-14T02:05:48.157Z",
+  "provider": "Groq",
   "editorial": {
-    "passed": true,
+    "passed": false,
     "checks": {
-      "title": true,
+      "title": false,
       "description": true,
       "content": true,
       "structure": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 6037,
-      "sentenceCount": 38,
+      "normalizedLength": 5485,
+      "sentenceCount": 46,
       "maxSourceSimilarity": 0
     }
   }
