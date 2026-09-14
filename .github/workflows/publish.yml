@@ -14,6 +14,7 @@ on:
       - 'scripts/growth-intelligence.mjs'
       - 'scripts/distribution-intelligence.mjs'
       - 'scripts/monetization-check.mjs'
+      - 'scripts/v2-self-check.mjs'
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
@@ -106,6 +107,8 @@ jobs:
         run: node scripts/distribution-intelligence.mjs
       - name: Monetization readiness
         run: node scripts/monetization-check.mjs
+      - name: V2 self-check
+        run: node scripts/v2-self-check.mjs
       - name: Validate centralized SEO
         run: npx tsx scripts/validate-seo.ts
       - name: Build site
