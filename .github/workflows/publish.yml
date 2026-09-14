@@ -17,6 +17,8 @@ on:
       - 'scripts/v2-self-check.mjs'
       - 'scripts/ai-provider-router.mjs'
       - 'scripts/trendforge-writer-engine.mjs'
+      - 'scripts/trendforge-editorial-policy.mjs'
+      - 'scripts/validate-writer-output.mjs'
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
@@ -59,6 +61,8 @@ jobs:
         run: node scripts/ai-provider-router.mjs
       - name: Generate article
         run: node scripts/generate-article-adaptive.mjs
+      - name: Validate Writer Engine output
+        run: node scripts/validate-writer-output.mjs
       - name: Verify article claims
         run: node scripts/verify-article-claims.mjs
       - name: Editorial intelligence gate
