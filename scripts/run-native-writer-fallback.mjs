@@ -9,6 +9,27 @@ const verificationInput = 'data/source-verification.json';
 const outputDir = 'content/articles';
 const marker = 'data/native-writer-published.json';
 
+// Production runtime guard: Native Writer quality thresholds remain unchanged,
+// but network-heavy hydration must never hold the pipeline indefinitely.
+const CANDIDATE_BUDGET_MS = 12000;
+const TOTAL_BUDGET_MS = 90000;
+const MAX_CANDIDATES = 12;
+const startedAt = Date.now();
+
+const withTimeout = async (promise, timeoutMs) => {
+  let timer;
+  try {
+    return await Promise.race([
+      promise,
+      new Promise((resolve) => {
+        timer = setTimeout(() => resolve({ ok: false, reason: `native writer candidate budget exceeded (${timeoutMs}ms)` }), timeoutMs);
+      }),
+    ]);
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+};
+
 if (fs.existsSync(marker)) fs.rmSync(marker);
 if (available.length > 0) {
   console.log(`Native fallback: ${available.length} AI provider(s) available; normal Writer Engine remains authoritative.`);
@@ -40,10 +61,22 @@ const ranked = trends
   .filter(x => x?.eligible && !existingTitles.has(String(x.title || '').toLowerCase().trim()))
   .sort((a,b) => (b.decisionScore ?? b.score ?? 0) - (a.decisionScore ?? a.score ?? 0));
 
-console.log(`Native fallback: all providers unavailable; testing ${Math.min(ranked.length, 12)} isolated evidence-backed candidate(s).`);
+console.log(`Native fallback: all providers unavailable; testing ${Math.min(ranked.length, MAX_CANDIDATES)} isolated evidence-backed candidate(s).`);
+console.log(`Native fallback runtime guard: ${CANDIDATE_BUDGET_MS}ms/candidate, ${TOTAL_BUDGET_MS}ms total; quality thresholds unchanged.`);
 
-for (const candidate of ranked.slice(0, 12)) {
-  const result = await generateNativeArticle({ candidate, existingTitles });
+for (const candidate of ranked.slice(0, MAX_CANDIDATES)) {
+  const elapsed = Date.now() - startedAt;
+  if (elapsed >= TOTAL_BUDGET_MS) {
+    console.log(`Native fallback stopped: total runtime budget reached (${TOTAL_BUDGET_MS}ms).`);
+    break;
+  }
+
+  const remaining = Math.min(CANDIDATE_BUDGET_MS, TOTAL_BUDGET_MS - elapsed);
+  const result = await withTimeout(
+    generateNativeArticle({ candidate, existingTitles }),
+    remaining,
+  );
+
   if (!result.ok) {
     console.log(`Native fallback skipped: ${candidate.category} — ${candidate.title} — ${result.reason}`);
     continue;
@@ -82,5 +115,5 @@ for (const candidate of ranked.slice(0, 12)) {
   process.exit(0);
 }
 
-console.log('Native fallback: no candidate had enough isolated, topic-relevant evidence for responsible publication.');
+console.log(`Native fallback: no candidate had enough isolated, topic-relevant evidence within the ${TOTAL_BUDGET_MS}ms runtime budget.`);
 process.exit(0);
