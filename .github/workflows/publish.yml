@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/trend-research.mjs'
       - 'scripts/generate-article.ts'
+      - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
       - 'scripts/validate-article-assets.ts'
   schedule:
@@ -72,7 +73,7 @@ jobs:
           if (!results.some(Boolean)) { console.log('No AI provider health check could run.'); process.exit(1); }
           NODE
       - name: Generate article
-        run: npx tsx scripts/generate-article.ts
+        run: node scripts/generate-article-adaptive.mjs
       - name: Validate content quality gate
         run: npx tsx scripts/validate-article-quality.ts
       - name: Generate article-specific images
