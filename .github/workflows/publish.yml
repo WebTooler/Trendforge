@@ -11,6 +11,10 @@ on:
   schedule:
     - cron: '17 */6 * * *'
 
+concurrency:
+  group: trendforge-pipeline-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -87,8 +91,12 @@ jobs:
           set -euo pipefail
           git config user.name 'trendforge-bot'
           git config user.email 'trendforge-bot@users.noreply.github.com'
+          git fetch origin main
+          git rebase origin/main
           git add data lib/articles.ts public/images/articles
           if [ -d content/articles ]; then git add content/articles; fi
+          echo '--- staged changes ---'
+          git status --short
           if git diff --cached --quiet; then
             echo 'No pipeline output changes to commit.'
             exit 0
@@ -96,10 +104,15 @@ jobs:
           git commit -m 'chore: update TrendForge content pipeline'
           for attempt in 1 2 3; do
             echo "Push attempt $attempt/3"
-            if git push origin HEAD:main; then exit 0; fi
-            if [ "$attempt" -lt 3 ]; then
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then exit 0; fi
+            else
+              git rebase --abort || true
               git pull --rebase --autostash origin main
-              sleep $((attempt * 5))
+              if git push origin HEAD:main; then exit 0; fi
             fi
+            if [ "$attempt" -lt 3 ]; then sleep $((attempt * 5)); fi
           done
+          echo 'Unable to push pipeline output after 3 attempts.'
           exit 1
