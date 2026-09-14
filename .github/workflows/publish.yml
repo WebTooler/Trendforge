@@ -8,6 +8,7 @@ on:
       - 'scripts/score-trends.ts'
       - 'scripts/trend-decision-engine.mjs'
       - 'scripts/verify-trend-sources.mjs'
+      - 'scripts/verify-article-claims.mjs'
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
@@ -79,6 +80,8 @@ jobs:
           NODE
       - name: Generate article
         run: node scripts/generate-article-adaptive.mjs
+      - name: Verify article claims
+        run: node scripts/verify-article-claims.mjs
       - name: Validate content quality gate
         run: npx tsx scripts/validate-article-quality.ts
       - name: Generate article-specific images
