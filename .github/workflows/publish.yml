@@ -10,6 +10,10 @@ on:
       - 'scripts/verify-trend-sources.mjs'
       - 'scripts/verify-article-claims.mjs'
       - 'scripts/editorial-intelligence.mjs'
+      - 'scripts/article-lifecycle.mjs'
+      - 'scripts/growth-intelligence.mjs'
+      - 'scripts/distribution-intelligence.mjs'
+      - 'scripts/monetization-check.mjs'
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
@@ -94,6 +98,14 @@ jobs:
         run: npx tsx scripts/validate-article-assets.ts
       - name: Sync published articles into site
         run: npx tsx scripts/sync-articles.ts
+      - name: Article lifecycle intelligence
+        run: node scripts/article-lifecycle.mjs
+      - name: Growth intelligence
+        run: node scripts/growth-intelligence.mjs
+      - name: Distribution intelligence
+        run: node scripts/distribution-intelligence.mjs
+      - name: Monetization readiness
+        run: node scripts/monetization-check.mjs
       - name: Validate centralized SEO
         run: npx tsx scripts/validate-seo.ts
       - name: Build site
