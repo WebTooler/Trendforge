@@ -5,18 +5,65 @@ const articleDir = 'content/articles';
 const outputPath = 'data/claim-verification.json';
 const STOP = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies','industry','development','developments','according','reported']);
 const tokenize = (text='') => new Set(text.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length >= 4 && !STOP.has(w)));
-const cleanHtml = (html='') => html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/&#39;/gi,"'").replace(/&quot;/gi,'"').replace(/\s+/g,' ').trim();
+const cleanHtml = (html='') => html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/&#39;/gi,"'").replace(/&quot;/gi,'"').replace(/&#x27;/gi,"'").replace(/&#x2F;/gi,'/').replace(/\s+/g,' ').trim();
+const decodeEntities = (text='') => cleanHtml(text).replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n))).replace(/&#x([0-9a-f]+);/gi,(_,n)=>String.fromCodePoint(parseInt(n,16)));
 const splitSentences = (text='') => text.replace(/\s+/g,' ').split(/(?<=[.!?])\s+(?=[A-Z0-9"“])/).map(s=>s.trim()).filter(s=>s.length >= 45 && s.length <= 420);
 const factualClaim = (s) => /\b(is|are|was|were|has|have|had|will|can|cannot|announced|launched|released|reported|said|calls?|plans?|expects?|shows?|found|according|percent|%|million|billion|year|month|today|yesterday|202[0-9])\b/i.test(s) || /\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/.test(s);
 const normalizeUrl = (u) => { try { return new URL(u).toString(); } catch { return null; } };
-async function fetchSource(url) {
-  const started = Date.now();
-  try {
-    const r = await fetch(url,{redirect:'follow',signal:AbortSignal.timeout(10000),headers:{'user-agent':'TrendForge-claim-verifier/1.0','accept':'text/html,application/xhtml+xml'}});
-    const html = await r.text();
-    return { ok:r.ok, status:r.status, finalUrl:r.url||url, latencyMs:Date.now()-started, text:cleanHtml(html).slice(0,250000) };
-  } catch(e) { return {ok:false,status:0,finalUrl:url,latencyMs:Date.now()-started,text:'',error:e?.message||String(e)}; }
+const isGoogleNews = (u='') => { try { return new URL(u).hostname === 'news.google.com' && new URL(u).pathname.includes('/rss/articles/'); } catch { return false; } };
+
+async function request(url, accept='text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8') {
+  return fetch(url,{redirect:'follow',signal:AbortSignal.timeout(10000),headers:{'user-agent':'Mozilla/5.0 (compatible; TrendForge-claim-verifier/1.1)','accept','accept-language':'en-US,en;q=0.9'}});
 }
+
+async function fetchGoogleNewsFallback(source) {
+  const query = encodeURIComponent(source.title.replace(/\s+-\s+[^-]+$/,'').slice(0,180));
+  const rssUrl = `https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
+  try {
+    const r = await request(rssUrl,'application/rss+xml,application/xml,text/xml,*/*;q=0.8');
+    if (!r.ok) return null;
+    const xml = await r.text();
+    const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
+    const target = source.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+    const ranked = items.map(item=>{
+      const title = decodeEntities(item.match(/<title>([\s\S]*?)<\/title>/i)?.[1]||'');
+      const description = decodeEntities(item.match(/<description>([\s\S]*?)<\/description>/i)?.[1]||'');
+      const words = new Set(target.split(' ').filter(w=>w.length>3));
+      const tw = new Set(title.toLowerCase().replace(/[^a-z0-9]+/g,' ').split(' ').filter(w=>w.length>3));
+      const overlap=[...words].filter(w=>tw.has(w)).length;
+      return {title,description,score:overlap};
+    }).sort((a,b)=>b.score-a.score)[0];
+    if (!ranked || ranked.score < 2) return null;
+    const text = `${ranked.title}. ${ranked.description}`.trim();
+    return text.length > 120 ? {text, finalUrl:rssUrl, via:'google-news-rss-fallback'} : null;
+  } catch { return null; }
+}
+
+async function fetchSource(source) {
+  const started = Date.now();
+  const originalUrl = source.url;
+  try {
+    const r = await request(originalUrl);
+    const html = await r.text();
+    const text = cleanHtml(html).slice(0,250000);
+    if (r.ok && text.length > 500 && !isGoogleNews(originalUrl)) {
+      return { ok:true,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text,via:'direct' };
+    }
+    if (isGoogleNews(originalUrl)) {
+      const fallback = await fetchGoogleNewsFallback(source);
+      if (fallback) return { ok:true,status:r.status,finalUrl:fallback.finalUrl,latencyMs:Date.now()-started,text:fallback.text,via:fallback.via };
+    }
+    if (r.ok && text.length > 200) return { ok:true,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text,via:'direct-short' };
+    return {ok:false,status:r.status,finalUrl:r.url||originalUrl,latencyMs:Date.now()-started,text:'',error:`Source returned ${r.status} with insufficient readable content`};
+  } catch(e) {
+    if (isGoogleNews(originalUrl)) {
+      const fallback = await fetchGoogleNewsFallback(source);
+      if (fallback) return { ok:true,status:200,finalUrl:fallback.finalUrl,latencyMs:Date.now()-started,text:fallback.text,via:fallback.via };
+    }
+    return {ok:false,status:0,finalUrl:originalUrl,latencyMs:Date.now()-started,text:'',error:e?.message||String(e)};
+  }
+}
+
 const evidenceScore = (claim, sourceText) => {
   const a = tokenize(claim); const b = tokenize(sourceText); const shared=[...a].filter(x=>b.has(x));
   const coverage = a.size ? shared.length/a.size : 0;
@@ -34,8 +81,8 @@ const body=raw.replace(/^---[\s\S]*?---/,'').replace(/^\s*##\s+Sources[\s\S]*$/i
 const claims=splitSentences(body).filter(factualClaim).slice(0,30);
 const sourceInputs=(brief.brief?.sources||[]).map(s=>({title:s.title||'',url:normalizeUrl(s.url),publishedAt:s.publishedAt||null})).filter(s=>s.url);
 const sources=[];
-for(const source of sourceInputs){ const result=await fetchSource(source.url); sources.push({...source,...result}); }
-const usable=sources.filter(s=>s.ok&&s.text.length>200);
+for(const source of sourceInputs){ const result=await fetchSource(source); sources.push({...source,...result}); }
+const usable=sources.filter(s=>s.ok&&s.text.length>120);
 const verifiedClaims=claims.map((claim,index)=>{
   const matches=usable.map(s=>({source:s.url,title:s.title,...evidenceScore(claim,s.text)})).sort((a,b)=>b.score-a.score);
   const best=matches[0];
@@ -48,8 +95,8 @@ const unsupported=verifiedClaims.filter(c=>c.status==='unsupported').length;
 const unavailable=verifiedClaims.filter(c=>c.status==='source_unavailable').length;
 const average=verifiedClaims.length?Math.round(verifiedClaims.reduce((n,c)=>n+c.confidence,0)/verifiedClaims.length):0;
 const pass=claims.length===0 || (usable.length>0 && unsupported===0 && unavailable===0 && average>=60);
-const result={version:1,generatedAt:new Date().toISOString(),articlePath,sourceCount:sourceInputs.length,usableSourceCount:usable.length,claimCount:claims.length,verified,partial,unsupported,sourceUnavailable:unavailable,averageConfidence:average,pass,policy:{verifiedMin:65,partialMin:45,blockUnsupported:true,blockUnavailable:true,minimumAverageConfidence:60},sources:sources.map(({text,...s})=>s),claims:verifiedClaims};
+const result={version:2,generatedAt:new Date().toISOString(),articlePath,sourceCount:sourceInputs.length,usableSourceCount:usable.length,claimCount:claims.length,verified,partial,unsupported,sourceUnavailable:unavailable,averageConfidence:average,pass,policy:{verifiedMin:65,partialMin:45,blockUnsupported:true,blockUnavailable:true,minimumAverageConfidence:60},sources:sources.map(({text,...s})=>s),claims:verifiedClaims};
 fs.mkdirSync('data',{recursive:true});
 fs.writeFileSync(outputPath,`${JSON.stringify(result,null,2)}\n`);
-console.log(`Claim Verification v1: ${claims.length} claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${unavailable} source-unavailable; average confidence ${average}; ${pass?'PASS':'BLOCK'}.`);
+console.log(`Claim Verification v2: ${claims.length} claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${unavailable} source-unavailable; average confidence ${average}; ${pass?'PASS':'BLOCK'}.`);
 if(!pass) process.exit(1);
