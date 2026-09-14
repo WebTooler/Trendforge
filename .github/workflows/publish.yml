@@ -9,6 +9,7 @@ on:
       - 'scripts/trend-decision-engine.mjs'
       - 'scripts/verify-trend-sources.mjs'
       - 'scripts/verify-article-claims.mjs'
+      - 'scripts/editorial-intelligence.mjs'
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
@@ -82,6 +83,8 @@ jobs:
         run: node scripts/generate-article-adaptive.mjs
       - name: Verify article claims
         run: node scripts/verify-article-claims.mjs
+      - name: Editorial intelligence gate
+        run: node scripts/editorial-intelligence.mjs
       - name: Validate content quality gate
         run: npx tsx scripts/validate-article-quality.ts
       - name: Generate article-specific images
