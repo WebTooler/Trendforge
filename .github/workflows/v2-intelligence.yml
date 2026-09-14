@@ -1,0 +1,54 @@
+name: TrendForge V2 Intelligence
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 1 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendforge-v2-intelligence
+  cancel-in-progress: true
+
+jobs:
+  intelligence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Article lifecycle intelligence
+        run: node scripts/article-lifecycle.mjs
+      - name: Growth intelligence
+        run: node scripts/growth-intelligence.mjs
+      - name: Distribution intelligence
+        run: node scripts/distribution-intelligence.mjs
+      - name: Monetization readiness
+        run: node scripts/monetization-check.mjs
+      - name: Commit intelligence reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trendforge-bot'
+          git config user.email 'trendforge-bot@users.noreply.github.com'
+          git add data/article-lifecycle.json data/growth-intelligence.json data/distribution-intelligence.json data/monetization-readiness.json
+          if git diff --cached --quiet; then
+            echo 'No V2 intelligence changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh TrendForge V2 intelligence'
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt/3"
+            if git push origin HEAD:main; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase --autostash origin main
+              sleep $((attempt * 5))
+            fi
+          done
+          exit 1
