@@ -2,9 +2,9 @@ import { available, mark, markSuccess } from './ai-provider-router.mjs';
 import { buildWriterContract, validateDraft } from './trendforge-editorial-policy.mjs';
 
 const MAX_TRANSIENT_RETRIES=1;
-const providerTimeout=provider=>({OpenRouter:15000,Cohere:18000,Groq:18000,Gemini:20000}[provider]||18000);
+const providerTimeout=provider=>({OpenRouter:25000,Cohere:20000,Groq:20000,Gemini:20000}[provider]||20000);
 const sleep=(ms)=>new Promise(resolve=>setTimeout(resolve,ms));
-const retryDelay=(response,attempt)=>{const header=Number(response.headers.get('retry-after')||0);if(Number.isFinite(header)&&header>0)return Math.min(header*1000,4000);return Math.min(500*(2**attempt)+Math.floor(Math.random()*250),3000);};
+const retryDelay=(response,attempt)=>{const header=Number(response.headers.get('retry-after')||0);if(Number.isFinite(header)&&header>0)return Math.min(header*1000,5000);return Math.min(600*(2**attempt)+Math.floor(Math.random()*300),3500);};
 const keyFor=provider=>({Groq:'GROQ_API_KEY',Gemini:'GEMINI_API_KEY',OpenRouter:'OPENROUTER_API_KEY',Cohere:'COHERE_API_KEY'}[provider]);
 const providerModel=provider=>({
   Groq:process.env.GROQ_MODEL||'openai/gpt-oss-20b',
@@ -15,20 +15,20 @@ const providerModel=provider=>({
 const commonSystem='You are the TrendForge Writer Engine. Follow the editorial policy in the prompt. Use only supplied research. Every material factual statement must be directly supported by the supplied evidence; if evidence does not support a detail, omit it. Produce original, factual, useful journalism. Never fabricate facts. Return ONLY a JSON object with exactly these string fields: title, description, content.';
 const schema={type:'object',properties:{title:{type:'string'},description:{type:'string'},content:{type:'string'}},required:['title','description','content'],additionalProperties:false};
 const openRouterFormat={type:'json_schema',json_schema:{name:'trendforge_article',strict:true,schema}};
-const groqFormat={type:'json_schema',json_schema:{name:'trendforge_article',schema}};
+const groqFormat={type:'json_schema',json_schema:{name:'trendforge_article',strict:true,schema}};
 const cohereFormat={type:'json_object',schema};
 
 const request=async(provider,prompt)=>{
   for(let attempt=0;attempt<=MAX_TRANSIENT_RETRIES;attempt++){
     const signal=AbortSignal.timeout(providerTimeout(provider));let r;
     if(provider==='Groq'){
-      r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.GROQ_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({model:providerModel(provider),max_completion_tokens:2200,reasoning_effort:'low',response_format:groqFormat,messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
+      r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.GROQ_API_KEY}`,'Content-Type':'application/json'},body:JSON.stringify({model:providerModel(provider),max_completion_tokens:2400,reasoning_effort:'low',response_format:groqFormat,messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
     }else if(provider==='Gemini'){
-      r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${providerModel(provider)}:generateContent`,{method:'POST',signal,headers:{'x-goog-api-key':process.env.GEMINI_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:`${commonSystem}\n\n${prompt}`}]}],generationConfig:{responseMimeType:'application/json',maxOutputTokens:2600}})});
+      r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${providerModel(provider)}:generateContent`,{method:'POST',signal,headers:{'x-goog-api-key':process.env.GEMINI_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:`${commonSystem}\n\n${prompt}`}]}],generationConfig:{responseMimeType:'application/json',maxOutputTokens:2800}})});
     }else if(provider==='OpenRouter'){
-      r=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.OPENROUTER_API_KEY}`,'Content-Type':'application/json','HTTP-Referer':'https://github.com/WebTooler/Trendforge','X-Title':'TrendForge'},body:JSON.stringify({model:providerModel(provider),max_tokens:2400,response_format:openRouterFormat,plugins:[{id:'response-healing'}],messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
+      r=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.OPENROUTER_API_KEY}`,'Content-Type':'application/json','HTTP-Referer':'https://github.com/WebTooler/Trendforge','X-Title':'TrendForge'},body:JSON.stringify({model:providerModel(provider),max_tokens:2600,response_format:openRouterFormat,plugins:[{id:'response-healing'}],provider:{allow_fallbacks:true,sort:'latency'},messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
     }else if(provider==='Cohere'){
-      r=await fetch('https://api.cohere.com/v2/chat',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.COHERE_API_KEY}`,'Content-Type':'application/json','X-Client-Name':'TrendForge'},body:JSON.stringify({model:providerModel(provider),max_tokens:2600,temperature:0.15,seed:42,response_format:cohereFormat,messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
+      r=await fetch('https://api.cohere.com/v2/chat',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.COHERE_API_KEY}`,'Content-Type':'application/json','X-Client-Name':'TrendForge'},body:JSON.stringify({model:providerModel(provider),max_tokens:2800,temperature:0.15,seed:42,response_format:cohereFormat,messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
     }
     if(r.ok){const j=await r.json();if(provider==='Gemini')return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';if(provider==='Cohere'){const content=j.message?.content;return Array.isArray(content)?content.filter(x=>x?.type==='text').map(x=>x.text||'').join(''):(typeof content==='string'?content:'');}return j.choices?.[0]?.message?.content||'';}
     const body=(await r.text()).slice(0,1200);const retryable=r.status===429||r.status>=500;if(retryable&&attempt<MAX_TRANSIENT_RETRIES){await sleep(retryDelay(r,attempt));continue;}throw new Error(`${r.status}: ${body}`);
