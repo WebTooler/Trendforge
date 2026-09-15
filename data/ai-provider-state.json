@@ -2,10 +2,10 @@
   "version": 7,
   "providers": {
     "Groq": {
-      "failures": 36,
-      "quotaBlockedUntil": 1789497125734,
+      "failures": 37,
+      "quotaBlockedUntil": 1789503410760,
       "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198919, Requested 3658. Please try again in 18m33.264s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 196987, Requested 3951. Please try again in 6m45.215999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
       "lastClass": "rate_limit",
       "successes": 2,
       "lastSuccessAt": "2026-09-15T16:18:06.765Z"
@@ -40,7 +40,7 @@
     },
     "Cohere": {
       "failures": 21,
-      "quotaBlockedUntil": 1789503096237,
+      "quotaBlockedUntil": 1789503427570,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -49,5 +49,5 @@
     }
   },
   "rotationCursor": 1,
-  "updatedAt": "2026-09-15T20:11:06.237Z"
+  "updatedAt": "2026-09-15T20:16:42.760Z"
 }
