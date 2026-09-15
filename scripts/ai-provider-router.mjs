@@ -14,29 +14,42 @@ const providerConfig={
   Cohere:{key:'COHERE_API_KEY'}
 };
 const providers=Object.keys(providerConfig);
-let state={version:3,providers:{},updatedAt:new Date().toISOString()};
+let state={version:4,providers:{},updatedAt:new Date().toISOString()};
 try{state=JSON.parse(fs.readFileSync(statePath,'utf8'));}catch{}
-for(const name of providers){state.providers[name]??={failures:0,quotaBlockedUntil:0,lastStatus:null,lastError:null,lastClass:null};}
+for(const name of providers){state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0,lastStatus:null,lastError:null,lastClass:null,lastSuccessAt:0};}
 
 const classify=(status,message='')=>{
   const s=String(message).toLowerCase();
   if(/insufficient_quota|credit_balance_exhausted|no credits remaining|daily quota|quota_exceeded|exceeded your current quota|quota exceeded|monthly quota/.test(s))return 'quota';
   if(status===429||/rate.?limit|too many requests|tokens per minute|tpm|retry-after|resource_exhausted|requests per minute|rpm/.test(s))return 'rate_limit';
   if(status>=500)return 'server';
+  if(status===401||status===403)return 'auth';
+  if(status===400||status===404)return 'request';
   return 'error';
 };
 
+const persist=()=>{state.version=4;state.updatedAt=new Date().toISOString();fs.mkdirSync('data',{recursive:true});fs.writeFileSync(statePath,JSON.stringify(state,null,2)+'\n');};
 const mark=(name,status,message)=>{
-  const p=state.providers[name]??={failures:0,quotaBlockedUntil:0};
+  const p=state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0};
   const kind=classify(status,message);
   p.lastStatus=status;p.lastError=String(message).slice(0,500);p.lastClass=kind;p.failures=(p.failures||0)+1;
-  if(kind==='quota')p.quotaBlockedUntil=now+COOLDOWN_HARD_QUOTA_MS;
-  else if(kind==='rate_limit')p.quotaBlockedUntil=now+COOLDOWN_RATE_MS;
-  else if(kind==='server')p.quotaBlockedUntil=now+COOLDOWN_SERVER_MS;
-  state.version=3;state.updatedAt=new Date().toISOString();fs.mkdirSync('data',{recursive:true});fs.writeFileSync(statePath,JSON.stringify(state,null,2)+'\n');
+  if(kind==='quota')p.quotaBlockedUntil=Date.now()+COOLDOWN_HARD_QUOTA_MS;
+  else if(kind==='rate_limit')p.quotaBlockedUntil=Date.now()+COOLDOWN_RATE_MS;
+  else if(kind==='server')p.quotaBlockedUntil=Date.now()+COOLDOWN_SERVER_MS;
+  persist();
+};
+const markSuccess=(name)=>{
+  const p=state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0};
+  p.successes=(p.successes||0)+1;p.lastSuccessAt=new Date().toISOString();p.lastStatus=200;p.lastError=null;p.lastClass='success';p.quotaBlockedUntil=0;
+  persist();
 };
 
-const available=providers.filter(name=>Boolean(process.env[providerConfig[name].key])&&(state.providers[name]?.quotaBlockedUntil||0)<=now).sort((a,b)=>(state.providers[a]?.failures||0)-(state.providers[b]?.failures||0));
+const available=providers.filter(name=>Boolean(process.env[providerConfig[name].key])&&(state.providers[name]?.quotaBlockedUntil||0)<=now).sort((a,b)=>{
+  const pa=state.providers[a]||{},pb=state.providers[b]||{};
+  const successDelta=(pb.successes||0)-(pa.successes||0);
+  if(successDelta!==0)return successDelta;
+  return (pa.failures||0)-(pb.failures||0);
+});
 console.log(`AI router available providers: ${available.length}/${providers.length}.`);
 for(const name of providers){const p=state.providers[name];if(!process.env[providerConfig[name].key])console.log(`AI router not configured: ${name}.`);else if((p.quotaBlockedUntil||0)>now)console.log(`AI router cooldown: ${name} until ${new Date(p.quotaBlockedUntil).toISOString()} (${p.lastClass||'blocked'}).`);}
-export {state,available,mark,classify,providerConfig};
+export {state,available,mark,markSuccess,classify,providerConfig};
