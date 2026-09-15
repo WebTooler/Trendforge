@@ -9,7 +9,7 @@ const credibleDomains = new Set([
   'blog.cloudflare.com', 'mistral.ai', 'openai.com', 'anthropic.com', 'microsoft.com', 'apple.com',
 ]);
 const DISCOVERY_TIMEOUT_MS = 7000;
-const DISCOVERY_LIMIT = 6;
+const DISCOVERY_LIMIT = 8;
 const MIN_DISCOVERY_OVERLAP = 3;
 const DISCOVERY_MIN_SCORE = 50;
 const CANDIDATE_CONCURRENCY = 6;
@@ -20,16 +20,23 @@ const domainOf = (value) => { try { return new URL(value).hostname.replace(/^www
 const clean = (value = '') => String(value)
   .replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').replace(/<[^>]+>/g, ' ')
   .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#x27;/gi, "'")
   .replace(/&#(?:x2026;|8230;)/gi, '…').replace(/&nbsp;|&#160;/gi, ' ')
   .replace(/\s+/g, ' ').trim();
+const decodeEntities = (value = '') => String(value)
+  .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#x27;/gi, "'")
+  .replace(/&nbsp;|&#160;/gi, ' ');
 const stop = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies','industry','development','developments','story','stories','article','articles','exclusive','report']);
 const tokens = (value = '') => new Set(clean(value).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !stop.has(w)));
 const topicOverlap = (a, b) => { const A=tokens(a),B=tokens(b); return [...A].filter(x=>B.has(x)).length; };
 const MIRROR_RE = /^(?:https?:\/\/)?(?:www\.)?(?:news\.google\.(?:com|co\.uk)|google\.(?:com|co\.uk))\b/i;
+const looksLikeHomepage = (value='') => { try { const u=new URL(value); return !u.pathname || u.pathname==='/' || u.pathname.length<8; } catch { return true; } };
 
 function extractDescriptionLinks(rawDescription) {
   const links=[];
-  for(const match of String(rawDescription||'').matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
+  const decoded=decodeEntities(rawDescription);
+  for(const match of decoded.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
     const url=normalizeUrl(match[1]), text=clean(match[2]);
     if(!url||!text||MIRROR_RE.test(url))continue;
     links.push({url,text});
@@ -38,7 +45,7 @@ function extractDescriptionLinks(rawDescription) {
 }
 
 async function fetchText(url){
-  try{const response=await fetch(url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(DISCOVERY_TIMEOUT_MS),headers:{'user-agent':'TrendForge-source-discovery/2.2'}});if(!response.ok)return null;return{text:await response.text(),finalUrl:response.url||url};}catch{return null;}
+  try{const response=await fetch(url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(DISCOVERY_TIMEOUT_MS),headers:{'user-agent':'TrendForge-source-discovery/2.3','accept':'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'}});if(!response.ok)return null;return{text:await response.text(),finalUrl:response.url||url};}catch{return null;}
 }
 
 async function discoverRelatedSources(trend,seedSources){
@@ -64,25 +71,20 @@ async function discoverRelatedSources(trend,seedSources){
   for(const item of relevantItems){
     const candidates=[];
     for(const link of item.descriptionLinks){
-      const d=domainOf(link.url); if(!d||MIRROR_DOMAINS.has(d)||seeds.has(d))continue;
+      const d=domainOf(link.url); if(!d||MIRROR_DOMAINS.has(d)||blockedSeedDomain(d,seeds))continue;
       const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${item.title} ${link.text}`);
+      if(looksLikeHomepage(link.url))continue;
       candidates.push({url:link.url,score:linkOverlap+item.overlap,resolvedFrom:'google-news-description-link'});
     }
-    // Google RSS <link> is a Google pointer in many feeds. Keep it only when it
-    // actually resolves to a non-Google publisher URL.
-    if(item.link){
+    // The RSS <link> is normally a Google redirect. Never count it unless it
+    // genuinely resolves to a non-Google publisher article URL.
+    if(item.link && !MIRROR_RE.test(item.link)){
       const resolved=await fetchText(item.link); const finalUrl=normalizeUrl(resolved?.finalUrl||''); const d=domainOf(finalUrl);
-      if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!seeds.has(d))candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'});
+      if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!blockedSeedDomain(d,seeds)&&!looksLikeHomepage(finalUrl))candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'});
     }
-    // Publisher <source url> is identity metadata, never article evidence.
-    const pd=domainOf(item.publisherUrl);
-    if(item.publisherUrl&&pd&&!MIRROR_DOMAINS.has(pd)&&!seeds.has(pd)){
-      // Retain the candidate only as diagnostic discovery metadata. It is marked
-      // explicitly so downstream integrity cannot mistake it for an article page.
-      candidates.push({url:item.publisherUrl,score:0,resolvedFrom:'publisher-url-fallback'});
-    }
+    // Publisher <source url> is site identity metadata, never article evidence.
     candidates.sort((a,b)=>b.score-a.score);
-    const chosen=candidates.find(c=>c.score>0);
+    const chosen=candidates.find(c=>c.score>=item.overlap+1);
     if(!chosen)continue;
     const d=domainOf(chosen.url);
     discovered.push({title:item.title,url:chosen.url,sourceName:d,discovered:true,relevanceOverlap:item.overlap,resolvedFrom:chosen.resolvedFrom,discoveryTitle:item.title,discoveryDescription:item.description});
@@ -91,11 +93,17 @@ async function discoverRelatedSources(trend,seedSources){
   return discovered;
 }
 
-async function checkUrl(url){const started=Date.now();try{const response=await fetch(url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(8000),headers:{'user-agent':'TrendForge-source-verifier/2.2'}});return{ok:response.ok,status:response.status,finalUrl:response.url||url,latencyMs:Date.now()-started};}catch(error){return{ok:false,status:0,finalUrl:url,latencyMs:Date.now()-started,error:error?.message||String(error)};}}
+function blockedSeedDomain(domain,seeds){return !domain||MIRROR_DOMAINS.has(domain)||seeds.has(domain);}
+
+async function checkUrl(url){const started=Date.now();try{const response=await fetch(url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(8000),headers:{'user-agent':'TrendForge-source-verifier/2.3'}});return{ok:response.ok,status:response.status,finalUrl:response.url||url,latencyMs:Date.now()-started};}catch(error){return{ok:false,status:0,finalUrl:url,latencyMs:Date.now()-started,error:error?.message||String(error)};}}
 
 async function verifyCandidate(trend){
   const rawSources=Array.isArray(trend.sources)&&trend.sources.length?trend.sources:[{title:trend.sourceName||trend.title,url:trend.sourceUrl||trend.link}];
-  const seedSources=rawSources.map(source=>({...source,url:normalizeUrl(source.url)})).filter(source=>source.url);
+  // The research feed link is often the story-level Google News pointer. Keep it
+  // as discovery context, but do not treat the feed URL/sourceUrl as an article.
+  const seedSources=rawSources.map(source=>({...source,url:normalizeUrl(source.url)})).filter(source=>source.url&&!MIRROR_DOMAINS.has(domainOf(source.url))&&!looksLikeHomepage(source.url));
+  const trendLink=normalizeUrl(trend.link||'');
+  if(trendLink&&!MIRROR_DOMAINS.has(domainOf(trendLink))&&!looksLikeHomepage(trendLink))seedSources.unshift({title:trend.title,url:trendLink,resolvedFrom:'research-story-link'});
   const seedDomains=new Set(seedSources.map(source=>domainOf(source.url)).filter(domain=>domain&&!MIRROR_DOMAINS.has(domain)));
   const score=Number(trend.score??trend.finalScore??trend.priorityScore??0);
   const discoveryEligible=seedDomains.size<2&&(score>=DISCOVERY_MIN_SCORE||seedDomains.size===0);
@@ -103,26 +111,28 @@ async function verifyCandidate(trend){
   const combined=[...seedSources,...discovered]; const deduped=[]; const seenUrls=new Set();
   for(const source of combined){const url=normalizeUrl(source.url);if(!url||seenUrls.has(url))continue;seenUrls.add(url);deduped.push({...source,url});}
   const checks=[];
-  for(const source of deduped.slice(0,8)){
-    const domain=domainOf(source.url); if(MIRROR_DOMAINS.has(domain))continue;
+  for(const source of deduped.slice(0,10)){
+    const domain=domainOf(source.url); if(MIRROR_DOMAINS.has(domain)||looksLikeHomepage(source.url))continue;
     const check=await checkUrl(source.url); const finalDomain=domainOf(check.finalUrl||source.url);
-    checks.push({title:source.title||'',url:source.url,domain:finalDomain||domain,credibleDomain:credibleDomains.has(finalDomain||domain),discovered:Boolean(source.discovered),relevanceOverlap:source.relevanceOverlap||0,resolvedFrom:source.resolvedFrom||'seed',discoveryTitle:source.discoveryTitle||'',discoveryDescription:source.discoveryDescription||'',...check});
+    const finalUrl=check.finalUrl||source.url;
+    checks.push({title:source.title||'',url:source.url,domain:finalDomain||domain,credibleDomain:credibleDomains.has(finalDomain||domain),discovered:Boolean(source.discovered),relevanceOverlap:source.relevanceOverlap||0,resolvedFrom:source.resolvedFrom||'seed',discoveryTitle:source.discoveryTitle||'',discoveryDescription:source.discoveryDescription||'',finalUrl,finalUrlIsHomepage:looksLikeHomepage(finalUrl),...check});
   }
-  const reachable=checks.filter(item=>item.ok), credible=reachable.filter(item=>item.credibleDomain);
+  const reachable=checks.filter(item=>item.ok&&!item.finalUrlIsHomepage);
+  const credible=reachable.filter(item=>item.credibleDomain);
   const uniqueDomains=new Set(reachable.map(item=>item.domain).filter(d=>d&&!MIRROR_DOMAINS.has(d)));
   const relevantReachable=reachable.filter(item=>!item.discovered||item.relevanceOverlap>=MIN_DISCOVERY_OVERLAP);
   const confidence=Math.round((checks.length?reachable.length/checks.length:0)*45+(checks.length?credible.length/checks.length:0)*25+Math.min(uniqueDomains.size/2,1)*20+Math.min(relevantReachable.length/2,1)*10);
-  return{link:trend.link,title:trend.title,category:trend.category,verifiedAt:new Date().toISOString(),sourceCount:checks.length,discoveredSourceCount:discovered.length,reachableSourceCount:reachable.length,credibleSourceCount:credible.length,uniqueDomainCount:uniqueDomains.size,independentReachableDomains:[...uniqueDomains],relevantReachableSourceCount:relevantReachable.length,confidence,status:confidence>=70?'verified':confidence>=45?'partial':'unverified',discovery:{enabled:discoveryEligible,queryTitle:discoveryEligible?trend.title:null,sameStoryOnly:true,minTopicOverlap:MIN_DISCOVERY_OVERLAP,googleNewsIsIndexOnly:true,resolvedPublisherLinks:true,descriptionArticleLinksEnabled:true,minScore:DISCOVERY_MIN_SCORE,seedDomainCount:seedDomains.size},sources:checks};
+  return{link:trend.link,title:trend.title,category:trend.category,verifiedAt:new Date().toISOString(),sourceCount:checks.length,discoveredSourceCount:discovered.length,reachableSourceCount:reachable.length,credibleSourceCount:credible.length,uniqueDomainCount:uniqueDomains.size,independentReachableDomains:[...uniqueDomains],relevantReachableSourceCount:relevantReachable.length,confidence,status:confidence>=70?'verified':confidence>=45?'partial':'unverified',discovery:{enabled:discoveryEligible,queryTitle:discoveryEligible?trend.title:null,sameStoryOnly:true,minTopicOverlap:MIN_DISCOVERY_OVERLAP,googleNewsIsIndexOnly:true,resolvedPublisherLinks:true,descriptionArticleLinksEnabled:true,escapedDescriptionLinksDecoded:true,minScore:DISCOVERY_MIN_SCORE,seedDomainCount:seedDomains.size},sources:checks};
 }
 
 async function mapWithConcurrency(items,limit,worker){const results=new Array(items.length);let nextIndex=0;async function runWorker(){while(true){const index=nextIndex++;if(index>=items.length)return;results[index]=await worker(items[index],index);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},()=>runWorker()));return results;}
 if(!fs.existsSync(inputPath)){console.log(`No ${inputPath}; source verification skipped.`);process.exit(0);}
 const research=JSON.parse(fs.readFileSync(inputPath,'utf8'));const trends=research.trends??[];const startedAt=Date.now();const records=await mapWithConcurrency(trends,CANDIDATE_CONCURRENCY,verifyCandidate);const durationMs=Date.now()-startedAt;
-fs.mkdirSync('data',{recursive:true});fs.writeFileSync(outputPath,`${JSON.stringify({version:2,generatedAt:new Date().toISOString(),durationMs,candidateConcurrency:CANDIDATE_CONCURRENCY,discoveryMinScore:DISCOVERY_MIN_SCORE,records},null,2)}\n`);
+fs.mkdirSync('data',{recursive:true});fs.writeFileSync(outputPath,`${JSON.stringify({version:3,generatedAt:new Date().toISOString(),durationMs,candidateConcurrency:CANDIDATE_CONCURRENCY,discoveryMinScore:DISCOVERY_MIN_SCORE,records},null,2)}\n`);
 const verified=records.filter(record=>record.status==='verified').length,partial=records.filter(record=>record.status==='partial').length,unverified=records.filter(record=>record.status==='unverified').length;const discovered=records.reduce((sum,record)=>sum+record.discoveredSourceCount,0),independentDomains=records.reduce((sum,record)=>sum+record.uniqueDomainCount,0),discoveryEnabled=records.filter(record=>record.discovery?.enabled).length;
-console.log(`Source Verification v2: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
-console.log(`Evidence discovery: ${discovered} discovered publisher source(s), ${independentDomains} candidate-level independent reachable domain(s).`);
+console.log(`Source Verification v3: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
+console.log(`Evidence discovery: ${discovered} discovered publisher article source(s), ${independentDomains} candidate-level independent reachable domain(s).`);
 console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE} or no independent seed domain).`);
-console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, publisher article links resolved.`);
-console.log(`Evidence discovery: Google News description article-link recovery enabled.`);
+console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded from independent-source counts, escaped publisher article links decoded.`);
+console.log(`Evidence discovery: publisher <source url> is identity-only; homepage/root URLs are excluded from evidence.`);
 console.log(`Evidence discovery runtime: ${durationMs}ms with bounded candidate concurrency ${CANDIDATE_CONCURRENCY}.`);
