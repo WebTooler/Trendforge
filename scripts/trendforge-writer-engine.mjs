@@ -1,7 +1,13 @@
+import fs from 'node:fs';
 import { available, mark, markSuccess } from './ai-provider-router.mjs';
 import { buildWriterContract, validateDraft } from './trendforge-editorial-policy.mjs';
 
 const MAX_TRANSIENT_RETRIES=1;
+const MAX_PROVIDER_ATTEMPTS_PER_RUN=4;
+const budgetPath='data/ai-run-budget.json';
+const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
+const loadBudget=()=>{try{const raw=JSON.parse(fs.readFileSync(budgetPath,'utf8'));return raw?.runKey===runKey&&Number.isFinite(raw?.attempts)?raw:{runKey,attempts:0,updatedAt:new Date().toISOString()};}catch{return{runKey,attempts:0,updatedAt:new Date().toISOString()};}};
+const saveBudget=budget=>{fs.mkdirSync('data',{recursive:true});budget.updatedAt=new Date().toISOString();fs.writeFileSync(budgetPath,JSON.stringify(budget,null,2)+'\n');};
 const providerTimeout=provider=>({OpenRouter:25000,Cohere:20000,Groq:20000,Gemini:20000}[provider]||20000);
 const sleep=(ms)=>new Promise(resolve=>setTimeout(resolve,ms));
 const retryDelay=(response,attempt)=>{const header=Number(response.headers.get('retry-after')||0);if(Number.isFinite(header)&&header>0)return Math.min(header*1000,5000);return Math.min(600*(2**attempt)+Math.floor(Math.random()*300),3500);};
@@ -12,6 +18,7 @@ const schema={type:'object',properties:{title:{type:'string'},description:{type:
 const openRouterFormat={type:'json_schema',json_schema:{name:'trendforge_article',strict:true,schema}};
 const groqFormat={type:'json_schema',json_schema:{name:'trendforge_article',strict:true,schema}};
 const cohereFormat={type:'json_object',schema};
+const isHardQuota=(status,message='')=>status===429&&/free-models-per-day|daily quota|daily limit|quota_exceeded|exceeded your current quota|monthly quota|credit_balance_exhausted|insufficient_quota|no credits remaining|payment_required/i.test(String(message));
 
 const request=async(provider,prompt)=>{
   for(let attempt=0;attempt<=MAX_TRANSIENT_RETRIES;attempt++){
@@ -21,7 +28,7 @@ const request=async(provider,prompt)=>{
     else if(provider==='OpenRouter')r=await fetch('https://openrouter.ai/api/v1/chat/completions',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.OPENROUTER_API_KEY}`,'Content-Type':'application/json','HTTP-Referer':'https://github.com/WebTooler/Trendforge','X-Title':'TrendForge'},body:JSON.stringify({model:providerModel(provider),max_tokens:2600,response_format:openRouterFormat,plugins:[{id:'response-healing'}],provider:{allow_fallbacks:true,sort:'latency'},messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
     else if(provider==='Cohere')r=await fetch('https://api.cohere.com/v2/chat',{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.COHERE_API_KEY}`,'Content-Type':'application/json','X-Client-Name':'TrendForge'},body:JSON.stringify({model:providerModel(provider),max_tokens:2800,temperature:0.15,seed:42,response_format:cohereFormat,messages:[{role:'system',content:commonSystem},{role:'user',content:prompt}]})});
     if(r.ok){const j=await r.json();if(provider==='Gemini')return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';if(provider==='Cohere'){const content=j.message?.content;return Array.isArray(content)?content.filter(x=>x?.type==='text').map(x=>x.text||'').join(''):(typeof content==='string'?content:'');}return j.choices?.[0]?.message?.content||'';}
-    const body=(await r.text()).slice(0,1200);const retryable=r.status===429||r.status>=500;if(retryable&&attempt<MAX_TRANSIENT_RETRIES){await sleep(retryDelay(r,attempt));continue;}throw new Error(`${r.status}: ${body}`);
+    const body=(await r.text()).slice(0,1200);const hardQuota=isHardQuota(r.status,body);const retryable=!hardQuota&&(r.status===429||r.status>=500);if(retryable&&attempt<MAX_TRANSIENT_RETRIES){await sleep(retryDelay(r,attempt));continue;}throw new Error(`${r.status}: ${body}`);
   }
   throw new Error('Provider request exhausted');
 };
@@ -37,8 +44,14 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
   const contract=buildWriterContract(inferred);
   const enginePrompt=`${contract}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nFINAL INSTRUCTION:\nWrite a complete, useful article supported by the supplied evidence. Target 650-850 words when the evidence supports it; 450 words is the publishable floor. Use 3-6 useful H2 sections. Never pad, repeat, or invent material. If evidence is insufficient for a complete article, return empty title, description and content rather than inventing material. The requested story title is the hard topic boundary: do not switch to another story merely because it shares a broad category or keyword. For every material factual claim, use the supplied research evidence and preserve attribution/uncertainty. Do not add background facts unless they are explicitly supported by the supplied evidence. Generate a JSON object with exactly the fields title, description and content. Keep the JSON valid and compact.`;
   const requested=expectedTitle||requestedTitle(prompt);
+  const budget=loadBudget();
+  if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN){console.log(`TrendForge Writer Engine: run AI budget exhausted (${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN}); no further provider calls will be made.`);throw new Error('TrendForge Writer Engine: run-level AI provider budget exhausted.');}
   for(const provider of available){
     if(!process.env[keyFor(provider)])continue;
+    const currentBudget=loadBudget();
+    if(currentBudget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN){console.log(`TrendForge Writer Engine: run AI budget exhausted (${currentBudget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN}); stopping provider rotation.`);break;}
+    currentBudget.attempts+=1;saveBudget(currentBudget);
+    console.log(`TrendForge Writer Engine: provider attempt ${currentBudget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN} — ${provider}.`);
     const started=Date.now();
     try{
       const text=await request(provider,enginePrompt);
@@ -50,7 +63,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
       const validation=validateDraft({title:draft.title,description:draft.description,content:draft.content,category:inferred});
       if(!validation.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication after ${Date.now()-started}ms — ${validation.errors.join('; ')}.`);continue;}
       if(validation.metrics.words<700)console.log(`TrendForge Writer Engine: ${provider} produced a valid short-form draft (${validation.metrics.words} words); downstream gates remain mandatory.`);else console.log(`TrendForge Writer Engine: ${provider} produced ${validation.metrics.words} words.`);
-      markSuccess(provider);return{text:JSON.stringify(draft),provider,policyVersion:'1.8',topicAlignment:alignment};
+      markSuccess(provider);return{text:JSON.stringify(draft),provider,policyVersion:'1.9',topicAlignment:alignment};
     }catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Writer Engine: ${provider} failed after ${Date.now()-started}ms [${status||'network'}] — ${message.slice(0,260)}; trying next provider.`);}
   }
   throw new Error('TrendForge Writer Engine: no provider produced a policy-valid article.');
