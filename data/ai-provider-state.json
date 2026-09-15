@@ -1,18 +1,20 @@
 {
-  "version": 3,
+  "version": 5,
   "providers": {
     "Groq": {
-      "failures": 22,
-      "quotaBlockedUntil": 1789465865617,
-      "lastStatus": 400,
-      "lastError": "400: {\"error\":{\"message\":\"Tool choice is none, but model called a tool\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name\\\": \\\"browser.open\\\", \\\"arguments\\\": {\\\"cursor\\\": 0, \\\"id\\\": \\\"https://finance.yahoo.com\\\"}}\"}}\n",
-      "lastClass": "error"
+      "failures": 24,
+      "quotaBlockedUntil": 0,
+      "lastStatus": 200,
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 1,
+      "lastSuccessAt": "2026-09-15T14:18:07.818Z"
     },
     "Gemini": {
-      "failures": 7,
-      "quotaBlockedUntil": 1789479108564,
+      "failures": 8,
+      "quotaBlockedUntil": 1789503401203,
       "lastStatus": 429,
-      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 10.810722396s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 18.818276881s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
       "lastClass": "quota"
     },
     "OpenAI": {
@@ -30,19 +32,21 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 4,
+      "failures": 8,
       "quotaBlockedUntil": 0,
       "lastStatus": 0,
       "lastError": "The operation was aborted due to timeout",
       "lastClass": "error"
     },
     "Cohere": {
-      "failures": 7,
+      "failures": 9,
       "quotaBlockedUntil": 0,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
-      "lastClass": "error"
+      "lastStatus": 200,
+      "lastError": "Empty model response",
+      "lastClass": "error",
+      "successes": 1,
+      "lastSuccessAt": "2026-09-15T14:16:49.634Z"
     }
   },
-  "updatedAt": "2026-09-15T10:30:32.709Z"
+  "updatedAt": "2026-09-15T14:18:07.818Z"
 }

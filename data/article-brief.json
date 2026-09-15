@@ -1,30 +1,67 @@
 {
-  "generatedAt": "2026-09-15T10:30:00.817Z",
+  "generatedAt": "2026-09-15T14:17:39.663Z",
   "brief": {
-    "title": "US Senate to vote on advancing landmark crypto bill - Reuters",
-    "category": "Crypto",
-    "angle": "Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use supplied sources as factual references only; write an original synthesis.",
+    "title": "More U.S. Workers Fear Losing Their Jobs to Technology - Gallup News",
+    "category": "Technology",
+    "angle": "Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.",
     "keyPoints": [
-      "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOUUU1MGZBRTU0UUZMWkhzdWlzbVNvV2tSeFBVVnFSczhrM0VSdHd6cFhBRFY0UWxZcmxXZU81MGprbzBvUlFpV2E3TXUxSFExRXFxYnhXSkN0ZHVOb28tVmdKTm0xTGNlNWZLOWV3UGpKSFlnbTI5QnBuRmZKNnNsUF9KMXdHY2FMS3lhdU5vTUFsQVo0ZFUzV0ZoSGVZWmc?oc=5\" target=\"_blank\">US Senate to vote on advancing landmark crypto bill</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "Cross-check the development across 2 independent reachable source domains."
+      "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOZDBKYl9RWkJ4dUJFbnRzVVY1bHZOdzVadGE5NldNUGYxQTF5UFB1eU40b2hKMkwydjdjYlVpMVJPMTVzeDJzcUFsWGsxVVFEZGQtVm5RWjNCa2FrYTFNaV9SSGY3cU5uUVBLQmNlTzlBTm5yM3BZelFZaDNTeElCMGpn?oc=5\" target=\"_blank\">More U.S. Workers Fear Losing Their Jobs to Technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gallup News</font>",
+      "Cross-check the development across 4 independent reachable source domains."
     ],
     "sources": [
       {
-        "title": "US Senate to vote on advancing landmark crypto bill - The Mighty 790 KFGO",
-        "url": "https://kfgo.com/",
-        "publishedAt": "2026-09-15T10:03:47.000Z"
+        "title": "More U.S. Workers Fear Losing Their Jobs to Technology - Gallup News",
+        "url": "https://news.gallup.com/home.aspx",
+        "publishedAt": "2026-09-15T08:24:25.000Z"
       },
       {
-        "title": "Explainer-What is in the US Senate's landmark crypto bill? - Yahoo Finance",
-        "url": "https://finance.yahoo.com/",
-        "publishedAt": "2026-09-15T10:03:47.000Z"
+        "title": "More U.S. Workers Fear Losing Their Jobs To Technology: Survey - RTTNews",
+        "url": "https://www.rttnews.com/",
+        "publishedAt": "2026-09-15T08:24:25.000Z"
+      },
+      {
+        "title": "More US Workers Worry Tech May Replace Their Jobs: Gallup - Business Insider",
+        "url": "https://www.businessinsider.com/",
+        "publishedAt": "2026-09-15T08:24:25.000Z"
+      },
+      {
+        "title": "Using AI More Does Not Reassure Workers, Managers Do - Gallup.com",
+        "url": "https://www.gallup.com/home.aspx",
+        "publishedAt": "2026-09-15T08:24:25.000Z"
       }
     ]
   },
-  "prompt": "Write an original English-language editorial article for TrendForge.\n\nDo not copy, paraphrase sentence-by-sentence, or imitate any source article.\n\nSynthesize the supplied facts, explain why they matter, and add useful context.\n\nUse clear H2 sections, short paragraphs, and practical takeaways where appropriate.\n\nDo not invent facts, quotes, statistics, dates, product capabilities, or sources.\n\nEvery factual claim that depends on the supplied sources must be traceable to them.\n\nReturn clean article prose with Markdown H2 headings (## Heading). Do not return HTML tags.\n\nTitle: US Senate to vote on advancing landmark crypto bill - Reuters\n\nCategory: Crypto\n\nEditorial angle: Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use supplied sources as factual references only; write an original synthesis.\n\nKey points:\n- <a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOUUU1MGZBRTU0UUZMWkhzdWlzbVNvV2tSeFBVVnFSczhrM0VSdHd6cFhBRFY0UWxZcmxXZU81MGprbzBvUlFpV2E3TXUxSFExRXFxYnhXSkN0ZHVOb28tVmdKTm0xTGNlNWZLOWV3UGpKSFlnbTI5QnBuRmZKNnNsUF9KMXdHY2FMS3lhdU5vTUFsQVo0ZFUzV0ZoSGVZWmc?oc=5\" target=\"_blank\">US Senate to vote on advancing landmark crypto bill</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>\n- Cross-check the development across 2 independent reachable source domains.\n\nSources:\n- US Senate to vote on advancing landmark crypto bill - The Mighty 790 KFGO: https://kfgo.com/\n- Explainer-What is in the US Senate's landmark crypto bill? - Yahoo Finance: https://finance.yahoo.com/\n\nOUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, and shorter is acceptable only when the evidence is complete and the article remains genuinely useful. Write an original synthesis; never reproduce source sentences, paragraphs, or headlines. Do not invent facts, quotes, statistics, dates, or capabilities. Do not combine unrelated stories just because they share a broad category or keyword.",
+  "prompt": "Write an original English-language editorial article for TrendForge.\n\nDo not copy, paraphrase sentence-by-sentence, or imitate any source article.\n\nSynthesize the supplied facts, explain why they matter, and add useful context.\n\nUse clear H2 sections, short paragraphs, and practical takeaways where appropriate.\n\nDo not invent facts, quotes, statistics, dates, product capabilities, or sources.\n\nEvery factual claim that depends on the supplied sources must be traceable to them.\n\nReturn clean article prose with Markdown H2 headings (## Heading). Do not return HTML tags.\n\nTitle: More U.S. Workers Fear Losing Their Jobs to Technology - Gallup News\n\nCategory: Technology\n\nEditorial angle: Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.\n\nKey points:\n- <a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOZDBKYl9RWkJ4dUJFbnRzVVY1bHZOdzVadGE5NldNUGYxQTF5UFB1eU40b2hKMkwydjdjYlVpMVJPMTVzeDJzcUFsWGsxVVFEZGQtVm5RWjNCa2FrYTFNaV9SSGY3cU5uUVBLQmNlTzlBTm5yM3BZelFZaDNTeElCMGpn?oc=5\" target=\"_blank\">More U.S. Workers Fear Losing Their Jobs to Technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gallup News</font>\n- Cross-check the development across 4 independent reachable source domains.\n\nSources:\n- More U.S. Workers Fear Losing Their Jobs to Technology - Gallup News: https://news.gallup.com/home.aspx\n- More U.S. Workers Fear Losing Their Jobs To Technology: Survey - RTTNews: https://www.rttnews.com/\n- More US Workers Worry Tech May Replace Their Jobs: Gallup - Business Insider: https://www.businessinsider.com/\n- Using AI More Does Not Reassure Workers, Managers Do - Gallup.com: https://www.gallup.com/home.aspx\n\nRETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:\nSOURCE S1\nPublisher/article: Gallup News | Nonpartisan Analysis of Critical Global Issues\nURL: https://news.gallup.com/home.aspx\nEvidence passages:\n[S1-P1] Unbiased news powered by public opinion research and analysis of human behavior around the world Featured News & Analysis View More News & Analysis Economy More U.S.\n[S1-P2] Get the State of the Global Workplace: 2026 Report Exclusive Findings From the Report 20% of workers are engaged at work worldwide 52% of workers say now is a good time to find a new job 34% of employees are thriving overall Related Articles 3 Trends from Gallup’s 2026 State of the Global Workplace Leaders Have Better Lives but Worse Days What Do People Need Most From Leaders?\n[S1-P3] Workers Fear Losing Their Jobs to Technology The share of workers who worry that technology could make their jobs obsolete has risen seven percentage points in the past year, to 27%.\n[S1-P4] Workers Fear Losing Their Jobs to Technology Half of U.S.\n[S1-P5] Workers Fear Losing Their Jobs to Technology Football Still Top U.S.\n\nSOURCE S2\nPublisher/article: Realtime Business News, Economic News, Breaking News and Forex News – RTTNews\nURL: https://www.rttnews.com/\nEvidence passages:\n[S2-P1] More U.S. workers fear losing their jobs with the advancement of technology, a latest survey by Gallup shows.\n[S2-P2] Twenty seven percent of U.S. workers, a new high, worry that technology could soon make their jobs obsolete.\n[S2-P3] This is up seven percentage points from last year and roughly double the 13 percent recorded when Gallup first asked the question in 2017.\n[S2-P4] The company said it expects to deliver 4% to 7% growth above market, driven by a $23 billion...\n[S2-P5] The New York Fed said its general business conditions index slumped to 7.6 in September from 20.6 in August.\n\nSOURCE S3\nPublisher/article: Gallup - Workplace Advisory Services & Global Analytics\nURL: https://www.gallup.com/home.aspx\nEvidence passages:\n[S3-P1] Workers Fear Losing Their Jobs to Technology The share of workers who worry that technology could make their jobs obsolete has risen seven percentage points in the past year, to 27%.\n[S3-P2] Learn about our global research Our Clients 4,000+ organizations use our workplace performance platform.\n[S3-P3] And we go beyond research to help your organization maximize human potential.\n[S3-P4] Learn More About Us Our Experience 90+ years of public opinion survey research expertise.\n[S3-P5] Explore the Gallup Access platform Our Impact 37M+ people have discovered their CliftonStrengths Learn about the CliftonStrengths assessment Connect With Us Learn how we can help you solve your most important challenges.\n\nGROUNDING CONTRACT:\n- Every material factual statement must be supported by at least one evidence passage above.\n- Do not use model memory or outside knowledge to add facts, prices, numbers, dates, names, quotes, product details or causal claims.\n- If a detail is not explicitly supported by the evidence pack, omit it.\n- Preserve uncertainty and attribution when the evidence is uncertain or attributed.\n- Do not combine different stories merely because they share a keyword.\n- Do not invent quotations or statistics.\n- The evidence-pack source IDs are internal and must NOT appear in the published prose.\n- Prefer a smaller, fully grounded article over a longer article with unsupported context.\n\nOUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.",
   "sourceRelationship": "same-candidate verified evidence",
   "verifiedEvidenceDomains": [
-    "kfgo.com",
-    "finance.yahoo.com"
-  ]
+    "news.gallup.com",
+    "rttnews.com",
+    "businessinsider.com",
+    "gallup.com"
+  ],
+  "grounding": {
+    "version": 1,
+    "sourceCount": 3,
+    "usablePassages": 15,
+    "sources": [
+      {
+        "title": "Gallup News | Nonpartisan Analysis of Critical Global Issues",
+        "url": "https://news.gallup.com/home.aspx",
+        "kind": "article",
+        "articleBodyLength": 4710
+      },
+      {
+        "title": "Realtime Business News, Economic News, Breaking News and Forex News – RTTNews",
+        "url": "https://www.rttnews.com/",
+        "kind": "paragraphs",
+        "articleBodyLength": 10959
+      },
+      {
+        "title": "Gallup - Workplace Advisory Services & Global Analytics",
+        "url": "https://www.gallup.com/home.aspx",
+        "kind": "article",
+        "articleBodyLength": 3923
+      }
+    ]
+  }
 }
