@@ -13,12 +13,14 @@ const blockedPublishers=new Set(['facebook.com','facebook','reddit','pinterest',
 const isCrediblePublisher=(name:string)=>{const n=name.toLowerCase().trim();return !!n&&!blockedPublishers.has(n)&&!n.includes('facebook.com');};
 const conceptGroups:Record<string,string[]>={ai_pacing:['slowdown','slowing','slow','pacing','restraint','restrain','caution','cautious','measured','pace','accelerate','acceleration'],ai_governance:['governance','policy','policies','regulation','regulatory','oversight','lawmakers','policymakers','government'],ai_risk:['risk','risks','safety','threat','threats','danger','dangers','harm','harms'],ai_capability:['open-weight','model','models','neural','robot','robots','machine-learning'],cybersecurity:['cyber','cybersecurity','vulnerability','vulnerabilities','exploit','exploits','malware','security','attack','attacks'],drones:['drone','drones','counter-drone','counterdrone','uav','uavs'],product_launch:['launch','launched','release','released','unveiled','debut','availability'],crypto:['bitcoin','ethereum','crypto','blockchain','token','tokens','defi']};
 const profile=(text:string)=>{const words=topicWords(text);const concepts=new Set<string>();for(const [group,variants] of Object.entries(conceptGroups))if(variants.some(v=>words.has(v)))concepts.add(group);const entities=new Set<string>();for(const match of text.matchAll(/\b(?:OpenAI|Anthropic|Google|Microsoft|Meta|Amazon|Apple|NVIDIA|Tesla|xAI|Mistral|DeepMind|Sam Altman|Dario Amodei|Barack Obama|Donald Trump|Avi Loeb)\b/gi))entities.add(match[0].toLowerCase());return{words,concepts,entities};};
-const semanticDuplicate=(candidateText:string,existingText:string)=>{const a=profile(candidateText),b=profile(existingText);const sharedConcepts=[...a.concepts].filter(x=>b.concepts.has(x));const sharedEntities=[...a.entities].filter(x=>b.entities.has(x));const sharedWords=[...a.words].filter(x=>b.words.has(x));const union=new Set([...a.words,...b.words]).size||1;const jaccard=sharedWords.length/union;
-  // Duplicate protection stays strict, but generic AI vocabulary + one shared entity is
-  // not enough to declare two stories identical. Require stronger lexical evidence or
-  // multiple shared named entities/concepts before blocking a genuinely new story.
-  const duplicate=(sharedEntities.length>=1&&sharedConcepts.length>=3&&sharedWords.length>=12)||(sharedEntities.length>=2&&sharedConcepts.length>=2&&sharedWords.length>=10)||(sharedWords.length>=14&&jaccard>=0.4);
-  return{duplicate,sharedConcepts,sharedEntities,sharedWords};};
+const ngrams=(words:string[],size=3)=>{const out=new Set<string>();for(let i=0;i<=words.length-size;i++)out.add(words.slice(i,i+size).join(' '));return out;};
+const semanticDuplicate=(candidateText:string,existingText:string)=>{const a=profile(candidateText),b=profile(existingText);const sharedConcepts=[...a.concepts].filter(x=>b.concepts.has(x));const sharedEntities=[...a.entities].filter(x=>b.entities.has(x));const sharedWords=[...a.words].filter(x=>b.words.has(x));const union=new Set([...a.words,...b.words]).size||1;const jaccard=sharedWords.length/union;const minSize=Math.max(1,Math.min(a.words.size,b.words.size));const containment=sharedWords.length/minSize;const phraseA=ngrams([...a.words].sort(),3),phraseB=ngrams([...b.words].sort(),3);const sharedPhrases=[...phraseA].filter(x=>phraseB.has(x)).length;
+  // Category, entity, or broad concepts are NOT duplicate signals by themselves.
+  // A story is blocked only when there is strong lexical/phrase-level evidence that
+  // the same underlying article has been reproduced. This allows multiple stories
+  // about the same company, category, technology, or theme.
+  const duplicate=(sharedWords.length>=24&&jaccard>=0.34)||(sharedWords.length>=18&&containment>=0.55)||(sharedPhrases>=4&&sharedWords.length>=12&&sharedEntities.length>=1);
+  return{duplicate,sharedConcepts,sharedEntities,sharedWords,sharedPhrases,jaccard,containment};};
 const existingTopicMatches=(candidate:Trend,existing:string[])=>existing.some(text=>semanticDuplicate(`${candidate.title} ${candidate.description??''}`,text).duplicate);
 const relatedEnough=(candidate:Trend,item:Trend)=>{if(candidate.category.toLowerCase()!==item.category.toLowerCase())return false;const a=profile(`${candidate.title} ${candidate.description??''}`),b=profile(`${item.title} ${item.description??''}`);const candidateTitle=topicWords(candidate.title),itemTitle=topicWords(item.title);const titleOverlap=[...candidateTitle].filter(w=>itemTitle.has(w)).length;const descA=topicWords(candidate.description??''),descB=topicWords(item.description??'');const descOverlap=[...descA].filter(w=>descB.has(w)).length;const entityOverlap=[...a.entities].filter(e=>b.entities.has(e)).length;return titleOverlap>=2||entityOverlap>=1||(titleOverlap>=1&&descOverlap>=3);};
 const domainOf=(value:string)=>{try{return new URL(value).hostname.replace(/^www\./,'').toLowerCase();}catch{return '';}};
@@ -59,16 +61,38 @@ async function main(){
   const evidenceDomains=[...new Set(evidencePack.map(s=>domainOf(s.url)).filter(Boolean))];
   console.log(`Grounding preflight: ${sources.length} verified publisher URL(s) fetched; ${sourceWithEvidence} source(s) yielded evidence across ${evidenceDomains.length} domain(s).`);
   if(evidencePack.length<2||sourceWithEvidence<2||evidenceDomains.length<2||usablePassages<6){console.log(`Grounding evidence pack incomplete: ${evidencePack.length} source(s), ${usablePassages} usable evidence passages, ${evidenceDomains.length} independent evidence domain(s); publication blocked before AI generation.`);process.exit(0);}
-  const evidenceText=evidencePack.map((s,i)=>`SOURCE S${i+1}\nPublisher/article: ${s.title}\nURL: ${s.url}\nEvidence passages:\n${s.passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\n')}`).join('\n\n');
+  const evidenceText=evidencePack.map((s,i)=>`SOURCE S${i+1}\
+Publisher/article: ${s.title}\
+URL: ${s.url}\
+Evidence passages:\
+${s.passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\
+')}`).join('\
+\
+');
   const brief:ArticleBrief={title:trend.title,category:trend.category,angle:'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.',keyPoints:[trend.description??'Use only retrieved evidence passages.',`Cross-check the development across ${evidenceDomains.length} independent reachable source domains.`],sources:evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt}))};
-  const prompt=buildArticlePrompt(brief)+`\n\nRETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:\n${evidenceText}\n\nGROUNDING CONTRACT:\n- Every material factual statement must be supported by at least one evidence passage above.\n- Do not use model memory or outside knowledge to add facts, prices, numbers, dates, names, quotes, product details or causal claims.\n- If a detail is not explicitly supported by the evidence pack, omit it.\n- Preserve uncertainty and attribution when the evidence is uncertain or attributed.\n- Do not combine different stories merely because they share a keyword.\n- Do not invent quotations or statistics.\n- The evidence-pack source IDs are internal and must NOT appear in the published prose.\n- Prefer a smaller, fully grounded article over a longer article with unsupported context.\n\nOUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
+  const prompt=buildArticlePrompt(brief)+`\
+\
+RETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:\
+${evidenceText}\
+\
+GROUNDING CONTRACT:\
+- Every material factual statement must be supported by at least one evidence passage above.\
+- Do not use model memory or outside knowledge to add facts, prices, numbers, dates, names, quotes, product details or causal claims.\
+- If a detail is not explicitly supported by the evidence pack, omit it.\
+- Preserve uncertainty and attribution when the evidence is uncertain or attributed.\
+- Do not combine different stories merely because they share a keyword.\
+- Do not invent quotations or statistics.\
+- The evidence-pack source IDs are internal and must NOT appear in the published prose.\
+- Prefer a smaller, fully grounded article over a longer article with unsupported context.\
+\
+OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
   fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:4,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:6,sources:evidencePack.map(s=>({title:s.title,url:s.url,kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
   let output:ProviderResult;try{output=await generateWithProviders(prompt);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
   console.log(`Article generation provider: ${output.provider}`);
   let generated:{title:string;description:string;content:string};try{generated=parseModelJson(output.text);}catch(e){console.log(`${e instanceof Error?e.message:String(e)}; publishing blocked.`);process.exit(0);}
   if(!generated.title?.trim()||!generated.description?.trim()||!generated.content?.trim()){console.log('AI output is missing required article fields; publishing blocked.');process.exit(0);}
   if(existingTitles.has(generated.title.toLowerCase().trim())){console.log('Generated article title duplicates an existing article; publication blocked.');process.exit(0);}
-  const generatedDuplicate=existingTopics.map(text=>semanticDuplicate(`${generated.title} ${generated.description} ${generated.content.slice(0,5000)}`,text)).find(x=>x.duplicate);if(generatedDuplicate){console.log(`Generated article is semantically duplicate; shared concepts: ${generatedDuplicate.sharedConcepts.join(', ')}; entities: ${generatedDuplicate.sharedEntities.join(', ')}. Publication blocked.`);process.exit(0);}
+  const generatedDuplicate=existingTopics.map(text=>semanticDuplicate(`${generated.title} ${generated.description} ${generated.content.slice(0,5000)}`,text)).find(x=>x.duplicate);if(generatedDuplicate){console.log(`Generated article is semantically duplicate; shared concepts: ${generatedDuplicate.sharedConcepts.join(', ')}; entities: ${generatedDuplicate.sharedEntities.join(', ')}; shared phrases: ${generatedDuplicate.sharedPhrases}. Publication blocked.`);process.exit(0);}
   const article={...generated,slug:slugify(generated.title),category:brief.category,sources:brief.sources.map(s=>({title:s.title,url:s.url})),generatedAt:new Date().toISOString()};
   const editorial=editorialGate(article);const copyright=copyrightSafetyGate({content:article.content,sources:article.sources.map(s=>s.url),images:[]});
   fs.writeFileSync('data/editorial-gate.json',JSON.stringify({generatedAt:new Date().toISOString(),provider:output.provider,editorial,copyright,semanticDuplicateCheck:'passed',sourceRelationshipCheck:'passed',verifiedEvidenceDomains:evidenceDomains,grounding:{sourceCount:evidencePack.length,usablePassages}},null,2));
