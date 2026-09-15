@@ -1,4 +1,4 @@
-export const EDITORIAL_POLICY_VERSION='1.0';
+export const EDITORIAL_POLICY_VERSION='1.1';
 
 export const categoryProfiles={
   AI:'Explain the concrete development, evidence, implications, limitations, and uncertainty. Separate reported facts from interpretation and avoid hype.',
@@ -44,9 +44,9 @@ export const hardRules=[
 ];
 
 export const qualityTargets={
-  minWords:700,
-  preferredMinWords:850,
-  preferredMaxWords:1200,
+  minWords:600,
+  preferredMinWords:700,
+  preferredMaxWords:1100,
   hardMaxWords:1500,
   minH2:3,
   preferredH2:4,
@@ -69,15 +69,7 @@ export function validateDraft({title='',description='',content='',category='Tech
   const sentencesList=(content.match(/[^.!?]+[.!?](?:\s|$)/g)||[]).map(normalizedSentence).filter(Boolean);
   let duplicateSentence=false;
   for(let i=1;i<sentencesList.length;i++)if(sentencesList[i]===sentencesList[i-1]){duplicateSentence=true;break;}
-  const fillerPatterns=[
-    /in today's (?:fast|ever-changing|rapidly changing) world/i,
-    /it is important to note that/i,
-    /in conclusion/i,
-    /this article (?:will|has) (?:explore|explored|discuss)/i,
-    /whether you are a (?:beginner|seasoned|casual)/i,
-    /game[- ]changer/i,
-    /revolutionary (?:new )?era/i
-  ];
+  const fillerPatterns=[/in today's (?:fast|ever-changing|rapidly changing) world/i,/it is important to note that/i,/in conclusion/i,/this article (?:will|has) (?:explore|explored|discuss)/i,/whether you are a (?:beginner|seasoned|casual)/i,/game[- ]changer/i,/revolutionary (?:new )?era/i];
   const fillerHits=fillerPatterns.filter(r=>r.test(content)).length;
   const titleOk=title.trim().length>=qualityTargets.minTitleChars&&title.trim().length<=qualityTargets.maxTitleChars;
   const descriptionOk=description.trim().length>=qualityTargets.minDescriptionChars;
@@ -96,20 +88,5 @@ export function validateDraft({title='',description='',content='',category='Tech
 
 export function buildWriterContract(category='Technology'){
   const profile=categoryProfiles[category]||categoryProfiles.Technology;
-  return [
-    `TREND FORGE WRITER ENGINE — editorial policy v${EDITORIAL_POLICY_VERSION}`,
-    `CATEGORY: ${category}`,
-    `CATEGORY PROFILE: ${profile}`,
-    '',
-    'NON-NEGOTIABLE EDITORIAL RULES:',
-    ...hardRules.map((rule,i)=>`${i+1}. ${rule}`),
-    '',
-    `QUALITY TARGETS: ${qualityTargets.preferredMinWords}-${qualityTargets.preferredMaxWords} words when the evidence supports it; never pad. Use ${qualityTargets.preferredH2}-${qualityTargets.maxH2} useful H2 sections when appropriate.`,
-    'STRUCTURE: strong original headline → useful opening that answers what changed/why it matters → evidence/context → implications or steps → limitations/uncertainty → practical takeaway.',
-    'FACT DISCIPLINE: every material factual claim must be traceable to supplied research or a source. Do not silently upgrade uncertainty into certainty.',
-    'ORIGINALITY: synthesize; do not imitate the structure, wording, headline, or paragraph order of a source.',
-    'STYLE: clear, human, specific, restrained, informative. Avoid hype and predictable AI phrasing.',
-    '',
-    'OUTPUT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences and no commentary.'
-  ].join('\n');
+  return [`TREND FORGE WRITER ENGINE — editorial policy v${EDITORIAL_POLICY_VERSION}`,`CATEGORY: ${category}`,`CATEGORY PROFILE: ${profile}`,'','NON-NEGOTIABLE EDITORIAL RULES:',...hardRules.map((rule,i)=>`${i+1}. ${rule}`),'',`QUALITY TARGETS: ${qualityTargets.preferredMinWords}-${qualityTargets.preferredMaxWords} words when the evidence supports it; never pad. Use ${qualityTargets.preferredH2}-${qualityTargets.maxH2} useful H2 sections when appropriate.`,`LENGTH POLICY: ${qualityTargets.minWords} words is the minimum publishable draft floor. Around ${qualityTargets.preferredMinWords}+ words is preferred when evidence supports it. A shorter article must still be complete, useful, well sourced, and pass every downstream gate.`,'STRUCTURE: strong original headline → useful opening that answers what changed/why it matters → evidence/context → implications or steps → limitations/uncertainty → practical takeaway.','FACT DISCIPLINE: every material factual claim must be traceable to supplied research or a source. Do not silently upgrade uncertainty into certainty.','ORIGINALITY: synthesize; do not imitate the structure, wording, headline, or paragraph order of a source.','STYLE: clear, human, specific, restrained, informative. Avoid hype and predictable AI phrasing.','','OUTPUT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences and no commentary.'].join('\n');
 }

@@ -63,13 +63,7 @@ jobs:
       - name: AI provider state check
         run: node scripts/ai-provider-router.mjs
       - name: Generate article
-        run: |
-          npx tsx scripts/run-native-writer-fallback.mjs
-          if [ -f data/native-writer-published.json ]; then
-            echo 'Native Writer Engine produced the article; skipping provider-dependent generator.'
-            exit 0
-          fi
-          node scripts/generate-article-adaptive.mjs
+        run: node scripts/generate-article-adaptive.mjs
       - name: Validate Writer Engine output
         run: node scripts/validate-writer-output.mjs
       - name: Verify article claims
@@ -114,73 +108,24 @@ jobs:
           fi
           git commit -m 'chore: update TrendForge content pipeline'
 
-          # Generated pipeline output is intentionally allowed to win over an
-          # older generated-state snapshot when main advances during this run.
-          # IMPORTANT: during rebase, --theirs is the commit being replayed
-          # (this pipeline run); --ours is origin/main. The previous implementation
-          # used --ours, which could discard this run's generated output.
-          # Source/workflow conflicts remain fatal.
-          generated_paths=(
-            'data/'
-            'lib/articles.ts'
-            'public/images/articles/'
-            'content/articles/'
-          )
-
-          is_generated_path() {
-            local path="$1"
-            for prefix in "${generated_paths[@]}"; do
-              if [[ "$path" == "$prefix"* ]]; then
-                return 0
-              fi
-            done
-            return 1
-          }
-
+          generated_paths=('data/' 'lib/articles.ts' 'public/images/articles/' 'content/articles/')
+          is_generated_path() { local path="$1"; for prefix in "${generated_paths[@]}"; do [[ "$path" == "$prefix"* ]] && return 0; done; return 1; }
           resolve_generated_rebase_conflicts() {
-            local conflicts
-            conflicts="$(git diff --name-only --diff-filter=U)"
-            if [ -z "$conflicts" ]; then
-              return 0
-            fi
-            echo '--- rebase conflicts ---'
-            printf '%s\n' "$conflicts"
+            local conflicts; conflicts="$(git diff --name-only --diff-filter=U)"; [ -z "$conflicts" ] && return 0
+            echo '--- rebase conflicts ---'; printf '%s\n' "$conflicts"
             while IFS= read -r path; do
               [ -z "$path" ] && continue
-              if is_generated_path "$path"; then
-                echo "Resolving generated conflict with this run's output: $path"
-                git checkout --theirs -- "$path"
-                git add -- "$path"
-              else
-                echo "Unexpected source conflict; refusing automatic resolution: $path"
-                return 1
-              fi
+              if is_generated_path "$path"; then git checkout --theirs -- "$path"; git add -- "$path"; else git rebase --abort || true; echo "Unexpected source conflict: $path"; return 1; fi
             done <<< "$conflicts"
           }
-
           for attempt in 1 2 3; do
             echo "Push attempt $attempt/3"
-            if git push origin HEAD:main; then
-              echo 'Pipeline output pushed successfully.'
-              exit 0
-            fi
-
-            if [ "$attempt" -eq 3 ]; then
-              break
-            fi
-
+            if git push origin HEAD:main; then echo 'Pipeline output pushed successfully.'; exit 0; fi
+            [ "$attempt" -eq 3 ] && break
             echo 'Remote main advanced; rebasing pipeline output onto latest main.'
             git fetch origin main
-            if ! git rebase origin/main; then
-              if ! resolve_generated_rebase_conflicts; then
-                git rebase --abort || true
-                echo 'Rebase encountered an unexpected source conflict.'
-                exit 1
-              fi
-              GIT_EDITOR=true git rebase --continue
-            fi
+            if ! git rebase origin/main; then resolve_generated_rebase_conflicts || exit 1; GIT_EDITOR=true git rebase --continue; fi
             sleep $((attempt * 3))
           done
-
           echo 'Unable to push pipeline output after 3 attempts.'
           exit 1
