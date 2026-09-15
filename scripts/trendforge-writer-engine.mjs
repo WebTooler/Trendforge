@@ -22,7 +22,7 @@ const parseWriterJson=(text='')=>{try{const parsed=JSON.parse(text);return parse
 export async function generateWithTrendForgeWriter({prompt,category='Technology'}){
   const inferred=category&&category!=='Technology'?category:prompt.match(/(?:category|section)\s*[:=]\s*(AI|Technology|How-To|Innovation|Product Launches|Digital Life|Crypto)/i)?.[1]||category;
   const contract=buildWriterContract(inferred);
-  const enginePrompt=`${contract}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nFINAL INSTRUCTION:\nWrite a complete, useful article supported by the supplied evidence. Target 700-1000 words and normally 4-6 useful H2 sections. The publishable floor is 600 words. Prefer 700+ when the evidence supports it, but never pad or repeat material merely to reach a number. If the evidence is insufficient for a complete article, return empty title, description and content rather than inventing material.`;
+  const enginePrompt=`${contract}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nFINAL INSTRUCTION:\nWrite a complete, useful article supported by the supplied evidence. Target 700-1000 words and normally 4-6 useful H2 sections. The publishable floor is 450 words. Prefer 700+ when the evidence supports it, but never pad or repeat material merely to reach a number. If the evidence is insufficient for a complete article, return empty title, description and content rather than inventing material.`;
   for(const provider of available){
     const key=provider==='Groq'?'GROQ_API_KEY':provider==='Gemini'?'GEMINI_API_KEY':'OPENAI_API_KEY';
     if(!process.env[key])continue;
@@ -34,7 +34,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
       const validation=validateDraft({title:draft.title,description:draft.description,content:draft.content,category:inferred});
       if(!validation.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication — ${validation.errors.join('; ')}.`);continue;}
       if(validation.metrics.words<700)console.log(`TrendForge Writer Engine: ${provider} produced a valid short-form draft (${validation.metrics.words} words); downstream gates remain mandatory.`);else console.log(`TrendForge Writer Engine: ${provider} produced ${validation.metrics.words} words.`);
-      return{text:JSON.stringify(draft),provider,policyVersion:'1.1'};
+      return{text:JSON.stringify(draft),provider,policyVersion:'1.2'};
     }catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Writer Engine: ${provider} failed; trying next provider.`);}
   }
   throw new Error('TrendForge Writer Engine: no provider produced a policy-valid article.');
