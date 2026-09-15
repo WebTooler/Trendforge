@@ -3,7 +3,10 @@ import { available, mark, markSuccess } from './ai-provider-router.mjs';
 import { buildWriterContract, validateDraft } from './trendforge-editorial-policy.mjs';
 
 const MAX_TRANSIENT_RETRIES=1;
-const MAX_PROVIDER_ATTEMPTS_PER_RUN=4;
+// Keep the run bounded, but do not let a single provider timeout/topic-drift/short
+// response consume the entire publishing opportunity. Six calls is still a hard
+// ceiling for one run and provider-level quota/cooldown rules remain authoritative.
+const MAX_PROVIDER_ATTEMPTS_PER_RUN=6;
 const budgetPath='data/ai-run-budget.json';
 const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
 const loadBudget=()=>{try{const raw=JSON.parse(fs.readFileSync(budgetPath,'utf8'));return raw?.runKey===runKey&&Number.isFinite(raw?.attempts)?raw:{runKey,attempts:0,updatedAt:new Date().toISOString()};}catch{return{runKey,attempts:0,updatedAt:new Date().toISOString()};}};
@@ -42,7 +45,7 @@ const topicAlignment=(requested,draft)=>{const a=topicTokens(requested),b=topicT
 export async function generateWithTrendForgeWriter({prompt,category='Technology',expectedTitle=''}){
   const inferred=category&&category!=='Technology'?category:prompt.match(/(?:category|section)\s*[:=]\s*(AI|Technology|How-To|Innovation|Product Launches|Digital Life|Crypto)/i)?.[1]||category;
   const contract=buildWriterContract(inferred);
-  const enginePrompt=`${contract}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nFINAL INSTRUCTION:\nWrite a complete, useful article supported by the supplied evidence. Target 650-850 words when the evidence supports it; 450 words is the publishable floor. Use 3-6 useful H2 sections. Never pad, repeat, or invent material. If evidence is insufficient for a complete article, return empty title, description and content rather than inventing material. The requested story title is the hard topic boundary: do not switch to another story merely because it shares a broad category or keyword. For every material factual claim, use the supplied research evidence and preserve attribution/uncertainty. Do not add background facts unless they are explicitly supported by the supplied evidence. Generate a JSON object with exactly the fields title, description and content. Keep the JSON valid and compact.`;
+  const enginePrompt=`${contract}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nFINAL INSTRUCTION:\nWrite a complete, useful article supported by the supplied evidence. Target 650-850 words when the evidence supports it; 450 words is the publishable floor. Aim for 550-800 words in normal cases and never intentionally return a sub-450 draft. Use 3-6 useful H2 sections. Never pad, repeat, or invent. If evidence is insufficient for a complete article, return empty title, description and content rather than inventing material. The requested story title is the hard topic boundary: do not switch to another story merely because it shares a broad category or keyword. Keep the generated headline tightly anchored to the requested story and use the requested story's key entity/event when supported by evidence. For every material factual claim, use the supplied research evidence and preserve attribution/uncertainty. Do not add background facts unless they are explicitly supported by the supplied evidence. Generate a JSON object with exactly the fields title, description and content. Keep the JSON valid and compact.`;
   const requested=expectedTitle||requestedTitle(prompt);
   const budget=loadBudget();
   if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN){console.log(`TrendForge Writer Engine: run AI budget exhausted (${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN}); no further provider calls will be made.`);throw new Error('TrendForge Writer Engine: run-level AI provider budget exhausted.');}
@@ -63,7 +66,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
       const validation=validateDraft({title:draft.title,description:draft.description,content:draft.content,category:inferred});
       if(!validation.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication after ${Date.now()-started}ms — ${validation.errors.join('; ')}.`);continue;}
       if(validation.metrics.words<700)console.log(`TrendForge Writer Engine: ${provider} produced a valid short-form draft (${validation.metrics.words} words); downstream gates remain mandatory.`);else console.log(`TrendForge Writer Engine: ${provider} produced ${validation.metrics.words} words.`);
-      markSuccess(provider);return{text:JSON.stringify(draft),provider,policyVersion:'1.9',topicAlignment:alignment};
+      markSuccess(provider);return{text:JSON.stringify(draft),provider,policyVersion:'2.0',topicAlignment:alignment};
     }catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Writer Engine: ${provider} failed after ${Date.now()-started}ms [${status||'network'}] — ${message.slice(0,260)}; trying next provider.`);}
   }
   throw new Error('TrendForge Writer Engine: no provider produced a policy-valid article.');
