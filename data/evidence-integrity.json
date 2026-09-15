@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "generatedAt": "2026-09-15T18:18:43.888Z",
+  "version": 3,
+  "generatedAt": "2026-09-15T18:24:15.306Z",
   "minimumIndependentSources": 2,
   "minimumIndependentDomains": 2,
   "report": [
@@ -65,8 +65,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 3
+          "topicOverlap": 3,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -92,6 +94,15 @@
     {
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeUZCZk9JODh6eDF4RVB6Q3lGSkt5Ul9IOGRSVFROQ2lxTFAxY21rUmk3WHVsbnBYcTg2eHBuTTk4STNVRkliTEF5azVXZUs0M09yM0J4bW5ManFRMC1yckY1UTh4N2xEX2V6S3NFZ09UdTZnSm01a24xVDYzb3JRd1Zla1BUZDQtQ0JaTERnOVlQS3ZJSTRNamxtNnFFa2hKVmVxNnJicVFoNHBYSHltUlFLUEg?oc=5",
       "title": "Meta Touts the Cost-Saving Benefits of Latest In-House AI Chips - Bloomberg.com",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQRFBUVHhMMFNfNmU5VHc5SHB3aWNuQ1gyblA2MC1jU09yN2UyMGtBdVhrdXFZTTZzR3NLc2FUcU82R0xPSEk2d3BtOS1Udy1zWEFwRUFtWF9ycWtnNlJ2N182VFJWSFRGTlZRRDZRTjdMQ1I2aFpqWElSeXpqZ0JOSlE4VU9UUFNRdGdZaHM5eXFycjRDUEI4?oc=5",
+      "title": "RIT helps Google develop new technology that converts sign language into text - Rochester Institute of Technology",
       "status": "block",
       "validSourceCount": 0,
       "independentDomains": [],
@@ -272,8 +283,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
           "pageTitle": "Ars Technica - All content",
-          "bodyChars": 22144,
-          "topicOverlap": 2
+          "canonical": "",
+          "bodyChars": 21772,
+          "topicOverlap": 2,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -387,8 +400,8 @@
       "recoveryAttempts": 0
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNXBMUlAxaDVmdV9XQy1NQkF0LW1NQk14dXlackV3MVJXNFRkUWNaT2I5UDZPRXBuNTNNV3Q2aUlXa0JWRTRKX244MnVTdkhyYkVNZlBqVFZRN1JTZ1JHSUtxRVBuYmg5ZHQwSy00a3lXanVwX1lzamNKUG9waVowUm8zbUladm0xTm5fZjhqWFZHQzRXSkt2NXF4bTZ1NDhPNlNrXzFyNkM0djZjTWlOTmh5VQ?oc=5",
-      "title": "Oregon Guard Uses New Hoist Technology in Rescue - nationalguard.mil",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRzU0cTlwNHctb0FiY092UVlJZFh4UmxsQ2lPLTdkVEU2SlRzVU12VzI2RGRYWEFqS2NMcVlXdXNTUGczTjFTbjZGMXY4bHhZYXN6bVpGQ0M0cndmMmthYjhUcGhPWlZsb1ZWeHhHOUdZWE93bTdUMjBNMzZQNTR6Mw?oc=5",
+      "title": "Making sovereign, open-weight AI the technology frontier - mistral.ai",
       "status": "block",
       "validSourceCount": 0,
       "independentDomains": [],
@@ -396,8 +409,8 @@
       "recoveryAttempts": 0
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRzU0cTlwNHctb0FiY092UVlJZFh4UmxsQ2lPLTdkVEU2SlRzVU12VzI2RGRYWEFqS2NMcVlXdXNTUGczTjFTbjZGMXY4bHhZYXN6bVpGQ0M0cndmMmthYjhUcGhPWlZsb1ZWeHhHOUdZWE93bTdUMjBNMzZQNTR6Mw?oc=5",
-      "title": "Making sovereign, open-weight AI the technology frontier - mistral.ai",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNXBMUlAxaDVmdV9XQy1NQkF0LW1NQk14dXlackV3MVJXNFRkUWNaT2I5UDZPRXBuNTNNV3Q2aUlXa0JWRTRKX244MnVTdkhyYkVNZlBqVFZRN1JTZ1JHSUtxRVBuYmg5ZHQwSy00a3lXanVwX1lzamNKUG9waVowUm8zbUladm0xTm5fZjhqWFZHQzRXSkt2NXF4bTZ1NDhPNlNrXzFyNkM0djZjTWlOTmh5VQ?oc=5",
+      "title": "Oregon Guard Uses New Hoist Technology in Rescue - nationalguard.mil",
       "status": "block",
       "validSourceCount": 0,
       "independentDomains": [],
@@ -470,15 +483,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcWxQQlBTTWFxaE1nMnpYOTlneHhTdy15UHFwZEdUSUpPWWNHQVRIQnh3eWt6cEg3RzZjc2J0YW4wMUJzM19FUnVzZmJHLVphNDBCQzVWbDBsYm1BaFFpX25sbTdiOFVYVjc1OGF0T2VwT0luVFVhZ05ENnR1RWdwOFhMV2FLbHlpa09sRHdjQTFaRXdNV3JlTWRYVE5WUQ?oc=5",
       "title": "Medicare to expand its pilot that pays for technology to manage chronic diseases - STAT",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRnpYZDdGbXh5aklaTEFLMENFZ3F2Z251V1c2a0l5UXQxTU5NeVBSRDNsdlVRNkZoQzlXNEkyVGRQeUxlSFdaaFA5Y0h6YU1GZ081V3VPcTNaYUJ4QU5yeEFFdVc3X05zZjhyQlR6bGlZTmpqM1N4NnBKbDVlTXI0dVNOSG41SFNEeHN5MHBDaWh3aVFoNHl1LVFR?oc=5",
-      "title": "Husker Harvest Days puts new ag technology in the field - Brownfield Ag News",
       "status": "block",
       "validSourceCount": 0,
       "independentDomains": [],
@@ -605,6 +609,15 @@
     {
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOM2x4aGd0bXRJVzdsV1hMVVhUTXBDaWhhNFV3M0ROa2Jqa2dreXYyUFR2VGRYMmw5MkRrSU1DazRmdGpsdkNhN0lBMVdfMDhBSk5ZbGVHYjhQdkNSUk1BM0NLR3Z5XzhuVVQ5ZDVjY2drX3pxN29QZGY1bkZPMnRWaXl3VGRNc05yMmpBcjBhTTE4VWh0c2x4RnB5TWF6bVpzQU5MUjFTNFBLc3l3NENIS3BHUFpkdk5qaG1fUkdHeVN5TzBw?oc=5",
       "title": "I stopped trusting the Startup apps tab after I opened this utility on my PC - TweakTown",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPemE3aWY4VXNNTHlHdlllWW56all5UnVlUFp5bDJIblRRS0p2WUduMlMwdVhFc0lqZFBmcjNlQ1pnaVNuUGdFT0dtZThjYkNCTW1ORjRWVUhUUHFzSmI5ZEhLSWtBakw1WW9Id0h6OEh0U0tNTlpybWZIMWd6Nmx1QU9BbVhsenZGVk1aOHJiU1lJSG9kdktwTHphbDM?oc=5",
+      "title": "Ole Miss beefing up security for Lane Kiffin's return - reuters.com",
       "status": "block",
       "validSourceCount": 0,
       "independentDomains": [],
@@ -778,23 +791,6 @@
       "recoveryAttempts": 0
     },
     {
-      "link": "https://techcrunch.com/2026/09/15/new-italian-unicorn-exein-rides-the-physical-ai-wave/",
-      "title": "New Italian unicorn Exein rides the physical AI wave",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://techcrunch.com/feed/",
-          "domain": "techcrunch.com",
-          "resolvedFrom": "seed",
-          "ok": false,
-          "reason": "homepage-or-publisher-identity-url"
-        }
-      ],
-      "recoveryAttempts": 0
-    },
-    {
       "link": "https://www.theverge.com/tech/995399/fujifilm-instax-pal-2-digital-camera-wireless-autofocus-face-detection",
       "title": "Fujifilm’s Instax Pal 2 is a tiny digital camera that may not disappoint",
       "status": "block",
@@ -811,8 +807,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 4
+          "topicOverlap": 4,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -834,8 +832,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 6
+          "topicOverlap": 6,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -857,8 +857,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 6
+          "topicOverlap": 6,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -880,8 +882,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
           "pageTitle": "Ars Technica - All content",
-          "bodyChars": 22144,
-          "topicOverlap": 5
+          "canonical": "",
+          "bodyChars": 21772,
+          "topicOverlap": 5,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -903,8 +907,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
           "pageTitle": "Ars Technica - All content",
-          "bodyChars": 22144,
-          "topicOverlap": 4
+          "canonical": "",
+          "bodyChars": 21772,
+          "topicOverlap": 5,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -926,8 +932,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
           "pageTitle": "Ars Technica - All content",
-          "bodyChars": 22144,
-          "topicOverlap": 4
+          "canonical": "",
+          "bodyChars": 21772,
+          "topicOverlap": 4,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -966,8 +974,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 3
+          "topicOverlap": 3,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1072,15 +1082,6 @@
       "recoveryAttempts": 0
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBEVWtfWXRCTkVQdUsxNjN0STZDY2hnYTFMR09GZ2VsanV6eHJZNUVYRXFwNGZSYWhzejU4bmF3dVlBN0lhamVHTVdzSkg2OVlNRGk5Y1lMQVZTRmk3VHR3Q2V6bF9WeHEzUE05Ym1pdmJENTlQQUppQ2pCZVhmM00?oc=5",
-      "title": "Iran and the Emerging Security Order in the Middle East - CSIS | Center for Strategic and International Studies",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPOEU3ejVCWVNNSmk5ek5YOGZOOWpVVHBNR3lsaWVIdk8xR3g0SkNXTGhuamN6MDZRbGJwbkxoaEtOVHJFUHhLWXFXZmhpT3M1cnFXRFVsbDZFZ0k1NXM4MnJMNUQzZXF0Z3hXcnE2Y0lXajNkV0JlOEF6STN2YTcyMg?oc=5",
       "title": "This bill could reshape crypto in America — and it's sparking a major battle - NPR",
       "status": "block",
@@ -1114,6 +1115,23 @@
       "validSourceCount": 0,
       "independentDomains": [],
       "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://techcrunch.com/2026/09/15/new-italian-unicorn-exein-rides-the-physical-ai-wave/",
+      "title": "New Italian unicorn Exein rides the physical AI wave",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://techcrunch.com/feed/",
+          "domain": "techcrunch.com",
+          "resolvedFrom": "seed",
+          "ok": false,
+          "reason": "homepage-or-publisher-identity-url"
+        }
+      ],
       "recoveryAttempts": 0
     },
     {
@@ -1245,6 +1263,56 @@
       "recoveryAttempts": 0
     },
     {
+      "link": "https://arstechnica.com/tech-policy/2026/09/boston-dumps-flock-says-it-shared-data-nationwide-in-violation-of-contract/",
+      "title": "Boston dumps Flock, says it shared data nationwide in violation of contract",
+      "status": "block",
+      "validSourceCount": 1,
+      "independentDomains": [
+        "feeds.arstechnica.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
+          "domain": "feeds.arstechnica.com",
+          "resolvedFrom": "seed",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
+          "pageTitle": "Ars Technica - All content",
+          "canonical": "",
+          "bodyChars": 21772,
+          "topicOverlap": 8,
+          "discoveryTopicOverlap": 0
+        }
+      ],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://arstechnica.com/cars/2026/09/ev-charging-infrastructure-is-still-lagging-adoption-report-says/",
+      "title": "Demand for EV chargers is outstripping supply, says ChargePoint report",
+      "status": "block",
+      "validSourceCount": 1,
+      "independentDomains": [
+        "feeds.arstechnica.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
+          "domain": "feeds.arstechnica.com",
+          "resolvedFrom": "seed",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
+          "pageTitle": "Ars Technica - All content",
+          "canonical": "",
+          "bodyChars": 21772,
+          "topicOverlap": 3,
+          "discoveryTopicOverlap": 0
+        }
+      ],
+      "recoveryAttempts": 0
+    },
+    {
       "link": "https://www.technologyreview.com/2026/09/15/1143936/roundtables-will-ai-really-kill-us-all/",
       "title": "Roundtables: Could AI really kill us all?",
       "status": "block",
@@ -1257,29 +1325,6 @@
           "resolvedFrom": "seed",
           "ok": false,
           "reason": "homepage-or-publisher-identity-url"
-        }
-      ],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://www.theverge.com/gadgets/995518/elegoo-3d-printer-switch-joy-con-deal-sale",
-      "title": "One of the best 3D printers for beginners is almost $100 off",
-      "status": "block",
-      "validSourceCount": 1,
-      "independentDomains": [
-        "theverge.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "bodyChars": 6960,
-          "topicOverlap": 4
         }
       ],
       "recoveryAttempts": 0
@@ -1301,8 +1346,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 2
+          "topicOverlap": 2,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1324,8 +1371,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 5
+          "topicOverlap": 5,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1347,8 +1396,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 4
+          "topicOverlap": 4,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1370,8 +1421,10 @@
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.theverge.com/rss/index.xml",
           "pageTitle": "The Verge",
+          "canonical": "",
           "bodyChars": 6960,
-          "topicOverlap": 9
+          "topicOverlap": 9,
+          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1415,6 +1468,12 @@
     {
       "link": "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/",
       "title": "What&#8217;s at stake in AI’s trillion-dollar gamble",
+      "status": "not-eligible",
+      "sources": []
+    },
+    {
+      "link": "https://www.theverge.com/news/995302/microsoft-out-of-band-windows-11-update-fix-issues",
+      "title": "Microsoft issues emergency Windows 11 update to fix its record-breaking patch",
       "status": "not-eligible",
       "sources": []
     },
@@ -1577,12 +1636,6 @@
     {
       "link": "https://arstechnica.com/gadgets/2026/09/offensively-cheap-solar-power-is-looking-up/",
       "title": "\"Offensively cheap\": Solar power is looking up",
-      "status": "not-eligible",
-      "sources": []
-    },
-    {
-      "link": "https://arstechnica.com/cars/2026/09/f1-in-madrid-like-monaco-but-twice-as-long-and-none-of-the-glamour/",
-      "title": "F1 in Madrid: Like Monaco but twice as long and none of the glamour",
       "status": "not-eligible",
       "sources": []
     },
@@ -1841,12 +1894,6 @@
     {
       "link": "https://arstechnica.com/gaming/2026/09/steam-frame-the-ars-technica-review/",
       "title": "Steam Frame: The Ars Technica review",
-      "status": "not-eligible",
-      "sources": []
-    },
-    {
-      "link": "https://arstechnica.com/cars/2026/09/how-to-make-a-small-suv-slightly-smaller-the-2028-volvo-xc40/",
-      "title": "New corners, new lights for 2028 Volvo XC40",
       "status": "not-eligible",
       "sources": []
     },
