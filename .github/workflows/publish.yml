@@ -114,6 +114,19 @@ jobs:
       - name: Re-verify repaired article claims
         if: steps.claim_verification.outcome == 'failure'
         run: node scripts/verify-article-claims-v2.mjs
+      - name: Upload article attempt diagnostics
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: trendforge-article-attempt-${{ github.run_number }}
+          path: |
+            data/article-attempts/
+            data/article-brief.json
+            data/claim-verification.json
+            data/grounding-repair.json
+          if-no-files-found: warn
+          retention-days: 14
       - name: Editorial intelligence gate
         run: node scripts/editorial-intelligence.mjs
       - name: Validate content quality gate
