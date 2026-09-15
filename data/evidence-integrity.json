@@ -1,7 +1,8 @@
 {
-  "version": 3,
-  "generatedAt": "2026-09-15T18:31:19.607Z",
+  "version": 4,
+  "generatedAt": "2026-09-15T18:45:40.273Z",
   "minimumIndependentSources": 2,
+  "minimumIndependentPublisherFamilies": 2,
   "minimumIndependentDomains": 2,
   "report": [
     {
@@ -9,6 +10,8 @@
       "title": "Anthropic, OpenAI, and xAI Want to Slow Down Artificial Intelligence (AI) Development. These 2 Stocks Could Be the Biggest Losers. - The Motley Fool",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -18,6 +21,8 @@
       "title": "What Is the Crypto Clarity Act? What Tuesday’s Senate Vote Decides for XRP, Bitcoin, Ethereum, and Solana - Yahoo Finance",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -27,6 +32,8 @@
       "title": "Bitcoin and ethereum prices today, Tuesday, September 15, 2026: Crypto prices sliding this morning ahead of Fed meeting - Yahoo Finance",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -36,6 +43,10 @@
       "title": "OpenAI, Anthropic, Google have been in talks on AI safety for weeks",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -43,6 +54,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/openai-anthropic-google-have-been-in-talks-on-ai-safety-for-weeks/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -60,7 +72,11 @@
       "link": "https://www.theverge.com/tech/995453/meta-one-subscriptions-ai",
       "title": "Meta&#8217;s new One subscriptions put a price on social media and AI",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -68,6 +84,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/tech/995453/meta-one-subscriptions-ai",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -76,19 +93,6 @@
           "canonical": "https://www.theverge.com/tech/995453/meta-one-subscriptions-ai",
           "bodyChars": 2932,
           "topicOverlap": 5,
-          "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 3,
           "discoveryTopicOverlap": 0
         }
       ],
@@ -99,6 +103,8 @@
       "title": "Artificial intelligence (AI)-based coronary calcium quantification successfully identified patients who could benefit from lipid-lowering therapy - 2 Minute Medicine",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -108,6 +114,8 @@
       "title": "Nvidia vs. Micron: Which Is the Better Artificial Intelligence (AI) Semiconductor Stock to Own for the Next 5 Years? - The Motley Fool",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -117,6 +125,8 @@
       "title": "EXCLUSIVE: Indian consumer regulator escalates probe into Apple's software warranty terms - Reuters",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -126,6 +136,19 @@
       "title": "Meta Touts the Cost-Saving Benefits of Latest In-House AI Chips - Bloomberg.com",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQRFBUVHhMMFNfNmU5VHc5SHB3aWNuQ1gyblA2MC1jU09yN2UyMGtBdVhrdXFZTTZzR3NLc2FUcU82R0xPSEk2d3BtOS1Udy1zWEFwRUFtWF9ycWtnNlJ2N182VFJWSFRGTlZRRDZRTjdMQ1I2aFpqWElSeXpqZ0JOSlE4VU9UUFNRdGdZaHM5eXFycjRDUEI4?oc=5",
+      "title": "RIT helps Google develop new technology that converts sign language into text - Rochester Institute of Technology",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -135,6 +158,8 @@
       "title": "Quick Clamp Solutions Launches New Emergency Response Device for Liquid Processing Facilities - Quality Assurance & Food Safety",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -144,15 +169,19 @@
       "title": "Bitcoin Rally Stalls as Optimism About US Crypto Bill Wanes - Bloomberg.com",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcVQ0SVUyMkxrN3R6RXh3MEFDN3dWQlQ2YmN6aE9RdWRmalhjMExjRGNKM1pfbzhKT1JJOVYyQ1R2RnlxMEdseGlsUGxfLXdGUFlBSkJkS0U1WVpaMlhLcTZ1ZnZTUngwS0xnY3dZY2QzeUJxYlQxNHZoM3ZjUFMzbTNzcDVrekRYRWlvcU5UVQ?oc=5",
-      "title": "Bitcoin Falls Ahead of Clarity Act Vote. Why Cathie Wood’s Dumping Crypto Stocks. - barrons.com",
+      "title": "Bitcoin Falls Ahead of Clarity Act Vote. Why Cathie Wood’s Dumping Crypto Stocks. - Barron's",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -162,6 +191,10 @@
       "title": "AI agents now have a place to snitch",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -169,6 +202,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -187,6 +221,10 @@
       "title": "Early Anthropic hire, former METR COO have found a way to rein in rogue AI agents",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -194,6 +232,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/early-anthropic-hire-former-metr-coo-have-found-a-way-to-rein-in-rogue-ai-agents/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -208,19 +247,12 @@
       "recoveryAttempts": 0
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY3lBVjFBRkYxaU9JZXN2R0s5TFhnQW4zbTVBVXlId055Z3lqbW4yZ01weDZRU1RPb3Z5bjU2U0hFaHAtSDA5N2p4UXNTc1lpWENKd3A0a2hXRlVUdER3ZFZVakhSWDE4MFBkam1vT3FDWjVZdm9xNU51RFAxdXFlQzBNbnZwUTZUQndZeV9qYnZlX01SVGVncHdjSExPRnFleXFRNG9zV1VUbUhYMDZDdlBKckdGbzRoUllj?oc=5",
-      "title": "Republicans say Trump agreed to new ethics rules to get crypto bill across the line - PBS",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZmRRYUVFM1NWTFZia09Ddlpxd0swTmplT1N2SVNIcW41M08zR2p0aDVIbDJfQjlyZ0t3a3FwRG1iY3NZTjBGZjViQWVfOEpHXzA0M2QyU19aR2Y2dVFIYW1tYmp3NThoYVM0Nm9XeXd1TEhhZl9Rc2ZuWWM1SERqUDZDMDFKZlJ1S3dIa3dZdU4wYWUxemJmdVR4VVFiSFBaQzJZ?oc=5",
       "title": "Major updates for Apple’s software platforms are now available - Apple",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -230,15 +262,8 @@
       "title": "MediaTek launches new mobile chip using TSMC's most advanced technology - Reuters",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTGR0U0plYnJ2WG91N2k0NGpiSTl0NnY2d0ZlcXRtNm9lWnlHYUhrRm8xcEd4ZDZMMGI2NlpkSElXREhhaFNibGs1anNnNTNhbDJuVGdLVFpLSWpUNzFvVnZyUnotalFsb3hoQVN0eE1nYXhUaVA4ZEhsTHhuYTZTdkdJWDVIZ2lPdmVGc3dJeTVzc1hDYkVIX2ZYNjJRNGhhR2Jnb2lNN3ZsWHJlcllTOF96SHhHdw?oc=5",
-      "title": "Bitcoin slips as Clarity Act odds fade: Crypto Markets Today - CoinDesk",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -248,6 +273,19 @@
       "title": "Crypto Prices Today: Why Bitcoin, XRP and Solana Are All Down Before the CLARITY Act Vote - Yahoo Finance",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTGR0U0plYnJ2WG91N2k0NGpiSTl0NnY2d0ZlcXRtNm9lWnlHYUhrRm8xcEd4ZDZMMGI2NlpkSElXREhhaFNibGs1anNnNTNhbDJuVGdLVFpLSWpUNzFvVnZyUnotalFsb3hoQVN0eE1nYXhUaVA4ZEhsTHhuYTZTdkdJWDVIZ2lPdmVGc3dJeTVzc1hDYkVIX2ZYNjJRNGhhR2Jnb2lNN3ZsWHJlcllTOF96SHhHdw?oc=5",
+      "title": "Bitcoin slips as Clarity Act odds fade: Crypto Markets Today - CoinDesk",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -257,6 +295,10 @@
       "title": "SpaceX will try to put Starship in orbit for the first time on September 22",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -264,6 +306,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/spacex-will-try-to-put-starship-in-orbit-for-the-first-time-on-september-22/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -282,6 +325,10 @@
       "title": "US military confirms it launched space weapons into Earth&#8217;s orbit",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -289,6 +336,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/us-military-confirms-it-launched-space-weapons-into-earths-orbit/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -307,6 +355,10 @@
       "title": "Salesforce and Nvidia&#8217;s new reasoning model is everything the AI labs should fear",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -314,6 +366,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/salesforce-and-nvidias-new-reasoning-model-is-everything-the-ai-labs-should-fear/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -330,16 +383,20 @@
     {
       "link": "https://arstechnica.com/cars/2026/09/gm-gives-its-most-important-trucks-a-new-ui-and-includes-carplay/",
       "title": "GM gives its most important trucks a new UI—and includes CarPlay",
-      "status": "pass",
-      "validSourceCount": 2,
+      "status": "block",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "arstechnica.com"
+      ],
       "independentDomains": [
-        "arstechnica.com",
-        "feeds.arstechnica.com"
+        "arstechnica.com"
       ],
       "sources": [
         {
           "suppliedUrl": "https://arstechnica.com/cars/2026/09/gm-gives-its-most-important-trucks-a-new-ui-and-includes-carplay/",
           "domain": "arstechnica.com",
+          "publisherFamily": "arstechnica.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -348,19 +405,6 @@
           "canonical": "https://arstechnica.com/cars/2026/09/gm-gives-its-most-important-trucks-a-new-ui-and-includes-carplay/",
           "bodyChars": 5681,
           "topicOverlap": 5,
-          "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "domain": "feeds.arstechnica.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "pageTitle": "Ars Technica - All content",
-          "canonical": "",
-          "bodyChars": 21772,
-          "topicOverlap": 2,
           "discoveryTopicOverlap": 0
         }
       ],
@@ -371,6 +415,19 @@
       "title": "Artificial Intelligence - Congresswoman Veronica Escobar (.gov)",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbHk0cnRVWlZ6WVhQWVVwUTlyNHFEWGVWM2loUXpYOFBqOXBrZ0ZBQ0JDQzFwYkJDRm10RXVMS20yM1ZJanVhWmJ6RVdrNHV2OG9LNVFjeVdjcW9BeWhkc296RUhEbnpsa1M5Slk5bndkNkJoWEVYaDhsemlxXzBUc3VCX2NUUGx4Tm5wVVN2VGViVWQxSURV?oc=5",
+      "title": "Trump facing AI backlash in Congress as push for guardrails intensifies - The Guardian",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -380,6 +437,8 @@
       "title": "First lady Melania Trump visits North Carolina school to see AI technology in action - WSTM",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -389,24 +448,19 @@
       "title": "Why AI's real challenge for CEOs is staying in control - The World Economic Forum",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOa3puUXRFSE5YY01MaFJkQkNjYXh3QkJKMWVUdUJmcHNaeHRxWm5Nd3AwZzRwVTMxa2Iya1ZyX0ozV0hoNEtyVjJzWnFoN1dKZ2JRaDl6Nk54ZmNwQlZFRmE4MVZWSGx5R0F5bUZqczJPSDhSd19OZXhTbHNoek5XRGVuUVN0MHVCdV82VUhNZmQzcmNralltaEpvUnZ6NmNhVldqaVFtdXZENWc5?oc=5",
-      "title": "Could AI really wipe out humanity and hijack the internet? - The Guardian",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPYXF3V2pmVHNteGtpQzFIdzBEU3dYbzVlQXVzV0w3QlBoTnRhZmxic3ZsUFRIWnJsMm1CdDhpcnY4ekFaWTVOVlBoVVFHSVMwTlZkcVRpeURnbWgyeDdjc1Axazc5UTVBOUFsYWRocTZLWjFFcGhJdEVCcUhsSlR5NTVLa1RSNDlhZExZZDJhNDdVbWdzdTRKYVNFQzBLYnFEckE?oc=5",
-      "title": "Knowtex launches frontier healthcare AI lab - Fierce Healthcare",
+      "title": "Knowtex launches frontier healthcare AI lab - fiercehealthcare.com",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -416,15 +470,19 @@
       "title": "Announcing instance preference lists for Amazon SageMaker AI training jobs - Amazon Web Services (AWS)",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZmkwa0pab0V2WVVSX0dEY1N1elRHU1JhRFZualo2cU9iN3Jkc1NJNGJDZlQ4M2pVSDVzX2JDVWp2dm9UTEtrQ0swcEoxVVZmLVY0bmJtdEhmaGtfdnVuTDFhYnJDamc5Qk1MYktVU3dlcGpyVEw1a1pvbUkwMTd4eFJKMkRGTXBQSmcza2xPLXVwN2FSbExiWjVIOHdLTUFhc1pva204RHgtLXls?oc=5",
-      "title": "Artificial Intelligence Is Rapidly Changing the PIA Process - conduitstreet.mdcounties.org",
+      "title": "Artificial Intelligence Is Rapidly Changing the PIA Process - Conduit Street Blog",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -434,15 +492,19 @@
       "title": "Human Artificial Intelligence Starts With Knowing What You Want To Do - Forbes",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNY2VjYm03M3VFN0cwRHdsSmQzMFVRcWk5VWtwOWw5SkRFbmx6VjZBN1IxakJhdXVFX2dIRm5BMUZvemxxX3Z2enZuUW5tM1BlX0xsX0F1cW0wbjUtam1oZlBqSWFOSUh0T1c1LWtySTlXNktvUEI4SWlXSWx3VEVEVEswLUNEVkdweUNkaHJrWXBnbXIw?oc=5",
-      "title": "How to Manage the AI Risk? - City Journal",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOa3puUXRFSE5YY01MaFJkQkNjYXh3QkJKMWVUdUJmcHNaeHRxWm5Nd3AwZzRwVTMxa2Iya1ZyX0ozV0hoNEtyVjJzWnFoN1dKZ2JRaDl6Nk54ZmNwQlZFRmE4MVZWSGx5R0F5bUZqczJPSDhSd19OZXhTbHNoek5XRGVuUVN0MHVCdV82VUhNZmQzcmNralltaEpvUnZ6NmNhVldqaVFtdXZENWc5?oc=5",
+      "title": "Could AI really wipe out humanity and hijack the internet? - The Guardian",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -452,6 +514,8 @@
       "title": "McKinsey Technology Trends Outlook 2026 - McKinsey & Company",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -461,15 +525,8 @@
       "title": "Lineberger building technology base for better cancer vaccines - The University of North Carolina at Chapel Hill",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRzU0cTlwNHctb0FiY092UVlJZFh4UmxsQ2lPLTdkVEU2SlRzVU12VzI2RGRYWEFqS2NMcVlXdXNTUGczTjFTbjZGMXY4bHhZYXN6bVpGQ0M0cndmMmthYjhUcGhPWlZsb1ZWeHhHOUdZWE93bTdUMjBNMzZQNTR6Mw?oc=5",
-      "title": "Making sovereign, open-weight AI the technology frontier - mistral.ai",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -479,15 +536,19 @@
       "title": "Oregon Guard Uses New Hoist Technology in Rescue - nationalguard.mil",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uMW8wc0tJUXgtUWc5ZnJiOVl0aGtEQkZTNm1HNXdHNGotdGw2MUZtYzVjODZnSDR1a20xczlFeDNXZVIyZmhxc1pvV0l5MjFobDlMaC1GQWpLWlVIc1p3VzFxcU0wNXNE?oc=5",
-      "title": "Information Technology Turns Town of Clayton Data Into Useful Tools - Town of Clayton, NC",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRzU0cTlwNHctb0FiY092UVlJZFh4UmxsQ2lPLTdkVEU2SlRzVU12VzI2RGRYWEFqS2NMcVlXdXNTUGczTjFTbjZGMXY4bHhZYXN6bVpGQ0M0cndmMmthYjhUcGhPWlZsb1ZWeHhHOUdZWE93bTdUMjBNMzZQNTR6Mw?oc=5",
+      "title": "Making sovereign, open-weight AI the technology frontier - mistral.ai",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -497,6 +558,19 @@
       "title": "Renowned Vanderbilt Institute for Software Integrated Systems renamed ‘ICONS’ - Vanderbilt University",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1uMW8wc0tJUXgtUWc5ZnJiOVl0aGtEQkZTNm1HNXdHNGotdGw2MUZtYzVjODZnSDR1a20xczlFeDNXZVIyZmhxc1pvV0l5MjFobDlMaC1GQWpLWlVIc1p3VzFxcU0wNXNE?oc=5",
+      "title": "Information Technology Turns Town of Clayton Data Into Useful Tools - Town of Clayton, NC",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -506,6 +580,8 @@
       "title": "PrimeGlobal, Sikich launch technology advisory partnership - internationalaccountingbulletin.com",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -515,6 +591,8 @@
       "title": "Genpact Wins in the Inaugural 2026 HFS Services-as-Software Awards - PR Newswire",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -524,15 +602,8 @@
       "title": "VIP announces acquisition of Encompass to advance food & beverage technology - Vermont Business Magazine",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdWpVeWhNVkNWcXVqajB3MjNJZmtJOWdhYUJybVhnNTdkRGhmNjhMYXkteGpSOEFid2Y5X2JmcWYwUHAtTzZ3d0pEUW1VYnZzeDRieVI2VGdrTDJMeXg5NUM2cU1ZdWRwODFGQ2ktZmNzMjRHVGJEOXVOekN6eS1wMjk4WTZraks5Rk1pTm40bkVXX0FBS2tGNHlnRlAzS18xSXNRLV9KZmZnZw?oc=5",
-      "title": "If the Founders Aren’t Interesting, I Never Get to the Technology - inc.com",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -542,15 +613,8 @@
       "title": "From electronics to agriculture: How 3M film technology is helping manage light in new ways - 3M News Center",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcWxQQlBTTWFxaE1nMnpYOTlneHhTdy15UHFwZEdUSUpPWWNHQVRIQnh3eWt6cEg3RzZjc2J0YW4wMUJzM19FUnVzZmJHLVphNDBCQzVWbDBsYm1BaFFpX25sbTdiOFVYVjc1OGF0T2VwT0luVFVhZ05ENnR1RWdwOFhMV2FLbHlpa09sRHdjQTFaRXdNV3JlTWRYVE5WUQ?oc=5",
-      "title": "Medicare to expand its pilot that pays for technology to manage chronic diseases - STAT",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -560,6 +624,8 @@
       "title": "AI Is reshaping open source software and straining the systems that sustain it - EurekAlert!",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -569,6 +635,8 @@
       "title": "EXCLUSIVE: Healthcare software firm Waystar explores options including sale, sources say - Reuters",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -578,6 +646,8 @@
       "title": "State Child Tax Credits Will Boost Financial Security for Families and Children in 2027 - Institute on Taxation and Economic Policy",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -587,6 +657,8 @@
       "title": "Europe Subcommittee Chairman Self Delivers Opening Remarks at Hearing on Security Challenges in the Western Balkans - House.gov",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -596,6 +668,8 @@
       "title": "Tech’s IT Department establishes new security measures - The Daily Toreador",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -605,15 +679,19 @@
       "title": "Russia and United States Retreat from Nuclear Security as 12 Countries Step Up, 2026 NTI Nuclear Security Index Finds - The Nuclear Threat Initiative",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQd3Mwd1NaV2YtX19pTXl5R1lIckFPb2RHdWRJU1l4YzJKNjhSN1lCeEJRYjFIdXdueHVaUl9ZUC01OFkxb3FnUHZqVGRvMFZ4b2NSUmE4VzNhbk1qYXdSQWs4RWZNUmg2eFByYXFtTWZ2R0FZQUgyRjZjRVJINHpNX3RUaGNMREJTQXkwMWhjdEdtMV9WcUNxZnJEYnN3dm8?oc=5",
-      "title": "Harry and Meghan Change Children’s School After Talks With Security Team - nytimes.com",
+      "title": "Harry and Meghan Change Children’s School After Talks With Security Team - The New York Times",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -623,6 +701,8 @@
       "title": "Security Council LIVE: Rising violence triggers emergency meeting on Yemen - UN News",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -632,6 +712,8 @@
       "title": "Cyber Readiness And Election Security Focus Of Senate Hearing - Legis1",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -641,42 +723,8 @@
       "title": "Edmond leaders discuss security upgrades at Arcadia Lake months after deadly mass shooting - KOCO",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTUJ5RHVQNUZmTkdndjVRYXo1LThRcmFUQTBBR2huVVVXQld6Q3lOQU1RQVJEMlJZNWZOQzdIZzFCLTZSd1doSmRXZXk0OUgxSFN2Y2ZsNHZfTXlkVXhWeWZibmpyaDcxeFNNZTg4cGdnS0o0XzBoZlVDWTdmN0RfUWVNSEZYMlo0ci1BTlZOLVpnYV8xbDgxYld6T1U5WjdJRGF0STBhMXpCRGk4TDlsNW1QTlFxaG1EMkJJZWZJSmY1R0E?oc=5",
-      "title": "Prince Harry and Meghan change children’s school after 2 days amid security fears - The Washington Post",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZzFyMVJTbUpFS3RqUTMyNkFmNXVXazdvWEQxVjVLZ1BlcXVmWDdIRjBFeC1yYkpOMDdWWXMwU1Y1ZHNKX1Q1Yk9WT2oyNWZob21lektPWlZHSmdRRlUzNEFyYk44a1lpZ3FSSk8xWjMwb3k1RlZqcDlQTVJVV0NtaGQ2aXA0SG1mRUViQlZnQjdzbVRJTno1SFNPa2xPNlRZNzlkVnRwSElrRXYwWXJDYkNoQTBScXFid0hSMHYzMnJ2WGFocy10WVgyQVp6TC1VV1Y3NzBqd0lhTm1INktCcVJR?oc=5",
-      "title": "China can block citizens from leaving the country over national security or tech export violations - latimes.com",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSEtwVTdKa0Rjczd4TlFhdm81THBSaEdqSm1xblpIUVBQM2syemlmTmZZUzQxQ3FiX1poVHlVaVY4UE0wVmpSeFVCRDE5enh5TFl1QjdWQVp0MDJIZ1ZoVEFXVmljTEd0azVBTkZ5NldTWFB0M3pTVTJlTTZNM01tY1BLY2xWM0pRWXZqLXJYOVlLaXlvYXBOYTQ3OFdydHhQdGJ0S1JKSmZBdWhCV24w?oc=5",
-      "title": "CUA theology professor joins Homeland Security as cultural outreach director - Catholic Standard",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORC03SGNHRVhQWG5PcFN6bzF6eGFFZ256bWk4OVBhd2lnUzU3ano3bmJnd0RxZy1MUFQ3eC1qWjRKcUREQmJiYkUyNTJyYUZqd24zUm9YbHBMNTIwUmFwUHZ2aEN5cm8zd0t5RTI2M1BHQ0dsU2NPa1AteHNwTGZFblptZ0tLdXh5dFZ0Z0dOOEh3aVc5dGw4eWJ3OUlESlhkOFZLeHo3X3Y2TnZSeUxQclNxb05JQdIBuwFBVV95cUxNS2UxNnhkcU0weVlXQ3htWlVidXR1bldLU01qbndtNWRQUFo2OHNiRm80cGhxeXpaaVJIbnhSVWhENDQ1T0hsbm9IYV9hb29LSGFSakNvRjhGdXEtVy1DbnN4MHhzc3dFRG0xMDRvTTliRUxlR1dMUzhHa0hQMWN6UFJKVXBZTVhQWG5rS2JfRDdiREI1b3hOa3Qwc0V4NGttQWR1c2dtcE5hOVpVckliVlVBWkQwR2FsZFpv?oc=5",
-      "title": "NBC boosts security at ‘Today’ studio after string of incidents: Report - The Hill",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -686,15 +734,52 @@
       "title": "Oxford police beefing up security ahead of LSU coach Lane Kiffin's return to Ole Miss - CBS Sports",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNM08wLUV6VHVhTGhZN3VUV0dFbnRXamFRWW5TcmduMERDVjdoNFZiZjNEVUJMVkxFTzZFc1FKd2VxQ2ttdTRhNWNsQnhfZHMyaUdoQXYzSGNqTklBOC1uS1JJOTVaWmowOXNKclkwS0YyVWcxNkE3bjVvQ09kRC1uendKTkRFSVQ4WjNNYlNUZjdaTkNuaG5BNFVVc0ZXa2hkM2luQUxoQU9wQkE2M3c?oc=5",
-      "title": "'Restoring Childhood' says it’s not smartphones making teens miserable. It’s school. - Reason Magazine",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTUJ5RHVQNUZmTkdndjVRYXo1LThRcmFUQTBBR2huVVVXQld6Q3lOQU1RQVJEMlJZNWZOQzdIZzFCLTZSd1doSmRXZXk0OUgxSFN2Y2ZsNHZfTXlkVXhWeWZibmpyaDcxeFNNZTg4cGdnS0o0XzBoZlVDWTdmN0RfUWVNSEZYMlo0ci1BTlZOLVpnYV8xbDgxYld6T1U5WjdJRGF0STBhMXpCRGk4TDlsNW1QTlFxaG1EMkJJZWZJSmY1R0E?oc=5",
+      "title": "Prince Harry and Meghan change children’s school after 2 days amid security fears - The Washington Post",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZzFyMVJTbUpFS3RqUTMyNkFmNXVXazdvWEQxVjVLZ1BlcXVmWDdIRjBFeC1yYkpOMDdWWXMwU1Y1ZHNKX1Q1Yk9WT2oyNWZob21lektPWlZHSmdRRlUzNEFyYk44a1lpZ3FSSk8xWjMwb3k1RlZqcDlQTVJVV0NtaGQ2aXA0SG1mRUViQlZnQjdzbVRJTno1SFNPa2xPNlRZNzlkVnRwSElrRXYwWXJDYkNoQTBScXFid0hSMHYzMnJ2WGFocy10WVgyQVp6TC1VV1Y3NzBqd0lhTm1INktCcVJR?oc=5",
+      "title": "China can block citizens from leaving the country over national security or tech export violations - Los Angeles Times",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSEtwVTdKa0Rjczd4TlFhdm81THBSaEdqSm1xblpIUVBQM2syemlmTmZZUzQxQ3FiX1poVHlVaVY4UE0wVmpSeFVCRDE5enh5TFl1QjdWQVp0MDJIZ1ZoVEFXVmljTEd0azVBTkZ5NldTWFB0M3pTVTJlTTZNM01tY1BLY2xWM0pRWXZqLXJYOVlLaXlvYXBOYTQ3OFdydHhQdGJ0S1JKSmZBdWhCV24w?oc=5",
+      "title": "CUA theology professor joins Homeland Security as cultural outreach director - Catholic Standard",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORC03SGNHRVhQWG5PcFN6bzF6eGFFZ256bWk4OVBhd2lnUzU3ano3bmJnd0RxZy1MUFQ3eC1qWjRKcUREQmJiYkUyNTJyYUZqd24zUm9YbHBMNTIwUmFwUHZ2aEN5cm8zd0t5RTI2M1BHQ0dsU2NPa1AteHNwTGZFblptZ0tLdXh5dFZ0Z0dOOEh3aVc5dGw4eWJ3OUlESlhkOFZLeHo3X3Y2TnZSeUxQclNxb05JQdIBuwFBVV95cUxNS2UxNnhkcU0weVlXQ3htWlVidXR1bldLU01qbndtNWRQUFo2OHNiRm80cGhxeXpaaVJIbnhSVWhENDQ1T0hsbm9IYV9hb29LSGFSakNvRjhGdXEtVy1DbnN4MHhzc3dFRG0xMDRvTTliRUxlR1dMUzhHa0hQMWN6UFJKVXBZTVhQWG5rS2JfRDdiREI1b3hOa3Qwc0V4NGttQWR1c2dtcE5hOVpVckliVlVBWkQwR2FsZFpv?oc=5",
+      "title": "NBC boosts security at ‘Today’ studio after string of incidents: Report - The Hill",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -704,6 +789,19 @@
       "title": "Expert report notes ‘dramatic deterioration’ in U.S. nuclear security - The Washington Post",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNM08wLUV6VHVhTGhZN3VUV0dFbnRXamFRWW5TcmduMERDVjdoNFZiZjNEVUJMVkxFTzZFc1FKd2VxQ2ttdTRhNWNsQnhfZHMyaUdoQXYzSGNqTklBOC1uS1JJOTVaWmowOXNKclkwS0YyVWcxNkE3bjVvQ09kRC1uendKTkRFSVQ4WjNNYlNUZjdaTkNuaG5BNFVVc0ZXa2hkM2luQUxoQU9wQkE2M3c?oc=5",
+      "title": "'Restoring Childhood' says it’s not smartphones making teens miserable. It’s school. - Reason Magazine",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -713,6 +811,8 @@
       "title": "WATCH LIVE: Senate expected to vote on cryptocurrency regulation - PBS",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -722,6 +822,8 @@
       "title": "Bitcoin tumbles 3% to $76,000 as hopes of CLARITY Act passage this year fade - Yahoo Finance",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -731,6 +833,8 @@
       "title": "US Senate to vote on advancing sweeping cryptocurrency bill - Reuters",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -740,15 +844,19 @@
       "title": "Cathie Wood Pares Crypto Stock Holdings Ahead Of Clarity Act Vote - Investor's Business Daily",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZFVhTlU5X0kzaEVGRGl5aHVsOXJfanJlZmZ3aG5xUkVpQjJJWXFuckVRakRJRG9nVXdDSVRvcGR4aGN2bHRMVnJpemVDMmJDaGh1MXI2R2FaY0poY2VpajR6dTNOMkdGSmlxOW5xVGhwRkFHb0pEZ2JHU3AyZVBRQjl5QmtaUGx1dHNiVUx0b0tXbkJfS0paRzZFSjF4YzR0N0NXUS1wWGE0YlV1Zi1saVNQVkp5RU1uMS1HZw?oc=5",
-      "title": "DOJ Says Binance Customers Used Crypto Exchange to Funnel Iran Oil Money - WSJ",
+      "title": "DOJ Says Binance Customers Used Crypto Exchange to Funnel Iran Oil Money - wsj.com",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -758,6 +866,8 @@
       "title": "Current price of Ethereum for Sept. 15, 2026 - Fortune",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -767,24 +877,19 @@
       "title": "Clarity Act: What it means for your crypto holdings - Yahoo Finance",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1HWTF3ZS00VDJDeWJsS0VQUHpDazkybjlKUGhTcE5ZM1BfdktQMGVfOC1sa0hqeGt0OE5OYnJoTXVRZjVuSlZZSkZ4bXplVFVoS1R2UW5SZm4wRWxWWXpQSkNwVUtSUTZhR0k5ZzQzdWhGQjg?oc=5",
-      "title": "The Clarity Act Is Set for a Vote on Tuesday. It’s a Toss-Up for Crypto. - barrons.com",
+      "title": "The Clarity Act Is Set for a Vote on Tuesday. It’s a Toss-Up for Crypto. - Barron's",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiRUdjVHJGVXVNZmpYR3FETDVFeW9TU1loYVlmaFV5eFBLaXBWZ3Z1NVpiTVNFSU44dnVqWEVtS3lxaDNDM1VZTmphVFVNb0thWURzelV5RnBCTDJYVmpYUk5TSUN4dnVTZDhVWmxHY19iWmJPWmpN?oc=5",
-      "title": "Bitcoin falls ahead of Senate Clarity Act cloture vote - qz.com",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -794,6 +899,10 @@
       "title": "Meta expands subscription push with new AI-focused plans",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -801,6 +910,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -819,6 +929,10 @@
       "title": "Nitter and XCancel are dead (again) after X&#8217;s latest legal actions",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -826,6 +940,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/nitter-and-xcancel-are-dead-again-after-xs-latest-legal-actions/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -844,6 +959,10 @@
       "title": "AEO startup Profound hits unicorn valuation, raises $180M Series D 7 months after last round",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -851,6 +970,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/aeo-startup-profound-hits-unicorn-valuation-raises-180m-series-d-7-months-after-last-round/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -869,6 +989,10 @@
       "title": "Former TikTok execs built an app that uses AI to teach you how to pose for a photo",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -876,6 +1000,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/former-tiktok-execs-built-an-app-that-uses-ai-to-teach-you-how-to-pose-for-a-photo/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -894,6 +1019,10 @@
       "title": "Evvy raises $40M as it seeks to further women&#8217;s health research with vaginal microbiome data",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -901,6 +1030,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/evvy-raises-40m-as-it-seeks-to-further-womens-health-research-with-vaginal-microbiome-data/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -918,7 +1048,11 @@
       "link": "https://www.theverge.com/tech/995399/fujifilm-instax-pal-2-digital-camera-wireless-autofocus-face-detection",
       "title": "Fujifilm’s Instax Pal 2 is a tiny digital camera that may not disappoint",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -926,6 +1060,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/tech/995399/fujifilm-instax-pal-2-digital-camera-wireless-autofocus-face-detection",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -935,19 +1070,6 @@
           "bodyChars": 2804,
           "topicOverlap": 5,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 4,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -956,7 +1078,11 @@
       "link": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs",
       "title": "This doorbell camera lets a human security guard watch your front door",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -964,6 +1090,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -973,19 +1100,6 @@
           "bodyChars": 3859,
           "topicOverlap": 9,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 6,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -994,7 +1108,11 @@
       "link": "https://www.theverge.com/tech/995273/airpods-5-wireless-charging-case-review",
       "title": "The premium AirPods 5 are the best open-ear earbuds Apple has made",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -1002,6 +1120,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/tech/995273/airpods-5-wireless-charging-case-review",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1011,19 +1130,6 @@
           "bodyChars": 8063,
           "topicOverlap": 7,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 6,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1031,16 +1137,20 @@
     {
       "link": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
       "title": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
-      "status": "pass",
-      "validSourceCount": 2,
+      "status": "block",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "arstechnica.com"
+      ],
       "independentDomains": [
-        "arstechnica.com",
-        "feeds.arstechnica.com"
+        "arstechnica.com"
       ],
       "sources": [
         {
           "suppliedUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
           "domain": "arstechnica.com",
+          "publisherFamily": "arstechnica.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1050,19 +1160,6 @@
           "bodyChars": 8022,
           "topicOverlap": 8,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "domain": "feeds.arstechnica.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "pageTitle": "Ars Technica - All content",
-          "canonical": "",
-          "bodyChars": 21772,
-          "topicOverlap": 5,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1070,16 +1167,20 @@
     {
       "link": "https://arstechnica.com/space/2026/09/for-the-first-time-the-us-military-confirms-it-has-deployed-weapons-in-orbit/",
       "title": "For the first time, the US military confirms it has deployed weapons in orbit",
-      "status": "pass",
-      "validSourceCount": 2,
+      "status": "block",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "arstechnica.com"
+      ],
       "independentDomains": [
-        "arstechnica.com",
-        "feeds.arstechnica.com"
+        "arstechnica.com"
       ],
       "sources": [
         {
           "suppliedUrl": "https://arstechnica.com/space/2026/09/for-the-first-time-the-us-military-confirms-it-has-deployed-weapons-in-orbit/",
           "domain": "arstechnica.com",
+          "publisherFamily": "arstechnica.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1089,19 +1190,6 @@
           "bodyChars": 9936,
           "topicOverlap": 7,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "domain": "feeds.arstechnica.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "pageTitle": "Ars Technica - All content",
-          "canonical": "",
-          "bodyChars": 21772,
-          "topicOverlap": 5,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1109,16 +1197,20 @@
     {
       "link": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
       "title": "AI bots \"Timmy,\" \"Ren,\" and \"Jackie\" are flooding social media with slop",
-      "status": "pass",
-      "validSourceCount": 2,
+      "status": "block",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "arstechnica.com"
+      ],
       "independentDomains": [
-        "arstechnica.com",
-        "feeds.arstechnica.com"
+        "arstechnica.com"
       ],
       "sources": [
         {
           "suppliedUrl": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
           "domain": "arstechnica.com",
+          "publisherFamily": "arstechnica.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1127,19 +1219,6 @@
           "canonical": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
           "bodyChars": 4661,
           "topicOverlap": 7,
-          "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "domain": "feeds.arstechnica.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "pageTitle": "Ars Technica - All content",
-          "canonical": "",
-          "bodyChars": 21772,
-          "topicOverlap": 4,
           "discoveryTopicOverlap": 0
         }
       ],
@@ -1150,6 +1229,10 @@
       "title": "AI models need more data about biology, and OpenAI is paying to create it",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "technologyreview.com"
+      ],
       "independentDomains": [
         "technologyreview.com"
       ],
@@ -1157,6 +1240,7 @@
         {
           "suppliedUrl": "https://www.technologyreview.com/2026/09/15/1144129/ai-models-need-more-data-about-biology-and-openai-is-paying-to-create-it/",
           "domain": "technologyreview.com",
+          "publisherFamily": "technologyreview.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1174,7 +1258,11 @@
       "link": "https://www.theverge.com/transportation/994875/gm-chevy-gmc-truck-software-ui-carplay-android-auto",
       "title": "GM updates its trucks’ native software to coexist with CarPlay",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -1182,6 +1270,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/transportation/994875/gm-chevy-gmc-truck-software-ui-carplay-android-auto",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1190,19 +1279,6 @@
           "canonical": "https://www.theverge.com/transportation/994875/gm-chevy-gmc-truck-software-ui-carplay-android-auto",
           "bodyChars": 8315,
           "topicOverlap": 5,
-          "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 3,
           "discoveryTopicOverlap": 0
         }
       ],
@@ -1213,6 +1289,8 @@
       "title": "As the world debates the risks of AI, China closes the technology gap with the US - ABC News - Breaking News, Latest News and Videos",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1222,24 +1300,19 @@
       "title": "What an AI slowdown would mean - Politico",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
     },
     {
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZm96YTFSM0FtUEljaG81TWtGSEpZN1ZYNUhMbEZET2hpSDZJLUM3eVQ1RGx6blFSYk1GRmJVWnlzRmdPRDNzbmtEa0RqbXFmaW5kcVd4YU1KOGNEQTV5V1ZQdU1ZNEFhRGVkUU9kQ1hkc0QxYkJlanRQWUxiZ1h5ckI2ZEVyODhiUVhVd2lYaXZvSS1GX0EtalJpYnV5VkpnWTF4QzAzUktsRTRD?oc=5",
-      "title": "New York City seniors raise AI concerns at Harlem town hall - ny1.com",
+      "title": "New York City seniors raise AI concerns at Harlem town hall - Spectrum News NY1",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbHk0cnRVWlZ6WVhQWVVwUTlyNHFEWGVWM2loUXpYOFBqOXBrZ0ZBQ0JDQzFwYkJDRm10RXVMS20yM1ZJanVhWmJ6RVdrNHV2OG9LNVFjeVdjcW9BeWhkc296RUhEbnpsa1M5Slk5bndkNkJoWEVYaDhsemlxXzBUc3VCX2NUUGx4Tm5wVVN2VGViVWQxSURV?oc=5",
-      "title": "Trump facing AI backlash in Congress as push for guardrails intensifies - The Guardian",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1249,6 +1322,8 @@
       "title": "Human expertise as an increasingly valuable form of AI data - The World Economic Forum",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1258,6 +1333,19 @@
       "title": "GM launching new customer software experience with redesigned Chevy, GMC pickups - CNBC",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdWpVeWhNVkNWcXVqajB3MjNJZmtJOWdhYUJybVhnNTdkRGhmNjhMYXkteGpSOEFid2Y5X2JmcWYwUHAtTzZ3d0pEUW1VYnZzeDRieVI2VGdrTDJMeXg5NUM2cU1ZdWRwODFGQ2ktZmNzMjRHVGJEOXVOekN6eS1wMjk4WTZraks5Rk1pTm40bkVXX0FBS2tGNHlnRlAzS18xSXNRLV9KZmZnZw?oc=5",
+      "title": "If the Founders Aren’t Interesting, I Never Get to the Technology - inc.com",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1267,24 +1355,8 @@
       "title": "Harry and Meghan change their children’s school over security concerns - NBC News",
       "status": "block",
       "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ESmdMVFpLdzVSbGV3dTFVSXFvcmZ4UURFM2JhTGtXaGNhcWk5cTN1WXdSZjFXcGxGNnFmV21MUi1kMHZFN1Y3dXpaRUtJcHRxSUlZX3FRQUdNcjQ?oc=5",
-      "title": "Harry and Meghan change children's school over security concerns due to traffic - BBC",
-      "status": "block",
-      "validSourceCount": 0,
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUU9BOGpkbUk0UVhJRjlsRVNXdUZtNUw4ZGR4RGxqWW94OEF1T184SWh4bmhCX2hMTmJCa2dNZGpsSWlSOEhwaUtrUlVpUm5Nd3g1blU1UkxOZkU3MDhYQ2MyRUVMR1EyMXdPbzVFLW5SQ2pKcktpMmpLcl9PcDIyXzdhMERQcjd5X3gzUjFPcEdvandGSlg2aXFLZnZEcTBOV3ZWNVNZMA?oc=5",
-      "title": "China tightens travel rules over tech security - Reuters",
-      "status": "block",
-      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1294,6 +1366,30 @@
       "title": "These settings changed how I handle demanding apps without sacrificing performance and battery - Android Police",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ESmdMVFpLdzVSbGV3dTFVSXFvcmZ4UURFM2JhTGtXaGNhcWk5cTN1WXdSZjFXcGxGNnFmV21MUi1kMHZFN1Y3dXpaRUtJcHRxSUlZX3FRQUdNcjQ?oc=5",
+      "title": "Harry and Meghan change children's school over security concerns due to traffic - BBC",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUU9BOGpkbUk0UVhJRjlsRVNXdUZtNUw4ZGR4RGxqWW94OEF1T184SWh4bmhCX2hMTmJCa2dNZGpsSWlSOEhwaUtrUlVpUm5Nd3g1blU1UkxOZkU3MDhYQ2MyRUVMR1EyMXdPbzVFLW5SQ2pKcktpMmpLcl9PcDIyXzdhMERQcjd5X3gzUjFPcEdvandGSlg2aXFLZnZEcTBOV3ZWNVNZMA?oc=5",
+      "title": "China tightens travel rules over tech security - Reuters",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1303,6 +1399,8 @@
       "title": "This bill could reshape crypto in America — and it's sparking a major battle - NPR",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1312,6 +1410,8 @@
       "title": "U.S. seeks to seize $61 million of crypto it claims are proceeds from Iranian petroleum sales to Chinese buyers - CNBC",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1321,6 +1421,19 @@
       "title": "Trump crypto empire looms over Senate showdown - Politico",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZFlweUpnY3hlN3hRc3paWktqQlMzVVVkVUM3aXk5SGNidkEycnlnX3pIamYyX240cnBCTFVwUFFfS1NYZXhhaGZDcW9CMXFtajUxVFdEN3AzaEJtSGt1LXRFM1FFdUZMMmZBNVFjTmhmX0lFbDQ4RThuV0pnbkNXYWxSZHRoRkNhYlJTbjJrdUxOSFhxcG85bU5Ycl8xNG8?oc=5",
+      "title": "US Senate to vote on advancing landmark crypto bill - Yahoo Finance",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1330,6 +1443,8 @@
       "title": "Bitcoin Price Wobbles as Leverage Falls Ahead of CLARITY Vote and Fed Decision - Yahoo Finance",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1339,6 +1454,10 @@
       "title": "New Italian unicorn Exein rides the physical AI wave",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1346,6 +1465,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/new-italian-unicorn-exein-rides-the-physical-ai-wave/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1360,10 +1480,34 @@
       "recoveryAttempts": 0
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOeWExeUktN3lJVmNWajJzanVsVVRWN3AtdXVXMHJEWlBQNk5UaVE1aDB2Nm9fTHJ4WmtZZU9YZF8yeUpkc1VRLXN2MGVXdDBoM2lOaWFxVkV5dzZtbmg0dGphRThGRXJSQS10Z1pwQW5rUW1xcTk4cFB1OEp4Uno2dzdkSFJERlBNRkxzeXlweVJmSjFaOGZqUUNpYw?oc=5",
+      "title": "Are Chinese Firms Handing the United States Data? - Foreign Policy",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQeW82TVhjWXNsQ3RjbkN6QjF5Y1dJcFpkXzZoQnJYZ2IwNUNTLWQ4MGM2S2xrZnpjQTdZQThPNDEwakpwYWNWOHl4WGlqcjBRc0Z3czZkMW5kMXhYdHNtSnZnQmZWaDlCR3pXbm0wVkJmRndSSjJ2NmQ2OXdmRGpVZkJPZkpvandrSldQeXF2WkQyYlozNnZEZXpJVl80ZHF0WE9GOFNiU0w?oc=5",
       "title": "New Apple TV with Siri AI could launch at any time in the fall - AppleInsider",
       "status": "block",
       "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY3lBVjFBRkYxaU9JZXN2R0s5TFhnQW4zbTVBVXlId055Z3lqbW4yZ01weDZRU1RPb3Z5bjU2U0hFaHAtSDA5N2p4UXNTc1lpWENKd3A0a2hXRlVUdER3ZFZVakhSWDE4MFBkam1vT3FDWjVZdm9xNU51RFAxdXFlQzBNbnZwUTZUQndZeV9qYnZlX01SVGVncHdjSExPRnFleXFRNG9zV1VUbUhYMDZDdlBKckdGbzRoUllj?oc=5",
+      "title": "Republicans say Trump agreed to new ethics rules to get crypto bill across the line - PBS",
+      "status": "block",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
       "independentDomains": [],
       "sources": [],
       "recoveryAttempts": 0
@@ -1373,6 +1517,10 @@
       "title": "US data centers could consume more natural gas than Germany and Japan combined by 2035",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1380,6 +1528,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/us-data-centers-could-consume-more-natural-gas-than-germany-and-japan-combined-by-2035/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1398,6 +1547,10 @@
       "title": "Health benefits platform Thatch reaches $1B valuation as healthcare costs surge",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1405,6 +1558,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/health-benefits-platform-thatch-reaches-1b-valuation-as-healthcare-costs-surge/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1423,6 +1577,10 @@
       "title": "Leaks, data breaches, and ransom notes: The worst hacks of 2026 so far",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1430,6 +1588,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/the-worst-hacks-and-breaches-of-2026-so-far/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1448,6 +1607,10 @@
       "title": "Wonder scores a $425 million partnership with DoorDash as it builds its food empire",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1455,6 +1618,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/wonder-scores-a-425-million-partnership-with-doordash-as-it-builds-its-food-empire/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1473,6 +1637,10 @@
       "title": "Discover how to take your startup from prototype to production at TechCrunch Disrupt 2026",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1480,6 +1648,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/discover-how-to-take-your-startup-from-prototype-to-production-at-techcrunch-disrupt-2026/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1498,6 +1667,10 @@
       "title": "India ends free ride for larger transactions on its ubiquitous digital payments network",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1505,6 +1678,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/india-ends-free-ride-for-larger-transactions-on-its-ubiquitous-digital-payments-network/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1523,6 +1697,10 @@
       "title": "4 days left to exhibit at TechCrunch Disrupt 2026",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1530,6 +1708,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/4-days-left-to-exhibit-at-techcrunch-disrupt-2026/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1548,6 +1727,10 @@
       "title": "Spotify finally lets parents exclude kids&#8217; music from Wrapped and recommendations",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
       "independentDomains": [
         "techcrunch.com"
       ],
@@ -1555,6 +1738,7 @@
         {
           "suppliedUrl": "https://techcrunch.com/2026/09/15/spotify-finally-lets-parents-exclude-kids-music-from-wrapped-and-recommendations/",
           "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1571,16 +1755,20 @@
     {
       "link": "https://arstechnica.com/tech-policy/2026/09/boston-dumps-flock-says-it-shared-data-nationwide-in-violation-of-contract/",
       "title": "Boston dumps Flock, says it shared data nationwide in violation of contract",
-      "status": "pass",
-      "validSourceCount": 2,
+      "status": "block",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "arstechnica.com"
+      ],
       "independentDomains": [
-        "arstechnica.com",
-        "feeds.arstechnica.com"
+        "arstechnica.com"
       ],
       "sources": [
         {
           "suppliedUrl": "https://arstechnica.com/tech-policy/2026/09/boston-dumps-flock-says-it-shared-data-nationwide-in-violation-of-contract/",
           "domain": "arstechnica.com",
+          "publisherFamily": "arstechnica.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1590,19 +1778,6 @@
           "bodyChars": 5057,
           "topicOverlap": 9,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "domain": "feeds.arstechnica.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "pageTitle": "Ars Technica - All content",
-          "canonical": "",
-          "bodyChars": 21772,
-          "topicOverlap": 8,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1610,16 +1785,20 @@
     {
       "link": "https://arstechnica.com/cars/2026/09/ev-charging-infrastructure-is-still-lagging-adoption-report-says/",
       "title": "Demand for EV chargers is outstripping supply, says ChargePoint report",
-      "status": "pass",
-      "validSourceCount": 2,
+      "status": "block",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "arstechnica.com"
+      ],
       "independentDomains": [
-        "arstechnica.com",
-        "feeds.arstechnica.com"
+        "arstechnica.com"
       ],
       "sources": [
         {
           "suppliedUrl": "https://arstechnica.com/cars/2026/09/ev-charging-infrastructure-is-still-lagging-adoption-report-says/",
           "domain": "arstechnica.com",
+          "publisherFamily": "arstechnica.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1628,19 +1807,6 @@
           "canonical": "https://arstechnica.com/cars/2026/09/ev-charging-infrastructure-is-still-lagging-adoption-report-says/",
           "bodyChars": 4656,
           "topicOverlap": 6,
-          "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "domain": "feeds.arstechnica.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://feeds.arstechnica.com/arstechnica/index",
-          "pageTitle": "Ars Technica - All content",
-          "canonical": "",
-          "bodyChars": 21772,
-          "topicOverlap": 3,
           "discoveryTopicOverlap": 0
         }
       ],
@@ -1651,6 +1817,10 @@
       "title": "Roundtables: Could AI really kill us all?",
       "status": "block",
       "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "technologyreview.com"
+      ],
       "independentDomains": [
         "technologyreview.com"
       ],
@@ -1658,6 +1828,7 @@
         {
           "suppliedUrl": "https://www.technologyreview.com/2026/09/15/1143936/roundtables-will-ai-really-kill-us-all/",
           "domain": "technologyreview.com",
+          "publisherFamily": "technologyreview.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1675,7 +1846,11 @@
       "link": "https://www.theverge.com/gadgets/995518/elegoo-3d-printer-switch-joy-con-deal-sale",
       "title": "One of the best 3D printers for beginners is almost $100 off",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -1683,6 +1858,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/gadgets/995518/elegoo-3d-printer-switch-joy-con-deal-sale",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1690,19 +1866,6 @@
           "pageTitle": "One of the best 3D printers for beginners is almost $100 off | The Verge",
           "canonical": "https://www.theverge.com/gadgets/995518/elegoo-3d-printer-switch-joy-con-deal-sale",
           "bodyChars": 2595,
-          "topicOverlap": 4,
-          "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
           "topicOverlap": 4,
           "discoveryTopicOverlap": 0
         }
@@ -1713,7 +1876,11 @@
       "link": "https://www.theverge.com/podcast/995432/how-the-oregon-trail-became-a-generational-icon",
       "title": "How The Oregon Trail became a generational icon",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -1721,6 +1888,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/podcast/995432/how-the-oregon-trail-became-a-generational-icon",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1730,19 +1898,6 @@
           "bodyChars": 2707,
           "topicOverlap": 5,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 2,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1751,7 +1906,11 @@
       "link": "https://www.theverge.com/entertainment/995472/tiff-2026-vintage-violence-the-devils-gentle-monster",
       "title": "Vintage Violence is an absurdist crime thriller for phone addicts",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -1759,6 +1918,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/entertainment/995472/tiff-2026-vintage-violence-the-devils-gentle-monster",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1768,19 +1928,6 @@
           "bodyChars": 5368,
           "topicOverlap": 7,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 5,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1789,7 +1936,11 @@
       "link": "https://www.theverge.com/gadgets/995449/light-phone-uber-lyft-rideshare-app",
       "title": "Now Light’s minimalist phone can easily call an Uber",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -1797,6 +1948,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/gadgets/995449/light-phone-uber-lyft-rideshare-app",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1806,19 +1958,6 @@
           "bodyChars": 3726,
           "topicOverlap": 6,
           "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 4,
-          "discoveryTopicOverlap": 0
         }
       ],
       "recoveryAttempts": 0
@@ -1827,7 +1966,11 @@
       "link": "https://www.theverge.com/tech/994828/voicemod-voice-changer-key-pocket-ios-android-soundboard",
       "title": "Voicemod’s new pocket-friendly device brings real-time voice changing to your phone",
       "status": "block",
-      "validSourceCount": 2,
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "theverge.com"
+      ],
       "independentDomains": [
         "theverge.com"
       ],
@@ -1835,6 +1978,7 @@
         {
           "suppliedUrl": "https://www.theverge.com/tech/994828/voicemod-voice-changer-key-pocket-ios-android-soundboard",
           "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
@@ -1843,19 +1987,6 @@
           "canonical": "https://www.theverge.com/tech/994828/voicemod-voice-changer-key-pocket-ios-android-soundboard",
           "bodyChars": 3869,
           "topicOverlap": 10,
-          "discoveryTopicOverlap": 0
-        },
-        {
-          "suppliedUrl": "https://www.theverge.com/rss/index.xml",
-          "domain": "theverge.com",
-          "resolvedFrom": "seed",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/rss/index.xml",
-          "pageTitle": "The Verge",
-          "canonical": "",
-          "bodyChars": 6960,
-          "topicOverlap": 9,
           "discoveryTopicOverlap": 0
         }
       ],
@@ -1917,7 +2048,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUm9jMEFzSFNYNXJYclJudjc3cVBmc0lsNGhRWGliTTZNbHZsVkxMd2xTS1hHVlZyUlVTdVBUVUZxTjQ1Tk9Ua3JEVGEzQzNPTlJRSEgxdUI1ejhGbXZXQU1TNTViLUxHaExkU3RncW9WX3lzTEdyRnZQT1JwM3B1TkZvQ3JqY19FdUpLdENTQm5LMDBGS3I5WXQtcFI0NmhwV2Q1RVlpcWtFXzJPajJhZjRB?oc=5",
-      "title": "6 Best Free Bitcoin Cloud Mining Apps in 2026: A Guide to Mining Digital Assets on Mobile - vccircle.com",
+      "title": "6 Best Free Bitcoin Cloud Mining Apps in 2026: A Guide to Mining Digital Assets on Mobile - VCCircle",
       "status": "not-eligible",
       "sources": []
     },
@@ -1942,12 +2073,6 @@
     {
       "link": "https://arstechnica.com/tech-policy/2026/09/musk-drops-apple-from-antitrust-suit-but-keeps-gunning-for-openai/",
       "title": "OpenAI stuck fighting Musk antitrust suit after Apple finds a way out",
-      "status": "not-eligible",
-      "sources": []
-    },
-    {
-      "link": "https://arstechnica.com/science/2026/09/this-is-by-far-the-most-peaceful-atlantic-hurricane-season-weve-ever-seen/",
-      "title": "This Atlantic hurricane season is about to do something that hasn't happened in 175 years",
       "status": "not-eligible",
       "sources": []
     },
@@ -2019,19 +2144,13 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWWZiTDR6S1pvWXhwMFFCbmhCTW5abjRmLVRTcWFxUzVrdUJxSWN2Smh0b3BVRU02aDlIaHVTQ3dJNHphcnhXRFY2dVI4SXZ5VlhhWjVEZ3l3bWlKa1pJNWRWSWtxR2gtc3d3aGE1ZldkQjMxdFNFZzFHZXhpWm1tR1RwanJ1TFBpRHhjVlpIYWNydDJSSzZJaVhhMTlRczJPS0kweG9jUEtDNmFWN0x1X3ZhYVpHUQ?oc=5",
-      "title": "Apple iPhone 18 event — all the new products expected to launch at the 'Surprise and shine' event - Tom's Guide",
+      "title": "Apple iPhone 18 event — all the new products expected to launch at the 'Surprise and shine' event - tomsguide.com",
       "status": "not-eligible",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQelAyRU5YY3VkdHN4MWNRNmFYLXZVMXBOYmdSaXpCN3RseHhuc0RmSVhWcUlvTXV4Y3BBcHdHSVZTSFhkdmd4R2NsWUowMlBtVU9CblZZMzlpUnBYVkh5M3VSNzJSZzgzamxOTkp6TUw2Umd2ZTgteWN1QTVNSmV4Qy1HME9xYnlLbzV2Ny1xeURRTW1fZlpkLWZhVnjSAaQBQVVfeXFMTWI2TUpRa1F1UWxFaS05T2Ffa0dWZFNPN2FfbFFWdWVmR2pEZFlzcExpS240RTBXNGk3WXNwZzE2NFdhX0NWWjNxR2NNZ3FOSXVWbjdTcmxKRHYwN0ExWTFHTkctRWxmYVBvbXFJNlNvbkpnUG9NM3RWVVBMcHd4TkNjT2JSVHJkSkVyR1FsaXRybGNsU2dBc1ZsR25vRDE3cVR3SGU?oc=5",
       "title": "LFC and 1PointFive extend pioneering product collaboration for fans - Liverpool FC",
-      "status": "not-eligible",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
-      "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - Cummins",
       "status": "not-eligible",
       "sources": []
     },
@@ -2090,8 +2209,14 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
+      "title": "Apple unveils iPhone Duo - Apple",
+      "status": "not-eligible",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQU0ljTUNhMWlkdU1LY2dLREhBZVlMdnBoWHhoRWpucDUycXhudWp4a1hnbDE2b2JMc2oyVnJtWGVLcmdTc2NjVmxHMDJjYUdlVVJhQzZIRVNxQnEzSkpBZzlaMVhXTnI0aUtDNkdqVHJucXFORmhVWjloWDk4RktHRUFGR1FDVzNfMk4tei1ydzBBbWVHUUQ3aWZPTlI0aDZjMjVnUkpQQ3k?oc=5",
-      "title": "The 8 biggest Apple announcements from its launch event - businessinsider.com",
+      "title": "The 8 biggest Apple announcements from its launch event - Business Insider",
       "status": "not-eligible",
       "sources": []
     },
@@ -2108,12 +2233,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
-      "title": "Apple unveils iPhone Duo - Apple",
-      "status": "not-eligible",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVmszS2FVUEdhSXpxSVpMV0RuekNCbkExbWlUZDU0ckwtaGNfUkw1MjJEX01OTklia3JwamViXzdIRzQzMVMydGhJdnFKMXd0UG90ODM0UEF0WWd1S1pvSnFWLWJnanpDWjB6Z3E2azZpYTI2UlR4YzNaOXp4THI3YXl4bXZadWJGUzgwM25n?oc=5",
       "title": "Everything Apple could still launch before the end of 2026 - Macworld",
       "status": "not-eligible",
@@ -2122,6 +2241,12 @@
     {
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3UyWW9zTUswX3BSWng0ZGRTUldTVkpEc2ZoelpXaFBDeHZNMWJ6RnlrT0YyZVdNN0ZOTFRpdFg2N1EzRkJLN3ZVMThwZFRUcjN6MUxmSnUwZndHRGJWUVlTZi1kOU5IYW9hdVlVZktyVWFNX1ROakVkWERRYTZRQnZWQmhUZEVoRk9Pd0xzVUk3YnZWeHJMTUVrdG5fZXEtNmpFTdIBqgFBVV95cUxQRlRIMWU4ZFRQdjMxa0tyV1k3XzlTSEEwVjlCc2NRNjdjRzYySi1mYzdoNWtPM2N0cjBqaThsWjRMRm5sM0RhYjFzaWVGc3ZsOVd5b1h4MEhPMTJHRHBzUVJtZ25vUTFBWHhpRVpFWWJfd3c0TmFzcE1mV1JkQjk4cklUdTNhY294SlRHdTl4NnNndkcxTGQ1WlpvdGtVTXM4ek5aNTBhb05pdw?oc=5",
       "title": "Apple unveils $1,999 iPhone Duo, its first foldable phone - Al Jazeera",
+      "status": "not-eligible",
+      "sources": []
+    },
+    {
+      "link": "https://arstechnica.com/science/2026/09/this-is-by-far-the-most-peaceful-atlantic-hurricane-season-weve-ever-seen/",
+      "title": "This Atlantic hurricane season is about to do something that hasn't happened in 175 years",
       "status": "not-eligible",
       "sources": []
     },
@@ -2162,18 +2287,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0tRTZ3Nl9VTUFEMWJGU0RQd0xRdXB2bE9HWFg1THlWamVtOG9hODFrVXAwaS10U2FOQ1JWOW5haFBVWURzeC1SWmhaOWNyRnA4RnFTTzl3cjJwQlNmSDduVGZyamVWTXBjN0xaYWtHdE5VelVEalE?oc=5",
-      "title": "Medical Office Software: Tools and Features Explained - U.S. Chamber of Commerce",
-      "status": "not-eligible",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNektvOFpLR1M5S2VIbFVuVG81UXZCY3FDRTFYZzlQZjNxU2JGNVlWMC1HdWktUDZwMkl1c0d0d2FYYUM2Snh2bE1MZk5EWDV0YzgxaTd6T0ZTUElXZkkxODhSYjdsc1VJVkhVVTg3V2ZRQkJ1RVRZWmdPZ3RMS1RrXzJYOXNDZGM5bjg3bmZvOTVGSThDNzNoX1VlNVJVYmpReDd4Zm5ubGUwQlZa?oc=5",
-      "title": "A brief guide to AI-powered software development environments - infoworld.com",
-      "status": "not-eligible",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1iXzR5amg0bHNQUW5oWlNLRGxabmFhNHRrb2g4NHpnT2ZvaEVFUHdLLTFVV0syVnV4djU0bkdHOGh5SjdCTzRxUFNoZjZTTUZlM2x1SHM2ZEdzc1FaRndQZ0RPNGQtUQ?oc=5",
       "title": "A Buyer’s Guide to Choosing the Right Retail Operations Software (2026) - Shopify",
       "status": "not-eligible",
@@ -2187,7 +2300,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNWDhNc19JU2gzVmQxcW5qaG9vbTl1Sm1BMWxPcXBBVjFMQ09hM0d3NVgxcU9VS1NTX0QzRHFmXzJpQUlOM3ozZTNiaXNqM09XeUlZLTRGOU00ODMzS241Z2dFTFp2aHJGZTdJYWt3S1A3TnhiN2k1UmtCdVZYUkFUSDZnUjlrRUVVVC1qSFJGRkplMXNvNFJBMllqWUprM21NdElMeUlldFpiQi1pS01HYWJ6RmNMTDNjUElMQ3RTaEVVYlI3WTJrcHhyQ3RKaEdJRnpWTHVYOA?oc=5",
-      "title": "Start of Semester: Your Guide to Apps, Cards, and Student IDs - Universität Bremen",
+      "title": "Start of Semester: Your Guide to Apps, Cards, and Student IDs - up2date.uni-bremen.de",
       "status": "not-eligible",
       "sources": []
     },
@@ -2199,19 +2312,31 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ENXRkZlBHWFFkTlVBRkN2NTNaZ2hVcFJ4X2FYcWtpdE9xMEZkUlJ3Y2hPT2s2RUZIMmtjSzNhWEcybVlIdkdZVHloWUlsUnpGdmU4Sm1UTnVOZHJLamdr?oc=5",
-      "title": "AI App Development: Guide To Building AI-Powered Apps - databricks.com",
+      "title": "AI App Development: Guide To Building AI-Powered Apps - Databricks",
+      "status": "not-eligible",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNb2NJWXl0VmtFZFBUYlo3X1JkR3lTZUtDQWlwWHhhdGVzX0dhUGVxZ3drN0JxSDdWbXEtLUt5Z3lCUWVFRHdHaEw5bW5fQkdDMHJMalpEMU5DTmpWdHJNMFVucTliVGlUelJjbUtPMGNJNDkzM1otTDBXZXV6QUhKOVdfbHZiWWhEbkVQZFpEelkxSFZzMnFQal9sZXVDSWR3MzJ1UFVtR3RiMmowTlBtRVRTaThzUUJxVXJBYzBKcE1QdEoyc0Z6N05ROGtQSjg?oc=5",
+      "title": "Microsoft, IMDA unveil digital sustainability guidelines to spur green software development - Singapore Economic Development Board (EDB)",
       "status": "not-eligible",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNLUx0b1ZPb1Axa1c5VlMyOTNuT05QUGFhY1diMmtnRjdCMy1FWkJSWGwzeUdadEtMRXF0emkydGRwaTB0QlMzRUdxSFgzdUs3N01henZOV0dzMnI5dkM2STMwOFljTlFUanJfMDVXQlV2RmhESjVVRHlFNXFJVXU1enFB?oc=5",
-      "title": "A dealmaker’s guide to how AI is shifting the software stack - pwc.com",
+      "title": "A dealmaker’s guide to how AI is shifting the software stack - PwC",
       "status": "not-eligible",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5",
       "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - Bloomberg.com",
+      "status": "not-eligible",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPY1UwQ3N1bHJrN1lmSXNOUmd4ZFNDT0xDNnh3MlE2OThJZXVsRXJKZFprRkw3dERnZ0lJLXVOanltRWxpR1o3MkJYRFZkeXhYdExiS0l0dDAzSHpiSU1mQlpqSGFqbThNR0pOSnlWM1dKTHdtcldiRDNvMWFwZlVUYThKbEJEcF95MHBhZnNvZHJZR2tSOG1YUlMxNGhCVEI4T3BtQkhybWZfeDV4eUpJU3UweWFSNVhpX2c?oc=5",
+      "title": "What to Look for When Purchasing Contact Center Software: The 2026 Buyer’s Guide - CX Today",
       "status": "not-eligible",
       "sources": []
     },
@@ -2271,13 +2396,19 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQLWRYaUl0MFpPX1RmV25QajhjU3dKbUh3Y3Jaek9YSXRNX182U0hFYzFmbjB4am9TUmxwamxrc2Z5UXdXdkJfRFdmbTQwcXpGRV9sOWpOanhjN3hxWWRXb0F6U29vQkdVRnE4RzhDeFBxNHVkaU9xWVFuQVNqdmw3ZmlfYzNDQ3hnamx1LV9VVk9fQTVyZ0JwVG5FM0xEQQ?oc=5",
-      "title": "Apple to kick off Ternus era with its biggest-ever slate of new products - spokesman.com",
+      "title": "Apple to kick off Ternus era with its biggest-ever slate of new products - The Spokesman-Review",
       "status": "not-eligible",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
       "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - Apple",
+      "status": "not-eligible",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNdjI5dnYtaE5lNmlyajlGZFBGcGNiS1pCanpEZ1oxRk9VbXcxSEk3SkxTcDNTQWR1WTEySlJqUjBSeGpFSzNRUnpMVERTZG04YllzZVdwQXZxdjYxQW1BbEZaOUtNc1FBcVhiR1hOem5MdXRjUTRVVUNXLXEteXUtbTBSX3dsbE0zQVNNR3dUYzVGMU5TUjNrT0VzRUs?oc=5",
+      "title": "Apple has eight new products to unveil at September event: report - 9to5Mac",
       "status": "not-eligible",
       "sources": []
     },
@@ -2355,7 +2486,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
-      "title": "News | The University of Alabama in Huntsville - uah.edu",
+      "title": "News | The University of Alabama in Huntsville - The University of Alabama in Huntsville",
       "status": "not-eligible",
       "sources": []
     },
