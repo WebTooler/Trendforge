@@ -10,14 +10,32 @@ const tokens=t=>new Set(String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').split
 const nums=t=>new Set((String(t).match(/\b\d+(?:[.,]\d+)?\s*(?:%|percent|percentage|bn|billion|b|m|million|mn|thousand|k)?\b/gi)||[]).map(x=>{const m=x.toLowerCase().replace(/,/g,'').trim().match(/^(\d+(?:\.\d+)?)\s*(%|percent|percentage|bn|billion|b|m|million|mn|thousand|k)?$/);if(!m)return x;const u=m[2]||'';const n=u==='%'||u==='percent'||u==='percentage'?'pct':u==='bn'||u==='billion'||u==='b'?'b':u==='m'||u==='million'||u==='mn'?'m':u==='thousand'||u==='k'?'k':'';return `${Number(m[1])}${n}`;}));
 const namedEntities=t=>{const raw=String(t);const hits=[...raw.matchAll(/\b[A-Z][A-Za-z0-9&.-]*(?:\s+[A-Z][A-Za-z0-9&.-]*){0,3}\b/g)].map(m=>m[0]);return new Set(hits.map(x=>x.toLowerCase()).filter(x=>x.length>=3&&!STOP.has(x)&&x.split(/\s+/).some(w=>w.length>3&&!STOP.has(w))));};
 const entityTokens=t=>new Set([...namedEntities(t)].flatMap(x=>[...tokens(x)]));
-const factual=s=>{s=s.trim();if(/^(the move|this move|this development|the development|the change|the situation|that could|this could|it could|it may|this may|for readers|for users|in practice|overall|the broader|the key|the takeaway|this means|that means)\b/i.test(s))return false;return /\b(announced|launch(?:ed|es)?|released|reported|said|plans?|expects?|found|shows?|calls?|proposed|approved|blocked|investigation|probe|inquiry|regulator|regulatory|warranty|terms|price|percent|%|million|billion|year|month|today|yesterday|202[0-9]|survey|workers?|employees?|fear|worry|concern|jobs?|obsolete|carplay|android|truck|trucks|software|interface|screen|controls?)\b/i.test(s)||/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/.test(s)};
-const sentences=t=>String(t).replace(/\s+/g,' ').split(/(?<=[.!?])\s+(?=[A-Z0-9"“])/).map(x=>x.trim()).filter(x=>x.length>=35&&x.length<=1000);
+
+// Only statements that make a checkable factual assertion enter claim verification.
+// Editorial recommendations/speculation are not evidence claims and must not be
+// allowed to fail the verifier merely because they are not publisher facts.
+const factual=s=>{s=s.trim();
+  if(/^(the move|this move|this development|the development|the change|the situation|that could|this could|it could|it may|this may|for readers|for users|in practice|overall|the broader|the key|the takeaway|this means|that means|those who|future product cycles|whether future)\b/i.test(s))return false;
+  if(/^(future|upcoming)\b.*\b(may|might|could|will)\b/i.test(s))return false;
+  return /\b(announced|launch(?:ed|es)?|released|reported|said|plans?|expects?|found|shows?|calls?|proposed|approved|blocked|investigation|probe|inquiry|regulator|regulatory|warranty|terms|price|percent|%|million|billion|year|month|today|yesterday|202[0-9]|survey|workers?|employees?|fear|worry|concern|jobs?|obsolete|carplay|android|truck|trucks|software|interface|screen|controls?|battery|charging|anc|earbuds?|airpods?|ios|translation|audio|design|rating|rated|model|models|features?)\b/i.test(s)||/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/.test(s);
+};
+
+// Remove Markdown headings before sentence splitting. The previous extractor
+// accidentally glued an H2 to the first paragraph, causing several independent
+// factual sentences (including numeric claims) to be scored as one giant claim.
+const sentences=t=>String(t)
+  .replace(/^\s*#{1,6}\s+[^\n]+$/gm,' ')
+  .replace(/\s+/g,' ')
+  .split(/(?<=[.!?])\s+(?=[A-Z0-9"“$])/)
+  .map(x=>x.trim())
+  .filter(x=>x.length>=35&&x.length<=1000);
 const clean=t=>String(t).replace(/\s+/g,' ').trim();
 const overlap=(a,b)=>{const A=tokens(a),B=tokens(b),shared=[...A].filter(x=>B.has(x));return{shared,coverage:shared.length/Math.max(1,A.size)}};
 const phraseScore=(a,b)=>{const aa=clean(a).toLowerCase().replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(Boolean),bb=clean(b).toLowerCase().replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(Boolean);const grams=new Set();for(let i=0;i<aa.length-1;i++)grams.add(`${aa[i]} ${aa[i+1]}`);let hit=0;for(let i=0;i<bb.length-1;i++)if(grams.has(`${bb[i]} ${bb[i+1]}`))hit++;return Math.min(1,hit/Math.max(1,Math.min(6,aa.length-1)))};
 const score=(claim,evidence)=>{const o=overlap(claim,evidence),phr=phraseScore(claim,evidence),cn=nums(claim),en=nums(evidence),numericMismatch=[...cn].some(n=>!en.has(n));const ce=entityTokens(claim),ee=entityTokens(evidence),entityShared=[...ce].filter(x=>ee.has(x));let s=o.coverage*58+Math.min(1,o.shared.length/6)*14+phr*12+Math.min(10,entityShared.length*5);if(o.shared.length>=5)s+=6;if(o.shared.length>=8)s+=5;if(numericMismatch)s-=70;return{score:Math.max(0,Math.min(100,Math.round(s))),shared:o.shared,entityShared,numericMismatch,phrase:phr,evidence}};
 const write=x=>{fs.mkdirSync('data',{recursive:true});fs.writeFileSync(out,JSON.stringify(x,null,2)+'\n')};
 function evidenceFromBrief(brief){const sources=brief?.grounding?.sources||[];return sources.map((s,i)=>({id:`S${i+1}`,title:s.title||'',url:s.url||'',domain:(()=>{try{return new URL(s.url).hostname.replace(/^www\./,'')}catch{return''}})(),passages:Array.isArray(s.passages)?s.passages.map(clean).filter(x=>x.length>=25):[],articleBody:clean(s.articleBody||'')})).filter(s=>s.passages.length||s.articleBody.length>=100);}
+
 async function main(){
  if(!fs.existsSync(articleDir))return;
  const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(`${articleDir}/${b}`).mtimeMs-fs.statSync(`${articleDir}/${a}`).mtimeMs);if(!files.length)return;
@@ -29,7 +47,7 @@ async function main(){
  const body=raw.replace(/^---[\s\S]*?---/,'').replace(/^\s*##\s+Sources[\s\S]*$/i,'');
  const claims=sentences(body).filter(factual).slice(0,30);
  const sources=evidenceFromBrief(brief);
- if(!sources.length){write({version:14,generatedAt:new Date().toISOString(),articlePath,verificationMode:'evidence-pack-first-v14',sourceCount:0,claimCount:claims.length,verified:0,partial:0,unsupported:claims.length,sourceUnavailable:claims.length,averageConfidence:0,pass:false,reason:'No evidence pack available.'});process.exit(1);}
+ if(!sources.length){write({version:14.1,generatedAt:new Date().toISOString(),articlePath,verificationMode:'evidence-pack-first-v14.1',sourceCount:0,claimCount:claims.length,verified:0,partial:0,unsupported:claims.length,sourceUnavailable:claims.length,averageConfidence:0,pass:false,reason:'No evidence pack available.'});process.exit(1);}
  const results=claims.map((claim,index)=>{
    const matches=[];
    for(const s of sources){
@@ -44,8 +62,8 @@ async function main(){
  });
  const verified=results.filter(x=>x.status==='verified').length,partial=results.filter(x=>x.status==='partial').length,unsupported=results.filter(x=>x.status==='unsupported').length,sourceUnavailable=results.filter(x=>x.status==='source-unavailable').length,avg=results.length?Math.round(results.reduce((n,x)=>n+x.confidence,0)/results.length):0;
  const pass=claims.length>0&&unsupported===0&&sourceUnavailable===0&&avg>=60;
- write({version:14,generatedAt:new Date().toISOString(),articlePath,articleTitle,verificationMode:'evidence-pack-first-v14',sourceCount:sources.length,usableSourceCount:sources.length,claimCount:claims.length,verified,partial,unsupported,sourceUnavailable,averageConfidence:avg,pass,policy:{verifiedMin:62,partialMin:45,blockUnsupported:true,minimumAverageConfidence:60,numericMismatchAlwaysBlocks:true,entitySupportRequired:true,sourceScopedEvidence:true,semanticNormalization:true,directEvidencePack:true,reextractPublisherPages:false,claimAudit:true},sources:sources.map(s=>({id:s.id,title:s.title,url:s.url,domain:s.domain,passageCount:s.passages.length,articleBodyLength:s.articleBody.length})),claims:results});
- console.log(`Claim Verification v14: ${claims.length} claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${sourceUnavailable} source-unavailable; average confidence ${avg}; ${pass?'PASS':'BLOCK'} (evidence-pack-first).`);
+ write({version:14.1,generatedAt:new Date().toISOString(),articlePath,articleTitle,verificationMode:'evidence-pack-first-v14.1',sourceCount:sources.length,usableSourceCount:sources.length,claimCount:claims.length,verified,partial,unsupported,sourceUnavailable,averageConfidence:avg,pass,policy:{verifiedMin:62,partialMin:45,blockUnsupported:true,minimumAverageConfidence:60,numericMismatchAlwaysBlocks:true,entitySupportRequired:true,sourceScopedEvidence:true,semanticNormalization:true,directEvidencePack:true,reextractPublisherPages:false,claimAudit:true,atomicClaimExtraction:true,editorialSpeculationExcluded:true},sources:sources.map(s=>({id:s.id,title:s.title,url:s.url,domain:s.domain,passageCount:s.passages.length,articleBodyLength:s.articleBody.length})),claims:results});
+ console.log(`Claim Verification v14.1: ${claims.length} claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${sourceUnavailable} source-unavailable; average confidence ${avg}; ${pass?'PASS':'BLOCK'} (evidence-pack-first, atomic claims).`);
  if(!pass)process.exit(1);
 }
 main().catch(e=>{console.error(`Claim verification failed: ${e instanceof Error?e.message:String(e)}`);process.exit(1)});
