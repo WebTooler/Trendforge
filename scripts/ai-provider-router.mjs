@@ -6,21 +6,19 @@ const COOLDOWN_RATE_MS=60*1000;
 const COOLDOWN_SERVER_MS=2*60*1000;
 const COOLDOWN_HARD_QUOTA_MS=6*60*60*1000;
 const providerConfig={
-  OpenAI:{key:'OPENAI_API_KEY'},
   Gemini:{key:'GEMINI_API_KEY'},
   Groq:{key:'GROQ_API_KEY'},
-  Cerebras:{key:'CEREBRAS_API_KEY'},
   OpenRouter:{key:'OPENROUTER_API_KEY'},
   Cohere:{key:'COHERE_API_KEY'}
 };
 const providers=Object.keys(providerConfig);
-let state={version:4,providers:{},updatedAt:new Date().toISOString()};
+let state={version:5,providers:{},updatedAt:new Date().toISOString()};
 try{state=JSON.parse(fs.readFileSync(statePath,'utf8'));}catch{}
 for(const name of providers){state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0,lastStatus:null,lastError:null,lastClass:null,lastSuccessAt:0};}
 
 const classify=(status,message='')=>{
   const s=String(message).toLowerCase();
-  if(/insufficient_quota|credit_balance_exhausted|no credits remaining|daily quota|quota_exceeded|exceeded your current quota|quota exceeded|monthly quota/.test(s))return 'quota';
+  if(/insufficient_quota|credit_balance_exhausted|no credits remaining|daily quota|quota_exceeded|exceeded your current quota|quota exceeded|monthly quota|payment_required/.test(s))return 'quota';
   if(status===429||/rate.?limit|too many requests|tokens per minute|tpm|retry-after|resource_exhausted|requests per minute|rpm/.test(s))return 'rate_limit';
   if(status>=500)return 'server';
   if(status===401||status===403)return 'auth';
@@ -28,8 +26,9 @@ const classify=(status,message='')=>{
   return 'error';
 };
 
-const persist=()=>{state.version=4;state.updatedAt=new Date().toISOString();fs.mkdirSync('data',{recursive:true});fs.writeFileSync(statePath,JSON.stringify(state,null,2)+'\n');};
+const persist=()=>{state.version=5;state.updatedAt=new Date().toISOString();fs.mkdirSync('data',{recursive:true});fs.writeFileSync(statePath,JSON.stringify(state,null,2)+'\n');};
 const mark=(name,status,message)=>{
+  if(!providerConfig[name])return;
   const p=state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0};
   const kind=classify(status,message);
   p.lastStatus=status;p.lastError=String(message).slice(0,500);p.lastClass=kind;p.failures=(p.failures||0)+1;
@@ -39,6 +38,7 @@ const mark=(name,status,message)=>{
   persist();
 };
 const markSuccess=(name)=>{
+  if(!providerConfig[name])return;
   const p=state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0};
   p.successes=(p.successes||0)+1;p.lastSuccessAt=new Date().toISOString();p.lastStatus=200;p.lastError=null;p.lastClass='success';p.quotaBlockedUntil=0;
   persist();
@@ -52,4 +52,5 @@ const available=providers.filter(name=>Boolean(process.env[providerConfig[name].
 });
 console.log(`AI router available providers: ${available.length}/${providers.length}.`);
 for(const name of providers){const p=state.providers[name];if(!process.env[providerConfig[name].key])console.log(`AI router not configured: ${name}.`);else if((p.quotaBlockedUntil||0)>now)console.log(`AI router cooldown: ${name} until ${new Date(p.quotaBlockedUntil).toISOString()} (${p.lastClass||'blocked'}).`);}
+console.log('AI router excluded from production: OpenAI (credit-dependent), Cerebras (payment-required).');
 export {state,available,mark,markSuccess,classify,providerConfig};
