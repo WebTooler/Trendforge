@@ -20,6 +20,7 @@ on:
       - 'scripts/trendforge-writer-engine.mjs'
       - 'scripts/trendforge-native-writer.mjs'
       - 'scripts/run-native-writer-fallback.mjs'
+      - 'scripts/native-writer-worker.mjs'
       - 'scripts/trendforge-editorial-policy.mjs'
       - 'scripts/validate-writer-output.mjs'
       - 'scripts/generate-article.ts'
@@ -53,7 +54,7 @@ jobs:
           node-version: 24
           package-manager-cache: false
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Research fresh trends
         run: node scripts/trend-research.mjs
       - name: Score trends
@@ -98,6 +99,12 @@ jobs:
           set -euo pipefail
           git config user.name 'trendforge-bot'
           git config user.email 'trendforge-bot@users.noreply.github.com'
+
+          # Build tooling may touch these local-only/generated files. Never let them
+          # make a rebase dirty or enter the content commit.
+          git restore --worktree --staged next-env.d.ts package-lock.json 2>/dev/null || true
+          rm -rf .next out node_modules
+
           git add data lib/articles.ts public/images/articles
           if [ -d content/articles ]; then git add content/articles; fi
           echo '--- staged changes ---'
@@ -115,17 +122,32 @@ jobs:
             echo '--- rebase conflicts ---'; printf '%s\n' "$conflicts"
             while IFS= read -r path; do
               [ -z "$path" ] && continue
-              if is_generated_path "$path"; then git checkout --theirs -- "$path"; git add -- "$path"; else git rebase --abort || true; echo "Unexpected source conflict: $path"; return 1; fi
+              if is_generated_path "$path"; then
+                git checkout --theirs -- "$path"
+                git add -- "$path"
+              else
+                git rebase --abort || true
+                echo "Unexpected source conflict: $path"
+                return 1
+              fi
             done <<< "$conflicts"
           }
+
+          # Always fetch/rebase while the worktree is clean. This avoids the
+          # 'cannot rebase: unstaged changes' failure seen in rerun #88.
           for attempt in 1 2 3; do
-            echo "Push attempt $attempt/3"
-            if git push origin HEAD:main; then echo 'Pipeline output pushed successfully.'; exit 0; fi
-            [ "$attempt" -eq 3 ] && break
-            echo 'Remote main advanced; rebasing pipeline output onto latest main.'
+            echo "Synchronizing generated output attempt $attempt/3"
             git fetch origin main
-            if ! git rebase origin/main; then resolve_generated_rebase_conflicts || exit 1; GIT_EDITOR=true git rebase --continue; fi
-            sleep $((attempt * 3))
+            if ! git rebase origin/main; then
+              resolve_generated_rebase_conflicts || exit 1
+              GIT_EDITOR=true git rebase --continue
+            fi
+            if git push origin HEAD:main; then
+              echo 'Pipeline output pushed successfully.'
+              exit 0
+            fi
+            echo 'Remote main advanced during push; retrying with a fresh rebase.'
+            sleep $((attempt * 2))
           done
           echo 'Unable to push pipeline output after 3 attempts.'
           exit 1
