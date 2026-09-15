@@ -2,10 +2,10 @@
   "version": 7,
   "providers": {
     "Groq": {
-      "failures": 32,
-      "quotaBlockedUntil": 1789491589879,
+      "failures": 34,
+      "quotaBlockedUntil": 1789495525854,
       "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 194210, Requested 5920. Please try again in 56.16s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198305, Requested 3863. Please try again in 15m36.576s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
       "lastClass": "rate_limit",
       "successes": 2,
       "lastSuccessAt": "2026-09-15T16:18:06.765Z"
@@ -39,15 +39,15 @@
       "lastClass": "quota"
     },
     "Cohere": {
-      "failures": 18,
-      "quotaBlockedUntil": 1789489664482,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
-      "lastClass": "error",
+      "failures": 19,
+      "quotaBlockedUntil": 1789495541321,
+      "lastStatus": 200,
+      "lastError": "Invalid structured output",
+      "lastClass": "transient",
       "successes": 1,
       "lastSuccessAt": "2026-09-15T14:16:49.634Z"
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-15T17:00:19.188Z"
+  "updatedAt": "2026-09-15T18:05:17.854Z"
 }
