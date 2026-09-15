@@ -4,7 +4,7 @@ import { spawnSync } from 'node:child_process';
 const scripts = [
   'scripts/trend-decision-engine.mjs',
   'scripts/verify-trend-sources.mjs',
-  'scripts/verify-article-claims.mjs',
+  'scripts/verify-article-claims-v2.mjs',
   'scripts/editorial-intelligence.mjs',
   'scripts/ai-provider-router.mjs',
   'scripts/trendforge-editorial-policy.mjs',
