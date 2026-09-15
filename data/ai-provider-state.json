@@ -1,12 +1,12 @@
 {
-  "version": 2,
+  "version": 3,
   "providers": {
     "Groq": {
-      "failures": 16,
+      "failures": 22,
       "quotaBlockedUntil": 1789465865617,
-      "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5771, Requested 2530. Please try again in 2.2575s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
-      "lastClass": "rate_limit"
+      "lastStatus": 400,
+      "lastError": "400: {\"error\":{\"message\":\"Tool choice is none, but model called a tool\",\"type\":\"invalid_request_error\",\"code\":\"tool_use_failed\",\"failed_generation\":\"{\\\"name\\\": \\\"browser.open\\\", \\\"arguments\\\": {\\\"cursor\\\": 0, \\\"id\\\": \\\"https://finance.yahoo.com\\\"}}\"}}\n",
+      "lastClass": "error"
     },
     "Gemini": {
       "failures": 7,
@@ -21,7 +21,28 @@
       "lastStatus": 429,
       "lastError": "429: {\n  \"error\": {\n    \"message\": \"You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.\",\n    \"type\": \"insufficient_quota\",\n    \"param\": null,\n    \"code\": \"credit_balance_exhausted\"\n  }\n}",
       "lastClass": "quota"
+    },
+    "Cerebras": {
+      "failures": 7,
+      "quotaBlockedUntil": 0,
+      "lastStatus": 402,
+      "lastError": "402: {\"message\":\"Payment required to access this resource. Visit your billing tab.\",\"type\":\"payment_required_error\",\"param\":\"quota\",\"code\":\"payment_required\"}",
+      "lastClass": "error"
+    },
+    "OpenRouter": {
+      "failures": 4,
+      "quotaBlockedUntil": 0,
+      "lastStatus": 0,
+      "lastError": "The operation was aborted due to timeout",
+      "lastClass": "error"
+    },
+    "Cohere": {
+      "failures": 7,
+      "quotaBlockedUntil": 0,
+      "lastStatus": 0,
+      "lastError": "The operation was aborted due to timeout",
+      "lastClass": "error"
     }
   },
-  "updatedAt": "2026-09-15T09:50:15.924Z"
+  "updatedAt": "2026-09-15T10:30:32.709Z"
 }
