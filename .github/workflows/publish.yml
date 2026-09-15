@@ -101,7 +101,7 @@ jobs:
           git config user.email 'trendforge-bot@users.noreply.github.com'
 
           # Build tooling may touch these local-only/generated files. Never let them
-          # make a rebase dirty or enter the content commit.
+          # make the output commit dirty or enter the content commit accidentally.
           git restore --worktree --staged next-env.d.ts package-lock.json 2>/dev/null || true
           rm -rf .next out node_modules
 
@@ -114,6 +114,16 @@ jobs:
             exit 0
           fi
           git commit -m 'chore: update TrendForge content pipeline'
+
+          # A commit hook/build side-effect can leave ignored or tracked residue even
+          # after the output commit succeeds. The commit above is the complete intended
+          # payload, so discard only post-commit residue before synchronization. This
+          # guarantees rebase never starts with an unstaged worktree.
+          if ! git diff --quiet || ! git diff --cached --quiet; then
+            echo '--- post-commit residue; resetting to committed pipeline output ---'
+            git status --short
+            git reset --hard HEAD
+          fi
 
           generated_paths=('data/' 'lib/articles.ts' 'public/images/articles/' 'content/articles/')
           is_generated_path() { local path="$1"; for prefix in "${generated_paths[@]}"; do [[ "$path" == "$prefix"* ]] && return 0; done; return 1; }
@@ -133,8 +143,9 @@ jobs:
             done <<< "$conflicts"
           }
 
-          # Always fetch/rebase while the worktree is clean. This avoids the
-          # 'cannot rebase: unstaged changes' failure seen in rerun #88.
+          # Synchronize only from a clean worktree. If main advances between fetch and
+          # push, retry with a fresh fetch/rebase. Generated conflicts remain isolated to
+          # the pipeline's output paths; source-code conflicts fail loudly.
           for attempt in 1 2 3; do
             echo "Synchronizing generated output attempt $attempt/3"
             git fetch origin main
