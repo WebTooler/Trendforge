@@ -17,7 +17,7 @@ const compactEvidence=(brief,claims)=>{
 
 async function main(){
  const articlePath=latestArticle(),raw=fs.readFileSync(articlePath,'utf8');
- const brief=fs.existsSync(briefPath)?JSON.parse(fs.readFileSync(briefPath,'utf8'):null;
+ const brief=fs.existsSync(briefPath)?JSON.parse(fs.readFileSync(briefPath,'utf8')):null;
  const verification=fs.existsSync(claimPath)?JSON.parse(fs.readFileSync(claimPath,'utf8')):null;
  const claims=Array.isArray(verification?.results)?verification.results:[];
  const evidence=compactEvidence(brief,claims);
