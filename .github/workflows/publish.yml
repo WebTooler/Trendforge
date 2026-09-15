@@ -10,6 +10,7 @@ on:
       - 'scripts/trend-decision-engine.mjs'
       - 'scripts/verify-trend-sources.mjs'
       - 'scripts/verify-article-claims.mjs'
+      - 'scripts/verify-article-claims-v2.mjs'
       - 'scripts/editorial-intelligence.mjs'
       - 'scripts/article-lifecycle.mjs'
       - 'scripts/growth-intelligence.mjs'
@@ -67,7 +68,7 @@ jobs:
       - name: Validate Writer Engine output
         run: node scripts/validate-writer-output.mjs
       - name: Verify article claims
-        run: node scripts/verify-article-claims.mjs
+        run: node scripts/verify-article-claims-v2.mjs
       - name: Editorial intelligence gate
         run: node scripts/editorial-intelligence.mjs
       - name: Validate content quality gate
