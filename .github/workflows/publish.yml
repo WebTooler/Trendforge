@@ -11,6 +11,7 @@ on:
       - 'scripts/verify-trend-sources.mjs'
       - 'scripts/verify-article-claims.mjs'
       - 'scripts/verify-article-claims-v2.mjs'
+      - 'scripts/repair-article-grounding.mjs'
       - 'scripts/editorial-intelligence.mjs'
       - 'scripts/article-lifecycle.mjs'
       - 'scripts/growth-intelligence.mjs'
@@ -68,6 +69,14 @@ jobs:
       - name: Validate Writer Engine output
         run: node scripts/validate-writer-output.mjs
       - name: Verify article claims
+        id: claim_verification
+        continue-on-error: true
+        run: node scripts/verify-article-claims-v2.mjs
+      - name: Repair grounded article
+        if: steps.claim_verification.outcome == 'failure'
+        run: node scripts/repair-article-grounding.mjs
+      - name: Re-verify repaired article claims
+        if: steps.claim_verification.outcome == 'failure'
         run: node scripts/verify-article-claims-v2.mjs
       - name: Editorial intelligence gate
         run: node scripts/editorial-intelligence.mjs
