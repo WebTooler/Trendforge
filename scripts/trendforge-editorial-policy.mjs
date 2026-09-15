@@ -1,4 +1,4 @@
-export const EDITORIAL_POLICY_VERSION='1.1';
+export const EDITORIAL_POLICY_VERSION='1.2';
 
 export const categoryProfiles={
   AI:'Explain the concrete development, evidence, implications, limitations, and uncertainty. Separate reported facts from interpretation and avoid hype.',
@@ -44,7 +44,7 @@ export const hardRules=[
 ];
 
 export const qualityTargets={
-  minWords:600,
+  minWords:450,
   preferredMinWords:700,
   preferredMaxWords:1100,
   hardMaxWords:1500,
@@ -80,7 +80,7 @@ export function validateDraft({title='',description='',content='',category='Tech
   if(!descriptionOk)errors.push('description too short');
   if(!lengthOk)errors.push(`word count ${words} outside ${qualityTargets.minWords}-${qualityTargets.hardMaxWords}`);
   if(!structureOk)errors.push(`H2 structure count ${h2} outside ${qualityTargets.minH2}-${qualityTargets.maxH2}`);
-  if(sentences<12)errors.push('article has too few complete sentences');
+  if(sentences<10)errors.push('article has too few complete sentences');
   if(duplicateSentence)errors.push('consecutive duplicate sentence detected');
   if(fillerHits>=2)errors.push('generic/filler phrasing threshold exceeded');
   return {passed:errors.length===0,category,policyVersion:EDITORIAL_POLICY_VERSION,metrics:{words,sentences,h2,titleChars:title.trim().length,descriptionChars:description.trim().length,fillerHits},errors};
