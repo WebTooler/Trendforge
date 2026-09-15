@@ -9,6 +9,7 @@ on:
       - 'scripts/score-trends.ts'
       - 'scripts/trend-decision-engine.mjs'
       - 'scripts/verify-trend-sources.mjs'
+      - 'scripts/recover-publisher-links.mjs'
       - 'scripts/evidence-integrity-preflight.mjs'
       - 'scripts/verify-article-claims.mjs'
       - 'scripts/verify-article-claims-v2.mjs'
@@ -63,6 +64,8 @@ jobs:
         run: npx tsx scripts/score-trends.ts
       - name: Verify trend sources
         run: node scripts/verify-trend-sources.mjs
+      - name: Recover publisher links
+        run: node scripts/recover-publisher-links.mjs
       - name: Evidence integrity preflight
         run: node scripts/evidence-integrity-preflight.mjs
       - name: AI provider state check
