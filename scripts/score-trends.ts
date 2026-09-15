@@ -9,7 +9,7 @@ if (!fs.existsSync(input)) {
   process.exit(0);
 }
 
-type Candidate = TrendCandidate & { source?: string; sourceName?: string; sourceUrl?: string; researchSignals?: { networkCount?: number; signalTypeCount?: number; corroboratingCandidates?: number; networks?: string[]; signalTypes?: string[] } };
+type Candidate = TrendCandidate & { source?: string; sourceName?: string; sourceUrl?: string; discoveryOnly?: boolean; researchSignals?: { networkCount?: number; signalTypeCount?: number; corroboratingCandidates?: number; networks?: string[]; signalTypes?: string[] } };
 const payload = JSON.parse(fs.readFileSync(input, 'utf8')) as { candidates?: Candidate[] };
 const candidates = payload.candidates ?? [];
 
