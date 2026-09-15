@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 const inputPath = 'data/source-verification.json';
 const timeoutMs = 7000;
 const maxPerRecord = 4;
+const recoveryConcurrency = 8;
 const secondLevel = new Set(['co.uk','co.in','co.jp','co.nz','co.au','com.br','com.cn']);
 const domainOf = (value = '') => { try { return new URL(value).hostname.replace(/^www\./, '').toLowerCase(); } catch { return ''; } };
 const familyOf = (value = '') => { const host = domainOf(value); if (!host) return ''; const parts = host.split('.'); if (parts.length < 2) return host; const suffix = parts.slice(-2).join('.'); return secondLevel.has(suffix) && parts.length >= 3 ? parts.slice(-3).join('.') : suffix; };
@@ -13,7 +14,7 @@ const feed = (value = '') => { try { const u = new URL(value); return /^feeds?\.
 const clean = (value = '') => String(value).replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/\s+/g, ' ').trim();
 const overlap = (a = '', b = '') => { const stop = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','digital','latest','news','update','updates','guide','today','artificial','intelligence','company','companies','industry']); const A = new Set(clean(a).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !stop.has(w))); const B = new Set(clean(b).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !stop.has(w))); return [...A].filter(w => B.has(w)).length; };
 
-async function get(url) { try { const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), headers: { 'user-agent': 'TrendForge-source-recovery/1.1', accept: 'application/rss+xml,application/xml,text/html;q=0.9,*/*;q=0.8' } }); if (!r.ok) return null; return await r.text(); } catch { return null; } }
+async function get(url) { try { const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), headers: { 'user-agent': 'TrendForge-source-recovery/1.2', accept: 'application/rss+xml,application/xml,text/html;q=0.9,*/*;q=0.8' } }); if (!r.ok) return null; return await r.text(); } catch { return null; } }
 
 function linksFromRss(xml = '') {
   const out = [];
@@ -54,10 +55,17 @@ async function recover(record) {
   return { ...record, sources, sourceCount: sources.length, reachableSourceCount: sources.filter(s => s.ok).length, uniqueDomainCount: new Set(sources.map(s => domainOf(s.finalUrl || s.url)).filter(Boolean)).size, independentReachableDomains: [...new Set(sources.map(s => domainOf(s.finalUrl || s.url)).filter(Boolean))], recovery: { attempted: true, added: additions.length, independentPublisherFamilies: [...new Set(additions.map(s => s.publisherFamily))] } };
 }
 
+async function mapWithConcurrency(items, limit, worker) {
+  const results = new Array(items.length); let next = 0;
+  async function runWorker() { while (true) { const index = next++; if (index >= items.length) return; results[index] = await worker(items[index], index); } }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, runWorker));
+  return results;
+}
+
 try {
   const raw = await fs.readFile(inputPath, 'utf8');
-  const report = JSON.parse(raw); const records = Array.isArray(report.records) ? report.records : []; const recovered = [];
-  for (const record of records) recovered.push(await recover(record));
-  await fs.writeFile(inputPath, `${JSON.stringify({ ...report, version: 5, recoveredAt: new Date().toISOString(), records: recovered }, null, 2)}\n`);
-  console.log(`Publisher recovery: checked ${records.length} verification record(s).`);
+  const report = JSON.parse(raw); const records = Array.isArray(report.records) ? report.records : [];
+  const recovered = await mapWithConcurrency(records, recoveryConcurrency, recover);
+  await fs.writeFile(inputPath, `${JSON.stringify({ ...report, version: 6, recoveredAt: new Date().toISOString(), records: recovered }, null, 2)}\n`);
+  console.log(`Publisher recovery: checked ${records.length} verification record(s) with bounded concurrency ${recoveryConcurrency}.`);
 } catch (error) { console.log(`Publisher recovery skipped: ${error instanceof Error ? error.message : String(error)}`); }
