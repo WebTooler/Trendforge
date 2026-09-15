@@ -66,6 +66,42 @@ jobs:
         run: node scripts/ai-provider-router.mjs
       - name: Generate article
         run: node scripts/generate-article-adaptive.mjs
+      - name: Archive generated article attempts
+        if: always()
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          mkdir -p data/article-attempts
+          found=0
+          while IFS= read -r article; do
+            [ -f "$article" ] || continue
+            found=1
+            stamp="$(date -u +%Y%m%d-%H%M%S)"
+            name="$(basename "$article" .md)"
+            dir="data/article-attempts/${stamp}-${name}"
+            suffix=1
+            while [ -e "$dir" ]; do
+              dir="data/article-attempts/${stamp}-${name}-${suffix}"
+              suffix=$((suffix + 1))
+            done
+            mkdir -p "$dir"
+            cp "$article" "$dir/article.md"
+            if [ -f data/article-brief.json ]; then cp data/article-brief.json "$dir/article-brief.json"; fi
+            if [ -f data/decision-queue.json ]; then cp data/decision-queue.json "$dir/decision-queue.json"; fi
+            cat > "$dir/metadata.json" <<EOF
+          {
+            "archivedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "status": "generated-pending-verification",
+            "articleFile": "$(basename "$article")",
+            "articlePath": "$article",
+            "workflowRun": "${GITHUB_RUN_ID:-unknown}",
+            "workflowSha": "${GITHUB_SHA:-unknown}"
+          }
+          EOF
+            echo "Archived generated article attempt: $dir"
+          done < <(git status --porcelain --untracked-files=all -- content/articles | sed -n 's/^?? //p')
+          if [ "$found" -eq 0 ]; then echo 'No newly generated article detected for attempt archive.'; fi
       - name: Validate Writer Engine output
         run: node scripts/validate-writer-output.mjs
       - name: Verify article claims
