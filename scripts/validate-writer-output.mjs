@@ -13,6 +13,8 @@ const parseFrontmatter=(raw)=>{
   return {meta,body:match[2]};
 };
 
+const proseOnly=(body='')=>body.replace(/\n##\s+Sources[\s\S]*$/i,'').trim();
+
 let status='';
 try{status=execFileSync('git',['status','--short','content/articles'],{encoding:'utf8'});}catch(error){console.error(`Writer output gate could not inspect git status: ${error.message}`);process.exit(1);}
 const files=status.split('\n').map(x=>x.trim()).filter(x=>/^(\?\?|[AM])\s+content\/articles\/[^ ]+\.md$/.test(x)).map(x=>x.replace(/^(\?\?|[AM])\s+/,'')).filter((v,i,a)=>a.indexOf(v)===i);
@@ -25,13 +27,14 @@ for(const file of files){
   const title=meta.title||'';
   const description=meta.description||'';
   const category=meta.category||'Technology';
-  const report=validateDraft({title,description,content:body,category});
-  console.log(`Writer output gate: ${file} — ${report.passed?'PASS':'BLOCK'} — ${report.metrics.words} words, ${report.metrics.h2} H2, ${report.metrics.fillerHits} filler hits.`);
+  const content=proseOnly(body);
+  const report=validateDraft({title,description,content,category});
+  console.log(`Writer output gate: ${file} — ${report.passed?'PASS':'BLOCK'} — ${report.metrics.words} prose words, ${report.metrics.h2} prose H2, ${report.metrics.fillerHits} filler hits.`);
   if(!report.passed){failed=true;console.error(`Writer output gate reasons: ${report.errors.join('; ')}`);}
 }
 
 if(failed){
-  console.error('Writer output gate BLOCKED publication-quality output.');
+  console.error('Writer output gate BLOCKED publication-quality prose.');
   process.exit(1);
 }
 console.log('Writer output gate: PASS');
