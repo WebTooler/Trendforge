@@ -1,0 +1,83 @@
+name: TrendForge User Feedback
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "app/components/FeedbackWidget.tsx"
+      - "app/components/FeedbackWidget.module.css"
+      - "app/article/[slug]/page.tsx"
+      - "scripts/trendforge-feedback.mjs"
+      - "scripts/test-trendforge-feedback.mjs"
+      - "data/trendforge-feedback.json"
+      - ".github/workflows/user-feedback.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: user-feedback
+  cancel-in-progress: true
+
+jobs:
+  feedback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run feedback isolation tests
+        run: node scripts/test-trendforge-feedback.mjs
+
+      - name: Validate feedback policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const widget = fs.readFileSync('app/components/FeedbackWidget.tsx', 'utf8');
+          const engine = fs.readFileSync('scripts/trendforge-feedback.mjs', 'utf8');
+          const forbidden = [
+            'publication', 'publishCandidate', 'claimVerifier', 'research', 'evidenceGate',
+            'autoRewrite', 'autoDelete', 'threshold'
+          ];
+          for (const term of forbidden) {
+            if (term === 'publication' || term === 'publishCandidate' || term === 'claimVerifier' || term === 'research' || term === 'evidenceGate' || term === 'threshold') {
+              if (widget.includes(term)) throw new Error(`Feedback widget references protected pipeline term: ${term}`);
+            }
+          }
+          if (!widget.includes("trackEvent('article_feedback'")) throw new Error('Feedback event missing');
+          if (!engine.includes('observationalOnly: true')) throw new Error('Feedback must remain observational-only');
+          if (!engine.includes('changesPublicationGates: false')) throw new Error('Publication gates must remain protected');
+          if (!engine.includes('changesThresholds: false')) throw new Error('Thresholds must remain protected');
+          if (!engine.includes('autoRewrite: false') || !engine.includes('autoDelete: false')) throw new Error('Article mutation must remain disabled');
+          console.log('TrendForge User Feedback isolation: PASS');
+          console.log('Feedback is an independent observation layer only.');
+          NODE
+
+      - name: Build production export
+        run: npm run build
+
+      - name: Verify feedback widget is in article output
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d out/article
+          if ! grep -R -q "Was this article helpful" out/article; then
+            echo "Feedback widget text not found in static article output."
+            exit 1
+          fi
+          echo "Feedback widget is present in static article output."
