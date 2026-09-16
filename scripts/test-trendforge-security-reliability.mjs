@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+
+const script = fs.readFileSync('scripts/trendforge-security-reliability.mjs', 'utf8');
+assert.match(script, /changesPublicationGates: false/);
+assert.match(script, /changesThresholds: false/);
+assert.match(script, /changesResearch: false/);
+assert.match(script, /changesEvidence: false/);
+assert.match(script, /changesWriter: false/);
+assert.match(script, /changesEditorial: false/);
+assert.match(script, /changesClaimVerification: false/);
+assert.match(script, /changesSafety: false/);
+assert.match(script, /autoDeleteFiles: false/);
+assert.match(script, /autoModifyPublishing: false/);
+assert.match(script, /BEGIN \(\?:RSA\|EC\|OPENSSH\|DSA\) PRIVATE KEY/);
+assert.match(script, /AKIA\[0-9A-Z\]\{16\}/);
+assert.match(script, /ghp_/);
+assert.match(script, /github_pat_/);
+assert.match(script, /out\/index\.html/);
+assert.match(script, /out\/robots\.txt/);
+assert.match(script, /out\/sitemap\.xml/);
+assert.match(script, /out\/search-index\.json/);
+
+execFileSync(process.execPath, ['scripts/trendforge-security-reliability.mjs'], { stdio: 'pipe' });
+const result = JSON.parse(fs.readFileSync('data/trendforge-security-reliability.json', 'utf8'));
+assert.equal(result.passed, true);
+assert.equal(result.policy.changesPublicationGates, false);
+assert.equal(result.policy.autoDeleteFiles, false);
+assert.equal(result.policy.autoModifyPublishing, false);
+assert.ok(result.checks.length >= 10);
+console.log(`Phase 22 Security + Reliability deterministic suite: PASS (${result.checks.length} checks)`);
+console.log('Security + Reliability is protective and isolated from the TrendForge publishing decision loop.');
