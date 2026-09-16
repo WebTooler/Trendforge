@@ -1,185 +1,149 @@
 import fs from 'node:fs/promises';
 
 const inputPath = 'data/source-verification.json';
-const timeoutMs = 7000;
+const timeoutMs = 9000;
 const maxPerRecord = 4;
 const recoveryConcurrency = 8;
-const secondLevel = new Set(['co.uk','co.in','co.jp','co.nz','co.au','com.br','com.cn']);
-const domainOf = (value = '') => { try { return new URL(value).hostname.replace(/^www\./, '').toLowerCase(); } catch { return ''; } };
-const familyOf = (value = '') => { const host = domainOf(value); if (!host) return ''; const parts = host.split('.'); if (parts.length < 2) return host; const suffix = parts.slice(-2).join('.'); return secondLevel.has(suffix) && parts.length >= 3 ? parts.slice(-3).join('.') : suffix; };
-const normalize = (value = '') => { try { const url = new URL(value); return url.protocol === 'https:' ? url.toString() : null; } catch { return null; } };
-const mirror = new Set(['news.google.com', 'google.com', 'google.co.uk', 'bing.com', 'www.bing.com']);
-const blocked = new Set(['facebook.com','reddit.com','pinterest.com','youtube.com','tiktok.com','x.com']);
-const homepage = (value = '') => { try { const u = new URL(value); return !u.pathname || u.pathname === '/' || u.pathname.length < 8; } catch { return true; } };
-const feed = (value = '') => { try { const u = new URL(value); return /^feeds?\.|^rss\.|^feed\./i.test(u.hostname) || /(^|\/)(rss|feed|feeds|atom|sitemap)(\/|\.|$)/i.test(u.pathname); } catch { return true; } };
-const decode = (value = '') => String(value)
-  .replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '')
-  .replace(/&amp;/gi, '&').replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'")
-  .replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&#x27;/gi, "'")
-  .replace(/&nbsp;|&#160;/gi, ' ');
-const clean = (value = '') => decode(value).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+const mirrors = new Set(['news.google.com', 'google.com', 'google.co.uk', 'bing.com', 'www.bing.com']);
+const blocked = new Set(['facebook.com', 'reddit.com', 'pinterest.com', 'youtube.com', 'tiktok.com', 'x.com']);
+const secondLevel = new Set(['co.uk', 'co.in', 'co.jp', 'co.nz', 'co.au', 'com.br', 'com.cn']);
 const stop = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','today','artificial','intelligence','company','companies','industry','development','developments','story','stories','article','articles','exclusive','report']);
+
+const host = (value = '') => { try { return new URL(value).hostname.replace(/^www\./, '').toLowerCase(); } catch { return ''; } };
+const family = (value = '') => { const h = host(value); if (!h) return ''; const p = h.split('.'); if (p.length < 2) return h; const suffix = p.slice(-2).join('.'); return secondLevel.has(suffix) && p.length >= 3 ? p.slice(-3).join('.') : suffix; };
+const normalize = (value = '') => { try { const u = new URL(value); return u.protocol === 'https:' ? u.toString() : null; } catch { return null; } };
+const homepage = (value = '') => { try { const u = new URL(value); return !u.pathname || u.pathname === '/' || u.pathname.length < 8; } catch { return true; } };
+const feed = (value = '') => { try { const u = new URL(value); return /^feeds?\.|^rss\.|^feed\./i.test(u.hostname) || /(^|\/)(rss|feed|feeds|atom|sitemap)(\/|\.|$)/i.test(u.pathname) || /(^|&)(feed|rss|atom|format)=/i.test(u.search.slice(1)); } catch { return true; } };
+const clean = (value = '') => String(value).replace(/<!\[CDATA\[/gi, ' ').replace(/\]\]>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&amp;/gi, '&').replace(/&quot;/gi, '"').replace(/&#39;|&apos;|&#x27;/gi, "'").replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&nbsp;|&#160;/gi, ' ').replace(/\s+/g, ' ').trim();
 const tokens = (value = '') => new Set(clean(value).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !stop.has(w)));
-const overlap = (a = '', b = '') => { const A = tokens(a); const B = tokens(b); return [...A].filter(w => B.has(w)).length; };
+const overlap = (a = '', b = '') => { const A = tokens(a); const B = tokens(b); return [...A].filter(x => B.has(x)).length; };
 
-async function get(url, accept = 'text/html,application/xml;q=0.9,*/*;q=0.8') {
-  try {
-    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), headers: { 'user-agent': 'TrendForge-source-recovery/1.5', accept } });
-    if (!r.ok) return null;
-    return { text: await r.text(), finalUrl: r.url || url };
-  } catch { return null; }
+async function get(url, accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8') {
+  try { const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), headers: { 'user-agent': 'TrendForge-source-recovery/2.0', accept } }); if (!r.ok) return null; return { text: await r.text(), finalUrl: r.url || url }; } catch { return null; }
 }
 
-function linksFromRss(xml = '') {
+function descriptionLinks(raw = '') {
   const out = [];
-  for (const block of xml.match(/<item\b[\s\S]*?<\/item>/gi) || []) {
-    const title = clean((block.match(/<title>([\s\S]*?)<\/title>/i) || [, ''])[1]);
-    const descriptionRaw = (block.match(/<description>([\s\S]*?)<\/description>/i) || [, ''])[1];
-    const description = decode(descriptionRaw);
-    const itemLink = normalize(clean((block.match(/<link>([\s\S]*?)<\/link>/i) || [, ''])[1]));
-    const descriptionLinks = [...String(description).matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)]
-      .map(m => ({ url: normalize(decode(m[1])), text: clean(m[2]) }))
-      .filter(x => x.url && !mirror.has(domainOf(x.url)) && !blocked.has(domainOf(x.url)) && !homepage(x.url) && !feed(x.url));
-    if (!title) continue;
-    for (const link of descriptionLinks) out.push({ title, url: link.url, linkText: link.text, source: 'description-link' });
-    // Keep RSS index/redirect links as discovery candidates. They are NEVER
-    // evidence themselves; recover() resolves them and only accepts the final
-    // non-mirror publisher URL.
-    if (itemLink && !blocked.has(domainOf(itemLink)) && !homepage(itemLink) && !feed(itemLink)) out.push({ title, url: itemLink, linkText: '', source: 'item-link' });
+  const decoded = raw.replace(/&amp;/gi, '&').replace(/&quot;/gi, '"');
+  for (const m of decoded.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const url = normalize(clean(m[1]));
+    if (url && !mirrors.has(host(url)) && !blocked.has(host(url)) && !homepage(url) && !feed(url)) out.push({ url, text: clean(m[2]) });
   }
   return out;
 }
 
-function extractSearchLinks(html = '', engine = 'bing') {
+function parseFeed(xml = '') {
   const out = [];
-  const source = decode(html);
-  const pattern = engine === 'google'
-    ? /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi
-    : /<li\b[^>]*class=["'][^"']*b_algo[^"']*[\s\S]*?<h2[^>]*>\s*<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
-  for (const m of source.matchAll(pattern)) {
-    let href = clean(m[1]);
-    const text = clean(m[2]);
-    if (engine === 'google') {
-      try {
-        const u = new URL(href, 'https://www.google.com');
-        if (u.pathname === '/url' && u.searchParams.get('q')) href = u.searchParams.get('q');
-        else if (u.hostname === 'www.google.com' || u.hostname === 'google.com') continue;
-      } catch { continue; }
-    }
-    const url = normalize(href); const domain = domainOf(url || '');
-    if (!url || !domain || mirror.has(domain) || blocked.has(domain) || homepage(url) || feed(url)) continue;
-    out.push({ url, text, source: `${engine}-web-search` });
+  const blocks = [
+    ...[...xml.matchAll(/<item\b[\s\S]*?<\/item>/gi)].map(m => m[0]),
+    ...[...xml.matchAll(/<entry\b[\s\S]*?<\/entry>/gi)].map(m => m[0]),
+  ];
+  for (const block of blocks) {
+    const title = clean((block.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [, ''])[1]);
+    const rawDescription = (block.match(/<(?:description|summary|content)(?:\s[^>]*)?>([\s\S]*?)<\/(?:description|summary|content)>/i) || [, ''])[1];
+    const description = clean(rawDescription);
+    const urls = [];
+    for (const m of block.matchAll(/<link\b[^>]*href=["']([^"']+)["'][^>]*>/gi)) urls.push(normalize(clean(m[1])));
+    const textLink = normalize(clean((block.match(/<link[^>]*>([\s\S]*?)<\/link>/i) || [, ''])[1]));
+    if (textLink) urls.push(textLink);
+    for (const l of descriptionLinks(rawDescription)) urls.push(l.url);
+    for (const url of [...new Set(urls)]) if (url && !mirrors.has(host(url)) && !blocked.has(host(url)) && !homepage(url) && !feed(url)) out.push({ title, description, url });
   }
   return out;
 }
 
-async function recoverFromWebSearch(title, existingFamilies) {
-  const queries = [`"${title}"`, title];
-  const found = [];
-  const seen = new Set();
-  for (const query of queries) {
-    const encoded = encodeURIComponent(query);
-    for (const [engine, url] of [
-      ['bing', `https://www.bing.com/search?q=${encoded}&count=20`],
-      ['google', `https://www.google.com/search?q=${encoded}&num=20`],
-    ]) {
-      const result = await get(url);
-      if (!result) continue;
-      for (const item of extractSearchLinks(result.text, engine)) {
-        const d = domainOf(item.url); const f = familyOf(item.url);
-        if (!d || !f || existingFamilies.has(f) || seen.has(item.url)) continue;
-        const itemOverlap = overlap(title, item.text);
-        if (itemOverlap < 2) continue;
-        seen.add(item.url);
-        found.push({ ...item, relevanceOverlap: itemOverlap });
-        if (found.length >= maxPerRecord || new Set(found.map(x => familyOf(x.url))).size >= 2) return found;
-      }
-    }
-  }
-  return found;
-}
-
-async function resolveDiscoveryUrl(item) {
-  const original = normalize(item.url);
-  if (!original) return null;
-  const originalDomain = domainOf(original);
-  if (!mirror.has(originalDomain)) return original;
-  const resolved = await get(original);
-  const finalUrl = normalize(resolved?.finalUrl || '');
-  const finalDomain = domainOf(finalUrl);
-  if (!finalUrl || !finalDomain || mirror.has(finalDomain) || blocked.has(finalDomain) || homepage(finalUrl) || feed(finalUrl)) return null;
-  return finalUrl;
+async function validatePublisherPage(url, storyTitle) {
+  const result = await get(url);
+  if (!result) return null;
+  const finalUrl = normalize(result.finalUrl || url);
+  if (!finalUrl || mirrors.has(host(finalUrl)) || blocked.has(host(finalUrl)) || homepage(finalUrl) || feed(finalUrl)) return null;
+  const html = result.text;
+  const pageTitle = clean((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [, ''])[1]);
+  const h1 = clean((html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [, ''])[1]);
+  const body = [...html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)].map(m => clean(m[1])).filter(x => x.length >= 45 && x.length <= 3000).slice(0, 80).join(' ');
+  if (body.length < 500) return null;
+  if (Math.max(overlap(storyTitle, `${pageTitle} ${h1}`), overlap(storyTitle, body)) < 2) return null;
+  return { finalUrl, pageTitle, bodyChars: body.length };
 }
 
 async function recover(record) {
   const current = Array.isArray(record.sources) ? record.sources : [];
-  const existingFamilies = new Set(current.map(s => familyOf(s.finalUrl || s.url)).filter(Boolean));
+  const existingFamilies = new Set(current.map(s => family(s.finalUrl || s.url)).filter(Boolean));
   if (existingFamilies.size >= 2) return record;
-  const title = clean(record.title || ''); if (!title) return record;
-  const queries = [`"${title}"`, title];
+  const title = clean(record.title || '');
+  if (!title) return record;
+  const queries = [title, [...tokens(title)].slice(0, 8).join(' ')].filter(Boolean);
   const additions = [];
   const seen = new Set();
 
-  // First use news indexes because they are cheap and candidate-scoped. They are
-  // discovery only; every recovered URL is revalidated by Evidence Integrity.
-  const feeds = [];
   for (const query of queries) {
     const encoded = encodeURIComponent(query);
-    feeds.push(`https://www.bing.com/news/search?q=${encoded}&format=rss`);
-    feeds.push(`https://news.google.com/rss/search?q=${encoded}&hl=en-US&gl=US&ceid=US:en`);
-  }
-  for (const feedUrl of feeds) {
-    const result = await get(feedUrl, 'application/rss+xml,application/xml,text/xml;q=0.9,*/*;q=0.8');
-    if (!result) continue;
-    for (const item of linksFromRss(result.text).sort((a,b) => overlap(title,b.title) - overlap(title,a.title))) {
-      const itemOverlap = overlap(title, item.title);
-      if (itemOverlap < 2) continue;
-      const resolvedUrl = await resolveDiscoveryUrl(item);
-      if (!resolvedUrl) continue;
-      const d = domainOf(resolvedUrl); const f = familyOf(resolvedUrl);
-      if (!d || !f || existingFamilies.has(f) || seen.has(resolvedUrl)) continue;
-      seen.add(resolvedUrl);
-      additions.push({ title: item.title, url: resolvedUrl, finalUrl: resolvedUrl, domain: d, publisherFamily: f, ok: true, status: 200, discovered: true, relevanceOverlap: itemOverlap, recovery: true, resolvedFrom: result.finalUrl.includes('bing.com') ? `bing-news-${item.source}` : `google-news-${item.source}` });
-      existingFamilies.add(f);
+    const feeds = [
+      `https://news.google.com/rss/search?q=${encoded}&hl=en-US&gl=US&ceid=US:en`,
+      `https://www.bing.com/news/search?q=${encoded}&format=rss`,
+    ];
+    for (const feedUrl of feeds) {
+      const result = await get(feedUrl, 'application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.8');
+      if (!result) continue;
+      const candidates = parseFeed(result.text).sort((a, b) => overlap(title, `${b.title} ${b.description}`) - overlap(title, `${a.title} ${a.description}`));
+      for (const item of candidates) {
+        const relevance = overlap(title, `${item.title} ${item.description}`);
+        if (relevance < 2) continue;
+        const url = normalize(item.url);
+        const publisherFamily = family(url);
+        if (!url || !publisherFamily || existingFamilies.has(publisherFamily) || seen.has(url)) continue;
+        seen.add(url);
+        const page = await validatePublisherPage(url, title);
+        if (!page) continue;
+        additions.push({ title: item.title || title, url: page.finalUrl, finalUrl: page.finalUrl, domain: host(page.finalUrl), publisherFamily, ok: true, status: 200, discovered: true, relevanceOverlap: relevance, recovery: true, resolvedFrom: 'news-feed-publisher-page', bodyChars: page.bodyChars });
+        existingFamilies.add(publisherFamily);
+        if (existingFamilies.size >= 2 || additions.length >= maxPerRecord) break;
+      }
       if (existingFamilies.size >= 2 || additions.length >= maxPerRecord) break;
     }
     if (existingFamilies.size >= 2 || additions.length >= maxPerRecord) break;
   }
 
-  // RSS often exposes only an index/redirect URL. If it yields nothing, use the
-  // web search result page strictly as a discovery index. Search-result URLs are
-  // never evidence; Evidence Integrity must fetch and validate the publisher page.
   if (existingFamilies.size < 2 && additions.length < maxPerRecord) {
-    const webCandidates = await recoverFromWebSearch(title, existingFamilies);
-    for (const item of webCandidates) {
-      const d = domainOf(item.url); const f = familyOf(item.url);
-      if (!d || !f || existingFamilies.has(f) || seen.has(item.url)) continue;
-      seen.add(item.url);
-      additions.push({ title, url: item.url, finalUrl: item.url, domain: d, publisherFamily: f, ok: true, status: 200, discovered: true, relevanceOverlap: item.relevanceOverlap, recovery: true, resolvedFrom: item.source });
-      existingFamilies.add(f);
+    for (const query of queries) {
+      const result = await get(`https://www.google.com/search?q=${encodeURIComponent(query)}&num=20`);
+      if (!result) continue;
+      for (const m of result.text.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+        const url = normalize(clean(m[1]));
+        const text = clean(m[2]);
+        const publisherFamily = family(url);
+        if (!url || !publisherFamily || mirrors.has(host(url)) || blocked.has(host(url)) || homepage(url) || feed(url) || existingFamilies.has(publisherFamily) || seen.has(url) || overlap(title, text) < 2) continue;
+        seen.add(url);
+        const page = await validatePublisherPage(url, title);
+        if (!page) continue;
+        additions.push({ title, url: page.finalUrl, finalUrl: page.finalUrl, domain: host(page.finalUrl), publisherFamily, ok: true, status: 200, discovered: true, relevanceOverlap: overlap(title, text), recovery: true, resolvedFrom: 'google-web-publisher-page', bodyChars: page.bodyChars });
+        existingFamilies.add(publisherFamily);
+        if (existingFamilies.size >= 2 || additions.length >= maxPerRecord) break;
+      }
       if (existingFamilies.size >= 2 || additions.length >= maxPerRecord) break;
     }
   }
 
   if (!additions.length) return { ...record, recovery: { attempted: true, added: 0, independentPublisherFamilies: [] } };
   const sources = [...current, ...additions];
-  return { ...record, sources, sourceCount: sources.length, reachableSourceCount: sources.filter(s => s.ok).length, uniqueDomainCount: new Set(sources.map(s => domainOf(s.finalUrl || s.url)).filter(Boolean)).size, independentReachableDomains: [...new Set(sources.map(s => domainOf(s.finalUrl || s.url)).filter(Boolean))], recovery: { attempted: true, added: additions.length, independentPublisherFamilies: [...new Set(additions.map(s => s.publisherFamily))], methods: [...new Set(additions.map(s => s.resolvedFrom))] } };
+  return { ...record, sources, sourceCount: sources.length, reachableSourceCount: sources.filter(s => s.ok).length, uniqueDomainCount: new Set(sources.map(s => host(s.finalUrl || s.url)).filter(Boolean)).size, independentReachableDomains: [...new Set(sources.map(s => host(s.finalUrl || s.url)).filter(Boolean))], recovery: { attempted: true, added: additions.length, independentPublisherFamilies: [...new Set(additions.map(s => s.publisherFamily))], methods: [...new Set(additions.map(s => s.resolvedFrom))] } };
 }
 
-async function mapWithConcurrency(items, limit, worker) {
+async function mapWithConcurrency(items, limit) {
   const results = new Array(items.length); let next = 0;
-  async function runWorker() { while (true) { const index = next++; if (index >= items.length) return; results[index] = await worker(items[index], index); } }
-  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, runWorker));
+  async function worker() { while (true) { const index = next++; if (index >= items.length) return; results[index] = await recover(items[index]); } }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
   return results;
 }
 
 try {
-  const raw = await fs.readFile(inputPath, 'utf8');
-  const report = JSON.parse(raw); const records = Array.isArray(report.records) ? report.records : [];
-  const recovered = await mapWithConcurrency(records, recoveryConcurrency, recover);
+  const report = JSON.parse(await fs.readFile(inputPath, 'utf8'));
+  const records = Array.isArray(report.records) ? report.records : [];
+  const recovered = await mapWithConcurrency(records, recoveryConcurrency);
   const attempted = recovered.filter(r => r.recovery?.attempted).length;
   const added = recovered.reduce((sum, r) => sum + Number(r.recovery?.added || 0), 0);
-  await fs.writeFile(inputPath, `${JSON.stringify({ ...report, version: 9, recoveredAt: new Date().toISOString(), recoverySummary: { attempted, added }, records: recovered }, null, 2)}\n`);
-  console.log(`Publisher recovery v4: checked ${records.length} verification record(s) with bounded concurrency ${recoveryConcurrency}.`);
-  console.log(`Publisher recovery v4: ${attempted} record(s) attempted recovery; ${added} publisher URL(s) discovered. RSS index/redirect links are now resolved to final publisher URLs before they can enter the evidence pipeline.`);
-} catch (error) { console.log(`Publisher recovery skipped: ${error instanceof Error ? error.message : String(error)}`); }
+  await fs.writeFile(inputPath, `${JSON.stringify({ ...report, version: 10, recoveredAt: new Date().toISOString(), recoverySummary: { attempted, added }, records: recovered }, null, 2)}\n`);
+  console.log(`Publisher recovery v5: ${attempted}/${records.length} attempted; ${added} validated publisher article URL(s) added.`);
+} catch (error) {
+  console.log(`Publisher recovery skipped: ${error instanceof Error ? error.message : String(error)}`);
+}
