@@ -1,9 +1,9 @@
 import { articles } from '@/lib/articles';
 import SubscribePanel from '@/app/components/SubscribePanel';
+import { TREND_FORGE_CATEGORIES, categorySlug } from '@/lib/categories';
 
 const basePath = '/Trendforge';
 const latestArticles = [...articles].sort((a, b) => b.date.localeCompare(a.date));
-const categories = ['AI', 'Technology', 'Digital Life', 'How-To'];
 
 export default function Home() {
   const featured = latestArticles[0];
@@ -21,7 +21,7 @@ export default function Home() {
       <div className="side">{secondary.length > 0 ? secondary.map((article) => <article className="card" key={article.slug}><div className="tag">{article.category} · {article.readTime}</div><h3>{article.title}</h3><p>{article.description}</p><a className="read-button" href={`${basePath}/article/${article.slug}/`}>Read <span>→</span></a></article>) : <><article className="card"><div className="tag">AI</div><h3>AI is moving fast. Here’s what actually matters.</h3><p>Clear explanations, useful tools and the changes worth paying attention to — without the noise.</p></article><article className="card"><div className="tag">Technology</div><h3>The tech changes you can actually use</h3><p>Practical guides for smarter digital work, better tools and everyday problems.</p></article></>}</div>
     </section>
 
-    <section className="promise" id="topics" aria-labelledby="topics-heading"><div className="eyebrow">Explore topics</div><h2 id="topics-heading">Choose your signal.</h2><p>Browse focused sections instead of scrolling through everything.</p><div className="topic-links">{categories.map((category) => <a className="topic-link" key={category} href={`${basePath}/category/${category.toLowerCase().replace(/\s+/g, '-')}/`}>{category}<span>→</span></a>)}</div></section>
+    <section className="promise" id="topics" aria-labelledby="topics-heading"><div className="eyebrow">Explore topics</div><h2 id="topics-heading">Choose your signal.</h2><p>Browse focused sections instead of scrolling through everything.</p><div className="topic-links">{TREND_FORGE_CATEGORIES.map((category) => <a className="topic-link" key={category} href={`${basePath}/category/${categorySlug(category)}/`}>{category}<span>→</span></a>)}</div></section>
     <footer className="footer"><span>© 2026 TrendForge</span><span><a href={`${basePath}/about/`}>About</a> · <a href={`${basePath}/privacy/`}>Privacy</a> · <a href={`${basePath}/terms/`}>Terms</a> · <a href={`${basePath}/subscribe/`}>Subscribe</a> · <a href={`${basePath}/monetization/`}>Monetization</a></span></footer>
   </main>
 }
