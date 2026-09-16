@@ -1,32 +1,40 @@
 {
-  "generatedAt": "2026-09-14T04:53:59.628Z",
-  "provider": "Gemini",
+  "generatedAt": "2026-09-16T04:02:27.700Z",
+  "provider": "Cohere",
   "editorial": {
-    "passed": true,
+    "passed": false,
     "checks": {
       "title": true,
       "description": true,
       "content": true,
       "structure": true,
-      "sources": true,
+      "sources": false,
       "noUnsafeMarkup": true
     }
   },
   "copyright": {
-    "passed": true,
+    "passed": false,
     "checks": {
       "hasUsefulLength": true,
       "noSuspiciousTemplate": true,
-      "validSources": true,
+      "validSources": false,
       "safeImages": true,
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3337,
-      "sentenceCount": 22,
-      "maxSourceSimilarity": 0
+      "normalizedLength": 3275,
+      "sentenceCount": 20,
+      "maxSourceSimilarity": 0,
+      "maxCommonPhrase": 0
     }
   },
   "semanticDuplicateCheck": "passed",
-  "sourceRelationshipCheck": "passed"
+  "sourceRelationshipCheck": "passed",
+  "verifiedEvidenceDomains": [
+    "arstechnica.com"
+  ],
+  "grounding": {
+    "sourceCount": 1,
+    "usablePassages": 17
+  }
 }
