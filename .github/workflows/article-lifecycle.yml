@@ -1,0 +1,76 @@
+name: TrendForge Article Lifecycle
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["TrendForge Pipeline"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendforge-article-lifecycle
+  cancel-in-progress: true
+
+jobs:
+  lifecycle:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Run lifecycle intelligence
+        run: node scripts/article-lifecycle.mjs
+
+      - name: Deterministic lifecycle tests
+        run: node scripts/test-article-lifecycle.mjs
+
+      - name: Validate lifecycle safety
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const x = JSON.parse(fs.readFileSync('data/article-lifecycle.json', 'utf8'));
+          if (x.version !== 2) throw new Error('Lifecycle version mismatch');
+          if (x.policy?.doesNotAutoRewrite !== true) throw new Error('Lifecycle must not auto-rewrite articles');
+          if (x.policy?.doesNotDeleteArticles !== true) throw new Error('Lifecycle must not delete articles');
+          if (x.policy?.duplicateDetectionOnly !== true) throw new Error('Duplicate detection must remain advisory');
+          if (x.policy?.preservesPublicationGates !== true) throw new Error('Lifecycle must preserve publication gates');
+          if (!Array.isArray(x.refreshQueue) || !Array.isArray(x.watchQueue)) throw new Error('Lifecycle queues missing');
+          if (!Array.isArray(x.duplicateClusters)) throw new Error('Duplicate clusters missing');
+          console.log('TrendForge Article Lifecycle safety: PASS');
+          console.log(JSON.stringify({articles:x.summary.articles, refreshCandidates:x.summary.refreshCandidates, watch:x.summary.watch, duplicateClusters:x.summary.duplicateClusters}));
+          NODE
+
+      - name: Commit lifecycle output
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trendforge-bot'
+          git config user.email 'trendforge-bot@users.noreply.github.com'
+          git add data/article-lifecycle.json
+          if git diff --cached --quiet; then
+            echo 'No lifecycle changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh article lifecycle intelligence'
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt/3"
+            if git push origin HEAD:main; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase --autostash origin main
+              sleep $((attempt * 5))
+            fi
+          done
+          exit 1
