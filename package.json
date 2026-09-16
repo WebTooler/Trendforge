@@ -20,7 +20,8 @@
     "performance:test": "node scripts/test-performance.mjs",
     "lifecycle:run": "node scripts/article-lifecycle.mjs",
     "lifecycle:test": "node scripts/test-article-lifecycle.mjs",
-    "comments:test": "node scripts/test-trendforge-comments.mjs"
+    "comments:test": "node scripts/test-trendforge-comments.mjs",
+    "trust-moderation:test": "node scripts/test-trendforge-trust-moderation.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
