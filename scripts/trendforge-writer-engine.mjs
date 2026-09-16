@@ -3,17 +3,18 @@ import { available, mark, markSuccess } from './ai-provider-router.mjs';
 import { buildWriterContract, validateDraft } from './trendforge-editorial-policy.mjs';
 
 const MAX_TRANSIENT_RETRIES=1;
-const MAX_PROVIDER_ATTEMPTS_PER_RUN=6;
-const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=3;
+const MAX_PROVIDER_ATTEMPTS_PER_RUN=10;
+const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=4;
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
 const MIN_WRITER_WORDS=400;
 const WRITER_TARGET_MIN_WORDS=500;
 const WRITER_TARGET_MAX_WORDS=700;
-const budgetPath='data/ai-run-budget.json';
+const writerBudgetPath='data/ai-run-budget.json';
+const repairBudgetPath='data/ai-repair-run-budget.json';
 const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
-const loadBudget=()=>{try{const raw=JSON.parse(fs.readFileSync(budgetPath,'utf8'));return raw?.runKey===runKey&&Number.isFinite(raw?.attempts)?raw:{runKey,attempts:0,updatedAt:new Date().toISOString()};}catch{return{runKey,attempts:0,updatedAt:new Date().toISOString()};}};
-const saveBudget=budget=>{fs.mkdirSync('data',{recursive:true});budget.updatedAt=new Date().toISOString();fs.writeFileSync(budgetPath,JSON.stringify(budget,null,2)+'\n');};
-const providerTimeout=provider=>({OpenRouter:25000,Cohere:20000,Groq:20000,Gemini:20000}[provider]||20000);
+const loadBudget=(kind='writer')=>{const budgetPath=kind==='repair'?repairBudgetPath:writerBudgetPath;try{const raw=JSON.parse(fs.readFileSync(budgetPath,'utf8'));return raw?.runKey===runKey&&Number.isFinite(raw?.attempts)?raw:{runKey,attempts:0,updatedAt:new Date().toISOString()};}catch{return{runKey,attempts:0,updatedAt:new Date().toISOString()};}};
+const saveBudget=(budget,kind='writer')=>{const budgetPath=kind==='repair'?repairBudgetPath:writerBudgetPath;fs.mkdirSync('data',{recursive:true});budget.updatedAt=new Date().toISOString();fs.writeFileSync(budgetPath,JSON.stringify(budget,null,2)+'\n');};
+const providerTimeout=provider=>({OpenRouter:40000,Cohere:35000,Groq:35000,Gemini:35000}[provider]||35000);
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const retryDelay=(response,attempt)=>{const header=Number(response.headers.get('retry-after')||0);if(Number.isFinite(header)&&header>0)return Math.min(header*1000,5000);return Math.min(600*(2**attempt)+Math.floor(Math.random()*300),3500);};
 const keyFor=provider=>({Groq:'GROQ_API_KEY',Gemini:'GEMINI_API_KEY',OpenRouter:'OPENROUTER_API_KEY',Cohere:'COHERE_API_KEY'}[provider]);
@@ -37,11 +38,11 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
   const contract=buildWriterContract(inferred);
   const enginePrompt=`${contract}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nSTRICT EVIDENCE WRITING CONTRACT:\n1. The retrieved evidence pack is the ONLY factual knowledge you may use.\n2. Before writing each factual sentence, identify the exact evidence passage that supports it. If no passage supports it, do not write the sentence.\n3. Never infer a product specification, comparison, motive, effect, user reaction, future outcome, price, date, rating, compatibility detail, competitor comparison, or market implication that is not explicit in the evidence.\n4. Do not combine passages into a stronger claim than either passage supports. Preserve attribution.\n5. POLARITY LOCK: preserve the exact direction of every factual relationship. Never turn increased into decreased, reduced into increased, rose into fell, gain into loss, approved into rejected, allowed into banned, launched into cancelled, confirmed into denied, or supports into opposes. Do not strengthen or weaken a factual relationship while paraphrasing.\n6. Preserve every material number, date, named entity, causal relationship and attribution. If the evidence does not support an exact value or relationship, omit the claim rather than guess.\n7. Avoid speculative future language unless the evidence explicitly states that possibility.\n8. Recommendations may be opinion only and must add no new factual premise.\n9. Write about ${WRITER_TARGET_MIN_WORDS}-${WRITER_TARGET_MAX_WORDS} words when evidence supports it; hard floor is ${MIN_WRITER_WORDS}. Do not pad or invent.\n10. Use 3-5 useful H2 sections.\n11. The requested story title is the hard topic boundary. Do not switch stories.\n12. Return only JSON with exactly title, description and content.\nFINAL SELF-CHECK: For every factual sentence, verify source support, polarity/direction, numbers, dates, entities, causal relationship and attribution. Delete any sentence that fails any check.`;
   const requested=expectedTitle||requestedTitle(prompt);let candidateAttempts=0;
-  if(loadBudget().attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)throw new Error('TrendForge Writer Engine: run-level AI provider budget exhausted.');
+  if(loadBudget('writer').attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)throw new Error('TrendForge Writer Engine: run-level AI provider budget exhausted.');
   for(const provider of available){
     if(!process.env[keyFor(provider)])continue;
     if(candidateAttempts>=MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE)break;
-    const budget=loadBudget();if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)break;budget.attempts+=1;candidateAttempts+=1;saveBudget(budget);console.log(`TrendForge Writer Engine: provider attempt ${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN} (candidate ${candidateAttempts}/${MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE}) — ${provider}.`);const started=Date.now();
+    const budget=loadBudget('writer');if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)break;budget.attempts+=1;candidateAttempts+=1;saveBudget(budget,'writer');console.log(`TrendForge Writer Engine: provider attempt ${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN} (candidate ${candidateAttempts}/${MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE}) — ${provider}.`);const started=Date.now();
     try{const text=await request(provider,enginePrompt);if(!text.trim()){mark(provider,200,'Empty model response');continue;}const draft=parseWriterJson(text);if(!draft||typeof draft.title!=='string'||typeof draft.description!=='string'||typeof draft.content!=='string'){mark(provider,200,'Invalid structured output');continue;}const alignment=topicAlignment(requested,draft);if(requested&&!alignment.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected for topic drift after ${Date.now()-started}ms.`);continue;}const validation=validateDraft({title:draft.title,description:draft.description,content:draft.content,category:inferred});if(!validation.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication — ${validation.errors.join('; ')}.`);continue;}if(validation.metrics.words<MIN_WRITER_WORDS){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication — word count ${validation.metrics.words}.`);continue;}console.log(`TrendForge Writer Engine: ${provider} produced ${validation.metrics.words} words.`);markSuccess(provider);return{text:JSON.stringify(draft),provider,policyVersion:'2.7',topicAlignment:alignment};}catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Writer Engine: ${provider} failed [${status||'network'}] — ${message.slice(0,260)}.`);if(isHardQuota(status,message))break;}}
   throw new Error('TrendForge Writer Engine: no provider produced a policy-valid article.');
 }
@@ -49,10 +50,10 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
 export async function generateWithTrendForgeRepair({prompt}){
   const repairSystem='You are the TrendForge Atomic Grounding Repair Engine. The supplied publisher evidence is the sole factual source. Return ONLY JSON with a repairs array. Never rewrite an article and never invent facts. Preserve factual polarity exactly: never reverse increased/decreased, rise/fall, gain/loss, approve/reject, allow/ban, launch/cancel, confirm/deny, support/oppose, numbers, dates, entities, causal relationships or attribution.';
   let attempts=0;
-  if(loadBudget().attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)throw new Error('TrendForge repair: run-level AI provider budget exhausted.');
+  if(loadBudget('repair').attempts>=MAX_REPAIR_PROVIDER_ATTEMPTS)throw new Error('TrendForge repair: run-level repair provider budget exhausted.');
   for(const provider of available){
     if(!process.env[keyFor(provider)]||attempts>=MAX_REPAIR_PROVIDER_ATTEMPTS)continue;
-    const budget=loadBudget();if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)break;budget.attempts+=1;attempts+=1;saveBudget(budget);console.log(`TrendForge Atomic Repair: provider attempt ${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN} (${attempts}/${MAX_REPAIR_PROVIDER_ATTEMPTS}) — ${provider}.`);const started=Date.now();
+    const budget=loadBudget('repair');if(budget.attempts>=MAX_REPAIR_PROVIDER_ATTEMPTS)break;budget.attempts+=1;attempts+=1;saveBudget(budget,'repair');console.log(`TrendForge Atomic Repair: provider attempt ${budget.attempts}/${MAX_REPAIR_PROVIDER_ATTEMPTS} (${attempts}/${MAX_REPAIR_PROVIDER_ATTEMPTS}) — ${provider}.`);const started=Date.now();
     try{const text=await request(provider,prompt,repairSystem,repairFormats);if(!text.trim()){mark(provider,200,'Empty atomic repair response');continue;}const parsed=parseWriterJson(text);if(!parsed||!Array.isArray(parsed.repairs)){mark(provider,200,'Invalid repair JSON');continue;}const repairs=parsed.repairs.filter(x=>x&&typeof x.original==='string'&&typeof x.replacement==='string');if(!repairs.length){mark(provider,200,'No repair objects');continue;}markSuccess(provider);console.log(`TrendForge Atomic Repair: ${provider} returned ${repairs.length} atomic sentence repair(s) after ${Date.now()-started}ms.`);return{text:JSON.stringify({repairs}),provider,policyVersion:'1.1'};}catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Atomic Repair: ${provider} failed [${status||'network'}] — ${message.slice(0,260)}.`);if(isHardQuota(status,message))continue;}}
   throw new Error('TrendForge Atomic Repair: no provider produced valid sentence repairs.');
 }
