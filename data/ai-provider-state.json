@@ -8,14 +8,14 @@
       "lastError": null,
       "lastClass": "success",
       "successes": 3,
-      "lastSuccessAt": "2026-09-16T07:43:13.155Z"
+      "lastSuccessAt": "2026-09-16T08:47:55.906Z"
     },
     "Gemini": {
-      "failures": 9,
+      "failures": 8,
       "quotaBlockedUntil": 1789503401203,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
-      "lastClass": "error"
+      "lastStatus": 429,
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 18.818276881s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
+      "lastClass": "quota"
     },
     "OpenAI": {
       "failures": 3,
@@ -32,22 +32,22 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 12,
+      "failures": 10,
       "quotaBlockedUntil": 1789509653437,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
-      "lastClass": "error"
+      "lastStatus": 429,
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50\",\"X-RateLimit-Remaining\":\"0\",\"X-RateLimit-Reset\":\"1789516800000\"},\"limit_source\":\"openrouter_free_tier_daily\",\"remedy_hint\":\"Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.\",\"provider_name\":null,\"previous_errors\":[{\"code\":429,\"message\":\"Rate limit exceede",
+      "lastClass": "quota"
     },
     "Cohere": {
-      "failures": 21,
-      "quotaBlockedUntil": 1789544621810,
+      "failures": 20,
+      "quotaBlockedUntil": 0,
       "lastStatus": 200,
-      "lastError": "Empty model response",
-      "lastClass": "transient",
-      "successes": 1,
-      "lastSuccessAt": "2026-09-15T14:16:49.634Z"
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 2,
+      "lastSuccessAt": "2026-09-16T08:47:54.865Z"
     }
   },
-  "rotationCursor": 3,
-  "updatedAt": "2026-09-16T07:44:29.224Z"
+  "rotationCursor": 0,
+  "updatedAt": "2026-09-16T08:47:55.906Z"
 }

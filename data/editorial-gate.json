@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-16T07:43:13.160Z",
-  "provider": "Groq",
+  "generatedAt": "2026-09-16T08:47:54.871Z",
+  "provider": "Cohere",
   "editorial": {
-    "passed": false,
+    "passed": true,
     "checks": {
       "title": true,
-      "description": false,
+      "description": true,
       "content": true,
       "structure": true,
       "sources": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3480,
-      "sentenceCount": 25,
+      "normalizedLength": 2908,
+      "sentenceCount": 14,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
