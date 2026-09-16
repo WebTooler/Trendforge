@@ -111,9 +111,7 @@ const decisions = trends.map((item, index) => {
     : (item.sourceName || item.source || item.sourceUrl ? 1 : 0);
   const reachableSourceCount = Number(verification?.relevantReachableSourceCount ?? verification?.reachableSourceCount ?? 0);
   const discoveredSourceCount = Number(verification?.discoveredSourceCount ?? 0);
-  const independentDomainCount = Number(verification?.uniqueDomainCount ?? 0);
-  // Evidence Discovery is now authoritative input to prioritization. Original feed
-  // sources remain the fallback when verification data is unavailable.
+  const independentDomainCount = Number(verification?.independentPublisherCount ?? verification?.uniqueDomainCount ?? 0);
   const sourceCount = verification
     ? Math.max(originalSourceCount, reachableSourceCount)
     : originalSourceCount;
@@ -137,6 +135,7 @@ const decisions = trends.map((item, index) => {
   const eligibility = item.eligible ? 100 : 55;
   const confidence = Math.round(sourceConfidence * 0.45 + freshness * 0.20 + novelty * 0.20 + eligibility * 0.15);
   const decisionScore = Math.round(baseScore * 0.45 + confidence * 0.30 + novelty * 0.15 + categoryNeed * 0.10);
+
   const categoryShare = categoryCounts[category] / totalPublished;
   const balanceBonus = categoryShare < 0.10 ? 8 : categoryShare > 0.35 ? -8 : 0;
   const recentPenalty = recentCategories[0] === category ? 12 : recentCategories.includes(category) ? 5 : 0;
@@ -147,7 +146,7 @@ const decisions = trends.map((item, index) => {
   else reasons.push('research eligibility is not yet proven');
   reasons.push(`${sourceCount} source(s) detected`);
   if (verification) {
-    reasons.push(`evidence verification: ${reachableSourceCount} relevant reachable source(s), ${independentDomainCount} independent domain(s)`);
+    reasons.push(`evidence verification: ${reachableSourceCount} relevant reachable source(s), ${independentDomainCount} independent publisher family/families`);
     if (discoveredSourceCount > 0) reasons.push(`${discoveredSourceCount} discovered publisher source(s) available`);
     if (evidenceReady) reasons.push('multi-source evidence ready');
     else reasons.push('multi-source evidence not yet proven');
@@ -250,7 +249,7 @@ appendLog(decisions.map((d) => ({
   reasons: d.reasons,
 })));
 
-console.log(`Decision Engine v3: ${decisions.length} candidate(s) evaluated; evidence integration ${verificationByLink.size ? 'active' : 'fallback-only'}.`);
+console.log(`Decision Engine v4: ${decisions.length} candidate(s) evaluated; evidence integration ${verificationByLink.size ? 'active' : 'fallback-only'}.`);
 console.log(`Decision summary: ${queue.summary.publishCandidates} publish candidate(s), ${queue.summary.review} review, ${queue.summary.hold} hold, ${queue.summary.reject} reject.`);
-console.log(`Decision evidence: ${decisions.filter((d) => d.evidenceReady).length} candidate(s) have >=2 relevant reachable sources across >=2 independent domains.`);
+console.log(`Decision evidence: ${decisions.filter((d) => d.evidenceReady).length} candidate(s) have >=2 relevant reachable sources across >=2 independent publisher families.`);
 if (decisions[0]) console.log(`Top adaptive decision: ${decisions[0].decision} — ${decisions[0].title} (${decisions[0].adaptivePriority}/100 priority, decision ${decisions[0].decisionScore}/100, confidence ${decisions[0].confidence}/100).`);
