@@ -32,7 +32,8 @@
     "supervisor:test": "node scripts/test-trendforge-supervisor.mjs",
     "supervisor:run": "node scripts/trendforge-supervisor.mjs",
     "audit:run": "node scripts/trendforge-audit-trail.mjs",
-    "audit:test": "node scripts/test-trendforge-audit-trail.mjs"
+    "audit:test": "node scripts/test-trendforge-audit-trail.mjs",
+    "control-center:test": "node scripts/test-control-center.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
