@@ -24,7 +24,9 @@
     "trust-moderation:test": "node scripts/test-trendforge-trust-moderation.mjs",
     "seo:test": "node scripts/test-trendforge-seo-intelligence.mjs",
     "monetization:test": "node scripts/test-trendforge-monetization.mjs",
-    "monetization:run": "npx tsx scripts/trendforge-monetization.mjs"
+    "monetization:run": "npx tsx scripts/trendforge-monetization.mjs",
+    "distribution:test": "npx tsx scripts/test-trendforge-distribution.mjs",
+    "distribution:run": "npx tsx scripts/trendforge-distribution.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
