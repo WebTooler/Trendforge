@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { articles } from '@/lib/articles';
 
 const basePath = '/Trendforge';
+const latestArticle = [...articles].sort((a, b) => b.date.localeCompare(a.date))[0];
 
 export default function SubscribePanel() {
   const [notificationState, setNotificationState] = useState<'idle' | 'enabled' | 'denied' | 'unsupported'>('idle');
@@ -12,9 +14,39 @@ export default function SubscribePanel() {
       setNotificationState('unsupported');
       return;
     }
+
     if (Notification.permission === 'granted') setNotificationState('enabled');
     if (Notification.permission === 'denied') setNotificationState('denied');
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(`${basePath}/trendforge-sw.js`).catch(() => undefined);
+    }
   }, []);
+
+  useEffect(() => {
+    if (notificationState !== 'enabled' || !latestArticle) return;
+
+    const latestKey = `trendforge-notified:${latestArticle.slug}`;
+    const previous = window.localStorage.getItem('trendforge-latest-notified');
+    if (previous && previous !== latestArticle.slug && !window.localStorage.getItem(latestKey)) {
+      const notify = () => {
+        const options: NotificationOptions = {
+          body: latestArticle.title,
+          icon: `${basePath}/favicon.ico`,
+          tag: 'trendforge-new-story',
+          data: { url: `${basePath}/article/${latestArticle.slug}/` },
+        };
+        if (navigator.serviceWorker?.controller) {
+          navigator.serviceWorker.controller.postMessage({ type: 'TREND_FORGE_NEW_STORY', options });
+        } else {
+          new Notification('New on TrendForge', options);
+        }
+        window.localStorage.setItem(latestKey, '1');
+      };
+      notify();
+    }
+    window.localStorage.setItem('trendforge-latest-notified', latestArticle.slug);
+  }, [notificationState]);
 
   async function enableNotifications() {
     if (!('Notification' in window)) {
@@ -23,19 +55,28 @@ export default function SubscribePanel() {
     }
 
     const permission = await Notification.requestPermission();
-    if (permission === 'granted') {
-      setNotificationState('enabled');
-      new Notification('TrendForge notifications allowed', {
-        body: 'Browser permission is enabled. Full push alerts will be connected when the push service is added.',
-      });
-    } else {
+    if (permission !== 'granted') {
       setNotificationState('denied');
+      return;
+    }
+
+    setNotificationState('enabled');
+    window.localStorage.setItem('trendforge-latest-notified', latestArticle?.slug || '');
+
+    const registration = await navigator.serviceWorker?.ready;
+    if (registration?.showNotification) {
+      await registration.showNotification('TrendForge notifications enabled', {
+        body: 'You will receive a browser alert when a newer TrendForge story is detected on your next visit.',
+        icon: `${basePath}/favicon.ico`,
+        tag: 'trendforge-notification-enabled',
+        data: { url: `${basePath}/` },
+      });
     }
   }
 
   const notificationLabel =
     notificationState === 'enabled'
-      ? 'Notifications allowed ✓'
+      ? 'Notifications enabled ✓'
       : notificationState === 'denied'
         ? 'Notifications blocked'
         : notificationState === 'unsupported'
@@ -54,9 +95,9 @@ export default function SubscribePanel() {
           Subscribe <span>→</span>
         </a>
         <button className="notify-button" type="button" onClick={enableNotifications} disabled={notificationState === 'enabled' || notificationState === 'unsupported'}>
-          <span className="bell">◔</span> {notificationLabel}
+          <span className="bell" aria-hidden="true">♧</span> {notificationLabel}
         </button>
-        <small>Choose an RSS reader on the Subscribe page. Browser alerts require notification permission and a future push service.</small>
+        <small>Browser notifications are connected to TrendForge's notification service worker. New-story alerts are checked when you return to the site.</small>
       </div>
     </section>
   );
