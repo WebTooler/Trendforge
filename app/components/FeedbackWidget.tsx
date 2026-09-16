@@ -41,7 +41,6 @@ export default function FeedbackWidget({ articleSlug }: FeedbackWidgetProps) {
       {!submitted ? <>
         <div className="eyebrow">Reader feedback</div>
         <h2 className={styles.title} id={`feedback-heading-${articleSlug}`}>Was this article helpful?</h2>
-        <p className={styles.copy}>Your response is collected as anonymous feedback for observation only. It does not change this article or TrendForge's publishing rules.</p>
         <div className={styles.rating} role="group" aria-label="Article helpfulness">
           <button type="button" className={rating === 'positive' ? styles.selected : ''} aria-pressed={rating === 'positive'} onClick={() => setRating('positive')}>👍 Yes</button>
           <button type="button" className={rating === 'negative' ? styles.selected : ''} aria-pressed={rating === 'negative'} onClick={() => setRating('negative')}>👎 No</button>
