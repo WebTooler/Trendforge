@@ -115,11 +115,47 @@ jobs:
         continue-on-error: true
         run: node scripts/verify-article-claims-v2.mjs
       - name: Repair grounded article
+        id: grounding_repair_1
         if: steps.claim_verification.outcome == 'failure'
         run: node scripts/repair-article-grounding.mjs
       - name: Re-verify repaired article claims
-        if: steps.claim_verification.outcome == 'failure'
+        id: claim_reverification_1
+        if: steps.claim_verification.outcome == 'failure' && steps.grounding_repair_1.outcome == 'success'
+        continue-on-error: true
         run: node scripts/verify-article-claims-v2.mjs
+      - name: Second surgical grounding repair
+        id: grounding_repair_2
+        if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome == 'failure'
+        run: node scripts/repair-article-grounding.mjs
+      - name: Final claim verification
+        id: claim_verification_final
+        if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome == 'failure' && steps.grounding_repair_2.outcome == 'success'
+        continue-on-error: true
+        run: node scripts/verify-article-claims-v2.mjs
+      - name: Claim verification gate
+        if: ${{ !cancelled() }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          initial='${{ steps.claim_verification.outcome }}'
+          repair1='${{ steps.grounding_repair_1.outcome }}'
+          reverify1='${{ steps.claim_reverification_1.outcome }}'
+          repair2='${{ steps.grounding_repair_2.outcome }}'
+          final='${{ steps.claim_verification_final.outcome }}'
+          if [ "$initial" = "success" ]; then
+            echo 'Claim verification gate: PASS on initial verification.'
+            exit 0
+          fi
+          if [ "$reverify1" = "success" ]; then
+            echo 'Claim verification gate: PASS after first surgical repair.'
+            exit 0
+          fi
+          if [ "$final" = "success" ]; then
+            echo 'Claim verification gate: PASS after second surgical repair.'
+            exit 0
+          fi
+          echo "Claim verification gate: BLOCK — bounded repair exhausted (initial=$initial repair1=$repair1 reverify1=$reverify1 repair2=$repair2 final=$final)."
+          exit 1
       - name: Upload article attempt diagnostics
         if: ${{ !cancelled() }}
         continue-on-error: true
@@ -180,11 +216,6 @@ jobs:
             git status --short
             git reset --hard HEAD
           fi
-
-          # The workflow may run from a source branch that is ahead/behind main.
-          # Do not rebase the generated-output commit onto main: that can replay
-          # source-code commits and create unrelated conflicts in workflow/scripts.
-          # Instead, transplant only the generated paths onto the latest main tip.
           output_commit="$(git rev-parse HEAD)"
           git fetch origin main
           git reset --hard origin/main
