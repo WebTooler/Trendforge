@@ -1,0 +1,83 @@
+name: TrendForge Comments
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "app/components/CommentsWidget.tsx"
+      - "app/components/CommentsWidget.module.css"
+      - "app/article/[slug]/page.tsx"
+      - "scripts/trendforge-comments.mjs"
+      - "scripts/test-trendforge-comments.mjs"
+      - "package.json"
+      - ".github/workflows/comments.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trendforge-comments
+  cancel-in-progress: true
+
+jobs:
+  comments:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run comments isolation tests
+        run: npm run comments:test
+
+      - name: Validate comments policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = fs.readFileSync('scripts/trendforge-comments.mjs', 'utf8');
+          const widget = fs.readFileSync('app/components/CommentsWidget.tsx', 'utf8');
+          const forbiddenImports = [
+            '@/lib/article-engine', '@/lib/articles', '@/scripts/',
+            'trend-decision-engine', 'trend-research', 'verify-article-claims',
+            'editorial-intelligence', 'article-lifecycle'
+          ];
+          for (const term of forbiddenImports) {
+            if (widget.includes(term)) throw new Error(`Comments widget references protected pipeline module: ${term}`);
+          }
+          if (!policy.includes('changesPublicationGates: false')) throw new Error('Publication gates must remain protected');
+          if (!policy.includes('changesThresholds: false')) throw new Error('Thresholds must remain protected');
+          if (!policy.includes('autoRewrite: false') || !policy.includes('autoDelete: false')) throw new Error('Article mutation must remain disabled');
+          console.log('TrendForge Comments isolation: PASS');
+          NODE
+
+      - name: Build production export
+        run: npm run build
+
+      - name: Verify comments widget is in article output
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d out/article
+          if ! grep -R -q "Comments" out/article; then
+            echo "Comments widget heading not found in static article output."
+            exit 1
+          fi
+          if ! grep -R -q "utteranc.es" out/article; then
+            echo "Utterances client not found in static article output."
+            exit 1
+          fi
+          echo "Comments widget is present in static article output."
