@@ -42,6 +42,9 @@ jobs:
       - name: Generate search index
         run: npx tsx scripts/generate-search-index.ts
 
+      - name: Generate sitemap
+        run: npx tsx scripts/generate-sitemap.ts
+
       - name: Build production export
         run: npm run build
 
