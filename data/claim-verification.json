@@ -1,14 +1,14 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-16T08:47:56.060Z",
+  "generatedAt": "2026-09-16T09:01:43.584Z",
   "articlePath": "content/articles/exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost.md",
   "articleTitle": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
   "sourceCount": 1,
   "usableSourceCount": 1,
-  "claimCount": 5,
-  "editorialCount": 3,
-  "verified": 5,
+  "claimCount": 16,
+  "editorialCount": 2,
+  "verified": 16,
   "partial": 0,
   "unsupported": 0,
   "sourceUnavailable": 0,
@@ -47,56 +47,10 @@
   "claims": [
     {
       "index": 1,
-      "claim": "Ars Technica previewed a Mozilla report that documents how inexpensive open‑weight models have closed the performance gap with leading closed frontier AI.",
+      "claim": "A Mozilla report released in September 2026 shows that the performance gap between leading U.S. frontier AI models and the best open‑weight Chinese models has narrowed to roughly 4.4 months.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 84,
-      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "Jeremy Hsu – Sep 15, 2026 8:00 am | 77 Credit: Imen Ben Youssef / Hans Lucas / AFP via Getty Images Credit: Imen Ben Youssef / Hans Lucas / AFP via Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav The performance gap between frontier AI models from US tech companies and the best open-weights models from Chinese companies has closed to just 4.4 months, according to a Mozilla report. Mind the gap Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost Ars previewed Mozilla’s report on how cheap open models caught up on capability. The report highlights how a leading open model, Moonshot AI’s Kimi K3, achieves a composite AI performance score on the Artificial Analysis Intelligence Index that is just three points behind Anthropic’s Fable 5 closed frontier model, all while costing just 30 percent of the latter.",
-      "bestPassage": "Jeremy Hsu – Sep 15, 2026 8:00 am | 77 Credit: Imen Ben Youssef / Hans Lucas / AFP via Getty Images Credit: Imen Ben Youssef / Hans Lucas / AFP via Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav The performance gap between frontier AI models from US tech companies and the best open-weights models from Chinese companies has closed to just 4.4 months, according to a Mozilla report.",
-      "matchedPassages": [
-        "S1-P2",
-        "S1-P1",
-        "S1-P5"
-      ],
-      "sharedTerms": [
-        "ars",
-        "preview",
-        "mozilla",
-        "report",
-        "open",
-        "weight",
-        "models",
-        "clos",
-        "the",
-        "performance",
-        "gap",
-        "lead",
-        "frontier"
-      ],
-      "entityShared": [
-        "ars"
-      ],
-      "topicShared": [
-        "models",
-        "the",
-        "frontier"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 2,
-      "claim": "According to the analysis, the best Chinese open models now sit just 4.4 months behind the top U.S. frontier systems.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 71,
+      "confidence": 79,
       "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
       "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
       "bestDomain": "arstechnica.com",
@@ -108,23 +62,30 @@
         "S1-P2"
       ],
       "sharedTerms": [
-        "accord",
+        "mozilla",
+        "report",
+        "2026",
         "the",
-        "best",
-        "chinese",
-        "open",
+        "performance",
+        "gap",
+        "frontier",
         "models",
-        "month",
-        "frontier"
+        "and",
+        "best",
+        "open",
+        "weight",
+        "chinese",
+        "has",
+        "month"
       ],
       "entityShared": [
         "chinese"
       ],
       "topicShared": [
         "the",
+        "frontier",
         "models",
-        "month",
-        "frontier"
+        "month"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -132,134 +93,11 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 3,
-      "claim": "Moonshot AI’s Kimi K3, an open model, scores only three points below Anthropic’s closed Fable 5 on the Artificial Analysis Intelligence Index while costing about 30 % of Fable’s price.",
+      "index": 2,
+      "claim": "The same report, which Ars previewed before publication, also found that eight of the top ten models by token volume in August 2026 are open‑weight, indicating a shift in usage patterns.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 92,
-      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "The report highlights how a leading open model, Moonshot AI’s Kimi K3, achieves a composite AI performance score on the Artificial Analysis Intelligence Index that is just three points behind Anthropic’s Fable 5 closed frontier model, all while costing just 30 percent of the latter.",
-      "bestPassage": "The report highlights how a leading open model, Moonshot AI’s Kimi K3, achieves a composite AI performance score on the Artificial Analysis Intelligence Index that is just three points behind Anthropic’s Fable 5 closed frontier model, all while costing just 30 percent of the latter.",
-      "matchedPassages": [
-        "S1-P5"
-      ],
-      "sharedTerms": [
-        "moonshot",
-        "kimi",
-        "open",
-        "models",
-        "three",
-        "point",
-        "anthropic",
-        "clos",
-        "fable",
-        "the",
-        "analysi",
-        "index",
-        "cost"
-      ],
-      "entityShared": [
-        "moonshot",
-        "kimi",
-        "anthropic",
-        "fable",
-        "analysi",
-        "index"
-      ],
-      "topicShared": [
-        "models",
-        "the",
-        "cost"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 4,
-      "claim": "Raffi Krikorian, Mozilla’s chief technology officer, explained in an email to Ars that “[A Closed model] earns its premium in a few places: expert professional work, high‑intensity retrieval, and long context.” Organizations still buy closed frontier models because they come bundled with compliance packaging, support, and accountability, and many firms lack the staff to run open‑weight models effectively.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 98,
-      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "“[A Closed model] earns its premium in a few places: expert professional work, high-intensity retrieval, and long context,” Raffi Krikorian, chief technology officer at Mozilla, said in an email to Ars. Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
-      "bestPassage": "“[A Closed model] earns its premium in a few places: expert professional work, high-intensity retrieval, and long context,” Raffi Krikorian, chief technology officer at Mozilla, said in an email to Ars.",
-      "matchedPassages": [
-        "S1-P6",
-        "S1-P7"
-      ],
-      "sharedTerms": [
-        "raffi",
-        "krikorian",
-        "mozilla",
-        "chief",
-        "officer",
-        "explain",
-        "email",
-        "ars",
-        "clos",
-        "models",
-        "earn",
-        "its",
-        "premium",
-        "few",
-        "plac",
-        "expert",
-        "professional",
-        "work",
-        "high",
-        "intensity",
-        "retrieval",
-        "and",
-        "long",
-        "context",
-        "organization",
-        "frontier",
-        "come",
-        "bundl",
-        "compliance",
-        "packag",
-        "support",
-        "accountability",
-        "lack",
-        "the",
-        "staff",
-        "run",
-        "open",
-        "weight"
-      ],
-      "entityShared": [
-        "raffi",
-        "krikorian",
-        "ars",
-        "clos",
-        "organization"
-      ],
-      "topicShared": [
-        "models",
-        "frontier",
-        "the"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 6,
-      "claim": "OpenRouter data shows eight of the ten most‑used models by token volume in August 2026 are open‑weight, highlighting a clear preference among developers.",
-      "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 61,
+      "confidence": 66,
       "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
       "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
       "bestDomain": "arstechnica.com",
@@ -271,8 +109,10 @@
         "S1-P16"
       ],
       "sharedTerms": [
-        "eight",
         "the",
+        "report",
+        "eight",
+        "top",
         "models",
         "token",
         "august",
@@ -291,25 +131,683 @@
       "contradicted": false,
       "offTopic": false,
       "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 3,
+      "claim": "Despite this progress, open models still trail closed frontier models in revenue, suggesting that commercial adoption lags behind technical capability.",
+      "status": "verified",
+      "classification": "supported_with_context",
+      "confidence": 54,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P17",
+      "evidence": "However, open models are still lagging behind closed frontier models in revenue. The report highlights how a leading open model, Moonshot AI’s Kimi K3, achieves a composite AI performance score on the Artificial Analysis Intelligence Index that is just three points behind Anthropic’s Fable 5 closed frontier model, all while costing just 30 percent of the latter.",
+      "bestPassage": "However, open models are still lagging behind closed frontier models in revenue.",
+      "matchedPassages": [
+        "S1-P17",
+        "S1-P5"
+      ],
+      "sharedTerms": [
+        "open",
+        "models",
+        "clos",
+        "frontier",
+        "revenue",
+        "behind"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "models",
+        "frontier"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 4,
+      "claim": "For most workloads, organizations should default to open models, according to Mozilla’s State of Open Source AI report published on September 15.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 98,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P4",
+      "evidence": "Most organizations should ideally be using open models as the default for the majority of their work, according to the latest State of Open Source AI report from Mozilla, published on September 15 and shared with Ars prior to publication.",
+      "bestPassage": "Most organizations should ideally be using open models as the default for the majority of their work, according to the latest State of Open Source AI report from Mozilla, published on September 15 and shared with Ars prior to publication.",
+      "matchedPassages": [
+        "S1-P4"
+      ],
+      "sharedTerms": [
+        "for",
+        "organization",
+        "should",
+        "default",
+        "open",
+        "models",
+        "accord",
+        "mozilla",
+        "state",
+        "source",
+        "report",
+        "publish",
+        "september"
+      ],
+      "entityShared": [
+        "open",
+        "source",
+        "september"
+      ],
+      "topicShared": [
+        "for",
+        "models"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 5,
+      "claim": "The report highlighted Moonshot AI’s Kimi K3, which scores just three points below Anthropic’s Fable 5 on the Artificial Analysis Intelligence Index while costing only 30 % of the closed model’s price.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 93,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P5",
+      "evidence": "The report highlights how a leading open model, Moonshot AI’s Kimi K3, achieves a composite AI performance score on the Artificial Analysis Intelligence Index that is just three points behind Anthropic’s Fable 5 closed frontier model, all while costing just 30 percent of the latter.",
+      "bestPassage": "The report highlights how a leading open model, Moonshot AI’s Kimi K3, achieves a composite AI performance score on the Artificial Analysis Intelligence Index that is just three points behind Anthropic’s Fable 5 closed frontier model, all while costing just 30 percent of the latter.",
+      "matchedPassages": [
+        "S1-P5"
+      ],
+      "sharedTerms": [
+        "the",
+        "report",
+        "highlight",
+        "moonshot",
+        "kimi",
+        "three",
+        "point",
+        "anthropic",
+        "fable",
+        "analysi",
+        "index",
+        "cost",
+        "clos",
+        "models"
+      ],
+      "entityShared": [
+        "moonshot",
+        "kimi",
+        "anthropic",
+        "fable",
+        "analysi",
+        "index"
+      ],
+      "topicShared": [
+        "the",
+        "cost",
+        "models"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 6,
+      "claim": "Mozilla CTO Raffi Krikorian explained that closed models retain value in expert professional tasks, high‑intensity retrieval, and long‑context scenarios.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 82,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P6",
+      "evidence": "“[A Closed model] earns its premium in a few places: expert professional work, high-intensity retrieval, and long context,” Raffi Krikorian, chief technology officer at Mozilla, said in an email to Ars.",
+      "bestPassage": "“[A Closed model] earns its premium in a few places: expert professional work, high-intensity retrieval, and long context,” Raffi Krikorian, chief technology officer at Mozilla, said in an email to Ars.",
+      "matchedPassages": [
+        "S1-P6"
+      ],
+      "sharedTerms": [
+        "mozilla",
+        "raffi",
+        "krikorian",
+        "clos",
+        "models",
+        "expert",
+        "professional",
+        "high",
+        "intensity",
+        "retrieval",
+        "and",
+        "long",
+        "context"
+      ],
+      "entityShared": [
+        "raffi",
+        "krikorian"
+      ],
+      "topicShared": [
+        "models"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 7,
+      "claim": "He added that closed models come with compliance packaging, support, and accountability, which many firms lack the staff to replicate with open‑weight systems.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 78,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P7",
+      "evidence": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
+      "bestPassage": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
+      "matchedPassages": [
+        "S1-P7"
+      ],
+      "sharedTerms": [
+        "clos",
+        "models",
+        "come",
+        "compliance",
+        "packag",
+        "support",
+        "and",
+        "accountability",
+        "lack",
+        "the",
+        "staff",
+        "open",
+        "weight"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "models",
+        "the"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 9,
+      "claim": "The cost advantage is stark: the open‑weight GLM 5.2 from Z.ai scored within a point of Anthropic’s Claude Opus 4.7 and 4.8 in Terminal‑Bench 2.1 testing, yet costs about five times less per completed task.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 93,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P12",
+      "evidence": "When every model ran on the same harness in the Terminal-Bench 2.1 evaluation , the open-weights model GLM 5.2 from Chinese company Z.ai (Zhipu AI) scored within a point of Anthropic’s Claude Opus 4.7 and 4.8 while costing about five times less per completed task.",
+      "bestPassage": "When every model ran on the same harness in the Terminal-Bench 2.1 evaluation , the open-weights model GLM 5.2 from Chinese company Z.ai (Zhipu AI) scored within a point of Anthropic’s Claude Opus 4.7 and 4.8 while costing about five times less per completed task.",
+      "matchedPassages": [
+        "S1-P12"
+      ],
+      "sharedTerms": [
+        "the",
+        "cost",
+        "open",
+        "weight",
+        "glm",
+        "scor",
+        "within",
+        "point",
+        "anthropic",
+        "claude",
+        "opus",
+        "and",
+        "terminal",
+        "bench",
+        "five",
+        "tim",
+        "per",
+        "complet",
+        "task"
+      ],
+      "entityShared": [
+        "glm",
+        "anthropic",
+        "claude",
+        "opus",
+        "terminal",
+        "bench"
+      ],
+      "topicShared": [
+        "the",
+        "cost"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 10,
+      "claim": "Paying for closed frontier models buys about a four‑month head start at about five times the per-task cost—but only when currently looking at tasks taking between eight and 12 hours.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 90,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P13",
+      "evidence": "In other words, paying for closed frontier models buys about a four-month head start at about five times the per-task cost—but only when currently looking at tasks taking between eight and 12 hours.",
+      "bestPassage": "In other words, paying for closed frontier models buys about a four-month head start at about five times the per-task cost—but only when currently looking at tasks taking between eight and 12 hours.",
+      "matchedPassages": [
+        "S1-P13"
+      ],
+      "sharedTerms": [
+        "pay",
+        "for",
+        "clos",
+        "frontier",
+        "models",
+        "buys",
+        "four",
+        "month",
+        "head",
+        "start",
+        "five",
+        "tim",
+        "the",
+        "per",
+        "task",
+        "cost",
+        "but",
+        "currently",
+        "look",
+        "tak",
+        "eight",
+        "and",
+        "hour"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "pay",
+        "for",
+        "frontier",
+        "models",
+        "buys",
+        "month",
+        "head",
+        "start",
+        "the",
+        "cost"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 11,
+      "claim": "Krikorian advised that the premium is justified only when the head start matters, such as meeting a deadline before open models catch up.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 66,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P14",
+      "evidence": "“Pay when that head start is worth it, something like a deadline that lands before the open frontier catches up would be here,” Krikorian told Ars. Mind the gap Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost Ars previewed Mozilla’s report on how cheap open models caught up on capability.",
+      "bestPassage": "“Pay when that head start is worth it, something like a deadline that lands before the open frontier catches up would be here,” Krikorian told Ars.",
+      "matchedPassages": [
+        "S1-P14",
+        "S1-P1"
+      ],
+      "sharedTerms": [
+        "krikorian",
+        "the",
+        "head",
+        "start",
+        "deadline",
+        "open",
+        "models",
+        "catch"
+      ],
+      "entityShared": [
+        "krikorian"
+      ],
+      "topicShared": [
+        "the",
+        "head",
+        "start",
+        "models"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 12,
+      "claim": "For routine work that will still be performed next quarter, he argued, the savings of using open models—potentially a fifth of the cost—outweigh any performance edge.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 67,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P15",
+      "evidence": "“Routine work you’ll still be doing next quarter is not, because you’ll be able to do it for a fifth of the cost soon, and the model won’t be the bottleneck anyway.” Concentrations of power The surging popularity of open-weights models can be seen on OpenRouter , the AI gateway and marketplace that gives developers access to hundreds of different models from multiple providers. That explains why many companies are shifting to the significantly cheaper open models for routine work—and helps reveal a narrow band of workloads where frontier models are worth the cost.",
+      "bestPassage": "“Routine work you’ll still be doing next quarter is not, because you’ll be able to do it for a fifth of the cost soon, and the model won’t be the bottleneck anyway.” Concentrations of power The surging popularity of open-weights models can be seen on OpenRouter , the AI gateway and marketplace that gives developers access to hundreds of different models from multiple providers.",
+      "matchedPassages": [
+        "S1-P15",
+        "S1-P3"
+      ],
+      "sharedTerms": [
+        "for",
+        "routine",
+        "work",
+        "next",
+        "quarter",
+        "the",
+        "open",
+        "models",
+        "fifth",
+        "cost"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "for",
+        "the",
+        "models",
+        "cost"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 13,
+      "claim": "Since Mozilla’s inaugural State of Open Source AI report appeared on July 14, adoption of open models has accelerated, reflecting both cost savings and the narrowing capability gap.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 81,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P10",
+      "evidence": "Unsurprisingly, this has accelerated the use of open models since Mozilla’s inaugural State of Open Source AI report was published on July 14. Most organizations should ideally be using open models as the default for the majority of their work, according to the latest State of Open Source AI report from Mozilla, published on September 15 and shared with Ars prior to publication.",
+      "bestPassage": "Unsurprisingly, this has accelerated the use of open models since Mozilla’s inaugural State of Open Source AI report was published on July 14.",
+      "matchedPassages": [
+        "S1-P10",
+        "S1-P4"
+      ],
+      "sharedTerms": [
+        "since",
+        "mozilla",
+        "inaugural",
+        "state",
+        "open",
+        "source",
+        "report",
+        "july",
+        "models",
+        "has",
+        "accelerate",
+        "and",
+        "the"
+      ],
+      "entityShared": [
+        "open",
+        "source",
+        "july"
+      ],
+      "topicShared": [
+        "models",
+        "cost",
+        "the"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 14,
+      "claim": "Even as the gap closes, closed frontier models retain advantages in regulated environments and scenarios where immediate out‑of‑the‑box performance is critical.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 67,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P7",
+      "evidence": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained. But the steadily narrowing performance gap between open and closed frontier models, coupled with the cost-effectiveness of open models, is now widely recognized by many companies. Jeremy Hsu – Sep 15, 2026 8:00 am | 77 Credit: Imen Ben Youssef / Hans Lucas / AFP via Getty Images Credit: Imen Ben Youssef / Hans Lucas / AFP via Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav The performance gap between frontier AI models from US tech companies and the best open-weights models from Chinese companies has closed to just 4.4 months, according to a Mozilla report. The report highlights how a leading open model, Moonshot AI’s Kimi K3, achieves a composite AI performance score on the Artificial Analysis Intelligence Index that is just three points behind Anthropic’s Fable 5 closed frontier model, all while costing just 30 percent of the latter. In other words, paying for closed frontier models buys about a four-month head start at about five times the per-task cost—but only when currently looking at tasks taking between eight and 12 hours.",
+      "bestPassage": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
+      "matchedPassages": [
+        "S1-P7",
+        "S1-P8",
+        "S1-P2",
+        "S1-P5",
+        "S1-P13"
+      ],
+      "sharedTerms": [
+        "the",
+        "gap",
+        "clos",
+        "frontier",
+        "models",
+        "and",
+        "out",
+        "box",
+        "performance"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "the",
+        "frontier",
+        "models"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 15,
+      "claim": "Organizations still pay for closed frontier models because they work out of the box and come bundled with compliance packaging, support, and accountability, whereas many organizations lack the staff to run open‑weight models well, Krikorian explained.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 98,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P7",
+      "evidence": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
+      "bestPassage": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
+      "matchedPassages": [
+        "S1-P7"
+      ],
+      "sharedTerms": [
+        "organization",
+        "pay",
+        "for",
+        "clos",
+        "frontier",
+        "models",
+        "work",
+        "out",
+        "the",
+        "box",
+        "and",
+        "come",
+        "bundl",
+        "compliance",
+        "packag",
+        "support",
+        "accountability",
+        "wherea",
+        "lack",
+        "staff",
+        "run",
+        "open",
+        "weight",
+        "well",
+        "krikorian",
+        "explain"
+      ],
+      "entityShared": [
+        "organization",
+        "krikorian"
+      ],
+      "topicShared": [
+        "pay",
+        "for",
+        "frontier",
+        "models",
+        "the"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 17,
+      "claim": "The steadily narrowing performance gap between open and closed frontier models, coupled with the cost‑effectiveness of open models, is now widely recognized by many companies.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 90,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P8",
+      "evidence": "But the steadily narrowing performance gap between open and closed frontier models, coupled with the cost-effectiveness of open models, is now widely recognized by many companies.",
+      "bestPassage": "But the steadily narrowing performance gap between open and closed frontier models, coupled with the cost-effectiveness of open models, is now widely recognized by many companies.",
+      "matchedPassages": [
+        "S1-P8"
+      ],
+      "sharedTerms": [
+        "the",
+        "steadily",
+        "narrow",
+        "performance",
+        "gap",
+        "open",
+        "and",
+        "clos",
+        "frontier",
+        "models",
+        "coupl",
+        "cost",
+        "effectivenes",
+        "widely",
+        "recogniz",
+        "compani"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "the",
+        "frontier",
+        "models",
+        "cost"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 18,
+      "claim": "Organizations still pay for closed frontier models because they work out of the box and come bundled with compliance packaging, support, and accountability, whereas many organizations lack the staff to run open‑weight models well, Krikorian explained.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 98,
+      "bestSource": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P7",
+      "evidence": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
+      "bestPassage": "Organizations still pay for closed frontier models because they work out of the box and come bundled with “compliance packaging, support, and accountability,” whereas many organizations lack the staff to run open-weights models well, Krikorian explained.",
+      "matchedPassages": [
+        "S1-P7"
+      ],
+      "sharedTerms": [
+        "organization",
+        "pay",
+        "for",
+        "clos",
+        "frontier",
+        "models",
+        "work",
+        "out",
+        "the",
+        "box",
+        "and",
+        "come",
+        "bundl",
+        "compliance",
+        "packag",
+        "support",
+        "accountability",
+        "wherea",
+        "lack",
+        "staff",
+        "run",
+        "open",
+        "weight",
+        "well",
+        "krikorian",
+        "explain"
+      ],
+      "entityShared": [
+        "organization",
+        "krikorian"
+      ],
+      "topicShared": [
+        "pay",
+        "for",
+        "frontier",
+        "models",
+        "the"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
     }
   ],
   "editorial": [
     {
-      "index": 5,
-      "claim": "DoorDash illustrates the shift, using Kimi for routine tasks and reserving Fable for more complex work that would otherwise require human experts.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 7,
-      "claim": "Readers should monitor upcoming benchmark updates, cost trends for both open and closed models, and any new open releases that could further shrink the performance gap.",
-      "type": "editorial-recommendation",
-      "status": "editorial-excluded"
-    },
-    {
       "index": 8,
-      "claim": "Tracking adoption metrics on platforms like OpenRouter and watching for Mozilla’s next State of Open Source AI report will provide the clearest signals of where the market is heading.",
+      "claim": "DoorDash illustrates the emerging practice, using Kimi for routine work and reserving Fable for more complex problems that would otherwise require human experts.",
       "type": "editorial-analysis",
+      "status": "editorial-excluded"
+    },
+    {
+      "index": 16,
+      "claim": "Organizations should monitor three trends: the continued reduction of the performance gap, any changes in the cost differential between open and closed models, and the evolution of support infrastructure for open‑weight systems.",
+      "type": "editorial-recommendation",
       "status": "editorial-excluded"
     }
   ]
