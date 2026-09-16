@@ -20,7 +20,7 @@ const checks = [
   ['no evidence bypass', page.includes('bypass evidence')],
   ['no safety bypass', page.includes('bypass safety')],
   ['no auto publish', page.includes('auto-publish')],
-  ['unknown status is not green', page.includes("state={securityState}") && page.includes("state === 'unknown' ? '⚪'" )],
+  ['unknown status is not green', page.includes("state === 'good' ? '🟢' : state === 'watch' ? '🟡' : '⚪'")],
   ['responsive mobile layout', css.includes('@media(max-width:620px)')],
   ['provider responsive layout', css.includes('.cc-provider-grid')],
   ['audit responsive layout', css.includes('.cc-audit-row')],
