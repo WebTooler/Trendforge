@@ -1,0 +1,55 @@
+name: TrendForge Distribution Intelligence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/trendforge-distribution.mjs'
+      - 'scripts/test-trendforge-distribution.mjs'
+      - 'lib/articles.ts'
+      - 'package.json'
+      - '.github/workflows/distribution-intelligence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  distribution-intelligence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run deterministic Distribution suite
+        run: npm run distribution:test
+      - name: Generate distribution intelligence snapshot
+        run: npm run distribution:run
+      - name: Validate snapshot
+        run: |
+          set -euo pipefail
+          test -f data/trendforge-distribution.json
+          grep -q '"mode": "advisory-only"' data/trendforge-distribution.json
+          grep -q '"changesPublicationGates": false' data/trendforge-distribution.json
+          grep -q '"autoPost": false' data/trendforge-distribution.json
+          grep -q '"duplicateProtection": true' data/trendforge-distribution.json
+          echo 'Distribution snapshot validation: PASS'
+      - name: Build production export
+        run: npm run build
+      - name: Phase 21 isolation check
+        run: |
+          set -euo pipefail
+          grep -q "changesPublicationGates: false" scripts/trendforge-distribution.mjs
+          grep -q "changesThresholds: false" scripts/trendforge-distribution.mjs
+          grep -q "changesResearch: false" scripts/trendforge-distribution.mjs
+          grep -q "changesEvidence: false" scripts/trendforge-distribution.mjs
+          grep -q "changesWriter: false" scripts/trendforge-distribution.mjs
+          grep -q "changesEditorial: false" scripts/trendforge-distribution.mjs
+          grep -q "changesClaimVerification: false" scripts/trendforge-distribution.mjs
+          grep -q "changesSafety: false" scripts/trendforge-distribution.mjs
+          echo 'Phase 21 Distribution Intelligence isolation: PASS'
+      - name: Phase 21 complete
+        run: echo 'TrendForge Distribution Intelligence checks passed.'
