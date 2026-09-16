@@ -14,6 +14,7 @@ on:
       - 'scripts/verify-article-claims.mjs'
       - 'scripts/verify-article-claims-v2.mjs'
       - 'scripts/verify-article-claims-smart.mjs'
+      - 'scripts/test-claim-verifier-deterministic.mjs'
       - 'scripts/repair-article-grounding.mjs'
       - 'scripts/editorial-intelligence.mjs'
       - 'scripts/article-lifecycle.mjs'
@@ -72,6 +73,8 @@ jobs:
         run: node scripts/evidence-integrity-preflight.mjs
       - name: AI provider state check
         run: node scripts/ai-provider-router.mjs
+      - name: Deterministic Claim Verifier fixtures
+        run: node scripts/test-claim-verifier-deterministic.mjs
       - name: Generate article
         run: node scripts/generate-article-adaptive.mjs
       - name: Archive generated article attempts
