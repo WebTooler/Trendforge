@@ -1,0 +1,74 @@
+name: TrendForge Self-Learning
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["TrendForge Memory"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendforge-self-learning
+  cancel-in-progress: true
+
+jobs:
+  learning:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Run self-learning shadow engine
+        run: node scripts/trendforge-self-learning.mjs
+
+      - name: Validate learning output
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const path = 'data/trendforge-learning.json';
+          const x = JSON.parse(fs.readFileSync(path, 'utf8'));
+          if (x.mode !== 'shadow') throw new Error('Self-learning mode must remain shadow');
+          if (x.policy?.advisoryOnly !== true) throw new Error('Learning must remain advisory-only');
+          if (x.policy?.influencesDecisions !== false) throw new Error('Learning must not influence decisions');
+          if (x.policy?.changesPublicationGates !== false) throw new Error('Learning must not change publication gates');
+          if (!x.sample || typeof x.sample.runs !== 'number') throw new Error('Learning sample metadata missing');
+          if (!x.providers || typeof x.providers !== 'object') throw new Error('Provider learning output missing');
+          if (!Array.isArray(x.signals)) throw new Error('Learning signals missing');
+          console.log('TrendForge Self-Learning: PASS');
+          console.log(JSON.stringify({ mode: x.mode, runs: x.sample.runs, topics: x.sample.topics, signals: x.signals.length }));
+          NODE
+
+      - name: Commit learning output
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trendforge-bot'
+          git config user.email 'trendforge-bot@users.noreply.github.com'
+          git add data/trendforge-learning.json
+          if git diff --cached --quiet; then
+            echo 'No learning changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh TrendForge self-learning'
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt/3"
+            if git push origin HEAD:main; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase --autostash origin main
+              sleep $((attempt * 5))
+            fi
+          done
+          exit 1
