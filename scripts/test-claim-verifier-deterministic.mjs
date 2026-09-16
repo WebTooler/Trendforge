@@ -5,8 +5,7 @@ const articleDir='content/articles';
 const briefPath='data/article-brief.json';
 const claimPath='data/claim-verification.json';
 const backupDir='.trendforge-claim-fixture-backup';
-
-const source='Reuters reports that Acme launched its Nova AI model in London on Tuesday, with the company saying the model reduced inference costs by 20 percent. The company said the launch will initially target enterprise customers. Mozilla says paying for closed frontier models buys about a four-month head start at about five times the per-task cost, but only when tasks take between eight and 12 hours. However, open models are still lagging behind closed frontier models in revenue. The shift has accelerated the use of open models since Mozilla’s inaugural State of Open Source AI report was published on July 14. The report says organizations still pay for closed frontier models because they work out of the box and come bundled with compliance packaging, support, and accountability, while many organizations lack staff to run open-weight models well.';
+const source='Reuters reports that Acme launched its Nova AI model in London on Tuesday, with the company saying the model reduced inference costs by 20 percent. The company said the launch will initially target enterprise customers. Mozilla says paying for closed frontier models buys about a four-month head start at about five times the per-task cost, but only when tasks take between eight and 12 hours. However, open models are still lagging behind closed frontier models in revenue. The shift has accelerated the use of open models since Mozilla’s inaugural State of Open Source AI report was published on July 14. The report says organizations still pay for closed frontier models because they work out of the box and come bundled with compliance packaging, support, and accountability, while many organizations lack staff to run open-weight models well. The report highlights how Moonshot AI’s Kimi K3 achieves a composite AI performance score just three points behind Anthropic’s Fable 5 while costing 30 percent of the latter.';
 const baseFrontmatter=`---\ntitle: "Acme Nova AI launch"\ndescription: "A test article for deterministic claim verification."\n---`;
 
 const cases=[
@@ -23,6 +22,7 @@ const cases=[
   {name:'revenue paraphrase',sentence:'Open models continue to trail closed frontier models when it comes to revenue.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
   {name:'temporal paraphrase',sentence:'Use of open models accelerated after Mozilla published its inaugural State of Open Source AI report on July 14.',expect:x=>x.status==='verified'&&x.contradicted===false},
   {name:'editorial tipping point',sentence:'The Mozilla findings suggest that the AI landscape is at a tipping point.',expectArticle:true,articleOnly:true},
+  {name:'model-number-and-percent normalization',sentence:'Moonshot AI’s Kimi K3 scores three points behind Anthropic’s Fable 5 while costing 30 % of the latter.',expect:x=>x.status==='verified'&&x.numericMismatch===false&&x.contradicted===false}
 ];
 
 function runCase(test){
