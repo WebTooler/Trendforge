@@ -24,7 +24,7 @@ const looksLikeFeed = (u='') => { try { const x=new URL(u); return /^feeds?\.|^r
 
 async function fetchPage(url) {
   try {
-    const r=await fetch(url,{redirect:'follow',signal:AbortSignal.timeout(TIMEOUT),headers:{'user-agent':'Mozilla/5.0 (compatible; TrendForge-evidence-integrity/2.0)','accept':'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8','accept-language':'en-US,en;q=0.9'}});
+    const r=await fetch(url,{redirect:'follow',signal:AbortSignal.timeout(TIMEOUT),headers:{'user-agent':'Mozilla/5.0 (compatible; TrendForge-evidence-integrity/2.1)','accept':'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8','accept-language':'en-US,en;q=0.9'}});
     if(!r.ok||!validUrl(r.url||url))return null;
     const html=await r.text();
     const title=clean((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)||[,''])[1]);
@@ -52,7 +52,7 @@ async function newsRecovery(title) {
     const encoded=encodeURIComponent(q);
     for(const [url,kind] of [[`https://news.google.com/rss/search?q=${encoded}&hl=en-US&gl=US&ceid=US:en`,'google-news-recovery'],[`https://www.bing.com/news/search?q=${encoded}&format=rss`,'bing-news-recovery']]) {
       try {
-        const r=await fetch(url,{signal:AbortSignal.timeout(TIMEOUT),headers:{'user-agent':'TrendForge-evidence-integrity/2.0','accept':'application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.8'}});
+        const r=await fetch(url,{signal:AbortSignal.timeout(TIMEOUT),headers:{'user-agent':'TrendForge-evidence-integrity/2.1','accept':'application/rss+xml,application/atom+xml,application/xml,text/xml;q=0.9,*/*;q=0.8'}});
         if(!r.ok)continue;
         const xml=await r.text();
         const blocks=[...[...xml.matchAll(/<item\b[\s\S]*?<\/item>/gi)].map(m=>m[0]),...[...xml.matchAll(/<entry\b[\s\S]*?<\/entry>/gi)].map(m=>m[0])];
@@ -96,9 +96,9 @@ if(!fs.existsSync(scoredPath)||!fs.existsSync(verificationPath)){console.log('Ev
 const scored=JSON.parse(fs.readFileSync(scoredPath,'utf8'));
 const verification=JSON.parse(fs.readFileSync(verificationPath,'utf8'));
 const records=new Map((verification.records||[]).map(r=>[r.link,r]));
-const report=[]; let blocked=0;
+const report=[]; let blocked=0; let sourcePagePass=0; let strongEvidence=0;
 for(const trend of scored.trends||[]) {
-  if(!trend.eligible){report.push({link:trend.link,title:trend.title,status:'not-eligible',sources:[]});continue;}
+  if(!trend.eligible){report.push({link:trend.link,title:trend.title,status:'not-eligible',evidenceLevel:'none',sources:[]});continue;}
   const rec=records.get(trend.link);
   const raw=(rec?.sources||[]).filter(s=>s.ok&&s.resolvedFrom!=='publisher-url-fallback'&&!looksLikeHomepage(s.finalUrl||s.url||'')&&!looksLikeFeed(s.finalUrl||s.url||''));
   const checked=[]; const seenUrls=new Set();
@@ -106,12 +106,15 @@ for(const trend of scored.trends||[]) {
   let valid=checked.filter(x=>x.ok); let recovery=[];
   if(valid.length<2){recovery=await newsRecovery(trend.title);for(const c of recovery){const candidateFamily=family(c.url);if(!candidateFamily||valid.some(v=>family(v.finalUrl||'')===candidateFamily))continue;const v=await validateSource(c,trend.title);if(v.ok){valid.push(v);checked.push(v);}if(valid.length>=6)break;}}
   const byFamily=new Map(); for(const v of valid){const f=family(v.finalUrl||'');if(f&&!byFamily.has(f))byFamily.set(f,v);}
-  const independent=[...byFamily.values()]; const domains=independent.map(x=>host(x.finalUrl||'')).filter(Boolean); const status=independent.length>=2?'pass':'block';
-  if(status==='block'){blocked++;} else { /* keep scored eligibility untouched; this artifact is the authoritative evidence gate */ }
-  report.push({link:trend.link,title:trend.title,status,validSourceCount:valid.length,independentPublisherCount:independent.length,independentPublisherFamilies:[...byFamily.keys()],independentDomains:domains,sources:checked,recoveryAttempts:recovery.length});
+  const independent=[...byFamily.values()]; const domains=independent.map(x=>host(x.finalUrl||'')).filter(Boolean);
+  const evidenceLevel=independent.length>=2?'strong':independent.length===1?'single-source':'none';
+  const status=independent.length>=1?'pass':'block';
+  if(status==='block')blocked++; else sourcePagePass++;
+  if(evidenceLevel==='strong')strongEvidence++;
+  report.push({link:trend.link,title:trend.title,status,evidenceLevel,validSourceCount:valid.length,independentPublisherCount:independent.length,independentPublisherFamilies:[...byFamily.keys()],independentDomains:domains,sources:checked,recoveryAttempts:recovery.length,sourceVerificationStatus:rec?.status||'unknown'});
 }
 fs.mkdirSync('data',{recursive:true});
-fs.writeFileSync(outputPath,JSON.stringify({version:6,generatedAt:new Date().toISOString(),minimumIndependentSources:2,minimumIndependentPublisherFamilies:2,minimumIndependentDomains:2,recoveryProviders:['google-news','bing-news'],report},null,2)+'\n');
-console.log(`Evidence Integrity Preflight v6: ${report.filter(x=>x.status==='pass').length} eligible candidate(s) passed, ${blocked} blocked before AI.`);
-console.log('Policy: exact publisher article pages only; feed/index/homepage URLs rejected; same publisher subdomains are not independent; Google/Bing News are recovery/index only; minimum 2 independent publisher families.');
-console.log('Eligibility handoff: research eligibility is preserved; evidence integrity is carried only by data/evidence-integrity.json.');
+fs.writeFileSync(outputPath,JSON.stringify({version:7,generatedAt:new Date().toISOString(),minimumStrongSources:2,minimumStrongPublisherFamilies:2,minimumStrongDomains:2,recoveryProviders:['google-news','bing-news'],policy:'Source-page integrity is required for generation. Two independent publisher families is strong evidence, but a single verified publisher article may enter the generation path and remains subject to writer grounding, claim verification, editorial quality, safety and SEO gates.',report},null,2)+'\n');
+console.log(`Evidence Integrity Preflight v7: ${sourcePagePass} candidate(s) have at least one validated publisher article; ${strongEvidence} have strong multi-source evidence; ${blocked} blocked before AI.`);
+console.log('Policy: exact publisher article pages only; feed/index/homepage URLs rejected; same publisher subdomains are not independent; Google/Bing News are recovery/index only.');
+console.log('Generation policy: single-source candidates may proceed when the publisher page is validated; multi-source evidence remains the preferred strong-evidence path.');
