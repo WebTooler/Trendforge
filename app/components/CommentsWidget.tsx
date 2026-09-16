@@ -35,7 +35,12 @@ export default function CommentsWidget({ articleSlug }: CommentsWidgetProps) {
       <div className="eyebrow">Community</div>
       <h2 className={styles.title} id={`comments-heading-${articleSlug}`}>Comments</h2>
       <p className={styles.copy}>Have a question or a useful perspective? Join the conversation.</p>
-      <div ref={containerRef} className={styles.comments} aria-label="Article comments" />
+      <div
+        ref={containerRef}
+        className={styles.comments}
+        aria-label="Article comments"
+        data-comments-provider="utterances"
+      />
     </section>
   );
 }
