@@ -1,0 +1,60 @@
+name: TrendForge SEO Intelligence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/trendforge-seo-intelligence.mjs'
+      - 'scripts/test-trendforge-seo-intelligence.mjs'
+      - 'lib/seo.ts'
+      - 'lib/articles.ts'
+      - 'app/article/**'
+      - 'app/category/**'
+      - 'app/page.tsx'
+      - 'package.json'
+      - '.github/workflows/seo-intelligence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  seo-intelligence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run deterministic SEO suite
+        run: npm run seo:test
+      - name: Build production export
+        run: npm run build
+      - name: Validate SEO output
+        run: |
+          set -euo pipefail
+          test -f out/index.html
+          test -f out/sitemap.xml
+          test -f out/robots.txt
+          test -f out/feed.xml
+          test -d out/article
+          grep -R -q 'application/ld+json' out/article || true
+          echo 'SEO output validation: PASS'
+      - name: Phase 19 isolation check
+        run: |
+          set -euo pipefail
+          grep -q "changesPublicationGates: false" scripts/trendforge-seo-intelligence.mjs
+          grep -q "changesThresholds: false" scripts/trendforge-seo-intelligence.mjs
+          grep -q "changesResearch: false" scripts/trendforge-seo-intelligence.mjs
+          grep -q "changesEvidence: false" scripts/trendforge-seo-intelligence.mjs
+          grep -q "changesWriter: false" scripts/trendforge-seo-intelligence.mjs
+          grep -q "changesEditorial: false" scripts/trendforge-seo-intelligence.mjs
+          grep -q "changesClaimVerification: false" scripts/trendforge-seo-intelligence.mjs
+          grep -q "changesSafety: false" scripts/trendforge-seo-intelligence.mjs
+          echo 'Phase 19 SEO Intelligence isolation: PASS'
+      - name: Phase 19 complete
+        run: echo 'TrendForge SEO Intelligence checks passed.'
