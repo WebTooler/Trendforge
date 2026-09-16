@@ -64,6 +64,12 @@ jobs:
       - name: Generate search index
         run: npx tsx scripts/generate-search-index.ts
 
+      - name: Prepare audit telemetry for Control Center
+        run: npm run audit:run
+
+      - name: Test detailed Control Center contract
+        run: npm run control-center:test
+
       - name: Prepare ads.txt
         shell: bash
         run: |
@@ -89,6 +95,7 @@ jobs:
           test -f out/robots.txt
           test -f out/sitemap.xml
           test -f out/search-index.json
+          test -f out/control-center/index.html
           if [ -n "${ADSENSE_PUBLISHER_ID:-}" ]; then test -f out/ads.txt; fi
           if find out -type f \( -name '.env' -o -name '.env.*' -o -name '*secret*' \) -print -quit | grep -q .; then
             echo "Potential secret file detected in production artifact."
