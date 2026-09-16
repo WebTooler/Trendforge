@@ -1,0 +1,50 @@
+name: TrendForge Memory
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendforge-memory
+  cancel-in-progress: true
+
+jobs:
+  memory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Capture V2 memory
+        run: node scripts/trendforge-memory.mjs
+      - name: Validate memory
+        run: node -e "JSON.parse(require('fs').readFileSync('data/trendforge-memory.json','utf8')); console.log('TrendForge Memory JSON: PASS')"
+      - name: Commit memory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trendforge-bot'
+          git config user.email 'trendforge-bot@users.noreply.github.com'
+          git add data/trendforge-memory.json
+          if git diff --cached --quiet; then
+            echo 'No memory changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh TrendForge memory'
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt/3"
+            if git push origin HEAD:main; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase --autostash origin main
+              sleep $((attempt * 5))
+            fi
+          done
+          exit 1
