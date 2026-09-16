@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { trackEvent } from '@/lib/analytics';
+import styles from './FeedbackWidget.module.css';
 
 type FeedbackWidgetProps = { articleSlug: string };
 type Rating = 'positive' | 'negative';
@@ -36,16 +37,16 @@ export default function FeedbackWidget({ articleSlug }: FeedbackWidgetProps) {
   }
 
   return (
-    <section className="feedback-widget" aria-labelledby="feedback-heading">
+    <section className={styles.widget} aria-labelledby={`feedback-heading-${articleSlug}`}>
       {!submitted ? <>
         <div className="eyebrow">Reader feedback</div>
-        <h2 id="feedback-heading">Was this article helpful?</h2>
-        <p>Your response is collected as anonymous feedback for observation only. It does not change this article or TrendForge's publishing rules.</p>
-        <div className="feedback-rating" role="group" aria-label="Article helpfulness">
-          <button type="button" className={rating === 'positive' ? 'selected' : ''} aria-pressed={rating === 'positive'} onClick={() => setRating('positive')}>👍 Yes</button>
-          <button type="button" className={rating === 'negative' ? 'selected' : ''} aria-pressed={rating === 'negative'} onClick={() => setRating('negative')}>👎 No</button>
+        <h2 className={styles.title} id={`feedback-heading-${articleSlug}`}>Was this article helpful?</h2>
+        <p className={styles.copy}>Your response is collected as anonymous feedback for observation only. It does not change this article or TrendForge's publishing rules.</p>
+        <div className={styles.rating} role="group" aria-label="Article helpfulness">
+          <button type="button" className={rating === 'positive' ? styles.selected : ''} aria-pressed={rating === 'positive'} onClick={() => setRating('positive')}>👍 Yes</button>
+          <button type="button" className={rating === 'negative' ? styles.selected : ''} aria-pressed={rating === 'negative'} onClick={() => setRating('negative')}>👎 No</button>
         </div>
-        {rating === 'negative' && <div className="feedback-details">
+        {rating === 'negative' && <div className={styles.details}>
           <label htmlFor={`feedback-reason-${articleSlug}`}>What could be better?</label>
           <select id={`feedback-reason-${articleSlug}`} value={reason} onChange={(event) => setReason(event.target.value)}>
             <option value="">Choose an option</option>
@@ -54,9 +55,9 @@ export default function FeedbackWidget({ articleSlug }: FeedbackWidgetProps) {
           <label htmlFor={`feedback-comment-${articleSlug}`}>Anything else? <span>(optional)</span></label>
           <textarea id={`feedback-comment-${articleSlug}`} value={comment} onChange={(event) => setComment(event.target.value.slice(0, 1000))} placeholder="Tell us more..." rows={3} />
         </div>}
-        <button className="feedback-submit" type="button" disabled={!rating} onClick={submitFeedback}>Submit feedback</button>
-        <small>Anonymous · No account required · Observation only</small>
-      </> : <div className="feedback-thanks" role="status">
+        <button className={styles.submit} type="button" disabled={!rating} onClick={submitFeedback}>Submit feedback</button>
+        <small className={styles.note}>Anonymous · No account required · Observation only</small>
+      </> : <div className={styles.thanks} role="status">
         <strong>Thanks for the feedback. ✓</strong>
         <span>Your response has been recorded for observation.</span>
       </div>}
