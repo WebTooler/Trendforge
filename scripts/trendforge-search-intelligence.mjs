@@ -41,8 +41,12 @@ export function rankSearchArticle(article, query) {
     if (description.includes(term)) score += 6;
     if (content.includes(term)) score += 2;
   }
-  const daysOld = Math.max(0, (Date.now() - new Date(article.date).getTime()) / 86400000);
-  if (Number.isFinite(daysOld)) score += Math.max(0, 10 - Math.min(10, daysOld / 30));
+  // Freshness is a tie-breaker among relevant results, never a reason to
+  // surface an article that has no textual relevance to the query.
+  if (score > 0) {
+    const daysOld = Math.max(0, (Date.now() - new Date(article.date).getTime()) / 86400000);
+    if (Number.isFinite(daysOld)) score += Math.max(0, 10 - Math.min(10, daysOld / 30));
+  }
   return score;
 }
 
