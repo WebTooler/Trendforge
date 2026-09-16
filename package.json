@@ -19,7 +19,8 @@
     "performance:run": "node scripts/trendforge-performance.mjs",
     "performance:test": "node scripts/test-performance.mjs",
     "lifecycle:run": "node scripts/article-lifecycle.mjs",
-    "lifecycle:test": "node scripts/test-article-lifecycle.mjs"
+    "lifecycle:test": "node scripts/test-article-lifecycle.mjs",
+    "comments:test": "node scripts/test-trendforge-comments.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
