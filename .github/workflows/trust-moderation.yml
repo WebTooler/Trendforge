@@ -1,0 +1,84 @@
+name: TrendForge Trust + Moderation
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/trendforge-trust-moderation.mjs"
+      - "scripts/test-trendforge-trust-moderation.mjs"
+      - "app/components/CommentsWidget.tsx"
+      - "package.json"
+      - "docs/TRUST-MODERATION.md"
+      - ".github/workflows/trust-moderation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trendforge-trust-moderation
+  cancel-in-progress: true
+
+jobs:
+  trust-moderation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run Phase 17 deterministic suite
+        run: npm run trust-moderation:test
+
+      - name: Validate moderation isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const policy = fs.readFileSync('scripts/trendforge-trust-moderation.mjs', 'utf8');
+          const docs = fs.readFileSync('docs/TRUST-MODERATION.md', 'utf8');
+          const protectedFlags = [
+            'influencesResearch: false',
+            'influencesEvidence: false',
+            'influencesDecisions: false',
+            'influencesWriter: false',
+            'influencesEditorial: false',
+            'influencesClaimVerification: false',
+            'influencesQuality: false',
+            'influencesSafety: false',
+            'influencesLifecycle: false',
+            'influencesSearch: false',
+            'influencesSeo: false',
+            'influencesDistribution: false',
+            'influencesMonetization: false',
+            'changesPublicationGates: false',
+            'changesThresholds: false',
+            'autoRewriteArticle: false',
+            'autoDeleteArticle: false'
+          ];
+          for (const flag of protectedFlags) {
+            if (!policy.includes(flag)) throw new Error(`Missing isolation flag: ${flag}`);
+          }
+          for (const flag of ['autoHide: false', 'autoDelete: false', 'autoLock: false', 'autoBan: false']) {
+            if (!policy.includes(flag)) throw new Error(`Automatic enforcement must remain disabled: ${flag}`);
+          }
+          if (!policy.includes("mode: 'advisory-only'")) throw new Error('Phase 17 must remain advisory-only');
+          if (!policy.includes("enforcement: 'manual-github-moderation'")) throw new Error('Manual enforcement contract missing');
+          if (!docs.includes('Trust + Moderation must never')) throw new Error('Phase 17 isolation documentation missing');
+          console.log('Phase 17 moderation isolation: PASS');
+          NODE
+
+      - name: Phase 17 complete
+        run: echo "TrendForge Trust + Moderation foundation checks passed."
