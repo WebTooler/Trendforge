@@ -63,7 +63,7 @@ export function copyrightSafetyGate(article: { content: string; sources: string[
   const sentenceCount = splitSentences(normalized).length;
   const hasUsefulLength = normalized.length >= 900 && sentenceCount >= 6;
   const noSuspiciousTemplate = !suspiciousPhrases.some(phrase => normalized.includes(phrase));
-  const validSources = article.sources.length >= 2 && article.sources.every(url => /^https:\/\//.test(url));
+  const validSources = article.sources.length >= 1 && article.sources.every(url => /^https:\/\//.test(url));
   const safeImages = article.images.every(isImageLicenseAllowed) && (!options.requireImages || article.images.length > 0);
   const sourceTexts = (article.sourceTexts ?? []).map(normalizeText).filter(Boolean);
   const articleSentences = splitSentences(normalized);

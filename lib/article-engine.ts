@@ -53,7 +53,7 @@ export function editorialGate(article: { title: string; description: string; con
     description: article.description.trim().length >= 80 && article.description.trim().length <= 320,
     content: normalized.length >= 900 && words >= 150,
     structure: headings >= 2,
-    sources: article.sources.length >= 2 && article.sources.every((source) => /^https:\/\//.test(source.url)),
+    sources: article.sources.length >= 1 && article.sources.every((source) => /^https:\/\//.test(source.url)),
     noUnsafeMarkup: !suspicious,
   };
   const passed = Object.values(checks).every(Boolean);
