@@ -1,0 +1,56 @@
+name: TrendForge Monetization Intelligence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/trendforge-monetization.mjs'
+      - 'scripts/test-trendforge-monetization.mjs'
+      - 'scripts/monetization-check.mjs'
+      - 'lib/articles.ts'
+      - 'package.json'
+      - '.github/workflows/monetization-intelligence.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  monetization-intelligence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run deterministic Monetization suite
+        run: npm run monetization:test
+      - name: Generate monetization intelligence snapshot
+        run: npm run monetization:run
+      - name: Validate snapshot
+        run: |
+          set -euo pipefail
+          test -f data/trendforge-monetization.json
+          grep -q '"mode": "advisory-only"' data/trendforge-monetization.json
+          grep -q '"changesPublicationGates": false' data/trendforge-monetization.json
+          grep -q '"autoInjectAds": false' data/trendforge-monetization.json
+          echo 'Monetization snapshot validation: PASS'
+      - name: Build production export
+        run: npm run build
+      - name: Phase 20 isolation check
+        run: |
+          set -euo pipefail
+          grep -q "changesPublicationGates: false" scripts/trendforge-monetization.mjs
+          grep -q "changesThresholds: false" scripts/trendforge-monetization.mjs
+          grep -q "changesResearch: false" scripts/trendforge-monetization.mjs
+          grep -q "changesEvidence: false" scripts/trendforge-monetization.mjs
+          grep -q "changesWriter: false" scripts/trendforge-monetization.mjs
+          grep -q "changesEditorial: false" scripts/trendforge-monetization.mjs
+          grep -q "changesClaimVerification: false" scripts/trendforge-monetization.mjs
+          grep -q "changesSafety: false" scripts/trendforge-monetization.mjs
+          echo 'Phase 20 Monetization Intelligence isolation: PASS'
+      - name: Phase 20 complete
+        run: echo 'TrendForge Monetization Intelligence checks passed.'
