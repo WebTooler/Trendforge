@@ -16,6 +16,8 @@ const cases=[
   {name:'unsupported addition',sentence:'Acme also signed a $2 billion government contract that day.',expect:x=>x.status==='unsupported'},
   {name:'numeric mismatch',sentence:'Acme reduced inference costs by 50 percent.',expect:x=>x.status==='unsupported'&&x.numericMismatch===true},
   {name:'contradiction',sentence:'Acme increased inference costs by 20 percent.',expect:x=>x.status==='unsupported'&&x.contradicted===true},
+  {name:'reverse polarity',sentence:'Acme lowered inference costs by 20 percent.',expect:x=>x.status==='verified'&&x.contradicted===false},
+  {name:'rise-fall contradiction',sentence:'Acme raised inference costs by 20 percent.',expect:x=>x.status==='unsupported'&&x.contradicted===true},
   {name:'off topic',sentence:'The weather forecast calls for rain across northern India.',expect:x=>x.status==='unsupported'&&x.offTopic===true},
 ];
 
@@ -36,12 +38,12 @@ function main(){
   const hadArticles=fs.existsSync(articleDir);
   const hadBrief=fs.existsSync(briefPath);
   const hadClaim=fs.existsSync(claimPath);
+  let failed=0;
   try{
     if(hadArticles)fs.renameSync(articleDir,`${backupDir}/articles`);
     fs.mkdirSync(articleDir,{recursive:true});
     if(hadBrief)fs.copyFileSync(briefPath,`${backupDir}/article-brief.json`);
     if(hadClaim)fs.copyFileSync(claimPath,`${backupDir}/claim-verification.json`);
-    let failed=0;
     for(const test of cases){
       const result=runCase(test);
       if(result.ok)console.log(`CLAIM FIXTURE PASS: ${test.name}`);
