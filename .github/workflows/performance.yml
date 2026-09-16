@@ -1,0 +1,57 @@
+name: TrendForge Performance Intelligence
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["TrendForge Self-Learning"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendforge-performance
+  cancel-in-progress: true
+
+jobs:
+  performance:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Run performance intelligence
+        run: node scripts/trendforge-performance.mjs
+      - name: Validate performance safety
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/test-performance.mjs
+      - name: Commit performance output
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'trendforge-bot'
+          git config user.email 'trendforge-bot@users.noreply.github.com'
+          git add data/trendforge-performance.json
+          if git diff --cached --quiet; then
+            echo 'No performance changes to commit.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh TrendForge performance intelligence'
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt/3"
+            if git push origin HEAD:main; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase --autostash origin main
+              sleep $((attempt * 5))
+            fi
+          done
+          exit 1
