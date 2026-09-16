@@ -1,166 +1,58 @@
 import fs from 'node:fs';
 
-const briefPath = 'data/article-brief.json';
-const articleDir = 'content/articles';
-const out = 'data/claim-verification.json';
+const briefPath='data/article-brief.json';
+const articleDir='content/articles';
+const out='data/claim-verification.json';
+const STOP=new Set('about after again also been being could from have into more most over said some than that their there these they this what when which with will would your technology tech digital latest news update updates guide how today artificial intelligence company companies industry development developments according reported reports working works story stories article articles readers users because while where whose through before between under using used uses make makes made less then still already now just even only often usually including another around really very much many somewhat generally'.split(' '));
+const COMMON_CAPITALIZED=new Set('the in a an and but for from however this that these those it its on at by as with since despite additionally mozilla state open source ai'.split(' '));
+const ALIAS=new Map(Object.entries({bitcoin:'btc',bitcoins:'btc',ethereum:'eth',ether:'eth',cryptocurrency:'crypto',cryptocurrencies:'crypto',declined:'fall',declines:'fall',dropped:'fall',drops:'fall',fell:'fall',falling:'fall',falls:'fall',gained:'rise',gains:'rise',increased:'rise',increases:'rise',rose:'rise',rising:'rise',increase:'rise',increasing:'rise',accelerated:'accelerate',accelerating:'accelerate',accelerates:'accelerate',worry:'fear',worried:'fear',worries:'fear',concern:'fear',concerns:'fear',concerned:'fear',losing:'lose',lost:'lose',loss:'lose',workers:'worker',employee:'worker',employees:'worker',workforce:'worker',employment:'job',employed:'job',jobs:'job',survey:'survey',surveys:'survey',poll:'survey',polls:'survey',researches:'research',study:'research',studies:'research',shares:'share',portion:'share',percentage:'percent',percentages:'percent',points:'point',funding:'fund',investment:'invest',invested:'invest',investor:'invest',investors:'invest',regulator:'regulatory',regulators:'regulatory',watchdog:'regulatory',authority:'regulatory',authorities:'regulatory',probe:'investigation',probes:'investigation',inquiry:'investigation',inquiries:'investigation',investigating:'investigation',announced:'announce',announces:'announce',announcing:'announce',launched:'launch',launches:'launch',released:'release',releases:'release',unveiled:'reveal',partnership:'partner',partnerships:'partner',acquisition:'acquire',acquired:'acquire',acquiring:'acquire',headquartered:'base',headquarters:'base',secured:'secure',secures:'secure',backed:'support',backing:'support',model:'models',models:'models',openweight:'open-weight',artificial:'ai',intelligence:'ai'}));
+const tok=w=>{w=String(w).toLowerCase();if(ALIAS.has(w))return ALIAS.get(w);if(w.length<=4)return w;return w.replace(/(ingly|edly|ing|ed|es|s)$/,'')||w;};
+const tokens=t=>new Set(String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).map(tok).filter(x=>x.length>=3&&!STOP.has(x)));
 
-const STOP = new Set('about after again also been being could from have into more most over said some than that their there these they this what when which with will would your technology tech digital latest news update updates guide how today artificial intelligence company companies industry development developments according reported reports working works story stories article articles readers users because while where whose through before between under using used uses make makes made less then still already now just even only often usually including another around really very much many somewhat generally'.split(' '));
-const COMMON_CAPITALIZED = new Set('The In A An And But For From However This That These Those It Its On At By As With Since Despite Additionally Despite Mozilla State Open Source AI'.toLowerCase().split(' '));
-const ALIAS = new Map(Object.entries({
-  bitcoin:'btc',bitcoins:'btc',ethereum:'eth',ether:'eth',cryptocurrency:'crypto',cryptocurrencies:'crypto',
-  declined:'fall',declines:'fall',dropped:'fall',drops:'fall',fell:'fall',falling:'fall',falls:'fall',
-  gained:'rise',gains:'rise',increased:'rise',increases:'rise',rose:'rise',rising:'rise',increase:'rise',increasing:'rise',
-  accelerated:'accelerate',accelerating:'accelerate',accelerates:'accelerate',
-  worry:'fear',worried:'fear',worries:'fear',concern:'fear',concerns:'fear',concerned:'fear',
-  losing:'lose',lost:'lose',loss:'lose',workers:'worker',employee:'worker',employees:'worker',workforce:'worker',employment:'job',employed:'job',jobs:'job',
-  survey:'survey',surveys:'survey',poll:'survey',polls:'survey',researches:'research',study:'research',studies:'research',
-  shares:'share',portion:'share',percentage:'percent',percentages:'percent',points:'point',funding:'fund',investment:'invest',invested:'invest',investor:'invest',investors:'invest',
-  regulator:'regulatory',regulators:'regulatory',watchdog:'regulatory',authority:'regulatory',authorities:'regulatory',probe:'investigation',probes:'investigation',inquiry:'investigation',inquiries:'investigation',investigating:'investigation',
-  announced:'announce',announces:'announce',announcing:'announce',launched:'launch',launches:'launch',released:'release',releases:'release',unveiled:'reveal',
-  partnership:'partner',partnerships:'partner',acquisition:'acquire',acquired:'acquire',acquiring:'acquire',headquartered:'base',headquarters:'base',secured:'secure',secures:'secure',backed:'support',backing:'support',
-  model:'models',models:'models',openweight:'open-weight',artificial:'ai',intelligence:'ai'
-}));
-
-const tok = w => { w = String(w).toLowerCase(); if (ALIAS.has(w)) return ALIAS.get(w); if (w.length <= 4) return w; return w.replace(/(ingly|edly|ing|ed|es|s)$/,'') || w; };
-const tokens = t => new Set(String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).map(tok).filter(x => x.length >= 3 && !STOP.has(x)));
-const nums = t => new Set((String(t).match(/\b\d+(?:[.,]\d+)?\s*(?:%|percent|percentage|bn|billion|b|m|million|mn|thousand|k)?\b/gi) || []).map(x => { const m=x.toLowerCase().replace(/,/g,'').trim().match(/^(\d+(?:\.\d+)?)\s*(%|percent|percentage|bn|billion|b|m|million|mn|thousand|k)?$/); if(!m) return x; const u=m[2]||''; const n=u==='%'||u==='percent'||u==='percentage'?'pct':u==='bn'||u==='billion'||u==='b'?'b':u==='m'||u==='million'||u==='mn'?'m':u==='thousand'||u==='k'?'k':''; return `${Number(m[1])}${n}`; }));
-
-function namedEntities(t) {
-  const out = new Set();
-  for (const m of String(t).matchAll(/\b[A-Z][A-Za-z0-9&.-]*(?:\s+[A-Z][A-Za-z0-9&.-]*){0,3}\b/g)) {
-    const raw = m[0].trim();
-    const words = raw.split(/\s+/);
-    if (words.length === 1 && COMMON_CAPITALIZED.has(words[0].toLowerCase())) continue;
-    if (raw.length >= 3) out.add(raw.toLowerCase());
+// Numeric evidence is strict, but identifiers such as Fable 5, K3 and GPT-5 are
+// model/product names rather than standalone numeric facts. Percent/word-unit variants
+// are normalized so 30%, 30 %, and 30 percent compare identically.
+function nums(t){
+  let x=String(t);
+  x=x.replace(/\b[A-Za-z][A-Za-z0-9]*(?:[-_][A-Za-z0-9]+|\s+\d+)\b/g,m=>/\d/.test(m)?' ':m);
+  x=x.replace(/\b[A-Za-z]+-\d+\b/g,' ');
+  const out=new Set();
+  const re=/\b\d+(?:[.,]\d+)?\s*(?:%|percent|percentage|bn|billion|b|m|million|mn|thousand|k|x)?(?=$|[^A-Za-z0-9])/gi;
+  for(const raw of x.match(re)||[]){
+    const m=raw.toLowerCase().replace(/,/g,'').trim().match(/^(\d+(?:\.\d+)?)\s*(%|percent|percentage|bn|billion|b|m|million|mn|thousand|k|x)?$/);
+    if(!m)continue;
+    const u=m[2]||'';
+    const n=u==='%'||u==='percent'||u==='percentage'?'pct':u==='bn'||u==='billion'||u==='b'?'b':u==='m'||u==='million'||u==='mn'?'m':u==='thousand'||u==='k'?'k':u==='x'?'x':'';
+    out.add(`${Number(m[1])}${n}`);
   }
   return out;
 }
-const entityTokens = t => new Set([...namedEntities(t)].flatMap(x => [...tokens(x)]));
-const clean = t => String(t).replace(/\s+/g,' ').trim();
-
-function claimType(s) {
-  const x=clean(s);
-  if (/^(observers?|readers?|users?|developers?|businesses?|regulators?|policymakers?|stakeholders?)\s+should\b/i.test(x) || /\b(should monitor|what to watch|keep an eye on|watch next)\b/i.test(x)) return 'editorial-recommendation';
-  if (/\b(remains? uncertain|remains? an open question|is an open question|could clarify|may clarify|would clarify|will depend on|could form the basis|may form the basis)\b/i.test(x)) return 'editorial-analysis';
-  if (/\b(reinforce|reinforces|highlights|suggests|illustrates|signals|raises the question|the takeaway|overall|at a tipping point|tipping point)\b/i.test(x) && !/\b(said|reported|announced|found|according to|told|argued|acknowledged)\b/i.test(x)) return 'editorial-analysis';
-  return 'factual';
-}
-
-// Split markdown bullets before sentence splitting. This prevents several independent
-// watch/forecast claims from being merged into one giant factual claim.
-function sentences(t) {
-  const normalized = String(t)
-    .replace(/^\s*#{1,6}\s+[^\n]+$/gm,' ')
-    .replace(/^\s*[-*+]\s+/gm,'\n')
-    .replace(/\n+/g,' ')
-    .replace(/\s+/g,' ');
-  return normalized.split(/(?<=[.!?])\s+(?=[A-Z0-9"“$])/).map(x=>x.trim()).filter(x=>x.length>=35 && x.length<=700);
-}
-
-const overlap=(a,b)=>{const A=tokens(a),B=tokens(b),shared=[...A].filter(x=>B.has(x));return {shared,coverage:shared.length/Math.max(1,A.size)};};
+const numericCompatible=(a,b)=>{const A=nums(a),B=nums(b);return !A.size||[...A].every(n=>B.has(n));};
+function namedEntities(t){const out=new Set();for(const m of String(t).matchAll(/\b[A-Z][A-Za-z0-9&.-]*(?:\s+[A-Z][A-Za-z0-9&.-]*){0,3}\b/g)){const raw=m[0].trim();const words=raw.split(/\s+/);if(words.length===1&&COMMON_CAPITALIZED.has(words[0].toLowerCase()))continue;if(raw.length>=3)out.add(raw.toLowerCase());}return out;}
+const entityTokens=t=>new Set([...namedEntities(t)].flatMap(x=>[...tokens(x)]));
+const clean=t=>String(t).replace(/\s+/g,' ').trim();
+function claimType(s){const x=clean(s);if(/^(observers?|readers?|users?|developers?|businesses?|regulators?|policymakers?|stakeholders?)\s+should\b/i.test(x)||/\b(should monitor|what to watch|keep an eye on|watch next)\b/i.test(x))return'editorial-recommendation';if(/\b(remains? uncertain|remains? an open question|is an open question|could clarify|may clarify|would clarify|will depend on|could form the basis|may form the basis)\b/i.test(x))return'editorial-analysis';if(/\b(reinforce|reinforces|highlights|suggests|illustrates|signals|raises the question|the takeaway|overall|at a tipping point|tipping point)\b/i.test(x)&&!/\b(said|reported|announced|found|according to|told|argued|acknowledged)\b/i.test(x))return'editorial-analysis';return'factual';}
+function sentences(t){const normalized=String(t).replace(/^\s*#{1,6}\s+[^\n]+$/gm,' ').replace(/^\s*[-*+]\s+/gm,'\n').replace(/\n+/g,' ').replace(/\s+/g,' ');return normalized.split(/(?<=[.!?])\s+(?=[A-Z0-9"“$])/).map(x=>x.trim()).filter(x=>x.length>=35&&x.length<=700);}
+const overlap=(a,b)=>{const A=tokens(a),B=tokens(b),shared=[...A].filter(x=>B.has(x));return{shared,coverage:shared.length/Math.max(1,A.size)};};
 const phraseScore=(a,b)=>{const aa=clean(a).toLowerCase().replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(Boolean),bb=clean(b).toLowerCase().replace(/[^a-z0-9 ]+/g,' ').split(/\s+/).filter(Boolean);const grams=new Set();for(let i=0;i<aa.length-1;i++)grams.add(`${aa[i]} ${aa[i+1]}`);let hit=0;for(let i=0;i<bb.length-1;i++)if(grams.has(`${bb[i]} ${bb[i+1]}`))hit++;return Math.min(1,hit/Math.max(1,Math.min(6,aa.length-1)));};
-const numericCompatible=(a,b)=>{const A=nums(a),B=nums(b);return !A.size || [...A].every(n=>B.has(n));};
-
-const polarityGroups=[
-  ['increased','decreased','increase','decrease','increasing','decreasing','rose','fell','rising','falling','gained','lost','gain','loss','grew','declined','reduced','lowered','raised','lower','raise','cut','cuts'],
-  ['approved','rejected','approve','reject','allowed','banned','allow','ban'],
-  ['launched','cancelled','launch','cancel','confirmed','denied','confirm','deny'],
-  ['supports','opposes','support','oppose']
-];
+const polarityGroups=[['increased','decreased','increase','decrease','increasing','decreasing','rose','fell','rising','falling','gained','lost','gain','loss','grew','declined','reduced','lowered','raised','lower','raise','cut','cuts'],['approved','rejected','approve','reject','allowed','banned','allow','ban'],['launched','cancelled','launch','cancel','confirmed','denied','confirm','deny'],['supports','opposes','support','oppose']];
 const polarity=(text,group)=>{const x=clean(text).toLowerCase();return group.filter(w=>new RegExp(`\\b${w}\\b`,'i').test(x));};
-
-function contradiction(claim,evidence) {
-  const c=clean(claim),e=clean(evidence);
-  const rising=new Set(['increased','increase','increasing','rose','rising','gained','gain','grew','raised','raise']);
-  const falling=new Set(['decreased','decrease','decreasing','fell','falling','lost','loss','declined','reduced','lowered','lower','cut','cuts']);
-  const positive=new Set(['approved','approve','allowed','allow','launched','launch','confirmed','confirm','supports','support']);
-  const negative=new Set(['rejected','reject','banned','ban','cancelled','cancel','denied','deny','opposes','oppose']);
-  const hasAlignedContext=(a,b)=>{const A=tokens(a),B=tokens(b);for(const w of [...rising,...falling,...positive,...negative]){A.delete(tok(w));B.delete(tok(w));}return [...A].some(x=>B.has(x));};
-  for(const group of polarityGroups){const cp=polarity(c,group),ep=polarity(e,group);if(!cp.length||!ep.length||!hasAlignedContext(c,e))continue;const cPos=cp.some(x=>rising.has(x)||positive.has(x)),cNeg=cp.some(x=>falling.has(x)||negative.has(x)),ePos=ep.some(x=>rising.has(x)||positive.has(x)),eNeg=ep.some(x=>falling.has(x)||negative.has(x));if((cPos&&eNeg)||(cNeg&&ePos))return true;}
-  return false;
-}
-
-function semanticScore(claim,evidence) {
-  const o=overlap(claim,evidence),phr=phraseScore(claim,evidence),ce=entityTokens(claim),ee=entityTokens(evidence),entityShared=[...ce].filter(x=>ee.has(x));
-  let s=o.coverage*52 + Math.min(1,o.shared.length/5)*12 + phr*16 + Math.min(12,entityShared.length*4);
-  if(o.shared.length>=5)s+=5;if(o.shared.length>=8)s+=5;
-  const numericMismatch=!numericCompatible(claim,evidence),contradicted=contradiction(claim,evidence);
-  if(numericMismatch)s-=70;if(contradicted)s-=60;
-  return {score:Math.max(0,Math.min(100,Math.round(s))),shared:o.shared,entityShared,numericMismatch,contradicted,evidence};
-}
-
+function contradiction(claim,evidence){const rising=new Set(['increased','increase','increasing','rose','rising','gained','gain','grew','raised','raise']),falling=new Set(['decreased','decrease','decreasing','fell','falling','lost','loss','declined','reduced','lowered','lower','cut','cuts']),positive=new Set(['approved','approve','allowed','allow','launched','launch','confirmed','confirm','supports','support']),negative=new Set(['rejected','reject','banned','ban','cancelled','cancel','denied','deny','opposes','oppose']);const aligned=(a,b)=>{const A=tokens(a),B=tokens(b);for(const w of [...rising,...falling,...positive,...negative]){A.delete(tok(w));B.delete(tok(w));}return[...A].some(x=>B.has(x));};for(const group of polarityGroups){const cp=polarity(claim,group),ep=polarity(evidence,group);if(!cp.length||!ep.length||!aligned(claim,evidence))continue;const cPos=cp.some(x=>rising.has(x)||positive.has(x)),cNeg=cp.some(x=>falling.has(x)||negative.has(x)),ePos=ep.some(x=>rising.has(x)||positive.has(x)),eNeg=ep.some(x=>falling.has(x)||negative.has(x));if((cPos&&eNeg)||(cNeg&&ePos))return true;}return false;}
+function semanticScore(claim,evidence){const o=overlap(claim,evidence),phr=phraseScore(claim,evidence),ce=entityTokens(claim),ee=entityTokens(evidence),entityShared=[...ce].filter(x=>ee.has(x));let s=o.coverage*52+Math.min(1,o.shared.length/5)*12+phr*16+Math.min(12,entityShared.length*4);if(o.shared.length>=5)s+=5;if(o.shared.length>=8)s+=5;const numericMismatch=!numericCompatible(claim,evidence),contradicted=contradiction(claim,evidence);if(numericMismatch)s-=70;if(contradicted)s-=60;return{score:Math.max(0,Math.min(100,Math.round(s))),shared:o.shared,entityShared,numericMismatch,contradicted,evidence};}
 const write=x=>{fs.mkdirSync('data',{recursive:true});fs.writeFileSync(out,JSON.stringify(x,null,2)+'\n');};
 function evidenceFromBrief(brief){return(brief?.grounding?.sources||[]).map((s,i)=>({id:`S${i+1}`,title:s.title||'',url:s.url||'',domain:(()=>{try{return new URL(s.url).hostname.replace(/^www\\./,'')}catch{return''}})(),passages:Array.isArray(s.passages)?s.passages.map(clean).filter(x=>x.length>=25):[],articleBody:clean(s.articleBody||'')})).filter(s=>s.passages.length||s.articleBody.length>=100);}
 function topicAnchor(brief,articleTitle){const title=brief?.brief?.title||'';return overlap(articleTitle||'',title).shared.length>=1?title:brief?.brief?.summary||title;}
-
 async function main(){
   if(!fs.existsSync(articleDir))return;
   const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(`${articleDir}/${b}`).mtimeMs-fs.statSync(`${articleDir}/${a}`).mtimeMs);
   if(!files.length)return;
-  const articlePath=`${articleDir}/${files[0]}`;
-  const raw=fs.readFileSync(articlePath,'utf8');
-  const articleTitle=(raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
-  const brief=fs.existsSync(briefPath)?JSON.parse(fs.readFileSync(briefPath,'utf8')):null;
-  const briefTitle=brief?.brief?.title||'';
+  const articlePath=`${articleDir}/${files[0]}`;const raw=fs.readFileSync(articlePath,'utf8');const articleTitle=(raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();const brief=fs.existsSync(briefPath)?JSON.parse(fs.readFileSync(briefPath,'utf8')):null;const briefTitle=brief?.brief?.title||'';
   if(briefTitle&&articleTitle&&overlap(articleTitle,briefTitle).shared.length<2){console.log(`No matching generated article for current brief; latest article is '${articleTitle}'. Claim verification skipped safely.`);return;}
-  const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'');
-  const typed=sentences(body).map((claim,index)=>({index:index+1,claim,type:claimType(claim)}));
-  const claims=typed.filter(x=>x.type==='factual');
-  const editorial=typed.filter(x=>x.type!=='factual');
-  const sources=evidenceFromBrief(brief);
-  const anchor=topicAnchor(brief,articleTitle);
-  if(!sources.length){write({version:17.0,generatedAt:new Date().toISOString(),articlePath,verificationMode:'evidence-pack-first-v17-contextual-semantic',sourceCount:0,claimCount:claims.length,editorialCount:editorial.length,verified:0,partial:0,unsupported:claims.length,sourceUnavailable:claims.length,averageConfidence:0,pass:false,reason:'No evidence pack available.'});process.exit(1);}
-
-  const results=claims.map(entry=>{
-    const {claim,index}=entry,matches=[];
-    for(const s of sources){
-      const units=[...s.passages.map((x,i)=>({text:x,id:`${s.id}-P${i+1}`}))];
-      if(s.articleBody.length>=100)units.push({text:s.articleBody.slice(0,14000),id:`${s.id}-BODY`});
-      if(!units.length)continue;
-      const ranked=units.map(u=>({...semanticScore(claim,u.text),passageId:u.id})).sort((a,b)=>b.score-a.score);
-      const best=ranked[0];
-      const top=ranked.filter(x=>x.score>=Math.max(32,best.score-20)).slice(0,8);
-      // Composition is useful for synthesis, but never let a weak/conflicting passage
-      // replace an exact best passage. Keep both signals and choose the stronger result.
-      const composed=top.length?top.map(x=>x.evidence).join(' '):best.evidence;
-      const composedScore=semanticScore(claim,composed);
-      const cs=composedScore.score>=best.score?composedScore:best;
-      matches.push({...cs,source:s.title,url:s.url,domain:s.domain,sourceId:s.id,bestPassageId:best.passageId,bestPassage:best.evidence,matchedPassages:top.map(x=>x.passageId),bestUnitScore:best.score,composedScore:composedScore.score});
-    }
-    matches.sort((a,b)=>b.score-a.score);
-    const best=matches[0];
-    if(!best)return{index,claim,status:'source-unavailable',classification:'uncertain',confidence:0};
-
-    const ce=entityTokens(claim);
-    const sourceEntityShared=[...ce].filter(x=>entityTokens(best.bestPassage).has(x)||entityTokens(best.source).has(x));
-    const topic=overlap(claim,anchor);
-    const attribution=/\b(according to|he said|she said|they said|argued|acknowledged|noted|told|said)\b/i.test(claim);
-    // Entity support remains strict for genuine named entities, but common sentence-initial
-    // words are no longer treated as entities. A claim with no meaningful named entity does
-    // not fail merely because it starts with “The”, “In”, etc.
-    const entitySupported=ce.size===0||best.entityShared.length>0||sourceEntityShared.length>0||(attribution&&best.source);
-    const offTopic=topic.shared.length===0&&best.score<45;
-    let classification='unsupported';
-    if(best.numericMismatch)classification='contradicted';
-    else if(best.contradicted)classification='contradicted';
-    else if(offTopic)classification='off_topic';
-    else if(best.score>=62&&entitySupported)classification='supported';
-    else if(best.score>=52&&entitySupported)classification='supported_with_context';
-    else if(best.score>=45&&entitySupported)classification='uncertain';
-    const verified=['supported','supported_with_context'].includes(classification);
-    const partial=classification==='uncertain';
-    return{index,claim,status:verified?'verified':partial?'partial':'unsupported',classification,confidence:best.score,bestSource:best.source,bestUrl:best.url,bestDomain:best.domain,sourceId:best.sourceId,bestPassageId:best.bestPassageId,evidence:best.evidence,bestPassage:best.bestPassage,matchedPassages:best.matchedPassages,sharedTerms:best.shared.slice(0,30),entityShared:best.entityShared.slice(0,20),topicShared:topic.shared.slice(0,20),numericMismatch:Boolean(best.numericMismatch),contradicted:Boolean(best.contradicted),offTopic,matchingMode:verified?'semantic-context-evidence-pack':partial?'ambiguous-context':'insufficient-or-conflicting-evidence'};
-  });
-
-  const verified=results.filter(x=>x.status==='verified').length;
-  const partial=results.filter(x=>x.status==='partial').length;
-  const unsupported=results.filter(x=>x.status==='unsupported').length;
-  const sourceUnavailable=results.filter(x=>x.status==='source-unavailable').length;
-  const avg=results.length?Math.round(results.reduce((n,x)=>n+x.confidence,0)/results.length):0;
-  const pass=claims.length>0&&unsupported===0&&sourceUnavailable===0&&avg>=60;
-  const editorialRecords=editorial.map(x=>({index:x.index,claim:x.claim,status:'editorial-excluded',type:x.type,reason:x.type==='editorial-recommendation'?'recommendation-or-watch-language':'analysis-or-context-language'}));
-  write({version:17.0,generatedAt:new Date().toISOString(),articlePath,articleTitle,verificationMode:'evidence-pack-first-v17-contextual-semantic',sourceCount:sources.length,usableSourceCount:sources.length,claimCount:claims.length,editorialCount:editorial.length,verified,partial,unsupported,sourceUnavailable,averageConfidence:avg,pass,policy:{verifiedMin:62,partialMin:45,blockUnsupported:true,minimumAverageConfidence:60,numericMismatchAlwaysBlocks:true,entitySupportRequired:true,sourceScopedEvidence:true,semanticNormalization:true,contextualSynthesis:true,multiPassageComposition:true,topicDriftDetection:true,contradictionDetection:true,directEvidencePack:true,reextractPublisherPages:false,claimAudit:true,atomicClaimExtraction:true,editorialAnalysisExcluded:true,repairMayReplaceOnlyFailedSentences:true},sources:sources.map(s=>({id:s.id,title:s.title,url:s.url,domain:s.domain,passageCount:s.passages.length,articleBodyLength:s.articleBody.length})),claims:results,editorial:editorialRecords});
-  console.log(`Claim Verification v17.0: ${claims.length} factual claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${sourceUnavailable} source-unavailable; ${editorial.length} editorial/context statement(s) excluded; average confidence ${avg}; ${pass?'PASS':'BLOCK'} (semantic meaning + contextual synthesis, strict safety thresholds).`);
-  if(!pass)process.exit(1);
+  const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'');const typed=sentences(body).map((claim,index)=>({index:index+1,claim,type:claimType(claim)}));const claims=typed.filter(x=>x.type==='factual');const editorial=typed.filter(x=>x.type!=='factual');const sources=evidenceFromBrief(brief);const anchor=topicAnchor(brief,articleTitle);
+  if(!sources.length){write({version:17,generatedAt:new Date().toISOString(),articlePath,articleTitle,verificationMode:'evidence-pack-first-v17-contextual-semantic',sourceCount:0,usableSourceCount:0,claimCount:claims.length,editorialCount:editorial.length,verified:0,partial:0,unsupported:claims.length,sourceUnavailable:claims.length,averageConfidence:0,pass:false,reason:'No evidence pack available.',claims:[],editorial:[]});process.exit(1);}
+  const results=claims.map(entry=>{const{claim,index}=entry,matches=[];for(const s of sources){const units=[...s.passages.map((x,i)=>({text:x,id:`${s.id}-P${i+1}`}))];if(s.articleBody.length>=100)units.push({text:s.articleBody.slice(0,14000),id:`${s.id}-BODY`});if(!units.length)continue;const ranked=units.map(u=>({...semanticScore(claim,u.text),passageId:u.id})).sort((a,b)=>b.score-a.score);const best=ranked[0];const top=ranked.filter(x=>x.score>=Math.max(32,best.score-20)).slice(0,8);const composed=top.length?top.map(x=>x.evidence).join(' '):best.evidence;const composedScore=semanticScore(claim,composed);const cs=composedScore.score>=best.score?composedScore:best;matches.push({...cs,source:s.title,url:s.url,domain:s.domain,sourceId:s.id,bestPassageId:best.passageId,bestPassage:best.evidence,matchedPassages:top.map(x=>x.passageId),bestUnitScore:best.score,composedScore:composedScore.score});}matches.sort((a,b)=>b.score-a.score);const best=matches[0];if(!best)return{index,claim,status:'source-unavailable',classification:'uncertain',confidence:0};const ce=entityTokens(claim),sourceEntityShared=[...ce].filter(x=>entityTokens(best.bestPassage).has(x)||entityTokens(best.source).has(x)),topic=overlap(claim,anchor),attribution=/\b(according to|he said|she said|they said|argued|acknowledged|noted|told|said)\b/i.test(claim);const entitySupported=ce.size===0||best.entityShared.length>0||sourceEntityShared.length>0||(attribution&&best.source);const offTopic=topic.shared.length===0&&best.score<45;let classification='unsupported';if(best.numericMismatch)classification='contradicted';else if(best.contradicted)classification='contradicted';else if(offTopic)classification='off_topic';else if(best.score>=62&&entitySupported)classification='supported';else if(best.score>=52&&entitySupported)classification='supported_with_context';else if(best.score>=45&&entitySupported)classification='uncertain';const verified=['supported','supported_with_context'].includes(classification),partial=classification==='uncertain';return{index,claim,status:verified?'verified':partial?'partial':'unsupported',classification,confidence:best.score,bestSource:best.source,bestUrl:best.url,bestDomain:best.domain,sourceId:best.sourceId,bestPassageId:best.bestPassageId,evidence:best.evidence,bestPassage:best.bestPassage,matchedPassages:best.matchedPassages,sharedTerms:best.shared,entityShared:best.entityShared,topicShared:topic.shared,numericMismatch:best.numericMismatch,contradicted:best.contradicted,offTopic,matchingMode:'semantic-context-evidence-pack'};});
+  const verified=results.filter(x=>x.status==='verified').length,partial=results.filter(x=>x.status==='partial').length,unsupported=results.filter(x=>x.status==='unsupported').length,sourceUnavailable=results.filter(x=>x.status==='source-unavailable').length;const averageConfidence=results.length?Math.round(results.reduce((a,x)=>a+x.confidence,0)/results.length):0;const pass=results.length>0&&unsupported===0&&sourceUnavailable===0&&averageConfidence>=60;const editorialRecords=editorial.map(x=>({index:x.index,claim:x.claim,status:'editorial-excluded',type:x.type,reason:x.type==='editorial-recommendation'?'recommendation-or-watch-language':'editorial-analysis'}));
+  write({version:17,generatedAt:new Date().toISOString(),articlePath,articleTitle,verificationMode:'evidence-pack-first-v17-contextual-semantic',sourceCount:sources.length,usableSourceCount:sources.length,claimCount:results.length,editorialCount:editorialRecords.length,verified,partial,unsupported,sourceUnavailable,averageConfidence,pass,policy:{verifiedMin:62,partialMin:45,blockUnsupported:true,minimumAverageConfidence:60,numericMismatchAlwaysBlocks:true,entitySupportRequired:true,sourceScopedEvidence:true,semanticNormalization:true,contextualSynthesis:true,multiPassageComposition:true,topicDriftDetection:true,contradictionDetection:true,directEvidencePack:true,reextractPublisherPages:false,claimAudit:true,atomicClaimExtraction:true,editorialAnalysisExcluded:true,repairMayReplaceOnlyFailedSentences:true},sources:sources.map(s=>({id:s.id,title:s.title,url:s.url,domain:s.domain,passageCount:s.passages.length,articleBodyLength:s.articleBody.length})),claims:results,editorial:editorialRecords});
+  console.log(`Claim Verification v17.0: ${results.length} factual claim(s) — ${verified} verified, ${partial} partial, ${unsupported} unsupported, ${sourceUnavailable} source-unavailable; ${editorialRecords.length} editorial/context statement(s) excluded; average confidence ${averageConfidence}; ${pass?'PASS':'BLOCK'} (semantic meaning + contextual synthesis, strict safety thresholds).`);if(!pass)process.exit(1);
 }
-main().catch(e=>{console.error(`Claim verification failed: ${e instanceof Error?e.message:String(e)}`);process.exit(1);});
+main();
