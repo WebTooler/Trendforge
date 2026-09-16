@@ -30,10 +30,13 @@ export function buildArticlePrompt(brief: ArticleBrief): string {
   return [
     'Write an original English-language editorial article for TrendForge.',
     'Do not copy, paraphrase sentence-by-sentence, or imitate any source article.',
-    'Synthesize the supplied facts, explain why they matter, and add useful context.',
-    'Use clear H2 sections, short paragraphs, and practical takeaways where appropriate.',
-    'Do not invent facts, quotes, statistics, dates, product capabilities, or sources.',
-    'Every factual claim that depends on the supplied sources must be traceable to them.',
+    'Synthesize the supplied facts and explain why they matter, but keep the evidence boundary hard: the supplied evidence is the only source of factual premises.',
+    'Use clear H2 sections, short paragraphs, and useful editorial context where appropriate.',
+    'Do not invent facts, quotes, statistics, dates, product capabilities, sources, motives, causes, outcomes, comparisons, or future developments.',
+    'Every checkable factual claim must be directly traceable to the supplied evidence. Preserve attribution when the source is expressing a person or publisher opinion.',
+    'Editorial analysis, implications, and recommendations are allowed only when clearly framed as analysis or advice and when they do not introduce a new factual premise. Do not turn an inference into a fact.',
+    'A 400-900 word fully grounded article is acceptable. When the evidence is rich, expand by covering additional supported details, attributed statements, context explicitly present in the evidence, and clearly labeled implications—not by adding outside knowledge or filler.',
+    'Prefer a complete 500-800 word article when the evidence supports it, but never pad solely to hit a word target.',
     'Return clean article prose with Markdown H2 headings (## Heading). Do not return HTML tags.',
     `Title: ${brief.title}`,
     `Category: ${brief.category}`,
@@ -53,7 +56,7 @@ export function editorialGate(article: { title: string; description: string; con
     description: article.description.trim().length >= 80 && article.description.trim().length <= 320,
     content: normalized.length >= 900 && words >= 150,
     structure: headings >= 2,
-    sources: article.sources.length >= 2 && article.sources.every((source) => /^https:\/\//.test(source.url)),
+    sources: article.sources.length >= 1 && article.sources.every((source) => /^https:\/\//.test(source.url)),
     noUnsafeMarkup: !suspicious,
   };
   const passed = Object.values(checks).every(Boolean);

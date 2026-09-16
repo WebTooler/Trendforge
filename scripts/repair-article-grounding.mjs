@@ -1,59 +1,81 @@
 import fs from 'node:fs';
-import { generateWithTrendForgeWriter } from './trendforge-writer-engine.mjs';
+import { generateWithTrendForgeRepair } from './trendforge-writer-engine.mjs';
 
 const articleDir='content/articles';
 const briefPath='data/article-brief.json';
 const claimPath='data/claim-verification.json';
+const aiBudgetPath='data/ai-run-budget.json';
+const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
+const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
 const titleFrom=r=>(r.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
 const descriptionFrom=r=>(r.match(/^description:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
-const parseJson=raw=>{const t=String(raw).trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'');for(const x of [t,(()=>{const a=t.indexOf('{'),b=t.lastIndexOf('}');return a>=0&&b>a?t.slice(a,b+1):''})()]){if(!x)continue;try{return JSON.parse(x)}catch{}}throw new Error('Writer repair output was not valid JSON')};
-const latestArticle=()=>{if(!fs.existsSync(articleDir))throw new Error('No article directory');const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(`${articleDir}/${b}`).mtimeMs-fs.statSync(`${articleDir}/${a}`).mtimeMs);if(!files.length)throw new Error('No generated article found');return `${articleDir}/${files[0]}`};
-const briefPassages=brief=>(brief?.grounding?.sources||[]).flatMap((s,i)=>(s.passages||[]).map((p,j)=>({source:`S${i+1}-P${j+1}`,text:String(p)})));
-const compactEvidence=(brief,claims)=>{
- const failed=claims.filter(x=>x.status!=='verified'&&x.evidence).slice(0,12).map(x=>`CLAIM: ${x.claim}\nEVIDENCE: ${String(x.evidence).slice(0,1800)}\nSOURCE: ${x.bestSource||''}`).join('\n\n');
- const fallback=briefPassages(brief).sort((a,b)=>b.text.length-a.text.length).slice(0,16).map(x=>`[${x.source}] ${x.text.slice(0,1600)}`).join('\n\n');
- return [failed,fallback].filter(Boolean).join('\n\n').slice(0,26000);
-};
+const latestArticle=()=>{if(!fs.existsSync(articleDir))throw new Error('No article directory');const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(`${articleDir}/${b}`).mtimeMs-fs.statSync(`${articleDir}/${a}`).mtimeMs);if(!files.length)throw new Error('No generated article found');return `${articleDir}/${files[0]}`;};
+const parseJson=raw=>{const t=String(raw).trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'');for(const x of [t,(()=>{const a=t.indexOf('{'),b=t.lastIndexOf('}');return a>=0&&b>a?t.slice(a,b+1):''})()]){if(!x)continue;try{return JSON.parse(x)}catch{}}throw new Error('Atomic repair output was not valid JSON');};
+const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle)return{body,changed:false,deleted:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false,deleted:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true,deleted:!rep};};
+const beginRepairBudget=()=>{let original=null;try{const raw=JSON.parse(fs.readFileSync(aiBudgetPath,'utf8'));if(raw?.runKey===runKey&&Number.isFinite(raw?.attempts))original=raw;}catch{}fs.mkdirSync('data',{recursive:true});fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-pass'},null,2)+'\n');console.log(`Grounding repair v10: isolated repair budget from writer budget for run ${runKey}.`);return original;};
+const restoreWriterBudget=original=>{if(original){fs.writeFileSync(aiBudgetPath,JSON.stringify(original,null,2)+'\n');console.log(`Grounding repair v10: restored writer AI budget (${original.attempts} attempt(s)).`);}else{fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString()},null,2)+'\n');}};
 
 async function main(){
  const articlePath=latestArticle(),raw=fs.readFileSync(articlePath,'utf8');
  const brief=fs.existsSync(briefPath)?JSON.parse(fs.readFileSync(briefPath,'utf8')):null;
  const verification=fs.existsSync(claimPath)?JSON.parse(fs.readFileSync(claimPath,'utf8')):null;
- const claims=Array.isArray(verification?.results)?verification.results:[];
- const evidence=compactEvidence(brief,claims);
- if(!evidence||evidence.length<500)throw new Error('Current claim evidence is incomplete; grounding repair refused.');
+ const claims=Array.isArray(verification?.claims)?verification.claims:Array.isArray(verification?.results)?verification.results:[];
+ // 'uncertain' is a review/repair state in the semantic verifier. Keep backward
+ // compatibility with older verifier output that called the same state 'partial'.
+ const failed=claims.filter(x=>x.status==='unsupported'||x.status==='partial'||x.status==='uncertain'||x.classification==='uncertain').slice(0,12);
+ if(!failed.length){console.log('Grounding repair: no failed factual claims; article left unchanged.');return;}
+ const evidence=failed.map((x,i)=>`FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.evidence||x.bestPassage||'').slice(0,3000)}\nSOURCE: ${x.bestSource||''}\nURL: ${x.bestUrl||''}`).join('\n\n');
+ if(evidence.length<200)throw new Error('Current claim evidence is incomplete; grounding repair refused.');
  const oldTitle=titleFrom(raw),oldDescription=descriptionFrom(raw);
- const oldBody=raw.replace(/^---[\s\S]*?---/,'').replace(/^\s*##\s+Sources[\s\S]*$/i,'').trim().slice(0,10000);
+ const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'').trim();
  const prompt=[
-  'You are TrendForge strict grounding repair editor and fact-preserving rewrite engine.',
-  'The previous article failed strict claim verification. Rewrite the SAME story, but rebuild the article sentence-by-sentence from the supplied publisher evidence.',
-  'SOURCE OF TRUTH RULE: the supplied publisher evidence is the ONLY factual source. Do not use model memory, general knowledge, inference, assumptions, or facts from the old draft that are not explicitly supported by the evidence.',
-  'CLAIM MAPPING RULE: every factual sentence in the new article must be a direct statement or close paraphrase of one or more supplied evidence blocks. If you cannot point to the evidence block that supports a sentence, DELETE the sentence.',
-  'Do not invent or preserve unsupported numbers, dates, names, quotes, product specifications, percentages, causes, motives, forecasts, market effects, or availability claims.',
-  'Do not turn an implication into a fact. Preserve attribution such as “the company said” or “the report found” when the evidence is attributed. Do not merge unrelated source stories.',
-  'The old draft is only a structural reference. You may discard most of it. Prefer fewer strongly supported facts over a longer article filled with synthesis.',
-  'Write original prose; do not copy source wording at length. Use 3-5 H2 headings only if the evidence supports enough sections. Target roughly 300-500 words, but NEVER pad to reach a word count.',
-  `CURRENT TITLE: ${oldTitle}`,
-  `CURRENT DESCRIPTION: ${oldDescription}`,
-  `CURRENT DRAFT (STRUCTURE ONLY):\n${oldBody}`,
-  `PUBLISHER EVIDENCE — THE ONLY FACTUAL SOURCE:\n${evidence}`,
-  'Before producing the JSON, internally check every factual sentence against the evidence. Remove any sentence that cannot be grounded.',
-  'Return ONLY JSON with exactly three string keys: title, description, content. Description must be at least 80 characters.'
+  'You are TrendForge Atomic Grounding Repair v10.',
+  'DO NOT rewrite the article. Return ONLY JSON containing an array named repairs.',
+  'For each failed claim, provide exactly one repair object with keys: original, replacement.',
+  'original MUST be copied verbatim from the current article sentence that contains the failed claim.',
+  '',
+  'REPAIR ORDER IS MANDATORY: REWRITE -> NARROW -> DELETE.',
+  '1) REWRITE: First try to rewrite the sentence while preserving its original meaning as closely as possible and making every factual element directly supported by the supplied evidence.',
+  '2) NARROW: If the complete sentence cannot be supported, reduce it to the smallest useful factual statement that IS supported. Preserve attribution, uncertainty, polarity, numbers, dates, entities and causal direction. A narrower true sentence is preferred over deleting the whole sentence.',
+  '3) DELETE: Only when no safe evidence-supported rewrite or narrower statement exists, set replacement to an empty string.',
+  'Never choose deletion merely because a sentence is difficult. Attempt a faithful rewrite first, then a narrower supported claim.',
+  '',
+  'HARD SAFETY RULES:',
+  '- Publisher evidence supplied below is the ONLY factual source.',
+  '- No model memory, common knowledge, inference, assumptions, new facts, numbers, dates, names, causes, motives, forecasts, comparisons or unsupported implications.',
+  '- Never reverse factual polarity: increased/decreased, rise/fall, gain/loss, approve/reject, allow/ban, launch/cancel, confirm/deny, support/oppose.',
+  '- Never change or invent a number, date, entity, attribution or causal relationship.',
+  '- Preserve attribution when present. Never turn attributed information into an unattributed fact.',
+  '- Do not relabel unsupported facts as editorial analysis.',
+  '- Do not modify sentences that do not contain a failed claim.',
+  '- Do not rewrite paragraphs, headings, title, description, source list or unrelated material.',
+  '- If a failed claim is an editorial/context statement rather than a factual premise, preserve it only if it introduces no unsupported factual assertion.',
+  '',
+  `CURRENT ARTICLE:\n${body.slice(0,16000)}`,
+  `FAILED CLAIMS AND THEIR EVIDENCE:\n${evidence}`,
+  'Return JSON only: {"repairs":[{"original":"...","replacement":"..."}]}.'
  ].join('\n\n');
- let out;
+ const originalBudget=beginRepairBudget();
  try{
-  out=await generateWithTrendForgeWriter({prompt,category:brief?.brief?.category||process.env.TRENDFORGE_WRITER_CATEGORY||'Technology',expectedTitle:oldTitle});
- }catch(e){throw new Error(`Grounding repair provider failed: ${e?.message||String(e)}`)}
- const repaired=parseJson(out.text);
- if(!repaired.title?.trim()||!repaired.description?.trim()||!repaired.content?.trim())throw new Error('Repair returned incomplete fields.');
- if(repaired.content.trim().length<900)throw new Error('Repair returned content below safe editorial floor.');
- const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
- const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
- const safeTitle=String(repaired.title).replace(/"/g,'\\"').replace(/\r?\n/g,' ');
- const safeDescription=String(repaired.description).replace(/"/g,'\\"').replace(/\r?\n/g,' ');
- const updatedFrontmatter=frontmatter.replace(/^title:\s*"[\s\S]*?"\s*$/m,`title: "${safeTitle}"`).replace(/^description:\s*"[\s\S]*?"\s*$/m,`description: "${safeDescription}"`).replace(/^publishedAt:\s*"[\s\S]*?"\s*$/m,`publishedAt: "${new Date().toISOString()}"`);
- fs.writeFileSync(articlePath,`${updatedFrontmatter}\n\n${repaired.content.trim()}\n${sources||''}\n`);
- fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:repaired.title,evidenceClaims:claims.length,evidenceChars:evidence.length,mode:'claim-to-evidence-repair-v3',providerAttempts:1},null,2)+'\n');
- console.log(`Grounding repair: rewritten ${articlePath} from claim-to-evidence publisher evidence using ${out.provider}.`);
+  let out;
+  try{out=await generateWithTrendForgeRepair({prompt});}
+  catch(e){throw new Error(`Grounding repair provider failed: ${e?.message||String(e)}`)}
+  const parsed=parseJson(out.text);
+  if(!Array.isArray(parsed.repairs))throw new Error('Atomic repair response missing repairs array.');
+  let updatedBody=body,applied=0,deleted=0,narrowedOrRewritten=0;
+  for(const r of parsed.repairs.slice(0,12)){
+    if(!r||typeof r.original!=='string'||typeof r.replacement!=='string')continue;
+    const result=replaceSentence(updatedBody,r.original,r.replacement);
+    if(!result.changed)continue;
+    updatedBody=result.body;applied++;
+    if(result.deleted)deleted++; else narrowedOrRewritten++;
+  }
+  if(!applied)throw new Error('Atomic repair produced no matching sentence replacements.');
+  const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
+  const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
+  fs.writeFileSync(articlePath,`${frontmatter}\n\n${updatedBody.trim()}\n${sources||''}\n`);
+  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-repair-v10-rewrite-narrow-delete-isolated-repair-budget',repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:'not_applicable'},null,2)+'\n');
+  console.log(`Grounding repair v10: applied ${applied} repair(s) — ${narrowedOrRewritten} rewritten/narrowed, ${deleted} deleted. Strategy: rewrite -> narrow -> delete. Unrelated article content preserved using dedicated repair provider ${out.provider}.`);
+ }finally{restoreWriterBudget(originalBudget);}
 }
 main().catch(e=>{console.error(`Grounding repair failed: ${e?.message||String(e)}`);process.exit(1)});

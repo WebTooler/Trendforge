@@ -1,11 +1,11 @@
 import fs from 'node:fs';
 
 const statePath='data/ai-provider-state.json';
-const now=Date.now();
 const COOLDOWN_RATE_MS=8*1000;
 const COOLDOWN_SERVER_MS=2*60*1000;
 const COOLDOWN_TRANSIENT_MS=30*1000;
 const COOLDOWN_HARD_QUOTA_MS=6*60*60*1000;
+const MAX_STARTUP_RECOVERY_WAIT_MS=45*1000;
 const providerConfig={
   Gemini:{key:'GEMINI_API_KEY'},
   Groq:{key:'GROQ_API_KEY'},
@@ -13,7 +13,7 @@ const providerConfig={
   Cohere:{key:'COHERE_API_KEY'}
 };
 const providers=Object.keys(providerConfig);
-let state={version:7,providers:{},rotationCursor:0,updatedAt:new Date().toISOString()};
+let state={version:8,providers:{},rotationCursor:0,updatedAt:new Date().toISOString()};
 try{state={...state,...JSON.parse(fs.readFileSync(statePath,'utf8'))};}catch{}
 for(const name of providers){state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0,lastStatus:null,lastError:null,lastClass:null,lastSuccessAt:0};}
 
@@ -29,7 +29,7 @@ const classify=(status,message='')=>{
   return 'error';
 };
 
-const persist=()=>{state.version=7;state.updatedAt=new Date().toISOString();fs.mkdirSync('data',{recursive:true});fs.writeFileSync(statePath,JSON.stringify(state,null,2)+'\n');};
+const persist=()=>{state.version=8;state.updatedAt=new Date().toISOString();fs.mkdirSync('data',{recursive:true});fs.writeFileSync(statePath,JSON.stringify(state,null,2)+'\n');};
 const mark=(name,status,message)=>{
   if(!providerConfig[name])return;
   const p=state.providers[name]??={failures:0,successes:0,quotaBlockedUntil:0};
@@ -48,8 +48,34 @@ const markSuccess=(name)=>{
   persist();
 };
 
+const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const configured=providers.filter(name=>Boolean(process.env[providerConfig[name].key]));
-const healthy=configured.filter(name=>(state.providers[name]?.quotaBlockedUntil||0)<=now);
+const isHardQuotaState=p=>p?.lastClass==='quota';
+const buildHealthy=timestamp=>configured.filter(name=>(state.providers[name]?.quotaBlockedUntil||0)<=timestamp);
+let now=Date.now();
+let healthy=buildHealthy(now);
+
+// If every configured provider is temporarily cooling down, wait once for the
+// earliest recoverable provider instead of immediately declaring the writer dead.
+// Hard daily/payment quotas are never waited out. This is deliberately bounded so
+// a scheduled pipeline cannot hang indefinitely.
+if(!healthy.length&&configured.length){
+  const recoverable=configured
+    .filter(name=>!isHardQuotaState(state.providers[name]))
+    .map(name=>Number(state.providers[name]?.quotaBlockedUntil||0))
+    .filter(until=>until>now)
+    .sort((a,b)=>a-b);
+  const earliest=recoverable[0]||0;
+  const waitMs=Math.min(MAX_STARTUP_RECOVERY_WAIT_MS,Math.max(0,earliest-Date.now()));
+  if(waitMs>0){
+    console.log(`AI router recovery wait: all configured providers are temporarily cooling down; waiting ${Math.ceil(waitMs/1000)}s for provider recovery.`);
+    await sleep(waitMs);
+    now=Date.now();
+    healthy=buildHealthy(now);
+    console.log(`AI router recovery re-check: ${healthy.length}/${configured.length} provider(s) recovered after bounded wait.`);
+  }
+}
+
 const healthRank=[...healthy].sort((a,b)=>{
   const pa=state.providers[a]||{},pb=state.providers[b]||{};
   const healthA=(pa.failures||0)*2-(pa.successes||0)*0.25;
@@ -63,7 +89,7 @@ const available=rotationBase.map((_,index)=>rotationBase[(index+cursor)%rotation
 if(rotationBase.length){state.rotationCursor=(cursor+1)%rotationBase.length;persist();}
 
 console.log(`AI router available providers: ${available.length}/${providers.length}.`);
-for(const name of providers){const p=state.providers[name];if(!process.env[providerConfig[name].key])console.log(`AI router not configured: ${name}.`);else if((p.quotaBlockedUntil||0)>now)console.log(`AI router cooldown: ${name} until ${new Date(p.quotaBlockedUntil).toISOString()} (${p.lastClass||'blocked'}).`);}
+for(const name of providers){const p=state.providers[name];if(!process.env[providerConfig[name].key])console.log(`AI router not configured: ${name}.`);else if((p.quotaBlockedUntil||0)>Date.now())console.log(`AI router cooldown: ${name} until ${new Date(p.quotaBlockedUntil).toISOString()} (${p.lastClass||'blocked'}).`);}
 console.log('AI router excluded from production: OpenAI (credit-dependent), Cerebras (payment-required).');
 console.log(`AI router writer rotation: ${available.join(' -> ')||'none'}.`);
 export {state,available,mark,markSuccess,classify,providerConfig};
