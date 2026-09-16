@@ -24,7 +24,7 @@ const overlap = (a = '', b = '') => { const A = tokens(a); const B = tokens(b); 
 
 async function get(url, accept = 'text/html,application/xml;q=0.9,*/*;q=0.8') {
   try {
-    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), headers: { 'user-agent': 'TrendForge-source-recovery/1.4', accept } });
+    const r = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(timeoutMs), headers: { 'user-agent': 'TrendForge-source-recovery/1.5', accept } });
     if (!r.ok) return null;
     return { text: await r.text(), finalUrl: r.url || url };
   } catch { return null; }
@@ -42,7 +42,10 @@ function linksFromRss(xml = '') {
       .filter(x => x.url && !mirror.has(domainOf(x.url)) && !blocked.has(domainOf(x.url)) && !homepage(x.url) && !feed(x.url));
     if (!title) continue;
     for (const link of descriptionLinks) out.push({ title, url: link.url, linkText: link.text, source: 'description-link' });
-    if (itemLink && !mirror.has(domainOf(itemLink)) && !blocked.has(domainOf(itemLink)) && !homepage(itemLink) && !feed(itemLink)) out.push({ title, url: itemLink, linkText: '', source: 'item-link' });
+    // Keep RSS index/redirect links as discovery candidates. They are NEVER
+    // evidence themselves; recover() resolves them and only accepts the final
+    // non-mirror publisher URL.
+    if (itemLink && !blocked.has(domainOf(itemLink)) && !homepage(itemLink) && !feed(itemLink)) out.push({ title, url: itemLink, linkText: '', source: 'item-link' });
   }
   return out;
 }
@@ -96,6 +99,18 @@ async function recoverFromWebSearch(title, existingFamilies) {
   return found;
 }
 
+async function resolveDiscoveryUrl(item) {
+  const original = normalize(item.url);
+  if (!original) return null;
+  const originalDomain = domainOf(original);
+  if (!mirror.has(originalDomain)) return original;
+  const resolved = await get(original);
+  const finalUrl = normalize(resolved?.finalUrl || '');
+  const finalDomain = domainOf(finalUrl);
+  if (!finalUrl || !finalDomain || mirror.has(finalDomain) || blocked.has(finalDomain) || homepage(finalUrl) || feed(finalUrl)) return null;
+  return finalUrl;
+}
+
 async function recover(record) {
   const current = Array.isArray(record.sources) ? record.sources : [];
   const existingFamilies = new Set(current.map(s => familyOf(s.finalUrl || s.url)).filter(Boolean));
@@ -117,12 +132,14 @@ async function recover(record) {
     const result = await get(feedUrl, 'application/rss+xml,application/xml,text/xml;q=0.9,*/*;q=0.8');
     if (!result) continue;
     for (const item of linksFromRss(result.text).sort((a,b) => overlap(title,b.title) - overlap(title,a.title))) {
-      const d = domainOf(item.url); const f = familyOf(item.url);
-      if (!d || !f || mirror.has(d) || blocked.has(d) || existingFamilies.has(f) || seen.has(item.url) || homepage(item.url) || feed(item.url)) continue;
       const itemOverlap = overlap(title, item.title);
       if (itemOverlap < 2) continue;
-      seen.add(item.url);
-      additions.push({ title: item.title, url: item.url, finalUrl: item.url, domain: d, publisherFamily: f, ok: true, status: 200, discovered: true, relevanceOverlap: itemOverlap, recovery: true, resolvedFrom: result.finalUrl.includes('bing.com') ? `bing-news-${item.source}` : `google-news-${item.source}` });
+      const resolvedUrl = await resolveDiscoveryUrl(item);
+      if (!resolvedUrl) continue;
+      const d = domainOf(resolvedUrl); const f = familyOf(resolvedUrl);
+      if (!d || !f || existingFamilies.has(f) || seen.has(resolvedUrl)) continue;
+      seen.add(resolvedUrl);
+      additions.push({ title: item.title, url: resolvedUrl, finalUrl: resolvedUrl, domain: d, publisherFamily: f, ok: true, status: 200, discovered: true, relevanceOverlap: itemOverlap, recovery: true, resolvedFrom: result.finalUrl.includes('bing.com') ? `bing-news-${item.source}` : `google-news-${item.source}` });
       existingFamilies.add(f);
       if (existingFamilies.size >= 2 || additions.length >= maxPerRecord) break;
     }
@@ -162,7 +179,7 @@ try {
   const recovered = await mapWithConcurrency(records, recoveryConcurrency, recover);
   const attempted = recovered.filter(r => r.recovery?.attempted).length;
   const added = recovered.reduce((sum, r) => sum + Number(r.recovery?.added || 0), 0);
-  await fs.writeFile(inputPath, `${JSON.stringify({ ...report, version: 8, recoveredAt: new Date().toISOString(), recoverySummary: { attempted, added }, records: recovered }, null, 2)}\n`);
-  console.log(`Publisher recovery v3: checked ${records.length} verification record(s) with bounded concurrency ${recoveryConcurrency}.`);
-  console.log(`Publisher recovery v3: ${attempted} record(s) attempted recovery; ${added} publisher URL(s) discovered. RSS discovery is followed by bounded Bing/Google web-search discovery when RSS exposes only index/redirect links.`);
+  await fs.writeFile(inputPath, `${JSON.stringify({ ...report, version: 9, recoveredAt: new Date().toISOString(), recoverySummary: { attempted, added }, records: recovered }, null, 2)}\n`);
+  console.log(`Publisher recovery v4: checked ${records.length} verification record(s) with bounded concurrency ${recoveryConcurrency}.`);
+  console.log(`Publisher recovery v4: ${attempted} record(s) attempted recovery; ${added} publisher URL(s) discovered. RSS index/redirect links are now resolved to final publisher URLs before they can enter the evidence pipeline.`);
 } catch (error) { console.log(`Publisher recovery skipped: ${error instanceof Error ? error.message : String(error)}`); }
