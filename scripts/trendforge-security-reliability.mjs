@@ -46,6 +46,9 @@ function scanDir(dir) {
     const rel = path.join(dir, entry.name);
     if (entry.isDirectory()) scanDir(rel);
     else if (entry.isFile()) {
+      // Test harnesses intentionally contain secret-shaped regex fixtures so that
+      // the detector itself can be tested. They are not production credentials.
+      if (dir === 'scripts' && /^test-.*\.mjs$/i.test(entry.name)) continue;
       try { if (secretPattern.test(read(rel))) trackedDangerous.push(rel); } catch {}
     }
   }
