@@ -127,7 +127,18 @@ const decisions = trends.map((item, index) => {
   const sourceConfidence = verification
     ? Math.max(originalSourceConfidence, evidenceConfidence)
     : originalSourceConfidence;
-  const evidenceReady = independentDomainCount >= 2 && reachableSourceCount >= 2;
+
+  // Publication should not stop merely because corroboration is unavailable.
+  // A single reachable, verified publisher article is enough to enter generation;
+  // two independent publisher families remain the strong-evidence state.
+  const singleSourceReady = Boolean(verification)
+    && verification.status === 'verified'
+    && reachableSourceCount >= 1
+    && independentDomainCount >= 1;
+  const strongEvidenceReady = reachableSourceCount >= 2 && independentDomainCount >= 2;
+  const evidenceReady = strongEvidenceReady || singleSourceReady;
+  const evidenceLevel = strongEvidenceReady ? 'strong' : singleSourceReady ? 'single-source-verified' : 'none';
+
   const titleDuplicate = existing.find((article) => normalize(article.title) === normalize(item.title));
   const maxSimilarity = existing.reduce((max, article) => Math.max(max, overlap(item.title, article.title)), 0);
   const novelty = clamp(100 - Math.round(maxSimilarity * 100));
@@ -148,8 +159,9 @@ const decisions = trends.map((item, index) => {
   if (verification) {
     reasons.push(`evidence verification: ${reachableSourceCount} relevant reachable source(s), ${independentDomainCount} independent publisher family/families`);
     if (discoveredSourceCount > 0) reasons.push(`${discoveredSourceCount} discovered publisher source(s) available`);
-    if (evidenceReady) reasons.push('multi-source evidence ready');
-    else reasons.push('multi-source evidence not yet proven');
+    if (strongEvidenceReady) reasons.push('strong multi-source evidence ready');
+    else if (singleSourceReady) reasons.push('single verified publisher source ready; corroboration unavailable');
+    else reasons.push('publisher evidence not yet proven');
   }
   reasons.push(`topic freshness ${freshness}/100`);
   reasons.push(`topic novelty ${novelty}/100`);
@@ -178,6 +190,7 @@ const decisions = trends.map((item, index) => {
     discoveredSourceCount,
     independentDomainCount,
     evidenceReady,
+    evidenceLevel,
     baseScore,
     confidence,
     novelty,
@@ -194,19 +207,20 @@ for (const [index, decision] of decisions.entries()) decision.rank = index + 1;
 
 const now = new Date().toISOString();
 const queue = {
-  version: 3,
+  version: 4,
   generatedAt: now,
   evidenceIntegrated: verificationByLink.size > 0,
   policy: {
     publishCandidateMinScore: 80,
     reviewMinScore: 65,
     minimumConfidenceForPublishCandidate: 70,
-    minimumIndependentDomainsForPublishCandidate: 2,
-    minimumReachableSourcesForPublishCandidate: 2,
+    strongEvidenceMinimumPublisherFamilies: 2,
+    strongEvidenceMinimumReachableSources: 2,
+    singleVerifiedSourceMayEnterGeneration: true,
     hardRejectSimilarity: 0.75,
     adaptiveCategoryBalance: true,
     recentCategoryPenalty: true,
-    note: 'Decision engine consumes verified, candidate-scoped evidence when available. Existing research, writer, quality, duplicate, safety and SEO gates remain authoritative.'
+    note: 'Two independent publisher families remain the strong-evidence target. A single verified, reachable publisher article may enter generation; writer grounding, claim verification, editorial quality, safety and SEO remain authoritative publication gates.'
   },
   summary: {
     total: decisions.length,
@@ -214,6 +228,8 @@ const queue = {
     review: decisions.filter((d) => d.decision === 'review').length,
     hold: decisions.filter((d) => d.decision === 'hold').length,
     reject: decisions.filter((d) => d.decision === 'reject').length,
+    strongEvidenceReady: decisions.filter((d) => d.evidenceLevel === 'strong').length,
+    singleSourceVerifiedReady: decisions.filter((d) => d.evidenceLevel === 'single-source-verified').length,
   },
   decisions,
 };
@@ -243,13 +259,14 @@ appendLog(decisions.map((d) => ({
   confidence: d.confidence,
   novelty: d.novelty,
   evidenceReady: d.evidenceReady,
+  evidenceLevel: d.evidenceLevel,
   reachableSourceCount: d.reachableSourceCount,
   discoveredSourceCount: d.discoveredSourceCount,
   independentDomainCount: d.independentDomainCount,
   reasons: d.reasons,
 })));
 
-console.log(`Decision Engine v4: ${decisions.length} candidate(s) evaluated; evidence integration ${verificationByLink.size ? 'active' : 'fallback-only'}.`);
+console.log(`Decision Engine v5: ${decisions.length} candidate(s) evaluated; evidence integration ${verificationByLink.size ? 'active' : 'fallback-only'}.`);
 console.log(`Decision summary: ${queue.summary.publishCandidates} publish candidate(s), ${queue.summary.review} review, ${queue.summary.hold} hold, ${queue.summary.reject} reject.`);
-console.log(`Decision evidence: ${decisions.filter((d) => d.evidenceReady).length} candidate(s) have >=2 relevant reachable sources across >=2 independent publisher families.`);
+console.log(`Decision evidence: ${queue.summary.strongEvidenceReady} strong multi-source candidate(s); ${queue.summary.singleSourceVerifiedReady} single-source verified candidate(s) may enter generation.`);
 if (decisions[0]) console.log(`Top adaptive decision: ${decisions[0].decision} — ${decisions[0].title} (${decisions[0].adaptivePriority}/100 priority, decision ${decisions[0].decisionScore}/100, confidence ${decisions[0].confidence}/100).`);
