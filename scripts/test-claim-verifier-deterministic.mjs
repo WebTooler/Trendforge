@@ -6,7 +6,7 @@ const briefPath='data/article-brief.json';
 const claimPath='data/claim-verification.json';
 const backupDir='.trendforge-claim-fixture-backup';
 
-const source='Reuters reports that Acme launched its Nova AI model in London on Tuesday, with the company saying the model reduced inference costs by 20 percent. The company said the launch will initially target enterprise customers.';
+const source='Reuters reports that Acme launched its Nova AI model in London on Tuesday, with the company saying the model reduced inference costs by 20 percent. The company said the launch will initially target enterprise customers. Mozilla says paying for closed frontier models buys about a four-month head start at about five times the per-task cost, but only when tasks take between eight and 12 hours. However, open models are still lagging behind closed frontier models in revenue. The shift has accelerated the use of open models since Mozilla’s inaugural State of Open Source AI report was published on July 14. The report says organizations still pay for closed frontier models because they work out of the box and come bundled with compliance packaging, support, and accountability, while many organizations lack staff to run open-weight models well.';
 const baseFrontmatter=`---\ntitle: "Acme Nova AI launch"\ndescription: "A test article for deterministic claim verification."\n---`;
 
 const cases=[
@@ -19,6 +19,10 @@ const cases=[
   {name:'reverse polarity',sentence:'Acme lowered inference costs by 20 percent.',expect:x=>x.status==='verified'&&x.contradicted===false},
   {name:'rise-fall contradiction',sentence:'Acme raised inference costs by 20 percent.',expect:x=>x.status==='unsupported'&&x.contradicted===true},
   {name:'off topic',sentence:'The weather forecast calls for rain across northern India.',expect:x=>x.status==='unsupported'&&x.offTopic===true},
+  {name:'numeric contextual paraphrase',sentence:'Paying for closed frontier models gives roughly a four-month head start at around five times the per-task cost, but only for tasks lasting eight to 12 hours.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
+  {name:'revenue paraphrase',sentence:'Open models continue to trail closed frontier models when it comes to revenue.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
+  {name:'temporal paraphrase',sentence:'Use of open models accelerated after Mozilla published its inaugural State of Open Source AI report on July 14.',expect:x=>x.status==='verified'&&x.contradicted===false},
+  {name:'editorial tipping point',sentence:'The Mozilla findings suggest that the AI landscape is at a tipping point.',expectArticle:true,articleOnly:true},
 ];
 
 function runCase(test){
