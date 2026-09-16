@@ -14,26 +14,36 @@ type SearchArticle = {
 };
 
 const basePath = '/Trendforge';
+const MAX_QUERY_LENGTH = 100;
 
 function normalize(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
-function score(article: SearchArticle, query: string) {
-  const terms = normalize(query).split(' ').filter((term) => term.length >= 2);
+function tokens(value: string) {
+  return normalize(value).split(' ').filter((term) => term.length >= 2);
+}
+
+function score(article: SearchArticle, rawQuery: string) {
+  const query = normalize(rawQuery).slice(0, MAX_QUERY_LENGTH);
+  const terms = tokens(query);
   if (!terms.length) return 0;
   const title = normalize(article.title);
   const description = normalize(article.description);
   const category = normalize(article.category);
   const content = normalize(article.content);
   let total = 0;
+  if (title === query) total += 60;
+  if (title.includes(query)) total += 30;
   for (const term of terms) {
-    if (title.includes(term)) total += 12;
-    if (description.includes(term)) total += 7;
-    if (category.includes(term)) total += 8;
+    if (title.split(' ').includes(term)) total += 14;
+    else if (title.includes(term)) total += 8;
+    if (category.includes(term)) total += 9;
+    if (description.includes(term)) total += 6;
     if (content.includes(term)) total += 2;
   }
-  if (title === normalize(query)) total += 30;
+  const daysOld = Math.max(0, (Date.now() - new Date(article.date).getTime()) / 86400000);
+  if (Number.isFinite(daysOld)) total += Math.max(0, 10 - Math.min(10, daysOld / 30));
   return total;
 }
 
@@ -57,7 +67,7 @@ export default function SearchBox() {
   const categories = useMemo(() => ['All', ...Array.from(new Set(articles.map((article) => article.category))).sort()], [articles]);
 
   const results = useMemo(() => {
-    const normalizedQuery = normalize(query);
+    const normalizedQuery = normalize(query).slice(0, MAX_QUERY_LENGTH);
     return articles
       .filter((article) => category === 'All' || article.category === category)
       .map((article) => ({ article, score: normalizedQuery ? score(article, normalizedQuery) : 1 }))
@@ -67,17 +77,17 @@ export default function SearchBox() {
   }, [articles, category, query]);
 
   useEffect(() => {
-    const normalizedQuery = normalize(query);
+    const normalizedQuery = normalize(query).slice(0, MAX_QUERY_LENGTH);
     if (!normalizedQuery || loading) return;
     const timer = window.setTimeout(() => {
-      trackEvent('search', { query: normalizedQuery.slice(0, 100), category, results: results.length });
+      trackEvent('search', { query: normalizedQuery, category, results: results.length });
     }, 500);
     return () => window.clearTimeout(timer);
   }, [query, category, results.length, loading]);
 
   function handleResultClick(article: SearchArticle) {
     trackEvent('search_result_click', {
-      query: normalize(query).slice(0, 100),
+      query: normalize(query).slice(0, MAX_QUERY_LENGTH),
       category: article.category,
       slug: article.slug,
     });
@@ -87,7 +97,7 @@ export default function SearchBox() {
     <div className="search-controls">
       <label className="search-input-wrap">
         <span className="sr-only">Search articles</span>
-        <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search AI, technology, guides..." type="search" autoComplete="off" />
+        <input value={query} onChange={(event) => setQuery(event.target.value.slice(0, MAX_QUERY_LENGTH))} placeholder="Search AI, technology, guides..." type="search" autoComplete="off" maxLength={MAX_QUERY_LENGTH} />
       </label>
       <label className="search-filter">
         <span className="sr-only">Filter by category</span>
