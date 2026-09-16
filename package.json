@@ -3,7 +3,27 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {"dev": "next dev", "build": "next build", "start": "next start", "lint": "next lint"},
-  "dependencies": {"next": "15.5.24", "react": "19.2.7", "react-dom": "19.2.7"},
-  "devDependencies": {"typescript": "^5.6.3", "tsx": "^4.19.2", "@types/node": "^22.10.2", "@types/react": "^19.0.0", "@types/react-dom": "^19.0.0"}
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "memory:summary": "node scripts/trendforge-memory-query.mjs summary",
+    "memory:topic": "node scripts/trendforge-memory-query.mjs topic",
+    "memory:category": "node scripts/trendforge-memory-query.mjs category",
+    "memory:provider": "node scripts/trendforge-memory-query.mjs provider",
+    "memory:runs": "node scripts/trendforge-memory-query.mjs runs"
+  },
+  "dependencies": {
+    "next": "15.5.24",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "tsx": "^4.19.2",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
 }
