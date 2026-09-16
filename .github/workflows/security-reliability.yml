@@ -1,0 +1,78 @@
+name: TrendForge Security + Reliability
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'scripts/trendforge-security-reliability.mjs'
+      - 'scripts/test-trendforge-security-reliability.mjs'
+      - 'package.json'
+      - 'docs/SECURITY-RELIABILITY.md'
+      - '.github/workflows/security-reliability.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-reliability
+  cancel-in-progress: true
+
+jobs:
+  security-reliability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install dependencies with retry
+        shell: bash
+        run: |
+          set -e
+          for attempt in 1 2 3; do
+            echo "npm install attempt $attempt/3"
+            if npm install --no-audit --no-fund; then exit 0; fi
+            if [ "$attempt" -lt 3 ]; then sleep $((attempt * 10)); fi
+          done
+          exit 1
+      - name: Run deterministic security suite
+        run: npm run security:test
+      - name: Generate security reliability snapshot
+        run: npm run security:run
+      - name: Validate snapshot
+        run: |
+          set -euo pipefail
+          test -f data/trendforge-security-reliability.json
+          grep -q '"mode": "protective-observational"' data/trendforge-security-reliability.json
+          grep -q '"changesPublicationGates": false' data/trendforge-security-reliability.json
+          grep -q '"autoDeleteFiles": false' data/trendforge-security-reliability.json
+          grep -q '"autoModifyPublishing": false' data/trendforge-security-reliability.json
+          echo 'Security + Reliability snapshot validation: PASS'
+      - name: Build production export
+        run: npm run build
+      - name: Verify required static outputs
+        run: |
+          set -euo pipefail
+          for file in out/index.html out/robots.txt out/sitemap.xml out/search-index.json; do test -f "$file"; done
+          echo 'Required static outputs are present.'
+      - name: Final Phase 22 isolation check
+        run: |
+          set -euo pipefail
+          grep -q 'changesPublicationGates: false' scripts/trendforge-security-reliability.mjs
+          grep -q 'changesThresholds: false' scripts/trendforge-security-reliability.mjs
+          grep -q 'changesResearch: false' scripts/trendforge-security-reliability.mjs
+          grep -q 'changesEvidence: false' scripts/trendforge-security-reliability.mjs
+          grep -q 'changesWriter: false' scripts/trendforge-security-reliability.mjs
+          grep -q 'changesEditorial: false' scripts/trendforge-security-reliability.mjs
+          grep -q 'changesClaimVerification: false' scripts/trendforge-security-reliability.mjs
+          grep -q 'changesSafety: false' scripts/trendforge-security-reliability.mjs
+          echo 'Phase 22 Security + Reliability isolation: PASS'
+      - name: Phase 22 complete
+        run: echo 'TrendForge Security + Reliability checks passed.'
