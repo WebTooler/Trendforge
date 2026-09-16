@@ -15,7 +15,9 @@
     "memory:runs": "node scripts/trendforge-memory-query.mjs runs",
     "learning:run": "node scripts/trendforge-self-learning.mjs",
     "experiments:run": "node scripts/trendforge-experimentation.mjs",
-    "experiments:test": "node scripts/test-experimentation.mjs"
+    "experiments:test": "node scripts/test-experimentation.mjs",
+    "performance:run": "node scripts/trendforge-performance.mjs",
+    "performance:test": "node scripts/test-performance.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
