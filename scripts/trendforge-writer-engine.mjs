@@ -5,7 +5,7 @@ import { buildWriterContract, validateDraft } from './trendforge-editorial-polic
 const MAX_TRANSIENT_RETRIES=1;
 const MAX_PROVIDER_ATTEMPTS_PER_RUN=6;
 const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=3;
-const MAX_REPAIR_PROVIDER_ATTEMPTS=2;
+const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
 const MIN_WRITER_WORDS=400;
 const WRITER_TARGET_MIN_WORDS=500;
 const WRITER_TARGET_MAX_WORDS=700;
@@ -53,6 +53,6 @@ export async function generateWithTrendForgeRepair({prompt}){
   for(const provider of available){
     if(!process.env[keyFor(provider)]||attempts>=MAX_REPAIR_PROVIDER_ATTEMPTS)continue;
     const budget=loadBudget();if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)break;budget.attempts+=1;attempts+=1;saveBudget(budget);console.log(`TrendForge Atomic Repair: provider attempt ${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN} (${attempts}/${MAX_REPAIR_PROVIDER_ATTEMPTS}) — ${provider}.`);const started=Date.now();
-    try{const text=await request(provider,prompt,repairSystem,repairFormats);if(!text.trim()){mark(provider,200,'Empty atomic repair response');continue;}const parsed=parseWriterJson(text);if(!parsed||!Array.isArray(parsed.repairs)){mark(provider,200,'Invalid repair JSON');continue;}const repairs=parsed.repairs.filter(x=>x&&typeof x.original==='string'&&typeof x.replacement==='string');if(!repairs.length){mark(provider,200,'No repair objects');continue;}markSuccess(provider);console.log(`TrendForge Atomic Repair: ${provider} returned ${repairs.length} atomic sentence repair(s) after ${Date.now()-started}ms.`);return{text:JSON.stringify({repairs}),provider,policyVersion:'1.0'};}catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Atomic Repair: ${provider} failed [${status||'network'}] — ${message.slice(0,260)}.`);if(isHardQuota(status,message))break;}}
+    try{const text=await request(provider,prompt,repairSystem,repairFormats);if(!text.trim()){mark(provider,200,'Empty atomic repair response');continue;}const parsed=parseWriterJson(text);if(!parsed||!Array.isArray(parsed.repairs)){mark(provider,200,'Invalid repair JSON');continue;}const repairs=parsed.repairs.filter(x=>x&&typeof x.original==='string'&&typeof x.replacement==='string');if(!repairs.length){mark(provider,200,'No repair objects');continue;}markSuccess(provider);console.log(`TrendForge Atomic Repair: ${provider} returned ${repairs.length} atomic sentence repair(s) after ${Date.now()-started}ms.`);return{text:JSON.stringify({repairs}),provider,policyVersion:'1.0'};}catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Atomic Repair: ${provider} failed [${status||'network'}] — ${message.slice(0,260)}.`);if(isHardQuota(status,message))continue;}}
   throw new Error('TrendForge Atomic Repair: no provider produced valid sentence repairs.');
 }
