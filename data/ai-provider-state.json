@@ -2,19 +2,19 @@
   "version": 7,
   "providers": {
     "Groq": {
-      "failures": 36,
-      "quotaBlockedUntil": 1789497125734,
+      "failures": 37,
+      "quotaBlockedUntil": 1789538193473,
       "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198919, Requested 3658. Please try again in 18m33.264s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 197987, Requested 3272. Please try again in 9m3.888s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
       "lastClass": "rate_limit",
       "successes": 2,
       "lastSuccessAt": "2026-09-15T16:18:06.765Z"
     },
     "Gemini": {
       "failures": 9,
-      "quotaBlockedUntil": 1789556787931,
+      "quotaBlockedUntil": 1789559779475,
       "lastStatus": 429,
-      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 32.087430845s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 40.55346413s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n ",
       "lastClass": "quota"
     },
     "OpenAI": {
@@ -32,15 +32,15 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 12,
-      "quotaBlockedUntil": 1789509653437,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
-      "lastClass": "error"
+      "failures": 11,
+      "quotaBlockedUntil": 1789538217496,
+      "lastStatus": 200,
+      "lastError": "Invalid structured output",
+      "lastClass": "transient"
     },
     "Cohere": {
       "failures": 21,
-      "quotaBlockedUntil": 1789535216489,
+      "quotaBlockedUntil": 1789538208329,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -49,5 +49,5 @@
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-16T05:07:22.514Z"
+  "updatedAt": "2026-09-16T05:56:27.496Z"
 }
