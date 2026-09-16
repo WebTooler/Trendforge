@@ -13,6 +13,7 @@ const scripts = [
   'scripts/validate-writer-output.mjs',
   'scripts/generate-article-adaptive.mjs',
   'scripts/repair-article-grounding.mjs',
+  'scripts/test-claim-verifier-deterministic.mjs',
   'scripts/growth-intelligence.mjs',
   'scripts/distribution-intelligence.mjs',
   'scripts/monetization-check.mjs',
