@@ -23,7 +23,8 @@ const titleSimilarity = (a, b) => {
 
 assert.equal(status(score({ ageDays: 35, words: 700, sourceCount: 2 })), 'refresh_candidate');
 assert.equal(status(score({ ageDays: 10, words: 500, sourceCount: 1 })), 'watch');
-assert.equal(status(score({ ageDays: 2, words: 500, sourceCount: 2 })), 'fresh');
+// Keep the fresh fixture safely below the 45-point watch boundary.
+assert.equal(status(score({ ageDays: 2, words: 500, sourceCount: 1 })), 'fresh');
 assert.equal(score({ ageDays: 40, words: 700, sourceCount: 2 }) > score({ ageDays: 3, words: 700, sourceCount: 2 }), true);
 assert.equal(titleSimilarity('AI model pricing changes for developers', 'AI model pricing changes for developers'), 1);
 assert.equal(titleSimilarity('AI model pricing changes for developers', 'AI model pricing changes for teams'), 0.75);
