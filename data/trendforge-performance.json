@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-16T12:40:57.141Z",
+  "mode": "shadow",
+  "policy": {
+    "observationalOnly": true,
+    "influencesDecisions": false,
+    "changesPublicationGates": false,
+    "changesEvidenceThresholds": false,
+    "changesClaimThresholds": false,
+    "changesSafetyGates": false,
+    "minimumPerformanceRuns": 5
+  },
+  "metrics": {
+    "runCount": 2,
+    "topicCount": 50,
+    "articleCount": 6,
+    "latestEditorialScore": 78,
+    "latestClaimConfidence": 81,
+    "latestEvidencePassRate": 10,
+    "latestEvidenceBlockRate": 36,
+    "singleSourceReadyRate": 24,
+    "publishCandidateRate": 0
+  },
+  "changes": {
+    "editorialScore": 0,
+    "claimConfidence": 0,
+    "evidencePassRate": 0
+  },
+  "providers": {
+    "Cerebras": {
+      "successRate": 0,
+      "successes": 0,
+      "failures": 14,
+      "cooldownRuns": 0,
+      "latestStatus": 402,
+      "latestClass": "error"
+    },
+    "Cohere": {
+      "successRate": 8,
+      "successes": 4,
+      "failures": 46,
+      "cooldownRuns": 0,
+      "latestStatus": 200,
+      "latestClass": "transient"
+    },
+    "Gemini": {
+      "successRate": 0,
+      "successes": 0,
+      "failures": 22,
+      "cooldownRuns": 2,
+      "latestStatus": 429,
+      "latestClass": "quota"
+    },
+    "Groq": {
+      "successRate": 8,
+      "successes": 6,
+      "failures": 74,
+      "cooldownRuns": 2,
+      "latestStatus": 429,
+      "latestClass": "quota"
+    },
+    "OpenAI": {
+      "successRate": 0,
+      "successes": 0,
+      "failures": 6,
+      "cooldownRuns": 0,
+      "latestStatus": 429,
+      "latestClass": "quota"
+    },
+    "OpenRouter": {
+      "successRate": 0,
+      "successes": 0,
+      "failures": 26,
+      "cooldownRuns": 0,
+      "latestStatus": 0,
+      "latestClass": "transient"
+    }
+  },
+  "categories": {
+    "AI": {
+      "topicSamples": 3,
+      "averageScore": 76,
+      "averageConfidence": 86,
+      "evidenceLevels": {
+        "single-source-verified": 1,
+        "none": 2
+      },
+      "decisions": {
+        "review": 3
+      }
+    },
+    "Crypto": {
+      "topicSamples": 20,
+      "averageScore": 73,
+      "averageConfidence": 82,
+      "evidenceLevels": {
+        "none": 20
+      },
+      "decisions": {
+        "review": 20
+      }
+    },
+    "Digital Life": {
+      "topicSamples": 4,
+      "averageScore": 75,
+      "averageConfidence": 87,
+      "evidenceLevels": {
+        "none": 4
+      },
+      "decisions": {
+        "review": 4
+      }
+    },
+    "Innovation": {
+      "topicSamples": 11,
+      "averageScore": 60,
+      "averageConfidence": 60,
+      "evidenceLevels": {
+        "none": 11
+      },
+      "decisions": {
+        "hold": 11
+      }
+    },
+    "Product Launches": {
+      "topicSamples": 12,
+      "averageScore": 62,
+      "averageConfidence": 66,
+      "evidenceLevels": {
+        "none": 12
+      },
+      "decisions": {
+        "review": 2,
+        "hold": 10
+      }
+    }
+  },
+  "bottlenecks": [
+    {
+      "id": "evidence-throughput",
+      "severity": "high",
+      "detail": "Validated evidence is reaching only a minority of research candidates."
+    },
+    {
+      "id": "publish-eligibility",
+      "severity": "high",
+      "detail": "No research candidates are currently classified as direct publish candidates."
+    },
+    {
+      "id": "provider-cerebras",
+      "severity": "medium",
+      "detail": "Provider Cerebras has low historical success or cooldown activity."
+    },
+    {
+      "id": "provider-cohere",
+      "severity": "medium",
+      "detail": "Provider Cohere has low historical success or cooldown activity."
+    },
+    {
+      "id": "provider-gemini",
+      "severity": "medium",
+      "detail": "Provider Gemini has low historical success or cooldown activity."
+    },
+    {
+      "id": "provider-groq",
+      "severity": "medium",
+      "detail": "Provider Groq has low historical success or cooldown activity."
+    },
+    {
+      "id": "provider-openai",
+      "severity": "medium",
+      "detail": "Provider OpenAI has low historical success or cooldown activity."
+    },
+    {
+      "id": "provider-openrouter",
+      "severity": "medium",
+      "detail": "Provider OpenRouter has low historical success or cooldown activity."
+    }
+  ],
+  "insights": [
+    {
+      "id": "small-history",
+      "type": "data-quality",
+      "confidence": "low",
+      "detail": "Performance observations are based on fewer than 5 historical runs; treat trends as provisional."
+    },
+    {
+      "id": "editorial-trend",
+      "type": "trend",
+      "confidence": "low",
+      "detail": "Average editorial score changed by +0 points versus the previous run."
+    },
+    {
+      "id": "claim-trend",
+      "type": "trend",
+      "confidence": "low",
+      "detail": "Average claim confidence changed by +0 points versus the previous run."
+    },
+    {
+      "id": "evidence-trend",
+      "type": "trend",
+      "confidence": "low",
+      "detail": "Evidence pass rate changed by +0 percentage points versus the previous run."
+    },
+    {
+      "id": "current-bottlenecks",
+      "type": "bottleneck",
+      "confidence": "low",
+      "detail": "8 operational bottleneck(s) observed; this is diagnostic only and does not change gates."
+    }
+  ],
+  "experimentSummary": {
+    "registered": 3,
+    "assignments": 0,
+    "mode": "shadow"
+  },
+  "source": {
+    "memoryRuns": 2,
+    "learningVersion": 2,
+    "experimentationVersion": 1
+  }
+}
