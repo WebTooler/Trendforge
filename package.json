@@ -28,7 +28,9 @@
     "distribution:test": "npx tsx scripts/test-trendforge-distribution.mjs",
     "distribution:run": "npx tsx scripts/trendforge-distribution.mjs",
     "security:test": "node scripts/test-trendforge-security-reliability.mjs",
-    "security:run": "node scripts/trendforge-security-reliability.mjs"
+    "security:run": "node scripts/trendforge-security-reliability.mjs",
+    "supervisor:test": "node scripts/test-trendforge-supervisor.mjs",
+    "supervisor:run": "node scripts/trendforge-supervisor.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
