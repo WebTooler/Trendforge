@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-16T12:13:16.662Z",
+  "mode": "shadow",
+  "policy": {
+    "advisoryOnly": true,
+    "influencesDecisions": false,
+    "changesPublicationGates": false,
+    "changesEvidenceThresholds": false,
+    "changesClaimThresholds": false,
+    "minimumLearningRuns": 5
+  },
+  "sample": {
+    "runs": 2,
+    "topics": 50,
+    "articles": 6
+  },
+  "decisions": {
+    "samples": 2,
+    "publishCandidateRate": 0,
+    "reviewRate": 57,
+    "holdRate": 43,
+    "rejectRate": 0,
+    "strongEvidenceRate": 0,
+    "singleSourceReadyRate": 24
+  },
+  "evidence": {
+    "samples": 2,
+    "passRate": 10,
+    "blockRate": 36,
+    "strongRate": 0,
+    "singleSourceRate": 10
+  },
+  "claims": {
+    "samples": 2,
+    "passRate": 100,
+    "averageConfidence": 81,
+    "averageUnsupported": 0,
+    "averageClaimsPerArticle": 16
+  },
+  "providers": {
+    "Cerebras": {
+      "samples": 2,
+      "successes": 0,
+      "failures": 14,
+      "successRate": 0,
+      "cooldownRuns": 0,
+      "latestStatus": 402,
+      "latestClass": "error"
+    },
+    "Cohere": {
+      "samples": 2,
+      "successes": 4,
+      "failures": 46,
+      "successRate": 8,
+      "cooldownRuns": 0,
+      "latestStatus": 200,
+      "latestClass": "transient"
+    },
+    "Gemini": {
+      "samples": 2,
+      "successes": 0,
+      "failures": 22,
+      "successRate": 0,
+      "cooldownRuns": 2,
+      "latestStatus": 429,
+      "latestClass": "quota"
+    },
+    "Groq": {
+      "samples": 2,
+      "successes": 6,
+      "failures": 74,
+      "successRate": 8,
+      "cooldownRuns": 2,
+      "latestStatus": 429,
+      "latestClass": "quota"
+    },
+    "OpenAI": {
+      "samples": 2,
+      "successes": 0,
+      "failures": 6,
+      "successRate": 0,
+      "cooldownRuns": 0,
+      "latestStatus": 429,
+      "latestClass": "quota"
+    },
+    "OpenRouter": {
+      "samples": 2,
+      "successes": 0,
+      "failures": 26,
+      "successRate": 0,
+      "cooldownRuns": 0,
+      "latestStatus": 0,
+      "latestClass": "transient"
+    }
+  },
+  "categories": {},
+  "signals": [
+    {
+      "id": "evidence-single-source-dominance",
+      "observation": true,
+      "detail": "Historical evidence currently contains more single-source candidates than strong multi-source candidates.",
+      "sampleRuns": 2,
+      "confidence": "low"
+    },
+    {
+      "id": "claim-verification-pressure",
+      "observation": false,
+      "detail": "Claim-verification history contains unsupported claims in at least some observed article runs.",
+      "sampleRuns": 2,
+      "confidence": "low"
+    },
+    {
+      "id": "provider-reliability-signal",
+      "observation": true,
+      "detail": "Provider success/failure and cooldown history is available for future reliability learning.",
+      "sampleRuns": 2,
+      "confidence": "low"
+    }
+  ],
+  "history": {
+    "previousUpdatedAt": null,
+    "previousVersion": null
+  }
+}
