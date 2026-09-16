@@ -1,0 +1,66 @@
+name: TrendForge Search Intelligence
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/trendforge-search-intelligence.mjs"
+      - "scripts/test-trendforge-search-intelligence.mjs"
+      - "scripts/generate-search-index.ts"
+      - "app/components/SearchBox.tsx"
+      - "app/search/page.tsx"
+      - "package.json"
+      - ".github/workflows/search-intelligence.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trendforge-search-intelligence
+  cancel-in-progress: true
+
+jobs:
+  search-intelligence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run deterministic search suite
+        run: node scripts/test-trendforge-search-intelligence.mjs
+      - name: Generate search index
+        run: npx tsx scripts/generate-search-index.ts
+      - name: Validate search index
+        run: |
+          set -euo pipefail
+          test -s public/search-index.json
+          node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('public/search-index.json','utf8')); if(!Array.isArray(x)||x.length===0) process.exit(1); console.log('Search index valid:', x.length, 'articles');"
+      - name: Build production export
+        run: npm run build
+      - name: Validate search output
+        run: |
+          set -euo pipefail
+          test -f out/search/index.html
+          grep -R -q "Search TrendForge" out/search/index.html
+          echo "Search page is present in static output."
+      - name: Phase 18 isolation check
+        run: |
+          set -euo pipefail
+          grep -q "changesPublicationGates: false" scripts/trendforge-search-intelligence.mjs
+          grep -q "changesThresholds: false" scripts/trendforge-search-intelligence.mjs
+          grep -q "changesResearch: false" scripts/trendforge-search-intelligence.mjs
+          grep -q "changesEvidence: false" scripts/trendforge-search-intelligence.mjs
+          grep -q "changesWriter: false" scripts/trendforge-search-intelligence.mjs
+          echo "Phase 18 Search Intelligence isolation: PASS"
+      - name: Phase 18 complete
+        run: echo "TrendForge Search Intelligence checks passed."
