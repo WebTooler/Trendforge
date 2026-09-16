@@ -22,16 +22,13 @@ jobs:
         uses: actions/checkout@v7
         with:
           ref: main
-
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
           node-version: 24
           package-manager-cache: false
-
       - name: Run self-learning shadow engine
         run: node scripts/trendforge-self-learning.mjs
-
       - name: Validate learning output
         shell: bash
         run: |
@@ -44,13 +41,21 @@ jobs:
           if (x.policy?.advisoryOnly !== true) throw new Error('Learning must remain advisory-only');
           if (x.policy?.influencesDecisions !== false) throw new Error('Learning must not influence decisions');
           if (x.policy?.changesPublicationGates !== false) throw new Error('Learning must not change publication gates');
+          if (x.policy?.changesEvidenceThresholds !== false) throw new Error('Learning must not change evidence thresholds');
+          if (x.policy?.changesClaimThresholds !== false) throw new Error('Learning must not change claim thresholds');
           if (!x.sample || typeof x.sample.runs !== 'number') throw new Error('Learning sample metadata missing');
           if (!x.providers || typeof x.providers !== 'object') throw new Error('Provider learning output missing');
+          if (!x.trends || typeof x.trends !== 'object') throw new Error('Learning trends missing');
           if (!Array.isArray(x.signals)) throw new Error('Learning signals missing');
+          for (const signal of x.signals) {
+            if (!signal.id || !signal.type || typeof signal.observation !== 'boolean') throw new Error('Learning signal identity missing');
+            if (signal.sampleRuns !== x.sample.runs) throw new Error(`Signal provenance mismatch: ${signal.id}`);
+            if (!signal.evidence || typeof signal.evidence !== 'object') throw new Error(`Signal evidence missing: ${signal.id}`);
+          }
           console.log('TrendForge Self-Learning: PASS');
-          console.log(JSON.stringify({ mode: x.mode, runs: x.sample.runs, topics: x.sample.topics, signals: x.signals.length }));
+          console.log(JSON.stringify({ mode: x.mode, runs: x.sample.runs, topics: x.sample.topics, signals: x.signals.length, trendKeys: Object.keys(x.trends.latestVsPrevious || {}) }));
           NODE
-
+          node scripts/test-self-learning.mjs
       - name: Commit learning output
         shell: bash
         run: |
