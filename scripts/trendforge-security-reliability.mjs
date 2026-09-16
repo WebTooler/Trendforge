@@ -38,17 +38,20 @@ pass('workflow inventory', workflowFiles.length > 0, `${workflowFiles.length} wo
 const trackedDangerous = [];
 const scanDirs = ['app', 'lib', 'scripts', '.github'];
 const secretPattern = /(?:BEGIN (?:RSA|EC|OPENSSH|DSA) PRIVATE KEY|AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})/;
+const scannerFile = path.normalize('scripts/trendforge-security-reliability.mjs');
 function scanDir(dir) {
   const full = path.join(root, dir);
   if (!fs.existsSync(full)) return;
   for (const entry of fs.readdirSync(full, { withFileTypes: true })) {
     if (['node_modules', '.next', 'out'].includes(entry.name)) continue;
-    const rel = path.join(dir, entry.name);
+    const rel = path.normalize(path.join(dir, entry.name));
     if (entry.isDirectory()) scanDir(rel);
     else if (entry.isFile()) {
-      // Test harnesses intentionally contain secret-shaped regex fixtures so that
-      // the detector itself can be tested. They are not production credentials.
-      if (dir === 'scripts' && /^test-.*\.mjs$/i.test(entry.name)) continue;
+      // The detector contains intentional secret-shaped regexes, and the test
+      // harness contains fixtures for those patterns. Exclude only those
+      // detector/test files; all other source and workflow files are scanned.
+      if (rel === scannerFile) continue;
+      if (rel.startsWith(`scripts${path.sep}`) && /^test-.*\.mjs$/i.test(entry.name)) continue;
       try { if (secretPattern.test(read(rel))) trackedDangerous.push(rel); } catch {}
     }
   }
@@ -56,7 +59,6 @@ function scanDir(dir) {
 scanDirs.forEach(scanDir);
 pass('credential pattern scan', trackedDangerous.length === 0, trackedDangerous.length ? `Potential credential pattern in ${trackedDangerous.join(', ')}` : 'No known credential patterns found');
 
-const outFiles = exists('out') ? fs.readdirSync(path.join(root, 'out')) : [];
 pass('static output directory', exists('out'), 'Production export directory exists after build');
 if (exists('out')) {
   pass('index output', exists('out/index.html'), 'Homepage static output exists');
