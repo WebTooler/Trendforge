@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { trackEvent } from '@/lib/analytics';
+import { TREND_FORGE_CATEGORIES } from '@/lib/categories';
 
 type SearchArticle = {
   slug: string;
@@ -64,7 +65,10 @@ export default function SearchBox() {
       .finally(() => setLoading(false));
   }, []);
 
-  const categories = useMemo(() => ['All', ...Array.from(new Set(articles.map((article) => article.category))).sort()], [articles]);
+  const categories = useMemo(() => {
+    const articleCategories = Array.from(new Set(articles.map((article) => article.category)));
+    return ['All', ...TREND_FORGE_CATEGORIES, ...articleCategories.filter((item) => !TREND_FORGE_CATEGORIES.includes(item as (typeof TREND_FORGE_CATEGORIES)[number])).sort()];
+  }, [articles]);
 
   const results = useMemo(() => {
     const normalizedQuery = normalize(query).slice(0, MAX_QUERY_LENGTH);
