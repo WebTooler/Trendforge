@@ -17,7 +17,9 @@
     "experiments:run": "node scripts/trendforge-experimentation.mjs",
     "experiments:test": "node scripts/test-experimentation.mjs",
     "performance:run": "node scripts/trendforge-performance.mjs",
-    "performance:test": "node scripts/test-performance.mjs"
+    "performance:test": "node scripts/test-performance.mjs",
+    "lifecycle:run": "node scripts/article-lifecycle.mjs",
+    "lifecycle:test": "node scripts/test-article-lifecycle.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
@@ -29,6 +31,6 @@
     "tsx": "^4.19.2",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0"
+    "@types/react-dom": "^19.0.2"
   }
 }
