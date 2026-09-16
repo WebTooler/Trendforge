@@ -1,0 +1,76 @@
+name: TrendForge Supervisor
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'scripts/trendforge-supervisor.mjs'
+      - 'scripts/test-trendforge-supervisor.mjs'
+      - 'scripts/trendforge-memory.mjs'
+      - 'scripts/trendforge-performance.mjs'
+      - 'package.json'
+      - 'data/trendforge-memory.json'
+      - 'data/trendforge-performance.json'
+      - 'data/trendforge-learning.json'
+      - 'data/trendforge-security-reliability.json'
+      - '.github/workflows/supervisor.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trendforge-supervisor
+  cancel-in-progress: true
+
+jobs:
+  supervisor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Generate search index
+        run: npx tsx scripts/generate-search-index.ts
+      - name: Build production export
+        run: npm run build
+      - name: Run Supervisor deterministic suite
+        run: npm run supervisor:test
+      - name: Validate Supervisor snapshot
+        run: |
+          set -euo pipefail
+          test -f data/trendforge-supervisor.json
+          grep -q '"mode": "advisory-observational"' data/trendforge-supervisor.json
+          grep -q '"influencesDecisions": false' data/trendforge-supervisor.json
+          grep -q '"changesPublicationGates": false' data/trendforge-supervisor.json
+          grep -q '"changesEvidenceThresholds": false' data/trendforge-supervisor.json
+          grep -q '"changesClaimThresholds": false' data/trendforge-supervisor.json
+          grep -q '"changesSafetyGates": false' data/trendforge-supervisor.json
+          grep -q '"autoPublish": false' data/trendforge-supervisor.json
+          echo 'Phase 23 Supervisor snapshot validation: PASS'
+      - name: Verify required static outputs
+        run: |
+          set -euo pipefail
+          for file in out/index.html out/robots.txt out/sitemap.xml out/search-index.json; do test -f "$file"; done
+          echo 'Required static outputs are present.'
+      - name: Final Phase 23 isolation check
+        run: |
+          set -euo pipefail
+          grep -q 'influencesDecisions: false' scripts/trendforge-supervisor.mjs || grep -q 'influencesDecisions.*false' scripts/trendforge-supervisor.mjs
+          grep -q 'changesPublicationGates: false' scripts/trendforge-supervisor.mjs
+          grep -q 'changesEvidenceThresholds: false' scripts/trendforge-supervisor.mjs
+          grep -q 'changesClaimThresholds: false' scripts/trendforge-supervisor.mjs
+          grep -q 'changesSafetyGates: false' scripts/trendforge-supervisor.mjs
+          grep -q 'autoPublish: false' scripts/trendforge-supervisor.mjs
+          echo 'Phase 23 Supervisor isolation: PASS'
+      - name: Phase 23 complete
+        run: echo 'TrendForge Supervisor checks passed.'
