@@ -6,6 +6,8 @@ on:
     paths:
       - 'scripts/trendforge-security-reliability.mjs'
       - 'scripts/test-trendforge-security-reliability.mjs'
+      - 'scripts/generate-search-index.ts'
+      - 'lib/articles.ts'
       - 'package.json'
       - 'docs/SECURITY-RELIABILITY.md'
       - '.github/workflows/security-reliability.yml'
@@ -42,6 +44,8 @@ jobs:
             if [ "$attempt" -lt 3 ]; then sleep $((attempt * 10)); fi
           done
           exit 1
+      - name: Generate search index
+        run: npx tsx scripts/generate-search-index.ts
       - name: Build production export
         run: npm run build
       - name: Run deterministic security suite
