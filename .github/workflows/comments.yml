@@ -76,8 +76,8 @@ jobs:
             echo "Comments widget heading not found in static article output."
             exit 1
           fi
-          if ! grep -R -q "utteranc.es" out/article; then
-            echo "Utterances client not found in static article output."
+          if ! grep -R -q "utteranc.es" out; then
+            echo "Utterances client not found in production output."
             exit 1
           fi
           echo "Comments widget is present in static article output."
