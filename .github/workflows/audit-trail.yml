@@ -1,0 +1,82 @@
+name: TrendForge Complete Audit Trail
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'scripts/trendforge-audit-trail.mjs'
+      - 'scripts/test-trendforge-audit-trail.mjs'
+      - 'scripts/trendforge-memory.mjs'
+      - 'scripts/trendforge-memory-query.mjs'
+      - 'scripts/trendforge-supervisor.mjs'
+      - 'scripts/trendforge-performance.mjs'
+      - 'scripts/trendforge-self-learning.mjs'
+      - 'scripts/trendforge-security-reliability.mjs'
+      - 'data/trendforge-memory.json'
+      - 'data/trendforge-supervisor.json'
+      - 'data/trendforge-performance.json'
+      - 'data/trendforge-learning.json'
+      - 'data/trendforge-security-reliability.json'
+      - 'package.json'
+      - '.github/workflows/audit-trail.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trendforge-audit-trail
+  cancel-in-progress: true
+
+jobs:
+  audit-trail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Generate search index
+        run: npx tsx scripts/generate-search-index.ts
+      - name: Build production export
+        run: npm run build
+      - name: Run Audit Trail deterministic suite
+        run: npm run audit:test
+      - name: Validate Audit Trail snapshot
+        run: |
+          set -euo pipefail
+          test -f data/trendforge-audit-trail.json
+          grep -q '"mode": "append-only-observational"' data/trendforge-audit-trail.json
+          grep -q '"storesSecrets": false' data/trendforge-audit-trail.json
+          grep -q '"influencesDecisions": false' data/trendforge-audit-trail.json
+          grep -q '"changesPublicationGates": false' data/trendforge-audit-trail.json
+          grep -q '"changesEvidenceThresholds": false' data/trendforge-audit-trail.json
+          grep -q '"changesClaimThresholds": false' data/trendforge-audit-trail.json
+          grep -q '"changesSafetyGates": false' data/trendforge-audit-trail.json
+          grep -q '"autoPublish": false' data/trendforge-audit-trail.json
+          echo 'Phase 24 Audit Trail snapshot validation: PASS'
+      - name: Verify required static outputs
+        run: |
+          set -euo pipefail
+          for file in out/index.html out/robots.txt out/sitemap.xml out/search-index.json; do test -f "$file"; done
+          echo 'Required static outputs are present.'
+      - name: Final Phase 24 isolation check
+        run: |
+          set -euo pipefail
+          grep -q 'influencesDecisions: false' scripts/trendforge-audit-trail.mjs || grep -q 'influencesDecisions.*false' scripts/trendforge-audit-trail.mjs
+          grep -q 'changesPublicationGates: false' scripts/trendforge-audit-trail.mjs
+          grep -q 'changesEvidenceThresholds: false' scripts/trendforge-audit-trail.mjs
+          grep -q 'changesClaimThresholds: false' scripts/trendforge-audit-trail.mjs
+          grep -q 'changesSafetyGates: false' scripts/trendforge-audit-trail.mjs
+          grep -q 'autoPublish: false' scripts/trendforge-audit-trail.mjs
+          echo 'Phase 24 Audit Trail isolation: PASS'
+      - name: Phase 24 complete
+        run: echo 'TrendForge Complete Audit Trail checks passed.'
