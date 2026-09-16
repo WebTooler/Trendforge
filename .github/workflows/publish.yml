@@ -13,6 +13,7 @@ on:
       - 'scripts/evidence-integrity-preflight.mjs'
       - 'scripts/verify-article-claims.mjs'
       - 'scripts/verify-article-claims-v2.mjs'
+      - 'scripts/verify-article-claims-smart.mjs'
       - 'scripts/repair-article-grounding.mjs'
       - 'scripts/editorial-intelligence.mjs'
       - 'scripts/article-lifecycle.mjs'
@@ -38,16 +39,17 @@ concurrency:
 permissions:
   contents: write
 
+env:
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+  GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+  OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+  OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+  COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+  COHERE_MODEL: ${{ vars.COHERE_MODEL }}
+
 jobs:
   pipeline:
     runs-on: ubuntu-latest
-    env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-      OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
-      COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
-      COHERE_MODEL: ${{ vars.COHERE_MODEL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -87,23 +89,13 @@ jobs:
             name="$(basename "$article" .md)"
             dir="data/article-attempts/${stamp}-${name}"
             suffix=1
-            while [ -e "$dir" ]; do
-              dir="data/article-attempts/${stamp}-${name}-${suffix}"
-              suffix=$((suffix + 1))
-            done
+            while [ -e "$dir" ]; do dir="${dir}-${suffix}"; suffix=$((suffix + 1)); done
             mkdir -p "$dir"
             cp "$article" "$dir/article.md"
             if [ -f data/article-brief.json ]; then cp data/article-brief.json "$dir/article-brief.json"; fi
             if [ -f data/decision-queue.json ]; then cp data/decision-queue.json "$dir/decision-queue.json"; fi
             cat > "$dir/metadata.json" <<EOF
-          {
-            "archivedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-            "status": "generated-pending-verification",
-            "articleFile": "$(basename "$article")",
-            "articlePath": "$article",
-            "workflowRun": "${GITHUB_RUN_ID:-unknown}",
-            "workflowSha": "${GITHUB_SHA:-unknown}"
-          }
+          {"archivedAt":"$(date -u +%Y-%m-%dT%H:%M:%SZ)","status":"generated-pending-verification","articleFile":"$(basename "$article")","articlePath":"$article","workflowRun":"${GITHUB_RUN_ID:-unknown}","workflowSha":"${GITHUB_SHA:-unknown}"}
           EOF
             echo "Archived generated article attempt: $dir"
           done < <(git status --porcelain --untracked-files=all -- content/articles | sed -n 's/^?? //p')
@@ -142,18 +134,9 @@ jobs:
           reverify1='${{ steps.claim_reverification_1.outcome }}'
           repair2='${{ steps.grounding_repair_2.outcome }}'
           final='${{ steps.claim_verification_final.outcome }}'
-          if [ "$initial" = "success" ]; then
-            echo 'Claim verification gate: PASS on initial verification.'
-            exit 0
-          fi
-          if [ "$reverify1" = "success" ]; then
-            echo 'Claim verification gate: PASS after first surgical repair.'
-            exit 0
-          fi
-          if [ "$final" = "success" ]; then
-            echo 'Claim verification gate: PASS after second surgical repair.'
-            exit 0
-          fi
+          if [ "$initial" = "success" ]; then exit 0; fi
+          if [ "$reverify1" = "success" ]; then exit 0; fi
+          if [ "$final" = "success" ]; then exit 0; fi
           echo "Claim verification gate: BLOCK — bounded repair exhausted (initial=$initial repair1=$repair1 reverify1=$reverify1 repair2=$repair2 final=$final)."
           exit 1
       - name: Upload article attempt diagnostics
@@ -206,35 +189,17 @@ jobs:
           if [ -d content/articles ]; then git add content/articles; fi
           echo '--- staged changes ---'
           git status --short
-          if git diff --cached --quiet; then
-            echo 'No pipeline output changes to commit.'
-            exit 0
-          fi
+          if git diff --cached --quiet; then echo 'No pipeline output changes to commit.'; exit 0; fi
           git commit -m 'chore: update TrendForge content pipeline'
-          if ! git diff --quiet || ! git diff --cached --quiet; then
-            echo '--- post-commit residue; resetting to committed pipeline output ---'
-            git status --short
-            git reset --hard HEAD
-          fi
+          if ! git diff --quiet || ! git diff --cached --quiet; then git reset --hard HEAD; fi
           output_commit="$(git rev-parse HEAD)"
           git fetch origin main
           git reset --hard origin/main
           generated_files="$(git diff-tree --no-commit-id --name-only -r "$output_commit" -- data lib/articles.ts public/images/articles content/articles 2>/dev/null || true)"
-          if [ -z "$generated_files" ]; then
-            echo 'No generated output paths found in pipeline commit.'
-            exit 0
-          fi
-          echo '--- transplanting generated output onto latest main ---'
-          printf '%s\n' "$generated_files"
-          while IFS= read -r path; do
-            [ -z "$path" ] && continue
-            git checkout "$output_commit" -- "$path"
-          done <<< "$generated_files"
+          if [ -z "$generated_files" ]; then echo 'No generated output paths found in pipeline commit.'; exit 0; fi
+          while IFS= read -r path; do [ -z "$path" ] && continue; git checkout "$output_commit" -- "$path"; done <<< "$generated_files"
           git add $generated_files
-          if git diff --cached --quiet; then
-            echo 'Generated output is already present on main.'
-            exit 0
-          fi
+          if git diff --cached --quiet; then echo 'Generated output is already present on main.'; exit 0; fi
           git commit -m 'chore: update TrendForge content pipeline'
           git push origin HEAD:main
           echo 'Pipeline output pushed successfully without rebasing source commits.'
