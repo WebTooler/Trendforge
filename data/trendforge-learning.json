@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedAt": "2026-09-16T12:13:16.662Z",
+  "version": 2,
+  "updatedAt": "2026-09-16T12:17:45.234Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -94,32 +94,147 @@
       "latestClass": "transient"
     }
   },
-  "categories": {},
+  "categories": {
+    "AI": {
+      "topicSamples": 3,
+      "averageScore": 76,
+      "averageConfidence": 86,
+      "evidenceLevels": {
+        "single-source-verified": 1,
+        "none": 2
+      },
+      "decisions": {
+        "review": 3
+      }
+    },
+    "Crypto": {
+      "topicSamples": 20,
+      "averageScore": 73,
+      "averageConfidence": 82,
+      "evidenceLevels": {
+        "none": 20
+      },
+      "decisions": {
+        "review": 20
+      }
+    },
+    "Digital Life": {
+      "topicSamples": 4,
+      "averageScore": 75,
+      "averageConfidence": 87,
+      "evidenceLevels": {
+        "none": 4
+      },
+      "decisions": {
+        "review": 4
+      }
+    },
+    "Innovation": {
+      "topicSamples": 11,
+      "averageScore": 60,
+      "averageConfidence": 60,
+      "evidenceLevels": {
+        "none": 11
+      },
+      "decisions": {
+        "hold": 11
+      }
+    },
+    "Product Launches": {
+      "topicSamples": 12,
+      "averageScore": 62,
+      "averageConfidence": 66,
+      "evidenceLevels": {
+        "none": 12
+      },
+      "decisions": {
+        "review": 2,
+        "hold": 10
+      }
+    }
+  },
+  "trends": {
+    "latestVsPrevious": {
+      "evidencePassRate": 0,
+      "evidenceBlockRate": 0,
+      "claimConfidence": 0,
+      "claimUnsupported": 0,
+      "editorialAverage": 0
+    },
+    "latestRunAt": "2026-09-16T11:37:47.883Z",
+    "previousRunAt": "2026-09-16T11:31:30.364Z"
+  },
   "signals": [
     {
       "id": "evidence-single-source-dominance",
+      "type": "evidence",
       "observation": true,
       "detail": "Historical evidence currently contains more single-source candidates than strong multi-source candidates.",
+      "confidence": "low",
       "sampleRuns": 2,
-      "confidence": "low"
+      "evidence": {
+        "singleSource": 42,
+        "strong": 0
+      }
     },
     {
       "id": "claim-verification-pressure",
+      "type": "claims",
       "observation": false,
       "detail": "Claim-verification history contains unsupported claims in at least some observed article runs.",
+      "confidence": "low",
       "sampleRuns": 2,
-      "confidence": "low"
+      "evidence": {
+        "averageUnsupported": 0
+      }
     },
     {
       "id": "provider-reliability-signal",
+      "type": "provider",
       "observation": true,
-      "detail": "Provider success/failure and cooldown history is available for future reliability learning.",
+      "detail": "Provider success/failure and cooldown history is available for reliability learning.",
+      "confidence": "low",
       "sampleRuns": 2,
-      "confidence": "low"
+      "evidence": {
+        "providers": 6
+      }
+    },
+    {
+      "id": "evidence-pass-rate-change",
+      "type": "trend",
+      "observation": false,
+      "detail": "Evidence pass rate changed by +0 percentage points versus the previous run.",
+      "confidence": "low",
+      "sampleRuns": 2,
+      "evidence": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "claim-confidence-change",
+      "type": "trend",
+      "observation": false,
+      "detail": "Average claim confidence changed by +0 points versus the previous run.",
+      "confidence": "low",
+      "sampleRuns": 2,
+      "evidence": {
+        "delta": 0
+      }
+    },
+    {
+      "id": "claim-unsupported-change",
+      "type": "trend",
+      "observation": false,
+      "detail": "Unsupported-claim count changed by +0 versus the previous run.",
+      "confidence": "low",
+      "sampleRuns": 2,
+      "evidence": {
+        "delta": 0
+      }
     }
   ],
   "history": {
-    "previousUpdatedAt": null,
-    "previousVersion": null
+    "previousUpdatedAt": "2026-09-16T12:13:16.662Z",
+    "previousVersion": 1
   }
 }
