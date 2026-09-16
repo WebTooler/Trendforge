@@ -12,10 +12,10 @@
     },
     "Gemini": {
       "failures": 9,
-      "quotaBlockedUntil": 1789533232511,
-      "lastStatus": 200,
-      "lastError": "Invalid structured output",
-      "lastClass": "transient"
+      "quotaBlockedUntil": 1789555848930,
+      "lastStatus": 429,
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 11.08719637s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n ",
+      "lastClass": "quota"
     },
     "OpenAI": {
       "failures": 3,
@@ -33,14 +33,14 @@
     },
     "OpenRouter": {
       "failures": 12,
-      "quotaBlockedUntil": 1789533261709,
+      "quotaBlockedUntil": 1789534306881,
       "lastStatus": 200,
       "lastError": "Invalid structured output",
       "lastClass": "transient"
     },
     "Cohere": {
-      "failures": 20,
-      "quotaBlockedUntil": 1789497142001,
+      "failures": 21,
+      "quotaBlockedUntil": 1789534277697,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -48,6 +48,6 @@
       "lastSuccessAt": "2026-09-15T14:16:49.634Z"
     }
   },
-  "rotationCursor": 2,
-  "updatedAt": "2026-09-16T04:47:41.292Z"
+  "rotationCursor": 1,
+  "updatedAt": "2026-09-16T04:51:19.627Z"
 }
