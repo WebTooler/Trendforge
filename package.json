@@ -22,7 +22,9 @@
     "lifecycle:test": "node scripts/test-article-lifecycle.mjs",
     "comments:test": "node scripts/test-trendforge-comments.mjs",
     "trust-moderation:test": "node scripts/test-trendforge-trust-moderation.mjs",
-    "seo:test": "node scripts/test-trendforge-seo-intelligence.mjs"
+    "seo:test": "node scripts/test-trendforge-seo-intelligence.mjs",
+    "monetization:test": "node scripts/test-trendforge-monetization.mjs",
+    "monetization:run": "npx tsx scripts/trendforge-monetization.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
