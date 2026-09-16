@@ -26,7 +26,9 @@ jobs:
       - name: Capture V2 memory
         run: node scripts/trendforge-memory.mjs
       - name: Validate memory
-        run: node -e "JSON.parse(require('fs').readFileSync('data/trendforge-memory.json','utf8')); console.log('TrendForge Memory JSON: PASS')"
+        shell: bash
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/trendforge-memory.json','utf8')); console.log('TrendForge Memory JSON: PASS')"
       - name: Commit memory
         shell: bash
         run: |
