@@ -1,16 +1,22 @@
 {
-  "version": 1,
-  "generatedAt": "2026-09-16T09:44:47.004Z",
+  "version": 2,
+  "generatedAt": "2026-09-16T13:06:25.143Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
+    "maxQueueSize": 50,
     "doesNotAutoRewrite": true,
-    "maxQueueSize": 50
+    "doesNotDeleteArticles": true,
+    "duplicateDetectionOnly": true,
+    "preservesPublicationGates": true
   },
   "summary": {
     "articles": 6,
     "refreshCandidates": 0,
-    "watch": 3
+    "watch": 3,
+    "fresh": 3,
+    "stale": 0,
+    "duplicateClusters": 0
   },
   "articles": [
     {
@@ -18,68 +24,137 @@
       "title": "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
       "category": "AI",
       "publishedAt": "2026-09-12T20:32:22.309Z",
-      "ageDays": 3.6,
+      "ageDays": 3.7,
+      "ageState": "fresh",
       "words": 810,
       "sourceCount": 2,
       "refreshScore": 51,
-      "status": "watch"
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
     },
     {
       "file": "beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.md",
       "title": "Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
       "category": "Digital Life",
       "publishedAt": "2026-09-13T11:49:56.851Z",
-      "ageDays": 2.9,
+      "ageDays": 3.1,
+      "ageState": "fresh",
       "words": 851,
       "sourceCount": 2,
       "refreshScore": 51,
-      "status": "watch"
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
     },
     {
       "file": "how-to-move-passwords-and-passkeys-between-managers-on-android.md",
       "title": "How to Move Passwords and Passkeys Between Managers on Android",
       "category": "How-To",
       "publishedAt": "2026-09-14T03:19:21.719Z",
-      "ageDays": 2.3,
+      "ageDays": 2.4,
+      "ageState": "fresh",
       "words": 450,
       "sourceCount": 2,
       "refreshScore": 46,
-      "status": "watch"
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
     },
     {
       "file": "how-to-set-up-a-passkey-for-your-google-account.md",
       "title": "How to Set Up a Passkey for Your Google Account",
       "category": "How-To",
       "publishedAt": "2026-09-14T04:53:59.646Z",
-      "ageDays": 2.2,
+      "ageDays": 2.3,
+      "ageState": "fresh",
       "words": 373,
       "sourceCount": 2,
       "refreshScore": 42,
-      "status": "fresh"
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": [
+        "content below 450 words"
+      ]
     },
     {
       "file": "how-to-update-android-apps-safely-and-keep-them-current.md",
       "title": "How to Update Android Apps Safely and Keep Them Current",
       "category": "How-To",
       "publishedAt": "2026-09-14T04:13:03.838Z",
-      "ageDays": 2.2,
+      "ageDays": 2.4,
+      "ageState": "fresh",
       "words": 347,
       "sourceCount": 2,
       "refreshScore": 42,
-      "status": "fresh"
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": [
+        "content below 450 words"
+      ]
     },
     {
       "file": "exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost.md",
       "title": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
       "category": "Technology",
       "publishedAt": "2026-09-16T09:01:41.744Z",
-      "ageDays": 0,
+      "ageDays": 0.2,
+      "ageState": "fresh",
       "words": 540,
       "sourceCount": 1,
       "refreshScore": 39,
-      "status": "fresh"
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": []
     }
   ],
   "refreshQueue": [],
-  "clusters": []
+  "watchQueue": [
+    {
+      "file": "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.md",
+      "title": "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
+      "category": "AI",
+      "publishedAt": "2026-09-12T20:32:22.309Z",
+      "ageDays": 3.7,
+      "ageState": "fresh",
+      "words": 810,
+      "sourceCount": 2,
+      "refreshScore": 51,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 1
+    },
+    {
+      "file": "beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.md",
+      "title": "Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
+      "category": "Digital Life",
+      "publishedAt": "2026-09-13T11:49:56.851Z",
+      "ageDays": 3.1,
+      "ageState": "fresh",
+      "words": 851,
+      "sourceCount": 2,
+      "refreshScore": 51,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 2
+    },
+    {
+      "file": "how-to-move-passwords-and-passkeys-between-managers-on-android.md",
+      "title": "How to Move Passwords and Passkeys Between Managers on Android",
+      "category": "How-To",
+      "publishedAt": "2026-09-14T03:19:21.719Z",
+      "ageDays": 2.4,
+      "ageState": "fresh",
+      "words": 450,
+      "sourceCount": 2,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 3
+    }
+  ],
+  "duplicateClusters": []
 }
