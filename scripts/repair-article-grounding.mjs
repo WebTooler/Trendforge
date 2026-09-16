@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import { generateWithTrendForgeWriter } from './trendforge-writer-engine.mjs';
+import { generateWithTrendForgeRepair } from './trendforge-writer-engine.mjs';
 
 const articleDir='content/articles';
 const briefPath='data/article-brief.json';
@@ -7,9 +7,8 @@ const claimPath='data/claim-verification.json';
 const titleFrom=r=>(r.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
 const descriptionFrom=r=>(r.match(/^description:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
 const latestArticle=()=>{if(!fs.existsSync(articleDir))throw new Error('No article directory');const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(`${articleDir}/${b}`).mtimeMs-fs.statSync(`${articleDir}/${a}`).mtimeMs);if(!files.length)throw new Error('No generated article found');return `${articleDir}/${files[0]}`;};
-const parseJson=raw=>{const t=String(raw).trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'');for(const x of [t,(()=>{const a=t.indexOf('{'),b=t.lastIndexOf('}');return a>=0&&b>a?t.slice(a,b+1):''})()]){if(!x)continue;try{return JSON.parse(x)}catch{}}throw new Error('Writer repair output was not valid JSON');};
-const escapeJsonText=x=>String(x).replace(/\r?\n/g,' ').trim();
-const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle||!rep)return{body,changed:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true};};
+const parseJson=raw=>{const t=String(raw).trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'');for(const x of [t,(()=>{const a=t.indexOf('{'),b=t.lastIndexOf('}');return a>=0&&b>a?t.slice(a,b+1):''})()]){if(!x)continue;try{return JSON.parse(x)}catch{}}throw new Error('Atomic repair output was not valid JSON');};
+const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle)return{body,changed:false,deleted:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false,deleted:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true,deleted:!rep};};
 
 async function main(){
  const articlePath=latestArticle(),raw=fs.readFileSync(articlePath,'utf8');
@@ -38,17 +37,17 @@ async function main(){
   'Return JSON only: {"repairs":[{"original":"...","replacement":"..."}]}.'
  ].join('\n\n');
  let out;
- try{out=await generateWithTrendForgeWriter({prompt,category:brief?.brief?.category||process.env.TRENDFORGE_WRITER_CATEGORY||'Technology',expectedTitle:oldTitle});}
+ try{out=await generateWithTrendForgeRepair({prompt});}
  catch(e){throw new Error(`Grounding repair provider failed: ${e?.message||String(e)}`)}
  const parsed=parseJson(out.text);
  if(!Array.isArray(parsed.repairs))throw new Error('Atomic repair response missing repairs array.');
  let updatedBody=body,applied=0,deleted=0;
- for(const r of parsed.repairs.slice(0,12)){if(!r||typeof r.original!=='string'||typeof r.replacement!=='string')continue;const result=replaceSentence(updatedBody,r.original,r.replacement);if(!result.changed)continue;updatedBody=result.body;applied++;if(!r.replacement.trim())deleted++;}
+ for(const r of parsed.repairs.slice(0,12)){if(!r||typeof r.original!=='string'||typeof r.replacement!=='string')continue;const result=replaceSentence(updatedBody,r.original,r.replacement);if(!result.changed)continue;updatedBody=result.body;applied++;if(result.deleted)deleted++;}
  if(!applied)throw new Error('Atomic repair produced no matching sentence replacements.');
  const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
  const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
  fs.writeFileSync(articlePath,`${frontmatter}\n\n${updatedBody.trim()}\n${sources||''}\n`);
- fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-replacement-v6',providerAttempts:1,appliedRepairs:applied,deletedSentences:deleted},null,2)+'\n');
- console.log(`Grounding repair v6: applied ${applied} atomic sentence repair(s) (${deleted} deleted unsupported sentence(s)); unrelated article content preserved using ${out.provider}.`);
+ fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-replacement-v7-dedicated-provider',providerAttempts:1,appliedRepairs:applied,deletedSentences:deleted,wordCountValidation:'not_applicable'},null,2)+'\n');
+ console.log(`Grounding repair v7: applied ${applied} atomic sentence repair(s) (${deleted} deleted unsupported sentence(s)); unrelated article content preserved using dedicated repair provider ${out.provider}.`);
 }
 main().catch(e=>{console.error(`Grounding repair failed: ${e?.message||String(e)}`);process.exit(1)});
