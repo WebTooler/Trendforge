@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T09:11:54.058Z",
+  "generatedAt": "2026-09-17T09:55:38.298Z",
   "policy": {
     "privacyFirst": true,
     "no_scraping": true,
@@ -16,6 +16,38 @@
     "Direct"
   ],
   "articlePlans": [
+    {
+      "slug": "iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae",
+      "title": "Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
+      "category": "Technology",
+      "channels": [
+        {
+          "channel": "Google Search",
+          "action": "publish and keep canonical/indexable",
+          "reason": "organic discovery"
+        },
+        {
+          "channel": "Newsletter",
+          "action": "include when relevant",
+          "reason": "subscriber retention"
+        },
+        {
+          "channel": "RSS",
+          "action": "make available through feed",
+          "reason": "reader-controlled distribution"
+        },
+        {
+          "channel": "Social",
+          "action": "share a concise human-written excerpt",
+          "reason": "additional discovery"
+        },
+        {
+          "channel": "Direct",
+          "action": "link from related articles",
+          "reason": "internal discovery"
+        }
+      ]
+    },
     {
       "slug": "how-to-update-android-apps-safely-and-keep-them-current",
       "title": "How to Update Android Apps Safely and Keep Them Current",
@@ -306,7 +338,7 @@
     }
   ],
   "summary": {
-    "articlesPlanned": 9,
+    "articlesPlanned": 10,
     "externalPostingPerformed": false
   }
 }

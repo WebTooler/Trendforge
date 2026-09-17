@@ -7,8 +7,8 @@
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 7,
-      "lastSuccessAt": "2026-09-17T09:11:50.170Z"
+      "successes": 8,
+      "lastSuccessAt": "2026-09-17T09:55:35.186Z"
     },
     "Gemini": {
       "failures": 12,
@@ -32,33 +32,33 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 18,
-      "quotaBlockedUntil": 1789636285797,
-      "lastStatus": 200,
-      "lastError": "Empty model response",
+      "failures": 19,
+      "quotaBlockedUntil": 1789638884773,
+      "lastStatus": 0,
+      "lastError": "The operation was aborted due to timeout",
       "lastClass": "transient",
       "successes": 1,
       "lastSuccessAt": "2026-09-17T08:52:26.293Z"
     },
     "Cohere": {
-      "failures": 28,
+      "failures": 30,
       "quotaBlockedUntil": 0,
       "lastStatus": 200,
       "lastError": "Empty atomic repair response",
       "lastClass": "error",
-      "successes": 3,
-      "lastSuccessAt": "2026-09-17T09:11:07.523Z"
+      "successes": 4,
+      "lastSuccessAt": "2026-09-17T09:55:20.522Z"
     },
     "Cloudflare": {
-      "failures": 5,
+      "failures": 7,
       "successes": 0,
-      "quotaBlockedUntil": 1789636325450,
+      "quotaBlockedUntil": 1789638939559,
       "lastStatus": 0,
       "lastError": "Cloudflare response-shape: generated response was not text (keys=result,success,errors,messages).",
       "lastClass": "transient",
       "lastSuccessAt": 0
     }
   },
-  "rotationCursor": 1,
-  "updatedAt": "2026-09-17T09:11:50.170Z"
+  "rotationCursor": 2,
+  "updatedAt": "2026-09-17T09:55:35.186Z"
 }

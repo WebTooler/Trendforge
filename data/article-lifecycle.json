@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-17T09:12:30.532Z",
+  "generatedAt": "2026-09-17T09:55:38.204Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,10 +11,10 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 9,
+    "articles": 10,
     "refreshCandidates": 0,
     "watch": 3,
-    "fresh": 6,
+    "fresh": 7,
     "stale": 0,
     "duplicateClusters": 0
   },
@@ -24,7 +24,7 @@
       "title": "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
       "category": "AI",
       "publishedAt": "2026-09-12T20:32:22.309Z",
-      "ageDays": 4.5,
+      "ageDays": 4.6,
       "ageState": "fresh",
       "words": 810,
       "sourceCount": 2,
@@ -52,7 +52,7 @@
       "title": "How to Move Passwords and Passkeys Between Managers on Android",
       "category": "How-To",
       "publishedAt": "2026-09-14T03:19:21.719Z",
-      "ageDays": 3.2,
+      "ageDays": 3.3,
       "ageState": "fresh",
       "words": 450,
       "sourceCount": 2,
@@ -150,6 +150,22 @@
       "reasons": [
         "content below 450 words"
       ]
+    },
+    {
+      "file": "iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae.md",
+      "title": "Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
+      "category": "Technology",
+      "publishedAt": "2026-09-17T09:55:20.528Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 381,
+      "sourceCount": 1,
+      "refreshScore": 35,
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": [
+        "content below 450 words"
+      ]
     }
   ],
   "refreshQueue": [],
@@ -159,7 +175,7 @@
       "title": "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
       "category": "AI",
       "publishedAt": "2026-09-12T20:32:22.309Z",
-      "ageDays": 4.5,
+      "ageDays": 4.6,
       "ageState": "fresh",
       "words": 810,
       "sourceCount": 2,
@@ -189,7 +205,7 @@
       "title": "How to Move Passwords and Passkeys Between Managers on Android",
       "category": "How-To",
       "publishedAt": "2026-09-14T03:19:21.719Z",
-      "ageDays": 3.2,
+      "ageDays": 3.3,
       "ageState": "fresh",
       "words": 450,
       "sourceCount": 2,
