@@ -39,11 +39,11 @@ const tests: Array<{ slug: string; brief: VisualBrief }> = [
     brief: {
       coreSubject: 'secure transfer of passwords and passkeys between Android password managers',
       event: 'a safer direct migration flow that avoids creating a downloadable credential export file',
-      keyObject: 'an Android smartphone showing a clean, abstract credential-transfer flow between two secure password-manager containers',
+      keyObject: 'an Android smartphone with two abstract secure credential-manager containers connected by a controlled transfer path',
       context: 'a realistic everyday mobile-security setting with the phone as the clear hero subject',
       visualConcept: 'secure credentials moving directly from one protected manager to another while sensitive data remains contained on the device',
-      supportingDetails: 'two distinct secure credential vaults, a controlled transfer path, passkey-style authentication symbol, subtle Android-like mobile hardware cues without copying any real interface',
-      avoid: 'generic hacker, hooded person, giant padlock icon, fake readable UI, password text, binary code wallpaper, desktop server room, sci-fi holograms',
+      supportingDetails: 'two distinct blank secure vault cards, a clean transfer arrow, a simple passkey-style authentication symbol, subtle Android-like mobile hardware cues without copying any real interface',
+      avoid: 'generic hacker, hooded person, giant padlock icon, readable UI, fake app names, password text, binary code wallpaper, desktop server room, sci-fi holograms',
     },
   },
   {
@@ -96,13 +96,19 @@ function buildPrompt(brief: VisualBrief) {
     'Preserve useful negative space around the focal subject for responsive article-card crops.',
     'Do not place essential visual information at the extreme edges.',
     '',
+    'TEXT AND BRAND CONTROL',
+    'Absolutely no readable text anywhere in the image.',
+    'All screens, labels, signs, badges, interfaces and panels must be blank, abstract, or purely graphical with no glyphs or words.',
+    'All hardware surfaces must be unbranded: no logos, brand marks, product names, serial labels or recognizable trademark shapes.',
+    'Do not invent fake company names or pseudo-readable lettering.',
+    '',
     'DO NOT DEVIATE',
     `Avoid: ${brief.avoid}.`,
-    'No readable text, captions, headlines, watermarks, logos, trademarks, fake screenshots, or copied publication artwork.',
+    'No captions, headlines, watermarks, fake screenshots, or copied publication artwork.',
     'No misleading photorealistic depiction of a real person.',
     '',
     'FINAL PRIORITY',
-    'Story relevance > subject clarity > factual visual grounding > composition > realism > decorative detail.',
+    'Story relevance > subject clarity > factual visual grounding > composition > clean brand-safe rendering > realism > decorative detail.',
   ].join('\n');
 }
 
