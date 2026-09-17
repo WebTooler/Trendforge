@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T09:55:38.251Z",
+  "generatedAt": "2026-09-17T11:43:35.946Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 10,
-    "averageEditorialScore": 76,
-    "editorialReviewCount": 8,
+    "totalArticles": 11,
+    "averageEditorialScore": 75,
+    "editorialReviewCount": 9,
     "refreshCandidates": 0
   },
   "categoryMix": [
     {
       "category": "AI",
-      "count": 3,
-      "share": 30
+      "count": 4,
+      "share": 36.4
     },
     {
       "category": "Technology",
       "count": 3,
-      "share": 30
+      "share": 27.3
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 30
+      "share": 27.3
     },
     {
       "category": "Innovation",
@@ -41,7 +41,7 @@
     {
       "category": "Digital Life",
       "count": 1,
-      "share": 10
+      "share": 9.1
     },
     {
       "category": "Crypto",
@@ -54,12 +54,20 @@
     "Product Launches",
     "Crypto"
   ],
-  "overrepresentedCategories": [],
+  "overrepresentedCategories": [
+    "AI"
+  ],
   "recommendations": [
     "Prioritize missing categories: Innovation, Product Launches, Crypto.",
-    "8 article(s) are in editorial review; improve them before treating them as growth winners."
+    "Reduce short-term concentration in: AI.",
+    "9 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
+    {
+      "title": "Comp AI raises $34M Series A to build agentic security and compliance platform",
+      "category": "AI",
+      "publishedAt": "2026-09-17T11:43:31.038Z"
+    },
     {
       "title": "Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
       "category": "Technology",
@@ -104,11 +112,6 @@
       "title": "Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
       "category": "Digital Life",
       "publishedAt": "2026-09-13T11:49:56.851Z"
-    },
-    {
-      "title": "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
-      "category": "AI",
-      "publishedAt": "2026-09-12T20:32:22.309Z"
     }
   ]
 }

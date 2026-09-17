@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-17T09:55:36.124Z",
+  "generatedAt": "2026-09-17T11:43:33.870Z",
   "status": "pass",
-  "currentGeneratedArticle": "iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae",
-  "currentScore": 87,
+  "currentGeneratedArticle": "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform",
+  "currentScore": 85,
   "identity": {
     "method": "brief.title",
     "rejectedMarker": false
@@ -73,13 +73,13 @@
       "slug": "apple-eyes-2029-ai-server-with-m-series-ultra-chips",
       "title": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
       "category": "Technology",
-      "score": 71,
+      "score": 69,
       "decision": "review",
       "dimensions": {
         "evidence": 50,
         "usefulness": 97,
         "clarity": 100,
-        "originality": 100,
+        "originality": 86,
         "sourceStrength": 21
       },
       "reasons": [
@@ -102,6 +102,23 @@
       },
       "reasons": [
         "evidence confidence needs improvement",
+        "source strength/diversity needs improvement"
+      ]
+    },
+    {
+      "slug": "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform",
+      "title": "Comp AI raises $34M Series A to build agentic security and compliance platform",
+      "category": "AI",
+      "score": 85,
+      "decision": "publish_ready",
+      "dimensions": {
+        "evidence": 85,
+        "usefulness": 95,
+        "clarity": 97,
+        "originality": 88,
+        "sourceStrength": 61
+      },
+      "reasons": [
         "source strength/diversity needs improvement"
       ]
     },
@@ -181,16 +198,17 @@
       "slug": "iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae",
       "title": "Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
       "category": "Technology",
-      "score": 87,
-      "decision": "publish_ready",
+      "score": 69,
+      "decision": "review",
       "dimensions": {
-        "evidence": 90,
+        "evidence": 50,
         "usefulness": 95,
         "clarity": 100,
         "originality": 86,
-        "sourceStrength": 64
+        "sourceStrength": 21
       },
       "reasons": [
+        "evidence confidence needs improvement",
         "source strength/diversity needs improvement"
       ]
     }

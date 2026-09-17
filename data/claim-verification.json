@@ -1,18 +1,18 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-17T09:55:35.316Z",
-  "articlePath": "content/articles/iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae.md",
-  "articleTitle": "Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
+  "generatedAt": "2026-09-17T11:43:32.135Z",
+  "articlePath": "content/articles/comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform.md",
+  "articleTitle": "Comp AI raises $34M Series A to build agentic security and compliance platform",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
   "sourceCount": 1,
   "usableSourceCount": 1,
-  "claimCount": 13,
-  "editorialCount": 3,
-  "verified": 13,
+  "claimCount": 14,
+  "editorialCount": 2,
+  "verified": 14,
   "partial": 0,
   "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 87,
+  "averageConfidence": 80,
   "pass": true,
   "policy": {
     "verifiedMin": 62,
@@ -37,9 +37,9 @@
   "sources": [
     {
       "id": "S1",
-      "title": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "url": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "domain": "arstechnica.com",
+      "title": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "url": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "domain": "techcrunch.com",
       "passageCount": 18,
       "articleBodyLength": 0
     }
@@ -47,45 +47,39 @@
   "claims": [
     {
       "index": 1,
-      "claim": "An Amazon data center in Abu Dhabi, UAE was damaged on March 2, 2026, as reported by Jeremy Hsu.",
+      "claim": "Comp AI, a cybersecurity and compliance startup, announced a $34 million Series A round led by Roo Capital and Grand Ventures.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 90,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 79,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "Jeremy Hsu – Sep 16, 2026 12:40 pm | 96 An Amazon data center in Abu Dhabi, UAE as seen on March 2, 2026.",
-      "bestPassage": "Jeremy Hsu – Sep 16, 2026 12:40 pm | 96 An Amazon data center in Abu Dhabi, UAE as seen on March 2, 2026.",
+      "bestPassageId": "S1-P1",
+      "evidence": "Comp AI , a cybersecurity and compliance startup, announced that it has raised a $34 million Series A round on Thursday.",
+      "bestPassage": "Comp AI , a cybersecurity and compliance startup, announced that it has raised a $34 million Series A round on Thursday.",
       "matchedPassages": [
-        "S1-P2"
+        "S1-P1"
       ],
       "sharedTerms": [
-        "amazon",
-        "data",
-        "center",
-        "abu",
-        "dhabi",
-        "uae",
-        "march",
-        "2026",
-        "jeremy",
-        "hsu"
+        "comp",
+        "cybersecurity",
+        "and",
+        "compliance",
+        "startup",
+        "announce",
+        "million",
+        "seri",
+        "round"
       ],
       "entityShared": [
-        "amazon",
-        "abu",
-        "dhabi",
-        "uae",
-        "march",
-        "jeremy",
-        "hsu"
+        "comp",
+        "seri"
       ],
       "topicShared": [
-        "amazon",
-        "data",
-        "center"
+        "comp",
+        "and",
+        "compliance"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -94,38 +88,43 @@
     },
     {
       "index": 2,
-      "claim": "The attacks occurred in the opening days of the war that began with US‑Israeli attacks on Iran on February 28.",
+      "claim": "The company was founded last January by Lewis Carhart, Claudio Fuentes and Mariano Fuentes.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 97,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 100,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "The Iranian drones first struck the Amazon data centers in Bahrain and the United Arab Emirates on March 1 in the opening days of the ongoing war that began with US-Israeli attacks on Iran on February 28.",
-      "bestPassage": "The Iranian drones first struck the Amazon data centers in Bahrain and the United Arab Emirates on March 1 in the opening days of the ongoing war that began with US-Israeli attacks on Iran on February 28.",
+      "bestPassageId": "S1-P3",
+      "evidence": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO).",
+      "bestPassage": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO).",
       "matchedPassages": [
-        "S1-P12"
+        "S1-P3"
       ],
       "sharedTerms": [
         "the",
-        "attack",
-        "open",
-        "days",
-        "war",
-        "began",
-        "israeli",
-        "iran",
-        "february"
+        "was",
+        "found",
+        "last",
+        "january",
+        "lewi",
+        "carhart",
+        "claudio",
+        "fuent",
+        "and",
+        "mariano"
       ],
       "entityShared": [
-        "israeli",
-        "iran",
-        "february"
+        "january",
+        "lewi",
+        "carhart",
+        "claudio",
+        "fuent",
+        "mariano"
       ],
       "topicShared": [
-        "iran"
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -134,51 +133,44 @@
     },
     {
       "index": 3,
-      "claim": "A follow‑up missile strike by Iran’s Islamic Revolutionary Guard Corps on July 24 targeted a remaining Amazon data center structure in Bahrain; satellite imagery independently confirmed the damage.",
+      "claim": "Carhart now serves as CEO, while Claudio Fuentes holds the COO role and Mariano Fuentes is CTO.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 83,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 85,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P15",
-      "evidence": "On July 24, Iran’s Islamic Revolutionary Guard Corps launched yet another strike using missiles that specifically targeted a remaining Amazon data center structure in Bahrain.",
-      "bestPassage": "On July 24, Iran’s Islamic Revolutionary Guard Corps launched yet another strike using missiles that specifically targeted a remaining Amazon data center structure in Bahrain.",
+      "bestPassageId": "S1-P3",
+      "evidence": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO). Claudio was the CEO and co-founder, while Carhart served as head of growth and Mariano was a senior full-stack engineer.",
+      "bestPassage": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO).",
       "matchedPassages": [
-        "S1-P15"
+        "S1-P3",
+        "S1-P4"
       ],
       "sharedTerms": [
-        "strike",
-        "iran",
-        "islamic",
-        "revolutionary",
-        "guard",
-        "corp",
-        "july",
-        "target",
-        "remain",
-        "amazon",
-        "data",
-        "center",
-        "structure",
-        "bahrain"
+        "carhart",
+        "serv",
+        "ceo",
+        "claudio",
+        "fuent",
+        "the",
+        "coo",
+        "and",
+        "mariano",
+        "cto"
       ],
       "entityShared": [
-        "iran",
-        "islamic",
-        "revolutionary",
-        "guard",
-        "corp",
-        "july",
-        "amazon",
-        "bahrain"
+        "carhart",
+        "ceo",
+        "claudio",
+        "fuent",
+        "coo",
+        "mariano",
+        "cto"
       ],
       "topicShared": [
-        "iran",
-        "amazon",
-        "data",
-        "center"
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -187,35 +179,38 @@
     },
     {
       "index": 4,
-      "claim": "AWS said that war damage exceeded what AWS services are designed to withstand.",
+      "claim": "The founders previously operated a startup for about two years that reached over one million users before shutting down because it lacked a sticky enough use case.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 94,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 71,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "Mass destruction Iran strikes on Amazon data centers caused permanent loss of customer data War damage to data centers exceeded what AWS services are designed to withstand. “The damage to our infrastructure spanned multiple Availability Zones and exceeded what our regional and multi-AZ services are designed to withstand,” the AWS update said.",
-      "bestPassage": "Mass destruction Iran strikes on Amazon data centers caused permanent loss of customer data War damage to data centers exceeded what AWS services are designed to withstand.",
+      "bestPassageId": "S1-P5",
+      "evidence": "The startup ran for about two years, growing to more than a million users, but they eventually decided to shut it down after not finding a “sticky enough use case to warrant continued investment.” That experience taught them a lot, though, they recalled.",
+      "bestPassage": "The startup ran for about two years, growing to more than a million users, but they eventually decided to shut it down after not finding a “sticky enough use case to warrant continued investment.” That experience taught them a lot, though, they recalled.",
       "matchedPassages": [
-        "S1-P1",
-        "S1-P10"
+        "S1-P5"
       ],
       "sharedTerms": [
-        "aws",
-        "war",
-        "damage",
-        "exceed",
-        "servic",
-        "are",
-        "design",
-        "withstand"
+        "the",
+        "startup",
+        "for",
+        "two",
+        "year",
+        "million",
+        "user",
+        "down",
+        "sticky",
+        "enough",
+        "use",
+        "case"
       ],
-      "entityShared": [
-        "aws"
+      "entityShared": [],
+      "topicShared": [
+        "for"
       ],
-      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -223,39 +218,68 @@
     },
     {
       "index": 5,
-      "claim": "The update stated that the damage spanned multiple availability zones and exceeded what AWS regional and multi‑AZ services are designed to withstand.",
+      "claim": "That experience taught them how to build with large language models and the importance of a clear product focus.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 91,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 70,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P10",
-      "evidence": "“The damage to our infrastructure spanned multiple Availability Zones and exceeded what our regional and multi-AZ services are designed to withstand,” the AWS update said.",
-      "bestPassage": "“The damage to our infrastructure spanned multiple Availability Zones and exceeded what our regional and multi-AZ services are designed to withstand,” the AWS update said.",
+      "bestPassageId": "S1-P6",
+      "evidence": "For one, they learned how to build with LLMs and the importance of finding a specific use case for a product. The startup ran for about two years, growing to more than a million users, but they eventually decided to shut it down after not finding a “sticky enough use case to warrant continued investment.” That experience taught them a lot, though, they recalled.",
+      "bestPassage": "For one, they learned how to build with LLMs and the importance of finding a specific use case for a product.",
       "matchedPassages": [
-        "S1-P10"
+        "S1-P6",
+        "S1-P5"
+      ],
+      "sharedTerms": [
+        "experience",
+        "taught",
+        "them",
+        "build",
+        "and",
+        "the",
+        "importance",
+        "product"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "and"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 6,
+      "claim": "In the new venture, Carhart leads as CEO because it was his idea.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 81,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P7",
+      "evidence": "This time, Carhart would take the lead as CEO because it was his idea, the trio said.",
+      "bestPassage": "This time, Carhart would take the lead as CEO because it was his idea, the trio said.",
+      "matchedPassages": [
+        "S1-P7"
       ],
       "sharedTerms": [
         "the",
-        "damage",
-        "spann",
-        "multiple",
-        "availability",
-        "zon",
-        "and",
-        "exceed",
-        "aws",
-        "regional",
-        "multi",
-        "servic",
-        "are",
-        "design",
-        "withstand"
+        "carhart",
+        "lead",
+        "ceo",
+        "was",
+        "his",
+        "idea"
       ],
       "entityShared": [
-        "aws"
+        "carhart",
+        "ceo"
       ],
       "topicShared": [],
       "numericMismatch": false,
@@ -264,83 +288,44 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 6,
-      "claim": "In the United Arab Emirates, data in the mec1‑az2 availability zone was irretrievably lost.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 100,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P7",
-      "evidence": "Customer data was irretrievably lost in one of three AWS availability zones in the United Arab Emirates region, specifically the mec1-az2 availability zone.",
-      "bestPassage": "Customer data was irretrievably lost in one of three AWS availability zones in the United Arab Emirates region, specifically the mec1-az2 availability zone.",
-      "matchedPassages": [
-        "S1-P7"
-      ],
-      "sharedTerms": [
-        "the",
-        "unit",
-        "arab",
-        "emirat",
-        "data",
-        "mec1",
-        "az2",
-        "availability",
-        "zone",
-        "was",
-        "irretrievably",
-        "lose"
-      ],
-      "entityShared": [
-        "unit",
-        "arab",
-        "emirat"
-      ],
-      "topicShared": [
-        "data",
-        "lose"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
       "index": 7,
-      "claim": "In Bahrain, all three availability zones lost access to resources and data, according to the same update.",
+      "claim": "Comp AI is building an agentic platform that uses AI agents to draft company security policies and collect evidence for security audits.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 82,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 90,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "But the destruction was apparently even more widespread for the data centers in the Bahrain region, because Amazon said it was unable to restore access to resources and data across all three availability zones there.",
-      "bestPassage": "But the destruction was apparently even more widespread for the data centers in the Bahrain region, because Amazon said it was unable to restore access to resources and data across all three availability zones there.",
+      "bestPassageId": "S1-P8",
+      "evidence": "Comp AI says it&#8217;s building an agentic platform to tackle tedious security and compliance work; that means having AI agents help write company security policies or collect evidence for security audits.",
+      "bestPassage": "Comp AI says it&#8217;s building an agentic platform to tackle tedious security and compliance work; that means having AI agents help write company security policies or collect evidence for security audits.",
       "matchedPassages": [
-        "S1-P9"
+        "S1-P8"
       ],
       "sharedTerms": [
-        "bahrain",
-        "all",
-        "three",
-        "availability",
-        "zon",
-        "acces",
-        "resourc",
+        "comp",
+        "build",
+        "agentic",
+        "platform",
+        "agent",
+        "security",
+        "polici",
         "and",
-        "data",
-        "the"
+        "collect",
+        "evidence",
+        "for",
+        "audit"
       ],
       "entityShared": [
-        "bahrain"
+        "comp"
       ],
       "topicShared": [
-        "lose",
-        "data"
+        "comp",
+        "agentic",
+        "security",
+        "and",
+        "for"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -349,44 +334,31 @@
     },
     {
       "index": 8,
-      "claim": "Reuters reported that the strikes inflicted catastrophic damage, and AWS confirmed it was unable to restore access to the affected resources.",
+      "claim": "The platform also provides continuous monitoring to verify that a company meets its compliance controls.",
       "status": "verified",
-      "classification": "supported",
-      "confidence": 92,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "classification": "supported_with_context",
+      "confidence": 59,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "Amazon Web Services was “unable to restore access to the resources and data” hosted in some of the war-damaged data centers, according to an AWS dashboard update posted on September 15. The development was first reported by Reuters and suggests that the Iranian strikes inflicted catastrophic damage on the data centers. But the destruction was apparently even more widespread for the data centers in the Bahrain region, because Amazon said it was unable to restore access to resources and data across all three availability zones there.",
-      "bestPassage": "Amazon Web Services was “unable to restore access to the resources and data” hosted in some of the war-damaged data centers, according to an AWS dashboard update posted on September 15.",
+      "bestPassageId": "S1-P9",
+      "evidence": "The platform also continuously monitors whether a company is meeting compliance controls.",
+      "bestPassage": "The platform also continuously monitors whether a company is meeting compliance controls.",
       "matchedPassages": [
-        "S1-P5",
-        "S1-P6",
         "S1-P9"
       ],
       "sharedTerms": [
-        "reuter",
-        "report",
         "the",
-        "strik",
-        "inflict",
-        "catastrophic",
-        "damage",
-        "and",
-        "aws",
-        "was",
-        "unable",
-        "restore",
-        "acces",
-        "resourc"
+        "platform",
+        "monitor",
+        "meet",
+        "compliance",
+        "control"
       ],
-      "entityShared": [
-        "reuter",
-        "aws"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "strik"
+        "compliance"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -395,49 +367,45 @@
     },
     {
       "index": 9,
-      "claim": "Following the March attacks, AWS issued $150 million in customer credits and urged customers to migrate workloads to other cloud regions and use remote backups to restore inaccessible resources.",
+      "claim": "Carhart explained that for many software firms, security and compliance are directly tied to revenue, often required before closing deals such as a SOC 2 report.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 93,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 86,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "AWS immediately urged customers to migrate resources to other cloud regions and use remote backups to restore any “inaccessible resources.” The cloud service also reportedly issued $150 million in customer credits following the initial Iranian strikes in March.",
-      "bestPassage": "AWS immediately urged customers to migrate resources to other cloud regions and use remote backups to restore any “inaccessible resources.” The cloud service also reportedly issued $150 million in customer credits following the initial Iranian strikes in March.",
+      "bestPassageId": "S1-P11",
+      "evidence": "“For a lot of software companies, security and compliance are directly tied to revenue,” Carhart told TechCrunch, citing, for example, how a customer might ask a startup for a SOC 2 report before closing a deal.",
+      "bestPassage": "“For a lot of software companies, security and compliance are directly tied to revenue,” Carhart told TechCrunch, citing, for example, how a customer might ask a startup for a SOC 2 report before closing a deal.",
       "matchedPassages": [
-        "S1-P13"
+        "S1-P11"
       ],
       "sharedTerms": [
-        "follow",
-        "the",
-        "march",
-        "aws",
-        "issu",
-        "150",
-        "million",
-        "customer",
-        "credit",
+        "carhart",
+        "for",
+        "software",
+        "security",
         "and",
-        "urg",
-        "migrate",
-        "other",
-        "cloud",
-        "region",
-        "use",
-        "remote",
-        "backup",
-        "restore",
-        "inaccessible",
-        "resourc"
+        "compliance",
+        "are",
+        "directly",
+        "tied",
+        "revenue",
+        "clos",
+        "deal",
+        "soc",
+        "report"
       ],
       "entityShared": [
-        "march",
-        "aws"
+        "carhart",
+        "soc"
       ],
       "topicShared": [
-        "customer"
+        "for",
+        "security",
+        "and",
+        "compliance"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -446,41 +414,37 @@
     },
     {
       "index": 10,
-      "claim": "The company also suspended billing for customers in the affected regions and has spent the past six months attempting to restore normal operations.",
+      "claim": "He said Comp AI automates much of the traditional work around that process but does not replace independent audit reviews.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 87,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 82,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "The company had already suspended customer billing in the affected AWS regions in Bahrain and the United Arab Emirates and has spent the past six months attempting to restore normal operations.",
-      "bestPassage": "The company had already suspended customer billing in the affected AWS regions in Bahrain and the United Arab Emirates and has spent the past six months attempting to restore normal operations.",
+      "bestPassageId": "S1-P12",
+      "evidence": "“What Comp AI automates is much of the work companies traditionally have to do around that process.” The software helps companies meet and maintain those security requirements, he continued, but doesn’t replace actual independent audit review.",
+      "bestPassage": "“What Comp AI automates is much of the work companies traditionally have to do around that process.” The software helps companies meet and maintain those security requirements, he continued, but doesn’t replace actual independent audit review.",
       "matchedPassages": [
-        "S1-P11"
+        "S1-P12"
       ],
       "sharedTerms": [
+        "comp",
+        "automat",
         "the",
-        "suspend",
-        "bill",
-        "customer",
-        "affect",
-        "region",
-        "and",
-        "has",
-        "spent",
-        "past",
-        "six",
-        "month",
-        "attempt",
-        "restore",
-        "normal",
-        "operation"
+        "work",
+        "proces",
+        "but",
+        "replace",
+        "independent",
+        "audit",
+        "review"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "comp"
+      ],
       "topicShared": [
-        "customer"
+        "comp"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -489,37 +453,28 @@
     },
     {
       "index": 11,
-      "claim": "The September update described ongoing work to replace affected infrastructure and promised further updates on restoration timelines in the coming months.",
+      "claim": "To date, the company has raised $37.5 million in total funding.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 81,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 70,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "The AWS update described ongoing work to replace “affected infrastructure” and promised to update customers on a restoration of services in the coming months.",
-      "bestPassage": "The AWS update described ongoing work to replace “affected infrastructure” and promised to update customers on a restoration of services in the coming months.",
+      "bestPassageId": "S1-P13",
+      "evidence": "It has raised $37.5 million in funding to date.",
+      "bestPassage": "It has raised $37.5 million in funding to date.",
       "matchedPassages": [
-        "S1-P8"
+        "S1-P13"
       ],
       "sharedTerms": [
-        "the",
-        "describ",
-        "ongo",
-        "work",
-        "replace",
-        "affect",
-        "infrastructure",
-        "and",
-        "promis",
-        "restoration",
-        "com",
-        "month"
+        "date",
+        "has",
+        "rais",
+        "million",
+        "fund"
       ],
-      "entityShared": [
-        "the"
-      ],
+      "entityShared": [],
       "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
@@ -528,39 +483,43 @@
     },
     {
       "index": 12,
-      "claim": "Even though AWS designs services to survive typical regional outages, the physical destruction of entire data centers exceeded those safeguards.",
+      "claim": "The broader market is seeing a new wave of security risks in the agentic era, prompting the emergence of AI security and compliance firms like Vanta and Drata.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 64,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 81,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "Mass destruction Iran strikes on Amazon data centers caused permanent loss of customer data War damage to data centers exceeded what AWS services are designed to withstand. Amazon Web Services was “unable to restore access to the resources and data” hosted in some of the war-damaged data centers, according to an AWS dashboard update posted on September 15. “The damage to our infrastructure spanned multiple Availability Zones and exceeded what our regional and multi-AZ services are designed to withstand,” the AWS update said.",
-      "bestPassage": "Mass destruction Iran strikes on Amazon data centers caused permanent loss of customer data War damage to data centers exceeded what AWS services are designed to withstand.",
+      "bestPassageId": "S1-P14",
+      "evidence": "There has been much conversation about the new wave of security risks in the agentic era (and with it, a wave of AI security and compliance companies like Vanta and Drata).",
+      "bestPassage": "There has been much conversation about the new wave of security risks in the agentic era (and with it, a wave of AI security and compliance companies like Vanta and Drata).",
       "matchedPassages": [
-        "S1-P1",
-        "S1-P5",
-        "S1-P10"
+        "S1-P14"
       ],
       "sharedTerms": [
-        "aws",
-        "design",
-        "servic",
-        "regional",
         "the",
-        "destruction",
-        "data",
-        "center",
-        "exceed"
+        "new",
+        "wave",
+        "security",
+        "risk",
+        "agentic",
+        "era",
+        "and",
+        "compliance",
+        "like",
+        "vanta",
+        "drata"
       ],
       "entityShared": [
-        "aws"
+        "vanta",
+        "drata"
       ],
       "topicShared": [
-        "data",
-        "center"
+        "security",
+        "agentic",
+        "and",
+        "compliance"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -568,39 +527,89 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 16,
-      "claim": "Observers will be watching whether further Iranian strikes target remaining cloud infrastructure and how AWS’s infrastructure rebuilding proceeds in the coming months.",
+      "index": 13,
+      "claim": "Carhart noted that rapid adoption and experimentation with AI are creating demand for continuous, possibly autonomous, security and compliance solutions.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 71,
-      "bestSource": "Iran strikes on Amazon data centers caused permanent loss of customer data",
-      "bestUrl": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 81,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "The AWS update described ongoing work to replace “affected infrastructure” and promised to update customers on a restoration of services in the coming months. AWS immediately urged customers to migrate resources to other cloud regions and use remote backups to restore any “inaccessible resources.” The cloud service also reportedly issued $150 million in customer credits following the initial Iranian strikes in March.",
-      "bestPassage": "The AWS update described ongoing work to replace “affected infrastructure” and promised to update customers on a restoration of services in the coming months.",
+      "bestPassageId": "S1-P15",
+      "evidence": "Carhart said the rapid adoption and experimentation companies are doing with AI is creating a need for continuous — and perhaps autonomous — security and compliance platforms.",
+      "bestPassage": "Carhart said the rapid adoption and experimentation companies are doing with AI is creating a need for continuous — and perhaps autonomous — security and compliance platforms.",
       "matchedPassages": [
-        "S1-P8",
-        "S1-P13"
+        "S1-P15"
       ],
       "sharedTerms": [
-        "iranian",
-        "strik",
-        "cloud",
-        "infrastructure",
+        "carhart",
+        "rapid",
+        "adoption",
         "and",
-        "aws",
-        "the",
-        "com",
-        "month"
+        "experimentation",
+        "are",
+        "creat",
+        "for",
+        "continuou",
+        "autonomou",
+        "security",
+        "compliance"
       ],
       "entityShared": [
-        "iranian",
-        "aws"
+        "carhart"
       ],
       "topicShared": [
-        "strik"
+        "and",
+        "for",
+        "security",
+        "compliance"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 14,
+      "claim": "Comp AI is addressing this by starting with permissions and accountability, aiming to build a security layer that continuously monitors and validates risk as AI systems evolve.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 84,
+      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
+      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
+      "bestDomain": "techcrunch.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P17",
+      "evidence": "“We’re building toward a security layer that can monitor and validate those kinds of risk more continuously as these systems evolve.” Topics cybersecurity , Startups , Venture When you purchase through links in our articles, we may earn a small commission . Comp AI is tackling this by starting with permissions and accountability, he continued.",
+      "bestPassage": "“We’re building toward a security layer that can monitor and validate those kinds of risk more continuously as these systems evolve.” Topics cybersecurity , Startups , Venture When you purchase through links in our articles, we may earn a small commission .",
+      "matchedPassages": [
+        "S1-P17",
+        "S1-P16"
+      ],
+      "sharedTerms": [
+        "comp",
+        "start",
+        "permission",
+        "and",
+        "accountability",
+        "build",
+        "security",
+        "layer",
+        "continuously",
+        "monitor",
+        "risk",
+        "system",
+        "evolve"
+      ],
+      "entityShared": [
+        "comp"
+      ],
+      "topicShared": [
+        "comp",
+        "and",
+        "security",
+        "continuously"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -610,20 +619,14 @@
   ],
   "editorial": [
     {
-      "index": 13,
-      "claim": "For customers, the lesson reinforces the importance of geographic redundancy and maintaining independent backups outside of conflict zones.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 14,
-      "claim": "The $150 million credit program illustrates AWS’s effort to mitigate immediate financial impact, but it does not replace lost data.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
       "index": 15,
-      "claim": "Guidance: Customers should monitor AWS communications for updates on restoration progress and consider additional regions for critical workloads.",
+      "claim": "The company’s previous shutdown highlights the challenge of finding a durable use case, and the current approach still depends on human audit review for final validation.",
+      "type": "editorial-analysis",
+      "status": "editorial-excluded"
+    },
+    {
+      "index": 16,
+      "claim": "Readers should watch for details on how the AI agents handle complex regulatory requirements and whether the platform can scale beyond early adopters.",
       "type": "editorial-recommendation",
       "status": "editorial-excluded"
     }
