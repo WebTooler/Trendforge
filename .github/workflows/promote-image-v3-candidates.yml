@@ -1,9 +1,6 @@
 name: Promote Existing Image V3 Candidates
 
 on:
-  push:
-    branches:
-      - image-v3-test-lab
   workflow_dispatch:
 
 permissions:
@@ -26,7 +23,7 @@ jobs:
           repository: ${{ github.repository }}
           run-id: 35232212898
 
-      - name: Promote existing V3 images
+      - name: Promote existing V3 candidates
         run: |
           set -euo pipefail
           mkdir -p public/images/articles
@@ -38,7 +35,7 @@ jobs:
           for slug in "${slugs[@]}"; do
             src="/tmp/v3/${slug}.png"
             test -f "$src" || { echo "Missing saved candidate: $src"; exit 1; }
-            # Run 13 files are JPEG-encoded despite their .png extension; publish with the real MIME extension.
+            # Run 13 candidates are JPEG-encoded despite their .png filenames.
             cp "$src" "public/images/articles/${slug}.jpg"
           done
 
@@ -63,14 +60,14 @@ jobs:
               p.write_text(s)
           PY
 
-      - name: Technical image sanity check
+      - name: Verify candidates
         run: |
           set -euo pipefail
           for f in public/images/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.jpg \
                    public/images/articles/how-to-move-passwords-and-passkeys-between-managers-on-android.jpg \
                    public/images/articles/beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.jpg; do
             file "$f"
-            test "$(file -b "$f")" = "$(file -b "$f")" || exit 1
+            test -s "$f"
           done
 
       - name: Commit test candidates
