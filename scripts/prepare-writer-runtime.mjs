@@ -13,8 +13,8 @@ const replacements=[
 ];
 for(const [from,to] of replacements){if(!text.includes(from))throw new Error(`Writer runtime patch target missing: ${from.slice(0,90)}`);text=text.replace(from,to);}
 const old="if(provider==='Gemini')return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';if(provider==='Cohere')";
-const next="if(provider==='Gemini')return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';if(provider==='Cloudflare')return j.result?.response||'';if(provider==='Cohere')";
+const next="if(provider==='Gemini')return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';if(provider==='Cloudflare'){const value=j?.result?.response??j?.response??j?.result?.output_text??j?.output_text??j?.choices?.[0]?.message?.content;if(typeof value==='string')return value;if(Array.isArray(value))return value.map(x=>typeof x==='string'?x:(x?.text??x?.content??'')).join('');if(value&&typeof value==='object'){const nested=value.text??value.content??value.output_text??value.response;if(typeof nested==='string')return nested;}throw new Error('Cloudflare response-shape: generated response was not text');}if(provider==='Cohere')";
 if(!text.includes(old))throw new Error('Writer runtime patch target for response parsing missing.');
 text=text.replace(old,next);
 fs.writeFileSync(path,text);
-console.log('Writer runtime prepared: Cloudflare Workers AI / Llama 3.3 70B enabled; writer budget capped at 6/run and 2/candidate; OpenRouter timeout bounded to 22s.');
+console.log('Writer runtime prepared: Cloudflare Workers AI / Llama 3.3 70B enabled with strict response normalization; writer budget capped at 6/run and 2/candidate; OpenRouter timeout bounded to 22s.');
