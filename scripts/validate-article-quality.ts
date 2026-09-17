@@ -18,8 +18,19 @@ function field(text: string, key: string) {
   return match ? match[1].replace(/\\"/g, '"') : '';
 }
 
+function decodeHtmlEntities(text: string) {
+  return text
+    .replace(/&#(\\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
+}
+
 function normalize(text: string) {
-  return text.toLowerCase().replace(/[`*_#>\[\]().,!?;:'"—–-]/g, ' ').replace(/\s+/g, ' ').trim();
+  return decodeHtmlEntities(text).toLowerCase().replace(/[`*_#>\[\]().,!?;:'"—–-]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 function loadEvidenceItems(): any[] {
