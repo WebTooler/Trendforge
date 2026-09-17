@@ -32,15 +32,15 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 16,
-      "quotaBlockedUntil": 1789630955173,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
+      "failures": 17,
+      "quotaBlockedUntil": 1789634676498,
+      "lastStatus": 200,
+      "lastError": "Empty model response",
       "lastClass": "transient"
     },
     "Cohere": {
-      "failures": 25,
-      "quotaBlockedUntil": 1789630914521,
+      "failures": 26,
+      "quotaBlockedUntil": 1789634630446,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -48,15 +48,15 @@
       "lastSuccessAt": "2026-09-16T09:01:41.739Z"
     },
     "Cloudflare": {
-      "failures": 1,
+      "failures": 2,
       "successes": 0,
-      "quotaBlockedUntil": 0,
-      "lastStatus": 0,
-      "lastError": "Cloudflare response-shape: generated response was not text",
-      "lastClass": "error",
+      "quotaBlockedUntil": 1789634647412,
+      "lastStatus": 200,
+      "lastError": "Invalid structured output",
+      "lastClass": "transient",
       "lastSuccessAt": 0
     }
   },
-  "rotationCursor": 1,
-  "updatedAt": "2026-09-17T07:42:06.995Z"
+  "rotationCursor": 2,
+  "updatedAt": "2026-09-17T08:44:24.235Z"
 }
