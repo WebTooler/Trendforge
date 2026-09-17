@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-17T11:43:33.870Z",
+  "generatedAt": "2026-09-17T17:01:25.773Z",
   "status": "pass",
-  "currentGeneratedArticle": "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform",
-  "currentScore": 85,
+  "currentGeneratedArticle": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
+  "currentScore": 83,
   "identity": {
     "method": "brief.title",
     "rejectedMarker": false
@@ -73,17 +73,18 @@
       "slug": "apple-eyes-2029-ai-server-with-m-series-ultra-chips",
       "title": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
       "category": "Technology",
-      "score": 69,
+      "score": 67,
       "decision": "review",
       "dimensions": {
         "evidence": 50,
         "usefulness": 97,
         "clarity": 100,
-        "originality": 86,
+        "originality": 71,
         "sourceStrength": 21
       },
       "reasons": [
         "evidence confidence needs improvement",
+        "topic/title similarity is high",
         "source strength/diversity needs improvement"
       ]
     },
@@ -109,16 +110,17 @@
       "slug": "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform",
       "title": "Comp AI raises $34M Series A to build agentic security and compliance platform",
       "category": "AI",
-      "score": 85,
-      "decision": "publish_ready",
+      "score": 68,
+      "decision": "review",
       "dimensions": {
-        "evidence": 85,
+        "evidence": 50,
         "usefulness": 95,
         "clarity": 97,
         "originality": 88,
-        "sourceStrength": 61
+        "sourceStrength": 21
       },
       "reasons": [
+        "evidence confidence needs improvement",
         "source strength/diversity needs improvement"
       ]
     },
@@ -126,13 +128,13 @@
       "slug": "exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost",
       "title": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
       "category": "Technology",
-      "score": 71,
+      "score": 69,
       "decision": "review",
       "dimensions": {
         "evidence": 50,
         "usefulness": 97,
         "clarity": 100,
-        "originality": 100,
+        "originality": 89,
         "sourceStrength": 21
       },
       "reasons": [
@@ -209,6 +211,24 @@
       },
       "reasons": [
         "evidence confidence needs improvement",
+        "source strength/diversity needs improvement"
+      ]
+    },
+    {
+      "slug": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
+      "title": "The Apple Watch Series 12 is the start of a new wearable era",
+      "category": "Digital Life",
+      "score": 83,
+      "decision": "publish_ready",
+      "dimensions": {
+        "evidence": 88,
+        "usefulness": 95,
+        "clarity": 100,
+        "originality": 60,
+        "sourceStrength": 63
+      },
+      "reasons": [
+        "topic/title similarity is high",
         "source strength/diversity needs improvement"
       ]
     }

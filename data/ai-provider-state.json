@@ -11,11 +11,11 @@
       "lastSuccessAt": "2026-09-17T11:43:31.968Z"
     },
     "Gemini": {
-      "failures": 12,
-      "quotaBlockedUntil": 1789649539040,
-      "lastStatus": 429,
-      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 40.974855535s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
-      "lastClass": "quota"
+      "failures": 13,
+      "quotaBlockedUntil": 1789664466109,
+      "lastStatus": 0,
+      "lastError": "The operation was aborted due to timeout",
+      "lastClass": "transient"
     },
     "OpenAI": {
       "failures": 3,
@@ -33,12 +33,12 @@
     },
     "OpenRouter": {
       "failures": 20,
-      "quotaBlockedUntil": 1789645340510,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
-      "lastClass": "transient",
-      "successes": 1,
-      "lastSuccessAt": "2026-09-17T08:52:26.293Z"
+      "quotaBlockedUntil": 0,
+      "lastStatus": 200,
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 2,
+      "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
       "failures": 31,
@@ -46,8 +46,8 @@
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 5,
-      "lastSuccessAt": "2026-09-17T11:43:31.031Z"
+      "successes": 6,
+      "lastSuccessAt": "2026-09-17T17:01:14.937Z"
     },
     "Cloudflare": {
       "failures": 9,
@@ -59,6 +59,6 @@
       "lastSuccessAt": 0
     }
   },
-  "rotationCursor": 0,
-  "updatedAt": "2026-09-17T11:43:31.968Z"
+  "rotationCursor": 3,
+  "updatedAt": "2026-09-17T17:01:23.899Z"
 }

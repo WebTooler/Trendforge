@@ -1,18 +1,18 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-17T11:43:32.135Z",
-  "articlePath": "content/articles/comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform.md",
-  "articleTitle": "Comp AI raises $34M Series A to build agentic security and compliance platform",
+  "generatedAt": "2026-09-17T17:01:24.028Z",
+  "articlePath": "content/articles/the-apple-watch-series-12-is-the-start-of-a-new-wearable-era.md",
+  "articleTitle": "The Apple Watch Series 12 is the start of a new wearable era",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
   "sourceCount": 1,
   "usableSourceCount": 1,
-  "claimCount": 14,
-  "editorialCount": 2,
-  "verified": 14,
+  "claimCount": 12,
+  "editorialCount": 1,
+  "verified": 12,
   "partial": 0,
   "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 80,
+  "averageConfidence": 84,
   "pass": true,
   "policy": {
     "verifiedMin": 62,
@@ -37,9 +37,9 @@
   "sources": [
     {
       "id": "S1",
-      "title": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "url": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "domain": "techcrunch.com",
+      "title": "The Apple Watch Series 12 is the start of a new wearable era",
+      "url": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "domain": "theverge.com",
       "passageCount": 18,
       "articleBodyLength": 0
     }
@@ -47,39 +47,43 @@
   "claims": [
     {
       "index": 1,
-      "claim": "Comp AI, a cybersecurity and compliance startup, announced a $34 million Series A round led by Roo Capital and Grand Ventures.",
+      "claim": "The Apple Watch Series 12 is described as a surprisingly consequential update for the world’s most popular smartwatch.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 79,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 97,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "Comp AI , a cybersecurity and compliance startup, announced that it has raised a $34 million Series A round on Thursday.",
-      "bestPassage": "Comp AI , a cybersecurity and compliance startup, announced that it has raised a $34 million Series A round on Thursday.",
+      "bestPassageId": "S1-P2",
+      "evidence": "Follow See All Science The Apple Watch Series 12 is the start of a new wearable era A surprisingly consequential update for the world’s most popular smartwatch.",
+      "bestPassage": "Follow See All Science The Apple Watch Series 12 is the start of a new wearable era A surprisingly consequential update for the world’s most popular smartwatch.",
       "matchedPassages": [
-        "S1-P1"
+        "S1-P2"
       ],
       "sharedTerms": [
-        "comp",
-        "cybersecurity",
-        "and",
-        "compliance",
-        "startup",
-        "announce",
-        "million",
+        "the",
+        "apple",
+        "watch",
         "seri",
-        "round"
+        "surpris",
+        "consequential",
+        "for",
+        "world",
+        "popular",
+        "smartwatch"
       ],
       "entityShared": [
-        "comp",
+        "the",
+        "apple",
+        "watch",
         "seri"
       ],
       "topicShared": [
-        "comp",
-        "and",
-        "compliance"
+        "the",
+        "apple",
+        "watch",
+        "seri"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -88,43 +92,36 @@
     },
     {
       "index": 2,
-      "claim": "The company was founded last January by Lewis Carhart, Claudio Fuentes and Mariano Fuentes.",
+      "claim": "This is a significant hardware redesign compared to previous Apple Watches.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 100,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 93,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P3",
-      "evidence": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO).",
-      "bestPassage": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO).",
+      "bestPassageId": "S1-P7",
+      "evidence": "This is a significant hardware redesign compared to previous Apple Watches.",
+      "bestPassage": "This is a significant hardware redesign compared to previous Apple Watches.",
       "matchedPassages": [
-        "S1-P3"
+        "S1-P7"
       ],
       "sharedTerms": [
-        "the",
-        "was",
-        "found",
-        "last",
-        "january",
-        "lewi",
-        "carhart",
-        "claudio",
-        "fuent",
-        "and",
-        "mariano"
+        "significant",
+        "hardware",
+        "redesign",
+        "compar",
+        "previou",
+        "apple",
+        "watch"
       ],
       "entityShared": [
-        "january",
-        "lewi",
-        "carhart",
-        "claudio",
-        "fuent",
-        "mariano"
+        "apple",
+        "watch"
       ],
       "topicShared": [
-        "and"
+        "apple",
+        "watch"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -133,44 +130,49 @@
     },
     {
       "index": 3,
-      "claim": "Carhart now serves as CEO, while Claudio Fuentes holds the COO role and Mariano Fuentes is CTO.",
+      "claim": "With the latter, Apple is potentially kicking the door down on what's been a niche, nascent, and recently problematic market. (Either way you slice it, AI is part of the equation.) The redesign includes a faster charging system, a new sensor array, and the return of a ceramic case option.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 85,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 78,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P3",
-      "evidence": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO). Claudio was the CEO and co-founder, while Carhart served as head of growth and Mariano was a senior full-stack engineer.",
-      "bestPassage": "The company was founded last January by Lewis Carhart (CEO), Claudio Fuentes (COO), and his brother, Mariano Fuentes (CTO).",
+      "bestPassageId": "S1-P4",
+      "evidence": "With the latter, Apple is potentially kicking the door down on what’s been a niche, nascent, and recently problematic market. (Either way you slice it, AI is part of the equation.) Most of the ideas explored with the Series 12 aren’t novel, but they haven’t been implemented by a company with Apple’s scale or reputation.",
+      "bestPassage": "With the latter, Apple is potentially kicking the door down on what’s been a niche, nascent, and recently problematic market. (Either way you slice it, AI is part of the equation.) Most of the ideas explored with the Series 12 aren’t novel, but they haven’t been implemented by a company with Apple’s scale or reputation.",
       "matchedPassages": [
-        "S1-P3",
         "S1-P4"
       ],
       "sharedTerms": [
-        "carhart",
-        "serv",
-        "ceo",
-        "claudio",
-        "fuent",
         "the",
-        "coo",
+        "latter",
+        "apple",
+        "potentially",
+        "kick",
+        "door",
+        "down",
+        "niche",
+        "nascent",
         "and",
-        "mariano",
-        "cto"
+        "recently",
+        "problematic",
+        "market",
+        "either",
+        "way",
+        "you",
+        "slice",
+        "part",
+        "equation"
       ],
       "entityShared": [
-        "carhart",
-        "ceo",
-        "claudio",
-        "fuent",
-        "coo",
-        "mariano",
-        "cto"
+        "apple",
+        "either"
       ],
       "topicShared": [
-        "and"
+        "the",
+        "apple",
+        "new"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -179,37 +181,41 @@
     },
     {
       "index": 4,
-      "claim": "The founders previously operated a startup for about two years that reached over one million users before shutting down because it lacked a sticky enough use case.",
+      "claim": "Apple also introduced a thoughtful privacy structure for its upcoming Audio Intelligence suite, which is marketed as AI‑powered ambient listening.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 71,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 91,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "The startup ran for about two years, growing to more than a million users, but they eventually decided to shut it down after not finding a “sticky enough use case to warrant continued investment.” That experience taught them a lot, though, they recalled.",
-      "bestPassage": "The startup ran for about two years, growing to more than a million users, but they eventually decided to shut it down after not finding a “sticky enough use case to warrant continued investment.” That experience taught them a lot, though, they recalled.",
+      "bestPassageId": "S1-P8",
+      "evidence": "Together, these hardware upgrades enable a host of new software features, including more frequent heart rate sampling, a new readiness score, and a brave new world of Audio Intelligence, which is what Apple is calling its upcoming suite of AI-powered ambient listening features. 8 Verge Score Apple Watch Series 12 $ 399 $ 399 The Good Faster charging Redesigned sensor array Ceramic is back Thoughtful privacy structure for Audio Intelligence Siri on the wrist is more useful The Bad Thoughtful privacy may not change how laypeople feel Many of the new features aren’t available at launch $399 at Amazon $399 at Apple $399 at Best Buy How we rate and review products After a week with the Series 12, I can’t say I have a complete picture.",
+      "bestPassage": "Together, these hardware upgrades enable a host of new software features, including more frequent heart rate sampling, a new readiness score, and a brave new world of Audio Intelligence, which is what Apple is calling its upcoming suite of AI-powered ambient listening features.",
       "matchedPassages": [
+        "S1-P8",
         "S1-P5"
       ],
       "sharedTerms": [
-        "the",
-        "startup",
+        "apple",
+        "thoughtful",
+        "privacy",
+        "structure",
         "for",
-        "two",
-        "year",
-        "million",
-        "user",
-        "down",
-        "sticky",
-        "enough",
-        "use",
-        "case"
+        "its",
+        "upcom",
+        "audio",
+        "suite",
+        "power",
+        "ambient",
+        "listen"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "apple",
+        "audio"
+      ],
       "topicShared": [
-        "for"
+        "apple"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -218,34 +224,44 @@
     },
     {
       "index": 5,
-      "claim": "That experience taught them how to build with large language models and the importance of a clear product focus.",
+      "claim": "The Verge gave the watch a score of 8 and listed it at $399 at Amazon, Apple, and Best Buy.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 70,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 91,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "For one, they learned how to build with LLMs and the importance of finding a specific use case for a product. The startup ran for about two years, growing to more than a million users, but they eventually decided to shut it down after not finding a “sticky enough use case to warrant continued investment.” That experience taught them a lot, though, they recalled.",
-      "bestPassage": "For one, they learned how to build with LLMs and the importance of finding a specific use case for a product.",
+      "bestPassageId": "S1-P5",
+      "evidence": "8 Verge Score Apple Watch Series 12 $ 399 $ 399 The Good Faster charging Redesigned sensor array Ceramic is back Thoughtful privacy structure for Audio Intelligence Siri on the wrist is more useful The Bad Thoughtful privacy may not change how laypeople feel Many of the new features aren’t available at launch $399 at Amazon $399 at Apple $399 at Best Buy How we rate and review products After a week with the Series 12, I can’t say I have a complete picture.",
+      "bestPassage": "8 Verge Score Apple Watch Series 12 $ 399 $ 399 The Good Faster charging Redesigned sensor array Ceramic is back Thoughtful privacy structure for Audio Intelligence Siri on the wrist is more useful The Bad Thoughtful privacy may not change how laypeople feel Many of the new features aren’t available at launch $399 at Amazon $399 at Apple $399 at Best Buy How we rate and review products After a week with the Series 12, I can’t say I have a complete picture.",
       "matchedPassages": [
-        "S1-P6",
         "S1-P5"
       ],
       "sharedTerms": [
-        "experience",
-        "taught",
-        "them",
-        "build",
-        "and",
         "the",
-        "importance",
-        "product"
+        "verge",
+        "watch",
+        "score",
+        "and",
+        "399",
+        "amazon",
+        "apple",
+        "best",
+        "buy"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "the",
+        "verge",
+        "amazon",
+        "apple",
+        "best",
+        "buy"
+      ],
       "topicShared": [
-        "and"
+        "the",
+        "watch",
+        "apple"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -254,34 +270,36 @@
     },
     {
       "index": 6,
-      "claim": "In the new venture, Carhart leads as CEO because it was his idea.",
+      "claim": "Reviewers noted that many of the new features are not available at launch, and privacy concerns may not affect how everyday users perceive the device.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 81,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 66,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P7",
-      "evidence": "This time, Carhart would take the lead as CEO because it was his idea, the trio said.",
-      "bestPassage": "This time, Carhart would take the lead as CEO because it was his idea, the trio said.",
+      "bestPassageId": "S1-P5",
+      "evidence": "8 Verge Score Apple Watch Series 12 $ 399 $ 399 The Good Faster charging Redesigned sensor array Ceramic is back Thoughtful privacy structure for Audio Intelligence Siri on the wrist is more useful The Bad Thoughtful privacy may not change how laypeople feel Many of the new features aren’t available at launch $399 at Amazon $399 at Apple $399 at Best Buy How we rate and review products After a week with the Series 12, I can’t say I have a complete picture.",
+      "bestPassage": "8 Verge Score Apple Watch Series 12 $ 399 $ 399 The Good Faster charging Redesigned sensor array Ceramic is back Thoughtful privacy structure for Audio Intelligence Siri on the wrist is more useful The Bad Thoughtful privacy may not change how laypeople feel Many of the new features aren’t available at launch $399 at Amazon $399 at Apple $399 at Best Buy How we rate and review products After a week with the Series 12, I can’t say I have a complete picture.",
       "matchedPassages": [
-        "S1-P7"
+        "S1-P5"
       ],
       "sharedTerms": [
+        "not",
         "the",
-        "carhart",
-        "lead",
-        "ceo",
-        "was",
-        "his",
-        "idea"
+        "new",
+        "featur",
+        "available",
+        "launch",
+        "and",
+        "privacy",
+        "may"
       ],
-      "entityShared": [
-        "carhart",
-        "ceo"
+      "entityShared": [],
+      "topicShared": [
+        "the",
+        "new"
       ],
-      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -289,43 +307,46 @@
     },
     {
       "index": 7,
-      "claim": "Comp AI is building an agentic platform that uses AI agents to draft company security policies and collect evidence for security audits.",
+      "claim": "The new sensor architecture enables more frequent heart rate sampling and a readiness score, while also supporting truly continuous heart rate monitoring on both the Series 12 and Ultra 4.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 90,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 87,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "Comp AI says it&#8217;s building an agentic platform to tackle tedious security and compliance work; that means having AI agents help write company security policies or collect evidence for security audits.",
-      "bestPassage": "Comp AI says it&#8217;s building an agentic platform to tackle tedious security and compliance work; that means having AI agents help write company security policies or collect evidence for security audits.",
+      "bestPassageId": "S1-P9",
+      "evidence": "Most notably, the redesigned sensors mean the Series 12 and Ultra 4 are now capable of truly continuous heart rate monitoring. Together, these hardware upgrades enable a host of new software features, including more frequent heart rate sampling, a new readiness score, and a brave new world of Audio Intelligence, which is what Apple is calling its upcoming suite of AI-powered ambient listening features.",
+      "bestPassage": "Most notably, the redesigned sensors mean the Series 12 and Ultra 4 are now capable of truly continuous heart rate monitoring.",
       "matchedPassages": [
+        "S1-P9",
         "S1-P8"
       ],
       "sharedTerms": [
-        "comp",
-        "build",
-        "agentic",
-        "platform",
-        "agent",
-        "security",
-        "polici",
+        "the",
+        "new",
+        "sensor",
+        "frequent",
+        "heart",
+        "rate",
+        "sampl",
         "and",
-        "collect",
-        "evidence",
-        "for",
-        "audit"
+        "readines",
+        "score",
+        "truly",
+        "continuou",
+        "monitor",
+        "seri",
+        "ultra"
       ],
       "entityShared": [
-        "comp"
+        "seri",
+        "ultra"
       ],
       "topicShared": [
-        "comp",
-        "agentic",
-        "security",
-        "and",
-        "for"
+        "the",
+        "new",
+        "seri"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -334,31 +355,63 @@
     },
     {
       "index": 8,
-      "claim": "The platform also provides continuous monitoring to verify that a company meets its compliance controls.",
+      "claim": "Apple published a white paper that compares this continuous monitoring against a gold‑standard Polar H10 chest strap and against competitors such as the Pixel Watch 4, Samsung Galaxy Watch 8, Oura Ring 5, and Whoop across various workouts and at rest.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 59,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "classification": "supported",
+      "confidence": 95,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "The platform also continuously monitors whether a company is meeting compliance controls.",
-      "bestPassage": "The platform also continuously monitors whether a company is meeting compliance controls.",
+      "bestPassageId": "S1-P11",
+      "evidence": "Apple put out a white paper comparing how accurate its continuous heart rate monitoring is to a gold-standard Polar H10 chest strap, as well as competitors like the Pixel Watch 4, Samsung Galaxy Watch 8, Oura Ring 5, and Whoop across several types of workouts and at rest. (It’s an interesting read for wearable nerds!) I’d need roughly eight arms and legs to replicate this study in a week, and alas, I’m not an octopus.",
+      "bestPassage": "Apple put out a white paper comparing how accurate its continuous heart rate monitoring is to a gold-standard Polar H10 chest strap, as well as competitors like the Pixel Watch 4, Samsung Galaxy Watch 8, Oura Ring 5, and Whoop across several types of workouts and at rest. (It’s an interesting read for wearable nerds!) I’d need roughly eight arms and legs to replicate this study in a week, and alas, I’m not an octopus.",
       "matchedPassages": [
-        "S1-P9"
+        "S1-P11"
       ],
       "sharedTerms": [
-        "the",
-        "platform",
+        "apple",
+        "white",
+        "paper",
+        "compar",
+        "continuou",
         "monitor",
-        "meet",
-        "compliance",
-        "control"
+        "gold",
+        "standard",
+        "polar",
+        "h10",
+        "chest",
+        "strap",
+        "and",
+        "competitor",
+        "the",
+        "pixel",
+        "watch",
+        "samsung",
+        "galaxy",
+        "oura",
+        "ring",
+        "whoop",
+        "acros",
+        "workout",
+        "rest"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "apple",
+        "polar",
+        "h10",
+        "pixel",
+        "watch",
+        "samsung",
+        "galaxy",
+        "oura",
+        "ring",
+        "whoop"
+      ],
       "topicShared": [
-        "compliance"
+        "apple",
+        "the",
+        "watch"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -367,45 +420,36 @@
     },
     {
       "index": 9,
-      "claim": "Carhart explained that for many software firms, security and compliance are directly tied to revenue, often required before closing deals such as a SOC 2 report.",
+      "claim": "The reviewer personally tested the monitoring by wearing an H10 strap during two runs, a walk, and while at rest.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 86,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 75,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "“For a lot of software companies, security and compliance are directly tied to revenue,” Carhart told TechCrunch, citing, for example, how a customer might ask a startup for a SOC 2 report before closing a deal.",
-      "bestPassage": "“For a lot of software companies, security and compliance are directly tied to revenue,” Carhart told TechCrunch, citing, for example, how a customer might ask a startup for a SOC 2 report before closing a deal.",
+      "bestPassageId": "S1-P12",
+      "evidence": "However, I did wear an H10 chest strap during two runs (one steady state and one interval run), a walk, and while at rest.",
+      "bestPassage": "However, I did wear an H10 chest strap during two runs (one steady state and one interval run), a walk, and while at rest.",
       "matchedPassages": [
-        "S1-P11"
+        "S1-P12"
       ],
       "sharedTerms": [
-        "carhart",
-        "for",
-        "software",
-        "security",
+        "wear",
+        "h10",
+        "strap",
+        "dur",
+        "two",
+        "runs",
+        "walk",
         "and",
-        "compliance",
-        "are",
-        "directly",
-        "tied",
-        "revenue",
-        "clos",
-        "deal",
-        "soc",
-        "report"
+        "rest"
       ],
       "entityShared": [
-        "carhart",
-        "soc"
+        "h10"
       ],
       "topicShared": [
-        "for",
-        "security",
-        "and",
-        "compliance"
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -414,67 +458,30 @@
     },
     {
       "index": 10,
-      "claim": "He said Comp AI automates much of the traditional work around that process but does not replace independent audit reviews.",
+      "claim": "Siri AI is more front and center in watchOS 27.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 82,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 89,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "“What Comp AI automates is much of the work companies traditionally have to do around that process.” The software helps companies meet and maintain those security requirements, he continued, but doesn’t replace actual independent audit review.",
-      "bestPassage": "“What Comp AI automates is much of the work companies traditionally have to do around that process.” The software helps companies meet and maintain those security requirements, he continued, but doesn’t replace actual independent audit review.",
+      "bestPassageId": "S1-P10",
+      "evidence": "Siri AI is more front and center in watchOS 27.",
+      "bestPassage": "Siri AI is more front and center in watchOS 27.",
       "matchedPassages": [
-        "S1-P12"
+        "S1-P10"
       ],
       "sharedTerms": [
-        "comp",
-        "automat",
-        "the",
-        "work",
-        "proces",
-        "but",
-        "replace",
-        "independent",
-        "audit",
-        "review"
+        "siri",
+        "front",
+        "and",
+        "center",
+        "watcho"
       ],
       "entityShared": [
-        "comp"
+        "siri"
       ],
-      "topicShared": [
-        "comp"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 11,
-      "claim": "To date, the company has raised $37.5 million in total funding.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 70,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "It has raised $37.5 million in funding to date.",
-      "bestPassage": "It has raised $37.5 million in funding to date.",
-      "matchedPassages": [
-        "S1-P13"
-      ],
-      "sharedTerms": [
-        "date",
-        "has",
-        "rais",
-        "million",
-        "fund"
-      ],
-      "entityShared": [],
       "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
@@ -482,88 +489,38 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 12,
-      "claim": "The broader market is seeing a new wave of security risks in the agentic era, prompting the emergence of AI security and compliance firms like Vanta and Drata.",
+      "index": 11,
+      "claim": "Audio Intelligence raises privacy questions, and the reviewer acknowledged that last year’s models remain solid choices with fewer privacy issues and are often available on sale.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 81,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P14",
-      "evidence": "There has been much conversation about the new wave of security risks in the agentic era (and with it, a wave of AI security and compliance companies like Vanta and Drata).",
-      "bestPassage": "There has been much conversation about the new wave of security risks in the agentic era (and with it, a wave of AI security and compliance companies like Vanta and Drata).",
-      "matchedPassages": [
-        "S1-P14"
-      ],
-      "sharedTerms": [
-        "the",
-        "new",
-        "wave",
-        "security",
-        "risk",
-        "agentic",
-        "era",
-        "and",
-        "compliance",
-        "like",
-        "vanta",
-        "drata"
-      ],
-      "entityShared": [
-        "vanta",
-        "drata"
-      ],
-      "topicShared": [
-        "security",
-        "agentic",
-        "and",
-        "compliance"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 13,
-      "claim": "Carhart noted that rapid adoption and experimentation with AI are creating demand for continuous, possibly autonomous, security and compliance solutions.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 81,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 69,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
       "bestPassageId": "S1-P15",
-      "evidence": "Carhart said the rapid adoption and experimentation companies are doing with AI is creating a need for continuous — and perhaps autonomous — security and compliance platforms.",
-      "bestPassage": "Carhart said the rapid adoption and experimentation companies are doing with AI is creating a need for continuous — and perhaps autonomous — security and compliance platforms.",
+      "evidence": "I’d understand if you have qualms about Audio Intelligence and privacy, and to those folks: I’ll remind you that last year’s models are still great, probably available on sale, and don’t come with as many privacy questions.",
+      "bestPassage": "I’d understand if you have qualms about Audio Intelligence and privacy, and to those folks: I’ll remind you that last year’s models are still great, probably available on sale, and don’t come with as many privacy questions.",
       "matchedPassages": [
         "S1-P15"
       ],
       "sharedTerms": [
-        "carhart",
-        "rapid",
-        "adoption",
+        "audio",
+        "privacy",
+        "question",
         "and",
-        "experimentation",
+        "last",
+        "year",
+        "models",
         "are",
-        "creat",
-        "for",
-        "continuou",
-        "autonomou",
-        "security",
-        "compliance"
+        "available",
+        "sale"
       ],
       "entityShared": [
-        "carhart"
+        "audio"
       ],
       "topicShared": [
-        "and",
-        "for",
-        "security",
-        "compliance"
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -571,45 +528,46 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 14,
-      "claim": "Comp AI is addressing this by starting with permissions and accountability, aiming to build a security layer that continuously monitors and validates risk as AI systems evolve.",
+      "index": 12,
+      "claim": "For users weighing an upgrade, Apple has laid a strong foundation for ambitious future features, even though several of the most interesting health and AI tools are scheduled to launch later this year.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 84,
-      "bestSource": "Comp AI sets eyes on a continuously agentic future for security and compliance",
-      "bestUrl": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 77,
+      "bestSource": "The Apple Watch Series 12 is the start of a new wearable era",
+      "bestUrl": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
+      "bestDomain": "theverge.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P17",
-      "evidence": "“We’re building toward a security layer that can monitor and validate those kinds of risk more continuously as these systems evolve.” Topics cybersecurity , Startups , Venture When you purchase through links in our articles, we may earn a small commission . Comp AI is tackling this by starting with permissions and accountability, he continued.",
-      "bestPassage": "“We’re building toward a security layer that can monitor and validate those kinds of risk more continuously as these systems evolve.” Topics cybersecurity , Startups , Venture When you purchase through links in our articles, we may earn a small commission .",
+      "bestPassageId": "S1-P6",
+      "evidence": "Several of the most interesting health and AI features aren’t launching until later this year and weren’t available for review. For those pondering upgrades, Apple has laid a strong foundation with its hardware for some ambitious features down the road.",
+      "bestPassage": "Several of the most interesting health and AI features aren’t launching until later this year and weren’t available for review.",
       "matchedPassages": [
-        "S1-P17",
-        "S1-P16"
+        "S1-P6",
+        "S1-P14"
       ],
       "sharedTerms": [
-        "comp",
-        "start",
-        "permission",
+        "for",
+        "apple",
+        "has",
+        "laid",
+        "strong",
+        "foundation",
+        "ambitiou",
+        "featur",
+        "several",
+        "the",
+        "interest",
+        "health",
         "and",
-        "accountability",
-        "build",
-        "security",
-        "layer",
-        "continuously",
-        "monitor",
-        "risk",
-        "system",
-        "evolve"
+        "launch",
+        "later",
+        "year"
       ],
       "entityShared": [
-        "comp"
+        "apple"
       ],
       "topicShared": [
-        "comp",
-        "and",
-        "security",
-        "continuously"
+        "apple",
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -619,15 +577,9 @@
   ],
   "editorial": [
     {
-      "index": 15,
-      "claim": "The company’s previous shutdown highlights the challenge of finding a durable use case, and the current approach still depends on human audit review for final validation.",
+      "index": 13,
+      "claim": "The current hardware closes the gap between Apple and niche rivals like Whoop and Oura, but the full impact of the new ecosystem will depend on the rollout of pending software features and how users respond to privacy safeguards.",
       "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 16,
-      "claim": "Readers should watch for details on how the AI agents handle complex regulatory requirements and whether the platform can scale beyond early adopters.",
-      "type": "editorial-recommendation",
       "status": "editorial-excluded"
     }
   ]

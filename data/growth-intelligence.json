@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T11:43:35.946Z",
+  "generatedAt": "2026-09-17T17:01:27.816Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 11,
-    "averageEditorialScore": 75,
-    "editorialReviewCount": 9,
+    "totalArticles": 12,
+    "averageEditorialScore": 74,
+    "editorialReviewCount": 10,
     "refreshCandidates": 0
   },
   "categoryMix": [
     {
       "category": "AI",
       "count": 4,
-      "share": 36.4
+      "share": 33.3
     },
     {
       "category": "Technology",
       "count": 3,
-      "share": 27.3
+      "share": 25
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 27.3
+      "share": 25
     },
     {
       "category": "Innovation",
@@ -40,8 +40,8 @@
     },
     {
       "category": "Digital Life",
-      "count": 1,
-      "share": 9.1
+      "count": 2,
+      "share": 16.7
     },
     {
       "category": "Crypto",
@@ -54,15 +54,17 @@
     "Product Launches",
     "Crypto"
   ],
-  "overrepresentedCategories": [
-    "AI"
-  ],
+  "overrepresentedCategories": [],
   "recommendations": [
     "Prioritize missing categories: Innovation, Product Launches, Crypto.",
-    "Reduce short-term concentration in: AI.",
-    "9 article(s) are in editorial review; improve them before treating them as growth winners."
+    "10 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
+    {
+      "title": "The Apple Watch Series 12 is the start of a new wearable era",
+      "category": "Digital Life",
+      "publishedAt": "2026-09-17T17:01:14.943Z"
+    },
     {
       "title": "Comp AI raises $34M Series A to build agentic security and compliance platform",
       "category": "AI",
@@ -107,11 +109,6 @@
       "title": "How to Move Passwords and Passkeys Between Managers on Android",
       "category": "How-To",
       "publishedAt": "2026-09-14T03:19:21.719Z"
-    },
-    {
-      "title": "Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
-      "category": "Digital Life",
-      "publishedAt": "2026-09-13T11:49:56.851Z"
     }
   ]
 }
