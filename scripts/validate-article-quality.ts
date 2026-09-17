@@ -38,10 +38,10 @@ function normalizeUrl(url: string) {
     const parsed = new URL(url.trim());
     parsed.hash = '';
     parsed.search = '';
-    parsed.pathname = parsed.pathname.replace(/\\/+$/, '') || '/';
+    parsed.pathname = parsed.pathname.replace(/\/+$/, '') || '/';
     return parsed.toString();
   } catch {
-    return url.trim().replace(/\\/+$/, '');
+    return url.trim().replace(/\/+$/, '');
   }
 }
 
