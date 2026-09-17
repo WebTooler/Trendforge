@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-16T17:16:01.613Z",
+  "updatedAt": "2026-09-17T05:17:49.068Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,7 +12,7 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 3,
+    "runCount": 5,
     "topicCount": 50,
     "articleCount": 6,
     "latestEditorialScore": 78,
@@ -31,15 +31,15 @@
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 21,
+      "failures": 35,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
     },
     "Cohere": {
       "successRate": 8,
-      "successes": 6,
-      "failures": 69,
+      "successes": 10,
+      "failures": 115,
       "cooldownRuns": 0,
       "latestStatus": 200,
       "latestClass": "transient"
@@ -47,15 +47,15 @@
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 33,
+      "failures": 55,
       "cooldownRuns": 2,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "Groq": {
       "successRate": 8,
-      "successes": 9,
-      "failures": 111,
+      "successes": 15,
+      "failures": 185,
       "cooldownRuns": 2,
       "latestStatus": 429,
       "latestClass": "quota"
@@ -63,7 +63,7 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 9,
+      "failures": 15,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
@@ -71,7 +71,7 @@
     "OpenRouter": {
       "successRate": 0,
       "successes": 0,
-      "failures": 39,
+      "failures": 65,
       "cooldownRuns": 0,
       "latestStatus": 0,
       "latestClass": "transient"
@@ -180,33 +180,27 @@
   ],
   "insights": [
     {
-      "id": "small-history",
-      "type": "data-quality",
-      "confidence": "low",
-      "detail": "Performance observations are based on fewer than 5 historical runs; treat trends as provisional."
-    },
-    {
       "id": "editorial-trend",
       "type": "trend",
-      "confidence": "low",
+      "confidence": "medium",
       "detail": "Average editorial score changed by +0 points versus the previous run."
     },
     {
       "id": "claim-trend",
       "type": "trend",
-      "confidence": "low",
+      "confidence": "medium",
       "detail": "Average claim confidence changed by +0 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
-      "confidence": "low",
+      "confidence": "medium",
       "detail": "Evidence pass rate changed by +0 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
       "type": "bottleneck",
-      "confidence": "low",
+      "confidence": "medium",
       "detail": "8 operational bottleneck(s) observed; this is diagnostic only and does not change gates."
     }
   ],
@@ -216,7 +210,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 3,
+    "memoryRuns": 5,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
