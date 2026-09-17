@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-16T09:01:41.745Z",
-  "provider": "Cohere",
+  "generatedAt": "2026-09-17T07:41:26.387Z",
+  "provider": "Groq",
   "editorial": {
     "passed": true,
     "checks": {
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3286,
-      "sentenceCount": 19,
+      "normalizedLength": 4443,
+      "sentenceCount": 29,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,10 +31,10 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "arstechnica.com"
+    "techcrunch.com"
   ],
   "grounding": {
     "sourceCount": 1,
-    "usablePassages": 17
+    "usablePassages": 18
   }
 }
