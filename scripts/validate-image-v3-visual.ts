@@ -4,7 +4,6 @@ import crypto from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 
 const articleDir = 'content/articles';
-const imageDir = 'public/images/articles';
 const minBytes = 20_000;
 const expectedWidth = 1024;
 const expectedHeight = 576;
@@ -20,8 +19,7 @@ function jpegSize(file: string) {
   let i = 2;
   while (i + 9 < b.length) {
     if (b[i] !== 0xff) { i++; continue; }
-    const marker = b[i + 1];
-    i += 2;
+    const marker = b[i + 1]; i += 2;
     if (marker === 0xd8 || marker === 0xd9) continue;
     if (i + 2 > b.length) break;
     const len = b.readUInt16BE(i);
@@ -34,9 +32,10 @@ function jpegSize(file: string) {
 }
 
 function ocrWords(file: string) {
-  if (!spawnSync('tesseract', ['--version'], { stdio: 'ignore' }).status === 0) return [];
+  const version = spawnSync('tesseract', ['--version'], { stdio: 'ignore' });
+  if (version.error || version.status !== 0) return null;
   const out = spawnSync('tesseract', [file, 'stdout', '--psm', '11', 'tsv'], { encoding: 'utf8' });
-  if (out.status !== 0) return [];
+  if (out.error || out.status !== 0) return [];
   return out.stdout.split(/\\r?\\n/).slice(1).map(line => line.split('\\t')).filter(row => row.length >= 12).map(row => ({ text: row[11]?.trim() || '', confidence: Number(row[10]) || 0 })).filter(x => /[A-Za-z]{3,}/.test(x.text) && x.confidence >= 55);
 }
 
@@ -58,37 +57,35 @@ for (const file of files) {
   const item: Record<string, unknown> = { slug, image, checks: {} };
   const checks = item.checks as Record<string, unknown>;
   if (!local || !fs.existsSync(local)) {
-    failures.push(`${slug}: missing local V3 image`);
-    checks.presence = false;
-    report.push(item);
-    continue;
+    failures.push(`${slug}: missing local V3 image`); checks.presence = false; report.push(item); continue;
   }
 
   const info = jpegSize(local);
   checks.presence = true;
   checks.format = info?.bytes && info.bytes >= minBytes ? 'jpeg' : false;
   checks.dimensions = info ? `${info.width}x${info.height}` : false;
-  checks.ocr = 'not-run';
 
   const hash = crypto.createHash('sha256').update(fs.readFileSync(local)).digest('hex');
   if (hashes.has(hash)) failures.push(`${slug}: exact duplicate of ${hashes.get(hash)}`);
   hashes.set(hash, slug);
 
-  if (!info || info.width !== expectedWidth || info.height !== expectedHeight || info.bytes < minBytes) {
-    failures.push(`${slug}: invalid V3 raster format/dimensions/size`);
-  }
+  if (!info || info.width !== expectedWidth || info.height !== expectedHeight || info.bytes < minBytes) failures.push(`${slug}: invalid V3 raster format/dimensions/size`);
 
   const words = ocrWords(local);
-  checks.ocr = words.length ? { status: 'FAIL', words } : { status: 'PASS', words: [] };
-  if (words.length) failures.push(`${slug}: OCR detected readable text-like content: ${words.map(x => x.text).join(', ')}`);
+  if (words === null) {
+    checks.ocr = { status: 'UNAVAILABLE' };
+    warnings.push(`${slug}: tesseract unavailable; OCR text check could not run`);
+  } else {
+    checks.ocr = words.length ? { status: 'FAIL', words } : { status: 'PASS', words: [] };
+    if (words.length) failures.push(`${slug}: OCR detected readable text-like content: ${words.map(x => x.text).join(', ')}`);
+  }
 
   report.push(item);
 }
 
-const output = { version: 1, generatedAt: new Date().toISOString(), policy: { textPolicy: 'readable text is a hard fail', dimensions: '1024x576', minimumBytes: minBytes, duplicatePolicy: 'exact SHA-256 duplicates are a hard fail', semanticPolicy: 'story relevance, fake logos, and composition require a vision-capable QA provider before production integration' }, failures, warnings, candidates: report };
+const output = { version: 1, generatedAt: new Date().toISOString(), policy: { textPolicy: 'readable text is a hard fail when OCR is available', dimensions: '1024x576', minimumBytes: minBytes, duplicatePolicy: 'exact SHA-256 duplicates are a hard fail', semanticPolicy: 'story relevance, fake logos, and composition require a vision-capable QA provider before production integration' }, failures, warnings, candidates: report };
 fs.mkdirSync('data/image-v3-test', { recursive: true });
 fs.writeFileSync('data/image-v3-test/visual-qa.json', JSON.stringify(output, null, 2) + '\n');
-
 console.log(JSON.stringify(output, null, 2));
 if (failures.length) process.exit(1);
-console.log('Image V3 visual QA technical gate passed. Production integration remains blocked until vision QA is enabled and passes.');
+console.log('Image V3 technical visual QA passed. Production integration remains blocked until vision QA is enabled and passes.');
