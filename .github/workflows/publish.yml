@@ -24,6 +24,7 @@ on:
       - 'scripts/v2-self-check.mjs'
       - 'scripts/ai-provider-router.mjs'
       - 'scripts/trendforge-writer-engine.mjs'
+      - 'scripts/prepare-writer-runtime.mjs'
       - 'scripts/trendforge-editorial-policy.mjs'
       - 'scripts/validate-writer-output.mjs'
       - 'scripts/generate-article.ts'
@@ -48,6 +49,9 @@ env:
   OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
   COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
   COHERE_MODEL: ${{ vars.COHERE_MODEL }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_MODEL: ${{ vars.CLOUDFLARE_MODEL }}
 
 jobs:
   pipeline:
@@ -62,6 +66,8 @@ jobs:
           package-manager-cache: false
       - name: Install dependencies
         run: npm install
+      - name: Prepare writer runtime
+        run: node scripts/prepare-writer-runtime.mjs
       - name: Research fresh trends
         run: node scripts/trend-research.mjs
       - name: Score trends
