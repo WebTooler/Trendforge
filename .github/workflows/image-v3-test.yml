@@ -1,70 +1,16 @@
 name: TrendForge Image V3 Test Lab
 
 on:
-  push:
-    branches:
-      - image-v3-test-lab
   workflow_dispatch:
 
 permissions:
-  contents: write
-
-env:
-  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-  CLOUDFLARE_IMAGE_MODEL: '@cf/black-forest-labs/flux-2-klein-9b'
+  contents: read
 
 jobs:
-  image-v3-test:
+  image-v3-test-disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout test branch
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - name: Generate three real article images
-        run: npx --yes tsx scripts/generate-article-image-v3-article-test.ts
-      - name: Upload isolated image test results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: trendforge-image-v3-article-test-${{ github.run_number }}
-          path: data/image-v3-test/
-          if-no-files-found: warn
-          retention-days: 14
-      - name: Publish generated V3 images to test articles
-        if: success()
+      - name: Explain manual-only state
         run: |
-          node <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          const slugs = [
-            'apple-eyes-2029-ai-server-with-m-series-ultra-chips',
-            'how-to-move-passwords-and-passkeys-between-managers-on-android',
-            'beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities',
-          ];
-          const srcDir = 'data/image-v3-test';
-          const destDir = 'public/images/articles';
-          fs.mkdirSync(destDir, { recursive: true });
-          for (const slug of slugs) {
-            const src = path.join(srcDir, `${slug}.jpg`);
-            if (!fs.existsSync(src)) throw new Error(`Missing generated image: ${src}`);
-            fs.copyFileSync(src, path.join(destDir, `${slug}.jpg`));
-            const articlePath = path.join('content/articles', `${slug}.md`);
-            let article = fs.readFileSync(articlePath, 'utf8');
-            article = article
-              .replace(/^image:\s*.*$/m, `image: "/Trendforge/images/articles/${slug}.jpg"`)
-              .replace(/^imageAlt:\s*.*$/m, 'imageAlt: "Original AI-generated editorial illustration for this TrendForge article"')
-              .replace(/^imageSource:\s*.*$/m, 'imageSource: "TrendForge original editorial image generation"')
-              .replace(/^imageLicense:\s*.*$/m, 'imageLicense: "AI-generated original visual"')
-              .replace(/^imageGeneratedBy:\s*.*$/m, 'imageGeneratedBy: "TrendForge Image V3 — Cloudflare FLUX.2 Klein 9B"');
-            fs.writeFileSync(articlePath, article);
-          }
-          NODE
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/images/articles/*.jpg content/articles/*.md
-          git diff --cached --quiet && echo "No V3 publication changes" || git commit -m "chore: publish Image V3 article candidates [skip ci]"
-          git push origin HEAD:image-v3-test-lab
+          echo "Image V3 generation is intentionally manual-only while the Cloudflare free allocation is exhausted."
+          echo "Do not regenerate the existing Run #13 candidates. Use Promote Existing Image V3 Candidates for the saved artifact."
