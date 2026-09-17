@@ -5,11 +5,11 @@ slug: "how-to-move-passwords-and-passkeys-between-managers-on-android"
 category: "How-To"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-14T03:19:21.719Z"
-image: "/Trendforge/images/articles/how-to-move-passwords-and-passkeys-between-managers-on-android.svg"
-imageAlt: "Original howto illustration for How to Move Passwords and Passkeys Between Managers on Android"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/how-to-move-passwords-and-passkeys-between-managers-on-android.jpg"
+imageAlt: "Original AI-generated editorial illustration for this TrendForge article"
+imageSource: "TrendForge original editorial image generation"
+imageLicense: "AI-generated original visual"
+imageGeneratedBy: "TrendForge Image V3 — Cloudflare FLUX.2 Klein 9B"
 ---
 
 ## Why the new transfer flow matters

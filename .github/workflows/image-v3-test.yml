@@ -1,0 +1,16 @@
+name: TrendForge Image V3 Test Lab
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  image-v3-test-disabled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Explain manual-only state
+        run: |
+          echo "Image V3 generation is intentionally manual-only while the Cloudflare free allocation is exhausted."
+          echo "Do not regenerate the existing Run #13 candidates. Use Promote Existing Image V3 Candidates for the saved artifact."

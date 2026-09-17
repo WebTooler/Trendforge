@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "image:v3:visual-qa": "npx tsx scripts/validate-image-v3-visual.ts",
     "memory:summary": "node scripts/trendforge-memory-query.mjs summary",
     "memory:topic": "node scripts/trendforge-memory-query.mjs topic",
     "memory:category": "node scripts/trendforge-memory-query.mjs category",
