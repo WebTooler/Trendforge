@@ -4,6 +4,7 @@ const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
 const apiToken = process.env.CLOUDFLARE_API_TOKEN;
 const model = process.env.CLOUDFLARE_IMAGE_MODEL || '@cf/black-forest-labs/flux-2-klein-9b';
 const outputDir = 'data/image-v3-test';
+const diagnosticVersion = 'v2-exact-multipart-512';
 
 if (!accountId || !apiToken) throw new Error('Missing CLOUDFLARE_ACCOUNT_ID or CLOUDFLARE_API_TOKEN');
 fs.mkdirSync(outputDir, { recursive: true });
@@ -35,6 +36,7 @@ async function generate() {
   }
   const body = await serialized.arrayBuffer();
 
+  console.log(`DIAGNOSTIC version=${diagnosticVersion}`);
   console.log(`DIAGNOSTIC model=${model}`);
   console.log(`DIAGNOSTIC dimensions=${width}x${height}`);
   console.log(`DIAGNOSTIC contentType=${contentType}`);
@@ -72,6 +74,7 @@ async function generate() {
   fs.writeFileSync(`${outputDir}/cloudflare-smoke-diagnostics.json`, JSON.stringify({
     testOnly: true,
     productionTouched: false,
+    diagnosticVersion,
     model,
     prompt,
     width,
@@ -89,6 +92,7 @@ generate().catch((error) => {
   fs.writeFileSync(`${outputDir}/cloudflare-smoke-diagnostics.json`, JSON.stringify({
     testOnly: true,
     productionTouched: false,
+    diagnosticVersion,
     model,
     prompt,
     width,
