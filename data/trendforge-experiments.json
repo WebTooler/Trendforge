@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T17:14:47.638Z",
+  "updatedAt": "2026-09-17T21:42:34.318Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,8 +14,8 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 7,
-    "topics": 106,
+    "runs": 8,
+    "topics": 121,
     "articles": 12
   },
   "learningInput": {
@@ -88,66 +88,6 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVU5LSWZITUJudnZUYVQzYWNMSGFjVlZUWm5KNm9kT1NNVEVXWXh1U093TS1KbnM4bmthMHczR3ZYYTNVVVlvZC0yR05SV1AycUZQVVRHNkUwR1pjeHJ0aEtyQXNLYklMY1BDbGd3cWtWZTlZY2J5OEVpdTR5RjZZb1JLWmhkSng0a21QS3VSb0ROeDNxWkxGVzI0aFdLMHhIT1VGS0JsTjVjRGFLeUViZTRJQV9wbzQ1Ml8tWk8zWFJocmVKN2piMHh5Z05PbElnMEhlODRTNFNfZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVjloakU1c3AtckVyZDI5TzQwcGpZMGF0TWd5MHFiOXhENDZ3WnU0djAzMUhXUzdWa1JpdFJ5RjBnWVV3VExSMGdoeVJxWVhobnhDbzFJckg0aElqS2pZeUtXbndEWFRyY0RLLVhfWEVNSW5sUkQ3Qm9LV3Q2RWEtdXRlNFBkT2FEMVdIbUhIZVNrX01hN2ZnVXhyS0FDSGhodWtPWlRabjQzdXdlWnYtbF9rWlRTMXpsc3c?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNQjhORDl4ZEh4ODJpc0ktdk95T2ZOdVFSQnVqa2h3Q25MbHdobkFkWGpPZ3FZRUtCVEhob2VYNGJqSU5tbkJZcUZGTUt6LV85QkZ6SjNoVHE5NUY4UWVrT2c1TEg2ZGdjOTBoa3UwVnB6bW44X3FvaEVWVUd3M3BUYVFqT3dfUi1TOHhmMzI5ZWFuYkdYN2NGYU05a0tudkdOb3NrQnNIUTZWVTY2d2hKeXJUV0lNeUxvWmt1VEdBdEEzS05yVjB4dG1QcWxXR25lT09Edk40cXh4Y01FR3d4dG1MZkdaSV9aQTNYODFZMUhPWTdrZm1UdDZTcVUyWFVBdllscQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYkdLR21kWEJLSnY2Y1FCeDktV1d3Zi16RUpxN3BPQWFORTBiZGJmMzhYSGNKWEpnRTVKaWotamZuVHBrbzZYb3JBNHJza2ViWHhjdWs0RnVsYzNqOHFZVWtpQ2JqU2pUYnlmalg0NXZvdmpTOV9jME1aM3NRM0hZc1lhOXFsM25nSHJvVmIxU1l2YVk2c0Z6Q1Fn?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYWlZeXBDaEdjX3BLOGJ2WGJlbGtLMXVTMXNnNTZzNHRnLWNWaGtyUmplc3hEdVdpYnFnejVuRmV5REpNMHotWlFvTmpISXd1MENQb2xlWXYxTXA5cnVmYkNQMmtiSDFPSU5QQzdMbElOblpsWGlPSk9ES1ZEOEE1UXJvRVhPSms1LVBqZEdCdlNwMjR3YmRMWHVXd0ZTQ3FDNHo3Y0lhTEdoaE1ER21rUkl2WGkyMkNGMVN0SzJYWnFINXM?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMnNCTUMtZno1aVJxS3BKUUdyVVg2RV9jbVJLT19LRENTU2V6b0wzeDNFNGdsWGNfaHJPQ19YVjgyemVQdmFsbXRlT1RZRHczSl91NkxDMmpaSW5aY1o5Y2xqNXdMOUkybWx4V1pzV25YeW12OHNLUVI2cVFmcjlGU1gxc1lTOGlCd0t0R2xlVHh3bzd4MEU5QkZlV1V5bFJ4X0NyQUNB?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996341/bose-ultra-open-earbuds-second-gen-wireless-sport",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZTlqYXBUY2FCN2dqVzlPSXZpUXFSWXU4MjBjeVREZkttdHFfaFpUR3dnQjZsblBXUEJ5bEE0R1I2YXJ3WVViOGtrb00zdjd1RzlUanhqLXNjQVZRZEJGT0pmSEZQb0FzUnkxNmdaSDE4R25KQXJJZk1tZmZWcEhMRTRqT2xNelc2ZlJYRHl6TnFXUHhiY0dhME1yU2JOS0tDR29iMnlfV1B3Q3pERkFIbFN5LXdyTHVDc21oazdYYW43NVlu?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQlVoOHNQQ2Q2aF8zYXJjSnFiUk14UU5pZmZFUF94b0F1cXFISDdGRkJQMDB1WVNFQWkyMFBjdmZldFJXRVRPZUtYa1JDSTVOU3ZyUV9nY1dwd1lXTmtyWUxGVkZUWDBZVnd5MDFoZk9HNEJUVmFheGZkd3RsUHRCTHJyeV85aUlxZTA0T2lSbDZ3Ykp1dzhWUVFQdXoycXFlT29v?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996826/microsoft-xbox-disc-to-digital-history-notepad",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996453/camp-snap-110d-digital-camera-retro-horizontal-kodak-100-film",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/entertainment/996505/spotify-fresh-finds-forward",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/entertainment/996831/grand-theft-auto-6-soundtrack",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5xN3JfdDd0QTJXN1A0LVlhT2Y4NVBjSjdVYkhWM2RSb2pubzQ3N1VBTndaOUNwTllZTWpUNTFKakJ1dWtKaERPY19mZU5Hd2lxdmVmcFhTUXpQT08zNHZ1Nk5XTnVnQzJqWlNmU2FLMTNsRVlEd0V3?oc=5",
         "bucket": "control"
       },
@@ -166,70 +106,70 @@
       {
         "key": "https://www.theverge.com/tech/996860/lunacy-audio-nova-ai-music-plugin-vst",
         "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQY2U3dGVFZlZYV2U2Z3dTT1p4Q2JZcmE0UXgwNEc4QXpDM1QwN19vc1hTeGN2M092bVVBWFdxczZUS3VieGFiQy1nLWFlX3UzLTRDR1RYcDI4NVJTaGYzWWY2ZkJ6RW90OGdSczRPMWhqODNfRTdkMzhseGdaZW50X1VkNVFwMzFjbDhvZC13bktKc1NSZl9V?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTFotaThtdF9WV1ZVdFFkTTFrWlNoX0hLcW5ySlBIQ2Ywdk55UEphcHNiTmpsS2hLRVR6QW5RcE4xY21aT2d0T3lwNC1pMXV4NEZBeUk1cElDNTZrY1JqRjJFeXlXSkg5VXRxQjBiVGFIVU03Z0tyNlhRZXpUcUQzMFl30gGHAUFVX3lxTFBBbmdXWmZxZVR4VGVvVnFsRTFseFFDb05XVi1BM1c5MUJNdXBjeHZfRGhIUXVRSFprMDdWWlUwZ2xlbFYwWnN3Y255aEFBNy1JbDI2THlFLWVPTndjZkVHN0NCSEl1S29rc05Bdm42NjZYM0o4a0xLU0FtRTVqQjBkLXpBTk15Zw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTFpnSVRpQURpejN2NGtHOGg2MVVicUFEZXFITUdjc01sT09MeW9Ma0RRNlMzbktuNGlodF9wOEgyekNDcVBGcVBrWVh6RVYyUEdrc0VIUE1xZHlMT0RWMlZad1lBdkNpUUFOTHhjeWs4VlQ1bzRvM3dnelMtTUE3R1h3OEZ3aC1jTFNnMHo3RjR4c2taOUVkdFl2ZVhnNDNBbEZzLVRsVko4dlNwbVFiY3ZZTWs1bGZpOG9HcEdfbWZCSDFrMG5ybXk5d2I?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hRnpfUVU4WTQ4OWg4dDJLUlg2V3lWZjZ1Z0xELTRxSkZKTzA0VjdqOGFZRWNoVEtTczlXOTlCUk1XeXlKWks1djctUVBQWlF3UUdJS3VnM3QtVDBZUmRlSm00STBuSnlH?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZmsxQ0NPOHZtMWdTNzg5Q0tudmpXUzBhMTBzMWFJa3lZNlVpbkVQaHEyaDhva0FIamc1REprODVjbjN4a2pCdFFLX0FQUzZoLXBUQmNta3N0bjFGSklOb2otYVhZOGREUGlqMHZqaV9vVXdWbzh1RXVGLVlySm9RZHZVYw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcWtLbERReGhfMmxhOEhmX1BXMFRRTUV4Z2M5VFhkVzdNaWxkeG9oc3RhRVFGSGdFSUV3VEp2VVViZkdoT1VDcjNvZ0NpUGF4MFMwelF0LXlQTkhNbUNpbHdkeVNkenBLUmVGMG0xM2xtdmxIaG9GUDRNUGswR19YbWxlakU0Sm9nb09aWUhnQlNMOTF0MlZLRU5PRnRSZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVkZiYmtkenBxVnZPWFRFdjZFMloydkRrX1JGb0JaeUxseGlOUG1RUkdWbzlrazJUQ2FZQmk1YjdoZy1IYWNjMkNYeXBGM21nMXlwM0lzZHZCTlNEcVVwSExkczFTSlE1c0dFV0ZMUC1sZGM5TzZaMDV1Qk1Xal9fa0xYVWpEOFdBdXNVVzJVWGYwZ2RqN2pVZFYxLUdjMGpFelBFUmo1Q0h3NVphbDh2TE1UcVNKNG1vR0duVjRnLVJUcWpx?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSzVGUklHTVFjcUY0SEtha2VCM21tN3ZtVEJXYWpJbEhOQnJ0QlIya2VWX2lxMGdWNjB2elNRRE9MTW1kQjRCNTF5ZUR4TVh0d3M4WWtYSWdSYi1Fcm5EdzJENk9wRGl2RWZFNEp3TDZHeUpCTmFlTktxN2VlNnpsb1Y1WlE0ZFlkMk5KbnBNUFZMa1ZMeHZmdGpjV1NYazVGRDV0RWpXYnhxM3YyemxJ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMENfMjlBQ2RaRzZ2anFzZmtuZzdHLVViN2dlanlyMzFyYjYwNU9hU3BmdkxtZ09LYWlJd3g1eWZsNEtWQVg3V2w4VWVESVpCUFk2dlVPVFlFUG1xUjhyTGJScXZfY2hEYjZxbnFpVHdnLXcyeDMtQUNJSFRzLVMxZUdNMzdjUFZteGlWMzhxeVVDczJENEtGd1hZQXJwNWJP?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQT0Q2OWJjRkhxV1MtVkNZXzc0eVpVTlpHSF9ady1TWmdkRjJ5RGZPNkw0TTI5NTlwTUNlU1FCRGh6Qy1tcEl1QjJ4LTJ0SGFGZmg2R3F2dGpCNHRnbGVCZi1nZktqeUhqZ3ViUUwyc1NXQ2xwZzdUNUFXbXBzV2tVLVhMTlQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/17/is-the-ai-safety-debate-about-safety-or-control/",
+        "bucket": "variant"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVU5LSWZITUJudnZUYVQzYWNMSGFjVlZUWm5KNm9kT1NNVEVXWXh1U093TS1KbnM4bmthMHczR3ZYYTNVVVlvZC0yR05SV1AycUZQVVRHNkUwR1pjeHJ0aEtyQXNLYklMY1BDbGd3cWtWZTlZY2J5OEVpdTR5RjZZb1JLWmhkSng0a21QS3VSb0ROeDNxWkxGVzI0aFdLMHhIT1VGS0JsTjVjRGFLeUViZTRJQV9wbzQ1Ml8tWk8zWFJocmVKN2piMHh5Z05PbElnMEhlODRTNFNfZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVjloakU1c3AtckVyZDI5TzQwcGpZMGF0TWd5MHFiOXhENDZ3WnU0djAzMUhXUzdWa1JpdFJ5RjBnWVV3VExSMGdoeVJxWVhobnhDbzFJckg0aElqS2pZeUtXbndEWFRyY0RLLVhfWEVNSW5sUkQ3Qm9LV3Q2RWEtdXRlNFBkT2FEMVdIbUhIZVNrX01hN2ZnVXhyS0FDSGhodWtPWlRabjQzdXdlWnYtbF9rWlRTMXpsc3c?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNQjhORDl4ZEh4ODJpc0ktdk95T2ZOdVFSQnVqa2h3Q25MbHdobkFkWGpPZ3FZRUtCVEhob2VYNGJqSU5tbkJZcUZGTUt6LV85QkZ6SjNoVHE5NUY4UWVrT2c1TEg2ZGdjOTBoa3UwVnB6bW44X3FvaEVWVUd3M3BUYVFqT3dfUi1TOHhmMzI5ZWFuYkdYN2NGYU05a0tudkdOb3NrQnNIUTZWVTY2d2hKeXJUV0lNeUxvWmt1VEdBdEEzS05yVjB4dG1QcWxXR25lT09Edk40cXh4Y01FR3d4dG1MZkdaSV9aQTNYODFZMUhPWTdrZm1UdDZTcVUyWFVBdllscQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYkdLR21kWEJLSnY2Y1FCeDktV1d3Zi16RUpxN3BPQWFORTBiZGJmMzhYSGNKWEpnRTVKaWotamZuVHBrbzZYb3JBNHJza2ViWHhjdWs0RnVsYzNqOHFZVWtpQ2JqU2pUYnlmalg0NXZvdmpTOV9jME1aM3NRM0hZc1lhOXFsM25nSHJvVmIxU1l2YVk2c0Z6Q1Fn?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYWlZeXBDaEdjX3BLOGJ2WGJlbGtLMXVTMXNnNTZzNHRnLWNWaGtyUmplc3hEdVdpYnFnejVuRmV5REpNMHotWlFvTmpISXd1MENQb2xlWXYxTXA5cnVmYkNQMmtiSDFPSU5QQzdMbElOblpsWGlPSk9ES1ZEOEE1UXJvRVhPSms1LVBqZEdCdlNwMjR3YmRMWHVXd0ZTQ3FDNHo3Y0lhTEdoaE1ER21rUkl2WGkyMkNGMVN0SzJYWnFINXM?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMnNCTUMtZno1aVJxS3BKUUdyVVg2RV9jbVJLT19LRENTU2V6b0wzeDNFNGdsWGNfaHJPQ19YVjgyemVQdmFsbXRlT1RZRHczSl91NkxDMmpaSW5aY1o5Y2xqNXdMOUkybWx4V1pzV25YeW12OHNLUVI2cVFmcjlGU1gxc1lTOGlCd0t0R2xlVHh3bzd4MEU5QkZlV1V5bFJ4X0NyQUNB?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996341/bose-ultra-open-earbuds-second-gen-wireless-sport",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZTlqYXBUY2FCN2dqVzlPSXZpUXFSWXU4MjBjeVREZkttdHFfaFpUR3dnQjZsblBXUEJ5bEE0R1I2YXJ3WVViOGtrb00zdjd1RzlUanhqLXNjQVZRZEJGT0pmSEZQb0FzUnkxNmdaSDE4R25KQXJJZk1tZmZWcEhMRTRqT2xNelc2ZlJYRHl6TnFXUHhiY0dhME1yU2JOS0tDR29iMnlfV1B3Q3pERkFIbFN5LXdyTHVDc21oazdYYW43NVlu?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQlVoOHNQQ2Q2aF8zYXJjSnFiUk14UU5pZmZFUF94b0F1cXFISDdGRkJQMDB1WVNFQWkyMFBjdmZldFJXRVRPZUtYa1JDSTVOU3ZyUV9nY1dwd1lXTmtyWUxGVkZUWDBZVnd5MDFoZk9HNEJUVmFheGZkd3RsUHRCTHJyeV85aUlxZTA0T2lSbDZ3Ykp1dzhWUVFQdXoycXFlT29v?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996826/microsoft-xbox-disc-to-digital-history-notepad",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996453/camp-snap-110d-digital-camera-retro-horizontal-kodak-100-film",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/entertainment/996505/spotify-fresh-finds-forward",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/entertainment/996831/grand-theft-auto-6-soundtrack",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5xN3JfdDd0QTJXN1A0LVlhT2Y4NVBjSjdVYkhWM2RSb2pubzQ3N1VBTndaOUNwTllZTWpUNTFKakJ1dWtKaERPY19mZU5Hd2lxdmVmcFhTUXpQT08zNHZ1Nk5XTnVnQzJqWlNmU2FLMTNsRVlEd0V3?oc=5",
         "bucket": "control"
       },
@@ -248,70 +188,70 @@
       {
         "key": "https://www.theverge.com/tech/996860/lunacy-audio-nova-ai-music-plugin-vst",
         "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQY2U3dGVFZlZYV2U2Z3dTT1p4Q2JZcmE0UXgwNEc4QXpDM1QwN19vc1hTeGN2M092bVVBWFdxczZUS3VieGFiQy1nLWFlX3UzLTRDR1RYcDI4NVJTaGYzWWY2ZkJ6RW90OGdSczRPMWhqODNfRTdkMzhseGdaZW50X1VkNVFwMzFjbDhvZC13bktKc1NSZl9V?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTFotaThtdF9WV1ZVdFFkTTFrWlNoX0hLcW5ySlBIQ2Ywdk55UEphcHNiTmpsS2hLRVR6QW5RcE4xY21aT2d0T3lwNC1pMXV4NEZBeUk1cElDNTZrY1JqRjJFeXlXSkg5VXRxQjBiVGFIVU03Z0tyNlhRZXpUcUQzMFl30gGHAUFVX3lxTFBBbmdXWmZxZVR4VGVvVnFsRTFseFFDb05XVi1BM1c5MUJNdXBjeHZfRGhIUXVRSFprMDdWWlUwZ2xlbFYwWnN3Y255aEFBNy1JbDI2THlFLWVPTndjZkVHN0NCSEl1S29rc05Bdm42NjZYM0o4a0xLU0FtRTVqQjBkLXpBTk15Zw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTFpnSVRpQURpejN2NGtHOGg2MVVicUFEZXFITUdjc01sT09MeW9Ma0RRNlMzbktuNGlodF9wOEgyekNDcVBGcVBrWVh6RVYyUEdrc0VIUE1xZHlMT0RWMlZad1lBdkNpUUFOTHhjeWs4VlQ1bzRvM3dnelMtTUE3R1h3OEZ3aC1jTFNnMHo3RjR4c2taOUVkdFl2ZVhnNDNBbEZzLVRsVko4dlNwbVFiY3ZZTWs1bGZpOG9HcEdfbWZCSDFrMG5ybXk5d2I?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hRnpfUVU4WTQ4OWg4dDJLUlg2V3lWZjZ1Z0xELTRxSkZKTzA0VjdqOGFZRWNoVEtTczlXOTlCUk1XeXlKWks1djctUVBQWlF3UUdJS3VnM3QtVDBZUmRlSm00STBuSnlH?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZmsxQ0NPOHZtMWdTNzg5Q0tudmpXUzBhMTBzMWFJa3lZNlVpbkVQaHEyaDhva0FIamc1REprODVjbjN4a2pCdFFLX0FQUzZoLXBUQmNta3N0bjFGSklOb2otYVhZOGREUGlqMHZqaV9vVXdWbzh1RXVGLVlySm9RZHZVYw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcWtLbERReGhfMmxhOEhmX1BXMFRRTUV4Z2M5VFhkVzdNaWxkeG9oc3RhRVFGSGdFSUV3VEp2VVViZkdoT1VDcjNvZ0NpUGF4MFMwelF0LXlQTkhNbUNpbHdkeVNkenBLUmVGMG0xM2xtdmxIaG9GUDRNUGswR19YbWxlakU0Sm9nb09aWUhnQlNMOTF0MlZLRU5PRnRSZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVkZiYmtkenBxVnZPWFRFdjZFMloydkRrX1JGb0JaeUxseGlOUG1RUkdWbzlrazJUQ2FZQmk1YjdoZy1IYWNjMkNYeXBGM21nMXlwM0lzZHZCTlNEcVVwSExkczFTSlE1c0dFV0ZMUC1sZGM5TzZaMDV1Qk1Xal9fa0xYVWpEOFdBdXNVVzJVWGYwZ2RqN2pVZFYxLUdjMGpFelBFUmo1Q0h3NVphbDh2TE1UcVNKNG1vR0duVjRnLVJUcWpx?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSzVGUklHTVFjcUY0SEtha2VCM21tN3ZtVEJXYWpJbEhOQnJ0QlIya2VWX2lxMGdWNjB2elNRRE9MTW1kQjRCNTF5ZUR4TVh0d3M4WWtYSWdSYi1Fcm5EdzJENk9wRGl2RWZFNEp3TDZHeUpCTmFlTktxN2VlNnpsb1Y1WlE0ZFlkMk5KbnBNUFZMa1ZMeHZmdGpjV1NYazVGRDV0RWpXYnhxM3YyemxJ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMENfMjlBQ2RaRzZ2anFzZmtuZzdHLVViN2dlanlyMzFyYjYwNU9hU3BmdkxtZ09LYWlJd3g1eWZsNEtWQVg3V2w4VWVESVpCUFk2dlVPVFlFUG1xUjhyTGJScXZfY2hEYjZxbnFpVHdnLXcyeDMtQUNJSFRzLVMxZUdNMzdjUFZteGlWMzhxeVVDczJENEtGd1hZQXJwNWJP?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQT0Q2OWJjRkhxV1MtVkNZXzc0eVpVTlpHSF9ady1TWmdkRjJ5RGZPNkw0TTI5NTlwTUNlU1FCRGh6Qy1tcEl1QjJ4LTJ0SGFGZmg2R3F2dGpCNHRnbGVCZi1nZktqeUhqZ3ViUUwyc1NXQ2xwZzdUNUFXbXBzV2tVLVhMTlQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/17/is-the-ai-safety-debate-about-safety-or-control/",
+        "bucket": "variant"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVU5LSWZITUJudnZUYVQzYWNMSGFjVlZUWm5KNm9kT1NNVEVXWXh1U093TS1KbnM4bmthMHczR3ZYYTNVVVlvZC0yR05SV1AycUZQVVRHNkUwR1pjeHJ0aEtyQXNLYklMY1BDbGd3cWtWZTlZY2J5OEVpdTR5RjZZb1JLWmhkSng0a21QS3VSb0ROeDNxWkxGVzI0aFdLMHhIT1VGS0JsTjVjRGFLeUViZTRJQV9wbzQ1Ml8tWk8zWFJocmVKN2piMHh5Z05PbElnMEhlODRTNFNfZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVjloakU1c3AtckVyZDI5TzQwcGpZMGF0TWd5MHFiOXhENDZ3WnU0djAzMUhXUzdWa1JpdFJ5RjBnWVV3VExSMGdoeVJxWVhobnhDbzFJckg0aElqS2pZeUtXbndEWFRyY0RLLVhfWEVNSW5sUkQ3Qm9LV3Q2RWEtdXRlNFBkT2FEMVdIbUhIZVNrX01hN2ZnVXhyS0FDSGhodWtPWlRabjQzdXdlWnYtbF9rWlRTMXpsc3c?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNQjhORDl4ZEh4ODJpc0ktdk95T2ZOdVFSQnVqa2h3Q25MbHdobkFkWGpPZ3FZRUtCVEhob2VYNGJqSU5tbkJZcUZGTUt6LV85QkZ6SjNoVHE5NUY4UWVrT2c1TEg2ZGdjOTBoa3UwVnB6bW44X3FvaEVWVUd3M3BUYVFqT3dfUi1TOHhmMzI5ZWFuYkdYN2NGYU05a0tudkdOb3NrQnNIUTZWVTY2d2hKeXJUV0lNeUxvWmt1VEdBdEEzS05yVjB4dG1QcWxXR25lT09Edk40cXh4Y01FR3d4dG1MZkdaSV9aQTNYODFZMUhPWTdrZm1UdDZTcVUyWFVBdllscQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYkdLR21kWEJLSnY2Y1FCeDktV1d3Zi16RUpxN3BPQWFORTBiZGJmMzhYSGNKWEpnRTVKaWotamZuVHBrbzZYb3JBNHJza2ViWHhjdWs0RnVsYzNqOHFZVWtpQ2JqU2pUYnlmalg0NXZvdmpTOV9jME1aM3NRM0hZc1lhOXFsM25nSHJvVmIxU1l2YVk2c0Z6Q1Fn?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYWlZeXBDaEdjX3BLOGJ2WGJlbGtLMXVTMXNnNTZzNHRnLWNWaGtyUmplc3hEdVdpYnFnejVuRmV5REpNMHotWlFvTmpISXd1MENQb2xlWXYxTXA5cnVmYkNQMmtiSDFPSU5QQzdMbElOblpsWGlPSk9ES1ZEOEE1UXJvRVhPSms1LVBqZEdCdlNwMjR3YmRMWHVXd0ZTQ3FDNHo3Y0lhTEdoaE1ER21rUkl2WGkyMkNGMVN0SzJYWnFINXM?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMnNCTUMtZno1aVJxS3BKUUdyVVg2RV9jbVJLT19LRENTU2V6b0wzeDNFNGdsWGNfaHJPQ19YVjgyemVQdmFsbXRlT1RZRHczSl91NkxDMmpaSW5aY1o5Y2xqNXdMOUkybWx4V1pzV25YeW12OHNLUVI2cVFmcjlGU1gxc1lTOGlCd0t0R2xlVHh3bzd4MEU5QkZlV1V5bFJ4X0NyQUNB?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996341/bose-ultra-open-earbuds-second-gen-wireless-sport",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZTlqYXBUY2FCN2dqVzlPSXZpUXFSWXU4MjBjeVREZkttdHFfaFpUR3dnQjZsblBXUEJ5bEE0R1I2YXJ3WVViOGtrb00zdjd1RzlUanhqLXNjQVZRZEJGT0pmSEZQb0FzUnkxNmdaSDE4R25KQXJJZk1tZmZWcEhMRTRqT2xNelc2ZlJYRHl6TnFXUHhiY0dhME1yU2JOS0tDR29iMnlfV1B3Q3pERkFIbFN5LXdyTHVDc21oazdYYW43NVlu?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQlVoOHNQQ2Q2aF8zYXJjSnFiUk14UU5pZmZFUF94b0F1cXFISDdGRkJQMDB1WVNFQWkyMFBjdmZldFJXRVRPZUtYa1JDSTVOU3ZyUV9nY1dwd1lXTmtyWUxGVkZUWDBZVnd5MDFoZk9HNEJUVmFheGZkd3RsUHRCTHJyeV85aUlxZTA0T2lSbDZ3Ykp1dzhWUVFQdXoycXFlT29v?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996826/microsoft-xbox-disc-to-digital-history-notepad",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/996453/camp-snap-110d-digital-camera-retro-horizontal-kodak-100-film",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/entertainment/996505/spotify-fresh-finds-forward",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/entertainment/996831/grand-theft-auto-6-soundtrack",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5xN3JfdDd0QTJXN1A0LVlhT2Y4NVBjSjdVYkhWM2RSb2pubzQ3N1VBTndaOUNwTllZTWpUNTFKakJ1dWtKaERPY19mZU5Hd2lxdmVmcFhTUXpQT08zNHZ1Nk5XTnVnQzJqWlNmU2FLMTNsRVlEd0V3?oc=5",
         "bucket": "control"
       },
@@ -330,6 +270,66 @@
       {
         "key": "https://www.theverge.com/tech/996860/lunacy-audio-nova-ai-music-plugin-vst",
         "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQY2U3dGVFZlZYV2U2Z3dTT1p4Q2JZcmE0UXgwNEc4QXpDM1QwN19vc1hTeGN2M092bVVBWFdxczZUS3VieGFiQy1nLWFlX3UzLTRDR1RYcDI4NVJTaGYzWWY2ZkJ6RW90OGdSczRPMWhqODNfRTdkMzhseGdaZW50X1VkNVFwMzFjbDhvZC13bktKc1NSZl9V?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTFotaThtdF9WV1ZVdFFkTTFrWlNoX0hLcW5ySlBIQ2Ywdk55UEphcHNiTmpsS2hLRVR6QW5RcE4xY21aT2d0T3lwNC1pMXV4NEZBeUk1cElDNTZrY1JqRjJFeXlXSkg5VXRxQjBiVGFIVU03Z0tyNlhRZXpUcUQzMFl30gGHAUFVX3lxTFBBbmdXWmZxZVR4VGVvVnFsRTFseFFDb05XVi1BM1c5MUJNdXBjeHZfRGhIUXVRSFprMDdWWlUwZ2xlbFYwWnN3Y255aEFBNy1JbDI2THlFLWVPTndjZkVHN0NCSEl1S29rc05Bdm42NjZYM0o4a0xLU0FtRTVqQjBkLXpBTk15Zw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTFpnSVRpQURpejN2NGtHOGg2MVVicUFEZXFITUdjc01sT09MeW9Ma0RRNlMzbktuNGlodF9wOEgyekNDcVBGcVBrWVh6RVYyUEdrc0VIUE1xZHlMT0RWMlZad1lBdkNpUUFOTHhjeWs4VlQ1bzRvM3dnelMtTUE3R1h3OEZ3aC1jTFNnMHo3RjR4c2taOUVkdFl2ZVhnNDNBbEZzLVRsVko4dlNwbVFiY3ZZTWs1bGZpOG9HcEdfbWZCSDFrMG5ybXk5d2I?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1hRnpfUVU4WTQ4OWg4dDJLUlg2V3lWZjZ1Z0xELTRxSkZKTzA0VjdqOGFZRWNoVEtTczlXOTlCUk1XeXlKWks1djctUVBQWlF3UUdJS3VnM3QtVDBZUmRlSm00STBuSnlH?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZmsxQ0NPOHZtMWdTNzg5Q0tudmpXUzBhMTBzMWFJa3lZNlVpbkVQaHEyaDhva0FIamc1REprODVjbjN4a2pCdFFLX0FQUzZoLXBUQmNta3N0bjFGSklOb2otYVhZOGREUGlqMHZqaV9vVXdWbzh1RXVGLVlySm9RZHZVYw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcWtLbERReGhfMmxhOEhmX1BXMFRRTUV4Z2M5VFhkVzdNaWxkeG9oc3RhRVFGSGdFSUV3VEp2VVViZkdoT1VDcjNvZ0NpUGF4MFMwelF0LXlQTkhNbUNpbHdkeVNkenBLUmVGMG0xM2xtdmxIaG9GUDRNUGswR19YbWxlakU0Sm9nb09aWUhnQlNMOTF0MlZLRU5PRnRSZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVkZiYmtkenBxVnZPWFRFdjZFMloydkRrX1JGb0JaeUxseGlOUG1RUkdWbzlrazJUQ2FZQmk1YjdoZy1IYWNjMkNYeXBGM21nMXlwM0lzZHZCTlNEcVVwSExkczFTSlE1c0dFV0ZMUC1sZGM5TzZaMDV1Qk1Xal9fa0xYVWpEOFdBdXNVVzJVWGYwZ2RqN2pVZFYxLUdjMGpFelBFUmo1Q0h3NVphbDh2TE1UcVNKNG1vR0duVjRnLVJUcWpx?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSzVGUklHTVFjcUY0SEtha2VCM21tN3ZtVEJXYWpJbEhOQnJ0QlIya2VWX2lxMGdWNjB2elNRRE9MTW1kQjRCNTF5ZUR4TVh0d3M4WWtYSWdSYi1Fcm5EdzJENk9wRGl2RWZFNEp3TDZHeUpCTmFlTktxN2VlNnpsb1Y1WlE0ZFlkMk5KbnBNUFZMa1ZMeHZmdGpjV1NYazVGRDV0RWpXYnhxM3YyemxJ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMENfMjlBQ2RaRzZ2anFzZmtuZzdHLVViN2dlanlyMzFyYjYwNU9hU3BmdkxtZ09LYWlJd3g1eWZsNEtWQVg3V2w4VWVESVpCUFk2dlVPVFlFUG1xUjhyTGJScXZfY2hEYjZxbnFpVHdnLXcyeDMtQUNJSFRzLVMxZUdNMzdjUFZteGlWMzhxeVVDczJENEtGd1hZQXJwNWJP?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQT0Q2OWJjRkhxV1MtVkNZXzc0eVpVTlpHSF9ady1TWmdkRjJ5RGZPNkw0TTI5NTlwTUNlU1FCRGh6Qy1tcEl1QjJ4LTJ0SGFGZmg2R3F2dGpCNHRnbGVCZi1nZktqeUhqZ3ViUUwyc1NXQ2xwZzdUNUFXbXBzV2tVLVhMTlQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/17/is-the-ai-safety-debate-about-safety-or-control/",
+        "bucket": "variant"
       }
     ]
   },
@@ -337,13 +337,13 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 15,
+        "variant": 5,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 81,
+        "claimConfidence": 82,
         "evidencePassRate": 11
       },
       "conclusion": "insufficient-data",
@@ -352,13 +352,13 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 15,
+        "variant": 5,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 81,
+        "claimConfidence": 82,
         "evidencePassRate": 11
       },
       "conclusion": "insufficient-data",
@@ -367,13 +367,13 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 15,
+        "variant": 5,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 81,
+        "claimConfidence": 82,
         "evidencePassRate": 11
       },
       "conclusion": "insufficient-data",
@@ -381,6 +381,6 @@
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-17T12:01:07.358Z"
+    "previousUpdatedAt": "2026-09-17T17:14:47.638Z"
   }
 }
