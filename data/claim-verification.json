@@ -1,18 +1,18 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-17T08:52:26.409Z",
-  "articlePath": "content/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.md",
-  "articleTitle": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
+  "generatedAt": "2026-09-17T09:11:50.299Z",
+  "articlePath": "content/articles/ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.md",
+  "articleTitle": "AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
   "sourceCount": 1,
   "usableSourceCount": 1,
-  "claimCount": 17,
-  "editorialCount": 0,
-  "verified": 17,
+  "claimCount": 13,
+  "editorialCount": 2,
+  "verified": 13,
   "partial": 0,
   "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 88,
+  "averageConfidence": 82,
   "pass": true,
   "policy": {
     "verifiedMin": 62,
@@ -37,9 +37,9 @@
   "sources": [
     {
       "id": "S1",
-      "title": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "url": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "domain": "arstechnica.com",
+      "title": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "domain": "techcrunch.com",
       "passageCount": 18,
       "articleBodyLength": 0
     }
@@ -47,37 +47,39 @@
   "claims": [
     {
       "index": 1,
-      "claim": "Apple has been absent from the enterprise server market for decades, and the planned 2029 server could be its first enterprise server in decades.",
+      "claim": "The session titled “Hiring When AI Is a Co‑Founder” will take place at TechCrunch Disrupt 2026.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 58,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "classification": "supported",
+      "confidence": 81,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
-      "bestPassage": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
+      "bestPassageId": "S1-P2",
+      "evidence": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
+      "bestPassage": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
       "matchedPassages": [
-        "S1-P5"
+        "S1-P2"
       ],
       "sharedTerms": [
-        "apple",
         "the",
-        "server",
-        "market",
-        "decad",
-        "and",
-        "2029",
-        "first"
+        "session",
+        "hir",
+        "founder",
+        "techcrunch",
+        "disrupt",
+        "2026"
       ],
       "entityShared": [
-        "apple"
+        "hir",
+        "founder",
+        "techcrunch",
+        "disrupt"
       ],
       "topicShared": [
-        "apple",
-        "server",
-        "for"
+        "techcrunch",
+        "disrupt",
+        "2026"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -86,47 +88,57 @@
     },
     {
       "index": 2,
-      "claim": "According to a report from Ars Technica, the company is now working on a new AI server that would use Apple’s high‑performance M‑Series Ultra chips found in Mac desktops.",
+      "claim": "It features Josh Reeves, CEO and co‑founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co‑founder of Leland.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 85,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 99,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P4",
-      "evidence": "Credit: Benjamin Fanjoy/Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav Apple is working on an AI server that would use Apple’s high-performance M-series Ultra chips found in Mac desktops.",
-      "bestPassage": "Credit: Benjamin Fanjoy/Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav Apple is working on an AI server that would use Apple’s high-performance M-series Ultra chips found in Mac desktops.",
+      "bestPassageId": "S1-P2",
+      "evidence": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
+      "bestPassage": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
       "matchedPassages": [
-        "S1-P4"
+        "S1-P2"
       ],
       "sharedTerms": [
-        "work",
-        "server",
-        "use",
-        "apple",
-        "high",
-        "performance",
-        "seri",
-        "ultra",
-        "chip",
-        "found",
-        "mac",
-        "desktop"
+        "josh",
+        "reev",
+        "ceo",
+        "and",
+        "founder",
+        "gusto",
+        "michelle",
+        "johnson",
+        "senior",
+        "vice",
+        "president",
+        "insight",
+        "partner",
+        "john",
+        "koelliker",
+        "leland"
       ],
       "entityShared": [
-        "apple",
-        "seri",
-        "ultra",
-        "mac"
+        "josh",
+        "reev",
+        "ceo",
+        "gusto",
+        "michelle",
+        "johnson",
+        "insight",
+        "partner",
+        "john",
+        "koelliker",
+        "leland"
       ],
       "topicShared": [
-        "report",
-        "server",
-        "apple",
-        "seri",
-        "ultra",
-        "chip"
+        "and",
+        "gusto",
+        "insight",
+        "partner",
+        "leland"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -135,40 +147,41 @@
     },
     {
       "index": 3,
-      "claim": "The projected release of this product in 2029 would mark Apple’s first server to hit the market in almost two decades.",
+      "claim": "The discussion focuses on how early‑stage startups can build teams where humans and AI agents collaborate without sacrificing speed, accountability, or culture.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 87,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 78,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
-      "bestPassage": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
+      "bestPassageId": "S1-P2",
+      "evidence": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
+      "bestPassage": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
       "matchedPassages": [
-        "S1-P5"
+        "S1-P2"
       ],
       "sharedTerms": [
         "the",
-        "release",
-        "product",
-        "2029",
-        "mark",
-        "apple",
-        "first",
-        "server",
-        "hit",
-        "market",
-        "two",
-        "decad"
+        "early",
+        "stage",
+        "can",
+        "build",
+        "team",
+        "human",
+        "and",
+        "agent",
+        "without",
+        "sacrific",
+        "spe",
+        "accountability",
+        "culture"
       ],
-      "entityShared": [
-        "apple"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "apple",
-        "server"
+        "startup",
+        "and",
+        "agent"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -177,34 +190,45 @@
     },
     {
       "index": 4,
-      "claim": "The move would also come after a surge in demand for Apple hardware from AI developers.",
+      "claim": "Disrupt 2026 runs October 13–15 at Moscone West in San Francisco, gathering more than 10,000 startups, investors, and tech decision‑makers.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 61,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "classification": "supported",
+      "confidence": 88,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers. This revelation coincides with booming sales for Apple’s Mac mini and Mac Studio as AI developers and companies snap up the Mac computers to run AI workloads.",
-      "bestPassage": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
+      "bestPassageId": "S1-P3",
+      "evidence": "Join them at Moscone West in San Francisco, October 13–15, alongside 10,000+ startups, investors, and tech decision-makers exploring what it takes to build and scale the next generation of companies.",
+      "bestPassage": "Join them at Moscone West in San Francisco, October 13–15, alongside 10,000+ startups, investors, and tech decision-makers exploring what it takes to build and scale the next generation of companies.",
       "matchedPassages": [
-        "S1-P5",
-        "S1-P8"
+        "S1-P3"
       ],
       "sharedTerms": [
-        "the",
-        "for",
-        "apple",
-        "hardware",
-        "developer"
+        "october",
+        "moscone",
+        "west",
+        "san",
+        "francisco",
+        "000",
+        "startup",
+        "invest",
+        "and",
+        "decision",
+        "maker"
       ],
       "entityShared": [
-        "apple"
+        "october",
+        "moscone",
+        "west",
+        "san",
+        "francisco"
       ],
       "topicShared": [
-        "for",
-        "apple"
+        "disrupt",
+        "2026",
+        "startup",
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -213,56 +237,35 @@
     },
     {
       "index": 5,
-      "claim": "The report notes that companies such as OpenAI have purchased “tens of thousands” of Mac minis and Mac Studios to train AI agents through trial‑and‑error reinforcement learning, while Anthropic has rented Mac minis from Amazon Web Services.",
+      "claim": "For an early‑stage company, each new hire represents a trade‑off among capability, cost, and speed.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 98,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 75,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P10",
-      "evidence": "The Information reported that AI companies such as OpenAI have bought “tens of thousands” of Mac minis and Mac Studios to train AI agents through trial-and-error reinforcement learning, while Anthropic has also rented Mac minis from Amazon Web Services.",
-      "bestPassage": "The Information reported that AI companies such as OpenAI have bought “tens of thousands” of Mac minis and Mac Studios to train AI agents through trial-and-error reinforcement learning, while Anthropic has also rented Mac minis from Amazon Web Services.",
+      "bestPassageId": "S1-P6",
+      "evidence": "Image Credits: TechCrunch The first 10 people in a startup may no longer all be people For an early-stage company, every hire is a trade-off between capability, cost, and speed.",
+      "bestPassage": "Image Credits: TechCrunch The first 10 people in a startup may no longer all be people For an early-stage company, every hire is a trade-off between capability, cost, and speed.",
       "matchedPassages": [
-        "S1-P10"
+        "S1-P6"
       ],
       "sharedTerms": [
-        "the",
-        "report",
-        "compani",
-        "such",
-        "openai",
-        "tens",
-        "thousand",
-        "mac",
-        "mini",
+        "for",
+        "early",
+        "stage",
+        "hire",
+        "trade",
+        "off",
+        "capability",
+        "cost",
         "and",
-        "studio",
-        "train",
-        "agent",
-        "trial",
-        "error",
-        "reinforcement",
-        "learn",
-        "anthropic",
-        "has",
-        "rent",
-        "amazon",
-        "web",
-        "servic"
+        "spe"
       ],
-      "entityShared": [
-        "openai",
-        "mac",
-        "studio",
-        "anthropic",
-        "amazon",
-        "web",
-        "servic"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "report"
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -271,48 +274,39 @@
     },
     {
       "index": 6,
-      "claim": "The Information, which has been closely monitoring Apple’s plans, reports that the future enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips.",
+      "claim": "Engineering work, customer support, and operational tasks are increasingly delegated to systems that can complete multi‑step processes on their own.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 88,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 76,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "The enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips, according to The Information .",
-      "bestPassage": "The enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips, according to The Information .",
+      "bestPassageId": "S1-P7",
+      "evidence": "Engineering tasks, customer support, and operational work can increasingly be delegated to systems capable of completing multistep tasks rather than simply helping an employee complete them.",
+      "bestPassage": "Engineering tasks, customer support, and operational work can increasingly be delegated to systems capable of completing multistep tasks rather than simply helping an employee complete them.",
       "matchedPassages": [
-        "S1-P6"
+        "S1-P7"
       ],
       "sharedTerms": [
-        "the",
-        "information",
-        "apple",
-        "future",
-        "enterprise",
-        "server",
-        "come",
-        "two",
-        "configuration",
-        "include",
-        "either",
-        "four",
-        "ultra",
-        "chip"
+        "engineer",
+        "work",
+        "customer",
+        "support",
+        "and",
+        "operational",
+        "task",
+        "increas",
+        "delegat",
+        "system",
+        "can",
+        "complete"
       ],
       "entityShared": [
-        "the",
-        "information",
-        "apple",
-        "ultra"
+        "engineer"
       ],
       "topicShared": [
-        "apple",
-        "report",
-        "server",
-        "ultra",
-        "chip"
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -321,39 +315,43 @@
     },
     {
       "index": 7,
-      "claim": "Apple is also considering connecting its M8 chips using data‑center networking equipment from Nvidia.",
+      "claim": "Michelle Johnson advises CEOs and CROs across North America and Europe on go‑to‑market strategy, revenue organization, and AI implementation.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 98,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 92,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "Apple is also considering connecting its M8 chips using data center networking equipment from Nvidia.",
-      "bestPassage": "Apple is also considering connecting its M8 chips using data center networking equipment from Nvidia.",
+      "bestPassageId": "S1-P9",
+      "evidence": "At Insight Partners , she works with CEOs and CROs across North America and Europe on go-to-market strategy, revenue organizations, and AI implementation.",
+      "bestPassage": "At Insight Partners , she works with CEOs and CROs across North America and Europe on go-to-market strategy, revenue organizations, and AI implementation.",
       "matchedPassages": [
-        "S1-P11"
+        "S1-P9"
       ],
       "sharedTerms": [
-        "apple",
-        "consider",
-        "connect",
-        "its",
-        "chip",
-        "data",
-        "center",
-        "network",
-        "equipment",
-        "nvidia"
+        "ceos",
+        "and",
+        "cros",
+        "acros",
+        "north",
+        "america",
+        "europe",
+        "market",
+        "strategy",
+        "revenue",
+        "organization",
+        "implementation"
       ],
       "entityShared": [
-        "apple",
-        "nvidia"
+        "ceos",
+        "cros",
+        "north",
+        "america",
+        "europe"
       ],
       "topicShared": [
-        "apple",
-        "chip"
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -362,39 +360,43 @@
     },
     {
       "index": 8,
-      "claim": "Specifically, the potential use of Nvidia’s NVLink Fusion technology has been discussed in conversations between Apple and Nvidia.",
+      "claim": "Before joining Insight, she helped scale Flock Safety from less than $1 million to $90 million in annual recurring revenue while leading early sales and revenue operations.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 89,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 92,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "The potential use of Nvidia’s NVLink Fusion technology comes as sources told The Information that Apple and Nvidia have been holding conversations about how Apple could leverage Nvidia’s technology for the company’s AI push.",
-      "bestPassage": "The potential use of Nvidia’s NVLink Fusion technology comes as sources told The Information that Apple and Nvidia have been holding conversations about how Apple could leverage Nvidia’s technology for the company’s AI push.",
+      "bestPassageId": "S1-P10",
+      "evidence": "Before joining Insight, she helped scale Flock Safety from less than $1 million to $90 million in ARR as an early sales and revenue operations leader.",
+      "bestPassage": "Before joining Insight, she helped scale Flock Safety from less than $1 million to $90 million in ARR as an early sales and revenue operations leader.",
       "matchedPassages": [
-        "S1-P12"
+        "S1-P10"
       ],
       "sharedTerms": [
-        "the",
-        "potential",
-        "use",
-        "nvidia",
-        "nvlink",
-        "fusion",
-        "conversation",
-        "apple",
-        "and"
+        "join",
+        "insight",
+        "she",
+        "help",
+        "scale",
+        "flock",
+        "safety",
+        "million",
+        "revenue",
+        "early",
+        "sal",
+        "and",
+        "operation"
       ],
       "entityShared": [
-        "nvidia",
-        "nvlink",
-        "fusion",
-        "apple"
+        "insight",
+        "flock",
+        "safety"
       ],
       "topicShared": [
-        "apple"
+        "insight",
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -403,36 +405,41 @@
     },
     {
       "index": 9,
-      "claim": "The Information cautions that the project could still be canceled or proceed without incorporating Nvidia’s technology.",
+      "claim": "Founders still need people who can make decisions, take responsibility, understand customers, and shape the company culture.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 96,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 90,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "The Information cautioned that the project could still be canceled or go ahead without incorporating Nvidia’s technology.",
-      "bestPassage": "The Information cautioned that the project could still be canceled or go ahead without incorporating Nvidia’s technology.",
+      "bestPassageId": "S1-P11",
+      "evidence": "Founders still need people who can make decisions, take responsibility, understand customers, and create the culture around which a business grows.",
+      "bestPassage": "Founders still need people who can make decisions, take responsibility, understand customers, and create the culture around which a business grows.",
       "matchedPassages": [
-        "S1-P13"
+        "S1-P11"
       ],
       "sharedTerms": [
+        "founder",
+        "need",
+        "people",
+        "who",
+        "can",
+        "decision",
+        "take",
+        "responsibility",
+        "understand",
+        "customer",
+        "and",
         "the",
-        "information",
-        "caution",
-        "project",
-        "cancel",
-        "without",
-        "incorporat",
-        "nvidia"
+        "culture"
       ],
       "entityShared": [
-        "the",
-        "information",
-        "nvidia"
+        "founder"
       ],
-      "topicShared": [],
+      "topicShared": [
+        "and"
+      ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -440,49 +447,35 @@
     },
     {
       "index": 10,
-      "claim": "The project reportedly received support from new Apple CEO John Ternus when it began a year ago, back when Ternus led Apple’s hardware engineering efforts.",
+      "claim": "The central challenge is determining where human judgment adds the most value and where an AI agent can perform the role instead.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 100,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 62,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P7",
-      "evidence": "The project reportedly received support from new Apple CEO John Ternus when it began a year ago, back when Ternus led Apple’s hardware engineering efforts.",
-      "bestPassage": "The project reportedly received support from new Apple CEO John Ternus when it began a year ago, back when Ternus led Apple’s hardware engineering efforts.",
+      "bestPassageId": "S1-P12",
+      "evidence": "The challenge is deciding where those people create the greatest value — and where an agent might do the job instead. At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
+      "bestPassage": "The challenge is deciding where those people create the greatest value — and where an agent might do the job instead.",
       "matchedPassages": [
-        "S1-P7"
+        "S1-P12",
+        "S1-P2"
       ],
       "sharedTerms": [
         "the",
-        "project",
-        "report",
-        "receiv",
-        "support",
-        "new",
-        "apple",
-        "ceo",
-        "john",
-        "ternu",
-        "began",
-        "year",
-        "ago",
-        "back",
-        "led",
-        "hardware",
-        "engineer",
-        "effort"
+        "challenge",
+        "human",
+        "value",
+        "and",
+        "agent",
+        "can",
+        "instead"
       ],
-      "entityShared": [
-        "apple",
-        "ceo",
-        "john",
-        "ternu"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "report",
-        "apple"
+        "and",
+        "agent"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -491,151 +484,41 @@
     },
     {
       "index": 11,
-      "claim": "Ternus officially took over as Apple CEO from Tim Cook on September 1, after the latter had served in the leadership position for 15 years.",
+      "claim": "Engineering tasks, customer support, and operational work can increasingly be delegated to systems capable of completing multistep tasks.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 100,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 94,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P16",
-      "evidence": "Ternus officially took over as Apple CEO from Tim Cook on September 1, after the latter had served in the leadership position for 15 years .",
-      "bestPassage": "Ternus officially took over as Apple CEO from Tim Cook on September 1, after the latter had served in the leadership position for 15 years .",
+      "bestPassageId": "S1-P7",
+      "evidence": "Engineering tasks, customer support, and operational work can increasingly be delegated to systems capable of completing multistep tasks rather than simply helping an employee complete them.",
+      "bestPassage": "Engineering tasks, customer support, and operational work can increasingly be delegated to systems capable of completing multistep tasks rather than simply helping an employee complete them.",
       "matchedPassages": [
-        "S1-P16"
+        "S1-P7"
       ],
       "sharedTerms": [
-        "ternu",
-        "officially",
-        "took",
-        "apple",
-        "ceo",
-        "tim",
-        "cook",
-        "september",
-        "the",
-        "latter",
-        "had",
-        "serv",
-        "leadership",
-        "position",
-        "for",
-        "year"
-      ],
-      "entityShared": [
-        "ternu",
-        "apple",
-        "ceo",
-        "tim",
-        "cook",
-        "september"
-      ],
-      "topicShared": [
-        "apple",
-        "for"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 12,
-      "claim": "If Apple’s AI server eventually comes to fruition, it could be a notable part of John Ternus’ legacy.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 100,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P15",
-      "evidence": "If Apple’s AI server eventually comes to fruition, it could be a notable part of John Ternus’ legacy.",
-      "bestPassage": "If Apple’s AI server eventually comes to fruition, it could be a notable part of John Ternus’ legacy.",
-      "matchedPassages": [
-        "S1-P15"
-      ],
-      "sharedTerms": [
-        "apple",
-        "server",
-        "eventually",
-        "com",
-        "fruition",
-        "notable",
-        "part",
-        "john",
-        "ternu",
-        "legacy"
-      ],
-      "entityShared": [
-        "apple",
-        "john",
-        "ternu"
-      ],
-      "topicShared": [
-        "apple",
-        "server"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 13,
-      "claim": "Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply‑chain challenge shared across the tech industry: the ongoing shortage of memory chips because of companies rushing to build AI data centers.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 98,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P17",
-      "evidence": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
-      "bestPassage": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
-      "matchedPassages": [
-        "S1-P17"
-      ],
-      "sharedTerms": [
-        "apple",
-        "server",
-        "plan",
+        "engineer",
+        "task",
+        "customer",
+        "support",
         "and",
-        "the",
-        "grow",
-        "popularity",
-        "mac",
-        "computer",
-        "dur",
-        "boom",
-        "face",
-        "notable",
-        "supply",
-        "chain",
-        "challenge",
-        "shar",
-        "acros",
-        "ongo",
-        "shortage",
-        "memory",
-        "chip",
-        "compani",
-        "rush",
-        "build",
-        "data",
-        "center"
+        "operational",
+        "work",
+        "can",
+        "increas",
+        "delegat",
+        "system",
+        "capable",
+        "complet",
+        "multistep"
       ],
       "entityShared": [
-        "apple",
-        "mac"
+        "engineer"
       ],
       "topicShared": [
-        "apple",
-        "server",
-        "chip",
-        "build"
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -644,54 +527,43 @@
     },
     {
       "index": 14,
-      "claim": "As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones, not to mention a wide range of Apple products.",
+      "claim": "The three speakers will continue the conversation with the broader Disrupt audience across the Expo Hall, Startup Battlefield 200, and numerous networking sessions.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 98,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "confidence": 82,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P18",
-      "evidence": "As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones , not to mention a wide range of Apple products .",
-      "bestPassage": "As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones , not to mention a wide range of Apple products .",
+      "bestPassageId": "S1-P14",
+      "evidence": "Then continue the conversation with 10,000+ founders, investors, and operators across Moscone West, the Expo Hall, Startup Battlefield 200, and countless networking opportunities.",
+      "bestPassage": "Then continue the conversation with 10,000+ founders, investors, and operators across Moscone West, the Expo Hall, Startup Battlefield 200, and countless networking opportunities.",
       "matchedPassages": [
-        "S1-P18"
+        "S1-P14"
       ],
       "sharedTerms": [
-        "ars",
-        "has",
-        "document",
         "the",
-        "memory",
-        "shortage",
-        "led",
-        "significant",
-        "price",
-        "rise",
-        "for",
-        "consumer",
-        "electronic",
-        "such",
-        "gam",
-        "devic",
+        "continue",
+        "conversation",
+        "acros",
+        "expo",
+        "hall",
+        "startup",
+        "battlefield",
+        "200",
         "and",
-        "flagship",
-        "smartphon",
-        "not",
-        "mention",
-        "wide",
-        "range",
-        "apple",
-        "product"
+        "network"
       ],
       "entityShared": [
-        "ars",
-        "apple"
+        "expo",
+        "hall",
+        "startup",
+        "battlefield"
       ],
       "topicShared": [
-        "for",
-        "apple"
+        "disrupt",
+        "startup",
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -700,136 +572,41 @@
     },
     {
       "index": 15,
-      "claim": "The next few years will reveal whether Apple’s server project advances, whether it incorporates Nvidia’s networking technology, and how the company navigates the memory‑chip shortage.",
+      "claim": "The session is categorized under AI, Startups, and TechCrunch Disrupt, signaling its relevance to founders seeking practical guidance on the next wave of workforce evolution.",
       "status": "verified",
-      "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
+      "classification": "supported_with_context",
+      "confidence": 60,
+      "bestSource": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "bestUrl": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "bestDomain": "techcrunch.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P17",
-      "evidence": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers . As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones , not to mention a wide range of Apple products . The potential use of Nvidia’s NVLink Fusion technology comes as sources told The Information that Apple and Nvidia have been holding conversations about how Apple could leverage Nvidia’s technology for the company’s AI push.",
-      "bestPassage": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
+      "bestPassageId": "S1-P2",
+      "evidence": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture. Image Credits: TechCrunch Topics AI , Startups , TechCrunch Disrupt When you purchase through links in our articles, we may earn a small commission .",
+      "bestPassage": "At TechCrunch Disrupt 2026 , Josh Reeves, CEO and co-founder of Gusto; Michelle Johnson, senior vice president at Insight Partners; and John Koelliker, CEO and co-founder of Leland, come together on the Builders Stage for an insightful session called “Hiring When AI Is a Co-Founder.” This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture.",
       "matchedPassages": [
-        "S1-P17",
-        "S1-P18",
-        "S1-P12"
-      ],
-      "sharedTerms": [
-        "the",
-        "apple",
-        "server",
-        "nvidia",
-        "and",
-        "memory",
-        "chip",
-        "shortage"
-      ],
-      "entityShared": [
-        "apple",
-        "nvidia"
-      ],
-      "topicShared": [
-        "apple",
-        "server",
-        "chip"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 16,
-      "claim": "The ongoing memory-chip shortage is a notable supply-chain challenge for Apple's server plans.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 90,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P17",
-      "evidence": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
-      "bestPassage": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
-      "matchedPassages": [
+        "S1-P2",
         "S1-P17"
       ],
       "sharedTerms": [
         "the",
-        "ongo",
-        "memory",
-        "chip",
-        "shortage",
-        "notable",
-        "supply",
-        "chain",
-        "challenge",
-        "apple",
-        "server",
-        "plan"
+        "session",
+        "startup",
+        "and",
+        "techcrunch",
+        "disrupt",
+        "founder"
       ],
       "entityShared": [
-        "apple"
+        "startup",
+        "techcrunch",
+        "disrupt"
       ],
       "topicShared": [
-        "chip",
-        "for",
-        "apple",
-        "server"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 17,
-      "claim": "For now, the information points to a potential return of Apple to the enterprise server market, driven by its M‑Series Ultra chips and the AI industry’s demand for powerful, Apple‑based computing platforms.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 80,
-      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
-      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
-      "bestDomain": "arstechnica.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "The popularity of such computing devices that rely on Apple’s M-series Ultra chips has undoubtedly encouraged Apple’s pursuit of an enterprise server using the same chips. The enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips, according to The Information . Apple reportedly building server packed with M-series Ultra chips for AI Planned 2029 debut could make this Apple’s first enterprise server in decades. But if it moves ahead, it would mark a notable return for Apple to the enterprise server market following the retirement of Apple’s Xserve in January 2011 . Credit: Benjamin Fanjoy/Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav Apple is working on an AI server that would use Apple’s high-performance M-series Ultra chips found in Mac desktops.",
-      "bestPassage": "The popularity of such computing devices that rely on Apple’s M-series Ultra chips has undoubtedly encouraged Apple’s pursuit of an enterprise server using the same chips.",
-      "matchedPassages": [
-        "S1-P9",
-        "S1-P6",
-        "S1-P1",
-        "S1-P14",
-        "S1-P4"
-      ],
-      "sharedTerms": [
-        "for",
-        "the",
-        "information",
-        "return",
-        "apple",
-        "enterprise",
-        "server",
-        "market",
-        "seri",
-        "ultra",
-        "chip",
-        "comput"
-      ],
-      "entityShared": [
-        "apple",
-        "seri",
-        "ultra"
-      ],
-      "topicShared": [
-        "for",
-        "apple",
-        "server",
-        "seri",
-        "ultra",
-        "chip"
+        "startup",
+        "and",
+        "techcrunch",
+        "disrupt",
+        "next"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -837,5 +614,18 @@
       "matchingMode": "semantic-context-evidence-pack"
     }
   ],
-  "editorial": []
+  "editorial": [
+    {
+      "index": 12,
+      "claim": "Human leaders are still required to interpret ambiguous market signals, negotiate partnerships, and build trust with stakeholders.",
+      "type": "editorial-analysis",
+      "status": "editorial-excluded"
+    },
+    {
+      "index": 13,
+      "claim": "The panel suggests that the most valuable human contributions lie in areas where judgment, creativity, and relational intelligence are essential—domains where AI currently lacks depth.",
+      "type": "editorial-analysis",
+      "status": "editorial-excluded"
+    }
+  ]
 }

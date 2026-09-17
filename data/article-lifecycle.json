@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-17T08:52:57.593Z",
+  "generatedAt": "2026-09-17T09:11:53.967Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,10 +11,10 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 8,
+    "articles": 9,
     "refreshCandidates": 0,
     "watch": 3,
-    "fresh": 5,
+    "fresh": 6,
     "stale": 0,
     "duplicateClusters": 0
   },
@@ -98,7 +98,7 @@
       "title": "Al Gore Says the Real AI Risk Isn’t Data Centers",
       "category": "AI",
       "publishedAt": "2026-09-17T07:41:26.386Z",
-      "ageDays": 0,
+      "ageDays": 0.1,
       "ageState": "fresh",
       "words": 619,
       "sourceCount": 1,
@@ -134,6 +134,22 @@
       "status": "fresh",
       "action": "no-action",
       "reasons": []
+    },
+    {
+      "file": "ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.md",
+      "title": "AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026",
+      "category": "AI",
+      "publishedAt": "2026-09-17T09:11:07.530Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 375,
+      "sourceCount": 1,
+      "refreshScore": 35,
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": [
+        "content below 450 words"
+      ]
     }
   ],
   "refreshQueue": [],
