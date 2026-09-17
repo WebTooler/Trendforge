@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-17T17:01:25.773Z",
+  "generatedAt": "2026-09-17T21:22:52.349Z",
   "status": "pass",
-  "currentGeneratedArticle": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
-  "currentScore": 83,
+  "currentGeneratedArticle": null,
+  "currentScore": null,
   "identity": {
     "method": "brief.title",
     "rejectedMarker": false
@@ -218,16 +218,17 @@
       "slug": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
       "title": "The Apple Watch Series 12 is the start of a new wearable era",
       "category": "Digital Life",
-      "score": 83,
-      "decision": "publish_ready",
+      "score": 65,
+      "decision": "review",
       "dimensions": {
-        "evidence": 88,
+        "evidence": 50,
         "usefulness": 95,
         "clarity": 100,
         "originality": 60,
-        "sourceStrength": 63
+        "sourceStrength": 21
       },
       "reasons": [
+        "evidence confidence needs improvement",
         "topic/title similarity is high",
         "source strength/diversity needs improvement"
       ]

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-17T17:01:25.773Z",
+  "generatedAt": "2026-09-17T21:22:52.349Z",
   "queue": [
     {
       "slug": "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry",
@@ -175,6 +175,25 @@
         "usefulness": 97,
         "clarity": 100,
         "originality": 71,
+        "sourceStrength": 21
+      },
+      "reasons": [
+        "evidence confidence needs improvement",
+        "topic/title similarity is high",
+        "source strength/diversity needs improvement"
+      ]
+    },
+    {
+      "slug": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
+      "title": "The Apple Watch Series 12 is the start of a new wearable era",
+      "category": "Digital Life",
+      "score": 65,
+      "decision": "review",
+      "dimensions": {
+        "evidence": 50,
+        "usefulness": 95,
+        "clarity": 100,
+        "originality": 60,
         "sourceStrength": 21
       },
       "reasons": [
