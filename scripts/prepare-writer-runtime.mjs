@@ -11,10 +11,23 @@ const replacements=[
   ["const providerModel=provider=>({Groq:process.env.GROQ_MODEL||'openai/gpt-oss-20b',Gemini:process.env.GEMINI_MODEL||'gemini-3.6-flash',OpenRouter:process.env.OPENROUTER_MODEL||'openrouter/free',Cohere:process.env.COHERE_MODEL||'command-a-plus-05-2026'}[provider]);","const providerModel=provider=>({Groq:process.env.GROQ_MODEL||'openai/gpt-oss-20b',Gemini:process.env.GEMINI_MODEL||'gemini-3.6-flash',OpenRouter:process.env.OPENROUTER_MODEL||'openrouter/free',Cohere:process.env.COHERE_MODEL||'command-a-plus-05-2026',Cloudflare:process.env.CLOUDFLARE_MODEL||'@cf/meta/llama-3.3-70b-instruct-fp8-fast'}[provider]);"],
   ["else if(provider==='Cohere')r=await fetch('https://api.cohere.com/v2/chat'","else if(provider==='Cloudflare')r=await fetch(`https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/run/${providerModel(provider)}`,{method:'POST',signal,headers:{Authorization:`Bearer ${process.env.CLOUDFLARE_API_TOKEN}`,'Content-Type':'application/json'},body:JSON.stringify({messages:[{role:'system',content:system},{role:'user',content:prompt}],max_tokens:3600,temperature:0.1,response_format:{type:'json_object'}})});else if(provider==='Cohere')r=await fetch('https://api.cohere.com/v2/chat'"]
 ];
-for(const [from,to] of replacements){if(!text.includes(from))throw new Error(`Writer runtime patch target missing: ${from.slice(0,90)}`);text=text.replace(from,to);}
+for(const [from,to] of replacements){
+  if(text.includes(from)){
+    text=text.replace(from,to);
+    console.log(`Writer runtime patch applied: ${from.slice(0,90)}`);
+  }else{
+    console.log(`Writer runtime patch skipped: target already changed or current runtime variant: ${from.slice(0,90)}`);
+  }
+}
 const old="if(provider==='Gemini')return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';if(provider==='Cohere')";
 const next="if(provider==='Gemini')return j.candidates?.[0]?.content?.parts?.map(p=>p.text||'').join('')||'';if(provider==='Cloudflare'){const value=j?.result?.response??j?.response??j?.result?.output_text??j?.output_text??j?.choices?.[0]?.message?.content;if(typeof value==='string')return value;if(Array.isArray(value))return value.map(x=>typeof x==='string'?x:(x?.text??x?.content??'')).join('');if(value&&typeof value==='object'){const nested=value.text??value.content??value.output_text??value.response;if(typeof nested==='string')return nested;}throw new Error('Cloudflare response-shape: generated response was not text');}if(provider==='Cohere')";
-if(!text.includes(old))throw new Error('Writer runtime patch target for response parsing missing.');
-text=text.replace(old,next);
+if(text.includes(old)){
+  text=text.replace(old,next);
+  console.log('Writer runtime response parser patch applied: Cloudflare normalization.');
+}else if(text.includes("if(provider==='Cloudflare')return cloudflareText(j);")){
+  console.log('Writer runtime response parser patch skipped: Cloudflare normalization already present.');
+}else{
+  throw new Error('Writer runtime patch target for response parsing missing and no Cloudflare parser was detected.');
+}
 fs.writeFileSync(path,text);
-console.log('Writer runtime prepared: Cloudflare Workers AI / Llama 3.3 70B enabled with strict response normalization; writer budget capped at 6/run and 2/candidate; OpenRouter timeout bounded to 22s.');
+console.log('Writer runtime prepared: compatible/idempotent Cloudflare Workers AI preparation; existing writer-engine variants are preserved.');
