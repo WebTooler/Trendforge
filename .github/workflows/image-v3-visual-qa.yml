@@ -1,0 +1,36 @@
+name: TrendForge Image V3 Visual QA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout test branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install OCR engine
+        run: sudo apt-get update && sudo apt-get install -y tesseract-ocr
+
+      - name: Run Image V3 visual QA
+        run: npx tsx scripts/validate-image-v3-visual.ts
+
+      - name: Upload QA report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trendforge-image-v3-visual-qa-report
+          path: data/image-v3-test/visual-qa.json
+          if-no-files-found: warn
