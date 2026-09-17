@@ -1,47 +1,102 @@
 import fs from 'node:fs';
-import path from 'node:path';
 
 const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
 const apiToken = process.env.CLOUDFLARE_API_TOKEN;
 const model = process.env.CLOUDFLARE_IMAGE_MODEL || '@cf/black-forest-labs/flux-2-klein-9b';
-const manifestPath = 'data/image-manifest.json';
 const outputDir = 'data/image-v3-test';
-const testLimit = Number(process.env.IMAGE_V3_TEST_LIMIT || 1);
+
 if (!accountId || !apiToken) throw new Error('Missing CLOUDFLARE_ACCOUNT_ID or CLOUDFLARE_API_TOKEN');
 fs.mkdirSync(outputDir, { recursive: true });
-const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-const entries = Object.entries(manifest.images ?? {}).slice(0, testLimit);
-function readArticle(slug: string) { return fs.readFileSync(path.join('content/articles', `${slug}.md`), 'utf8'); }
-function field(text: string, key: string) { const m = text.match(new RegExp(`^${key}:\\s*"([\\s\\S]*?)"\\s*$`, 'm')); return m ? m[1].replace(/\\"/g, '"') : ''; }
-function body(text: string) { return (text.split(/^---$/m).slice(2).join('---').split(/^## Sources$/m)[0] ?? '').replace(/\s+/g, ' ').trim(); }
-function brief(title: string, description: string, article: string) {
-  return `Original editorial illustration for a premium technology newsroom. Wide 16:9 composition, realistic but clearly illustrative, cinematic natural lighting, strong subject hierarchy, restrained sophisticated palette, no readable text, no captions, no watermarks, no logos, no UI screenshot, no generic neural-network wallpaper. Create a story-specific visual for: ${title}. Context: ${description}. Article context: ${article.slice(0, 1000)}. Show the concrete people, object, event, environment or action that makes this story visually identifiable.`;
-}
-async function generate(prompt: string) {
-  const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${model}`;
+
+// Diagnostic only: deliberately remove article/prompt complexity.
+// One tiny request proves whether the Cloudflare REST inference path itself works.
+const prompt = 'A single red apple on a white studio table, editorial product photograph, clean background.';
+const width = 512;
+const height = 512;
+const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${model}`;
+
+async function generate() {
   const form = new FormData();
   form.append('prompt', prompt);
-  form.append('width', '1024');
-  form.append('height', '576');
-  const response = await fetch(url, { method: 'POST', headers: { Authorization: `Bearer ${apiToken}` }, body: form });
-  const payload = await response.json() as any;
-  if (!response.ok || payload?.success === false) throw new Error(`Cloudflare ${response.status}: ${JSON.stringify(payload).slice(0, 1600)}`);
-  const image = payload?.result?.image ?? payload?.result;
-  if (typeof image !== 'string') throw new Error(`No image in Cloudflare response: ${JSON.stringify(payload).slice(0, 1600)}`);
-  return image;
-}
-const results: any[] = [];
-for (const [slug, meta] of entries) {
-  const article = readArticle(slug); const title = field(article, 'title'); const description = field(article, 'description');
+  form.append('width', String(width));
+  form.append('height', String(height));
+
+  // Force Node to serialize the multipart body first so we can forward the
+  // exact generated boundary in Content-Type. This follows Cloudflare's
+  // documented multipart-boundary handling pattern.
+  const serialized = new Request(url, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${apiToken}` },
+    body: form,
+  });
+  const contentType = serialized.headers.get('content-type');
+  if (!contentType?.startsWith('multipart/form-data;')) {
+    throw new Error(`Unexpected multipart Content-Type: ${contentType ?? 'missing'}`);
+  }
+  const body = await serialized.arrayBuffer();
+
+  console.log(`DIAGNOSTIC model=${model}`);
+  console.log(`DIAGNOSTIC dimensions=${width}x${height}`);
+  console.log(`DIAGNOSTIC contentType=${contentType}`);
+  console.log(`DIAGNOSTIC requestBytes=${body.byteLength}`);
+
   const started = Date.now();
-  try {
-    const image = await generate(brief(title, description, body(article)));
-    const base64 = image.startsWith('data:image/') ? image.split(',')[1] : image;
-    const safeSlug = slug.replace(/[^a-z0-9-]/gi, '-');
-    fs.writeFileSync(path.join(outputDir, `${safeSlug}.png`), Buffer.from(base64, 'base64'));
-    fs.writeFileSync(path.join(outputDir, `${safeSlug}.json`), JSON.stringify({ slug, title, description, currentImage: (meta as any).image, model, width: 1024, height: 576, latencyMs: Date.now() - started }, null, 2));
-    results.push({ slug, status: 'PASS', latencyMs: Date.now() - started }); console.log(`PASS ${slug}`);
-  } catch (error) { results.push({ slug, status: 'FAIL', error: String(error), latencyMs: Date.now() - started }); console.error(`FAIL ${slug}: ${String(error)}`); }
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${apiToken}`,
+      'Content-Type': contentType,
+      'Content-Length': String(body.byteLength),
+    },
+    body,
+  });
+  const elapsedMs = Date.now() - started;
+  const raw = await response.text();
+  console.log(`DIAGNOSTIC httpStatus=${response.status}`);
+  console.log(`DIAGNOSTIC elapsedMs=${elapsedMs}`);
+  console.log(`DIAGNOSTIC contentTypeResponse=${response.headers.get('content-type') ?? 'missing'}`);
+
+  let payload: any;
+  try { payload = JSON.parse(raw); } catch { payload = null; }
+  if (!response.ok || payload?.success === false) {
+    throw new Error(`Cloudflare ${response.status} after ${elapsedMs}ms: ${raw.slice(0, 4000)}`);
+  }
+
+  const image = payload?.result?.image ?? payload?.result;
+  if (typeof image !== 'string') {
+    throw new Error(`Cloudflare returned no base64 image after ${elapsedMs}ms: ${raw.slice(0, 4000)}`);
+  }
+
+  const base64 = image.startsWith('data:image/') ? image.split(',')[1] : image;
+  fs.writeFileSync(`${outputDir}/cloudflare-smoke.png`, Buffer.from(base64, 'base64'));
+  fs.writeFileSync(`${outputDir}/cloudflare-smoke-diagnostics.json`, JSON.stringify({
+    testOnly: true,
+    productionTouched: false,
+    model,
+    prompt,
+    width,
+    height,
+    httpStatus: response.status,
+    elapsedMs,
+    responseContentType: response.headers.get('content-type'),
+    imageBytes: Buffer.byteLength(base64, 'base64'),
+    generatedAt: new Date().toISOString(),
+  }, null, 2));
+  console.log(`PASS Cloudflare smoke image generated in ${elapsedMs}ms`);
 }
-fs.writeFileSync(path.join(outputDir, 'results.json'), JSON.stringify({ testOnly: true, productionTouched: false, model, count: entries.length, results }, null, 2));
-if (results.some(x => x.status === 'FAIL')) process.exitCode = 1;
+
+generate().catch((error) => {
+  fs.writeFileSync(`${outputDir}/cloudflare-smoke-diagnostics.json`, JSON.stringify({
+    testOnly: true,
+    productionTouched: false,
+    model,
+    prompt,
+    width,
+    height,
+    status: 'FAIL',
+    error: String(error),
+    generatedAt: new Date().toISOString(),
+  }, null, 2));
+  console.error(`FAIL Cloudflare smoke: ${String(error)}`);
+  process.exitCode = 1;
+});
