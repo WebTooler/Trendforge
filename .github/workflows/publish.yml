@@ -140,7 +140,27 @@ jobs:
         run: |
           set -euo pipefail
           echo "Claim verification gate: BLOCK — all bounded verification paths exhausted (initial=${{ steps.claim_verification.outcome }} repair1=${{ steps.grounding_repair_1.outcome }} reverify1=${{ steps.claim_reverification_1.outcome }} repair2=${{ steps.grounding_repair_2.outcome }} final=${{ steps.claim_verification_final.outcome }})."
-          exit 1
+          mkdir -p data/article-attempts
+          article="$(git status --porcelain --untracked-files=all -- content/articles | sed -n 's/^?? //p' | head -n 1)"
+          if [ -n "$article" ] && [ -f "$article" ]; then
+            stamp="$(date -u +%Y%m%d-%H%M%S)"
+            name="$(basename "$article" .md)"
+            quarantine="data/article-attempts/${stamp}-${name}-claim-blocked"
+            mkdir -p "$quarantine"
+            cp "$article" "$quarantine/article.md"
+            [ -f data/article-brief.json ] && cp data/article-brief.json "$quarantine/article-brief.json"
+            [ -f data/claim-verification.json ] && cp data/claim-verification.json "$quarantine/claim-verification.json"
+            [ -f data/grounding-repair.json ] && cp data/grounding-repair.json "$quarantine/grounding-repair.json"
+            cat > "$quarantine/metadata.json" <<EOF
+          {"status":"claim-verification-blocked","workflowRun":"${GITHUB_RUN_ID:-unknown}","workflowSha":"${GITHUB_SHA:-unknown}","reason":"Bounded claim verification did not reach PASS; generated article quarantined and will not be published."}
+          EOF
+            rm -f "$article"
+            echo "Claim verification: generated article quarantined and removed from publication set: $quarantine"
+          else
+            echo 'Claim verification: no newly generated article found to quarantine.'
+          fi
+          printf '%s\n' '{"status":"blocked","action":"quarantined","publishable":false}' > data/current-article-rejected.json
+          echo 'Claim verification gate: NON-FATAL BLOCK — pipeline will continue with no newly generated article.'
       - name: Claim verification gate pass
         if: ${{ !cancelled() && (steps.claim_verification.outcome == 'success' || steps.claim_reverification_1.outcome == 'success' || steps.claim_verification_final.outcome == 'success') }}
         run: |
@@ -157,6 +177,7 @@ jobs:
             data/claim-verification.json
             data/grounding-repair.json
             data/evidence-integrity.json
+            data/current-article-rejected.json
           if-no-files-found: warn
           retention-days: 14
       - name: Editorial intelligence gate
