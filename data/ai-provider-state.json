@@ -11,10 +11,10 @@
       "lastSuccessAt": "2026-09-16T09:01:43.399Z"
     },
     "Gemini": {
-      "failures": 11,
-      "quotaBlockedUntil": 1789573482196,
+      "failures": 12,
+      "quotaBlockedUntil": 1789649539040,
       "lastStatus": 429,
-      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 17.814305749s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 40.974855535s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
       "lastClass": "quota"
     },
     "OpenAI": {
@@ -32,15 +32,15 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 13,
-      "quotaBlockedUntil": 1789551881369,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
+      "failures": 15,
+      "quotaBlockedUntil": 1789628014694,
+      "lastStatus": 200,
+      "lastError": "Invalid structured output",
       "lastClass": "transient"
     },
     "Cohere": {
-      "failures": 23,
-      "quotaBlockedUntil": 1789551894031,
+      "failures": 24,
+      "quotaBlockedUntil": 1789627983265,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -48,6 +48,6 @@
       "lastSuccessAt": "2026-09-16T09:01:41.739Z"
     }
   },
-  "rotationCursor": 0,
-  "updatedAt": "2026-09-16T09:44:43.144Z"
+  "rotationCursor": 1,
+  "updatedAt": "2026-09-17T06:53:13.174Z"
 }
