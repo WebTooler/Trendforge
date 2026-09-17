@@ -1,6 +1,9 @@
 name: Promote Existing Image V3 Candidates
 
 on:
+  push:
+    branches:
+      - image-v3-test-lab
   workflow_dispatch:
 
 permissions:
@@ -59,15 +62,15 @@ jobs:
             cp "$src" "public/images/articles/${slug}.png"
             article="content/articles/${slug}.md"
             python3 - "$article" "$slug" <<'PY'
-import pathlib, sys
+import pathlib, sys, re
 p = pathlib.Path(sys.argv[1])
 slug = sys.argv[2]
 s = p.read_text()
-s = __import__('re').sub(r'^image:\s*.*$', f'image: "/Trendforge/images/articles/{slug}.png"', s, count=1, flags=__import__('re').M)
-s = __import__('re').sub(r'^imageAlt:\s*.*$', 'imageAlt: "Original AI-generated editorial illustration for this TrendForge article"', s, count=1, flags=__import__('re').M)
-s = __import__('re').sub(r'^imageSource:\s*.*$', 'imageSource: "TrendForge original editorial image generation"', s, count=1, flags=__import__('re').M)
-s = __import__('re').sub(r'^imageLicense:\s*.*$', 'imageLicense: "AI-generated original visual"', s, count=1, flags=__import__('re').M)
-s = __import__('re').sub(r'^imageGeneratedBy:\s*.*$', 'imageGeneratedBy: "TrendForge Image V3 — Cloudflare FLUX.2 Klein 9B"', s, count=1, flags=__import__('re').M)
+s = re.sub(r'^image:\s*.*$', f'image: "/Trendforge/images/articles/{slug}.png"', s, count=1, flags=re.M)
+s = re.sub(r'^imageAlt:\s*.*$', 'imageAlt: "Original AI-generated editorial illustration for this TrendForge article"', s, count=1, flags=re.M)
+s = re.sub(r'^imageSource:\s*.*$', 'imageSource: "TrendForge original editorial image generation"', s, count=1, flags=re.M)
+s = re.sub(r'^imageLicense:\s*.*$', 'imageLicense: "AI-generated original visual"', s, count=1, flags=re.M)
+s = re.sub(r'^imageGeneratedBy:\s*.*$', 'imageGeneratedBy: "TrendForge Image V3 — Cloudflare FLUX.2 Klein 9B"', s, count=1, flags=re.M)
 p.write_text(s)
 PY
           done
