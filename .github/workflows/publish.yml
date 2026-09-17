@@ -121,11 +121,11 @@ jobs:
         run: node scripts/verify-article-claims-v2.mjs
       - name: Second surgical grounding repair
         id: grounding_repair_2
-        if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome == 'failure'
+        if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome != 'success'
         run: node scripts/repair-article-grounding.mjs
       - name: Final claim verification
         id: claim_verification_final
-        if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome == 'failure' && steps.grounding_repair_2.outcome == 'success'
+        if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome != 'success' && steps.grounding_repair_2.outcome == 'success'
         continue-on-error: true
         run: node scripts/verify-article-claims-v2.mjs
       - name: Claim verification gate
@@ -133,12 +133,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          echo "Claim verification gate: BLOCK — bounded repair exhausted (initial=${{ steps.claim_verification.outcome }} repair1=${{ steps.grounding_repair_1.outcome }} reverify1=${{ steps.claim_reverification_1.outcome }} repair2=${{ steps.grounding_repair_2.outcome }} final=${{ steps.claim_verification_final.outcome }})."
+          echo "Claim verification gate: BLOCK — all bounded verification paths exhausted (initial=${{ steps.claim_verification.outcome }} repair1=${{ steps.grounding_repair_1.outcome }} reverify1=${{ steps.claim_reverification_1.outcome }} repair2=${{ steps.grounding_repair_2.outcome }} final=${{ steps.claim_verification_final.outcome }})."
           exit 1
       - name: Claim verification gate pass
         if: ${{ !cancelled() && (steps.claim_verification.outcome == 'success' || steps.claim_reverification_1.outcome == 'success' || steps.claim_verification_final.outcome == 'success') }}
         run: |
-          echo "Claim verification gate: PASS — a claim verification attempt completed successfully (initial=${{ steps.claim_verification.outcome }} reverify1=${{ steps.claim_reverification_1.outcome }} final=${{ steps.claim_verification_final.outcome }})."
+          echo "Claim verification gate: PASS — at least one bounded claim-verification attempt completed successfully (initial=${{ steps.claim_verification.outcome }} reverify1=${{ steps.claim_reverification_1.outcome }} final=${{ steps.claim_verification_final.outcome }})."
       - name: Upload article attempt diagnostics
         if: ${{ !cancelled() }}
         continue-on-error: true
