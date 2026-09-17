@@ -24,13 +24,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Generate Cloudflare image diagnostic only
-        run: npx --yes tsx scripts/generate-article-image-v3-smoke.ts
+          cache: npm
+      - name: Generate one real article image only
+        run: npx --yes tsx scripts/generate-article-image-v3-article-test.ts
       - name: Upload isolated image test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: trendforge-image-v3-test-${{ github.run_number }}
+          name: trendforge-image-v3-article-test-${{ github.run_number }}
           path: data/image-v3-test/
           if-no-files-found: warn
           retention-days: 14
