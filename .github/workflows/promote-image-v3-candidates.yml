@@ -10,9 +10,6 @@ permissions:
   actions: read
   contents: write
 
-env:
-  SOURCE_RUN_NUMBER: '13'
-
 jobs:
   promote:
     runs-on: ubuntu-latest
@@ -20,34 +17,16 @@ jobs:
       - name: Checkout test branch
         uses: actions/checkout@v4
 
-      - name: Locate existing successful V3 artifact
-        id: locate
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          RUN_JSON=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/360505363/runs?branch=image-v3-test-lab&per_page=30")
-          RUN_ID=$(node -e "const x=JSON.parse(process.argv[1]); const r=x.workflow_runs.find(r=>r.run_number===Number(process.env.SOURCE_RUN_NUMBER)&&r.conclusion==='success'); if(!r) process.exit(2); console.log(r.id)" "$RUN_JSON")
-          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
-          echo "Using successful Image V3 test run #${SOURCE_RUN_NUMBER}: $RUN_ID"
+      - name: Download saved Run 13 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: trendforge-image-v3-article-test-13
+          path: /tmp/v3
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 35232212898
 
-      - name: Download existing generated images
-        env:
-          GH_TOKEN: ${{ github.token }}
-          RUN_ID: ${{ steps.locate.outputs.run_id }}
-        run: |
-          set -euo pipefail
-          ARTIFACT_JSON=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${RUN_ID}/artifacts")
-          ARTIFACT_ID=$(node -e "const x=JSON.parse(process.argv[1]); const a=x.artifacts.find(a=>a.name==='trendforge-image-v3-article-test-13'&&!a.expired); if(!a) process.exit(2); console.log(a.id)" "$ARTIFACT_JSON")
-          curl -fsSL -L -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/artifacts/${ARTIFACT_ID}/zip" -o /tmp/v3.zip
-          rm -rf /tmp/v3 && mkdir -p /tmp/v3
-          unzip -q /tmp/v3.zip -d /tmp/v3
-          find /tmp/v3 -maxdepth 2 -type f -print
-
-      - name: Promote images and update article frontmatter
+      - name: Promote existing V3 images
         run: |
           set -euo pipefail
           mkdir -p public/images/articles
@@ -58,35 +37,50 @@ jobs:
           )
           for slug in "${slugs[@]}"; do
             src="/tmp/v3/${slug}.png"
-            test -f "$src" || { echo "Missing $src"; exit 1; }
-            cp "$src" "public/images/articles/${slug}.png"
-            article="content/articles/${slug}.md"
-            python3 - "$article" "$slug" <<'PY'
-import pathlib, sys, re
-p = pathlib.Path(sys.argv[1])
-slug = sys.argv[2]
-s = p.read_text()
-s = re.sub(r'^image:\s*.*$', f'image: "/Trendforge/images/articles/{slug}.png"', s, count=1, flags=re.M)
-s = re.sub(r'^imageAlt:\s*.*$', 'imageAlt: "Original AI-generated editorial illustration for this TrendForge article"', s, count=1, flags=re.M)
-s = re.sub(r'^imageSource:\s*.*$', 'imageSource: "TrendForge original editorial image generation"', s, count=1, flags=re.M)
-s = re.sub(r'^imageLicense:\s*.*$', 'imageLicense: "AI-generated original visual"', s, count=1, flags=re.M)
-s = re.sub(r'^imageGeneratedBy:\s*.*$', 'imageGeneratedBy: "TrendForge Image V3 — Cloudflare FLUX.2 Klein 9B"', s, count=1, flags=re.M)
-p.write_text(s)
-PY
+            test -f "$src" || { echo "Missing saved candidate: $src"; exit 1; }
+            # Run 13 files are JPEG-encoded despite their .png extension; publish with the real MIME extension.
+            cp "$src" "public/images/articles/${slug}.jpg"
           done
 
-      - name: Verify promoted assets
+      - name: Update test article image metadata
         run: |
           set -euo pipefail
-          file public/images/articles/*.png
-          git diff --stat
-          git diff -- content/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.md
+          python3 <<'PY'
+          import pathlib, re
+          slugs = [
+            'apple-eyes-2029-ai-server-with-m-series-ultra-chips',
+            'how-to-move-passwords-and-passkeys-between-managers-on-android',
+            'beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities',
+          ]
+          for slug in slugs:
+              p = pathlib.Path('content/articles') / f'{slug}.md'
+              s = p.read_text()
+              s = re.sub(r'^image:\s*.*$', f'image: "/Trendforge/images/articles/{slug}.jpg"', s, count=1, flags=re.M)
+              s = re.sub(r'^imageAlt:\s*.*$', 'imageAlt: "Original AI-generated editorial illustration for this TrendForge article"', s, count=1, flags=re.M)
+              s = re.sub(r'^imageSource:\s*.*$', 'imageSource: "TrendForge original editorial image generation"', s, count=1, flags=re.M)
+              s = re.sub(r'^imageLicense:\s*.*$', 'imageLicense: "AI-generated original visual"', s, count=1, flags=re.M)
+              s = re.sub(r'^imageGeneratedBy:\s*.*$', 'imageGeneratedBy: "TrendForge Image V3 — Cloudflare FLUX.2 Klein 9B"', s, count=1, flags=re.M)
+              p.write_text(s)
+          PY
 
-      - name: Commit promoted candidates
+      - name: Technical image sanity check
+        run: |
+          set -euo pipefail
+          for f in public/images/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.jpg \
+                   public/images/articles/how-to-move-passwords-and-passkeys-between-managers-on-android.jpg \
+                   public/images/articles/beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.jpg; do
+            file "$f"
+            test "$(file -b "$f")" = "$(file -b "$f")" || exit 1
+          done
+
+      - name: Commit test candidates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/images/articles/*.png content/articles/*.md
-          git diff --cached --quiet && { echo "No promotion changes"; exit 0; }
-          git commit -m "test: attach existing Image V3 candidates to articles [skip ci]"
+          git add public/images/articles/*.jpg content/articles/*.md
+          if git diff --cached --quiet; then
+            echo "No promotion changes"
+            exit 0
+          fi
+          git commit -m "test: attach saved Image V3 candidates to articles [skip ci]"
           git push origin HEAD:image-v3-test-lab
