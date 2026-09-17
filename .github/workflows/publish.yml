@@ -30,6 +30,7 @@ on:
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
       - 'scripts/validate-article-assets.ts'
+      - 'scripts/validate-article-quality.ts'
   schedule:
     - cron: '17 */6 * * *'
 
@@ -128,20 +129,16 @@ jobs:
         continue-on-error: true
         run: node scripts/verify-article-claims-v2.mjs
       - name: Claim verification gate
-        if: ${{ !cancelled() }}
+        if: ${{ !cancelled() && steps.claim_verification.outcome != 'success' && steps.claim_reverification_1.outcome != 'success' && steps.claim_verification_final.outcome != 'success' }}
         shell: bash
         run: |
           set -euo pipefail
-          initial='${{ steps.claim_verification.outcome }}'
-          repair1='${{ steps.grounding_repair_1.outcome }}'
-          reverify1='${{ steps.claim_reverification_1.outcome }}'
-          repair2='${{ steps.grounding_repair_2.outcome }}'
-          final='${{ steps.claim_verification_final.outcome }}'
-          if [ "$initial" = "success" ]; then exit 0; fi
-          if [ "$reverify1" = "success" ]; then exit 0; fi
-          if [ "$final" = "success" ]; then exit 0; fi
-          echo "Claim verification gate: BLOCK — bounded repair exhausted (initial=$initial repair1=$repair1 reverify1=$reverify1 repair2=$repair2 final=$final)."
+          echo "Claim verification gate: BLOCK — bounded repair exhausted (initial=${{ steps.claim_verification.outcome }} repair1=${{ steps.grounding_repair_1.outcome }} reverify1=${{ steps.claim_reverification_1.outcome }} repair2=${{ steps.grounding_repair_2.outcome }} final=${{ steps.claim_verification_final.outcome }})."
           exit 1
+      - name: Claim verification gate pass
+        if: ${{ !cancelled() && (steps.claim_verification.outcome == 'success' || steps.claim_reverification_1.outcome == 'success' || steps.claim_verification_final.outcome == 'success') }}
+        run: |
+          echo "Claim verification gate: PASS — a claim verification attempt completed successfully (initial=${{ steps.claim_verification.outcome }} reverify1=${{ steps.claim_reverification_1.outcome }} final=${{ steps.claim_verification_final.outcome }})."
       - name: Upload article attempt diagnostics
         if: ${{ !cancelled() }}
         continue-on-error: true
