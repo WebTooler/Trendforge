@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T12:01:07.358Z",
+  "updatedAt": "2026-09-17T17:14:47.638Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,9 +14,9 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 6,
-    "topics": 76,
-    "articles": 11
+    "runs": 7,
+    "topics": 106,
+    "articles": 12
   },
   "learningInput": {
     "version": 2,
@@ -88,248 +88,248 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON0pOOXQ1SmozQmpGYnNIM3M0V3ZFWmJxbW1iQlNYaVFFT3JwOXpqUTAyelBqZTlTWWZKSk9wZGxiSlZFV2ZJekdkd1hFaFZVaVMyeUhManc0Skl5NzV4MHV3dVgxM2RYZ2F0S1RsSjcxVlFHXzg0eTFVcmhibTNOVUEtdzlncHZjQWhYbENoMUpfRkFHckFJeElLdlJhTDZzTUtGOWp0SzgzMkdwNG1LRW5ZWTljUQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVU5LSWZITUJudnZUYVQzYWNMSGFjVlZUWm5KNm9kT1NNVEVXWXh1U093TS1KbnM4bmthMHczR3ZYYTNVVVlvZC0yR05SV1AycUZQVVRHNkUwR1pjeHJ0aEtyQXNLYklMY1BDbGd3cWtWZTlZY2J5OEVpdTR5RjZZb1JLWmhkSng0a21QS3VSb0ROeDNxWkxGVzI0aFdLMHhIT1VGS0JsTjVjRGFLeUViZTRJQV9wbzQ1Ml8tWk8zWFJocmVKN2piMHh5Z05PbElnMEhlODRTNFNfZw?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUowMFplMTBnU0tqWWZ4NjBUYktXa0VHcERPQzZzM1VwYndtOVZEMTE3VmtpUXp4S2IxdXBjV2ZhMzhaT2R5WFBGYTFMOXZSMUtBV2c2LXg4Z2lCb2JkaUpMbjBpMEUtY0g0c25CWnphQ1BFQ2RnaXpva21Wd1IxeWxCLWdZYzF4bjA3UFlMRmJQR2NlSlI4eldFbmNENWR1SnZlMDV2Qi1QLTJzNVpuemplWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVjloakU1c3AtckVyZDI5TzQwcGpZMGF0TWd5MHFiOXhENDZ3WnU0djAzMUhXUzdWa1JpdFJ5RjBnWVV3VExSMGdoeVJxWVhobnhDbzFJckg0aElqS2pZeUtXbndEWFRyY0RLLVhfWEVNSW5sUkQ3Qm9LV3Q2RWEtdXRlNFBkT2FEMVdIbUhIZVNrX01hN2ZnVXhyS0FDSGhodWtPWlRabjQzdXdlWnYtbF9rWlRTMXpsc3c?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNVWNxQXRrV19nODNHUllUVDNEWUo1RUVFcEI3OVdIdjY0T2dOd1hpc3RDSU5ELV9MX0E1TmwtcGRob0R4U0VmSXlEaktSUHJqRGlZY1drWmJNRVFLVVAtdjVhc2FHRk94bmRvejRWaWF0eXd0aWV4d3NxVk80eHVjN3dfWWRZRjBCYm5zbHctVExaMlVIV1NNek5sQWF2WkJid1FjcmhOVW5vYWRYcWpLcGNjbUw4REZOSnptSnZiX0lHeXlxXy0xaEZ4WFl4c2RBVEtZVUNvNzY5RXk0T29IMW94dnVjLXdxR2hraXlRR3doamhpdlVlMVJhM25hRDJzX3VXaGNOejNGOHVYSGt2MjVsbzlMWi1BS0YyVkI0VQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNQjhORDl4ZEh4ODJpc0ktdk95T2ZOdVFSQnVqa2h3Q25MbHdobkFkWGpPZ3FZRUtCVEhob2VYNGJqSU5tbkJZcUZGTUt6LV85QkZ6SjNoVHE5NUY4UWVrT2c1TEg2ZGdjOTBoa3UwVnB6bW44X3FvaEVWVUd3M3BUYVFqT3dfUi1TOHhmMzI5ZWFuYkdYN2NGYU05a0tudkdOb3NrQnNIUTZWVTY2d2hKeXJUV0lNeUxvWmt1VEdBdEEzS05yVjB4dG1QcWxXR25lT09Edk40cXh4Y01FR3d4dG1MZkdaSV9aQTNYODFZMUhPWTdrZm1UdDZTcVUyWFVBdllscQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbXhwclNYSWJkX1ZQdEhjVURsbWFkVUpwVGJQMWQyalZfQTJPdlJjcTlmVmRjMFkzWTFlcDg5dkNhT0ZMQUI0eTUzR290YnBreFpIRnZDMi03R3Jqc3RzTDVfdUM0ZDhObklmRzBxUUVGTklvR1V6ODBZYkJNM0x1SUhWTlZHZ2pWRFdZQkNtbFZCOWdhMUk0NzVaZ1BrU3l6SFhPTTZWS1Y2Nlo2dFZvbTNPa0daUER5S0FwbzZ6M2R0T3JiTDkw?oc=5",
+        "key": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRjBpTkRYTjJ2Zl83RWxtRnU1akhZckZHaENOZ2hNMEV1bzZKVlNITVcwR1FZVGtCV2JlYmM3LVJXNzcyVjRXMkNobkk0YmhRZUZ6OE9rekZTNkNHdExHb21LYjhnQXpkdHQ5eXZLdHBBV0ZidHlMWENqdEUxQ0JPZGQ1Mm1vU0s0eXNqdWl2blBDODB3THRWeHU1blhMTjlmZXh5NzlqaUkyN2wtYW9lVmN5MVZCRy1xQ1E?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYkdLR21kWEJLSnY2Y1FCeDktV1d3Zi16RUpxN3BPQWFORTBiZGJmMzhYSGNKWEpnRTVKaWotamZuVHBrbzZYb3JBNHJza2ViWHhjdWs0RnVsYzNqOHFZVWtpQ2JqU2pUYnlmalg0NXZvdmpTOV9jME1aM3NRM0hZc1lhOXFsM25nSHJvVmIxU1l2YVk2c0Z6Q1Fn?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY3lBVjFBRkYxaU9JZXN2R0s5TFhnQW4zbTVBVXlId055Z3lqbW4yZ01weDZRU1RPb3Z5bjU2U0hFaHAtSDA5N2p4UXNTc1lpWENKd3A0a2hXRlVUdER3ZFZVakhSWDE4MFBkam1vT3FDWjVZdm9xNU51RFAxdXFlQzBNbnZwUTZUQndZeV9qYnZlX01SVGVncHdjSExPRnFleXFRNG9zV1VUbUhYMDZDdlBKckdGbzRoUllj?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZEV1dXlZWDh3VTJpMHVvclNtOWY1WVZXSGFIM3JZa1h0bDYyNVUzd0lvcUFpdVJtVjFZemVZSGotMnJmR3Q5aDN5MzVaenluWUhseElqVEltb2RBQU8zTnktd3hOaWZnQ20yTG5OY3ltMjlXZU9ta0tvTkpnTlhncW1DcEg0bl9BNWdnVEdJOFc5THpPZmZYNjFNZEhPdEVvU1ZtWW5vWUlVMFp5VDd2RXpBcw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYWlZeXBDaEdjX3BLOGJ2WGJlbGtLMXVTMXNnNTZzNHRnLWNWaGtyUmplc3hEdVdpYnFnejVuRmV5REpNMHotWlFvTmpISXd1MENQb2xlWXYxTXA5cnVmYkNQMmtiSDFPSU5QQzdMbElOblpsWGlPSk9ES1ZEOEE1UXJvRVhPSms1LVBqZEdCdlNwMjR3YmRMWHVXd0ZTQ3FDNHo3Y0lhTEdoaE1ER21rUkl2WGkyMkNGMVN0SzJYWnFINXM?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNT2tTWlN5eXpuamdDMjRncmx0QUpNZG1WbmxqdGdNYTJXVlRWQkJyNXRCREJKRUZOdWxBMlNUTDV5QmRvclFWODdZLWdsQldKUjQ1cnBlUVA5UjdMNVRIVHBoaS04Q2FGeFBreDNuWk52SU1SbXNqTC11czQyektoTVFJb2hwUHlzWGlacQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMnNCTUMtZno1aVJxS3BKUUdyVVg2RV9jbVJLT19LRENTU2V6b0wzeDNFNGdsWGNfaHJPQ19YVjgyemVQdmFsbXRlT1RZRHczSl91NkxDMmpaSW5aY1o5Y2xqNXdMOUkybWx4V1pzV25YeW12OHNLUVI2cVFmcjlGU1gxc1lTOGlCd0t0R2xlVHh3bzd4MEU5QkZlV1V5bFJ4X0NyQUNB?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMmR2NDRVbnd4cmctTjhXRThYdFFKUVhtTmpEb3A0bFByXzBrTHZXZi1lM2N3TWg3ZFp5RGx1bWd4MlpSSzNJaHhuY0MzcUI1SEJ6VzZtX29xX0VwNDZBNnVNRWcxcEpUTExGX0l6SjFNdm9xLW83Y21ySG5SWGdLZnM0dExtNGh0NHZVdVVZVElnRDNyNXp6N0ViNTM?oc=5",
+        "key": "https://www.theverge.com/tech/996341/bose-ultra-open-earbuds-second-gen-wireless-sport",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWXlqTWJneVp6Zk1wNThKc3FZeVZWTlpBanMwYWNWeW52UmFwYk10SzY3WW1YTmcxdVJsLXpodS1OYlpNb3h1NFhaN2RDQVNpdVlQZHhGOTFBMlFFQnRNZkNPUXpDd3VENDVRYmZMc2tLREM0cU53U25NS0R4MkJERjh1N1ptd3VDQm8tNzBzXzF6MjVFcG4zS2pR?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV2R6ekhkRHVUTU95d042blJ6bWlXZEFxcEhPWTV5S3JtVXI0emlsaVdyb1BURWJzZk5ySWdyVGNKcEJldUg5Q3BaNF9wdUxWVzZyZHA2RWpjVWJVU1hRa2c2dmtMX3FOOGVKWFlBU0dfcjU0R1AtTjFURmpUOHo5LTFVRXBlaWx6OHktNHJiQUZ6a0NOdElKVHNIZnlTVW5hc0RTMTVnSE95NnExaEdJNWplNjdUdjQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZTlqYXBUY2FCN2dqVzlPSXZpUXFSWXU4MjBjeVREZkttdHFfaFpUR3dnQjZsblBXUEJ5bEE0R1I2YXJ3WVViOGtrb00zdjd1RzlUanhqLXNjQVZRZEJGT0pmSEZQb0FzUnkxNmdaSDE4R25KQXJJZk1tZmZWcEhMRTRqT2xNelc2ZlJYRHl6TnFXUHhiY0dhME1yU2JOS0tDR29iMnlfV1B3Q3pERkFIbFN5LXdyTHVDc21oazdYYW43NVlu?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcDAwTXlYOUtzcWU2bVBMcm9zOG5ETDdfWC1DbXh4RlFOMklDbEdKa0RiRDRjRWxPeUtmaE9mNEFiclFGRERvblhHMklOXzh6aWRFNmVBTkFxMFRzZE9nejJvSkJ3RnB6TW94Rm9DWXJybEpzUnFxVXNaY1pwYV9fZDRNQWVyNVRUV1RMZjM2QTM3Q21ucFVuRzFrMEFVa1pqR1lxWnZyM3lnMXRYZVHSAbMBQVVfeXFMTXo4X0VqLXo2N1h0ZHNldFA3aWg2QnNyNXVlTGdaM0NhRW9FZFZ4Y2FHS1dJMEtiMzBtbG93T3dSOFNyMGp4RUhmUHUzR3BaMWRtUWx1dkJ3Z2xob2JXUE9iWWRkR3dVekkyTktMd3FUMWE2dzdyQnNuUzlmYjNvaS1rNFFsUjAwZGRHdVBhY2hNQTNwd1E2aVNQbWkyYXY1SHpWTXFGR0lSNGpSQzlRWkxUdlk?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQlVoOHNQQ2Q2aF8zYXJjSnFiUk14UU5pZmZFUF94b0F1cXFISDdGRkJQMDB1WVNFQWkyMFBjdmZldFJXRVRPZUtYa1JDSTVOU3ZyUV9nY1dwd1lXTmtyWUxGVkZUWDBZVnd5MDFoZk9HNEJUVmFheGZkd3RsUHRCTHJyeV85aUlxZTA0T2lSbDZ3Ykp1dzhWUVFQdXoycXFlT29v?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zbDBtWTVVdFRiT29nNDR6eTEzNE5Fd0NmLTJVdWMzTEFZUEFhZ0dSY1V5cjRIRFA4eFNWb1RZVFN0RGdUQVFLYjB3NHZLTXNzSTdhNDhMQ0I2eHFVTW1n?oc=5",
+        "key": "https://www.theverge.com/tech/996826/microsoft-xbox-disc-to-digital-history-notepad",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWnBjM3NUSFY0NGhIQVhkNHYtOTFJc0ZkQUFWZG1Wb25SYlVodlAxSzZxLTFsUnpLazFxWG9HMUVwV2lyZFd0aGU4dkFZRDBrVjRvTWFhNmUyTW5rY29rV3R4NExRUnRiclZQX0ZSMUN1bVktWEMxUnRfU2pYa0tjZThjb2xMN2NUdzJCX1ZMMHo2VGd6X0E1LVp3VHZFV1JxTER1M2JrU3NRQ2duTlBXdmJ2TQ?oc=5",
+        "key": "https://www.theverge.com/tech/996453/camp-snap-110d-digital-camera-retro-horizontal-kodak-100-film",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/entertainment/996505/spotify-fresh-finds-forward",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/entertainment/996831/grand-theft-auto-6-soundtrack",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5xN3JfdDd0QTJXN1A0LVlhT2Y4NVBjSjdVYkhWM2RSb2pubzQ3N1VBTndaOUNwTllZTWpUNTFKakJ1dWtKaERPY19mZU5Hd2lxdmVmcFhTUXpQT08zNHZ1Nk5XTnVnQzJqWlNmU2FLMTNsRVlEd0V3?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNjN5M05aMGZKY2lUdV9RYVU5VmlEMWEzZ1dqMjFJU2MzbEE1bU9jZks0dXF4V3lnd1N5Z0ZHbm94QWJGcFF5QzdMaFBlb1ZuQ0gxYm15dXFoV2QwRk9jNmViaVJvTnQwRmJjQWRqemo0c3VoenJ2SDhXTGVPdV9oOWFrbnV5T2ZHOXhtWkdIQ1JKMXpaVG1CdGhZQmMxLWJSLXJ1cFNOM3NIZWpfcnVJ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaDY0VjZZbzRlUTFEblBHcC1YZ1pYUTFFa1FkdjlFQ1RTWkg1UlUxdS1nQkdhUjl0Zm9TSlNsb2pjYUtEVTlGV0ZGWnlxOEJWUUV2dHFOeWJTanV2WHYxQUoxa09JRHY4cUhJZDloaHBGQ0xDY1UzcDROZjMzMjBMSzVBUVJlU1pZREM0TXVvbGlGaW43SHc?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBkSzF3UlMxcWo0MVFPSDM0WHJwSGkzdkgyWmdJOE91Wks1cjNQNFZMS2JEUUNYYmUwcDR5cW5xdVlvMjVhcTM4YWhQNTJqOVhzR3ZOaA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWFjR0hTYWRlSGJodzhySVVTNTB5Smh0aVl1VFB6Z2Z0ZmpuZUphMTBpS3Q5MXdDbG5manplVVNLRUxCbkVDOEpOb3U0VjNwVFl0WlpnQko3RkFlM0x2MER6UER6ZmxUUlE5MnIzU2VCOXZLaDNHMFBJMVpUMUUtZlVwTUlMT0lrRjlwM2RRMA?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOS0ZsMlBxQUQ1NE9hUkxvYzVBRi1mWHoyMG5iWnlfS0E2X2twSHlNTlc5VGdsVExtNWtqZzZjYU5JblZXTDdvOWdGdWloSHp2eXRINk1QTnVfZW1VMWl4U2RrNHZUMW15TmMwYVltYzRURWpCdV9wMmNpd04yeXZGa19EN2JSTHZTb2k5Rmxyb1U1cDdBMHZoU3NrU3ZJQ0gyNXFrM28wd0RkdFpfWE5aZWdqVURRXzliNnVSdDN4NW0?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/996860/lunacy-audio-nova-ai-music-plugin-vst",
+        "bucket": "control"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON0pOOXQ1SmozQmpGYnNIM3M0V3ZFWmJxbW1iQlNYaVFFT3JwOXpqUTAyelBqZTlTWWZKSk9wZGxiSlZFV2ZJekdkd1hFaFZVaVMyeUhManc0Skl5NzV4MHV3dVgxM2RYZ2F0S1RsSjcxVlFHXzg0eTFVcmhibTNOVUEtdzlncHZjQWhYbENoMUpfRkFHckFJeElLdlJhTDZzTUtGOWp0SzgzMkdwNG1LRW5ZWTljUQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVU5LSWZITUJudnZUYVQzYWNMSGFjVlZUWm5KNm9kT1NNVEVXWXh1U093TS1KbnM4bmthMHczR3ZYYTNVVVlvZC0yR05SV1AycUZQVVRHNkUwR1pjeHJ0aEtyQXNLYklMY1BDbGd3cWtWZTlZY2J5OEVpdTR5RjZZb1JLWmhkSng0a21QS3VSb0ROeDNxWkxGVzI0aFdLMHhIT1VGS0JsTjVjRGFLeUViZTRJQV9wbzQ1Ml8tWk8zWFJocmVKN2piMHh5Z05PbElnMEhlODRTNFNfZw?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUowMFplMTBnU0tqWWZ4NjBUYktXa0VHcERPQzZzM1VwYndtOVZEMTE3VmtpUXp4S2IxdXBjV2ZhMzhaT2R5WFBGYTFMOXZSMUtBV2c2LXg4Z2lCb2JkaUpMbjBpMEUtY0g0c25CWnphQ1BFQ2RnaXpva21Wd1IxeWxCLWdZYzF4bjA3UFlMRmJQR2NlSlI4eldFbmNENWR1SnZlMDV2Qi1QLTJzNVpuemplWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVjloakU1c3AtckVyZDI5TzQwcGpZMGF0TWd5MHFiOXhENDZ3WnU0djAzMUhXUzdWa1JpdFJ5RjBnWVV3VExSMGdoeVJxWVhobnhDbzFJckg0aElqS2pZeUtXbndEWFRyY0RLLVhfWEVNSW5sUkQ3Qm9LV3Q2RWEtdXRlNFBkT2FEMVdIbUhIZVNrX01hN2ZnVXhyS0FDSGhodWtPWlRabjQzdXdlWnYtbF9rWlRTMXpsc3c?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNVWNxQXRrV19nODNHUllUVDNEWUo1RUVFcEI3OVdIdjY0T2dOd1hpc3RDSU5ELV9MX0E1TmwtcGRob0R4U0VmSXlEaktSUHJqRGlZY1drWmJNRVFLVVAtdjVhc2FHRk94bmRvejRWaWF0eXd0aWV4d3NxVk80eHVjN3dfWWRZRjBCYm5zbHctVExaMlVIV1NNek5sQWF2WkJid1FjcmhOVW5vYWRYcWpLcGNjbUw4REZOSnptSnZiX0lHeXlxXy0xaEZ4WFl4c2RBVEtZVUNvNzY5RXk0T29IMW94dnVjLXdxR2hraXlRR3doamhpdlVlMVJhM25hRDJzX3VXaGNOejNGOHVYSGt2MjVsbzlMWi1BS0YyVkI0VQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNQjhORDl4ZEh4ODJpc0ktdk95T2ZOdVFSQnVqa2h3Q25MbHdobkFkWGpPZ3FZRUtCVEhob2VYNGJqSU5tbkJZcUZGTUt6LV85QkZ6SjNoVHE5NUY4UWVrT2c1TEg2ZGdjOTBoa3UwVnB6bW44X3FvaEVWVUd3M3BUYVFqT3dfUi1TOHhmMzI5ZWFuYkdYN2NGYU05a0tudkdOb3NrQnNIUTZWVTY2d2hKeXJUV0lNeUxvWmt1VEdBdEEzS05yVjB4dG1QcWxXR25lT09Edk40cXh4Y01FR3d4dG1MZkdaSV9aQTNYODFZMUhPWTdrZm1UdDZTcVUyWFVBdllscQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbXhwclNYSWJkX1ZQdEhjVURsbWFkVUpwVGJQMWQyalZfQTJPdlJjcTlmVmRjMFkzWTFlcDg5dkNhT0ZMQUI0eTUzR290YnBreFpIRnZDMi03R3Jqc3RzTDVfdUM0ZDhObklmRzBxUUVGTklvR1V6ODBZYkJNM0x1SUhWTlZHZ2pWRFdZQkNtbFZCOWdhMUk0NzVaZ1BrU3l6SFhPTTZWS1Y2Nlo2dFZvbTNPa0daUER5S0FwbzZ6M2R0T3JiTDkw?oc=5",
+        "key": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRjBpTkRYTjJ2Zl83RWxtRnU1akhZckZHaENOZ2hNMEV1bzZKVlNITVcwR1FZVGtCV2JlYmM3LVJXNzcyVjRXMkNobkk0YmhRZUZ6OE9rekZTNkNHdExHb21LYjhnQXpkdHQ5eXZLdHBBV0ZidHlMWENqdEUxQ0JPZGQ1Mm1vU0s0eXNqdWl2blBDODB3THRWeHU1blhMTjlmZXh5NzlqaUkyN2wtYW9lVmN5MVZCRy1xQ1E?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYkdLR21kWEJLSnY2Y1FCeDktV1d3Zi16RUpxN3BPQWFORTBiZGJmMzhYSGNKWEpnRTVKaWotamZuVHBrbzZYb3JBNHJza2ViWHhjdWs0RnVsYzNqOHFZVWtpQ2JqU2pUYnlmalg0NXZvdmpTOV9jME1aM3NRM0hZc1lhOXFsM25nSHJvVmIxU1l2YVk2c0Z6Q1Fn?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY3lBVjFBRkYxaU9JZXN2R0s5TFhnQW4zbTVBVXlId055Z3lqbW4yZ01weDZRU1RPb3Z5bjU2U0hFaHAtSDA5N2p4UXNTc1lpWENKd3A0a2hXRlVUdER3ZFZVakhSWDE4MFBkam1vT3FDWjVZdm9xNU51RFAxdXFlQzBNbnZwUTZUQndZeV9qYnZlX01SVGVncHdjSExPRnFleXFRNG9zV1VUbUhYMDZDdlBKckdGbzRoUllj?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZEV1dXlZWDh3VTJpMHVvclNtOWY1WVZXSGFIM3JZa1h0bDYyNVUzd0lvcUFpdVJtVjFZemVZSGotMnJmR3Q5aDN5MzVaenluWUhseElqVEltb2RBQU8zTnktd3hOaWZnQ20yTG5OY3ltMjlXZU9ta0tvTkpnTlhncW1DcEg0bl9BNWdnVEdJOFc5THpPZmZYNjFNZEhPdEVvU1ZtWW5vWUlVMFp5VDd2RXpBcw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYWlZeXBDaEdjX3BLOGJ2WGJlbGtLMXVTMXNnNTZzNHRnLWNWaGtyUmplc3hEdVdpYnFnejVuRmV5REpNMHotWlFvTmpISXd1MENQb2xlWXYxTXA5cnVmYkNQMmtiSDFPSU5QQzdMbElOblpsWGlPSk9ES1ZEOEE1UXJvRVhPSms1LVBqZEdCdlNwMjR3YmRMWHVXd0ZTQ3FDNHo3Y0lhTEdoaE1ER21rUkl2WGkyMkNGMVN0SzJYWnFINXM?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNT2tTWlN5eXpuamdDMjRncmx0QUpNZG1WbmxqdGdNYTJXVlRWQkJyNXRCREJKRUZOdWxBMlNUTDV5QmRvclFWODdZLWdsQldKUjQ1cnBlUVA5UjdMNVRIVHBoaS04Q2FGeFBreDNuWk52SU1SbXNqTC11czQyektoTVFJb2hwUHlzWGlacQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMnNCTUMtZno1aVJxS3BKUUdyVVg2RV9jbVJLT19LRENTU2V6b0wzeDNFNGdsWGNfaHJPQ19YVjgyemVQdmFsbXRlT1RZRHczSl91NkxDMmpaSW5aY1o5Y2xqNXdMOUkybWx4V1pzV25YeW12OHNLUVI2cVFmcjlGU1gxc1lTOGlCd0t0R2xlVHh3bzd4MEU5QkZlV1V5bFJ4X0NyQUNB?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMmR2NDRVbnd4cmctTjhXRThYdFFKUVhtTmpEb3A0bFByXzBrTHZXZi1lM2N3TWg3ZFp5RGx1bWd4MlpSSzNJaHhuY0MzcUI1SEJ6VzZtX29xX0VwNDZBNnVNRWcxcEpUTExGX0l6SjFNdm9xLW83Y21ySG5SWGdLZnM0dExtNGh0NHZVdVVZVElnRDNyNXp6N0ViNTM?oc=5",
+        "key": "https://www.theverge.com/tech/996341/bose-ultra-open-earbuds-second-gen-wireless-sport",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWXlqTWJneVp6Zk1wNThKc3FZeVZWTlpBanMwYWNWeW52UmFwYk10SzY3WW1YTmcxdVJsLXpodS1OYlpNb3h1NFhaN2RDQVNpdVlQZHhGOTFBMlFFQnRNZkNPUXpDd3VENDVRYmZMc2tLREM0cU53U25NS0R4MkJERjh1N1ptd3VDQm8tNzBzXzF6MjVFcG4zS2pR?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV2R6ekhkRHVUTU95d042blJ6bWlXZEFxcEhPWTV5S3JtVXI0emlsaVdyb1BURWJzZk5ySWdyVGNKcEJldUg5Q3BaNF9wdUxWVzZyZHA2RWpjVWJVU1hRa2c2dmtMX3FOOGVKWFlBU0dfcjU0R1AtTjFURmpUOHo5LTFVRXBlaWx6OHktNHJiQUZ6a0NOdElKVHNIZnlTVW5hc0RTMTVnSE95NnExaEdJNWplNjdUdjQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZTlqYXBUY2FCN2dqVzlPSXZpUXFSWXU4MjBjeVREZkttdHFfaFpUR3dnQjZsblBXUEJ5bEE0R1I2YXJ3WVViOGtrb00zdjd1RzlUanhqLXNjQVZRZEJGT0pmSEZQb0FzUnkxNmdaSDE4R25KQXJJZk1tZmZWcEhMRTRqT2xNelc2ZlJYRHl6TnFXUHhiY0dhME1yU2JOS0tDR29iMnlfV1B3Q3pERkFIbFN5LXdyTHVDc21oazdYYW43NVlu?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcDAwTXlYOUtzcWU2bVBMcm9zOG5ETDdfWC1DbXh4RlFOMklDbEdKa0RiRDRjRWxPeUtmaE9mNEFiclFGRERvblhHMklOXzh6aWRFNmVBTkFxMFRzZE9nejJvSkJ3RnB6TW94Rm9DWXJybEpzUnFxVXNaY1pwYV9fZDRNQWVyNVRUV1RMZjM2QTM3Q21ucFVuRzFrMEFVa1pqR1lxWnZyM3lnMXRYZVHSAbMBQVVfeXFMTXo4X0VqLXo2N1h0ZHNldFA3aWg2QnNyNXVlTGdaM0NhRW9FZFZ4Y2FHS1dJMEtiMzBtbG93T3dSOFNyMGp4RUhmUHUzR3BaMWRtUWx1dkJ3Z2xob2JXUE9iWWRkR3dVekkyTktMd3FUMWE2dzdyQnNuUzlmYjNvaS1rNFFsUjAwZGRHdVBhY2hNQTNwd1E2aVNQbWkyYXY1SHpWTXFGR0lSNGpSQzlRWkxUdlk?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQlVoOHNQQ2Q2aF8zYXJjSnFiUk14UU5pZmZFUF94b0F1cXFISDdGRkJQMDB1WVNFQWkyMFBjdmZldFJXRVRPZUtYa1JDSTVOU3ZyUV9nY1dwd1lXTmtyWUxGVkZUWDBZVnd5MDFoZk9HNEJUVmFheGZkd3RsUHRCTHJyeV85aUlxZTA0T2lSbDZ3Ykp1dzhWUVFQdXoycXFlT29v?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zbDBtWTVVdFRiT29nNDR6eTEzNE5Fd0NmLTJVdWMzTEFZUEFhZ0dSY1V5cjRIRFA4eFNWb1RZVFN0RGdUQVFLYjB3NHZLTXNzSTdhNDhMQ0I2eHFVTW1n?oc=5",
+        "key": "https://www.theverge.com/tech/996826/microsoft-xbox-disc-to-digital-history-notepad",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWnBjM3NUSFY0NGhIQVhkNHYtOTFJc0ZkQUFWZG1Wb25SYlVodlAxSzZxLTFsUnpLazFxWG9HMUVwV2lyZFd0aGU4dkFZRDBrVjRvTWFhNmUyTW5rY29rV3R4NExRUnRiclZQX0ZSMUN1bVktWEMxUnRfU2pYa0tjZThjb2xMN2NUdzJCX1ZMMHo2VGd6X0E1LVp3VHZFV1JxTER1M2JrU3NRQ2duTlBXdmJ2TQ?oc=5",
+        "key": "https://www.theverge.com/tech/996453/camp-snap-110d-digital-camera-retro-horizontal-kodak-100-film",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/entertainment/996505/spotify-fresh-finds-forward",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/entertainment/996831/grand-theft-auto-6-soundtrack",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5xN3JfdDd0QTJXN1A0LVlhT2Y4NVBjSjdVYkhWM2RSb2pubzQ3N1VBTndaOUNwTllZTWpUNTFKakJ1dWtKaERPY19mZU5Hd2lxdmVmcFhTUXpQT08zNHZ1Nk5XTnVnQzJqWlNmU2FLMTNsRVlEd0V3?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNjN5M05aMGZKY2lUdV9RYVU5VmlEMWEzZ1dqMjFJU2MzbEE1bU9jZks0dXF4V3lnd1N5Z0ZHbm94QWJGcFF5QzdMaFBlb1ZuQ0gxYm15dXFoV2QwRk9jNmViaVJvTnQwRmJjQWRqemo0c3VoenJ2SDhXTGVPdV9oOWFrbnV5T2ZHOXhtWkdIQ1JKMXpaVG1CdGhZQmMxLWJSLXJ1cFNOM3NIZWpfcnVJ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaDY0VjZZbzRlUTFEblBHcC1YZ1pYUTFFa1FkdjlFQ1RTWkg1UlUxdS1nQkdhUjl0Zm9TSlNsb2pjYUtEVTlGV0ZGWnlxOEJWUUV2dHFOeWJTanV2WHYxQUoxa09JRHY4cUhJZDloaHBGQ0xDY1UzcDROZjMzMjBMSzVBUVJlU1pZREM0TXVvbGlGaW43SHc?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBkSzF3UlMxcWo0MVFPSDM0WHJwSGkzdkgyWmdJOE91Wks1cjNQNFZMS2JEUUNYYmUwcDR5cW5xdVlvMjVhcTM4YWhQNTJqOVhzR3ZOaA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWFjR0hTYWRlSGJodzhySVVTNTB5Smh0aVl1VFB6Z2Z0ZmpuZUphMTBpS3Q5MXdDbG5manplVVNLRUxCbkVDOEpOb3U0VjNwVFl0WlpnQko3RkFlM0x2MER6UER6ZmxUUlE5MnIzU2VCOXZLaDNHMFBJMVpUMUUtZlVwTUlMT0lrRjlwM2RRMA?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOS0ZsMlBxQUQ1NE9hUkxvYzVBRi1mWHoyMG5iWnlfS0E2X2twSHlNTlc5VGdsVExtNWtqZzZjYU5JblZXTDdvOWdGdWloSHp2eXRINk1QTnVfZW1VMWl4U2RrNHZUMW15TmMwYVltYzRURWpCdV9wMmNpd04yeXZGa19EN2JSTHZTb2k5Rmxyb1U1cDdBMHZoU3NrU3ZJQ0gyNXFrM28wd0RkdFpfWE5aZWdqVURRXzliNnVSdDN4NW0?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/996860/lunacy-audio-nova-ai-music-plugin-vst",
+        "bucket": "control"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON0pOOXQ1SmozQmpGYnNIM3M0V3ZFWmJxbW1iQlNYaVFFT3JwOXpqUTAyelBqZTlTWWZKSk9wZGxiSlZFV2ZJekdkd1hFaFZVaVMyeUhManc0Skl5NzV4MHV3dVgxM2RYZ2F0S1RsSjcxVlFHXzg0eTFVcmhibTNOVUEtdzlncHZjQWhYbENoMUpfRkFHckFJeElLdlJhTDZzTUtGOWp0SzgzMkdwNG1LRW5ZWTljUQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVU5LSWZITUJudnZUYVQzYWNMSGFjVlZUWm5KNm9kT1NNVEVXWXh1U093TS1KbnM4bmthMHczR3ZYYTNVVVlvZC0yR05SV1AycUZQVVRHNkUwR1pjeHJ0aEtyQXNLYklMY1BDbGd3cWtWZTlZY2J5OEVpdTR5RjZZb1JLWmhkSng0a21QS3VSb0ROeDNxWkxGVzI0aFdLMHhIT1VGS0JsTjVjRGFLeUViZTRJQV9wbzQ1Ml8tWk8zWFJocmVKN2piMHh5Z05PbElnMEhlODRTNFNfZw?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUowMFplMTBnU0tqWWZ4NjBUYktXa0VHcERPQzZzM1VwYndtOVZEMTE3VmtpUXp4S2IxdXBjV2ZhMzhaT2R5WFBGYTFMOXZSMUtBV2c2LXg4Z2lCb2JkaUpMbjBpMEUtY0g0c25CWnphQ1BFQ2RnaXpva21Wd1IxeWxCLWdZYzF4bjA3UFlMRmJQR2NlSlI4eldFbmNENWR1SnZlMDV2Qi1QLTJzNVpuemplWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVjloakU1c3AtckVyZDI5TzQwcGpZMGF0TWd5MHFiOXhENDZ3WnU0djAzMUhXUzdWa1JpdFJ5RjBnWVV3VExSMGdoeVJxWVhobnhDbzFJckg0aElqS2pZeUtXbndEWFRyY0RLLVhfWEVNSW5sUkQ3Qm9LV3Q2RWEtdXRlNFBkT2FEMVdIbUhIZVNrX01hN2ZnVXhyS0FDSGhodWtPWlRabjQzdXdlWnYtbF9rWlRTMXpsc3c?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNVWNxQXRrV19nODNHUllUVDNEWUo1RUVFcEI3OVdIdjY0T2dOd1hpc3RDSU5ELV9MX0E1TmwtcGRob0R4U0VmSXlEaktSUHJqRGlZY1drWmJNRVFLVVAtdjVhc2FHRk94bmRvejRWaWF0eXd0aWV4d3NxVk80eHVjN3dfWWRZRjBCYm5zbHctVExaMlVIV1NNek5sQWF2WkJid1FjcmhOVW5vYWRYcWpLcGNjbUw4REZOSnptSnZiX0lHeXlxXy0xaEZ4WFl4c2RBVEtZVUNvNzY5RXk0T29IMW94dnVjLXdxR2hraXlRR3doamhpdlVlMVJhM25hRDJzX3VXaGNOejNGOHVYSGt2MjVsbzlMWi1BS0YyVkI0VQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNQjhORDl4ZEh4ODJpc0ktdk95T2ZOdVFSQnVqa2h3Q25MbHdobkFkWGpPZ3FZRUtCVEhob2VYNGJqSU5tbkJZcUZGTUt6LV85QkZ6SjNoVHE5NUY4UWVrT2c1TEg2ZGdjOTBoa3UwVnB6bW44X3FvaEVWVUd3M3BUYVFqT3dfUi1TOHhmMzI5ZWFuYkdYN2NGYU05a0tudkdOb3NrQnNIUTZWVTY2d2hKeXJUV0lNeUxvWmt1VEdBdEEzS05yVjB4dG1QcWxXR25lT09Edk40cXh4Y01FR3d4dG1MZkdaSV9aQTNYODFZMUhPWTdrZm1UdDZTcVUyWFVBdllscQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbXhwclNYSWJkX1ZQdEhjVURsbWFkVUpwVGJQMWQyalZfQTJPdlJjcTlmVmRjMFkzWTFlcDg5dkNhT0ZMQUI0eTUzR290YnBreFpIRnZDMi03R3Jqc3RzTDVfdUM0ZDhObklmRzBxUUVGTklvR1V6ODBZYkJNM0x1SUhWTlZHZ2pWRFdZQkNtbFZCOWdhMUk0NzVaZ1BrU3l6SFhPTTZWS1Y2Nlo2dFZvbTNPa0daUER5S0FwbzZ6M2R0T3JiTDkw?oc=5",
+        "key": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRjBpTkRYTjJ2Zl83RWxtRnU1akhZckZHaENOZ2hNMEV1bzZKVlNITVcwR1FZVGtCV2JlYmM3LVJXNzcyVjRXMkNobkk0YmhRZUZ6OE9rekZTNkNHdExHb21LYjhnQXpkdHQ5eXZLdHBBV0ZidHlMWENqdEUxQ0JPZGQ1Mm1vU0s0eXNqdWl2blBDODB3THRWeHU1blhMTjlmZXh5NzlqaUkyN2wtYW9lVmN5MVZCRy1xQ1E?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYkdLR21kWEJLSnY2Y1FCeDktV1d3Zi16RUpxN3BPQWFORTBiZGJmMzhYSGNKWEpnRTVKaWotamZuVHBrbzZYb3JBNHJza2ViWHhjdWs0RnVsYzNqOHFZVWtpQ2JqU2pUYnlmalg0NXZvdmpTOV9jME1aM3NRM0hZc1lhOXFsM25nSHJvVmIxU1l2YVk2c0Z6Q1Fn?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQY3lBVjFBRkYxaU9JZXN2R0s5TFhnQW4zbTVBVXlId055Z3lqbW4yZ01weDZRU1RPb3Z5bjU2U0hFaHAtSDA5N2p4UXNTc1lpWENKd3A0a2hXRlVUdER3ZFZVakhSWDE4MFBkam1vT3FDWjVZdm9xNU51RFAxdXFlQzBNbnZwUTZUQndZeV9qYnZlX01SVGVncHdjSExPRnFleXFRNG9zV1VUbUhYMDZDdlBKckdGbzRoUllj?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZEV1dXlZWDh3VTJpMHVvclNtOWY1WVZXSGFIM3JZa1h0bDYyNVUzd0lvcUFpdVJtVjFZemVZSGotMnJmR3Q5aDN5MzVaenluWUhseElqVEltb2RBQU8zTnktd3hOaWZnQ20yTG5OY3ltMjlXZU9ta0tvTkpnTlhncW1DcEg0bl9BNWdnVEdJOFc5THpPZmZYNjFNZEhPdEVvU1ZtWW5vWUlVMFp5VDd2RXpBcw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYWlZeXBDaEdjX3BLOGJ2WGJlbGtLMXVTMXNnNTZzNHRnLWNWaGtyUmplc3hEdVdpYnFnejVuRmV5REpNMHotWlFvTmpISXd1MENQb2xlWXYxTXA5cnVmYkNQMmtiSDFPSU5QQzdMbElOblpsWGlPSk9ES1ZEOEE1UXJvRVhPSms1LVBqZEdCdlNwMjR3YmRMWHVXd0ZTQ3FDNHo3Y0lhTEdoaE1ER21rUkl2WGkyMkNGMVN0SzJYWnFINXM?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNT2tTWlN5eXpuamdDMjRncmx0QUpNZG1WbmxqdGdNYTJXVlRWQkJyNXRCREJKRUZOdWxBMlNUTDV5QmRvclFWODdZLWdsQldKUjQ1cnBlUVA5UjdMNVRIVHBoaS04Q2FGeFBreDNuWk52SU1SbXNqTC11czQyektoTVFJb2hwUHlzWGlacQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMnNCTUMtZno1aVJxS3BKUUdyVVg2RV9jbVJLT19LRENTU2V6b0wzeDNFNGdsWGNfaHJPQ19YVjgyemVQdmFsbXRlT1RZRHczSl91NkxDMmpaSW5aY1o5Y2xqNXdMOUkybWx4V1pzV25YeW12OHNLUVI2cVFmcjlGU1gxc1lTOGlCd0t0R2xlVHh3bzd4MEU5QkZlV1V5bFJ4X0NyQUNB?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMmR2NDRVbnd4cmctTjhXRThYdFFKUVhtTmpEb3A0bFByXzBrTHZXZi1lM2N3TWg3ZFp5RGx1bWd4MlpSSzNJaHhuY0MzcUI1SEJ6VzZtX29xX0VwNDZBNnVNRWcxcEpUTExGX0l6SjFNdm9xLW83Y21ySG5SWGdLZnM0dExtNGh0NHZVdVVZVElnRDNyNXp6N0ViNTM?oc=5",
+        "key": "https://www.theverge.com/tech/996341/bose-ultra-open-earbuds-second-gen-wireless-sport",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWXlqTWJneVp6Zk1wNThKc3FZeVZWTlpBanMwYWNWeW52UmFwYk10SzY3WW1YTmcxdVJsLXpodS1OYlpNb3h1NFhaN2RDQVNpdVlQZHhGOTFBMlFFQnRNZkNPUXpDd3VENDVRYmZMc2tLREM0cU53U25NS0R4MkJERjh1N1ptd3VDQm8tNzBzXzF6MjVFcG4zS2pR?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV2R6ekhkRHVUTU95d042blJ6bWlXZEFxcEhPWTV5S3JtVXI0emlsaVdyb1BURWJzZk5ySWdyVGNKcEJldUg5Q3BaNF9wdUxWVzZyZHA2RWpjVWJVU1hRa2c2dmtMX3FOOGVKWFlBU0dfcjU0R1AtTjFURmpUOHo5LTFVRXBlaWx6OHktNHJiQUZ6a0NOdElKVHNIZnlTVW5hc0RTMTVnSE95NnExaEdJNWplNjdUdjQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZTlqYXBUY2FCN2dqVzlPSXZpUXFSWXU4MjBjeVREZkttdHFfaFpUR3dnQjZsblBXUEJ5bEE0R1I2YXJ3WVViOGtrb00zdjd1RzlUanhqLXNjQVZRZEJGT0pmSEZQb0FzUnkxNmdaSDE4R25KQXJJZk1tZmZWcEhMRTRqT2xNelc2ZlJYRHl6TnFXUHhiY0dhME1yU2JOS0tDR29iMnlfV1B3Q3pERkFIbFN5LXdyTHVDc21oazdYYW43NVlu?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcDAwTXlYOUtzcWU2bVBMcm9zOG5ETDdfWC1DbXh4RlFOMklDbEdKa0RiRDRjRWxPeUtmaE9mNEFiclFGRERvblhHMklOXzh6aWRFNmVBTkFxMFRzZE9nejJvSkJ3RnB6TW94Rm9DWXJybEpzUnFxVXNaY1pwYV9fZDRNQWVyNVRUV1RMZjM2QTM3Q21ucFVuRzFrMEFVa1pqR1lxWnZyM3lnMXRYZVHSAbMBQVVfeXFMTXo4X0VqLXo2N1h0ZHNldFA3aWg2QnNyNXVlTGdaM0NhRW9FZFZ4Y2FHS1dJMEtiMzBtbG93T3dSOFNyMGp4RUhmUHUzR3BaMWRtUWx1dkJ3Z2xob2JXUE9iWWRkR3dVekkyTktMd3FUMWE2dzdyQnNuUzlmYjNvaS1rNFFsUjAwZGRHdVBhY2hNQTNwd1E2aVNQbWkyYXY1SHpWTXFGR0lSNGpSQzlRWkxUdlk?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQlVoOHNQQ2Q2aF8zYXJjSnFiUk14UU5pZmZFUF94b0F1cXFISDdGRkJQMDB1WVNFQWkyMFBjdmZldFJXRVRPZUtYa1JDSTVOU3ZyUV9nY1dwd1lXTmtyWUxGVkZUWDBZVnd5MDFoZk9HNEJUVmFheGZkd3RsUHRCTHJyeV85aUlxZTA0T2lSbDZ3Ykp1dzhWUVFQdXoycXFlT29v?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zbDBtWTVVdFRiT29nNDR6eTEzNE5Fd0NmLTJVdWMzTEFZUEFhZ0dSY1V5cjRIRFA4eFNWb1RZVFN0RGdUQVFLYjB3NHZLTXNzSTdhNDhMQ0I2eHFVTW1n?oc=5",
+        "key": "https://www.theverge.com/tech/996826/microsoft-xbox-disc-to-digital-history-notepad",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWnBjM3NUSFY0NGhIQVhkNHYtOTFJc0ZkQUFWZG1Wb25SYlVodlAxSzZxLTFsUnpLazFxWG9HMUVwV2lyZFd0aGU4dkFZRDBrVjRvTWFhNmUyTW5rY29rV3R4NExRUnRiclZQX0ZSMUN1bVktWEMxUnRfU2pYa0tjZThjb2xMN2NUdzJCX1ZMMHo2VGd6X0E1LVp3VHZFV1JxTER1M2JrU3NRQ2duTlBXdmJ2TQ?oc=5",
+        "key": "https://www.theverge.com/tech/996453/camp-snap-110d-digital-camera-retro-horizontal-kodak-100-film",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/entertainment/996505/spotify-fresh-finds-forward",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/entertainment/996831/grand-theft-auto-6-soundtrack",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5xN3JfdDd0QTJXN1A0LVlhT2Y4NVBjSjdVYkhWM2RSb2pubzQ3N1VBTndaOUNwTllZTWpUNTFKakJ1dWtKaERPY19mZU5Hd2lxdmVmcFhTUXpQT08zNHZ1Nk5XTnVnQzJqWlNmU2FLMTNsRVlEd0V3?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNjN5M05aMGZKY2lUdV9RYVU5VmlEMWEzZ1dqMjFJU2MzbEE1bU9jZks0dXF4V3lnd1N5Z0ZHbm94QWJGcFF5QzdMaFBlb1ZuQ0gxYm15dXFoV2QwRk9jNmViaVJvTnQwRmJjQWRqemo0c3VoenJ2SDhXTGVPdV9oOWFrbnV5T2ZHOXhtWkdIQ1JKMXpaVG1CdGhZQmMxLWJSLXJ1cFNOM3NIZWpfcnVJ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNaDY0VjZZbzRlUTFEblBHcC1YZ1pYUTFFa1FkdjlFQ1RTWkg1UlUxdS1nQkdhUjl0Zm9TSlNsb2pjYUtEVTlGV0ZGWnlxOEJWUUV2dHFOeWJTanV2WHYxQUoxa09JRHY4cUhJZDloaHBGQ0xDY1UzcDROZjMzMjBMSzVBUVJlU1pZREM0TXVvbGlGaW43SHc?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBkSzF3UlMxcWo0MVFPSDM0WHJwSGkzdkgyWmdJOE91Wks1cjNQNFZMS2JEUUNYYmUwcDR5cW5xdVlvMjVhcTM4YWhQNTJqOVhzR3ZOaA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSWFjR0hTYWRlSGJodzhySVVTNTB5Smh0aVl1VFB6Z2Z0ZmpuZUphMTBpS3Q5MXdDbG5manplVVNLRUxCbkVDOEpOb3U0VjNwVFl0WlpnQko3RkFlM0x2MER6UER6ZmxUUlE5MnIzU2VCOXZLaDNHMFBJMVpUMUUtZlVwTUlMT0lrRjlwM2RRMA?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOS0ZsMlBxQUQ1NE9hUkxvYzVBRi1mWHoyMG5iWnlfS0E2X2twSHlNTlc5VGdsVExtNWtqZzZjYU5JblZXTDdvOWdGdWloSHp2eXRINk1QTnVfZW1VMWl4U2RrNHZUMW15TmMwYVltYzRURWpCdV9wMmNpd04yeXZGa19EN2JSTHZTb2k5Rmxyb1U1cDdBMHZoU3NrU3ZJQ0gyNXFrM28wd0RkdFpfWE5aZWdqVURRXzliNnVSdDN4NW0?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/996860/lunacy-audio-nova-ai-music-plugin-vst",
+        "bucket": "control"
       }
     ]
   },
@@ -337,14 +337,14 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 8,
-        "variant": 12,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 81,
-        "evidencePassRate": 10
+        "evidencePassRate": 11
       },
       "conclusion": "insufficient-data",
       "confidence": "low"
@@ -352,14 +352,14 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 8,
-        "variant": 12,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 81,
-        "evidencePassRate": 10
+        "evidencePassRate": 11
       },
       "conclusion": "insufficient-data",
       "confidence": "low"
@@ -367,20 +367,20 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 8,
-        "variant": 12,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 81,
-        "evidencePassRate": 10
+        "evidencePassRate": 11
       },
       "conclusion": "insufficient-data",
       "confidence": "low"
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-17T05:17:50.032Z"
+    "previousUpdatedAt": "2026-09-17T12:01:07.358Z"
   }
 }
