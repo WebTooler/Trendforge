@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T12:01:13.151Z",
+  "updatedAt": "2026-09-17T17:14:47.987Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,26 +12,26 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 6,
-    "topicCount": 76,
-    "articleCount": 11,
-    "latestEditorialScore": 75,
-    "latestClaimConfidence": 80,
-    "latestEvidencePassRate": 10,
-    "latestEvidenceBlockRate": 31,
+    "runCount": 7,
+    "topicCount": 106,
+    "articleCount": 12,
+    "latestEditorialScore": 74,
+    "latestClaimConfidence": 84,
+    "latestEvidencePassRate": 16,
+    "latestEvidenceBlockRate": 35,
     "singleSourceReadyRate": 24,
     "publishCandidateRate": 0
   },
   "changes": {
-    "editorialScore": -3,
-    "claimConfidence": -1,
-    "evidencePassRate": 0
+    "editorialScore": -1,
+    "claimConfidence": 4,
+    "evidencePassRate": 6
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 42,
+      "failures": 49,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -39,15 +39,15 @@
     "Cloudflare": {
       "successRate": 0,
       "successes": 0,
-      "failures": 9,
+      "failures": 18,
       "cooldownRuns": 0,
       "latestStatus": 0,
       "latestClass": "transient"
     },
     "Cohere": {
-      "successRate": 9,
-      "successes": 15,
-      "failures": 146,
+      "successRate": 11,
+      "successes": 21,
+      "failures": 177,
       "cooldownRuns": 0,
       "latestStatus": 200,
       "latestClass": "success"
@@ -55,15 +55,15 @@
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 67,
+      "failures": 80,
       "cooldownRuns": 3,
-      "latestStatus": 429,
-      "latestClass": "quota"
+      "latestStatus": 0,
+      "latestClass": "transient"
     },
     "Groq": {
-      "successRate": 10,
-      "successes": 24,
-      "failures": 222,
+      "successRate": 11,
+      "successes": 33,
+      "failures": 259,
       "cooldownRuns": 2,
       "latestStatus": 200,
       "latestClass": "success"
@@ -71,18 +71,18 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 18,
+      "failures": 21,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
-      "successRate": 1,
-      "successes": 1,
-      "failures": 85,
+      "successRate": 3,
+      "successes": 3,
+      "failures": 105,
       "cooldownRuns": 0,
-      "latestStatus": 0,
-      "latestClass": "transient"
+      "latestStatus": 200,
+      "latestClass": "success"
     }
   },
   "categories": {
@@ -99,26 +99,27 @@
       }
     },
     "Crypto": {
-      "topicSamples": 33,
+      "topicSamples": 43,
       "averageScore": 71,
-      "averageConfidence": 79,
+      "averageConfidence": 80,
       "evidenceLevels": {
-        "none": 33
+        "none": 43
       },
       "decisions": {
-        "review": 29,
-        "hold": 4
+        "review": 37,
+        "hold": 6
       }
     },
     "Digital Life": {
-      "topicSamples": 8,
-      "averageScore": 73,
-      "averageConfidence": 87,
+      "topicSamples": 27,
+      "averageScore": 71,
+      "averageConfidence": 88,
       "evidenceLevels": {
-        "none": 8
+        "none": 19,
+        "single-source-verified": 8
       },
       "decisions": {
-        "review": 8
+        "review": 27
       }
     },
     "Innovation": {
@@ -133,14 +134,14 @@
       }
     },
     "Product Launches": {
-      "topicSamples": 17,
-      "averageScore": 58,
-      "averageConfidence": 62,
+      "topicSamples": 18,
+      "averageScore": 59,
+      "averageConfidence": 63,
       "evidenceLevels": {
-        "none": 17
+        "none": 18
       },
       "decisions": {
-        "review": 1,
+        "review": 2,
         "hold": 16
       }
     }
@@ -165,11 +166,6 @@
       "id": "provider-cloudflare",
       "severity": "medium",
       "detail": "Provider Cloudflare has low historical success or cooldown activity."
-    },
-    {
-      "id": "provider-cohere",
-      "severity": "medium",
-      "detail": "Provider Cohere has low historical success or cooldown activity."
     },
     {
       "id": "provider-gemini",
@@ -197,25 +193,25 @@
       "id": "editorial-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average editorial score changed by -3 points versus the previous run."
+      "detail": "Average editorial score changed by -1 points versus the previous run."
     },
     {
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by -1 points versus the previous run."
+      "detail": "Average claim confidence changed by +4 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by +0 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by +6 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
       "type": "bottleneck",
       "confidence": "medium",
-      "detail": "9 operational bottleneck(s) observed; this is diagnostic only and does not change gates."
+      "detail": "8 operational bottleneck(s) observed; this is diagnostic only and does not change gates."
     }
   ],
   "experimentSummary": {
@@ -224,7 +220,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 6,
+    "memoryRuns": 7,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
