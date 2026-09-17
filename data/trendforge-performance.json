@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T05:17:49.068Z",
+  "updatedAt": "2026-09-17T12:01:13.151Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,66 +12,74 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 5,
-    "topicCount": 50,
-    "articleCount": 6,
-    "latestEditorialScore": 78,
-    "latestClaimConfidence": 81,
+    "runCount": 6,
+    "topicCount": 76,
+    "articleCount": 11,
+    "latestEditorialScore": 75,
+    "latestClaimConfidence": 80,
     "latestEvidencePassRate": 10,
-    "latestEvidenceBlockRate": 36,
+    "latestEvidenceBlockRate": 31,
     "singleSourceReadyRate": 24,
     "publishCandidateRate": 0
   },
   "changes": {
-    "editorialScore": 0,
-    "claimConfidence": 0,
+    "editorialScore": -3,
+    "claimConfidence": -1,
     "evidencePassRate": 0
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 35,
+      "failures": 42,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
     },
+    "Cloudflare": {
+      "successRate": 0,
+      "successes": 0,
+      "failures": 9,
+      "cooldownRuns": 0,
+      "latestStatus": 0,
+      "latestClass": "transient"
+    },
     "Cohere": {
-      "successRate": 8,
-      "successes": 10,
-      "failures": 115,
+      "successRate": 9,
+      "successes": 15,
+      "failures": 146,
       "cooldownRuns": 0,
       "latestStatus": 200,
-      "latestClass": "transient"
+      "latestClass": "success"
     },
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 55,
-      "cooldownRuns": 2,
+      "failures": 67,
+      "cooldownRuns": 3,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "Groq": {
-      "successRate": 8,
-      "successes": 15,
-      "failures": 185,
+      "successRate": 10,
+      "successes": 24,
+      "failures": 222,
       "cooldownRuns": 2,
-      "latestStatus": 429,
-      "latestClass": "quota"
+      "latestStatus": 200,
+      "latestClass": "success"
     },
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 15,
+      "failures": 18,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
-      "successRate": 0,
-      "successes": 0,
-      "failures": 65,
+      "successRate": 1,
+      "successes": 1,
+      "failures": 85,
       "cooldownRuns": 0,
       "latestStatus": 0,
       "latestClass": "transient"
@@ -91,48 +99,49 @@
       }
     },
     "Crypto": {
-      "topicSamples": 20,
-      "averageScore": 73,
-      "averageConfidence": 82,
+      "topicSamples": 33,
+      "averageScore": 71,
+      "averageConfidence": 79,
       "evidenceLevels": {
-        "none": 20
+        "none": 33
       },
       "decisions": {
-        "review": 20
+        "review": 29,
+        "hold": 4
       }
     },
     "Digital Life": {
-      "topicSamples": 4,
-      "averageScore": 75,
+      "topicSamples": 8,
+      "averageScore": 73,
       "averageConfidence": 87,
       "evidenceLevels": {
-        "none": 4
+        "none": 8
       },
       "decisions": {
-        "review": 4
+        "review": 8
       }
     },
     "Innovation": {
-      "topicSamples": 11,
+      "topicSamples": 15,
       "averageScore": 60,
       "averageConfidence": 60,
       "evidenceLevels": {
-        "none": 11
+        "none": 15
       },
       "decisions": {
-        "hold": 11
+        "hold": 15
       }
     },
     "Product Launches": {
-      "topicSamples": 12,
-      "averageScore": 62,
-      "averageConfidence": 66,
+      "topicSamples": 17,
+      "averageScore": 58,
+      "averageConfidence": 62,
       "evidenceLevels": {
-        "none": 12
+        "none": 17
       },
       "decisions": {
-        "review": 2,
-        "hold": 10
+        "review": 1,
+        "hold": 16
       }
     }
   },
@@ -151,6 +160,11 @@
       "id": "provider-cerebras",
       "severity": "medium",
       "detail": "Provider Cerebras has low historical success or cooldown activity."
+    },
+    {
+      "id": "provider-cloudflare",
+      "severity": "medium",
+      "detail": "Provider Cloudflare has low historical success or cooldown activity."
     },
     {
       "id": "provider-cohere",
@@ -183,13 +197,13 @@
       "id": "editorial-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average editorial score changed by +0 points versus the previous run."
+      "detail": "Average editorial score changed by -3 points versus the previous run."
     },
     {
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by +0 points versus the previous run."
+      "detail": "Average claim confidence changed by -1 points versus the previous run."
     },
     {
       "id": "evidence-trend",
@@ -201,7 +215,7 @@
       "id": "current-bottlenecks",
       "type": "bottleneck",
       "confidence": "medium",
-      "detail": "8 operational bottleneck(s) observed; this is diagnostic only and does not change gates."
+      "detail": "9 operational bottleneck(s) observed; this is diagnostic only and does not change gates."
     }
   ],
   "experimentSummary": {
@@ -210,7 +224,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 5,
+    "memoryRuns": 6,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
