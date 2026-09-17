@@ -33,6 +33,18 @@ function normalize(text: string) {
   return decodeHtmlEntities(text).toLowerCase().replace(/[`*_#>\[\]().,!?;:'"—–-]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
+function normalizeUrl(url: string) {
+  try {
+    const parsed = new URL(url.trim());
+    parsed.hash = '';
+    parsed.search = '';
+    parsed.pathname = parsed.pathname.replace(/\\/+$/, '') || '/';
+    return parsed.toString();
+  } catch {
+    return url.trim().replace(/\\/+$/, '');
+  }
+}
+
 function loadEvidenceItems(): any[] {
   try {
     const parsed = JSON.parse(fs.readFileSync(evidencePath, 'utf8'));
@@ -42,10 +54,43 @@ function loadEvidenceItems(): any[] {
   }
 }
 
+function evidenceUrls(item: any): string[] {
+  const urls: string[] = [];
+  if (typeof item?.link === 'string') urls.push(item.link);
+  for (const source of Array.isArray(item?.sources) ? item.sources : []) {
+    for (const key of ['suppliedUrl', 'finalUrl', 'canonical']) {
+      if (typeof source?.[key] === 'string') urls.push(source[key]);
+    }
+  }
+  return [...new Set(urls.map(normalizeUrl).filter(Boolean))];
+}
+
 const evidenceItems = loadEvidenceItems();
-const evidenceByTitle = new Map<string, any>();
+const evidenceByUrl = new Map<string, any>();
 for (const item of evidenceItems) {
-  if (typeof item?.title === 'string') evidenceByTitle.set(normalize(item.title), item);
+  for (const url of evidenceUrls(item)) evidenceByUrl.set(url, item);
+}
+
+function resolveEvidence(sourceUrls: string[]) {
+  const matches = sourceUrls
+    .map(normalizeUrl)
+    .map((url) => evidenceByUrl.get(url))
+    .filter((item, index, all) => item && all.indexOf(item) === index);
+
+  const validatedSingleSource = matches.some((item) =>
+    item?.status === 'pass' &&
+    item?.evidenceLevel === 'single-source' &&
+    Number(item?.validSourceCount) >= 1
+  );
+
+  const strongEvidence = matches.some((item) =>
+    item?.status === 'pass' &&
+    item?.evidenceLevel === 'strong' &&
+    Number(item?.validSourceCount) >= 2 &&
+    Number(item?.independentPublisherFamilies ?? 0) >= 2
+  );
+
+  return { validatedSingleSource, strongEvidence, matches };
 }
 
 for (const file of files) {
@@ -68,11 +113,10 @@ for (const file of files) {
     .split(/\n\s*\n/)
     .map((block) => block.replace(/^##\s+.+\n?/, '').trim())
     .filter((p) => p && !/^\d+\.\s+/.test(p));
-  const sourceUrls = [...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map((m) => m[1]);
+  const sourceUrls = [...new Set([...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map((m) => normalizeUrl(m[1])))];
   const unsafe = /<script\b|<iframe\b|javascript\s*:/i.test(raw);
-  const evidence = evidenceByTitle.get(normalize(title));
-  const evidenceLevel = evidence?.evidenceLevel || '';
-  const validatedSingleSource = evidenceLevel === 'single-source' && evidence?.status === 'pass' && Number(evidence?.validSourceCount) >= 1;
+  const evidence = resolveEvidence(sourceUrls);
+  const validatedSingleSource = evidence.validatedSingleSource;
   const requiredSourceLinks = validatedSingleSource ? 1 : 2;
 
   if (!title || title.length < 20 || title.length > 110) errors.push(`${slug}: title quality/length check failed.`);
@@ -97,7 +141,7 @@ for (const file of files) {
   const genericFailure = /^(click here|read more|lorem ipsum|test article)\.?$/i.test(main.trim());
   if (genericFailure) errors.push(`${slug}: generic/placeholder content detected.`);
 
-  const sourcePolicy = validatedSingleSource ? 'single-source validated' : '2-source quality default';
+  const sourcePolicy = validatedSingleSource ? 'single-source validated' : evidence.strongEvidence ? 'strong multi-source validated' : '2-source quality default';
   console.log(`QUALITY ${errors.some((e) => e.startsWith(`${slug}:`)) ? 'FAIL' : 'PASS'}: ${slug} (${words} words, ${headings} H2s, ${sourceUrls.length} sources, ${sourcePolicy})`);
 }
 
