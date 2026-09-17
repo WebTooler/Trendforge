@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-17T17:14:47.987Z",
+  "updatedAt": "2026-09-17T21:42:34.922Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,26 +12,26 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 7,
-    "topicCount": 106,
+    "runCount": 8,
+    "topicCount": 121,
     "articleCount": 12,
-    "latestEditorialScore": 74,
+    "latestEditorialScore": 73,
     "latestClaimConfidence": 84,
-    "latestEvidencePassRate": 16,
-    "latestEvidenceBlockRate": 35,
+    "latestEvidencePassRate": 10,
+    "latestEvidenceBlockRate": 34,
     "singleSourceReadyRate": 24,
     "publishCandidateRate": 0
   },
   "changes": {
     "editorialScore": -1,
-    "claimConfidence": 4,
-    "evidencePassRate": 6
+    "claimConfidence": 0,
+    "evidencePassRate": -6
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 49,
+      "failures": 56,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -39,31 +39,31 @@
     "Cloudflare": {
       "successRate": 0,
       "successes": 0,
-      "failures": 18,
+      "failures": 30,
       "cooldownRuns": 0,
-      "latestStatus": 0,
-      "latestClass": "transient"
+      "latestStatus": 429,
+      "latestClass": "rate_limit"
     },
     "Cohere": {
       "successRate": 11,
-      "successes": 21,
-      "failures": 177,
+      "successes": 27,
+      "failures": 209,
       "cooldownRuns": 0,
       "latestStatus": 200,
-      "latestClass": "success"
+      "latestClass": "transient"
     },
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 80,
+      "failures": 94,
       "cooldownRuns": 3,
-      "latestStatus": 0,
-      "latestClass": "transient"
+      "latestStatus": 503,
+      "latestClass": "server"
     },
     "Groq": {
-      "successRate": 11,
-      "successes": 33,
-      "failures": 259,
+      "successRate": 12,
+      "successes": 42,
+      "failures": 296,
       "cooldownRuns": 2,
       "latestStatus": 200,
       "latestClass": "success"
@@ -71,43 +71,43 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 21,
+      "failures": 24,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
-      "successRate": 3,
-      "successes": 3,
-      "failures": 105,
+      "successRate": 4,
+      "successes": 5,
+      "failures": 126,
       "cooldownRuns": 0,
       "latestStatus": 200,
-      "latestClass": "success"
+      "latestClass": "transient"
     }
   },
   "categories": {
     "AI": {
-      "topicSamples": 3,
+      "topicSamples": 5,
       "averageScore": 76,
-      "averageConfidence": 86,
+      "averageConfidence": 89,
       "evidenceLevels": {
-        "single-source-verified": 1,
+        "single-source-verified": 3,
         "none": 2
       },
       "decisions": {
-        "review": 3
+        "review": 5
       }
     },
     "Crypto": {
-      "topicSamples": 43,
+      "topicSamples": 51,
       "averageScore": 71,
       "averageConfidence": 80,
       "evidenceLevels": {
-        "none": 43
+        "none": 51
       },
       "decisions": {
-        "review": 37,
-        "hold": 6
+        "review": 43,
+        "hold": 8
       }
     },
     "Digital Life": {
@@ -123,14 +123,14 @@
       }
     },
     "Innovation": {
-      "topicSamples": 15,
-      "averageScore": 60,
+      "topicSamples": 20,
+      "averageScore": 59,
       "averageConfidence": 60,
       "evidenceLevels": {
-        "none": 15
+        "none": 20
       },
       "decisions": {
-        "hold": 15
+        "hold": 20
       }
     },
     "Product Launches": {
@@ -199,13 +199,13 @@
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by +4 points versus the previous run."
+      "detail": "Average claim confidence changed by +0 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by +6 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by -6 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
@@ -220,7 +220,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 7,
+    "memoryRuns": 8,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
