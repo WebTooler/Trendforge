@@ -13,7 +13,6 @@ env:
   CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
   CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
   CLOUDFLARE_IMAGE_MODEL: '@cf/black-forest-labs/flux-2-klein-9b'
-  IMAGE_V3_TEST_LIMIT: '1'
 
 jobs:
   image-v3-test:
@@ -25,9 +24,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
-      - name: Generate one smoke-test image from existing published articles only
-        run: npx tsx scripts/generate-article-image-v3-smoke.ts
+      - name: Generate Cloudflare image diagnostic only
+        run: npx --yes tsx scripts/generate-article-image-v3-smoke.ts
       - name: Upload isolated image test results
         if: always()
         uses: actions/upload-artifact@v4
