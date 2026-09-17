@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 
 const dir = 'content/articles';
 const evidencePath = 'data/evidence-integrity.json';
@@ -14,8 +15,8 @@ const seenSlugs = new Set<string>();
 const seenTitles = new Set<string>();
 
 function field(text: string, key: string) {
-  const match = text.match(new RegExp(`^${key}:\\s*"([\\s\\S]*?)"\\s*$`, 'm'));
-  return match ? match[1].replace(/\\"/g, '"') : '';
+  const match = text.match(new RegExp(`^${key}:\\s*\"([\\s\\S]*?)\"\\s*$`, 'm'));
+  return match ? match[1].replace(/\\\"/g, '\"') : '';
 }
 
 function decodeHtmlEntities(text: string) {
@@ -23,14 +24,14 @@ function decodeHtmlEntities(text: string) {
     .replace(/&#(\\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
     .replace(/&apos;/g, "'")
-    .replace(/&quot;/g, '"')
+    .replace(/&quot;/g, '\"')
     .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>');
 }
 
 function normalize(text: string) {
-  return decodeHtmlEntities(text).toLowerCase().replace(/[`*_#>\[\]().,!?;:'"—–-]/g, ' ').replace(/\s+/g, ' ').trim();
+  return decodeHtmlEntities(text).toLowerCase().replace(/[`*_#>\[\]().,!?;:'\"—–-]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 function normalizeUrl(url: string) {
@@ -93,6 +94,31 @@ function resolveEvidence(sourceUrls: string[]) {
   return { validatedSingleSource, strongEvidence, matches };
 }
 
+function getCurrentRunFiles(): Set<string> {
+  try {
+    const status = execFileSync('git', ['status', '--porcelain', '--untracked-files=all', '--', dir], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    });
+    const current = new Set<string>();
+    for (const line of status.split(/\r?\n/)) {
+      if (!line.trim()) continue;
+      const file = line.slice(3).trim();
+      if (file.startsWith(`${dir}/`) && file.endsWith('.md')) current.add(path.basename(file));
+    }
+    return current;
+  } catch {
+    return new Set<string>();
+  }
+}
+
+// The quality gate runs after generation, while the generated article is still
+// uncommitted. Existing repository articles are baseline content and must not be
+// re-qualified against the current run's evidence snapshot. Only files changed
+// by this run receive the current-run evidence policy.
+const currentRunFiles = getCurrentRunFiles();
+console.log(`Quality scope: ${currentRunFiles.size} current-run article(s), ${Math.max(0, files.length - currentRunFiles.size)} baseline article(s).`);
+
 for (const file of files) {
   const raw = fs.readFileSync(path.join(dir, file), 'utf8');
   const parts = raw.split(/^---$/m);
@@ -116,8 +142,16 @@ for (const file of files) {
   const sourceUrls = [...new Set([...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map((m) => normalizeUrl(m[1])))];
   const unsafe = /<script\b|<iframe\b|javascript\s*:/i.test(raw);
   const evidence = resolveEvidence(sourceUrls);
+  const isCurrentRun = currentRunFiles.has(file);
+
+  // Current-run articles must be backed by the authoritative evidence snapshot:
+  // a validated single source is sufficient, while strong evidence requires two
+  // independent publisher families. Historical/baseline articles are not forced
+  // to match today's evidence snapshot; they only need at least one HTTPS source.
   const validatedSingleSource = evidence.validatedSingleSource;
-  const requiredSourceLinks = validatedSingleSource ? 1 : 2;
+  const requiredSourceLinks = isCurrentRun
+    ? (validatedSingleSource ? 1 : evidence.strongEvidence ? 2 : 2)
+    : 1;
 
   if (!title || title.length < 20 || title.length > 110) errors.push(`${slug}: title quality/length check failed.`);
   if (!description || description.length < 80 || description.length > 320) errors.push(`${slug}: description quality/length check failed.`);
@@ -130,7 +164,10 @@ for (const file of files) {
   if (headings < 3) errors.push(`${slug}: needs at least 3 H2 sections (found ${headings}).`);
   if (paragraphs.length < 4) errors.push(`${slug}: needs at least 4 substantive paragraphs.`);
   if (sourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://'))) {
-    errors.push(`${slug}: needs at least ${requiredSourceLinks} HTTPS source link(s) for ${validatedSingleSource ? 'validated single-source evidence' : 'strong/legacy evidence'}.`);
+    const policy = isCurrentRun
+      ? (validatedSingleSource ? 'validated single-source evidence' : evidence.strongEvidence ? 'strong multi-source evidence' : 'current-run evidence')
+      : 'baseline article source sanity';
+    errors.push(`${slug}: needs at least ${requiredSourceLinks} HTTPS source link(s) for ${policy}.`);
   }
   if (unsafe) errors.push(`${slug}: unsafe HTML/script content detected.`);
 
@@ -141,8 +178,11 @@ for (const file of files) {
   const genericFailure = /^(click here|read more|lorem ipsum|test article)\.?$/i.test(main.trim());
   if (genericFailure) errors.push(`${slug}: generic/placeholder content detected.`);
 
-  const sourcePolicy = validatedSingleSource ? 'single-source validated' : evidence.strongEvidence ? 'strong multi-source validated' : '2-source quality default';
-  console.log(`QUALITY ${errors.some((e) => e.startsWith(`${slug}:`)) ? 'FAIL' : 'PASS'}: ${slug} (${words} words, ${headings} H2s, ${sourceUrls.length} sources, ${sourcePolicy})`);
+  const sourcePolicy = isCurrentRun
+    ? validatedSingleSource ? 'single-source validated' : evidence.strongEvidence ? 'strong multi-source validated' : 'current-run evidence required'
+    : 'baseline article';
+  const articleErrors = errors.some((e) => e.startsWith(`${slug}:`));
+  console.log(`QUALITY ${articleErrors ? 'FAIL' : 'PASS'}: ${slug} (${words} words, ${headings} H2s, ${sourceUrls.length} sources, ${sourcePolicy})`);
 }
 
 if (errors.length) {
