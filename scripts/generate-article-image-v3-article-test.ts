@@ -19,14 +19,15 @@ function field(text: string, key: string) {
   const m = text.match(new RegExp(`^${key}:\\s*"([\\s\\S]*?)"\\s*$`, 'm'));
   return m ? m[1].replace(/\\"/g, '"') : '';
 }
-function body(text: string) {
-  return (text.split(/^---$/m).slice(2).join('---').split(/^## Sources$/m)[0] ?? '').replace(/\s+/g, ' ').trim();
-}
 
 const title = field(article, 'title');
 const description = field(article, 'description');
-const context = body(article).slice(0, 1800);
-const prompt = `Original editorial illustration for a premium technology newsroom. Wide 16:9 composition, sophisticated realistic-but-clearly-illustrative visual language, cinematic natural lighting, strong subject hierarchy, restrained palette, no readable text, no captions, no watermarks, no logos, no UI screenshot, no generic neural-network wallpaper. Create a story-specific visual for this article: ${title}. Context: ${description}. Article context: ${context}. Show a plausible premium enterprise AI server rack with multiple powerful processor modules, high-speed networking, cooling systems and data-center infrastructure. The hardware should feel like a cutting-edge 2029-class server associated with a major consumer technology company, but do not reproduce any trademark or logo. Make server hardware, chips and AI infrastructure the unmistakable visual subject.`;
+// The visual brief is deliberately curated from the story instead of sending
+// the raw article/title to the image safety filter. Brand names, people and
+// other sensitive entities can be represented by visual concepts without
+// requiring the generator to reproduce trademarks or a real person's face.
+const visualBrief = 'A cutting-edge enterprise AI server system being prepared for a future-generation data center. Show a premium minimalist server chassis with several large high-performance processor modules, dense high-speed networking, advanced cooling and clean rack infrastructure. Make the physical server hardware the unmistakable hero subject, with subtle signs of AI computing workload in the surrounding data center. Premium technology magazine editorial illustration, plausible industrial design, realistic materials, cinematic natural lighting, sophisticated restrained palette, strong depth and composition. No people, no logos, no trademarks, no readable text, no captions, no watermark, no UI screenshot, no generic robot, no abstract neural-network wallpaper.';
+const prompt = `Original editorial illustration for a premium technology newsroom. Wide 16:9 composition. ${visualBrief}`;
 
 async function generate() {
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${model}`;
@@ -47,6 +48,7 @@ async function generate() {
   const requestBody = await serialized.arrayBuffer();
 
   console.log(`ARTICLE_TEST slug=${slug}`);
+  console.log(`ARTICLE_TEST title=${title}`);
   console.log(`ARTICLE_TEST model=${model}`);
   console.log(`ARTICLE_TEST dimensions=${width}x${height}`);
   console.log(`ARTICLE_TEST requestBytes=${requestBody.byteLength}`);
@@ -88,6 +90,7 @@ async function generate() {
     model,
     width,
     height,
+    visualBrief,
     prompt,
     httpStatus: response.status,
     elapsedMs,
