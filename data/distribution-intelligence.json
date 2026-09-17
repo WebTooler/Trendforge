@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T08:44:27.764Z",
+  "generatedAt": "2026-09-17T08:52:29.114Z",
   "policy": {
     "privacyFirst": true,
     "no_scraping": true,
@@ -177,6 +177,38 @@
       ]
     },
     {
+      "slug": "apple-eyes-2029-ai-server-with-m-series-ultra-chips",
+      "title": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
+      "category": "Technology",
+      "channels": [
+        {
+          "channel": "Google Search",
+          "action": "publish and keep canonical/indexable",
+          "reason": "organic discovery"
+        },
+        {
+          "channel": "Newsletter",
+          "action": "include when relevant",
+          "reason": "subscriber retention"
+        },
+        {
+          "channel": "RSS",
+          "action": "make available through feed",
+          "reason": "reader-controlled distribution"
+        },
+        {
+          "channel": "Social",
+          "action": "share a concise human-written excerpt",
+          "reason": "additional discovery"
+        },
+        {
+          "channel": "Direct",
+          "action": "link from related articles",
+          "reason": "internal discovery"
+        }
+      ]
+    },
+    {
       "slug": "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry",
       "title": "Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
       "category": "AI",
@@ -242,7 +274,7 @@
     }
   ],
   "summary": {
-    "articlesPlanned": 7,
+    "articlesPlanned": 8,
     "externalPostingPerformed": false
   }
 }

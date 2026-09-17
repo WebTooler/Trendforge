@@ -7,8 +7,8 @@
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 5,
-      "lastSuccessAt": "2026-09-17T07:42:06.995Z"
+      "successes": 6,
+      "lastSuccessAt": "2026-09-17T08:51:48.849Z"
     },
     "Gemini": {
       "failures": 12,
@@ -33,10 +33,12 @@
     },
     "OpenRouter": {
       "failures": 17,
-      "quotaBlockedUntil": 1789634676498,
+      "quotaBlockedUntil": 0,
       "lastStatus": 200,
-      "lastError": "Empty model response",
-      "lastClass": "transient"
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 1,
+      "lastSuccessAt": "2026-09-17T08:52:26.293Z"
     },
     "Cohere": {
       "failures": 26,
@@ -48,15 +50,15 @@
       "lastSuccessAt": "2026-09-16T09:01:41.739Z"
     },
     "Cloudflare": {
-      "failures": 2,
+      "failures": 3,
       "successes": 0,
-      "quotaBlockedUntil": 1789634647412,
-      "lastStatus": 200,
-      "lastError": "Invalid structured output",
+      "quotaBlockedUntil": 1789635142419,
+      "lastStatus": 0,
+      "lastError": "Cloudflare response-shape: generated response was not text (keys=result,success,errors,messages).",
       "lastClass": "transient",
       "lastSuccessAt": 0
     }
   },
-  "rotationCursor": 2,
-  "updatedAt": "2026-09-17T08:44:24.235Z"
+  "rotationCursor": 1,
+  "updatedAt": "2026-09-17T08:52:26.293Z"
 }

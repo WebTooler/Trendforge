@@ -1,18 +1,18 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-17T07:42:07.162Z",
-  "articlePath": "content/articles/al-gore-says-the-real-ai-risk-isn-t-data-centers.md",
-  "articleTitle": "Al Gore Says the Real AI Risk Isn’t Data Centers",
+  "generatedAt": "2026-09-17T08:52:26.409Z",
+  "articlePath": "content/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.md",
+  "articleTitle": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
   "sourceCount": 1,
   "usableSourceCount": 1,
-  "claimCount": 23,
-  "editorialCount": 2,
-  "verified": 23,
+  "claimCount": 17,
+  "editorialCount": 0,
+  "verified": 17,
   "partial": 0,
   "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 78,
+  "averageConfidence": 88,
   "pass": true,
   "policy": {
     "verifiedMin": 62,
@@ -37,9 +37,9 @@
   "sources": [
     {
       "id": "S1",
-      "title": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "url": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "domain": "techcrunch.com",
+      "title": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "url": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "domain": "arstechnica.com",
       "passageCount": 18,
       "articleBodyLength": 0
     }
@@ -47,42 +47,37 @@
   "claims": [
     {
       "index": 1,
-      "claim": "Gore said that the public backlash at planning‑commission meetings has less to do with carbon emissions than with anxiety over automation upending society.",
+      "claim": "Apple has been absent from the enterprise server market for decades, and the planned 2029 server could be its first enterprise server in decades.",
       "status": "verified",
-      "classification": "supported",
-      "confidence": 94,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "classification": "supported_with_context",
+      "confidence": 58,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
-      "bestPassage": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
+      "bestPassageId": "S1-P5",
+      "evidence": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
+      "bestPassage": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
       "matchedPassages": [
-        "S1-P9"
+        "S1-P5"
       ],
       "sharedTerms": [
-        "gore",
+        "apple",
         "the",
-        "public",
-        "backlash",
-        "plann",
-        "commission",
-        "meeting",
-        "has",
-        "carbon",
-        "emission",
-        "anxiety",
-        "automation",
-        "upend",
-        "society"
+        "server",
+        "market",
+        "decad",
+        "and",
+        "2029",
+        "first"
       ],
       "entityShared": [
-        "gore"
+        "apple"
       ],
       "topicShared": [
-        "gore",
-        "the"
+        "apple",
+        "server",
+        "for"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -91,44 +86,47 @@
     },
     {
       "index": 2,
-      "claim": "In a recent interview with TechCrunch, former Vice‑President Al Gore told reporters that the emissions generated by AI data‑center operations are, in his view, a comparatively small fraction of global greenhouse‑gas output.",
+      "claim": "According to a report from Ars Technica, the company is now working on a new AI server that would use Apple’s high‑performance M‑Series Ultra chips found in Mac desktops.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 85,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts. This past May, for example, he described AI data centers to another outlet as a &#8220;cause for deep concern, but not panic,&#8221; and in our conversation this week, his central point about emissions was about scale. &#8220;If you look at the emissions of all of the AI data centers put together, it&#8217;s only a fraction of the emissions from uncovered landfills in the world,&#8221; he said, adding that a comparable build-out is tied to something that gets far less attention: air conditioning. After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission .",
-      "bestPassage": "In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts.",
+      "bestPassageId": "S1-P4",
+      "evidence": "Credit: Benjamin Fanjoy/Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav Apple is working on an AI server that would use Apple’s high-performance M-series Ultra chips found in Mac desktops.",
+      "bestPassage": "Credit: Benjamin Fanjoy/Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav Apple is working on an AI server that would use Apple’s high-performance M-series Ultra chips found in Mac desktops.",
       "matchedPassages": [
-        "S1-P2",
-        "S1-P4",
-        "S1-P17"
+        "S1-P4"
       ],
       "sharedTerms": [
-        "interview",
-        "techcrunch",
-        "gore",
-        "the",
-        "emission",
-        "data",
-        "center",
-        "his",
-        "small",
-        "fraction",
-        "gas"
+        "work",
+        "server",
+        "use",
+        "apple",
+        "high",
+        "performance",
+        "seri",
+        "ultra",
+        "chip",
+        "found",
+        "mac",
+        "desktop"
       ],
       "entityShared": [
-        "techcrunch",
-        "gore"
+        "apple",
+        "seri",
+        "ultra",
+        "mac"
       ],
       "topicShared": [
-        "gore",
-        "the",
-        "data",
-        "center"
+        "report",
+        "server",
+        "apple",
+        "seri",
+        "ultra",
+        "chip"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -137,41 +135,40 @@
     },
     {
       "index": 3,
-      "claim": "Gore explained that the total emissions from all AI data centers combined are only a sliver of what landfills worldwide produce.",
+      "claim": "The projected release of this product in 2029 would mark Apple’s first server to hit the market in almost two decades.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 72,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 87,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P4",
-      "evidence": "This past May, for example, he described AI data centers to another outlet as a &#8220;cause for deep concern, but not panic,&#8221; and in our conversation this week, his central point about emissions was about scale. &#8220;If you look at the emissions of all of the AI data centers put together, it&#8217;s only a fraction of the emissions from uncovered landfills in the world,&#8221; he said, adding that a comparable build-out is tied to something that gets far less attention: air conditioning. In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts. Gore isn&#8217;t dismissive of concerns about how these data centers are being powered. &#8220;It is a matter of deep concern that some of the hyperscalers are jumping into new methane turbines,&#8221; he said. In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
-      "bestPassage": "This past May, for example, he described AI data centers to another outlet as a &#8220;cause for deep concern, but not panic,&#8221; and in our conversation this week, his central point about emissions was about scale. &#8220;If you look at the emissions of all of the AI data centers put together, it&#8217;s only a fraction of the emissions from uncovered landfills in the world,&#8221; he said, adding that a comparable build-out is tied to something that gets far less attention: air conditioning.",
+      "bestPassageId": "S1-P5",
+      "evidence": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
+      "bestPassage": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
       "matchedPassages": [
-        "S1-P4",
-        "S1-P2",
-        "S1-P7",
-        "S1-P9"
+        "S1-P5"
       ],
       "sharedTerms": [
-        "gore",
         "the",
-        "emission",
-        "all",
-        "data",
-        "center",
-        "are",
-        "landfill"
+        "release",
+        "product",
+        "2029",
+        "mark",
+        "apple",
+        "first",
+        "server",
+        "hit",
+        "market",
+        "two",
+        "decad"
       ],
       "entityShared": [
-        "gore"
+        "apple"
       ],
       "topicShared": [
-        "gore",
-        "the",
-        "data",
-        "center"
+        "apple",
+        "server"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -180,36 +177,34 @@
     },
     {
       "index": 4,
-      "claim": "He also pointed out that the electricity needed for air conditioning in these facilities is far less scrutinized, yet it already outpaces the entire European Union’s annual electricity use.",
+      "claim": "The move would also come after a surge in demand for Apple hardware from AI developers.",
       "status": "verified",
-      "classification": "supported",
-      "confidence": 64,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "classification": "supported_with_context",
+      "confidence": 61,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "The International Energy Agency estimates that global air conditioning already consumes more electricity annually than the entire European Union, and with ownership still under 15% across the hottest, fastest-growing parts of the world, that demand is expected to triple by 2050, putting far more pressure on the grid than AI data centers over the same period.",
-      "bestPassage": "The International Energy Agency estimates that global air conditioning already consumes more electricity annually than the entire European Union, and with ownership still under 15% across the hottest, fastest-growing parts of the world, that demand is expected to triple by 2050, putting far more pressure on the grid than AI data centers over the same period.",
+      "bestPassageId": "S1-P5",
+      "evidence": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers. This revelation coincides with booming sales for Apple’s Mac mini and Mac Studio as AI developers and companies snap up the Mac computers to run AI workloads.",
+      "bestPassage": "The potential product’s expected release in 2029 would mark the first Apple server to hit the market in nearly two decades—and could capitalize on the surging popularity of Apple hardware among AI developers.",
       "matchedPassages": [
-        "S1-P6"
+        "S1-P5",
+        "S1-P8"
       ],
       "sharedTerms": [
         "the",
-        "electricity",
-        "air",
-        "condition",
-        "far",
-        "entire",
-        "european",
-        "union"
+        "for",
+        "apple",
+        "hardware",
+        "developer"
       ],
       "entityShared": [
-        "european",
-        "union"
+        "apple"
       ],
       "topicShared": [
-        "the"
+        "for",
+        "apple"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -218,46 +213,56 @@
     },
     {
       "index": 5,
-      "claim": "The International Energy Agency projects that air‑conditioning demand could triple by 2050, which would place more strain on power grids than AI data‑center growth over the same period.",
+      "claim": "The report notes that companies such as OpenAI have purchased “tens of thousands” of Mac minis and Mac Studios to train AI agents through trial‑and‑error reinforcement learning, while Anthropic has rented Mac minis from Amazon Web Services.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 88,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 98,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "The International Energy Agency estimates that global air conditioning already consumes more electricity annually than the entire European Union, and with ownership still under 15% across the hottest, fastest-growing parts of the world, that demand is expected to triple by 2050, putting far more pressure on the grid than AI data centers over the same period.",
-      "bestPassage": "The International Energy Agency estimates that global air conditioning already consumes more electricity annually than the entire European Union, and with ownership still under 15% across the hottest, fastest-growing parts of the world, that demand is expected to triple by 2050, putting far more pressure on the grid than AI data centers over the same period.",
+      "bestPassageId": "S1-P10",
+      "evidence": "The Information reported that AI companies such as OpenAI have bought “tens of thousands” of Mac minis and Mac Studios to train AI agents through trial-and-error reinforcement learning, while Anthropic has also rented Mac minis from Amazon Web Services.",
+      "bestPassage": "The Information reported that AI companies such as OpenAI have bought “tens of thousands” of Mac minis and Mac Studios to train AI agents through trial-and-error reinforcement learning, while Anthropic has also rented Mac minis from Amazon Web Services.",
       "matchedPassages": [
-        "S1-P6"
+        "S1-P10"
       ],
       "sharedTerms": [
         "the",
-        "international",
-        "energy",
-        "agency",
-        "air",
-        "condition",
-        "demand",
-        "triple",
-        "2050",
-        "grid",
-        "data",
-        "center",
-        "same",
-        "period"
+        "report",
+        "compani",
+        "such",
+        "openai",
+        "tens",
+        "thousand",
+        "mac",
+        "mini",
+        "and",
+        "studio",
+        "train",
+        "agent",
+        "trial",
+        "error",
+        "reinforcement",
+        "learn",
+        "anthropic",
+        "has",
+        "rent",
+        "amazon",
+        "web",
+        "servic"
       ],
       "entityShared": [
-        "the",
-        "international",
-        "energy",
-        "agency"
+        "openai",
+        "mac",
+        "studio",
+        "anthropic",
+        "amazon",
+        "web",
+        "servic"
       ],
       "topicShared": [
-        "the",
-        "data",
-        "center"
+        "report"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -266,34 +271,48 @@
     },
     {
       "index": 6,
-      "claim": "Gore noted that some large cloud providers are investing in new methane turbines, which would lock in decades more of fossil‑fuel generation.",
+      "claim": "The Information, which has been closely monitoring Apple’s plans, reports that the future enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 88,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
-      "bestPassage": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
+      "bestPassageId": "S1-P6",
+      "evidence": "The enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips, according to The Information .",
+      "bestPassage": "The enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips, according to The Information .",
       "matchedPassages": [
-        "S1-P8"
+        "S1-P6"
       ],
       "sharedTerms": [
-        "are",
-        "new",
-        "methane",
-        "turbin",
-        "lock",
-        "decad",
-        "fossil",
-        "fuel",
-        "generation"
+        "the",
+        "information",
+        "apple",
+        "future",
+        "enterprise",
+        "server",
+        "come",
+        "two",
+        "configuration",
+        "include",
+        "either",
+        "four",
+        "ultra",
+        "chip"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "the",
+        "information",
+        "apple",
+        "ultra"
+      ],
       "topicShared": [
-        "gore"
+        "apple",
+        "report",
+        "server",
+        "ultra",
+        "chip"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -302,34 +321,39 @@
     },
     {
       "index": 7,
-      "claim": "Gore noted that some large cloud providers are investing in new methane turbines, which would lock in decades more of fossil‑fuel generation.",
+      "claim": "Apple is also considering connecting its M8 chips using data‑center networking equipment from Nvidia.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 98,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
-      "bestPassage": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
+      "bestPassageId": "S1-P11",
+      "evidence": "Apple is also considering connecting its M8 chips using data center networking equipment from Nvidia.",
+      "bestPassage": "Apple is also considering connecting its M8 chips using data center networking equipment from Nvidia.",
       "matchedPassages": [
-        "S1-P8"
+        "S1-P11"
       ],
       "sharedTerms": [
-        "are",
-        "new",
-        "methane",
-        "turbin",
-        "lock",
-        "decad",
-        "fossil",
-        "fuel",
-        "generation"
+        "apple",
+        "consider",
+        "connect",
+        "its",
+        "chip",
+        "data",
+        "center",
+        "network",
+        "equipment",
+        "nvidia"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "apple",
+        "nvidia"
+      ],
       "topicShared": [
-        "gore"
+        "apple",
+        "chip"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -338,34 +362,39 @@
     },
     {
       "index": 8,
-      "claim": "He prefers power sources that rely on renewables and batteries, stating that renewable energy is increasingly the cheapest option.",
+      "claim": "Specifically, the potential use of Nvidia’s NVLink Fusion technology has been discussed in conversations between Apple and Nvidia.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 89,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
-      "bestPassage": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
+      "bestPassageId": "S1-P12",
+      "evidence": "The potential use of Nvidia’s NVLink Fusion technology comes as sources told The Information that Apple and Nvidia have been holding conversations about how Apple could leverage Nvidia’s technology for the company’s AI push.",
+      "bestPassage": "The potential use of Nvidia’s NVLink Fusion technology comes as sources told The Information that Apple and Nvidia have been holding conversations about how Apple could leverage Nvidia’s technology for the company’s AI push.",
       "matchedPassages": [
-        "S1-P8"
+        "S1-P12"
       ],
       "sharedTerms": [
-        "prefer",
-        "renewabl",
-        "and",
-        "batteri",
-        "energy",
-        "increas",
         "the",
-        "cheapest",
-        "option"
+        "potential",
+        "use",
+        "nvidia",
+        "nvlink",
+        "fusion",
+        "conversation",
+        "apple",
+        "and"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "nvidia",
+        "nvlink",
+        "fusion",
+        "apple"
+      ],
       "topicShared": [
-        "the"
+        "apple"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -374,40 +403,36 @@
     },
     {
       "index": 9,
-      "claim": "While emissions may be a concern, Gore said the real alarm should come from within the AI industry itself.",
+      "claim": "The Information cautions that the project could still be canceled or proceed without incorporating Nvidia’s technology.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 67,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 96,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P3",
-      "evidence": "What should concern people more, in his view, are the warnings coming from inside the AI industry itself, and he takes them seriously. In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts. After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission . In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
-      "bestPassage": "What should concern people more, in his view, are the warnings coming from inside the AI industry itself, and he takes them seriously.",
+      "bestPassageId": "S1-P13",
+      "evidence": "The Information cautioned that the project could still be canceled or go ahead without incorporating Nvidia’s technology.",
+      "bestPassage": "The Information cautioned that the project could still be canceled or go ahead without incorporating Nvidia’s technology.",
       "matchedPassages": [
-        "S1-P3",
-        "S1-P2",
-        "S1-P17",
-        "S1-P9"
+        "S1-P13"
       ],
       "sharedTerms": [
-        "emission",
-        "may",
-        "fear",
-        "gore",
         "the",
-        "should",
-        "itself"
+        "information",
+        "caution",
+        "project",
+        "cancel",
+        "without",
+        "incorporat",
+        "nvidia"
       ],
       "entityShared": [
-        "gore"
-      ],
-      "topicShared": [
-        "gore",
         "the",
-        "real"
+        "information",
+        "nvidia"
       ],
+      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -415,54 +440,49 @@
     },
     {
       "index": 10,
-      "claim": "Gore said that the growing bipartisan opposition to data centers is driven by underlying concerns about job losses and other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to.",
+      "claim": "The project reportedly received support from new Apple CEO John Ternus when it began a year ago, back when Ternus led Apple’s hardware engineering efforts.",
       "status": "verified",
       "classification": "supported",
       "confidence": 100,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
-      "bestPassage": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
+      "bestPassageId": "S1-P7",
+      "evidence": "The project reportedly received support from new Apple CEO John Ternus when it began a year ago, back when Ternus led Apple’s hardware engineering efforts.",
+      "bestPassage": "The project reportedly received support from new Apple CEO John Ternus when it began a year ago, back when Ternus led Apple’s hardware engineering efforts.",
       "matchedPassages": [
-        "S1-P9"
+        "S1-P7"
       ],
       "sharedTerms": [
-        "gore",
         "the",
-        "grow",
-        "bipartisan",
-        "opposition",
-        "data",
-        "center",
-        "driven",
-        "underly",
-        "fear",
-        "job",
-        "loss",
-        "and",
-        "other",
-        "threat",
-        "expert",
-        "inside",
-        "openai",
-        "anthropic",
-        "try",
-        "alert",
-        "public"
+        "project",
+        "report",
+        "receiv",
+        "support",
+        "new",
+        "apple",
+        "ceo",
+        "john",
+        "ternu",
+        "began",
+        "year",
+        "ago",
+        "back",
+        "led",
+        "hardware",
+        "engineer",
+        "effort"
       ],
       "entityShared": [
-        "gore",
-        "openai",
-        "anthropic"
+        "apple",
+        "ceo",
+        "john",
+        "ternu"
       ],
       "topicShared": [
-        "gore",
-        "the",
-        "data",
-        "center"
+        "report",
+        "apple"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -471,45 +491,49 @@
     },
     {
       "index": 11,
-      "claim": "He referenced remarks made by Dario Amodei of Anthropic, Sam Altman, and Elon Musk that urge a slowdown in the pace of capability gains.",
+      "claim": "Ternus officially took over as Apple CEO from Tim Cook on September 1, after the latter had served in the leadership position for 15 years.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 89,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 100,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "Though President Trump and Nvidia CEO Jensen Huang shared a laugh at their expense on Monday during a conference in Los Angeles (Trump suggested that Anthropic CEO Dario Amodei&#8217;s public call to slow the pace of capability gains, quickly seconded by Sam Altman and Elon Musk, was a &#8220;hoax&#8221;), Gore said he takes the warnings at face value. &#8220;I think we went through a phase where some cynically suspected that the apocalyptic warnings were some kind of bizarre marketing strategy.",
-      "bestPassage": "Though President Trump and Nvidia CEO Jensen Huang shared a laugh at their expense on Monday during a conference in Los Angeles (Trump suggested that Anthropic CEO Dario Amodei&#8217;s public call to slow the pace of capability gains, quickly seconded by Sam Altman and Elon Musk, was a &#8220;hoax&#8221;), Gore said he takes the warnings at face value. &#8220;I think we went through a phase where some cynically suspected that the apocalyptic warnings were some kind of bizarre marketing strategy.",
+      "bestPassageId": "S1-P16",
+      "evidence": "Ternus officially took over as Apple CEO from Tim Cook on September 1, after the latter had served in the leadership position for 15 years .",
+      "bestPassage": "Ternus officially took over as Apple CEO from Tim Cook on September 1, after the latter had served in the leadership position for 15 years .",
       "matchedPassages": [
-        "S1-P11"
+        "S1-P16"
       ],
       "sharedTerms": [
-        "dario",
-        "amodei",
-        "anthropic",
-        "sam",
-        "altman",
-        "and",
-        "elon",
-        "musk",
+        "ternu",
+        "officially",
+        "took",
+        "apple",
+        "ceo",
+        "tim",
+        "cook",
+        "september",
         "the",
-        "pace",
-        "capability",
-        "rise"
+        "latter",
+        "had",
+        "serv",
+        "leadership",
+        "position",
+        "for",
+        "year"
       ],
       "entityShared": [
-        "dario",
-        "amodei",
-        "anthropic",
-        "sam",
-        "altman",
-        "elon",
-        "musk"
+        "ternu",
+        "apple",
+        "ceo",
+        "tim",
+        "cook",
+        "september"
       ],
       "topicShared": [
-        "the"
+        "apple",
+        "for"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -518,45 +542,40 @@
     },
     {
       "index": 12,
-      "claim": "Even though some public figures, including former President Trump and Nvidia CEO Jensen Huang, have mocked these warnings, Gore takes them seriously.",
+      "claim": "If Apple’s AI server eventually comes to fruition, it could be a notable part of John Ternus’ legacy.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 85,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 100,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "Though President Trump and Nvidia CEO Jensen Huang shared a laugh at their expense on Monday during a conference in Los Angeles (Trump suggested that Anthropic CEO Dario Amodei&#8217;s public call to slow the pace of capability gains, quickly seconded by Sam Altman and Elon Musk, was a &#8220;hoax&#8221;), Gore said he takes the warnings at face value. &#8220;I think we went through a phase where some cynically suspected that the apocalyptic warnings were some kind of bizarre marketing strategy.",
-      "bestPassage": "Though President Trump and Nvidia CEO Jensen Huang shared a laugh at their expense on Monday during a conference in Los Angeles (Trump suggested that Anthropic CEO Dario Amodei&#8217;s public call to slow the pace of capability gains, quickly seconded by Sam Altman and Elon Musk, was a &#8220;hoax&#8221;), Gore said he takes the warnings at face value. &#8220;I think we went through a phase where some cynically suspected that the apocalyptic warnings were some kind of bizarre marketing strategy.",
+      "bestPassageId": "S1-P15",
+      "evidence": "If Apple’s AI server eventually comes to fruition, it could be a notable part of John Ternus’ legacy.",
+      "bestPassage": "If Apple’s AI server eventually comes to fruition, it could be a notable part of John Ternus’ legacy.",
       "matchedPassages": [
-        "S1-P11"
+        "S1-P15"
       ],
       "sharedTerms": [
-        "though",
-        "public",
-        "president",
-        "trump",
-        "and",
-        "nvidia",
-        "ceo",
-        "jensen",
-        "huang",
-        "warning",
-        "gore",
-        "tak"
+        "apple",
+        "server",
+        "eventually",
+        "com",
+        "fruition",
+        "notable",
+        "part",
+        "john",
+        "ternu",
+        "legacy"
       ],
       "entityShared": [
-        "president",
-        "trump",
-        "nvidia",
-        "ceo",
-        "jensen",
-        "huang",
-        "gore"
+        "apple",
+        "john",
+        "ternu"
       ],
       "topicShared": [
-        "gore"
+        "apple",
+        "server"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -565,40 +584,58 @@
     },
     {
       "index": 13,
-      "claim": "Gore linked the backlash against AI data‑center construction in the United States to broader anxieties about automation and job loss.",
+      "claim": "Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply‑chain challenge shared across the tech industry: the ongoing shortage of memory chips because of companies rushing to build AI data centers.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 66,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 98,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said. After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission .",
-      "bestPassage": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
+      "bestPassageId": "S1-P17",
+      "evidence": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
+      "bestPassage": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
       "matchedPassages": [
-        "S1-P9",
         "S1-P17"
       ],
       "sharedTerms": [
-        "gore",
-        "link",
-        "the",
-        "backlash",
-        "data",
-        "center",
-        "automation",
+        "apple",
+        "server",
+        "plan",
         "and",
-        "job"
-      ],
-      "entityShared": [
-        "gore"
-      ],
-      "topicShared": [
-        "gore",
         "the",
+        "grow",
+        "popularity",
+        "mac",
+        "computer",
+        "dur",
+        "boom",
+        "face",
+        "notable",
+        "supply",
+        "chain",
+        "challenge",
+        "shar",
+        "acros",
+        "ongo",
+        "shortage",
+        "memory",
+        "chip",
+        "compani",
+        "rush",
+        "build",
         "data",
         "center"
+      ],
+      "entityShared": [
+        "apple",
+        "mac"
+      ],
+      "topicShared": [
+        "apple",
+        "server",
+        "chip",
+        "build"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -607,37 +644,54 @@
     },
     {
       "index": 14,
-      "claim": "He suggested that the growing bipartisan opposition to data‑center development is rooted more in fears of societal disruption than in the environmental impact of the facilities themselves.",
+      "claim": "As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones, not to mention a wide range of Apple products.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 98,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said. In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts.",
-      "bestPassage": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
+      "bestPassageId": "S1-P18",
+      "evidence": "As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones , not to mention a wide range of Apple products .",
+      "bestPassage": "As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones , not to mention a wide range of Apple products .",
       "matchedPassages": [
-        "S1-P9",
-        "S1-P2"
+        "S1-P18"
       ],
       "sharedTerms": [
+        "ars",
+        "has",
+        "document",
         "the",
-        "grow",
-        "bipartisan",
-        "opposition",
-        "data",
-        "center",
-        "fear",
-        "environmental",
-        "impact"
+        "memory",
+        "shortage",
+        "led",
+        "significant",
+        "price",
+        "rise",
+        "for",
+        "consumer",
+        "electronic",
+        "such",
+        "gam",
+        "devic",
+        "and",
+        "flagship",
+        "smartphon",
+        "not",
+        "mention",
+        "wide",
+        "range",
+        "apple",
+        "product"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "ars",
+        "apple"
+      ],
       "topicShared": [
-        "the",
-        "data",
-        "center"
+        "for",
+        "apple"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -646,36 +700,40 @@
     },
     {
       "index": 15,
-      "claim": "Gore said that he doesn't treat AI risk and AI’s climate potential as being in opposition.",
+      "claim": "The next few years will reveal whether Apple’s server project advances, whether it incorporates Nvidia’s networking technology, and how the company navigates the memory‑chip shortage.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 94,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 69,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "That said, Gore doesn&#8217;t treat AI risk and AI&#8217;s climate potential as being in opposition.",
-      "bestPassage": "That said, Gore doesn&#8217;t treat AI risk and AI&#8217;s climate potential as being in opposition.",
+      "bestPassageId": "S1-P17",
+      "evidence": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers . As Ars has documented, the memory shortage has led to significant price increases for many consumer electronics such as gaming devices and many flagship smartphones , not to mention a wide range of Apple products . The potential use of Nvidia’s NVLink Fusion technology comes as sources told The Information that Apple and Nvidia have been holding conversations about how Apple could leverage Nvidia’s technology for the company’s AI push.",
+      "bestPassage": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
       "matchedPassages": [
+        "S1-P17",
+        "S1-P18",
         "S1-P12"
       ],
       "sharedTerms": [
-        "gore",
-        "doesn",
-        "treat",
-        "risk",
+        "the",
+        "apple",
+        "server",
+        "nvidia",
         "and",
-        "climate",
-        "potential",
-        "opposition"
+        "memory",
+        "chip",
+        "shortage"
       ],
       "entityShared": [
-        "gore"
+        "apple",
+        "nvidia"
       ],
       "topicShared": [
-        "gore",
-        "risk"
+        "apple",
+        "server",
+        "chip"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -684,254 +742,42 @@
     },
     {
       "index": 16,
-      "claim": "He cited a study by economist Nicholas Stern of the London School of Economics, which projects that AI‑driven efficiency and waste reduction could lower global emissions by 6 % to 9 % annually over the next decade.",
+      "claim": "The ongoing memory-chip shortage is a notable supply-chain challenge for Apple's server plans.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 92,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "He cited a recent study from economist Nicholas Stern of the London School of Economics projecting that AI applications aimed at efficiency and waste elimination could drive global emissions down by 6% to 9% per year starting next decade.",
-      "bestPassage": "He cited a recent study from economist Nicholas Stern of the London School of Economics projecting that AI applications aimed at efficiency and waste elimination could drive global emissions down by 6% to 9% per year starting next decade.",
-      "matchedPassages": [
-        "S1-P13"
-      ],
-      "sharedTerms": [
-        "cit",
-        "research",
-        "economist",
-        "nichola",
-        "stern",
-        "the",
-        "london",
-        "school",
-        "economic",
-        "project",
-        "efficiency",
-        "and",
-        "waste",
-        "global",
-        "emission",
-        "next",
-        "decade"
-      ],
-      "entityShared": [
-        "nichola",
-        "stern",
-        "london",
-        "school",
-        "economic"
-      ],
-      "topicShared": [
-        "the"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 18,
-      "claim": "Gore said that the public backlash is driven by concerns about job losses and other threats, not by carbon emissions.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 94,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
-      "bestPassage": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
-      "matchedPassages": [
-        "S1-P9"
-      ],
-      "sharedTerms": [
-        "gore",
-        "the",
-        "public",
-        "backlash",
-        "driven",
-        "fear",
-        "job",
-        "loss",
-        "and",
-        "other",
-        "threat",
-        "not",
-        "carbon",
-        "emission"
-      ],
-      "entityShared": [
-        "gore"
-      ],
-      "topicShared": [
-        "gore",
-        "the"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 19,
-      "claim": "Gore immediately pointed to solar power and said that for him the scope and scale of the solar revolution is the breakout star of the sustainability transition.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 91,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P16",
-      "evidence": "Asked what&#8217;s changed more than he expected a decade into publishing this report, Gore immediately pointed to solar power. &#8220;For me personally, the scope and scale of the solar revolution is the breakout star of the sustainability transition,&#8221; he said.",
-      "bestPassage": "Asked what&#8217;s changed more than he expected a decade into publishing this report, Gore immediately pointed to solar power. &#8220;For me personally, the scope and scale of the solar revolution is the breakout star of the sustainability transition,&#8221; he said.",
-      "matchedPassages": [
-        "S1-P16"
-      ],
-      "sharedTerms": [
-        "gore",
-        "immediately",
-        "point",
-        "solar",
-        "power",
-        "and",
-        "for",
-        "the",
-        "scope",
-        "scale",
-        "revolution",
-        "breakout",
-        "star",
-        "sustainability",
-        "transition"
-      ],
-      "entityShared": [
-        "gore"
-      ],
-      "topicShared": [
-        "gore",
-        "the"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 20,
-      "claim": "He called the solar revolution “the breakout star” of the sustainability transition and noted that solar and wind are now at, or near, the cost floor for new electricity generation.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 82,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "confidence": 90,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
       "bestPassageId": "S1-P17",
-      "evidence": "After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission . Asked what&#8217;s changed more than he expected a decade into publishing this report, Gore immediately pointed to solar power. &#8220;For me personally, the scope and scale of the solar revolution is the breakout star of the sustainability transition,&#8221; he said.",
-      "bestPassage": "After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission .",
-      "matchedPassages": [
-        "S1-P17",
-        "S1-P16"
-      ],
-      "sharedTerms": [
-        "the",
-        "solar",
-        "revolution",
-        "breakout",
-        "star",
-        "sustainability",
-        "transition",
-        "and",
-        "wind",
-        "near",
-        "cost",
-        "floor",
-        "for",
-        "new",
-        "electricity",
-        "generation"
-      ],
-      "entityShared": [],
-      "topicShared": [
-        "the"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 21,
-      "claim": "This makes them meaningfully cheaper than gas, coal, or nuclear.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 78,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P17",
-      "evidence": "After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission .",
-      "bestPassage": "After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission .",
+      "evidence": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
+      "bestPassage": "But Apple’s server plans and the growing popularity of Mac computers during the AI boom also face a notable supply chain challenge shared across the tech industry—the ongoing shortage of memory chips because of companies rushing to build AI data centers .",
       "matchedPassages": [
         "S1-P17"
       ],
       "sharedTerms": [
-        "mak",
-        "meaningfully",
-        "cheaper",
-        "gas",
-        "coal",
-        "nuclear"
-      ],
-      "entityShared": [],
-      "topicShared": [],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 22,
-      "claim": "Gore also referenced the growing investment flow into renewable‑powered data‑center infrastructure.",
-      "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 59,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said. In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts. Gore isn&#8217;t dismissive of concerns about how these data centers are being powered. &#8220;It is a matter of deep concern that some of the hyperscalers are jumping into new methane turbines,&#8221; he said. After observing that it&#8217;s at, or near, the cost floor for new electricity generation right now &#8212; roughly tied with wind and meaningfully cheaper than gas, coal, or nuclear &#8212; he closed with a line from a friend in Tennessee that had stuck with him: &#8220;If God had intended us to have a limitless supply of cheap, clean energy, he — or she — would have put a fusion reactor in the sky,&#8221; Gore said with a chuckle. &#8220;The joke makes itself.&#8221; Topics AI , AI data center , Al Gore , Climate , Exclusive When you purchase through links in our articles, we may earn a small commission .",
-      "bestPassage": "In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said.",
-      "matchedPassages": [
-        "S1-P9",
-        "S1-P2",
-        "S1-P7",
-        "S1-P17"
-      ],
-      "sharedTerms": [
-        "gore",
         "the",
-        "grow",
-        "invest",
-        "power",
-        "data",
-        "center"
+        "ongo",
+        "memory",
+        "chip",
+        "shortage",
+        "notable",
+        "supply",
+        "chain",
+        "challenge",
+        "apple",
+        "server",
+        "plan"
       ],
       "entityShared": [
-        "gore"
+        "apple"
       ],
       "topicShared": [
-        "gore",
-        "the",
-        "data",
-        "center"
+        "chip",
+        "for",
+        "apple",
+        "server"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -939,86 +785,51 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 24,
-      "claim": "Al Gore’s comments underscore that while data‑center emissions are a legitimate concern, they should be weighed alongside the broader risks AI poses to society.",
+      "index": 17,
+      "claim": "For now, the information points to a potential return of Apple to the enterprise server market, driven by its M‑Series Ultra chips and the AI industry’s demand for powerful, Apple‑based computing platforms.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 57,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
+      "classification": "supported",
+      "confidence": 80,
+      "bestSource": "Apple reportedly building server packed with M-series Ultra chips for AI",
+      "bestUrl": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts. In fact, Gore thinks the public backlash at planning-commission meetings has less to do with carbon emissions than with anxiety over automation upending society in the not-too-distant future. &#8220;I think that part of the reason for the growing bipartisan opposition to data centers in so many parts of the U.S. is being driven by the underlying concerns about job losses and some of the other threats that experts inside OpenAI and inside Anthropic have been trying to alert the public to,&#8221; he said. Gore isn&#8217;t dismissive of concerns about how these data centers are being powered. &#8220;It is a matter of deep concern that some of the hyperscalers are jumping into new methane turbines,&#8221; he said. This past May, for example, he described AI data centers to another outlet as a &#8220;cause for deep concern, but not panic,&#8221; and in our conversation this week, his central point about emissions was about scale. &#8220;If you look at the emissions of all of the AI data centers put together, it&#8217;s only a fraction of the emissions from uncovered landfills in the world,&#8221; he said, adding that a comparable build-out is tied to something that gets far less attention: air conditioning.",
-      "bestPassage": "In an interview with TechCrunch this week alongside Lila Preston, head of growth equity at their investment firm Generation Investment Management, Gore said emissions from AI data centers aren&#8217;t what should keep people up at night, despite the mounting opposition over their environmental impacts.",
+      "bestPassageId": "S1-P9",
+      "evidence": "The popularity of such computing devices that rely on Apple’s M-series Ultra chips has undoubtedly encouraged Apple’s pursuit of an enterprise server using the same chips. The enterprise server would come in two configurations that include either two or four of Apple’s future M8 Ultra chips, according to The Information . Apple reportedly building server packed with M-series Ultra chips for AI Planned 2029 debut could make this Apple’s first enterprise server in decades. But if it moves ahead, it would mark a notable return for Apple to the enterprise server market following the retirement of Apple’s Xserve in January 2011 . Credit: Benjamin Fanjoy/Getty Images Text settings Story text Size Small Standard Large Width * Standard Wide Links Standard Orange * Subscribers only Learn more Minimize to nav Apple is working on an AI server that would use Apple’s high-performance M-series Ultra chips found in Mac desktops.",
+      "bestPassage": "The popularity of such computing devices that rely on Apple’s M-series Ultra chips has undoubtedly encouraged Apple’s pursuit of an enterprise server using the same chips.",
       "matchedPassages": [
-        "S1-P2",
         "S1-P9",
-        "S1-P7",
+        "S1-P6",
+        "S1-P1",
+        "S1-P14",
         "S1-P4"
       ],
       "sharedTerms": [
-        "gore",
-        "data",
-        "center",
-        "emission",
-        "are",
-        "fear",
-        "should",
-        "alongside",
+        "for",
         "the",
-        "society"
+        "information",
+        "return",
+        "apple",
+        "enterprise",
+        "server",
+        "market",
+        "seri",
+        "ultra",
+        "chip",
+        "comput"
       ],
       "entityShared": [
-        "gore"
+        "apple",
+        "seri",
+        "ultra"
       ],
       "topicShared": [
-        "gore",
-        "data",
-        "center",
-        "the",
-        "risk"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 25,
-      "claim": "Gore said he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 86,
-      "bestSource": "Al Gore says the real AI risk isn&#8217;t data centers",
-      "bestUrl": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/",
-      "bestDomain": "techcrunch.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
-      "bestPassage": "But what worries him about methane turbines isn&#8217;t the AI workload driving demand so much as the prospect that building new gas plants to meet that demand locks in decades more of fossil fuel generation. &#8220;I much prefer those that are supplying their energy needs with renewables and batteries,&#8221; he continued, saying he expects more companies to move inexorably in that direction simply because renewables are increasingly the cheapest option available.",
-      "matchedPassages": [
-        "S1-P8"
-      ],
-      "sharedTerms": [
-        "expect",
-        "compani",
-        "move",
-        "inexorably",
-        "direction",
-        "simply",
-        "renewabl",
-        "are",
-        "increas",
-        "the",
-        "cheapest",
-        "option",
-        "available"
-      ],
-      "entityShared": [],
-      "topicShared": [
-        "gore",
-        "the"
+        "for",
+        "apple",
+        "server",
+        "seri",
+        "ultra",
+        "chip"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -1026,18 +837,5 @@
       "matchingMode": "semantic-context-evidence-pack"
     }
   ],
-  "editorial": [
-    {
-      "index": 17,
-      "claim": "This dual perspective—recognizing both the risks and the benefits—illustrates why a balanced conversation is needed.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 23,
-      "claim": "1. **Industry‑led warnings**: Keep an eye on statements from AI firms about potential societal disruption, as these could shape regulatory and public‑policy responses.",
-      "type": "editorial-recommendation",
-      "status": "editorial-excluded"
-    }
-  ]
+  "editorial": []
 }

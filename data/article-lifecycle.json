@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-17T08:45:04.885Z",
+  "generatedAt": "2026-09-17T08:52:29.039Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,10 +11,10 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 7,
+    "articles": 8,
     "refreshCandidates": 0,
     "watch": 3,
-    "fresh": 4,
+    "fresh": 5,
     "stale": 0,
     "duplicateClusters": 0
   },
@@ -101,6 +101,20 @@
       "ageDays": 0,
       "ageState": "fresh",
       "words": 619,
+      "sourceCount": 1,
+      "refreshScore": 39,
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": []
+    },
+    {
+      "file": "apple-eyes-2029-ai-server-with-m-series-ultra-chips.md",
+      "title": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
+      "category": "Technology",
+      "publishedAt": "2026-09-17T08:51:48.854Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 459,
       "sourceCount": 1,
       "refreshScore": 39,
       "status": "fresh",
