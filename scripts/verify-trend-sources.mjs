@@ -15,6 +15,21 @@ const credibleDomains = new Set([
   'tomshardware.com', 'androidauthority.com', '9to5google.com', '9to5mac.com', 'helpnetsecurity.com',
   'techradar.com', 'zdnet.com', 'computerworld.com', 'therecord.media', 'securityweek.com',
 ]);
+const recognizedDomains = new Set([
+  'cbsnews.com','therecord.media','straitstimes.com','livemint.com','ibytimes.com','ibtimes.com',
+  'calmatters.org','deadline.com','variety.com','medicalxpress.com','prnewswire.com','utilitydive.com',
+  'grist.org','belfercenter.org','foxbusiness.com','dvidshub.net','army.mil','ca.gov','gadgets360.com',
+  'siliconangle.com','decrypt.co','cryptonews.net','cryptonews.com','crypto.news','blockchain.news',
+  'the-decoder.com','newscord.org','tweaktown.com','incrypted.com','digitaltrends.com','ssbcrack.com',
+  '247wallst.com','startupfortune.com','roundtable.io','moneywise.com','pluang.com','tradersunion.com',
+  'tvnewscheck.com','technadu.com','arstechnica.com','news-medical.net','pmlive.com','contractpharma.com',
+  'statnews.com','bostonherald.com','thetraveler.org','dailymail.com','eyeradio.org','actionnews5.com',
+  'wpr.org','sfstandard.com','sfchronicle.com','financemagnates.com','cryptopotato.com'
+]);
+const classifyCredibility = (domain) => credibleDomains.has(domain) ? 'trusted'
+  : recognizedDomains.has(domain) ? 'recognized'
+  : 'unknown';
+
 const DISCOVERY_TIMEOUT_MS = 7000;
 const DISCOVERY_LIMIT = 8;
 const DISCOVERY_ITEM_LIMIT = 24;
@@ -175,7 +190,7 @@ async function verifyCandidate(trend){
     const domain=domainOf(source.url); if(MIRROR_DOMAINS.has(domain)||looksLikeHomepage(source.url)||looksLikeFeed(source.url))continue;
     const check=await checkUrl(source.url); const finalDomain=domainOf(check.finalUrl||source.url);
     const finalUrl=check.finalUrl||source.url;
-    checks.push({title:source.title||'',url:source.url,domain:finalDomain||domain,publisherFamily:publisherFamily(finalUrl||source.url),credibleDomain:credibleDomains.has(finalDomain||domain),discovered:Boolean(source.discovered),relevanceOverlap:source.relevanceOverlap||0,resolvedFrom:source.resolvedFrom||'seed',discoveryTitle:source.discoveryTitle||'',discoveryDescription:source.discoveryDescription||'',finalUrl,finalUrlIsHomepage:looksLikeHomepage(finalUrl),finalUrlIsFeed:looksLikeFeed(finalUrl),...check});
+    checks.push({title:source.title||'',url:source.url,domain:finalDomain||domain,publisherFamily:publisherFamily(finalUrl||source.url),credibleDomain:credibleDomains.has(finalDomain||domain),credibilityTier:classifyCredibility(finalDomain||domain),discovered:Boolean(source.discovered),relevanceOverlap:source.relevanceOverlap||0,resolvedFrom:source.resolvedFrom||'seed',discoveryTitle:source.discoveryTitle||'',discoveryDescription:source.discoveryDescription||'',finalUrl,finalUrlIsHomepage:looksLikeHomepage(finalUrl),finalUrlIsFeed:looksLikeFeed(finalUrl),...check});
   }
   const reachable=checks.filter(item=>item.ok&&!item.finalUrlIsHomepage&&!item.finalUrlIsFeed);
   const credible=reachable.filter(item=>item.credibleDomain); const reachableNonCredibleDomains=[...new Set(reachable.filter(item=>!item.credibleDomain).map(item=>item.domain).filter(Boolean))];
@@ -183,7 +198,7 @@ async function verifyCandidate(trend){
   const independentFamilies=new Set(reachable.map(item=>item.publisherFamily).filter(Boolean));
   const relevantReachable=reachable.filter(item=>!item.discovered||item.relevanceOverlap>=MIN_DISCOVERY_OVERLAP);
   const confidence=Math.round((checks.length?reachable.length/checks.length:0)*45+(checks.length?credible.length/checks.length:0)*25+Math.min(independentFamilies.size/2,1)*20+Math.min(relevantReachable.length/2,1)*10);
-  return{link:trend.link,title:trend.title,category:trend.category,verifiedAt:new Date().toISOString(),sourceCount:checks.length,discoveredSourceCount:discovered.length,reachableSourceCount:reachable.length,credibleSourceCount:credible.length,uniqueDomainCount:independentFamilies.size,independentReachableDomains:[...uniqueDomains],independentPublisherFamilies:[...independentFamilies],independentPublisherCount:independentFamilies.size,relevantReachableSourceCount: relevantReachable.length,reachableNonCredibleDomains,confidence,status:confidence>=70?'verified':confidence>=45?'partial':'unverified',discovery:{enabled:discoveryEligible,queryTitle:discoveryEligible?trend.title:null,diagnostics:discoveryResult.diagnostics,sameStoryOnly:true,minTopicOverlap:MIN_DISCOVERY_OVERLAP,googleNewsIsIndexOnly:true,resolvedPublisherLinks:true,descriptionArticleLinksEnabled:true,escapedDescriptionLinksDecoded:true,minScore:DISCOVERY_MIN_SCORE,seedDomainCount:seedFamilies.size,seedPublisherFamilyCount:seedFamilies.size},sources:checks};
+  return{link:trend.link,title:trend.title,category:trend.category,verifiedAt:new Date().toISOString(),sourceCount:checks.length,discoveredSourceCount:discovered.length,reachableSourceCount:reachable.length,credibleSourceCount:credible.length,uniqueDomainCount:independentFamilies.size,independentReachableDomains:[...uniqueDomains],independentPublisherFamilies:[...independentFamilies],independentPublisherCount:independentFamilies.size,relevantReachableSourceCount: relevantReachable.length,reachableNonCredibleDomains,credibilityTierCounts:{trusted:credible.length,recognized:reachable.filter(item=>item.credibilityTier==='recognized').length,unknown:reachable.filter(item=>item.credibilityTier==='unknown').length},unknownReachableDomains:[...new Set(reachable.filter(item=>item.credibilityTier==='unknown').map(item=>item.domain).filter(Boolean))],confidence,status:confidence>=70?'verified':confidence>=45?'partial':'unverified',discovery:{enabled:discoveryEligible,queryTitle:discoveryEligible?trend.title:null,diagnostics:discoveryResult.diagnostics,sameStoryOnly:true,minTopicOverlap:MIN_DISCOVERY_OVERLAP,googleNewsIsIndexOnly:true,resolvedPublisherLinks:true,descriptionArticleLinksEnabled:true,escapedDescriptionLinksDecoded:true,minScore:DISCOVERY_MIN_SCORE,seedDomainCount:seedFamilies.size,seedPublisherFamilyCount:seedFamilies.size},sources:checks};
 }
 
 async function mapWithConcurrency(items,limit,worker){const results=new Array(items.length);let nextIndex=0;async function runWorker(){while(true){const index=nextIndex++;if(index>=items.length)return;results[index]=await worker(items[index],index);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},()=>runWorker()));return results;}
