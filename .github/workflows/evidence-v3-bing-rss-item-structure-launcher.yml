@@ -1,0 +1,17 @@
+name: Evidence V3 — Bing RSS Item Structure Launcher
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: node scripts/test-bing-rss-item-structure.mjs
