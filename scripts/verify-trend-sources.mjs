@@ -61,7 +61,7 @@ async function discoverRelatedSources(trend,seedSources){
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
   const result=await fetchText(rssUrl); if(!result)return[];
   const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
-  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0};
+  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
@@ -85,9 +85,9 @@ async function discoverRelatedSources(trend,seedSources){
       const resolvedUrl=normalizeUrl(candidateUrl);
       if(!resolvedUrl){ diagnostic.unresolvedCandidateUrls++; return; }
       const d=domainOf(resolvedUrl);
-      if(!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; return; }
+      if(!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1; return; }
       diagnostic.resolvedCandidateUrls++;
-      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ diagnostic.discardedHomepageOrFeed++; return; }
+      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ diagnostic.discardedHomepageOrFeed++; diagnostic.homepageFeedRejectionDomains[d]=(diagnostic.homepageFeedRejectionDomains[d]||0)+1; return; }
       const overlapText=`${item.title} ${linkText||''}`;
       const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,overlapText);
       if(!linkText || !String(linkText).trim()){ diagnostic.discardedEmptyLinkText++; }
@@ -124,7 +124,7 @@ async function discoverRelatedSources(trend,seedSources){
     candidates.sort((a,b)=>b.score-a.score||a.url.localeCompare(b.url));
     const chosen=candidates[0];
     if(!chosen){ diagnostic.discardedNoChosenCandidate++; continue; }
-    diagnostic.selected++;
+    diagnostic.selected++; diagnostic.selectedDomains[domainOf(chosen.url)]=(diagnostic.selectedDomains[domainOf(chosen.url)]||0)+1;
     const d=domainOf(chosen.url);
     discovered.push({title:item.title,url:chosen.url,sourceName:d,discovered:true,relevanceOverlap:item.overlap,resolvedFrom:chosen.resolvedFrom,discoveryTitle:item.title,discoveryDescription:item.description});
     if(discovered.length>=DISCOVERY_LIMIT)break;
