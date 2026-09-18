@@ -75,34 +75,33 @@ async function fetchText(url){
 async function discoverRelatedSources(trend,seedSources){
   const query=encodeURIComponent(clean(trend.title));
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
-  const result=await fetchText(rssUrl); if(!result)return{sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}}};
-  const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
-  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyOnlyNoChoice:0,mixedRejectionNoChoice:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[],discoveryFeedCounts:Object.fromEntries(discoveryFeeds.map(feed=>[feed.name,0]))};
+  const [googleResult,bingResult]=await Promise.all([
+    fetchText(rssUrl),
+    fetchText(`https://www.bing.com/news/search?q=${query}&format=rss`)
+  ]);
+  const empty=()=>({sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]}});
+  if(!googleResult&&!bingResult)return empty();
+  const items=[
+    ...(googleResult?[...googleResult.text.matchAll(/<item>([\\s\\S]*?)<\\/item>/gi)].map(m=>m[1]):[]),
+    ...(bingResult?[...bingResult.text.matchAll(/<item>([\\s\\S]*?)<\\/item>/gi)].map(m=>m[1]):[])
+  ];
+  const diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyOnlyNoChoice:0,mixedRejectionNoChoice:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
-    const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
-    const rawDescription=(item.match(/<description>([\s\S]*?)<\/description>/i)||[,''])[1];
+    const title=clean((item.match(/<title>([\\s\\S]*?)<\\/title>/i)||[,''])[1]);
+    const rawDescription=(item.match(/<description>([\\s\\S]*?)<\\/description>/i)||[,''])[1];
     const description=clean(rawDescription);
-    const link=normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\/link>/i)||[,''])[1]));
-    const sourceMatch=item.match(/<source\b[^>]*\burl=["']([^"']+)["'][^>]*>/i);
+    const link=normalizeUrl(clean((item.match(/<link>([\\s\\S]*?)<\\/link>/i)||[,''])[1]));
+    const sourceMatch=item.match(/<source\\b[^>]*\\burl=[\"']([^\"']+)[\"'][^>]*>/i);
     const publisherUrl=normalizeUrl(clean(sourceMatch?.[1]||''));
     const descriptionLinks=extractDescriptionLinks(rawDescription);
     const overlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${title} ${description}`);
-    diagnostic.discoveryFeedCounts[feed]=(diagnostic.discoveryFeedCounts[feed]||0)+1;
-    return{title,description,link,publisherUrl,descriptionLinks,overlap,feed};
+    return{title,description,link,publisherUrl,descriptionLinks,overlap};
   }).filter(item=>item.title&&item.overlap>=MIN_DISCOVERY_OVERLAP&&(item.publisherUrl||item.link||item.descriptionLinks.length))
-    .sort((a,b)=>b.overlap-a.overlap || (a.feed==='bing-news'?1:0) - (b.feed==='bing-news'?1:0))
-    .filter((item,index,self)=>self.findIndex(other=>other.title.toLowerCase()===item.title.toLowerCase() && other.feed===item.feed)<index)
-    .slice(0,DISCOVERY_ITEM_LIMIT);
+    .sort((a,b)=>b.overlap-a.overlap).slice(0,DISCOVERY_ITEM_LIMIT);
   diagnostic.relevantItems=relevantItems.length;
-  const relevantFamilyCounts={};
-  let relevantSeedFamilyItems=0;
-  for(const item of relevantItems){
-    const candidateFamily=publisherFamily(item.publisherUrl||(!/^https:\/\/news\.google\.com\//i.test(item.link||'')?item.link:''));
-    if(!candidateFamily) continue;
-    relevantFamilyCounts[candidateFamily]=(relevantFamilyCounts[candidateFamily]||0)+1;
-    if(seeds.has(candidateFamily)) relevantSeedFamilyItems++;
-  }
+  const relevantFamilyCounts={}; let relevantSeedFamilyItems=0;
+  for(const item of relevantItems){const candidateFamily=publisherFamily(item.publisherUrl||(!/^https:\/\/news\.google\.com\//i.test(item.link||'')?item.link:''));if(!candidateFamily)continue;relevantFamilyCounts[candidateFamily]=(relevantFamilyCounts[candidateFamily]||0)+1;if(seeds.has(candidateFamily))relevantSeedFamilyItems++;}
   const relevantFamilyTotal=Object.values(relevantFamilyCounts).reduce((a,n)=>a+n,0);
   diagnostic.relevantItemPublisherFamilyCounts=relevantFamilyCounts;
   diagnostic.relevantItemUniquePublisherFamilies=Object.keys(relevantFamilyCounts).length;
@@ -113,84 +112,33 @@ async function discoverRelatedSources(trend,seedSources){
   diagnostic.relevantItemTopFamilyCount=relevantFamilyTotal?Math.max(...Object.values(relevantFamilyCounts)):0;
   diagnostic.relevantItemHasNonSeedFamily=Object.keys(relevantFamilyCounts).some(f=>!seeds.has(f));
   diagnostic.relevantItemNonSeedFamilyCount=Object.entries(relevantFamilyCounts).filter(([f])=>!seeds.has(f)).reduce((a,[,n])=>a+n,0);
-  diagnostic.relevantItemsBeforeLimit=items.map(item=>{
-    const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
-    const rawDescription=(item.match(/<description>([\s\S]*?)<\/description>/i)||[,''])[1];
-    const description=clean(rawDescription);
-    const link=normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\/link>/i)||[,''])[1]));
-    const sourceMatch=item.match(/<source\\b[^>]*\\burl=[\"']([^\"']+)[\"'][^>]*>/i);
-    const publisherUrl=normalizeUrl(clean(sourceMatch?.[1]||''));
-    const descriptionLinks=extractDescriptionLinks(rawDescription);
-    const overlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${title} ${description}`);
-    return {title,link,publisherUrl,descriptionLinks,overlap};
-  }).filter(item=>item.title&&item.overlap>=MIN_DISCOVERY_OVERLAP&&(item.publisherUrl||item.link||item.descriptionLinks.length)).length;
-  diagnostic.itemsWithCandidateLinks=relevantItems.filter(item=>item.link||item.publisherUrl||item.descriptionLinks.length).length;
-
   const discovered=[];
   for(const item of relevantItems){
-    const candidates=[];
-    const rejectionReasons=[];
-    const considerCandidate = (candidateUrl, linkText, resolvedFrom) => {
+    const candidates=[]; const rejectionReasons=[];
+    const considerCandidate=async(candidateUrl,linkText,resolvedFrom)=>{
       const resolvedUrl=normalizeUrl(candidateUrl);
-      if(!resolvedUrl){ rejectionReasons.push('unresolved'); diagnostic.unresolvedCandidateUrls++; return; }
+      if(!resolvedUrl){rejectionReasons.push('unresolved');diagnostic.unresolvedCandidateUrls++;return;}
       const d=domainOf(resolvedUrl);
-      if(!d){ rejectionReasons.push('invalid-domain'); diagnostic.unresolvedCandidateUrls++; return; }
-      if(MIRROR_DOMAINS.has(d)){ rejectionReasons.push('mirror-domain'); diagnostic.discardedSeedFamily++; diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1; return; }
-      if(seeds.has(publisherFamily(resolvedUrl))){ rejectionReasons.push('seed-family'); diagnostic.discardedSeedFamily++; diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1; return; }
+      if(!d){rejectionReasons.push('invalid-domain');diagnostic.unresolvedCandidateUrls++;return;}
+      if(MIRROR_DOMAINS.has(d)){rejectionReasons.push('mirror-domain');diagnostic.discardedSeedFamily++;diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1;return;}
+      if(seeds.has(publisherFamily(resolvedUrl))){rejectionReasons.push('seed-family');diagnostic.discardedSeedFamily++;diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1;return;}
       diagnostic.resolvedCandidateUrls++;
-      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ rejectionReasons.push('homepage-or-feed'); diagnostic.discardedHomepageOrFeed++; diagnostic.homepageFeedRejectionDomains[d]=(diagnostic.homepageFeedRejectionDomains[d]||0)+1; return; }
-      const overlapText=`${item.title} ${linkText||''}`;
-      const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,overlapText);
-      if(!linkText || !String(linkText).trim()){ diagnostic.discardedEmptyLinkText++; }
-      if(linkOverlap < 1){ rejectionReasons.push('low-overlap'); diagnostic.discardedLowOverlap++; return; }
+      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){rejectionReasons.push('homepage-or-feed');diagnostic.discardedHomepageOrFeed++;diagnostic.homepageFeedRejectionDomains[d]=(diagnostic.homepageFeedRejectionDomains[d]||0)+1;return;}
+      const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${item.title} ${linkText||''}`);
+      if(!linkText||!String(linkText).trim())diagnostic.discardedEmptyLinkText++;
+      if(linkOverlap<1){rejectionReasons.push('low-overlap');diagnostic.discardedLowOverlap++;return;}
       candidates.push({url:resolvedUrl,score:item.overlap+linkOverlap,resolvedFrom});
     };
-
-    for(const link of item.descriptionLinks){
-      const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(link.url);
-      if(isGn){diagnostic.googleArticleLinks++; if(/\/__i\/rss\/rd\/articles\//i.test(link.url))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;
-      const resolvedUrl=await resolveGoogleNewsUrl(link.url);
-      considerCandidate(resolvedUrl,link.text,'google-news-description-link');
-    }
-
-    if(item.publisherUrl){
-      diagnostic.directCandidateLinks++;
-      const publisherPage=await fetchText(item.publisherUrl);
-      const finalUrl=normalizeUrl(publisherPage?.finalUrl||item.publisherUrl);
-      considerCandidate(finalUrl,clean(item.title),'google-news-publisher-source');
-    }
-
-    if(item.link){
-      const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);
-      if(isGn){diagnostic.googleArticleLinks++; if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;
-      const publisherUrl=await resolveGoogleNewsUrl(item.link);
-      if(!publisherUrl) diagnostic.unresolvedCandidateUrls++;
-      else {
-        const resolved=await fetchText(publisherUrl);
-        const finalUrl=normalizeUrl(resolved?.finalUrl||publisherUrl);
-        considerCandidate(finalUrl,clean(item.title),'google-news-article-link');
-      }
-    }
-
-    candidates.sort((a,b)=>b.score-a.score||a.url.localeCompare(b.url));
-    const chosen=candidates[0];
-    if(!chosen){
-      diagnostic.discardedNoChosenCandidate++;
-      const uniqueReasons=[...new Set(rejectionReasons)];
-      if(uniqueReasons.length===1 && uniqueReasons[0]==='seed-family') diagnostic.seedFamilyOnlyNoChoice++;
-      else if(uniqueReasons.length>1) diagnostic.mixedRejectionNoChoice++;
-      const attempted = diagnostic.resolvedCandidateUrls;
-      const reason = rejectionReasons.length ? rejectionReasons[0] : (item.descriptionLinks.length || item.publisherUrl || item.link ? 'all-candidate-links-rejected' : 'no-candidate-links');
-      diagnostic.noChosenReasonCounts[reason]=(diagnostic.noChosenReasonCounts[reason]||0)+1;
-      if(diagnostic.noChosenSamples.length<25) diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,descriptionLinks:item.descriptionLinks.length,hasPublisherUrl:Boolean(item.publisherUrl),hasLink:Boolean(item.link),reason,rejectionReasons:[...new Set(rejectionReasons)]});
-      continue;
-    }
-    diagnostic.selected++; diagnostic.selectedDomains[domainOf(chosen.url)]=(diagnostic.selectedDomains[domainOf(chosen.url)]||0)+1;
-    const d=domainOf(chosen.url);
+    for(const link of item.descriptionLinks){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(link.url);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(link.url))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;await considerCandidate(await resolveGoogleNewsUrl(link.url),link.text,'discovery-description-link');}
+    if(item.publisherUrl){diagnostic.directCandidateLinks++;const page=await fetchText(item.publisherUrl);await considerCandidate(page?.finalUrl||item.publisherUrl,clean(item.title),'publisher-source');}
+    if(item.link){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;const resolved=await resolveGoogleNewsUrl(item.link);if(!resolved)diagnostic.unresolvedCandidateUrls++;else{const page=await fetchText(resolved);await considerCandidate(page?.finalUrl||resolved,clean(item.title),'article-link');}}
+    candidates.sort((a,b)=>b.score-a.score||a.url.localeCompare(b.url)); const chosen=candidates[0];
+    if(!chosen){diagnostic.discardedNoChosenCandidate++;const reasons=[...new Set(rejectionReasons)];if(reasons.length===1&&reasons[0]==='seed-family')diagnostic.seedFamilyOnlyNoChoice++;else if(reasons.length>1)diagnostic.mixedRejectionNoChoice++;const reason=rejectionReasons.length?rejectionReasons[0]:'no-candidate-links';diagnostic.noChosenReasonCounts[reason]=(diagnostic.noChosenReasonCounts[reason]||0)+1;if(diagnostic.noChosenSamples.length<25)diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,reason,rejectionReasons:reasons});continue;}
+    diagnostic.selected++;const d=domainOf(chosen.url);diagnostic.selectedDomains[d]=(diagnostic.selectedDomains[d]||0)+1;
     discovered.push({title:item.title,url:chosen.url,sourceName:d,discovered:true,relevanceOverlap:item.overlap,resolvedFrom:chosen.resolvedFrom,discoveryTitle:item.title,discoveryDescription:item.description});
     if(discovered.length>=DISCOVERY_LIMIT)break;
   }
-  return {sources:discovered, diagnostics:diagnostic};
+  return{sources:discovered,diagnostics:diagnostic};
 }
 
 async function checkUrl(url){const started=Date.now();try{const response=await fetch(url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(8000),headers:{'user-agent':'TrendForge-source-verifier/2.3'}});return{ok:response.ok,status:response.status,finalUrl:response.url||url,latencyMs:Date.now()-started};}catch(error){return{ok:false,status:0,finalUrl:url,latencyMs:Date.now()-started,error:error?.message||String(error)};}}
