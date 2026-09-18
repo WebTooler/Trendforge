@@ -37,35 +37,42 @@ jobs:
           test "$success" = "true"
           test "$status" = "active"
 
-      - name: Verify token can access the configured account
+      - name: Verify Workers AI permission and Klein 4B catalog access
         shell: bash
         run: |
           set -euo pipefail
           tmp="$(mktemp)"
-          status="$(curl -sS --retry 2 --retry-all-errors             -o "$tmp" -w '%{http_code}'             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"             "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/models")"
-          echo "Workers AI model-catalog HTTP status: $status"
+          status="$(curl -sS --retry 2 --retry-all-errors             -o "$tmp" -w '%{http_code}'             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"             "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/models/search?search=flux-2-klein-4b")"
+
+          echo "Workers AI model-search HTTP status: $status"
           success="$(jq -r '.success // false' "$tmp")"
-          echo "Workers AI model-catalog success: $success"
+          echo "Workers AI model-search success: $success"
+
           if [ "$status" != "200" ] || [ "$success" != "true" ]; then
-            echo "Account/token access check failed. Sanitized response:"
+            echo "Workers AI permission/account check failed. Sanitized response:"
             jq -c '{success, errors: [.errors[]? | {code, message}]}' "$tmp"
             exit 1
           fi
 
           present="$(jq -r --arg model "$CLOUDFLARE_IMAGE_MODEL" '
             [
-              .. | objects
-              | select((.id? // .name? // .model? // "") == $model)
+              .result[]?
+              | objects
+              | select((.name? // .id? // .model? // "") == $model)
             ] | length > 0
           ' "$tmp")"
-          echo "Klein 4B present in account model catalog: $present"
-          test "$present" = "true"
+
+          echo "Exact Klein 4B model present: $present"
+          if [ "$present" != "true" ]; then
+            echo "Matching models returned by Cloudflare:"
+            jq -r '.result[]? | [.name?, .id?, .model?] | map(select(. != null)) | join(" | ")' "$tmp" | head -20
+            exit 1
+          fi
 
       - name: Diagnostic summary
         run: |
           echo "No inference request was made."
           echo "No neurons were consumed by this diagnostic."
           echo "Configured model: $CLOUDFLARE_IMAGE_MODEL"
-          echo "If this job passes but inference still returns Cloudflare 4006,"
-          echo "the remaining issue is account-side Workers AI quota/billing state,"
-          echo "not the GitHub secret pairing or model selection."
+          echo "A PASS here means the GitHub token has Workers AI access and Cloudflare exposes the requested model."
+          echo "If inference still returns Cloudflare 4006 afterward, investigate quota/billing state rather than GitHub secret pairing."
