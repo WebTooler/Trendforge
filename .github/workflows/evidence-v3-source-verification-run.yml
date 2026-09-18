@@ -100,6 +100,9 @@ jobs:
           console.log('Note: diagnostic buckets overlap; they are not additive.');
           NODE
 
+      - name: Google News resolver forensic probe
+        run: node scripts/test-google-news-url-resolver-forensic.mjs
+
       - name: Single-source discovery filter diagnostics
         run: |
           node --input-type=module <<'NODE'
