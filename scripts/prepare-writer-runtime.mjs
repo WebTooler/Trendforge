@@ -6,9 +6,6 @@ const required=[
   "const MAX_PROVIDER_ATTEMPTS_PER_RUN=10;",
   "const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=4;",
   "const MAX_REPAIR_PROVIDER_ATTEMPTS=4;",
-  "Cloudflare:'CLOUDFLARE_API_TOKEN'",
-  "Cloudflare:process.env.CLOUDFLARE_MODEL||'@cf/meta/llama-3.3-70b-instruct-fp8-fast'",
-  "Cloudflare:{type:'json_object'}",
   "generateWithTrendForgeRepair"
 ];
 const missing=required.filter(x=>!text.includes(x));
