@@ -107,6 +107,9 @@ async function discoverRelatedSources(trend,seedSources){
   diagnostic.relevantItemSeedFamilyItems=relevantSeedFamilyItems;
   diagnostic.relevantItemNonSeedFamilyItems=Math.max(0,relevantFamilyTotal-relevantSeedFamilyItems);
   diagnostic.relevantItemTopFamilyShare=relevantFamilyTotal?Math.max(...Object.values(relevantFamilyCounts))/relevantFamilyTotal:0;
+  diagnostic.relevantItemTopFamilyCount=relevantFamilyTotal?Math.max(...Object.values(relevantFamilyCounts)):0;
+  diagnostic.relevantItemHasNonSeedFamily=Object.keys(relevantFamilyCounts).some(f=>!seeds.has(f));
+  diagnostic.relevantItemNonSeedFamilyCount=Object.entries(relevantFamilyCounts).filter(([f])=>!seeds.has(f)).reduce((a,[,n])=>a+n,0);
   diagnostic.relevantItemsBeforeLimit=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
     const rawDescription=(item.match(/<description>([\s\S]*?)<\/description>/i)||[,''])[1];
