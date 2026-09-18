@@ -1,0 +1,68 @@
+name: Evidence V3 — Fresh Source Verification Run
+
+on:
+  push:
+    branches: ["evidence-v3-lab"]
+    paths:
+      - "scripts/trend-research.mjs"
+      - "scripts/google-news-url-resolver.mjs"
+      - "scripts/score-trends.ts"
+      - "scripts/verify-trend-sources.mjs"
+      - "data/trend-candidates.json"
+      - ".github/workflows/evidence-v3-source-verification-run.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evidence-v3-source-verification-run
+  cancel-in-progress: true
+
+jobs:
+  source-verification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout lab
+        uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Refresh trend research
+        run: node scripts/trend-research.mjs
+
+      - name: Score fresh candidates
+        run: npx tsx scripts/score-trends.ts
+
+      - name: Verify and discover publisher sources
+        run: node scripts/verify-trend-sources.mjs
+
+      - name: Report source verification
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const x = JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
+          const records = x.records ?? [];
+          const count = (s) => records.filter(r => r.status === s).length;
+          const discovered = records.reduce((n,r) => n + (r.discoveredSourceCount || 0), 0);
+          const multi = records.filter(r => (r.independentPublisherCount || 0) >= 2).length;
+          const reachable = records.filter(r => (r.relevantReachableSourceCount || 0) > 0).length;
+          console.log(`Candidates checked: ${records.length}`);
+          console.log(`Verified: ${count('verified')}`);
+          console.log(`Partial: ${count('partial')}`);
+          console.log(`Unverified: ${count('unverified')}`);
+          console.log(`Candidates with relevant reachable sources: ${reachable}`);
+          console.log(`Discovered publisher sources: ${discovered}`);
+          console.log(`Candidates with 2+ independent publisher families: ${multi}`);
+          NODE
