@@ -1,0 +1,25 @@
+name: Evidence V3 — Bing RSS Diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [evidence-v3-lab]
+    paths:
+      - 'scripts/test-bing-rss.mjs'
+      - '.github/workflows/evidence-v3-bing-rss-diagnostic.yml'
+
+jobs:
+  bing-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lab
+        uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Probe Bing RSS feeds
+        run: node scripts/test-bing-rss.mjs
