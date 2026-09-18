@@ -99,6 +99,7 @@ jobs:
           console.log('DISCOVERY FAMILY LIFT',JSON.stringify(familyLift));
           console.log('DISCOVERY LIFT SAMPLES',JSON.stringify(discoveryLiftSamples,null,2));
           console.log('NO-CHOSEN REASON COUNTS',JSON.stringify(noChosenReasonCounts));
+          console.log('SEED-FAMILY REJECTION OUTCOMES',JSON.stringify({seedFamilyOnlyNoChoice:d.seedFamilyOnlyNoChoice||0,mixedRejectionNoChoice:d.mixedRejectionNoChoice||0}));
           console.log('TOP SEED-FAMILY REJECTION DOMAINS',JSON.stringify(topSeedFamilyRejections));
           console.log('NO-CHOSEN SAMPLES',JSON.stringify(noChosenSamples,null,2));
           console.log('QUALIFICATION DIAGNOSTICS');
