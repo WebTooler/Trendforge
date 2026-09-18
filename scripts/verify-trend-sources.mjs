@@ -37,7 +37,7 @@ const MIN_DISCOVERY_OVERLAP = 3;
 const DISCOVERY_MIN_SCORE = 50;
 const CANDIDATE_CONCURRENCY = 6;
 const MIRROR_DOMAINS = new Set(['news.google.com', 'google.com', 'google.co.uk']);
-const INTERMEDIARY_DOMAINS = new Set(['bing.com', 'msn.com', 'microsoft.com']);
+const INTERMEDIARY_DOMAINS = new Set(['bing.com', 'msn.com']);
 const secondLevel = new Set(['co.uk', 'co.in', 'co.jp', 'co.nz', 'co.au', 'com.br', 'com.cn']);
 
 const normalizeUrl = (value) => { try { return new URL(value).toString(); } catch { return null; } };
