@@ -1,0 +1,50 @@
+name: Evidence V3 Google News Resolver Test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/google-news-url-resolver.mjs'
+      - 'scripts/test-google-news-url-resolver.mjs'
+      - '.github/workflows/evidence-v3-google-news-resolver-test.yml'
+
+jobs:
+  resolver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Run deterministic resolver test
+        run: node scripts/test-google-news-url-resolver.mjs
+      - name: Run live resolver probe
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import { resolveGoogleNewsUrl } from './scripts/google-news-url-resolver.mjs';
+
+          const data = JSON.parse(fs.readFileSync('data/trend-candidates.json', 'utf8'));
+          const candidate = (data.candidates || []).find(item => /^https:\/\/news\.google\.com\/rss\/articles\//.test(item.link));
+          if (!candidate) throw new Error('No Google News RSS article URL found in trend-candidates.json');
+
+          const resolved = await resolveGoogleNewsUrl(candidate.link, { timeoutMs: 12000 });
+          console.log(JSON.stringify({
+            title: candidate.title,
+            input: candidate.link,
+            resolved
+          }, null, 2));
+
+          if (!resolved || /news\.google\.com/i.test(resolved)) {
+            throw new Error('Google News resolver did not produce a publisher URL');
+          }
+          if (!/^https:\/\//.test(resolved)) {
+            throw new Error('Resolved URL is not HTTPS');
+          }
+          console.log('Google News live resolver probe: PASS');
+          NODE
