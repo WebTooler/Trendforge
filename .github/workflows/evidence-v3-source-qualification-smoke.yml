@@ -65,8 +65,10 @@ jobs:
             const x=r.discovery?.diagnostics;
             if(!x) return a;
             for(const k of numericKeys) a[k]+=Number(x[k]||0);
+            a.seedFamilyOnlyNoChoice+=Number(x.seedFamilyOnlyNoChoice||0);
+            a.mixedRejectionNoChoice+=Number(x.mixedRejectionNoChoice||0);
             return a;
-          },Object.fromEntries(numericKeys.map(k=>[k,0])));
+          },Object.fromEntries([...numericKeys,'seedFamilyOnlyNoChoice','mixedRejectionNoChoice'].map(k=>[k,0])));
           const noChosenReasonCounts=records.reduce((a,r)=>{ const x=r.discovery?.diagnostics?.noChosenReasonCounts||{}; for(const [k,v] of Object.entries(x)) a[k]=(a[k]||0)+Number(v||0); return a; },{});
           const seedFamilyRejectionDomains=records.reduce((a,r)=>{ const x=r.discovery?.diagnostics?.seedFamilyRejectionDomains||{}; for(const [k,v] of Object.entries(x)) a[k]=(a[k]||0)+Number(v||0); return a; },{});
           const topSeedFamilyRejections=Object.entries(seedFamilyRejectionDomains).sort((a,b)=>b[1]-a[1]).slice(0,30);
