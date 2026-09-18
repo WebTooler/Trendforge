@@ -77,7 +77,7 @@ async function discoverRelatedSources(trend,seedSources){
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
   const result=await fetchText(rssUrl); if(!result)return{sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}}};
   const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
-  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyOnlyNoChoice:0,mixedRejectionNoChoice:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]};
+  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyOnlyNoChoice:0,mixedRejectionNoChoice:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[],discoveryFeedCounts:Object.fromEntries(discoveryFeeds.map(feed=>[feed.name,0]))};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
@@ -88,9 +88,12 @@ async function discoverRelatedSources(trend,seedSources){
     const publisherUrl=normalizeUrl(clean(sourceMatch?.[1]||''));
     const descriptionLinks=extractDescriptionLinks(rawDescription);
     const overlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${title} ${description}`);
-    return{title,description,link,publisherUrl,descriptionLinks,overlap};
+    diagnostic.discoveryFeedCounts[feed]=(diagnostic.discoveryFeedCounts[feed]||0)+1;
+    return{title,description,link,publisherUrl,descriptionLinks,overlap,feed};
   }).filter(item=>item.title&&item.overlap>=MIN_DISCOVERY_OVERLAP&&(item.publisherUrl||item.link||item.descriptionLinks.length))
-    .sort((a,b)=>b.overlap-a.overlap).slice(0,DISCOVERY_ITEM_LIMIT);
+    .sort((a,b)=>b.overlap-a.overlap || (a.feed==='bing-news'?1:0) - (b.feed==='bing-news'?1:0))
+    .filter((item,index,self)=>self.findIndex(other=>other.title.toLowerCase()===item.title.toLowerCase() && other.feed===item.feed)<index)
+    .slice(0,DISCOVERY_ITEM_LIMIT);
   diagnostic.relevantItems=relevantItems.length;
   const relevantFamilyCounts={};
   let relevantSeedFamilyItems=0;
