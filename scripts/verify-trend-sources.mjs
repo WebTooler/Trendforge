@@ -78,10 +78,10 @@ async function discoverRelatedSources(trend,seedSources){
     .sort((a,b)=>b.overlap-a.overlap).slice(0,DISCOVERY_ITEM_LIMIT);
   diagnostic.relevantItems=relevantItems.length;
   diagnostic.relevantItemsBeforeLimit=items.map(item=>{
-    const title=clean((item.match(/<title>([\\s\\S]*?)<\\/title>/i)||[,''])[1]);
-    const rawDescription=(item.match(/<description>([\\s\\S]*?)<\\/description>/i)||[,''])[1];
+    const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
+    const rawDescription=(item.match(/<description>([\s\S]*?)<\/description>/i)||[,''])[1];
     const description=clean(rawDescription);
-    const link=normalizeUrl(clean((item.match(/<link>([\\s\\S]*?)<\\/link>/i)||[,''])[1]));
+    const link=normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\/link>/i)||[,''])[1]));
     const sourceMatch=item.match(/<source\\b[^>]*\\burl=[\"']([^\"']+)[\"'][^>]*>/i);
     const publisherUrl=normalizeUrl(clean(sourceMatch?.[1]||''));
     const descriptionLinks=extractDescriptionLinks(rawDescription);
