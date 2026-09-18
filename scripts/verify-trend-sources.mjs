@@ -62,6 +62,7 @@ async function discoverRelatedSources(trend,seedSources){
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
   const result=await fetchText(rssUrl); if(!result)return[];
   const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
+  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,resolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedNoChosenCandidate:0,selected:0};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
@@ -75,6 +76,8 @@ async function discoverRelatedSources(trend,seedSources){
     return{title,description,link,publisherUrl,descriptionLinks,overlap};
   }).filter(item=>item.title&&item.overlap>=MIN_DISCOVERY_OVERLAP&&(item.publisherUrl||item.link||item.descriptionLinks.length))
     .sort((a,b)=>b.overlap-a.overlap).slice(0,DISCOVERY_LIMIT);
+  diagnostic.relevantItems=relevantItems.length;
+  diagnostic.itemsWithCandidateLinks=relevantItems.filter(item=>item.link||item.publisherUrl||item.descriptionLinks.length).length;
 
   const discovered=[];
   for(const item of relevantItems){
@@ -82,26 +85,29 @@ async function discoverRelatedSources(trend,seedSources){
     for(const link of item.descriptionLinks){
       const resolvedUrl=await resolveGoogleNewsUrl(link.url);
       const d=domainOf(resolvedUrl);
-      if(!resolvedUrl||!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl)))continue;
+      if(!resolvedUrl||!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; continue; }
+      diagnostic.resolvedCandidateUrls++;
       const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${item.title} ${link.text}`);
-      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl))continue;
+      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ diagnostic.discardedHomepageOrFeed++; continue; }
+      if(linkOverlap < 1){ diagnostic.discardedLowOverlap++; continue; }
       candidates.push({url:resolvedUrl,score:linkOverlap+item.overlap,resolvedFrom:'google-news-description-link'});
     }
     if(item.link){
       const publisherUrl=await resolveGoogleNewsUrl(item.link);
       if(publisherUrl){
         const resolved=await fetchText(publisherUrl); const finalUrl=normalizeUrl(resolved?.finalUrl||publisherUrl); const d=domainOf(finalUrl);
-        if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!seeds.has(publisherFamily(finalUrl))&&!looksLikeHomepage(finalUrl)&&!looksLikeFeed(finalUrl))candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'});
+        if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!seeds.has(publisherFamily(finalUrl))&&!looksLikeHomepage(finalUrl)&&!looksLikeFeed(finalUrl)){ diagnostic.resolvedCandidateUrls++; candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'}); }
       }
     }
     candidates.sort((a,b)=>b.score-a.score);
     const chosen=candidates.find(c=>c.score>=item.overlap+1);
-    if(!chosen)continue;
+    if(!chosen){ diagnostic.discardedNoChosenCandidate++; continue; }
+    diagnostic.selected++;
     const d=domainOf(chosen.url);
     discovered.push({title:item.title,url:chosen.url,sourceName:d,discovered:true,relevanceOverlap:item.overlap,resolvedFrom:chosen.resolvedFrom,discoveryTitle:item.title,discoveryDescription:item.description});
     if(discovered.length>=DISCOVERY_LIMIT)break;
   }
-  return discovered;
+  return {sources:discovered, diagnostics:diagnostic};
 }
 
 async function checkUrl(url){const started=Date.now();try{const response=await fetch(url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(8000),headers:{'user-agent':'TrendForge-source-verifier/2.3'}});return{ok:response.ok,status:response.status,finalUrl:response.url||url,latencyMs:Date.now()-started};}catch(error){return{ok:false,status:0,finalUrl:url,latencyMs:Date.now()-started,error:error?.message||String(error)};}}
@@ -115,7 +121,8 @@ async function verifyCandidate(trend){
   const seedFamilies=new Set(seedSources.map(source=>publisherFamily(source.url)).filter(Boolean));
   const score=Number(trend.score??trend.finalScore??trend.priorityScore??0);
   const discoveryEligible=seedFamilies.size<2&&(score>=DISCOVERY_MIN_SCORE||seedFamilies.size===0);
-  const discovered=discoveryEligible?await discoverRelatedSources(trend,seedSources):[];
+  const discoveryResult=discoveryEligible?await discoverRelatedSources(trend,seedSources):{sources:[],diagnostics:null};
+  const discovered=discoveryResult.sources;
   const combined=[...seedSources,...discovered]; const deduped=[]; const seenUrls=new Set();
   for(const source of combined){const url=normalizeUrl(source.url);if(!url||seenUrls.has(url)||MIRROR_DOMAINS.has(domainOf(url))||looksLikeHomepage(url)||looksLikeFeed(url))continue;seenUrls.add(url);deduped.push({...source,url});}
   const checks=[];
@@ -131,7 +138,7 @@ async function verifyCandidate(trend){
   const independentFamilies=new Set(reachable.map(item=>item.publisherFamily).filter(Boolean));
   const relevantReachable=reachable.filter(item=>!item.discovered||item.relevanceOverlap>=MIN_DISCOVERY_OVERLAP);
   const confidence=Math.round((checks.length?reachable.length/checks.length:0)*45+(checks.length?credible.length/checks.length:0)*25+Math.min(independentFamilies.size/2,1)*20+Math.min(relevantReachable.length/2,1)*10);
-  return{link:trend.link,title:trend.title,category:trend.category,verifiedAt:new Date().toISOString(),sourceCount:checks.length,discoveredSourceCount:discovered.length,reachableSourceCount:reachable.length,credibleSourceCount:credible.length,uniqueDomainCount:independentFamilies.size,independentReachableDomains:[...uniqueDomains],independentPublisherFamilies:[...independentFamilies],independentPublisherCount:independentFamilies.size,relevantReachableSourceCount:relevantReachable.length,confidence,status:confidence>=70?'verified':confidence>=45?'partial':'unverified',discovery:{enabled:discoveryEligible,queryTitle:discoveryEligible?trend.title:null,sameStoryOnly:true,minTopicOverlap:MIN_DISCOVERY_OVERLAP,googleNewsIsIndexOnly:true,resolvedPublisherLinks:true,descriptionArticleLinksEnabled:true,escapedDescriptionLinksDecoded:true,minScore:DISCOVERY_MIN_SCORE,seedDomainCount:seedFamilies.size,seedPublisherFamilyCount:seedFamilies.size},sources:checks};
+  return{link:trend.link,title:trend.title,category:trend.category,verifiedAt:new Date().toISOString(),sourceCount:checks.length,discoveredSourceCount:discovered.length,reachableSourceCount:reachable.length,credibleSourceCount:credible.length,uniqueDomainCount:independentFamilies.size,independentReachableDomains:[...uniqueDomains],independentPublisherFamilies:[...independentFamilies],independentPublisherCount:independentFamilies.size,relevantReachableSourceCount:relevantReachable.length,confidence,status:confidence>=70?'verified':confidence>=45?'partial':'unverified',discovery:{enabled:discoveryEligible,queryTitle:discoveryEligible?trend.title:null,diagnostics:discoveryResult.diagnostics,sameStoryOnly:true,minTopicOverlap:MIN_DISCOVERY_OVERLAP,googleNewsIsIndexOnly:true,resolvedPublisherLinks:true,descriptionArticleLinksEnabled:true,escapedDescriptionLinksDecoded:true,minScore:DISCOVERY_MIN_SCORE,seedDomainCount:seedFamilies.size,seedPublisherFamilyCount:seedFamilies.size},sources:checks};
 }
 
 async function mapWithConcurrency(items,limit,worker){const results=new Array(items.length);let nextIndex=0;async function runWorker(){while(true){const index=nextIndex++;if(index>=items.length)return;results[index]=await worker(items[index],index);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},()=>runWorker()));return results;}
