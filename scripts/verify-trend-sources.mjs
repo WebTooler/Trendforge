@@ -59,6 +59,18 @@ const topicOverlap = (a, b) => { const A=tokens(a),B=tokens(b); return [...A].fi
 const looksLikeHomepage = (value='') => { try { const u=new URL(value); return !u.pathname || u.pathname==='/' || u.pathname.length<8; } catch { return true; } };
 const looksLikeFeed = (value='') => { try { const u=new URL(value); return /^feeds?\./i.test(u.hostname)||/^rss\./i.test(u.hostname)||/^feed\./i.test(u.hostname)||/(^|\/)(rss|feed|feeds|atom|sitemap)(\/|\.|$)/i.test(u.pathname)||/(^|&)(feed|rss|atom|format)=/i.test(u.search.slice(1)); } catch { return true; } };
 
+const articleIdentity = (html='', pageTitle='', targetTitle='') => {
+  const text=clean(html);
+  const signals=[];
+  if(/<article\\b/i.test(html))signals.push('article-tag');
+  if(/application\\/ld\\+json/i.test(html)&&/(newsarticle|article|reportage)/i.test(html))signals.push('article-schema');
+  if(/(?:property|name)=["']article:(?:published_time|modified_time|author|section)["']/i.test(html))signals.push('article-meta');
+  if(/<time\\b/i.test(html))signals.push('date-signal');
+  if(/(?:byline|author|written by|reporter|correspondent)/i.test(text.slice(0,12000)))signals.push('author-signal');
+  if(text.length>=500)signals.push('substantial-body');
+  return {score:signals.length,titleOverlap:topicOverlap(targetTitle,pageTitle||''),signals};
+};
+
 function extractDescriptionLinks(rawDescription) {
   const links=[];
   const decoded=decodeEntities(rawDescription);
@@ -80,7 +92,7 @@ async function discoverRelatedSources(trend,seedSources){
     fetchText(rssUrl),
     fetchText(`https://www.bing.com/news/search?q=${query}&format=rss`)
   ]);
-  const empty=()=>({sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedIntermediaryDomain:0,intermediaryRejectionDomains:{},discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]}});
+  const empty=()=>({sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedIntermediaryDomain:0,intermediaryRejectionDomains:{},discardedWeakArticleIdentity:0,weakArticleIdentityDomains:{},discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]}});
   if(!googleResult&&!bingResult)return empty();
   const items=[
     ...(googleResult?[...googleResult.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]):[]),
@@ -116,7 +128,7 @@ async function discoverRelatedSources(trend,seedSources){
   const discovered=[];
   for(const item of relevantItems){
     const candidates=[]; const rejectionReasons=[];
-    const considerCandidate=async(candidateUrl,linkText,resolvedFrom)=>{
+    const considerCandidate=async(candidateUrl,linkText,resolvedFrom,pageHint=null)=>{
       const resolvedUrl=normalizeUrl(candidateUrl);
       if(!resolvedUrl){rejectionReasons.push('unresolved');diagnostic.unresolvedCandidateUrls++;return;}
       const d=domainOf(resolvedUrl);
@@ -129,11 +141,14 @@ async function discoverRelatedSources(trend,seedSources){
       const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${item.title} ${linkText||''}`);
       if(!linkText||!String(linkText).trim())diagnostic.discardedEmptyLinkText++;
       if(linkOverlap<1){rejectionReasons.push('low-overlap');diagnostic.discardedLowOverlap++;return;}
-      candidates.push({url:resolvedUrl,score:item.overlap+linkOverlap,resolvedFrom});
+      const page=pageHint||await fetchText(resolvedUrl);
+      const identity=articleIdentity(page?.text||'',clean(item.title),trend.title);
+      if(identity.score<2||identity.titleOverlap<1){rejectionReasons.push('weak-article-identity');diagnostic.discardedWeakArticleIdentity=(diagnostic.discardedWeakArticleIdentity||0)+1;diagnostic.weakArticleIdentityDomains=diagnostic.weakArticleIdentityDomains||{};diagnostic.weakArticleIdentityDomains[d]=(diagnostic.weakArticleIdentityDomains[d]||0)+1;return;}
+      candidates.push({url:resolvedUrl,score:item.overlap+linkOverlap+Math.min(identity.score,4),resolvedFrom,identity});
     };
     for(const link of item.descriptionLinks){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(link.url);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(link.url))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;await considerCandidate(await resolveGoogleNewsUrl(link.url),link.text,'discovery-description-link');}
-    if(item.publisherUrl&&!INTERMEDIARY_DOMAINS.has(domainOf(item.publisherUrl))){diagnostic.directCandidateLinks++;const page=await fetchText(item.publisherUrl);await considerCandidate(page?.finalUrl||item.publisherUrl,clean(item.title),'publisher-source');}
-    if(item.link&&!INTERMEDIARY_DOMAINS.has(domainOf(item.link))){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;const resolved=await resolveGoogleNewsUrl(item.link);if(!resolved)diagnostic.unresolvedCandidateUrls++;else{const page=await fetchText(resolved);await considerCandidate(page?.finalUrl||resolved,clean(item.title),'article-link');}}
+    if(item.publisherUrl&&!INTERMEDIARY_DOMAINS.has(domainOf(item.publisherUrl))){diagnostic.directCandidateLinks++;const page=await fetchText(item.publisherUrl);await considerCandidate(page?.finalUrl||item.publisherUrl,clean(item.title),'publisher-source',page);}
+    if(item.link&&!INTERMEDIARY_DOMAINS.has(domainOf(item.link))){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;const resolved=await resolveGoogleNewsUrl(item.link);if(!resolved)diagnostic.unresolvedCandidateUrls++;else{const page=await fetchText(resolved);await considerCandidate(page?.finalUrl||resolved,clean(item.title),'article-link',page);}}
     candidates.sort((a,b)=>b.score-a.score||a.url.localeCompare(b.url)); const chosen=candidates[0];
     if(!chosen){diagnostic.discardedNoChosenCandidate++;const reasons=[...new Set(rejectionReasons)];if(reasons.length===1&&reasons[0]==='seed-family')diagnostic.seedFamilyOnlyNoChoice++;else if(reasons.length>1)diagnostic.mixedRejectionNoChoice++;const reason=rejectionReasons.length?rejectionReasons[0]:'no-candidate-links';diagnostic.noChosenReasonCounts[reason]=(diagnostic.noChosenReasonCounts[reason]||0)+1;if(diagnostic.noChosenSamples.length<25)diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,reason,rejectionReasons:reasons});continue;}
     diagnostic.selected++;const d=domainOf(chosen.url);diagnostic.selectedDomains[d]=(diagnostic.selectedDomains[d]||0)+1;
