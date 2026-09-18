@@ -71,6 +71,17 @@ jobs:
           const seedFamilyRejectionDomains=records.reduce((a,r)=>{ const x=r.discovery?.diagnostics?.seedFamilyRejectionDomains||{}; for(const [k,v] of Object.entries(x)) a[k]=(a[k]||0)+Number(v||0); return a; },{});
           const topSeedFamilyRejections=Object.entries(seedFamilyRejectionDomains).sort((a,b)=>b[1]-a[1]).slice(0,30);
           const noChosenSamples=records.flatMap(r=>(r.discovery?.diagnostics?.noChosenSamples||[]).map(s=>({...s,title:s.title||r.title}))).slice(0,25);
+          const familyLift=records.reduce((a,r)=>{
+            const seed=Number(r.discovery?.seedPublisherFamilyCount||0);
+            const final=Number(r.independentPublisherCount||0);
+            if(final>=2) a.multiFamily++;
+            if(final===1) a.singleFamily++;
+            if(final===0) a.zeroFamily++;
+            if(final>seed) a.discoveryLift++;
+            if(final>seed && Number(r.discoveredSourceCount||0)>0) a.discoveryLiftWithSource++;
+            return a;
+          },{multiFamily:0,singleFamily:0,zeroFamily:0,discoveryLift:0,discoveryLiftWithSource:0});
+          console.log('DISCOVERY FAMILY LIFT',JSON.stringify(familyLift));
           console.log('NO-CHOSEN REASON COUNTS',JSON.stringify(noChosenReasonCounts));
           console.log('TOP SEED-FAMILY REJECTION DOMAINS',JSON.stringify(topSeedFamilyRejections));
           console.log('NO-CHOSEN SAMPLES',JSON.stringify(noChosenSamples,null,2));
