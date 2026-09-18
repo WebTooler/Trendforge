@@ -22,3 +22,5 @@ jobs:
           node-version: 20
       - name: Run P1 evidence article blueprint policy test
         run: node scripts/test-evidence-article-blueprint.mjs
+      - name: Run evidence-aware prompt construction test
+        run: node scripts/test-evidence-article-prompt.mjs
