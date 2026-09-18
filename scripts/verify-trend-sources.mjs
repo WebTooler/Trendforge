@@ -37,6 +37,7 @@ const MIN_DISCOVERY_OVERLAP = 3;
 const DISCOVERY_MIN_SCORE = 50;
 const CANDIDATE_CONCURRENCY = 6;
 const MIRROR_DOMAINS = new Set(['news.google.com', 'google.com', 'google.co.uk']);
+const INTERMEDIARY_DOMAINS = new Set(['bing.com', 'msn.com', 'microsoft.com']);
 const secondLevel = new Set(['co.uk', 'co.in', 'co.jp', 'co.nz', 'co.au', 'com.br', 'com.cn']);
 
 const normalizeUrl = (value) => { try { return new URL(value).toString(); } catch { return null; } };
@@ -79,7 +80,7 @@ async function discoverRelatedSources(trend,seedSources){
     fetchText(rssUrl),
     fetchText(`https://www.bing.com/news/search?q=${query}&format=rss`)
   ]);
-  const empty=()=>({sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]}});
+  const empty=()=>({sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedIntermediaryDomain:0,intermediaryRejectionDomains:{},discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]}});
   if(!googleResult&&!bingResult)return empty();
   const items=[
     ...(googleResult?[...googleResult.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]):[]),
@@ -121,6 +122,7 @@ async function discoverRelatedSources(trend,seedSources){
       const d=domainOf(resolvedUrl);
       if(!d){rejectionReasons.push('invalid-domain');diagnostic.unresolvedCandidateUrls++;return;}
       if(MIRROR_DOMAINS.has(d)){rejectionReasons.push('mirror-domain');diagnostic.discardedSeedFamily++;diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1;return;}
+      if(INTERMEDIARY_DOMAINS.has(d)){rejectionReasons.push('intermediary-domain');diagnostic.discardedIntermediaryDomain=(diagnostic.discardedIntermediaryDomain||0)+1;diagnostic.intermediaryRejectionDomains=diagnostic.intermediaryRejectionDomains||{};diagnostic.intermediaryRejectionDomains[d]=(diagnostic.intermediaryRejectionDomains[d]||0)+1;return;}
       if(seeds.has(publisherFamily(resolvedUrl))){rejectionReasons.push('seed-family');diagnostic.discardedSeedFamily++;diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1;return;}
       diagnostic.resolvedCandidateUrls++;
       if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){rejectionReasons.push('homepage-or-feed');diagnostic.discardedHomepageOrFeed++;diagnostic.homepageFeedRejectionDomains[d]=(diagnostic.homepageFeedRejectionDomains[d]||0)+1;return;}
@@ -130,8 +132,8 @@ async function discoverRelatedSources(trend,seedSources){
       candidates.push({url:resolvedUrl,score:item.overlap+linkOverlap,resolvedFrom});
     };
     for(const link of item.descriptionLinks){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(link.url);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(link.url))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;await considerCandidate(await resolveGoogleNewsUrl(link.url),link.text,'discovery-description-link');}
-    if(item.publisherUrl){diagnostic.directCandidateLinks++;const page=await fetchText(item.publisherUrl);await considerCandidate(page?.finalUrl||item.publisherUrl,clean(item.title),'publisher-source');}
-    if(item.link){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;const resolved=await resolveGoogleNewsUrl(item.link);if(!resolved)diagnostic.unresolvedCandidateUrls++;else{const page=await fetchText(resolved);await considerCandidate(page?.finalUrl||resolved,clean(item.title),'article-link');}}
+    if(item.publisherUrl&&!INTERMEDIARY_DOMAINS.has(domainOf(item.publisherUrl))){diagnostic.directCandidateLinks++;const page=await fetchText(item.publisherUrl);await considerCandidate(page?.finalUrl||item.publisherUrl,clean(item.title),'publisher-source');}
+    if(item.link&&!INTERMEDIARY_DOMAINS.has(domainOf(item.link))){const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);if(isGn){diagnostic.googleArticleLinks++;if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;const resolved=await resolveGoogleNewsUrl(item.link);if(!resolved)diagnostic.unresolvedCandidateUrls++;else{const page=await fetchText(resolved);await considerCandidate(page?.finalUrl||resolved,clean(item.title),'article-link');}}
     candidates.sort((a,b)=>b.score-a.score||a.url.localeCompare(b.url)); const chosen=candidates[0];
     if(!chosen){diagnostic.discardedNoChosenCandidate++;const reasons=[...new Set(rejectionReasons)];if(reasons.length===1&&reasons[0]==='seed-family')diagnostic.seedFamilyOnlyNoChoice++;else if(reasons.length>1)diagnostic.mixedRejectionNoChoice++;const reason=rejectionReasons.length?rejectionReasons[0]:'no-candidate-links';diagnostic.noChosenReasonCounts[reason]=(diagnostic.noChosenReasonCounts[reason]||0)+1;if(diagnostic.noChosenSamples.length<25)diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,reason,rejectionReasons:reasons});continue;}
     diagnostic.selected++;const d=domainOf(chosen.url);diagnostic.selectedDomains[d]=(diagnostic.selectedDomains[d]||0)+1;
