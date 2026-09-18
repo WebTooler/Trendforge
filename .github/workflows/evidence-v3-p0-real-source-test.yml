@@ -1,0 +1,19 @@
+name: Evidence V3 Lab — P0 Real Source Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  real-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lab branch
+        uses: actions/checkout@v4
+        with:
+          ref: evidence-v3-lab
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run real-source comparison
+        run: node scripts/test-evidence-extraction-real.mjs
