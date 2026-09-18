@@ -1,0 +1,23 @@
+name: Evidence V3 — Google News Resolver Forensic Probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/test-google-news-resolver-forensic.mjs'
+
+jobs:
+  forensic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Run forensic probe
+        run: node scripts/test-google-news-resolver-forensic.mjs
