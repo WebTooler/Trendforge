@@ -1,0 +1,58 @@
+name: TrendForge Image V3 — Klein 4B Controlled Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  klein-4b-test:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_IMAGE_MODEL: '@cf/black-forest-labs/flux-2-klein-4b'
+
+    steps:
+      - name: Checkout locked Image V3 test branch
+        uses: actions/checkout@v4
+        with:
+          ref: image-v3-test-lab
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Preflight — prove this is the 4B test
+        run: |
+          set -euo pipefail
+          test "$CLOUDFLARE_IMAGE_MODEL" = '@cf/black-forest-labs/flux-2-klein-4b'
+          echo "Klein 4B controlled test armed."
+          echo "Exactly 3 article candidates will be requested."
+          echo "No retry, promotion, frontmatter update, or production write is performed."
+
+      - name: Generate exactly 3 Klein 4B candidates
+        run: npx tsx scripts/generate-article-image-v3-article-test.ts
+
+      - name: Upload 4B candidates and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trendforge-image-v3-klein-4b-article-test
+          path: data/image-v3-test/
+          if-no-files-found: warn
+
+      - name: Test summary
+        if: always()
+        run: |
+          echo "Model: $CLOUDFLARE_IMAGE_MODEL"
+          echo "Dimensions: 1024x576"
+          echo "Attempts: 3 maximum, exactly one per locked article"
+          echo "Retries: disabled"
+          echo "Production promotion: disabled"
