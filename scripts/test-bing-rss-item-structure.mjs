@@ -1,5 +1,3 @@
-import { fetch } from 'undici';
-
 const urls = [
   ['AI', 'https://www.bing.com/news/search?q=AI&format=RSS'],
   ['AI-first', 'https://www.bing.com/news/search?q=AI&setmkt=en-US&first=1&format=RSS'],
