@@ -21,3 +21,5 @@ jobs:
           package-manager-cache: false
       - name: Run forensic probe
         run: node scripts/test-google-news-resolver-forensic.mjs
+
+# lab trigger: forensic workflow registration check
