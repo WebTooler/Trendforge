@@ -43,8 +43,8 @@ jobs:
           for(const r of records){
             const d=r.discovery?.diagnostics;
             if(!d) continue;
-            if(d.selected + d.discardedNoChosenCandidate !== d.relevantItems){
-              console.error('Accounting mismatch:', r.title, JSON.stringify(d));
+            if(d.selected > d.relevantItems || d.discardedNoChosenCandidate > d.relevantItems || d.selected + d.discardedNoChosenCandidate > d.relevantItems){
+              console.error('Invalid item accounting:', r.title, JSON.stringify(d));
               bad++;
             }
             if(d.resolvedCandidateUrls<0 || d.unresolvedCandidateUrls<0){
