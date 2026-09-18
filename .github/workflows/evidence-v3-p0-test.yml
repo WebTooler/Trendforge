@@ -1,0 +1,20 @@
+name: Evidence V3 Lab — P0 Extraction Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  p0-extraction:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lab branch
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run deterministic P0 extraction test
+        run: node scripts/test-evidence-extraction.mjs
