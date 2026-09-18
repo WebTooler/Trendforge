@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T16:24:55.626Z",
+  "generatedAt": "2026-09-18T20:55:55.712Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 4428,
-      "sentenceCount": 31,
+      "normalizedLength": 2729,
+      "sentenceCount": 18,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,10 +31,10 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "arstechnica.com"
+    "theverge.com"
   ],
   "grounding": {
     "sourceCount": 1,
-    "usablePassages": 15
+    "usablePassages": 18
   }
 }
