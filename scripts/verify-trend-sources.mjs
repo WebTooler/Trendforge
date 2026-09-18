@@ -82,17 +82,17 @@ async function discoverRelatedSources(trend,seedSources){
   const empty=()=>({sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]}});
   if(!googleResult&&!bingResult)return empty();
   const items=[
-    ...(googleResult?[...googleResult.text.matchAll(/<item>([\\s\\S]*?)<\\/item>/gi)].map(m=>m[1]):[]),
-    ...(bingResult?[...bingResult.text.matchAll(/<item>([\\s\\S]*?)<\\/item>/gi)].map(m=>m[1]):[])
+    ...(googleResult?[...googleResult.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]):[]),
+    ...(bingResult?[...bingResult.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]):[])
   ];
   const diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyOnlyNoChoice:0,mixedRejectionNoChoice:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
-    const title=clean((item.match(/<title>([\\s\\S]*?)<\\/title>/i)||[,''])[1]);
-    const rawDescription=(item.match(/<description>([\\s\\S]*?)<\\/description>/i)||[,''])[1];
+    const title=clean((item.match(/<title>([\s\S]*?)<\\/title>/i)||[,''])[1]);
+    const rawDescription=(item.match(/<description>([\s\S]*?)<\\/description>/i)||[,''])[1];
     const description=clean(rawDescription);
-    const link=normalizeUrl(clean((item.match(/<link>([\\s\\S]*?)<\\/link>/i)||[,''])[1]));
-    const sourceMatch=item.match(/<source\\b[^>]*\\burl=[\"']([^\"']+)[\"'][^>]*>/i);
+    const link=normalizeUrl(clean((item.match(/<link>([\s\S]*?)<\\/link>/i)||[,''])[1]));
+    const sourceMatch=item.match(/<source\b[^>]*\\burl=[\"']([^\"']+)[\"'][^>]*>/i);
     const publisherUrl=normalizeUrl(clean(sourceMatch?.[1]||''));
     const descriptionLinks=extractDescriptionLinks(rawDescription);
     const overlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${title} ${description}`);
