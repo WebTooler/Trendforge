@@ -92,8 +92,8 @@ async function discoverRelatedSources(trend,seedSources){
     const rawDescription=(item.match(new RegExp('<description>([\\s\\S]*?)</description>','i'))||[,''])[1];
     const description=clean(rawDescription);
     const link=normalizeUrl(clean((item.match(new RegExp('<link>([\\s\\S]*?)</link>','i'))||[,''])[1]));
-    const sourceMatch=item.match(new RegExp('<source\\b[^>]*\\burl=["\\']([^"\\']+)["\\'][^>]*>','i'));
-    const publisherUrl=normalizeUrl(clean(sourceMatch?.[1]||''));
+    const sourceTag=(item.match(new RegExp('<source[^>]*url=([^ >]+)[^>]*>','i'))||[])[1]||'';
+    const publisherUrl=normalizeUrl(clean(sourceTag.replace(/^['\"]|['\"]$/g,'')));
     const descriptionLinks=extractDescriptionLinks(rawDescription);
     const overlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${title} ${description}`);
     return{title,description,link,publisherUrl,descriptionLinks,overlap};
