@@ -86,6 +86,16 @@ jobs:
           familySaturation.avgUniqueFamiliesPerCandidate=familySaturation.candidatesWithDiscovery?familySaturation.uniqueFamilyTotal/familySaturation.candidatesWithDiscovery:0;
           familySaturation.seedFamilyItemShare=familySaturation.publisherFamilyItems?familySaturation.seedFamilyItems/familySaturation.publisherFamilyItems:0;
           familySaturation.nonSeedFamilyItemShare=familySaturation.publisherFamilyItems?familySaturation.nonSeedFamilyItems/familySaturation.publisherFamilyItems:0;
+          const diversityBuckets=records.reduce((a,r)=>{
+            const x=r.discovery?.diagnostics||{};
+            if(!x.relevantItems) return a;
+            const share=Number(x.relevantItemTopFamilyShare||0);
+            const bucket=share>=0.9?'90-100%':share>=0.75?'75-89%':share>=0.5?'50-74%':'<50%';
+            a[bucket]=(a[bucket]||0)+1;
+            if(x.relevantItemHasNonSeedFamily) a.withNonSeedFamily++;
+            else a.withoutNonSeedFamily++;
+            return a;
+          },{withNonSeedFamily:0,withoutNonSeedFamily:0,'90-100%':0,'75-89%':0,'50-74%':0,'<50%':0});
           const noChosenSamples=records.flatMap(r=>(r.discovery?.diagnostics?.noChosenSamples||[]).map(s=>({...s,title:s.title||r.title}))).slice(0,25);
           const familyLift=records.reduce((a,r)=>{
             const seedFamilies=new Set((r.sources||[]).filter(s=>!s.discovered).map(s=>s.publisherFamily).filter(Boolean));
@@ -114,6 +124,7 @@ jobs:
           console.log('TOP UNKNOWN REACHABLE DOMAINS',JSON.stringify(topUnknownDomains));
           console.log('DISCOVERY FAMILY LIFT',JSON.stringify(familyLift));
           console.log('DISCOVERY FAMILY SATURATION',JSON.stringify(familySaturation));
+          console.log('DISCOVERY FAMILY DIVERSITY BUCKETS',JSON.stringify(diversityBuckets));
           console.log('DISCOVERY LIFT SAMPLES',JSON.stringify(discoveryLiftSamples,null,2));
           console.log('NO-CHOSEN REASON COUNTS',JSON.stringify(noChosenReasonCounts));
           console.log('SEED-FAMILY REJECTION OUTCOMES',JSON.stringify({seedFamilyOnlyNoChoice:d.seedFamilyOnlyNoChoice||0,mixedRejectionNoChoice:d.mixedRejectionNoChoice||0}));
