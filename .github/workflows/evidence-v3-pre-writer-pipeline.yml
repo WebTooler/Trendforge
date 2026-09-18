@@ -1,0 +1,91 @@
+name: Evidence V3 — Pre-Writer Pipeline
+
+on:
+  push:
+    branches: ["evidence-v3-lab"]
+    paths:
+      - "scripts/pre-writer-pipeline.mjs"
+      - "scripts/trend-research.mjs"
+      - "scripts/score-trends.ts"
+      - "scripts/verify-trend-sources.mjs"
+      - "scripts/evidence-integrity-preflight.mjs"
+      - "scripts/evidence-extraction.mjs"
+      - "scripts/evidence-coverage.mjs"
+      - "scripts/evidence-article-blueprint.mjs"
+      - ".github/workflows/evidence-v3-pre-writer-pipeline.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evidence-v3-pre-writer-pipeline
+  cancel-in-progress: true
+
+jobs:
+  pre-writer-pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout lab
+        uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run complete pre-writer pipeline
+        run: node scripts/pre-writer-pipeline.mjs
+
+      - name: Validate pre-writer contract
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const x=JSON.parse(fs.readFileSync('data/pre-writer-pipeline.json','utf8'));
+          const required=[
+            'trend-research','trend-scoring','source-verification','publisher-discovery',
+            'evidence-integrity-preflight','article-identity-and-source-page-validation',
+            'evidence-extraction','evidence-coverage','evidence-band','article-blueprint'
+          ];
+          for(const s of required){
+            if(!x.stages.includes(s)) throw new Error('Missing pipeline stage: '+s);
+          }
+          if(!Array.isArray(x.candidates)) throw new Error('Missing candidates array');
+          for(const c of x.candidates){
+            if(c.readyForWriter && (!c.integrityPreflight || c.integrityPreflight.status!=='pass')) {
+              throw new Error('Writer-ready candidate without integrity pass: '+c.title);
+            }
+            if(c.readyForWriter && c.evidence.coverage.band==='insufficient') {
+              throw new Error('Writer-ready candidate has insufficient evidence: '+c.title);
+            }
+          }
+          console.log('Pre-writer contract: PASS');
+          NODE
+
+      - name: Report pipeline result
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const x=JSON.parse(fs.readFileSync('data/pre-writer-pipeline.json','utf8'));
+          console.log('SUMMARY',JSON.stringify(x.summary));
+          for(const c of x.candidates){
+            console.log(JSON.stringify({
+              title:c.title,
+              integrity:c.integrityPreflight?.status||'missing',
+              evidenceScore:c.evidence.coverage.score,
+              band:c.evidence.coverage.band,
+              families:c.evidence.coverage.independentPublisherFamilies,
+              readyForWriter:c.readyForWriter,
+              gate:c.writerGateReason
+            }));
+          }
+          console.log('GENERATE ARTICLE: NOT RUN');
+          NODE
