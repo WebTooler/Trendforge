@@ -1,0 +1,19 @@
+name: Evidence V3 Lab — P1 Integration Launcher
+
+on:
+  workflow_dispatch:
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lab branch
+        uses: actions/checkout@v4
+        with:
+          ref: evidence-v3-lab
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run P1 extraction to coverage integration test
+        run: node scripts/test-evidence-coverage-integration.mjs
