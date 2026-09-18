@@ -36,7 +36,7 @@ jobs:
           const account = process.env.CLOUDFLARE_ACCOUNT_ID;
           const token = process.env.CLOUDFLARE_API_TOKEN;
           const model = process.env.MODEL;
-          const url = `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${encodeURIComponent(model)}`;
+          const url = `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${model}`;
 
           const form = new FormData();
           form.append('prompt', 'A single polished editorial technology illustration of a modern enterprise AI server rack in a clean data center, realistic materials, natural cinematic lighting, no people, no logos, no readable text.');
