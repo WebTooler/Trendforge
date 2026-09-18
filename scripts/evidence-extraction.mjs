@@ -22,7 +22,10 @@ const JUNK=[
   /^(?:advertisement|advertising|sponsored|promoted|partner content)\b/i,
   /^(?:follow us|read more|related|most popular|trending|watch now|listen now)\b/i,
   /(?:privacy policy|terms of service|cookie policy|manage cookies)/i,
-  /(?:^|\s)(?:click here|learn more|shop now|download now)(?:\s|$)/i
+  /(?:^|\s)(?:click here|learn more|shop now|download now)(?:\s|$)/i,
+  /\b(?:tickets?|discount|save\s+up\s+to|%\s*off)\b.*\b(?:disrupt|conference|event|summit)\b/i,
+  /\b(?:disrupt|conference|event|summit)\b.*\b(?:tickets?|discount|save\s+up\s+to|%\s*off)\b/i,
+  /^back\s+by\s+popular\s+demand\b/i
 ];
 
 const isJunk=(text='')=>{
