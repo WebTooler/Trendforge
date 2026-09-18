@@ -59,7 +59,7 @@ async function fetchText(url){
 async function discoverRelatedSources(trend,seedSources){
   const query=encodeURIComponent(clean(trend.title));
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
-  const result=await fetchText(rssUrl); if(!result)return[];
+  const result=await fetchText(rssUrl); if(!result)return{sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}}};
   const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
   let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
