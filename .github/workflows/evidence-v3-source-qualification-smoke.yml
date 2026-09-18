@@ -72,16 +72,25 @@ jobs:
           const topSeedFamilyRejections=Object.entries(seedFamilyRejectionDomains).sort((a,b)=>b[1]-a[1]).slice(0,30);
           const noChosenSamples=records.flatMap(r=>(r.discovery?.diagnostics?.noChosenSamples||[]).map(s=>({...s,title:s.title||r.title}))).slice(0,25);
           const familyLift=records.reduce((a,r)=>{
-            const seed=Number(r.discovery?.seedPublisherFamilyCount||0);
-            const final=Number(r.independentPublisherCount||0);
-            if(final>=2) a.multiFamily++;
-            if(final===1) a.singleFamily++;
-            if(final===0) a.zeroFamily++;
-            if(final>seed) a.discoveryLift++;
-            if(final>seed && Number(r.discoveredSourceCount||0)>0) a.discoveryLiftWithSource++;
+            const seedFamilies=new Set((r.sources||[]).filter(s=>!s.discovered).map(s=>s.publisherFamily).filter(Boolean));
+            const discoveredFamilies=new Set((r.sources||[]).filter(s=>s.discovered).map(s=>s.publisherFamily).filter(Boolean));
+            const finalFamilies=new Set((r.independentPublisherFamilies||[]).filter(Boolean));
+            const newlyAdded=[...discoveredFamilies].filter(f=>!seedFamilies.has(f)&&finalFamilies.has(f));
+            if(finalFamilies.size>=2) a.multiFamily++;
+            if(finalFamilies.size===1) a.singleFamily++;
+            if(finalFamilies.size===0) a.zeroFamily++;
+            if(newlyAdded.length>0) a.discoveryAddedFamily++;
+            a.discoveryAddedFamilyCount+=newlyAdded.length;
             return a;
-          },{multiFamily:0,singleFamily:0,zeroFamily:0,discoveryLift:0,discoveryLiftWithSource:0});
-          const discoveryLiftSamples=records.filter(r=>Number(r.independentPublisherCount||0)>Number(r.discovery?.seedPublisherFamilyCount||0)).slice(0,30).map(r=>({title:r.title,category:r.category,seedFamilies:Number(r.discovery?.seedPublisherFamilyCount||0),finalFamilies:Number(r.independentPublisherCount||0),status:r.status,credible:Number(r.credibleSourceCount||0),reachable:Number(r.reachableSourceCount||0),discovered:Number(r.discoveredSourceCount||0),domains:r.independentReachableDomains||[],discoveredSources:(r.sources||[]).filter(s=>s.discovered).map(s=>({domain:s.domain,title:s.title,overlap:s.relevanceOverlap,ok:s.ok}))}));
+          },{multiFamily:0,singleFamily:0,zeroFamily:0,discoveryAddedFamily:0,discoveryAddedFamilyCount:0});
+          const discoveryLiftSamples=records.flatMap(r=>{
+            const seedFamilies=new Set((r.sources||[]).filter(s=>!s.discovered).map(s=>s.publisherFamily).filter(Boolean));
+            const discoveredFamilies=new Set((r.sources||[]).filter(s=>s.discovered).map(s=>s.publisherFamily).filter(Boolean));
+            const finalFamilies=new Set((r.independentPublisherFamilies||[]).filter(Boolean));
+            const newlyAdded=[...discoveredFamilies].filter(f=>!seedFamilies.has(f)&&finalFamilies.has(f));
+            if(!newlyAdded.length) return [];
+            return [{title:r.title,category:r.category,seedFamilies:[...seedFamilies],newlyAddedFamilies:newlyAdded,finalFamilies:[...finalFamilies],status:r.status,credible:Number(r.credibleSourceCount||0),reachable:Number(r.reachableSourceCount||0),discovered:Number(r.discoveredSourceCount||0),discoveredSources:(r.sources||[]).filter(s=>s.discovered&&newlyAdded.includes(s.publisherFamily)).map(s=>({domain:s.domain,publisherFamily:s.publisherFamily,title:s.title,overlap:s.relevanceOverlap,ok:s.ok}))}];
+          }).slice(0,30);
           console.log('DISCOVERY FAMILY LIFT',JSON.stringify(familyLift));
           console.log('DISCOVERY LIFT SAMPLES',JSON.stringify(discoveryLiftSamples,null,2));
           console.log('NO-CHOSEN REASON COUNTS',JSON.stringify(noChosenReasonCounts));
