@@ -100,6 +100,29 @@ jobs:
           console.log('Note: diagnostic buckets overlap; they are not additive.');
           NODE
 
+      - name: Single-source discovery filter diagnostics
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const x = JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
+          const rows = (x.records ?? []).filter(r => r.status === 'partial' && r.independentPublisherCount === 1 && r.relevantReachableSourceCount === 1);
+          const sum = (key) => rows.reduce((n,r) => n + Number(r.discovery?.diagnostics?.[key] || 0), 0);
+          console.log(`Single-source partial candidates: ${rows.length}`);
+          console.log(`Discovery RSS items seen: ${sum('rssItems')}`);
+          console.log(`Relevant discovery items: ${sum('relevantItems')}`);
+          console.log(`Items with candidate links: ${sum('itemsWithCandidateLinks')}`);
+          console.log(`Resolved candidate URLs: ${sum('resolvedCandidateUrls')}`);
+          console.log(`Selected alternative sources: ${sum('selected')}`);
+          console.log(`Discarded: seed-family/mirror/invalid = ${sum('discardedSeedFamily')}`);
+          console.log(`Discarded: homepage/feed = ${sum('discardedHomepageOrFeed')}`);
+          console.log(`Discarded: low link overlap = ${sum('discardedLowOverlap')}`);
+          console.log(`Discarded: no qualifying candidate = ${sum('discardedNoChosenCandidate')}`);
+          console.log('Sample single-source diagnostics:');
+          for (const r of rows.slice(0,10)) {
+            console.log(JSON.stringify({title:r.title,category:r.category,confidence:r.confidence,diagnostics:r.discovery?.diagnostics}));
+          }
+          NODE
+
       - name: Partial confidence root-cause breakdown
         run: |
           node --input-type=module <<'NODE'
