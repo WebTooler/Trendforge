@@ -28,7 +28,7 @@ function extractDecodeParams(html = '', articleId = '') {
     : null;
   const scoped = preferred ? escaped.match(preferred)?.[0] || '' : '';
   const signature = (scoped || escaped).match(/data-n-a-sg=["']([^"']+)["']/i)?.[1] || '';
-  const timestamp = (scoped || escaped).match(/data-n-a-ts=["'](\\d+)["']/i)?.[1] || '';
+  const timestamp = (scoped || escaped).match(/data-n-a-ts=["'](\d+)["']/i)?.[1] || '';
   const sourceId = (scoped || escaped).match(/data-n-a-id=["']([^"']+)["']/i)?.[1] || articleId;
   if (!signature || !timestamp || !sourceId) return null;
   return { sourceId, signature, timestamp };
