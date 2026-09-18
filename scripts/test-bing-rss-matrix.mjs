@@ -1,12 +1,6 @@
 const probes = [
-  ['technology', 'https://www.bing.com/news/search?q=technology&format=RSS'],
-  ['software', 'https://www.bing.com/news/search?q=software&format=RSS'],
-  ['chips', 'https://www.bing.com/news/search?q=chips&format=RSS'],
-  ['gadgets', 'https://www.bing.com/news/search?q=gadgets&format=RSS'],
-  ['tech-news', 'https://www.bing.com/news/search?q=tech%20news&format=RSS'],
-  ['technology-news', 'https://www.bing.com/news/search?q=technology%20news&format=RSS'],
-  ['software-news', 'https://www.bing.com/news/search?q=software%20news&format=RSS'],
-  ['consumer-tech', 'https://www.bing.com/news/search?q=consumer%20technology&format=RSS'],
+  ['technology-gadgets', 'https://www.bing.com/news/search?q=gadgets&count=30&format=RSS'],
+  ['technology-consumer', 'https://www.bing.com/news/search?q=consumer%20technology&count=30&format=RSS'],
 ];
 
 let pass = 0;
@@ -22,5 +16,5 @@ for (const [name, url] of probes) {
     console.log(JSON.stringify({name,status:r.status,contentType:r.headers.get('content-type'),bytes:body.length,items,channels,rss,finalUrl:r.url,pass:ok}));
   } catch(e){ console.log(JSON.stringify({name,error:e?.message||String(e),pass:false})); }
 }
-console.log(`Bing Technology query candidates: ${pass}/${probes.length} PASS`);
+console.log(`Bing Technology fallback candidates: ${pass}/${probes.length} PASS`);
 if(pass===0) process.exit(1);
