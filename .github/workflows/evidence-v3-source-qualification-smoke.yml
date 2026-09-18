@@ -1,0 +1,78 @@
+name: Evidence V3 — Source Qualification Smoke
+
+on:
+  push:
+    branches:
+      - evidence-v3-lab
+    paths:
+      - 'scripts/verify-trend-sources.mjs'
+      - 'scripts/trend-research.mjs'
+      - 'scripts/score-trends.ts'
+      - '.github/workflows/evidence-v3-source-qualification-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-qualification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+          fetch-depth: 1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm install --no-audit --no-fund
+      - name: Refresh trend research
+        run: node scripts/trend-research.mjs
+      - name: Score fresh candidates
+        run: npx tsx scripts/score-trends.ts
+      - name: Verify and discover publisher sources
+        run: node scripts/verify-trend-sources.mjs
+      - name: Validate discovery accounting
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const {records=[]}=JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
+          let bad=0;
+          for(const r of records){
+            const d=r.discovery?.diagnostics;
+            if(!d) continue;
+            if(d.selected + d.discardedNoChosenCandidate !== d.relevantItems){
+              console.error('Accounting mismatch:', r.title, JSON.stringify(d));
+              bad++;
+            }
+            if(d.resolvedCandidateUrls<0 || d.unresolvedCandidateUrls<0){
+              console.error('Invalid resolution counters:', r.title, JSON.stringify(d));
+              bad++;
+            }
+          }
+          if(bad) process.exit(1);
+          console.log('Discovery accounting invariant: PASS');
+          NODE
+      - name: Report qualification diagnostics
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const {records=[]}=JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
+          const d=records.reduce((a,r)=>{
+            const x=r.discovery?.diagnostics;
+            if(!x) return a;
+            for(const k of Object.keys(a)) a[k]+=Number(x[k]||0);
+            return a;
+          },{relevantItems:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0});
+          console.log('QUALIFICATION DIAGNOSTICS');
+          console.log(JSON.stringify(d,null,2));
+          console.log('STATUS', JSON.stringify({
+            candidates:records.length,
+            verified:records.filter(r=>r.status==='verified').length,
+            partial:records.filter(r=>r.status==='partial').length,
+            unverified:records.filter(r=>r.status==='unverified').length,
+            discovered:records.reduce((n,r)=>n+r.discoveredSourceCount,0)
+          }));
+          NODE
