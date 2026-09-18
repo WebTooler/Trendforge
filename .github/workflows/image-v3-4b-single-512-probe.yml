@@ -1,0 +1,99 @@
+name: TrendForge — Klein 4B Single 512 Probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      MODEL: '@cf/black-forest-labs/flux-2-klein-4b'
+    steps:
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test "$MODEL" = '@cf/black-forest-labs/flux-2-klein-4b'
+          echo "Single-request probe armed."
+          echo "Model: $MODEL"
+          echo "Dimensions: 512x512"
+          echo "Requests: exactly 1"
+          echo "Retries: 0"
+          echo "Production writes: none"
+
+      - name: Run exactly one 512x512 inference
+        run: |
+          set -euo pipefail
+          mkdir -p probe-output
+          node <<'NODE'
+          const fs = require('fs');
+          const account = process.env.CLOUDFLARE_ACCOUNT_ID;
+          const token = process.env.CLOUDFLARE_API_TOKEN;
+          const model = process.env.MODEL;
+          const url = `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${encodeURIComponent(model)}`;
+
+          const form = new FormData();
+          form.append('prompt', 'A single polished editorial technology illustration of a modern enterprise AI server rack in a clean data center, realistic materials, natural cinematic lighting, no people, no logos, no readable text.');
+          form.append('width', '512');
+          form.append('height', '512');
+
+          const started = Date.now();
+          fetch(url, {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${token}` },
+            body: form
+          }).then(async (resp) => {
+            const bytes = Buffer.from(await resp.arrayBuffer());
+            const elapsed = Date.now() - started;
+            fs.writeFileSync('probe-output/response.bin', bytes);
+            fs.writeFileSync('probe-output/result.json', JSON.stringify({
+              model, width: 512, height: 512, httpStatus: resp.status,
+              elapsedMs: elapsed, responseBytes: bytes.length,
+              contentType: resp.headers.get('content-type')
+            }, null, 2));
+
+            console.log(`HTTP ${resp.status} after ${elapsed}ms; bytes=${bytes.length}`);
+            if (!resp.ok) {
+              console.log(bytes.toString('utf8'));
+              process.exitCode = 1;
+              return;
+            }
+
+            const ct = resp.headers.get('content-type') || '';
+            if (!ct.includes('image/')) {
+              console.log(bytes.toString('utf8'));
+              process.exitCode = 1;
+              return;
+            }
+
+            fs.renameSync('probe-output/response.bin', 'probe-output/klein-4b-512.png');
+            console.log('SUCCESS: one image returned.');
+          }).catch((err) => {
+            fs.writeFileSync('probe-output/result.json', JSON.stringify({ model, width: 512, height: 512, error: String(err) }, null, 2));
+            console.error(err);
+            process.exitCode = 1;
+          });
+          NODE
+
+      - name: Upload probe result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trendforge-klein-4b-single-512-probe
+          path: probe-output/
+          if-no-files-found: warn
+
+      - name: Probe summary
+        if: always()
+        run: |
+          echo "Model: $MODEL"
+          echo "Dimensions: 512x512"
+          echo "Exactly one inference request attempted"
+          echo "No retry"
+          echo "No production promotion"
