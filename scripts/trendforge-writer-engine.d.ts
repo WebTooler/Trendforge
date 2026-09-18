@@ -9,10 +9,6 @@ declare module '*.mjs' {
     prompt: string;
     category?: string;
   }): Promise<TrendForgeWriterResult>;
-}
-
-
-declare module './evidence-extraction.mjs' {
   export function extractEvidenceFromHtml(html?: string, storyTitle?: string): {
     body: string;
     passages: string[];
