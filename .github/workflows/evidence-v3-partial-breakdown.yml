@@ -1,0 +1,48 @@
+name: Evidence V3 — Partial Verification Breakdown
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  breakdown:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+          fetch-depth: 1
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm install --no-audit --no-fund
+      - run: node scripts/trend-research.mjs
+      - run: npx tsx scripts/score-trends.ts
+      - run: node scripts/verify-trend-sources.mjs
+      - name: Breakdown partial candidates
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const {records=[]}=JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
+          const partial=records.filter(r=>r.status==='partial');
+          const bucket=(name,fn)=>console.log(name+': '+partial.filter(fn).length);
+          console.log('PARTIAL BREAKDOWN — '+partial.length+' candidates');
+          bucket('No reachable source',r=>r.reachableSourceCount===0);
+          bucket('Reachable but no credible source',r=>r.reachableSourceCount>0&&r.credibleSourceCount===0);
+          bucket('Only 1 independent publisher family',r=>r.independentPublisherCount<2);
+          bucket('2+ independent publisher families',r=>r.independentPublisherCount>=2);
+          bucket('Only 1 relevant reachable source',r=>r.relevantReachableSourceCount<2);
+          bucket('2+ relevant reachable sources',r=>r.relevantReachableSourceCount>=2);
+          bucket('Source checks <= 1',r=>r.sourceCount<=1);
+          bucket('Discovered sources present',r=>r.discoveredSourceCount>0);
+          bucket('No discovered sources',r=>r.discoveredSourceCount===0);
+          const byCat={};
+          for(const r of partial){byCat[r.category]=(byCat[r.category]||0)+1;}
+          console.log('PARTIAL BY CATEGORY');
+          for(const [k,v] of Object.entries(byCat).sort((a,b)=>b[1]-a[1])) console.log(k+': '+v);
+          console.log('NOTE: buckets overlap; they are diagnostic dimensions, not additive totals.');
+          NODE
