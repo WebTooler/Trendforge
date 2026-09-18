@@ -65,8 +65,8 @@ jobs:
             if(!x) return a;
             for(const k of Object.keys(a)) a[k]+=Number(x[k]||0);
             return a;
-          },{relevantItems:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0});
-          console.log('QUALIFICATION DIAGNOSTICS');
+          },{relevantItems:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,noChosenReasonCounts:{}});
+          const noChosenReasonCounts=records.reduce((a,r)=>{ const x=r.discovery?.diagnostics?.noChosenReasonCounts||{}; for(const [k,v] of Object.entries(x)) a[k]=(a[k]||0)+Number(v||0); return a; },{});\n          const noChosenSamples=records.flatMap(r=>(r.discovery?.diagnostics?.noChosenSamples||[]).map(s=>({...s,title:s.title||r.title}))).slice(0,25);\n          console.log('NO-CHOSEN REASON COUNTS',JSON.stringify(noChosenReasonCounts));\n          console.log('NO-CHOSEN SAMPLES',JSON.stringify(noChosenSamples,null,2));\n          console.log('QUALIFICATION DIAGNOSTICS');
           console.log(JSON.stringify(d,null,2));
           console.log('STATUS', JSON.stringify({
             candidates:records.length,
