@@ -72,6 +72,20 @@ jobs:
           const noChosenReasonCounts=records.reduce((a,r)=>{ const x=r.discovery?.diagnostics?.noChosenReasonCounts||{}; for(const [k,v] of Object.entries(x)) a[k]=(a[k]||0)+Number(v||0); return a; },{});
           const seedFamilyRejectionDomains=records.reduce((a,r)=>{ const x=r.discovery?.diagnostics?.seedFamilyRejectionDomains||{}; for(const [k,v] of Object.entries(x)) a[k]=(a[k]||0)+Number(v||0); return a; },{});
           const topSeedFamilyRejections=Object.entries(seedFamilyRejectionDomains).sort((a,b)=>b[1]-a[1]).slice(0,30);
+          const familySaturation=records.reduce((a,r)=>{
+            const x=r.discovery?.diagnostics||{};
+            a.candidatesWithDiscovery+=x.relevantItems?1:0;
+            a.relevantItems+=Number(x.relevantItems||0);
+            a.publisherFamilyItems+=Number(x.relevantItemPublisherFamilyItems||0);
+            a.seedFamilyItems+=Number(x.relevantItemSeedFamilyItems||0);
+            a.nonSeedFamilyItems+=Number(x.relevantItemNonSeedFamilyItems||0);
+            a.uniqueFamilyTotal+=Number(x.relevantItemUniquePublisherFamilies||0);
+            a.maxTopFamilyShare=Math.max(a.maxTopFamilyShare,Number(x.relevantItemTopFamilyShare||0));
+            return a;
+          },{candidatesWithDiscovery:0,relevantItems:0,publisherFamilyItems:0,seedFamilyItems:0,nonSeedFamilyItems:0,uniqueFamilyTotal:0,maxTopFamilyShare:0});
+          familySaturation.avgUniqueFamiliesPerCandidate=familySaturation.candidatesWithDiscovery?familySaturation.uniqueFamilyTotal/familySaturation.candidatesWithDiscovery:0;
+          familySaturation.seedFamilyItemShare=familySaturation.publisherFamilyItems?familySaturation.seedFamilyItems/familySaturation.publisherFamilyItems:0;
+          familySaturation.nonSeedFamilyItemShare=familySaturation.publisherFamilyItems?familySaturation.nonSeedFamilyItems/familySaturation.publisherFamilyItems:0;
           const noChosenSamples=records.flatMap(r=>(r.discovery?.diagnostics?.noChosenSamples||[]).map(s=>({...s,title:s.title||r.title}))).slice(0,25);
           const familyLift=records.reduce((a,r)=>{
             const seedFamilies=new Set((r.sources||[]).filter(s=>!s.discovered).map(s=>s.publisherFamily).filter(Boolean));
@@ -99,6 +113,7 @@ jobs:
           console.log('CREDIBILITY TIER COUNTS',JSON.stringify(credibilityTierCounts));
           console.log('TOP UNKNOWN REACHABLE DOMAINS',JSON.stringify(topUnknownDomains));
           console.log('DISCOVERY FAMILY LIFT',JSON.stringify(familyLift));
+          console.log('DISCOVERY FAMILY SATURATION',JSON.stringify(familySaturation));
           console.log('DISCOVERY LIFT SAMPLES',JSON.stringify(discoveryLiftSamples,null,2));
           console.log('NO-CHOSEN REASON COUNTS',JSON.stringify(noChosenReasonCounts));
           console.log('SEED-FAMILY REJECTION OUTCOMES',JSON.stringify({seedFamilyOnlyNoChoice:d.seedFamilyOnlyNoChoice||0,mixedRejectionNoChoice:d.mixedRejectionNoChoice||0}));
