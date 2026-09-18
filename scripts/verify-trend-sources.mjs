@@ -39,7 +39,6 @@ const decodeEntities = (value = '') => String(value)
 const stop = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies','industry','development','developments','story','stories','article','articles','exclusive','report']);
 const tokens = (value = '') => new Set(clean(value).toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !stop.has(w)));
 const topicOverlap = (a, b) => { const A=tokens(a),B=tokens(b); return [...A].filter(x=>B.has(x)).length; };
-const MIRROR_RE = /^(?:https?:\/\/)?(?:www\.)?(?:news\.google\.(?:com|co\.uk)|google\.(?:com|co\.uk))\b/i;
 const looksLikeHomepage = (value='') => { try { const u=new URL(value); return !u.pathname || u.pathname==='/' || u.pathname.length<8; } catch { return true; } };
 const looksLikeFeed = (value='') => { try { const u=new URL(value); return /^feeds?\./i.test(u.hostname)||/^rss\./i.test(u.hostname)||/^feed\./i.test(u.hostname)||/(^|\/)(rss|feed|feeds|atom|sitemap)(\/|\.|$)/i.test(u.pathname)||/(^|&)(feed|rss|atom|format)=/i.test(u.search.slice(1)); } catch { return true; } };
 
@@ -62,7 +61,7 @@ async function discoverRelatedSources(trend,seedSources){
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
   const result=await fetchText(rssUrl); if(!result)return[];
   const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
-  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,resolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedNoChosenCandidate:0,selected:0};
+  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
@@ -82,31 +81,48 @@ async function discoverRelatedSources(trend,seedSources){
   const discovered=[];
   for(const item of relevantItems){
     const candidates=[];
+    const considerCandidate = (candidateUrl, linkText, resolvedFrom) => {
+      const resolvedUrl=normalizeUrl(candidateUrl);
+      if(!resolvedUrl){ diagnostic.unresolvedCandidateUrls++; return; }
+      const d=domainOf(resolvedUrl);
+      if(!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; return; }
+      diagnostic.resolvedCandidateUrls++;
+      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ diagnostic.discardedHomepageOrFeed++; return; }
+      const overlapText=`${item.title} ${linkText||''}`;
+      const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,overlapText);
+      if(!linkText || !String(linkText).trim()){ diagnostic.discardedEmptyLinkText++; }
+      if(linkOverlap < 1){ diagnostic.discardedLowOverlap++; return; }
+      candidates.push({url:resolvedUrl,score:item.overlap+linkOverlap,resolvedFrom});
+    };
+
     for(const link of item.descriptionLinks){
       const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(link.url);
       if(isGn){diagnostic.googleArticleLinks++; if(/\/__i\/rss\/rd\/articles\//i.test(link.url))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;
       const resolvedUrl=await resolveGoogleNewsUrl(link.url);
-      const d=domainOf(resolvedUrl);
-      if(!resolvedUrl){diagnostic.unresolvedCandidateUrls++; continue;}
-      if(!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; continue; }
-      diagnostic.resolvedCandidateUrls++;
-      const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${item.title} ${link.text}`);
-      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ diagnostic.discardedHomepageOrFeed++; continue; }
-      if(linkOverlap < 1){ diagnostic.discardedLowOverlap++; continue; }
-      candidates.push({url:resolvedUrl,score:linkOverlap+item.overlap,resolvedFrom:'google-news-description-link'});
+      considerCandidate(resolvedUrl,link.text,'google-news-description-link');
     }
+
+    if(item.publisherUrl){
+      diagnostic.directCandidateLinks++;
+      const publisherPage=await fetchText(item.publisherUrl);
+      const finalUrl=normalizeUrl(publisherPage?.finalUrl||item.publisherUrl);
+      considerCandidate(finalUrl,clean(item.title),'google-news-publisher-source');
+    }
+
     if(item.link){
       const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);
       if(isGn){diagnostic.googleArticleLinks++; if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;
       const publisherUrl=await resolveGoogleNewsUrl(item.link);
-      if(publisherUrl){
-        diagnostic.resolvedCandidateUrls++;
-        const resolved=await fetchText(publisherUrl); const finalUrl=normalizeUrl(resolved?.finalUrl||publisherUrl); const d=domainOf(finalUrl);
-        if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!seeds.has(publisherFamily(finalUrl))&&!looksLikeHomepage(finalUrl)&&!looksLikeFeed(finalUrl)){ diagnostic.resolvedCandidateUrls++; candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'}); }
+      if(!publisherUrl) diagnostic.unresolvedCandidateUrls++;
+      else {
+        const resolved=await fetchText(publisherUrl);
+        const finalUrl=normalizeUrl(resolved?.finalUrl||publisherUrl);
+        considerCandidate(finalUrl,clean(item.title),'google-news-article-link');
       }
     }
-    candidates.sort((a,b)=>b.score-a.score);
-    const chosen=candidates.find(c=>c.score>=item.overlap+1);
+
+    candidates.sort((a,b)=>b.score-a.score||a.url.localeCompare(b.url));
+    const chosen=candidates[0];
     if(!chosen){ diagnostic.discardedNoChosenCandidate++; continue; }
     diagnostic.selected++;
     const d=domainOf(chosen.url);
@@ -156,3 +172,4 @@ console.log(`Source Verification v5: ${records.length} candidate(s) checked — 
 console.log(`Evidence discovery: ${discovered} discovered publisher article source(s), ${independentFamilies} candidate-level independent publisher family count(s).`);
 console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE} or no independent seed family).`);
 console.log(`Evidence discovery: candidate-scoped Google News discovery with publisher URL resolution, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded after resolution, feed/homepage URLs excluded, publisher-family aware source counts.`);
+console.log(`Evidence discovery: candidate qualification accounting — resolved URLs are counted once; publisher <source> metadata is considered; every rejection has a diagnostic bucket.`);
