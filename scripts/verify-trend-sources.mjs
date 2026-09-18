@@ -81,17 +81,20 @@ async function discoverRelatedSources(trend,seedSources){
   const discovered=[];
   for(const item of relevantItems){
     const candidates=[];
+    const rejectionReasons=[];
     const considerCandidate = (candidateUrl, linkText, resolvedFrom) => {
       const resolvedUrl=normalizeUrl(candidateUrl);
-      if(!resolvedUrl){ diagnostic.unresolvedCandidateUrls++; return; }
+      if(!resolvedUrl){ rejectionReasons.push('unresolved'); diagnostic.unresolvedCandidateUrls++; return; }
       const d=domainOf(resolvedUrl);
-      if(!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1; return; }
+      if(!d){ rejectionReasons.push('invalid-domain'); diagnostic.unresolvedCandidateUrls++; return; }
+      if(MIRROR_DOMAINS.has(d)){ rejectionReasons.push('mirror-domain'); diagnostic.discardedSeedFamily++; diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1; return; }
+      if(seeds.has(publisherFamily(resolvedUrl))){ rejectionReasons.push('seed-family'); diagnostic.discardedSeedFamily++; diagnostic.seedFamilyRejectionDomains[d]=(diagnostic.seedFamilyRejectionDomains[d]||0)+1; return; }
       diagnostic.resolvedCandidateUrls++;
-      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ diagnostic.discardedHomepageOrFeed++; diagnostic.homepageFeedRejectionDomains[d]=(diagnostic.homepageFeedRejectionDomains[d]||0)+1; return; }
+      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ rejectionReasons.push('homepage-or-feed'); diagnostic.discardedHomepageOrFeed++; diagnostic.homepageFeedRejectionDomains[d]=(diagnostic.homepageFeedRejectionDomains[d]||0)+1; return; }
       const overlapText=`${item.title} ${linkText||''}`;
       const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,overlapText);
       if(!linkText || !String(linkText).trim()){ diagnostic.discardedEmptyLinkText++; }
-      if(linkOverlap < 1){ diagnostic.discardedLowOverlap++; return; }
+      if(linkOverlap < 1){ rejectionReasons.push('low-overlap'); diagnostic.discardedLowOverlap++; return; }
       candidates.push({url:resolvedUrl,score:item.overlap+linkOverlap,resolvedFrom});
     };
 
@@ -126,11 +129,10 @@ async function discoverRelatedSources(trend,seedSources){
     if(!chosen){
       diagnostic.discardedNoChosenCandidate++;
       const attempted = diagnostic.resolvedCandidateUrls;
-      const reason = item.descriptionLinks.length || item.publisherUrl || item.link
-        ? (candidates.length ? 'candidate-filtered' : 'all-candidate-links-rejected')
-        : 'no-candidate-links';
+      const reason = rejectionReasons.length ? rejectionReasons[0] : (item.descriptionLinks.length || item.publisherUrl || item.link ? 'all-candidate-links-rejected' : 'no-candidate-links');
+      for(const rejection of rejectionReasons) diagnostic.noChosenReasonCounts[rejection]=(diagnostic.noChosenReasonCounts[rejection]||0)+1;
       diagnostic.noChosenReasonCounts[reason]=(diagnostic.noChosenReasonCounts[reason]||0)+1;
-      if(diagnostic.noChosenSamples.length<25) diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,descriptionLinks:item.descriptionLinks.length,hasPublisherUrl:Boolean(item.publisherUrl),hasLink:Boolean(item.link),reason});
+      if(diagnostic.noChosenSamples.length<25) diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,descriptionLinks:item.descriptionLinks.length,hasPublisherUrl:Boolean(item.publisherUrl),hasLink:Boolean(item.link),reason,rejectionReasons:[...new Set(rejectionReasons)]});
       continue;
     }
     diagnostic.selected++; diagnostic.selectedDomains[domainOf(chosen.url)]=(diagnostic.selectedDomains[domainOf(chosen.url)]||0)+1;
