@@ -22,18 +22,17 @@ function articleIdFromUrl(value = '') {
 
 function extractDecodeParams(html = '', articleId = '') {
   const escaped = String(html);
-  const pattern = new RegExp(
-    `<c-wiz\\b[^>]*>[\\s\\S]*?<div\\b[^>]*data-n-a-id=["']${articleId.replace(/[.*+?^\\${}()|[\\]\\\\]/g, '\\$&')}["'][^>]*>`,
-    'i'
-  );
-  const scoped = escaped.match(pattern)?.[0] || escaped;
-  const signature = scoped.match(/data-n-a-sg=["']([^"']+)["']/i)?.[1] || '';
-  const timestamp = scoped.match(/data-n-a-ts=["'](\d+)["']/i)?.[1] || '';
-  const sourceId = scoped.match(/data-n-a-id=["']([^"']+)["']/i)?.[1] || articleId;
+  const idPattern = articleId ? articleId.replace(/[.*+?^$\{}()|[\]\\]/g, '\\$&') : '';
+  const preferred = idPattern
+    ? new RegExp(`<div\\b[^>]*data-n-a-id=["']${idPattern}["'][^>]*>`, 'i')
+    : null;
+  const scoped = preferred ? escaped.match(preferred)?.[0] || '' : '';
+  const signature = (scoped || escaped).match(/data-n-a-sg=["']([^"']+)["']/i)?.[1] || '';
+  const timestamp = (scoped || escaped).match(/data-n-a-ts=["'](\\d+)["']/i)?.[1] || '';
+  const sourceId = (scoped || escaped).match(/data-n-a-id=["']([^"']+)["']/i)?.[1] || articleId;
   if (!signature || !timestamp || !sourceId) return null;
   return { sourceId, signature, timestamp };
 }
-
 function buildRequestBody({ sourceId, signature, timestamp }) {
   const inner = JSON.stringify([
     'garturlreq',
@@ -80,12 +79,15 @@ export async function resolveGoogleNewsUrl(value = '', { timeoutMs = 8000 } = {}
   if (!articleId) return null;
 
   try {
-    const page = await fetch(`https://news.google.com/articles/${encodeURIComponent(articleId)}`, {
+    const page = await fetch(`https://news.google.com/rss/articles/${encodeURIComponent(articleId)}`, {
       redirect: 'follow',
       signal: AbortSignal.timeout(timeoutMs),
       headers: {
-        'user-agent': 'TrendForge-source-resolver/1.0',
-        accept: 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.8'
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'accept-language': 'en-US,en;q=0.9',
+        'cache-control': 'no-cache',
+        referer: 'https://news.google.com/'
       }
     });
     if (!page.ok) return null;
@@ -100,6 +102,9 @@ export async function resolveGoogleNewsUrl(value = '', { timeoutMs = 8000 } = {}
       signal: AbortSignal.timeout(timeoutMs),
       headers: {
         'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+        accept: '*/*',
+        origin: 'https://news.google.com',
         referer: 'https://news.google.com/'
       },
       body: buildRequestBody(params)
