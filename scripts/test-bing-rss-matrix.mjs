@@ -13,9 +13,15 @@ for (const [name, url] of probes) {
     const r = await fetch(url, { redirect:'follow', signal:AbortSignal.timeout(10000), headers:{'user-agent':'TrendForgeBot/2.0 (+https://github.com/WebTooler/Trendforge)',accept:'application/rss+xml, application/xml, text/xml;q=0.9, */*;q=0.8'} });
     const body = await r.text();
     const items=(body.match(/<item\b/gi)||[]).length;
-    const ok=r.ok && /xml/i.test(r.headers.get('content-type')||'') && items>0;
+    const entries=(body.match(/<entry\b/gi)||[]).length;
+    const channels=(body.match(/<channel\b/gi)||[]).length;
+    const rss=(body.match(/<rss\b/gi)||[]).length;
+    const html=(body.match(/<html\b/gi)||[]).length;
+    const xmlDecl=/^\s*<\?xml/i.test(body);
+    const technologyShape=name.startsWith('Technology') ? body.slice(0,1200).replace(/\s+/g,' ').trim() : undefined;
+    const ok=r.ok && /xml/i.test(r.headers.get('content-type')||'') && (items+entries)>0;
     if(ok) pass++;
-    console.log(JSON.stringify({name,status:r.status,contentType:r.headers.get('content-type'),bytes:body.length,items,finalUrl:r.url,pass:ok}));
+    console.log(JSON.stringify({name,status:r.status,contentType:r.headers.get('content-type'),bytes:body.length,items,entries,channels,rss,html,xmlDecl,finalUrl:r.url,pass:ok,technologyShape}));
   } catch(e) {
     console.log(JSON.stringify({name,error:e?.message||String(e),pass:false}));
   }
