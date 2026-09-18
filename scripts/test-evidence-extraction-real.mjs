@@ -78,7 +78,7 @@ const fetchHtml=async()=>{
 };
 
 const promo=/25% off|save up to|buy tickets|tickets now|subscribe to our newsletter|follow us for more|advertisement|sponsored|newsletter/i;
-const useful=/AI agents|oversight|Apollo|Watcher|observability|Hugging Face|Y Combinator/i;
+const useful=/AI agents|oversight|Apollo|Watcher|observability|Hugging Face|Y Combinator/gi;
 
 const {html,finalUrl}=await fetchHtml();
 const oldBody=oldExtractGroundedBody(html);
