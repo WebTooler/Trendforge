@@ -63,7 +63,7 @@ const articleIdentity = (html='', pageTitle='', targetTitle='') => {
   const text=clean(html);
   const signals=[];
   if(/<article\\b/i.test(html))signals.push('article-tag');
-  if(/application\\/ld\\+json/i.test(html)&&/(newsarticle|article|reportage)/i.test(html))signals.push('article-schema');
+  if(html.includes('application/ld+json')&&/(newsarticle|article|reportage)/i.test(html))signals.push('article-schema');
   if(/(?:property|name)=["']article:(?:published_time|modified_time|author|section)["']/i.test(html))signals.push('article-meta');
   if(/<time\\b/i.test(html))signals.push('date-signal');
   if(/(?:byline|author|written by|reporter|correspondent)/i.test(text.slice(0,12000)))signals.push('author-signal');
