@@ -10,3 +10,17 @@ declare module '*.mjs' {
     category?: string;
   }): Promise<TrendForgeWriterResult>;
 }
+
+
+declare module './evidence-extraction.mjs' {
+  export function extractEvidenceFromHtml(html?: string, storyTitle?: string): {
+    body: string;
+    passages: string[];
+    kind: string;
+    headline: string;
+    description: string;
+    rawParagraphCount: number;
+    selectedPassageCount: number;
+    selectedChars: number;
+  };
+}
