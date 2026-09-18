@@ -61,7 +61,7 @@ async function discoverRelatedSources(trend,seedSources){
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
   const result=await fetchText(rssUrl); if(!result)return{sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}}};
   const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
-  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}};
+  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
@@ -123,7 +123,16 @@ async function discoverRelatedSources(trend,seedSources){
 
     candidates.sort((a,b)=>b.score-a.score||a.url.localeCompare(b.url));
     const chosen=candidates[0];
-    if(!chosen){ diagnostic.discardedNoChosenCandidate++; continue; }
+    if(!chosen){
+      diagnostic.discardedNoChosenCandidate++;
+      const attempted = diagnostic.resolvedCandidateUrls;
+      const reason = item.descriptionLinks.length || item.publisherUrl || item.link
+        ? (candidates.length ? 'candidate-filtered' : 'all-candidate-links-rejected')
+        : 'no-candidate-links';
+      diagnostic.noChosenReasonCounts[reason]=(diagnostic.noChosenReasonCounts[reason]||0)+1;
+      if(diagnostic.noChosenSamples.length<25) diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,descriptionLinks:item.descriptionLinks.length,hasPublisherUrl:Boolean(item.publisherUrl),hasLink:Boolean(item.link),reason});
+      continue;
+    }
     diagnostic.selected++; diagnostic.selectedDomains[domainOf(chosen.url)]=(diagnostic.selectedDomains[domainOf(chosen.url)]||0)+1;
     const d=domainOf(chosen.url);
     discovered.push({title:item.title,url:chosen.url,sourceName:d,discovered:true,relevanceOverlap:item.overlap,resolvedFrom:chosen.resolvedFrom,discoveryTitle:item.title,discoveryDescription:item.description});
