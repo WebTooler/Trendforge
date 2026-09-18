@@ -1,0 +1,71 @@
+name: TrendForge — Cloudflare AI Account Diagnostic
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose-cloudflare-ai:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_IMAGE_MODEL: '@cf/black-forest-labs/flux-2-klein-4b'
+
+    steps:
+      - name: Verify required secrets exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          test -n "$CLOUDFLARE_API_TOKEN"
+          echo "Account ID secret: present"
+          echo "API token secret: present"
+          echo "Account ID length: ${#CLOUDFLARE_ACCOUNT_ID}"
+
+      - name: Verify API token
+        shell: bash
+        run: |
+          set -euo pipefail
+          body="$(curl -sS --retry 2 --retry-all-errors             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"             "https://api.cloudflare.com/client/v4/user/tokens/verify")"
+          success="$(printf '%s' "$body" | jq -r '.success // false')"
+          status="$(printf '%s' "$body" | jq -r '.result.status // "unknown"')"
+          echo "Token verify success: $success"
+          echo "Token status: $status"
+          test "$success" = "true"
+          test "$status" = "active"
+
+      - name: Verify token can access the configured account
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp)"
+          status="$(curl -sS --retry 2 --retry-all-errors             -o "$tmp" -w '%{http_code}'             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"             "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/models")"
+          echo "Workers AI model-catalog HTTP status: $status"
+          success="$(jq -r '.success // false' "$tmp")"
+          echo "Workers AI model-catalog success: $success"
+          if [ "$status" != "200" ] || [ "$success" != "true" ]; then
+            echo "Account/token access check failed. Sanitized response:"
+            jq -c '{success, errors: [.errors[]? | {code, message}]}' "$tmp"
+            exit 1
+          fi
+
+          present="$(jq -r --arg model "$CLOUDFLARE_IMAGE_MODEL" '
+            [
+              .. | objects
+              | select((.id? // .name? // .model? // "") == $model)
+            ] | length > 0
+          ' "$tmp")"
+          echo "Klein 4B present in account model catalog: $present"
+          test "$present" = "true"
+
+      - name: Diagnostic summary
+        run: |
+          echo "No inference request was made."
+          echo "No neurons were consumed by this diagnostic."
+          echo "Configured model: $CLOUDFLARE_IMAGE_MODEL"
+          echo "If this job passes but inference still returns Cloudflare 4006,"
+          echo "the remaining issue is account-side Workers AI quota/billing state,"
+          echo "not the GitHub secret pairing or model selection."
