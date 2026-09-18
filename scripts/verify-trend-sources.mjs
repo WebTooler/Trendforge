@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { resolveGoogleNewsUrl } from './google-news-url-resolver.mjs';
 
 const inputPath = 'data/scored-trends.json';
 const outputPath = 'data/source-verification.json';
@@ -41,7 +42,7 @@ function extractDescriptionLinks(rawDescription) {
   const decoded=decodeEntities(rawDescription);
   for(const match of decoded.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)){
     const url=normalizeUrl(match[1]), text=clean(match[2]);
-    if(!url||!text||MIRROR_RE.test(url)||looksLikeHomepage(url)||looksLikeFeed(url))continue;
+    if(!url||!text||looksLikeHomepage(url)||looksLikeFeed(url))continue;
     links.push({url,text});
   }
   return links;
@@ -73,14 +74,19 @@ async function discoverRelatedSources(trend,seedSources){
   for(const item of relevantItems){
     const candidates=[];
     for(const link of item.descriptionLinks){
-      const d=domainOf(link.url); if(!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(link.url)))continue;
+      const resolvedUrl=await resolveGoogleNewsUrl(link.url);
+      const d=domainOf(resolvedUrl);
+      if(!resolvedUrl||!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl)))continue;
       const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${item.title} ${link.text}`);
-      if(looksLikeHomepage(link.url)||looksLikeFeed(link.url))continue;
-      candidates.push({url:link.url,score:linkOverlap+item.overlap,resolvedFrom:'google-news-description-link'});
+      if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl))continue;
+      candidates.push({url:resolvedUrl,score:linkOverlap+item.overlap,resolvedFrom:'google-news-description-link'});
     }
-    if(item.link && !MIRROR_RE.test(item.link)){
-      const resolved=await fetchText(item.link); const finalUrl=normalizeUrl(resolved?.finalUrl||''); const d=domainOf(finalUrl);
-      if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!seeds.has(publisherFamily(finalUrl))&&!looksLikeHomepage(finalUrl)&&!looksLikeFeed(finalUrl))candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'});
+    if(item.link){
+      const publisherUrl=await resolveGoogleNewsUrl(item.link);
+      if(publisherUrl){
+        const resolved=await fetchText(publisherUrl); const finalUrl=normalizeUrl(resolved?.finalUrl||publisherUrl); const d=domainOf(finalUrl);
+        if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!seeds.has(publisherFamily(finalUrl))&&!looksLikeHomepage(finalUrl)&&!looksLikeFeed(finalUrl))candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'});
+      }
     }
     candidates.sort((a,b)=>b.score-a.score);
     const chosen=candidates.find(c=>c.score>=item.overlap+1);
@@ -96,8 +102,9 @@ async function checkUrl(url){const started=Date.now();try{const response=await f
 
 async function verifyCandidate(trend){
   const rawSources=Array.isArray(trend.sources)&&trend.sources.length?trend.sources:[{title:trend.sourceName||trend.title,url:trend.sourceUrl||trend.link}];
-  const seedSources=rawSources.map(source=>({...source,url:normalizeUrl(source.url)})).filter(source=>source.url&&!MIRROR_DOMAINS.has(domainOf(source.url))&&!looksLikeHomepage(source.url)&&!looksLikeFeed(source.url));
-  const trendLink=normalizeUrl(trend.link||'');
+  const resolvedSources=await Promise.all(rawSources.map(async source=>({...source,url:await resolveGoogleNewsUrl(source.url||'')})));
+  const seedSources=resolvedSources.map(source=>({...source,url:normalizeUrl(source.url)})).filter(source=>source.url&&!MIRROR_DOMAINS.has(domainOf(source.url))&&!looksLikeHomepage(source.url)&&!looksLikeFeed(source.url));
+  const trendLink=await resolveGoogleNewsUrl(trend.link||'');
   if(trendLink&&!MIRROR_DOMAINS.has(domainOf(trendLink))&&!looksLikeHomepage(trendLink)&&!looksLikeFeed(trendLink))seedSources.unshift({title:trend.title,url:trendLink,resolvedFrom:'research-story-link'});
   const seedFamilies=new Set(seedSources.map(source=>publisherFamily(source.url)).filter(Boolean));
   const score=Number(trend.score??trend.finalScore??trend.priorityScore??0);
@@ -124,9 +131,9 @@ async function verifyCandidate(trend){
 async function mapWithConcurrency(items,limit,worker){const results=new Array(items.length);let nextIndex=0;async function runWorker(){while(true){const index=nextIndex++;if(index>=items.length)return;results[index]=await worker(items[index],index);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},()=>runWorker()));return results;}
 if(!fs.existsSync(inputPath)){console.log(`No ${inputPath}; source verification skipped.`);process.exit(0);}
 const research=JSON.parse(fs.readFileSync(inputPath,'utf8'));const trends=research.trends??[];const startedAt=Date.now();const records=await mapWithConcurrency(trends,CANDIDATE_CONCURRENCY,verifyCandidate);const durationMs=Date.now()-startedAt;
-fs.mkdirSync('data',{recursive:true});fs.writeFileSync(outputPath,`${JSON.stringify({version:4,generatedAt:new Date().toISOString(),durationMs,candidateConcurrency:CANDIDATE_CONCURRENCY,discoveryMinScore:DISCOVERY_MIN_SCORE,records},null,2)}\n`);
+fs.mkdirSync('data',{recursive:true});fs.writeFileSync(outputPath,`${JSON.stringify({version:5,generatedAt:new Date().toISOString(),durationMs,candidateConcurrency:CANDIDATE_CONCURRENCY,discoveryMinScore:DISCOVERY_MIN_SCORE,records},null,2)}\n`);
 const verified=records.filter(record=>record.status==='verified').length,partial=records.filter(record=>record.status==='partial').length,unverified=records.filter(record=>record.status==='unverified').length;const discovered=records.reduce((sum,record)=>sum+record.discoveredSourceCount,0),independentFamilies=records.reduce((sum,record)=>sum+record.independentPublisherCount,0),discoveryEnabled=records.filter(record=>record.discovery?.enabled).length;
 console.log(`Source Verification v4: ${records.length} candidate(s) checked — ${verified} verified, ${partial} partial, ${unverified} unverified.`);
 console.log(`Evidence discovery: ${discovered} discovered publisher article source(s), ${independentFamilies} candidate-level independent publisher family count(s).`);
 console.log(`Evidence discovery: ${discoveryEnabled} candidate(s) enriched (score >= ${DISCOVERY_MIN_SCORE} or no independent seed family).`);
-console.log(`Evidence discovery: candidate-scoped Google News discovery, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded, feed/homepage URLs excluded, publisher-family aware source counts.`);
+console.log(`Evidence discovery: candidate-scoped Google News discovery with publisher URL resolution, topic overlap >= ${MIN_DISCOVERY_OVERLAP}, Google domains excluded after resolution, feed/homepage URLs excluded, publisher-family aware source counts.`);
