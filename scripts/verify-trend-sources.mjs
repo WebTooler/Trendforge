@@ -92,6 +92,21 @@ async function discoverRelatedSources(trend,seedSources){
   }).filter(item=>item.title&&item.overlap>=MIN_DISCOVERY_OVERLAP&&(item.publisherUrl||item.link||item.descriptionLinks.length))
     .sort((a,b)=>b.overlap-a.overlap).slice(0,DISCOVERY_ITEM_LIMIT);
   diagnostic.relevantItems=relevantItems.length;
+  const relevantFamilyCounts={};
+  let relevantSeedFamilyItems=0;
+  for(const item of relevantItems){
+    const candidateFamily=publisherFamily(item.publisherUrl||(!/^https:\/\/news\.google\.com\//i.test(item.link||'')?item.link:''));
+    if(!candidateFamily) continue;
+    relevantFamilyCounts[candidateFamily]=(relevantFamilyCounts[candidateFamily]||0)+1;
+    if(seeds.has(candidateFamily)) relevantSeedFamilyItems++;
+  }
+  const relevantFamilyTotal=Object.values(relevantFamilyCounts).reduce((a,n)=>a+n,0);
+  diagnostic.relevantItemPublisherFamilyCounts=relevantFamilyCounts;
+  diagnostic.relevantItemUniquePublisherFamilies=Object.keys(relevantFamilyCounts).length;
+  diagnostic.relevantItemPublisherFamilyItems=relevantFamilyTotal;
+  diagnostic.relevantItemSeedFamilyItems=relevantSeedFamilyItems;
+  diagnostic.relevantItemNonSeedFamilyItems=Math.max(0,relevantFamilyTotal-relevantSeedFamilyItems);
+  diagnostic.relevantItemTopFamilyShare=relevantFamilyTotal?Math.max(...Object.values(relevantFamilyCounts))/relevantFamilyTotal:0;
   diagnostic.relevantItemsBeforeLimit=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
     const rawDescription=(item.match(/<description>([\s\S]*?)<\/description>/i)||[,''])[1];
