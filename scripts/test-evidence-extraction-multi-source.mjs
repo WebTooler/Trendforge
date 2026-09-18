@@ -3,16 +3,10 @@ import { extractEvidenceFromHtml } from './evidence-extraction.mjs';
 
 const SOURCES = [
   {
-    name: 'Reuters — Anthropic Claude research',
-    url: 'https://www.reuters.com/business/anthropic-says-claude-now-leads-quarter-work-building-its-next-ai-models-2026-09-17/',
-    title: 'Anthropic says Claude now leads a quarter of work building its next AI models',
-    required: ['anthropic', 'claude']
-  },
-  {
-    name: 'Reuters — Federal Register Qwen',
-    url: 'https://www.reuters.com/legal/litigation/us-government-website-used-ai-search-tool-china-that-fbi-said-copied-anthropic-2026-09-17/',
-    title: 'US government website used AI search tool from China that FBI said copied Anthropic',
-    required: ['government', 'ai', 'anthropic']
+    name: 'TechCrunch — Rogue AI agents',
+    url: 'https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai/',
+    title: 'The fix for rogue AI agents could be more AI',
+    required: ['ai', 'agents', 'oversight']
   },
   {
     name: 'The Verge — Claude Code Projects',
@@ -25,6 +19,12 @@ const SOURCES = [
     url: 'https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/',
     title: 'Apple reportedly building server packed with M-series Ultra chips for AI',
     required: ['apple', 'server', 'ai']
+  },
+  {
+    name: 'MIT News — HardFlow AI safety',
+    url: 'https://news.mit.edu/2026/new-method-enables-ai-safety-critical-situations-0914',
+    title: 'New method enables AI for safety-critical situations',
+    required: ['ai', 'safety', 'constraints']
   }
 ];
 
