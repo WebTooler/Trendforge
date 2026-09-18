@@ -1,0 +1,64 @@
+name: Evidence V3 — Real Evidence Smoke
+
+on:
+  push:
+    branches: ["evidence-v3-lab"]
+    paths:
+      - "scripts/evidence-v3-real-evidence-smoke.mjs"
+      - "scripts/evidence-extraction.mjs"
+      - "scripts/evidence-coverage.mjs"
+      - "scripts/evidence-article-blueprint.mjs"
+      - "data/source-verification.json"
+      - ".github/workflows/evidence-v3-real-evidence-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evidence-v3-real-evidence-smoke
+  cancel-in-progress: true
+
+jobs:
+  real-evidence-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout lab
+        uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build real evidence packages
+        run: node scripts/evidence-v3-real-evidence-smoke.mjs
+
+      - name: Report evidence packages
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const x=JSON.parse(fs.readFileSync('data/evidence-v3-real-evidence-smoke.json','utf8'));
+          console.log('Candidates checked:',x.candidatesChecked);
+          console.log('Summary:',JSON.stringify(x.summary));
+          for(const r of x.results){
+            console.log(JSON.stringify({
+              title:r.title,
+              confidence:r.verificationConfidence,
+              sourceCount:r.coverage.sourceCount,
+              families:r.coverage.independentPublisherFamilies,
+              score:r.coverage.score,
+              band:r.coverage.band,
+              readyForRichArticle:r.coverage.readyForRichArticle,
+              blockers:r.coverage.blockers
+            }));
+          }
+          NODE
