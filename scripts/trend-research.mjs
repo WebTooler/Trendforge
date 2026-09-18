@@ -13,14 +13,15 @@ const feeds = [
   ['Product Launches', 'Google News', 'https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en', 'news'],
   ['Crypto', 'Google News', 'https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en', 'news'],
 
-  // Independent news discovery network. These are discovery signals only;
+  // Independent news discovery network. Bing RSS is queried with simple terms + count=30 because
+  // compound OR queries are intermittently returned as empty/HTML responses.
   // downstream source verification still requires real article pages.
-  ['AI', 'Bing News', 'https://www.bing.com/news/search?q=AI%20technology%20OR%20artificial%20intelligence&format=rss', 'news'],
-  ['Technology', 'Bing News', 'https://www.bing.com/news/search?q=technology%20OR%20software%20OR%20chips&format=rss', 'news'],
-  ['Digital Life', 'Bing News', 'https://www.bing.com/news/search?q=privacy%20OR%20security%20OR%20smartphones&format=rss', 'news'],
-  ['Innovation', 'Bing News', 'https://www.bing.com/news/search?q=innovation%20OR%20breakthrough%20technology&format=rss', 'news'],
-  ['Product Launches', 'Bing News', 'https://www.bing.com/news/search?q=new%20product%20launch%20OR%20device%20launch&format=rss', 'news'],
-  ['Crypto', 'Bing News', 'https://www.bing.com/news/search?q=crypto%20OR%20bitcoin%20OR%20ethereum&format=rss', 'news'],
+  ['AI', 'Bing News', 'https://www.bing.com/news/search?q=AI&count=30&format=RSS', 'news'],
+  ['Technology', 'Bing News', 'https://www.bing.com/news/search?q=technology&count=30&format=RSS', 'news'],
+  ['Digital Life', 'Bing News', 'https://www.bing.com/news/search?q=privacy&count=30&format=RSS', 'news'],
+  ['Innovation', 'Bing News', 'https://www.bing.com/news/search?q=innovation&count=30&format=RSS', 'news'],
+  ['Product Launches', 'Bing News', 'https://www.bing.com/news/search?q=product%20launch&count=30&format=RSS', 'news'],
+  ['Crypto', 'Bing News', 'https://www.bing.com/news/search?q=crypto&count=30&format=RSS', 'news'],
 
   // Search-interest signal. Google Trends is not evidence and is marked
   // discoveryOnly so verification never treats it as a publisher source.
