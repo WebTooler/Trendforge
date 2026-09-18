@@ -1,0 +1,19 @@
+name: Evidence V3 Lab — P1 Evidence Article Blueprint
+
+on:
+  workflow_dispatch:
+
+jobs:
+  blueprint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lab branch
+        uses: actions/checkout@v4
+        with:
+          ref: evidence-v3-lab
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run blueprint policy test
+        run: node scripts/test-evidence-article-blueprint.mjs
