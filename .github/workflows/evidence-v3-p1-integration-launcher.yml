@@ -2,6 +2,11 @@ name: Evidence V3 Lab — P1 Integration Launcher
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/evidence-v3-p1-integration-launcher.yml'
 
 jobs:
   integration:
