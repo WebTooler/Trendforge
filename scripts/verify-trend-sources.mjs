@@ -8,6 +8,12 @@ const credibleDomains = new Set([
   'theguardian.com', 'reuters.com', 'apnews.com', 'nytimes.com', 'washingtonpost.com', 'cnbc.com',
   'arstechnica.com', 'theverge.com', 'wired.com', 'zdnet.com', 'security.googleblog.com',
   'blog.cloudflare.com', 'mistral.ai', 'openai.com', 'anthropic.com', 'microsoft.com', 'apple.com',
+  'wsj.com', 'ft.com', 'bloomberg.com', 'technologyreview.com', 'nature.com', 'science.org',
+  'mit.edu', 'mitnews.mit.edu', 'aws.amazon.com', 'amazon.com', 'sans.org', 'latimes.com',
+  'hollywoodreporter.com', 'finance.yahoo.com', 'yahoo.com', 'axios.com', 'theinformation.com',
+  'venturebeat.com', 'engadget.com', 'gizmodo.com', 'bleepingcomputer.com', 'theregister.com',
+  'tomshardware.com', 'androidauthority.com', '9to5google.com', '9to5mac.com', 'helpnetsecurity.com',
+  'techradar.com', 'zdnet.com', 'computerworld.com', 'therecord.media', 'securityweek.com',
 ]);
 const DISCOVERY_TIMEOUT_MS = 7000;
 const DISCOVERY_LIMIT = 8;
