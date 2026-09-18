@@ -60,7 +60,7 @@ function buildRequestBody({ sourceId, signature, timestamp }) {
 }
 
 function extractResolvedUrl(payload = '') {
-  const separatorIndex = payload.indexOf('\\n\\n');
+  const separatorIndex = payload.indexOf('\n\n');
   const body = separatorIndex >= 0 ? payload.slice(separatorIndex + 2) : payload;
   try {
     const outer = JSON.parse(body);
