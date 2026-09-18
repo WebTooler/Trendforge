@@ -66,3 +66,36 @@ jobs:
           console.log(`Discovered publisher sources: ${discovered}`);
           console.log(`Candidates with 2+ independent publisher families: ${multi}`);
           NODE
+
+      - name: Partial verification breakdown
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const x = JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
+          const records = x.records ?? [];
+          const partial = records.filter(r => r.status === 'partial');
+          const n = (fn) => partial.filter(fn).length;
+          const reachable = r => (r.relevantReachableSourceCount || 0) > 0;
+          const families = r => (r.independentPublisherCount || 0);
+          const checks = r => (r.sources || r.sourceChecks || r.verifiedSources || []).length;
+          const discovered = r => (r.discoveredSourceCount || 0) > 0;
+
+          console.log(`Partial candidates: ${partial.length}`);
+          console.log(`No reachable source: ${n(r => !reachable(r))}`);
+          console.log(`Reachable source: ${n(reachable)}`);
+          console.log(`Only 1 publisher family: ${n(r => families(r) === 1)}`);
+          console.log(`2+ publisher families: ${n(r => families(r) >= 2)}`);
+          console.log(`Only 1 relevant reachable source: ${n(r => (r.relevantReachableSourceCount || 0) === 1)}`);
+          console.log(`2+ relevant reachable sources: ${n(r => (r.relevantReachableSourceCount || 0) >= 2)}`);
+          console.log(`Source checks <=1: ${n(r => checks(r) <= 1)}`);
+          console.log(`Discovered sources present: ${n(discovered)}`);
+          console.log(`No discovered sources: ${n(r => !discovered(r))}`);
+
+          const byCategory = {};
+          for (const r of partial) {
+            const c = r.category || 'Unknown';
+            byCategory[c] = (byCategory[c] || 0) + 1;
+          }
+          console.log('Partial by category:', JSON.stringify(byCategory));
+          console.log('Note: diagnostic buckets overlap; they are not additive.');
+          NODE
