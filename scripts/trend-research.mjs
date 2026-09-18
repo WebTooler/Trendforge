@@ -17,7 +17,10 @@ const feeds = [
   // compound OR queries are intermittently returned as empty/HTML responses.
   // downstream source verification still requires real article pages.
   ['AI', 'Bing News', 'https://www.bing.com/news/search?q=AI&count=30&format=RSS', 'news'],
-  ['Technology', 'Bing News', 'https://www.bing.com/news/search?q=technology&count=30&format=RSS', 'news'],
+  // Bing's generic `technology` query intermittently returns non-RSS responses; use the
+  // validated technology-specific fallback lane instead.
+  ['Technology', 'Bing News', 'https://www.bing.com/news/search?q=gadgets&count=30&format=RSS', 'news'],
+  ['Technology', 'Bing News', 'https://www.bing.com/news/search?q=consumer%20technology&count=30&format=RSS', 'news'],
   ['Digital Life', 'Bing News', 'https://www.bing.com/news/search?q=privacy&count=30&format=RSS', 'news'],
   ['Innovation', 'Bing News', 'https://www.bing.com/news/search?q=innovation&count=30&format=RSS', 'news'],
   ['Product Launches', 'Bing News', 'https://www.bing.com/news/search?q=product%20launch&count=30&format=RSS', 'news'],
