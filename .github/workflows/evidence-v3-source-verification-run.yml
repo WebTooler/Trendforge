@@ -99,3 +99,37 @@ jobs:
           console.log('Partial by category:', JSON.stringify(byCategory));
           console.log('Note: diagnostic buckets overlap; they are not additive.');
           NODE
+
+      - name: Partial confidence root-cause breakdown
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const x = JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
+          const partial = (x.records ?? []).filter(r => r.status === 'partial');
+
+          const bucket = (name, fn) => console.log(`${name}: ${partial.filter(fn).length}`);
+          bucket('Reachable but non-credible only', r => r.reachableSourceCount > 0 && r.credibleSourceCount === 0);
+          bucket('Reachable + some credible but not enough', r => r.reachableSourceCount > 0 && r.credibleSourceCount > 0 && r.credibleSourceCount < r.reachableSourceCount);
+          bucket('No credible reachable source', r => r.credibleSourceCount === 0);
+          bucket('Single publisher family + single relevant source', r => r.independentPublisherCount === 1 && r.relevantReachableSourceCount === 1);
+          bucket('Single publisher family + 2+ relevant sources', r => r.independentPublisherCount === 1 && r.relevantReachableSourceCount >= 2);
+          bucket('2+ publisher families but partial', r => r.independentPublisherCount >= 2);
+          bucket('Confidence 45-54', r => r.confidence >= 45 && r.confidence < 55);
+          bucket('Confidence 55-69', r => r.confidence >= 55 && r.confidence < 70);
+
+          const samples = [...partial].sort((a,b) => a.confidence-b.confidence).slice(0,10);
+          console.log('Lowest-confidence partial samples:');
+          for (const r of samples) {
+            console.log(JSON.stringify({
+              title: r.title,
+              category: r.category,
+              confidence: r.confidence,
+              sourceCount: r.sourceCount,
+              reachable: r.reachableSourceCount,
+              credible: r.credibleSourceCount,
+              families: r.independentPublisherCount,
+              relevant: r.relevantReachableSourceCount,
+              discovered: r.discoveredSourceCount
+            }));
+          }
+          NODE
