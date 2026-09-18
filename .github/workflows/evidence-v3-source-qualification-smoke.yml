@@ -91,6 +91,11 @@ jobs:
             if(!newlyAdded.length) return [];
             return [{title:r.title,category:r.category,seedFamilies:[...seedFamilies],newlyAddedFamilies:newlyAdded,finalFamilies:[...finalFamilies],status:r.status,credible:Number(r.credibleSourceCount||0),reachable:Number(r.reachableSourceCount||0),discovered:Number(r.discoveredSourceCount||0),discoveredSources:(r.sources||[]).filter(s=>s.discovered&&newlyAdded.includes(s.publisherFamily)).map(s=>({domain:s.domain,publisherFamily:s.publisherFamily,title:s.title,overlap:s.relevanceOverlap,ok:s.ok}))}];
           }).slice(0,30);
+          const credibilityTierCounts=records.reduce((a,r)=>{ const x=r.credibilityTierCounts||{}; for(const k of ['trusted','recognized','unknown']) a[k]+=Number(x[k]||0); return a; },{trusted:0,recognized:0,unknown:0});
+          const unknownDomains=records.reduce((a,r)=>{ for(const d of (r.unknownReachableDomains||[])) a[d]=(a[d]||0)+1; return a; },{});
+          const topUnknownDomains=Object.entries(unknownDomains).sort((a,b)=>b[1]-a[1]).slice(0,40);
+          console.log('CREDIBILITY TIER COUNTS',JSON.stringify(credibilityTierCounts));
+          console.log('TOP UNKNOWN REACHABLE DOMAINS',JSON.stringify(topUnknownDomains));
           console.log('DISCOVERY FAMILY LIFT',JSON.stringify(familyLift));
           console.log('DISCOVERY LIFT SAMPLES',JSON.stringify(discoveryLiftSamples,null,2));
           console.log('NO-CHOSEN REASON COUNTS',JSON.stringify(noChosenReasonCounts));
