@@ -83,9 +83,12 @@ async function discoverRelatedSources(trend,seedSources){
   for(const item of relevantItems){
     const candidates=[];
     for(const link of item.descriptionLinks){
+      const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(link.url);
+      if(isGn){diagnostic.googleArticleLinks++; if(/\/__i\/rss\/rd\/articles\//i.test(link.url))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;
       const resolvedUrl=await resolveGoogleNewsUrl(link.url);
       const d=domainOf(resolvedUrl);
-      if(!resolvedUrl||!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; continue; }
+      if(!resolvedUrl){diagnostic.unresolvedCandidateUrls++; continue;}
+      if(!d||MIRROR_DOMAINS.has(d)||seeds.has(publisherFamily(resolvedUrl))){ diagnostic.discardedSeedFamily++; continue; }
       diagnostic.resolvedCandidateUrls++;
       const linkOverlap=topicOverlap(`${trend.title} ${trend.description||''}`,`${item.title} ${link.text}`);
       if(looksLikeHomepage(resolvedUrl)||looksLikeFeed(resolvedUrl)){ diagnostic.discardedHomepageOrFeed++; continue; }
@@ -93,8 +96,11 @@ async function discoverRelatedSources(trend,seedSources){
       candidates.push({url:resolvedUrl,score:linkOverlap+item.overlap,resolvedFrom:'google-news-description-link'});
     }
     if(item.link){
+      const isGn=/^https:\/\/news\.google\.com\/(?:rss\/articles\/|__i\/rss\/rd\/articles\/)/i.test(item.link);
+      if(isGn){diagnostic.googleArticleLinks++; if(/\/__i\/rss\/rd\/articles\//i.test(item.link))diagnostic.legacyGoogleArticleLinks++;}else diagnostic.directCandidateLinks++;
       const publisherUrl=await resolveGoogleNewsUrl(item.link);
       if(publisherUrl){
+        diagnostic.resolvedCandidateUrls++;
         const resolved=await fetchText(publisherUrl); const finalUrl=normalizeUrl(resolved?.finalUrl||publisherUrl); const d=domainOf(finalUrl);
         if(finalUrl&&d&&!MIRROR_DOMAINS.has(d)&&!seeds.has(publisherFamily(finalUrl))&&!looksLikeHomepage(finalUrl)&&!looksLikeFeed(finalUrl)){ diagnostic.resolvedCandidateUrls++; candidates.push({url:finalUrl,score:item.overlap+1,resolvedFrom:'google-news-article-link'}); }
       }
