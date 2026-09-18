@@ -77,7 +77,7 @@ async function discoverRelatedSources(trend,seedSources){
   const rssUrl=`https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
   const result=await fetchText(rssUrl); if(!result)return{sources:[],diagnostics:{rssItems:0,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,discoveryItemLimit:DISCOVERY_ITEM_LIMIT,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{}}};
   const items=[...result.text.matchAll(/<item>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
-  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]};
+  let diagnostic={rssItems:items.length,relevantItems:0,itemsWithCandidateLinks:0,googleArticleLinks:0,legacyGoogleArticleLinks:0,directCandidateLinks:0,resolvedCandidateUrls:0,unresolvedCandidateUrls:0,discardedSeedFamily:0,discardedLowOverlap:0,discardedHomepageOrFeed:0,discardedEmptyLinkText:0,discardedNoChosenCandidate:0,selected:0,seedFamilyOnlyNoChoice:0,mixedRejectionNoChoice:0,seedFamilyRejectionDomains:{},homepageFeedRejectionDomains:{},selectedDomains:{},noChosenReasonCounts:{},noChosenSamples:[]};
   const seeds=new Set(seedSources.map(s=>publisherFamily(s.url)).filter(Boolean));
   const relevantItems=items.map(item=>{
     const title=clean((item.match(/<title>([\s\S]*?)<\/title>/i)||[,''])[1]);
@@ -155,9 +155,11 @@ async function discoverRelatedSources(trend,seedSources){
     const chosen=candidates[0];
     if(!chosen){
       diagnostic.discardedNoChosenCandidate++;
+      const uniqueReasons=[...new Set(rejectionReasons)];
+      if(uniqueReasons.length===1 && uniqueReasons[0]==='seed-family') diagnostic.seedFamilyOnlyNoChoice++;
+      else if(uniqueReasons.length>1) diagnostic.mixedRejectionNoChoice++;
       const attempted = diagnostic.resolvedCandidateUrls;
       const reason = rejectionReasons.length ? rejectionReasons[0] : (item.descriptionLinks.length || item.publisherUrl || item.link ? 'all-candidate-links-rejected' : 'no-candidate-links');
-      for(const rejection of rejectionReasons) diagnostic.noChosenReasonCounts[rejection]=(diagnostic.noChosenReasonCounts[rejection]||0)+1;
       diagnostic.noChosenReasonCounts[reason]=(diagnostic.noChosenReasonCounts[reason]||0)+1;
       if(diagnostic.noChosenSamples.length<25) diagnostic.noChosenSamples.push({title:item.title,overlap:item.overlap,descriptionLinks:item.descriptionLinks.length,hasPublisherUrl:Boolean(item.publisherUrl),hasLink:Boolean(item.link),reason,rejectionReasons:[...new Set(rejectionReasons)]});
       continue;
