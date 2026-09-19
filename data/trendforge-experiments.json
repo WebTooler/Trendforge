@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18T21:12:49.077Z",
+  "updatedAt": "2026-09-19T04:58:55.284Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,9 +14,9 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 12,
-    "topics": 179,
-    "articles": 12
+    "runs": 13,
+    "topics": 187,
+    "articles": 14
   },
   "learningInput": {
     "version": 2,
@@ -88,38 +88,6 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQLTljZUxaczRWbnJ5TVp2UFhBQ1J4Vk9iVmsxV0hDSUlCbWJOUlFmeHltTjdLdzM1YWh6UDVlVmRaVl8xckIzOXl1MUppV3pOX1gtR0xlTHd3cGNpYXp2bDV3MkF3b21kYWtBeTZGUllQR044S21lektEUndOWGVRLWxjZ2FVYTJFd3Z2b2tMNkg4OHZmcW9IcW9QOEdRX1U2Z1F5S0FYNEVUNXRETUc4T3BCWnk3RFJRRk5yRHpoSGVMb29qN2dYTUdsVVZZV0pEellKSldsUS0?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ1RRMndWQUptTThQRjBjb1VxUVJwbnJKYkJlVUVHbGNVSEUtbEJ2bVhScUZxVzFBbG1kMHdyeENVS01iclpTUGRxNHcwTkdienJjU1RTUE1WRVFHMThwSHlDd2JfdHVSSmNranJ5UUoycmJ0cGlqZGlhSWlPMGM4eWctaVJQVl9aaTREeGNCY2VkVllVbEFtaThUY2RkMzFrN0htWlhvTHBvWlg4aU1NLWtaU2ZvRTZpc2FMR08xRjgxanc?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLURDRTk3eE5CZFpFYUpMeEtNOWZ1UDlwU09VNE5RMDlKTFNCd0FHdm05NjczZmVmUEZQS2I1a1Z6dEVTUXlPbXoxeV9UUW9lR1hoWFlSVExnTVJ5T1RBSXBveGtMUm9fXzVHZVdMRGR4VWxQMklHMTBkZnBhUkkzaVJWUmxGVGgzaVNKaHdxbGQ1cFR4dEZEdXhLd3RBU3I3X1BGb0szbUdZR0ZoSUE?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPV3AzWUNERWphQ19zQjB6Wkx5MGJyLV9fMm5QanRtbTV5Y0dHNkMzQXQ1MFJMNEM4d0M1SHZUVi1UYTVVYjdZQzhjU1BMaExHdFZiYWFaa1lpQ0lHVlZXbTFUX21WaVJXdktJVlViYVNOUURWRUdKNU5XQk9ZVW1rVTZDSk8wdWQzTXJsWXNKOHJ2Zw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tdUlfRXplbjNVTThoZzZqWGF2MjlvU1RlMjh1aEF0TFRCWkZTX19Ia0JBNGxWYXFIYjVZNmd1aGpNSml0V1dGZDJpQWx2VVBBaTE1SzY1Y3Q1bFBaRUhLT1QtUUtfelZiblowc0lvaHVKOGlK?oc=5",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYTJMUkNwSl9mM0lNcHdaaGpiTGlob3Z0Wmd6eXhyYkhlSmdTc28zV2NrTFVxSEg4YlhFSVNmb2d0SXNrc1JJd1lVNjE5cXlSU3pOb0lBMFZWU29jVFhfQV9iVENWaTQ3UkNmcDBaVmNIMVQwR2lxRnpab2ZUVTBmcWFHQ3BVT3pYVFFGVFpmZ2dJaWNkd2c?oc=5",
         "bucket": "variant"
       },
@@ -165,43 +133,43 @@
       },
       {
         "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdDBJMEI1TVo4YmV6ay1MYndVQmJtS2w1ZnJpeUthOGZaQUlHNEt1TnpOZUZRZ1c2dnZKSDhkblB2Q2ZYbXpUZUJxUk5MTktRVzBxNVdCQ3diSnFpaExvVEJsbmVoMy1jSUkteW4wTnduSjNaTWRjczZweDk3MDhreTQ2eDJENlMyTTkzcDNIeGFrenZsSUFia28wTWVHZjRCYWxLOGdMQndXUFAwc0NWRWZ6UDJMZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcTctd0dHaWRvVldNejZuV0d2Xy13Q3VRaTBOdjdzVldjYWxVOEFWZWJiakM2bWtJLU9NOVh6LWlYS0ZuV3dsMzFQOHFvXzBKaHlDSVhxb3lack9fcHUwQWwwUjhoSDVMLTZNbjZPbEMwMklzeU93T2xBWTltbmFOa3YzNXRZZlEzcXYyUzZSVVlrQnRGTHhuTUZ0Z0U?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlZlJ6dVByQkZNX2lZMWF4X1NHS3lHOG0zd3RYeE5ya3JQR1dDMTNsLXVGMWNldHpqZkFqZVAtUmZMM1FQQ2Vac0QwczNkaHYyR1V1aGVR?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNzJMN2VldVU0MEFSbzgxcWVSZkwzTTc0Zm1TYmFpYVJqNEZpa19FNjVFMkZhakt1SUwwZm5oSjlrWG5mWnFBSmctbmJYUFBlUEhUVnRSZUc0UkQ0NndMd0t2QWt6OG5Ta0lqNTVzMFZaV05vNncyX2JVRFhYMTRjMkhDUzhpdHFfdFRjaHJVX2JNRlZDM2lpbW5ZazhsUy12Vm9RLW5zenp5WW9CQkpOU1ZSdDQ2RDVNN1FoQlpHTHV5VFAyODYzc2duTGdUQQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMjZZUWZFZ2dOSzZQZFdNejI5ZXpRMVd2blA4Rkp6OFczVXIyQ0l4MXY4U0tPbnBRTzJvQXRiRVpyTzk5bXllekFPT2JiZ3ZHWmpVcUVlWmlwOGpLMTFKSFFQbHYyU0p5bGpKdGc0Um1DQ2JnbkQwRjM4Zm1qempSVUQyVUJCTVpBNm5FV253bTU2dFZmRzQwekdPY2R4YnJuenpXM1JwSlRzcFdCRy1aZzdVUXk2eUdUUlY2SQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNEFEcHd5ZmxxSFlJSVdkRjllUWJnblRldzR1WVRDYmlqaHZFYXFIdnlaZW5TUjVwX2RpZ1RUWWdpczFuc280ZnQ3TFhjWVdndHA2dnMzYUxEMVJuTnRhSmkyZktfTmI1R2lSamgtdVpzbXRwMDE3ZDl6empSSGwtZEd5c3Nna2F6WWdOR0dZTzNKRFlGSkNMLXJEZ3Q5bDg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4aDVWTV9VN3ZUSF9CemZCNXNrWktncnBiOWF4cjRqOUxqcURLMUFWYm1DY3VxM0kwbk5tM1VEYkl1aXFibVFzMHpEUWNvbTBaejBkSk1LV2NzOW5MLXpKMVZuM0xvUnJ2?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNeUo4TFlnSHFTVTg5MlhVZC1lM2FkZER1MHZDWEJQaHp1YVdCVExBTE5EdUF6Tk1ZTmpzQjc3c3JWU3RDV04zWTN0VFNZN0MyUndHcTFZNFh0cFVQMndIMkRlaE8yTWY3WHBIYUk3RjFSWWxv?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
         "bucket": "control"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQLTljZUxaczRWbnJ5TVp2UFhBQ1J4Vk9iVmsxV0hDSUlCbWJOUlFmeHltTjdLdzM1YWh6UDVlVmRaVl8xckIzOXl1MUppV3pOX1gtR0xlTHd3cGNpYXp2bDV3MkF3b21kYWtBeTZGUllQR044S21lektEUndOWGVRLWxjZ2FVYTJFd3Z2b2tMNkg4OHZmcW9IcW9QOEdRX1U2Z1F5S0FYNEVUNXRETUc4T3BCWnk3RFJRRk5yRHpoSGVMb29qN2dYTUdsVVZZV0pEellKSldsUS0?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ1RRMndWQUptTThQRjBjb1VxUVJwbnJKYkJlVUVHbGNVSEUtbEJ2bVhScUZxVzFBbG1kMHdyeENVS01iclpTUGRxNHcwTkdienJjU1RTUE1WRVFHMThwSHlDd2JfdHVSSmNranJ5UUoycmJ0cGlqZGlhSWlPMGM4eWctaVJQVl9aaTREeGNCY2VkVllVbEFtaThUY2RkMzFrN0htWlhvTHBvWlg4aU1NLWtaU2ZvRTZpc2FMR08xRjgxanc?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLURDRTk3eE5CZFpFYUpMeEtNOWZ1UDlwU09VNE5RMDlKTFNCd0FHdm05NjczZmVmUEZQS2I1a1Z6dEVTUXlPbXoxeV9UUW9lR1hoWFlSVExnTVJ5T1RBSXBveGtMUm9fXzVHZVdMRGR4VWxQMklHMTBkZnBhUkkzaVJWUmxGVGgzaVNKaHdxbGQ1cFR4dEZEdXhLd3RBU3I3X1BGb0szbUdZR0ZoSUE?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPV3AzWUNERWphQ19zQjB6Wkx5MGJyLV9fMm5QanRtbTV5Y0dHNkMzQXQ1MFJMNEM4d0M1SHZUVi1UYTVVYjdZQzhjU1BMaExHdFZiYWFaa1lpQ0lHVlZXbTFUX21WaVJXdktJVlViYVNOUURWRUdKNU5XQk9ZVW1rVTZDSk8wdWQzTXJsWXNKOHJ2Zw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tdUlfRXplbjNVTThoZzZqWGF2MjlvU1RlMjh1aEF0TFRCWkZTX19Ia0JBNGxWYXFIYjVZNmd1aGpNSml0V1dGZDJpQWx2VVBBaTE1SzY1Y3Q1bFBaRUhLT1QtUUtfelZiblowc0lvaHVKOGlK?oc=5",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYTJMUkNwSl9mM0lNcHdaaGpiTGlob3Z0Wmd6eXhyYkhlSmdTc28zV2NrTFVxSEg4YlhFSVNmb2d0SXNrc1JJd1lVNjE5cXlSU3pOb0lBMFZWU29jVFhfQV9iVENWaTQ3UkNmcDBaVmNIMVQwR2lxRnpab2ZUVTBmcWFHQ3BVT3pYVFFGVFpmZ2dJaWNkd2c?oc=5",
         "bucket": "variant"
       },
@@ -247,43 +215,43 @@
       },
       {
         "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdDBJMEI1TVo4YmV6ay1MYndVQmJtS2w1ZnJpeUthOGZaQUlHNEt1TnpOZUZRZ1c2dnZKSDhkblB2Q2ZYbXpUZUJxUk5MTktRVzBxNVdCQ3diSnFpaExvVEJsbmVoMy1jSUkteW4wTnduSjNaTWRjczZweDk3MDhreTQ2eDJENlMyTTkzcDNIeGFrenZsSUFia28wTWVHZjRCYWxLOGdMQndXUFAwc0NWRWZ6UDJMZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcTctd0dHaWRvVldNejZuV0d2Xy13Q3VRaTBOdjdzVldjYWxVOEFWZWJiakM2bWtJLU9NOVh6LWlYS0ZuV3dsMzFQOHFvXzBKaHlDSVhxb3lack9fcHUwQWwwUjhoSDVMLTZNbjZPbEMwMklzeU93T2xBWTltbmFOa3YzNXRZZlEzcXYyUzZSVVlrQnRGTHhuTUZ0Z0U?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlZlJ6dVByQkZNX2lZMWF4X1NHS3lHOG0zd3RYeE5ya3JQR1dDMTNsLXVGMWNldHpqZkFqZVAtUmZMM1FQQ2Vac0QwczNkaHYyR1V1aGVR?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNzJMN2VldVU0MEFSbzgxcWVSZkwzTTc0Zm1TYmFpYVJqNEZpa19FNjVFMkZhakt1SUwwZm5oSjlrWG5mWnFBSmctbmJYUFBlUEhUVnRSZUc0UkQ0NndMd0t2QWt6OG5Ta0lqNTVzMFZaV05vNncyX2JVRFhYMTRjMkhDUzhpdHFfdFRjaHJVX2JNRlZDM2lpbW5ZazhsUy12Vm9RLW5zenp5WW9CQkpOU1ZSdDQ2RDVNN1FoQlpHTHV5VFAyODYzc2duTGdUQQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMjZZUWZFZ2dOSzZQZFdNejI5ZXpRMVd2blA4Rkp6OFczVXIyQ0l4MXY4U0tPbnBRTzJvQXRiRVpyTzk5bXllekFPT2JiZ3ZHWmpVcUVlWmlwOGpLMTFKSFFQbHYyU0p5bGpKdGc0Um1DQ2JnbkQwRjM4Zm1qempSVUQyVUJCTVpBNm5FV253bTU2dFZmRzQwekdPY2R4YnJuenpXM1JwSlRzcFdCRy1aZzdVUXk2eUdUUlY2SQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNEFEcHd5ZmxxSFlJSVdkRjllUWJnblRldzR1WVRDYmlqaHZFYXFIdnlaZW5TUjVwX2RpZ1RUWWdpczFuc280ZnQ3TFhjWVdndHA2dnMzYUxEMVJuTnRhSmkyZktfTmI1R2lSamgtdVpzbXRwMDE3ZDl6empSSGwtZEd5c3Nna2F6WWdOR0dZTzNKRFlGSkNMLXJEZ3Q5bDg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4aDVWTV9VN3ZUSF9CemZCNXNrWktncnBiOWF4cjRqOUxqcURLMUFWYm1DY3VxM0kwbk5tM1VEYkl1aXFibVFzMHpEUWNvbTBaejBkSk1LV2NzOW5MLXpKMVZuM0xvUnJ2?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNeUo4TFlnSHFTVTg5MlhVZC1lM2FkZER1MHZDWEJQaHp1YVdCVExBTE5EdUF6Tk1ZTmpzQjc3c3JWU3RDV04zWTN0VFNZN0MyUndHcTFZNFh0cFVQMndIMkRlaE8yTWY3WHBIYUk3RjFSWWxv?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
         "bucket": "control"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQLTljZUxaczRWbnJ5TVp2UFhBQ1J4Vk9iVmsxV0hDSUlCbWJOUlFmeHltTjdLdzM1YWh6UDVlVmRaVl8xckIzOXl1MUppV3pOX1gtR0xlTHd3cGNpYXp2bDV3MkF3b21kYWtBeTZGUllQR044S21lektEUndOWGVRLWxjZ2FVYTJFd3Z2b2tMNkg4OHZmcW9IcW9QOEdRX1U2Z1F5S0FYNEVUNXRETUc4T3BCWnk3RFJRRk5yRHpoSGVMb29qN2dYTUdsVVZZV0pEellKSldsUS0?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ1RRMndWQUptTThQRjBjb1VxUVJwbnJKYkJlVUVHbGNVSEUtbEJ2bVhScUZxVzFBbG1kMHdyeENVS01iclpTUGRxNHcwTkdienJjU1RTUE1WRVFHMThwSHlDd2JfdHVSSmNranJ5UUoycmJ0cGlqZGlhSWlPMGM4eWctaVJQVl9aaTREeGNCY2VkVllVbEFtaThUY2RkMzFrN0htWlhvTHBvWlg4aU1NLWtaU2ZvRTZpc2FMR08xRjgxanc?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPLURDRTk3eE5CZFpFYUpMeEtNOWZ1UDlwU09VNE5RMDlKTFNCd0FHdm05NjczZmVmUEZQS2I1a1Z6dEVTUXlPbXoxeV9UUW9lR1hoWFlSVExnTVJ5T1RBSXBveGtMUm9fXzVHZVdMRGR4VWxQMklHMTBkZnBhUkkzaVJWUmxGVGgzaVNKaHdxbGQ1cFR4dEZEdXhLd3RBU3I3X1BGb0szbUdZR0ZoSUE?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPV3AzWUNERWphQ19zQjB6Wkx5MGJyLV9fMm5QanRtbTV5Y0dHNkMzQXQ1MFJMNEM4d0M1SHZUVi1UYTVVYjdZQzhjU1BMaExHdFZiYWFaa1lpQ0lHVlZXbTFUX21WaVJXdktJVlViYVNOUURWRUdKNU5XQk9ZVW1rVTZDSk8wdWQzTXJsWXNKOHJ2Zw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tdUlfRXplbjNVTThoZzZqWGF2MjlvU1RlMjh1aEF0TFRCWkZTX19Ia0JBNGxWYXFIYjVZNmd1aGpNSml0V1dGZDJpQWx2VVBBaTE1SzY1Y3Q1bFBaRUhLT1QtUUtfelZiblowc0lvaHVKOGlK?oc=5",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYTJMUkNwSl9mM0lNcHdaaGpiTGlob3Z0Wmd6eXhyYkhlSmdTc28zV2NrTFVxSEg4YlhFSVNmb2d0SXNrc1JJd1lVNjE5cXlSU3pOb0lBMFZWU29jVFhfQV9iVENWaTQ3UkNmcDBaVmNIMVQwR2lxRnpab2ZUVTBmcWFHQ3BVT3pYVFFGVFpmZ2dJaWNkd2c?oc=5",
         "bucket": "variant"
       },
@@ -329,6 +297,38 @@
       },
       {
         "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdDBJMEI1TVo4YmV6ay1MYndVQmJtS2w1ZnJpeUthOGZaQUlHNEt1TnpOZUZRZ1c2dnZKSDhkblB2Q2ZYbXpUZUJxUk5MTktRVzBxNVdCQ3diSnFpaExvVEJsbmVoMy1jSUkteW4wTnduSjNaTWRjczZweDk3MDhreTQ2eDJENlMyTTkzcDNIeGFrenZsSUFia28wTWVHZjRCYWxLOGdMQndXUFAwc0NWRWZ6UDJMZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcTctd0dHaWRvVldNejZuV0d2Xy13Q3VRaTBOdjdzVldjYWxVOEFWZWJiakM2bWtJLU9NOVh6LWlYS0ZuV3dsMzFQOHFvXzBKaHlDSVhxb3lack9fcHUwQWwwUjhoSDVMLTZNbjZPbEMwMklzeU93T2xBWTltbmFOa3YzNXRZZlEzcXYyUzZSVVlrQnRGTHhuTUZ0Z0U?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlZlJ6dVByQkZNX2lZMWF4X1NHS3lHOG0zd3RYeE5ya3JQR1dDMTNsLXVGMWNldHpqZkFqZVAtUmZMM1FQQ2Vac0QwczNkaHYyR1V1aGVR?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQNzJMN2VldVU0MEFSbzgxcWVSZkwzTTc0Zm1TYmFpYVJqNEZpa19FNjVFMkZhakt1SUwwZm5oSjlrWG5mWnFBSmctbmJYUFBlUEhUVnRSZUc0UkQ0NndMd0t2QWt6OG5Ta0lqNTVzMFZaV05vNncyX2JVRFhYMTRjMkhDUzhpdHFfdFRjaHJVX2JNRlZDM2lpbW5ZazhsUy12Vm9RLW5zenp5WW9CQkpOU1ZSdDQ2RDVNN1FoQlpHTHV5VFAyODYzc2duTGdUQQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMjZZUWZFZ2dOSzZQZFdNejI5ZXpRMVd2blA4Rkp6OFczVXIyQ0l4MXY4U0tPbnBRTzJvQXRiRVpyTzk5bXllekFPT2JiZ3ZHWmpVcUVlWmlwOGpLMTFKSFFQbHYyU0p5bGpKdGc0Um1DQ2JnbkQwRjM4Zm1qempSVUQyVUJCTVpBNm5FV253bTU2dFZmRzQwekdPY2R4YnJuenpXM1JwSlRzcFdCRy1aZzdVUXk2eUdUUlY2SQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNEFEcHd5ZmxxSFlJSVdkRjllUWJnblRldzR1WVRDYmlqaHZFYXFIdnlaZW5TUjVwX2RpZ1RUWWdpczFuc280ZnQ3TFhjWVdndHA2dnMzYUxEMVJuTnRhSmkyZktfTmI1R2lSamgtdVpzbXRwMDE3ZDl6empSSGwtZEd5c3Nna2F6WWdOR0dZTzNKRFlGSkNMLXJEZ3Q5bDg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4aDVWTV9VN3ZUSF9CemZCNXNrWktncnBiOWF4cjRqOUxqcURLMUFWYm1DY3VxM0kwbk5tM1VEYkl1aXFibVFzMHpEUWNvbTBaejBkSk1LV2NzOW5MLXpKMVZuM0xvUnJ2?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNeUo4TFlnSHFTVTg5MlhVZC1lM2FkZER1MHZDWEJQaHp1YVdCVExBTE5EdUF6Tk1ZTmpzQjc3c3JWU3RDV04zWTN0VFNZN0MyUndHcTFZNFh0cFVQMndIMkRlaE8yTWY3WHBIYUk3RjFSWWxv?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
         "bucket": "control"
       }
     ]
@@ -337,14 +337,14 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 80,
-        "evidencePassRate": 11
+        "claimConfidence": 81,
+        "evidencePassRate": 14
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -352,14 +352,14 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 80,
-        "evidencePassRate": 11
+        "claimConfidence": 81,
+        "evidencePassRate": 14
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -367,20 +367,20 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 80,
-        "evidencePassRate": 11
+        "claimConfidence": 81,
+        "evidencePassRate": 14
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-18T16:42:32.818Z"
+    "previousUpdatedAt": "2026-09-18T21:12:49.077Z"
   }
 }
