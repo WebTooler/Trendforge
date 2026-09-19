@@ -10,11 +10,26 @@ const ABSTRACT_TERMS = ['regulation','policy','legislation','governance','antitr
 
 function clean(value = '') { return value.replace(/\s+/g, ' ').trim(); }
 
-function namedPerson(title, description) {
-  const text = title + '. ' + description;
+function namedPerson(title, description, body = '') {
+  const text = title + '. ' + description + ' ' + body.slice(0, 8000);
+  const blocked = /^(When|What|The|This|Moment|Why|Current|Industry|Regulatory|Economic|Open|Sources|AI|US|CEO|Anthropic|OpenAI|Google|Microsoft|Apple|Meta|Amazon|Nvidia|Tesla|Samsung)$/i;
+
+  // Prefer a person explicitly tied to a role/action in the article body.
+  const rolePatterns = [
+    /\b([A-Z][a-z]+\s+[A-Z][a-z]+),\s+(?:the\s+)?(?:chief executive|CEO|founder|president|minister|researcher|scientist|spokesperson|executive)\b/,
+    /\b([A-Z][a-z]+\s+[A-Z][a-z]+)\s+(?:publicly\s+)?(?:urged|called|warned|announced|argued|said|says)\b/,
+    /\b(?:by|when|from)\s+([A-Z][a-z]+\s+[A-Z][a-z]+)\b/
+  ];
+  for (const pattern of rolePatterns) {
+    const match = text.match(pattern);
+    if (match?.[1] && !blocked.test(match[1])) return match[1];
+  }
+
+  // Fall back to two/three-word capitalized names, while excluding headings and organizations.
   const matches = [...text.matchAll(/\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})\b/g)]
-    .map(m => m[1].replace(/^(When|What|The|This)\s+/i, '').trim())
-    .filter(x => x && !/^(AI|US|CEO|Anthropic|OpenAI|Google|Microsoft|Apple|Meta|Amazon|Nvidia|Tesla|Samsung)$/i.test(x));
+    .map(m => m[1].trim())
+    .filter(x => !blocked.test(x) && !/^(The|When|What|This|AI|US)\s/i.test(x))
+    .filter(x => !/\b(?:Anthropic|OpenAI|Google|Microsoft|Apple|Meta|Amazon|Nvidia|Tesla|Samsung)\b/i.test(x));
   return matches[0] || '';
 }
 
@@ -28,7 +43,7 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
   title = clean(title); description = clean(description); category = clean(category);
   const text = title + ' ' + description + ' ' + body.slice(0, 5000);
   const lower = text.toLowerCase();
-  const person = namedPerson(title, description);
+  const person = namedPerson(title, description, body);
   const company = companyName(title, description);
   let mode = 'editorial-photography', primarySubject = '', scene = '', supportingElements = [], composition = '';
   const avoid = ['generic office imagery','random tablet or laptop','generic futuristic technology','glowing holograms, floating code, HUDs and neon sci-fi effects','prominent readable text or fake headlines'];
