@@ -1,0 +1,203 @@
+name: TrendForge — Image Model Benchmark
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      WIDTH: "1024"
+      HEIGHT: "576"
+      OUTPUT_FORMAT: "png"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test "$WIDTH" = "1024"
+          test "$HEIGHT" = "576"
+          echo "Benchmark: 3 models × 3 fixed stories = 9 images"
+          echo "Production writes: NONE"
+
+      - name: Install image normalizer
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-package-lock sharp@0.35.4
+
+      - name: Generate benchmark matrix
+        run: |
+          set -euo pipefail
+          mkdir -p model-benchmark/images model-benchmark/results
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const sharp = require('sharp');
+
+          const account = process.env.CLOUDFLARE_ACCOUNT_ID;
+          const token = process.env.CLOUDFLARE_API_TOKEN;
+          const width = Number(process.env.WIDTH);
+          const height = Number(process.env.HEIGHT);
+
+          const models = [
+            { id: 'klein-4b', api: '@cf/black-forest-labs/flux-2-klein-4b' },
+            { id: 'flux-1-schnell', api: '@cf/black-forest-labs/flux-1-schnell' },
+            { id: 'sdxl-lightning', api: '@cf/bytedance/stable-diffusion-xl-lightning' }
+          ];
+
+          const articleFiles = [
+            'ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.md',
+            'al-gore-says-the-real-ai-risk-isn-t-data-centers.md',
+            'anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.md'
+          ];
+
+          const field = (text, key) => {
+            const m = text.match(new RegExp('^' + key + ':\\s*"([\\s\\S]*?)"\\s*$', 'm'));
+            return m ? m[1].replace(/\\\"/g, '"') : '';
+          };
+
+          const slugify = value => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 90);
+
+          function selectVisualMode(title, description, category) {
+            const text = `${title} ${description} ${category}`.toLowerCase();
+            const productTerms = ['iphone','ipad','macbook','pixel','galaxy','phone','smartphone','laptop','tablet','watch','headset','earbuds','camera','console','device','product launch','product review','unveils','launches'];
+            const hardwareTerms = ['chip','processor','gpu','cpu','motherboard','semiconductor','server rack','data center','data-centre','robotics','sensor','hardware','microchip'];
+            const personTerms = ['interview','ceo','chief executive','founder','researcher','spokesperson','executive','speaks','said','says','profile'];
+            const conceptualTerms = ['cybersecurity','cyber security','blockchain','cryptography','cloud architecture','network architecture','ai agents','software architecture','protocol','infrastructure'];
+            const abstractTerms = ['policy','regulation','legislation','economic shift','digital transformation','societal','risk','governance','geopolitics','trade policy'];
+            if (productTerms.some(term => text.includes(term))) return 'editorial-product';
+            if (personTerms.some(term => text.includes(term))) return 'editorial-person';
+            if (hardwareTerms.some(term => text.includes(term))) return 'cinematic-hardware';
+            if (conceptualTerms.some(term => text.includes(term))) return 'isometric-3d';
+            if (abstractTerms.some(term => text.includes(term))) return 'abstract-editorial';
+            return 'editorial-photography';
+          }
+
+          function buildPrompt(title, description, category) {
+            const visualMode = selectVisualMode(title, description, category);
+            const modeGuidance = {
+              'editorial-product': 'VISUAL MODE: EDITORIAL PRODUCT. Make the specific product the single hero subject. Use clean premium product/editorial photography and reproduce known physical design details from the story context as faithfully as possible.',
+              'editorial-person': 'VISUAL MODE: DOCUMENTARY PERSON. If a person is central, show them from behind, over-the-shoulder, side/back silhouette, cropped, or at a natural distance with no clearly identifiable face. Use only story-specific context.',
+              'cinematic-hardware': 'VISUAL MODE: CINEMATIC HARDWARE. Make the specific hardware, infrastructure, machine, component, or physical technology named by the story the hero subject. Use restrained cinematic or macro editorial treatment.',
+              'isometric-3d': 'VISUAL MODE: MINIMAL ISOMETRIC 3D. Use a clean premium isometric 3D editorial illustration only when the story is fundamentally technical or conceptual. Show the actual story concept as one clear hero system or object.',
+              'abstract-editorial': 'VISUAL MODE: ABSTRACT EDITORIAL. Use sophisticated flat/editorial illustration with restrained geometric forms and subtle texture only when the story is genuinely abstract or policy-driven. Encode the specific central idea, not a generic technology symbol.',
+              'editorial-photography': 'VISUAL MODE: EDITORIAL PHOTOGRAPHY. Create a commissioned technology-publication photograph of the concrete subject or event that best represents the story.'
+            }[visualMode];
+
+            return [
+              'Create a premium editorial visual that looks commissioned by a major technology publication, not a generic AI image.',
+              'Canvas: exactly 1024x576 pixels, horizontal 16:9 composition.',
+              modeGuidance,
+              'STORY-SPECIFIC VISUAL RULE: directly represent the central story, event, subject, or claim. Do not create a merely related or category-level image.',
+              'Identify the single most important visual meaning of the story context and make it the hero subject. Category is supporting context only.',
+              'Specific event, product, person, organization, technology, place, or action must be visually represented whenever the story context supports it.',
+              'Do not substitute a loosely related concept. Choose the concrete visual subject that best explains the article.',
+              'MINIMALISM IS A CORE RULE: one clear hero subject or visual idea, with only one or two supporting elements when they directly explain the story.',
+              'Remove anything that does not help communicate the story. Prefer clean framing, breathing room, negative space, and strong visual hierarchy.',
+              'No crowded scenes, generic office imagery, decorative technology, floating code, holograms, HUDs, fake dashboards, neon sci-fi interfaces, or unrelated props.',
+              'For a specific product review or launch, prioritize visual fidelity to its known physical design and distinctive hardware. Do not redesign or replace it with a generic device.',
+              'For a person-specific story, no clearly identifiable face; use back, over-the-shoulder, silhouette, cropped, hands, or distant documentary framing.',
+              'No prominent readable text, article titles, captions, labels, watermarks, fake headlines, or intentional typography. Background text may be naturally blurred/unreadable.',
+              'Do not force a fixed brand color palette. Let colors follow the real subject and story with restrained editorial grading.',
+              'When in doubt, simplify rather than add more objects, people, screens, effects, or visual detail.',
+              'Semantic story context — NEVER reproduce as visible text: ' + title,
+              'Category context: ' + category,
+              'Story context — visualize the meaning, not the words: ' + description,
+              'Selected visual mode: ' + visualMode
+            ].join('\\n');
+          }
+
+          function decodeImage(value) {
+            if (typeof value !== 'string' || !value.trim()) throw new Error('missing result.image');
+            const encoded = value.includes(',') ? value.slice(value.indexOf(',') + 1) : value;
+            const bytes = Buffer.from(encoded, 'base64');
+            if (bytes.length < 1000) throw new Error('decoded image unexpectedly small: ' + bytes.length);
+            const isJpeg = bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
+            const isPng = bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47;
+            if (!isJpeg && !isPng) throw new Error('decoded payload is not JPEG/PNG');
+            return bytes;
+          }
+
+          async function run() {
+            const manifest = [];
+            for (const file of articleFiles) {
+              const raw = fs.readFileSync(path.join('content/articles', file), 'utf8');
+              const title = field(raw, 'title');
+              const description = field(raw, 'description');
+              const category = field(raw, 'category') || 'Technology';
+              const slug = field(raw, 'slug') || slugify(title) || file.replace(/\.md$/, '');
+              const visualMode = selectVisualMode(title, description, category);
+
+              for (const model of models) {
+                const prompt = buildPrompt(title, description, category);
+                const url = `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${model.api}`;
+                const form = new FormData();
+                form.append('prompt', prompt);
+                form.append('width', String(width));
+                form.append('height', String(height));
+
+                const started = Date.now();
+                try {
+                  const resp = await fetch(url, {
+                    method: 'POST',
+                    headers: { Authorization: `Bearer ${token}` },
+                    body: form
+                  });
+                  const body = Buffer.from(await resp.arrayBuffer());
+                  const elapsedMs = Date.now() - started;
+                  if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${body.toString('utf8').slice(0, 500)}`);
+                  const payload = JSON.parse(body.toString('utf8'));
+                  const bytes = decodeImage(payload?.result?.image);
+                  const normalized = await sharp(bytes).resize({ width, height, fit: 'cover', position: 'centre' }).png({ compressionLevel: 9, adaptiveFiltering: true, palette: false }).toBuffer();
+                  const meta = await sharp(normalized).metadata();
+                  if (meta.width !== width || meta.height !== height) throw new Error(`final dimensions ${meta.width}x${meta.height}`);
+                  const outFile = `${slug}__${model.id}.1024x576.png`;
+                  fs.writeFileSync(path.join('model-benchmark/images', outFile), normalized);
+                  const row = { file, slug, title, category, visualMode, model: model.api, status: 'success', width, height, bytes: normalized.length, elapsedMs, output: outFile };
+                  manifest.push(row);
+                  fs.writeFileSync(path.join('model-benchmark/results', `${slug}__${model.id}.json`), JSON.stringify(row, null, 2));
+                  console.log(`SUCCESS [${model.id}] [${visualMode}] ${file}: ${normalized.length} bytes in ${elapsedMs}ms`);
+                } catch (err) {
+                  const row = { file, slug, title, category, visualMode, model: model.api, status: 'failed', error: String(err), elapsedMs: Date.now() - started };
+                  manifest.push(row);
+                  fs.writeFileSync(path.join('model-benchmark/results', `${slug}__${model.id}.json`), JSON.stringify(row, null, 2));
+                  console.error(`FAILED [${model.id}] ${file}: ${row.error}`);
+                }
+              }
+            }
+            const summary = {
+              generatedAt: new Date().toISOString(),
+              dimensions: `${width}x${height}`,
+              productionWrites: false,
+              models: models.map(x => x.api),
+              articles: articleFiles,
+              total: manifest.length,
+              succeeded: manifest.filter(x => x.status === 'success').length,
+              failed: manifest.filter(x => x.status === 'failed').length,
+              images: manifest
+            };
+            fs.writeFileSync('model-benchmark/manifest.json', JSON.stringify(summary, null, 2) + '\\n');
+            if (summary.failed > 0) process.exitCode = 1;
+          }
+          run().catch(err => { console.error(err); process.exitCode = 1; });
+          NODE
+
+      - name: Upload benchmark artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trendforge-image-model-benchmark-1024x576
+          path: model-benchmark/
+          if-no-files-found: error
+          retention-days: 14
