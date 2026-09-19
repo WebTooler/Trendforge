@@ -65,15 +65,65 @@ jobs:
               return;
             }
 
-            const ct = resp.headers.get('content-type') || '';
-            if (!ct.includes('image/')) {
+            const ct = (resp.headers.get('content-type') || '').toLowerCase();
+
+            // Workers AI FLUX.2 [klein] returns the generated image as a
+            // base64 string inside a JSON result envelope, not necessarily as
+            // a raw image/* HTTP response. Accept both forms so the probe
+            // validates the actual generated image rather than only its MIME type.
+            let imageBytes = bytes;
+            let outputExtension = 'bin';
+
+            if (ct.includes('application/json')) {
+              let payload;
+              try {
+                payload = JSON.parse(bytes.toString('utf8'));
+              } catch (err) {
+                console.error('FAIL: Cloudflare returned JSON content-type but the body was not valid JSON.');
+                console.error(err);
+                process.exitCode = 1;
+                return;
+              }
+
+              const imageValue = payload?.result?.image ?? payload?.result;
+              if (typeof imageValue !== 'string' || !imageValue.trim()) {
+                console.error('FAIL: Cloudflare JSON response did not contain result.image.');
+                console.log(bytes.toString('utf8'));
+                process.exitCode = 1;
+                return;
+              }
+
+              const encoded = imageValue.includes(',')
+                ? imageValue.slice(imageValue.indexOf(',') + 1)
+                : imageValue;
+              imageBytes = Buffer.from(encoded, 'base64');
+            } else if (!ct.includes('image/')) {
+              console.error(`FAIL: unexpected response content-type: ${ct || '(missing)'}`);
               console.log(bytes.toString('utf8'));
               process.exitCode = 1;
               return;
             }
 
-            fs.renameSync('probe-output/response.bin', 'probe-output/klein-4b-512.png');
-            console.log('SUCCESS: one image returned.');
+            if (imageBytes.length < 100) {
+              console.error(`FAIL: decoded image payload is unexpectedly small: ${imageBytes.length} bytes`);
+              process.exitCode = 1;
+              return;
+            }
+
+            // Validate common image signatures before declaring the probe successful.
+            const isJpeg = imageBytes[0] === 0xff && imageBytes[1] === 0xd8 && imageBytes[2] === 0xff;
+            const isPng = imageBytes[0] === 0x89 && imageBytes[1] === 0x50 &&
+              imageBytes[2] === 0x4e && imageBytes[3] === 0x47;
+            if (isJpeg) outputExtension = 'jpg';
+            else if (isPng) outputExtension = 'png';
+            else {
+              console.error('FAIL: decoded payload is not a recognized JPEG or PNG image.');
+              process.exitCode = 1;
+              return;
+            }
+
+            fs.writeFileSync(`probe-output/klein-4b-512.${outputExtension}`, imageBytes);
+            console.log(`SUCCESS: one image returned and decoded (${imageBytes.length} bytes; ${outputExtension}).`);
           }).catch((err) => {
             fs.writeFileSync('probe-output/result.json', JSON.stringify({ model, width: 512, height: 512, error: String(err) }, null, 2));
             console.error(err);
