@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-19T05:01:45.941Z",
+  "generatedAt": "2026-09-19T05:02:21.226Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,10 +11,10 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 14,
+    "articles": 15,
     "refreshCandidates": 0,
     "watch": 4,
-    "fresh": 10,
+    "fresh": 11,
     "stale": 0,
     "duplicateClusters": 0
   },
@@ -159,6 +159,20 @@
       "ageDays": 2.8,
       "ageState": "fresh",
       "words": 540,
+      "sourceCount": 1,
+      "refreshScore": 39,
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": []
+    },
+    {
+      "file": "jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean.md",
+      "title": "JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
+      "category": "Crypto",
+      "publishedAt": "2026-09-19T04:59:08.454Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 548,
       "sourceCount": 1,
       "refreshScore": 39,
       "status": "fresh",
