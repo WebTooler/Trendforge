@@ -222,7 +222,9 @@ jobs:
               const startMarker = '  {\n    "slug": "' + row.slug + '",';
               const objectStart = articlesTs.indexOf(startMarker);
               if (objectStart < 0) throw new Error('slug not found in lib/articles.ts: ' + row.slug);
-              const objectEnd = articlesTs.indexOf('\n  },', objectStart);
+              const commaEnd = articlesTs.indexOf('\n  },', objectStart);
+              const finalEnd = articlesTs.indexOf('\n  }\n];', objectStart);
+              const objectEnd = commaEnd >= 0 ? commaEnd : finalEnd;
               if (objectEnd < 0) throw new Error('article object end not found in lib/articles.ts: ' + row.slug);
               let articleObject = articlesTs.slice(objectStart, objectEnd + 5);
               const setField = (key, value) => {
