@@ -1,15 +1,15 @@
-name: TrendForge — Klein 4B 1200x630 Article Image Backfill
+name: TrendForge — Klein 4B 1024x576 PNG Article Image Test
 
 on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Maximum number of published article images to generate (0 = all)"
+        description: "Maximum number of article images to generate (0 = all)"
         required: false
-        default: "0"
+        default: "3"
         type: string
       production:
-        description: "Promote validated images into production article assets"
+        description: "Promote validated images into production article assets (keep false for testing)"
         required: false
         default: false
         type: boolean
@@ -24,8 +24,11 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       MODEL: "@cf/black-forest-labs/flux-2-klein-4b"
-      WIDTH: "1200"
-      HEIGHT: "630"
+      WIDTH: "1024"
+      HEIGHT: "576"
+      OUTPUT_FORMAT: "png"
+      OUTPUT_NEURONS_PER_TILE: "26.05"
+      INPUT_NEURONS_PER_TILE: "5.37"
       LIMIT: ${{ inputs.limit }}
       PRODUCTION: ${{ inputs.production }}
     steps:
@@ -40,11 +43,15 @@ jobs:
           test -n "$CLOUDFLARE_ACCOUNT_ID"
           test -n "$CLOUDFLARE_API_TOKEN"
           test "$MODEL" = "@cf/black-forest-labs/flux-2-klein-4b"
-          test "$WIDTH" = "1200"
-          test "$HEIGHT" = "630"
+          test "$WIDTH" = "1024"
+          test "$HEIGHT" = "576"
+          test "$OUTPUT_FORMAT" = "png"
           mkdir -p klein-backfill/{images,results}
           echo "Model: $MODEL"
           echo "Dimensions: ${WIDTH}x${HEIGHT}"
+          echo "Format: ${OUTPUT_FORMAT}"
+          echo "Estimated output tiles: $(( (WIDTH + 511) / 512 * (HEIGHT + 511) / 512 ))"
+          echo "Estimated output neurons/image: 104.20 (4 output tiles × 26.05)"
           echo "Limit: ${LIMIT:-0}"
           echo "Production promotion: $PRODUCTION"
 
@@ -68,6 +75,14 @@ jobs:
           const height = Number(process.env.HEIGHT);
           const limit = Math.max(0, Number(process.env.LIMIT || 0));
           const production = process.env.PRODUCTION === 'true';
+          const outputNeuronsPerTile = Number(process.env.OUTPUT_NEURONS_PER_TILE || 26.05);
+          const inputNeuronsPerTile = Number(process.env.INPUT_NEURONS_PER_TILE || 5.37);
+          const outputTilesX = Math.ceil(width / 512);
+          const outputTilesY = Math.ceil(height / 512);
+          const outputTiles = outputTilesX * outputTilesY;
+          const estimatedOutputNeurons = outputTiles * outputNeuronsPerTile;
+          const estimatedInputNeurons = 0; // text-only request; no reference image is sent
+          const estimatedNeuronsPerImage = estimatedInputNeurons + estimatedOutputNeurons;
           const articleDir = 'content/articles';
           const outDir = 'klein-backfill/images';
           const resultDir = 'klein-backfill/results';
@@ -154,13 +169,13 @@ jobs:
                 if (!rawMeta.width || !rawMeta.height) throw new Error('unable to read generated image dimensions');
                 const normalized = await sharp(decoded.bytes)
                   .resize({ width, height, fit: 'cover', position: 'centre' })
-                  .jpeg({ quality: 88, mozjpeg: true })
+                  .png({ compressionLevel: 9, adaptiveFiltering: true, palette: false })
                   .toBuffer();
                 const finalMeta = await sharp(normalized).metadata();
                 if (finalMeta.width !== width || finalMeta.height !== height) {
                   throw new Error(`normalized image dimensions are ${finalMeta.width}x${finalMeta.height}, expected ${width}x${height}`);
                 }
-                const outFile = `${slug}.1200x630.jpg`;
+                const outFile = `${slug}.1024x576.png`;
                 fs.writeFileSync(path.join(outDir, outFile), normalized);
 
                 const row = {
@@ -169,13 +184,19 @@ jobs:
                   status: 'success', output: outFile,
                   bytes: normalized.length, elapsedMs,
                   contentType: resp.headers.get('content-type'),
-                  outputContentType: 'image/jpeg',
+                  outputContentType: 'image/png',
+                  outputTiles,
+                  outputTilesX,
+                  outputTilesY,
+                  estimatedInputNeurons,
+                  estimatedOutputNeurons,
+                  estimatedNeuronsPerImage,
                   normalized: rawMeta.width !== width || rawMeta.height !== height,
                   model
                 };
                 manifest.push(row);
                 fs.writeFileSync(path.join(resultDir, `${slug}.json`), JSON.stringify(row, null, 2));
-                console.log(`SUCCESS ${file}: raw ${rawMeta.width}x${rawMeta.height} -> ${width}x${height}, ${normalized.length} bytes in ${elapsedMs}ms`);
+                console.log(`SUCCESS ${file}: raw ${rawMeta.width}x${rawMeta.height} -> ${width}x${height}, ${normalized.length} bytes in ${elapsedMs}ms; estimated neurons=${estimatedNeuronsPerImage.toFixed(2)}`);
               } catch (err) {
                 failures++;
                 const row = { file, slug, title, category, width, height, status: 'failed', error: String(err), elapsedMs: Date.now() - started, model };
@@ -187,7 +208,11 @@ jobs:
 
             const summary = {
               generatedAt: new Date().toISOString(),
-              model, width, height, production, requested: selected.length,
+              model, width, height, outputFormat: 'png', production, requested: selected.length,
+              outputTiles, outputNeuronsPerTile, estimatedNeuronsPerImage,
+              estimatedBatchNeurons: selected.length * estimatedNeuronsPerImage,
+              freeDailyNeurons: 10000,
+              estimatedImagesWithinFreeDailyAllocation: Math.floor(10000 / estimatedNeuronsPerImage),
               succeeded: manifest.filter(x => x.status === 'success').length,
               failed: failures,
               images: manifest
@@ -269,5 +294,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add content/articles lib/articles.ts public/images/articles klein-backfill/manifest.json
           git status --short
-          git commit -m "feat(images): promote Klein 4B 1200x630 article images" || echo "No changes to commit"
+          git commit -m "feat(images): promote Klein 4B 1024x576 PNG article images" || echo "No changes to commit"
           git push
