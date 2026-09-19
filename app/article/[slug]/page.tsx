@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import type { ReactNode } from 'react';
-import Markdown from 'react-markdown';
+import Markdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSanitize from 'rehype-sanitize';
 import { articles, getArticle } from '@/lib/articles';
@@ -38,9 +37,9 @@ function articleMarkdown(content:string[]){
  const blocks=content.map(block=>block.trim()).filter(Boolean);
  let markdown='';
  const listKind=(value:string)=>{
-  if(/^[-*+]\\s/.test(value)) return 'unordered';
-  if(/^\\d+[.)]\\s/.test(value)) return 'ordered';
-  if(/^\\|/.test(value)) return 'table';
+  if(/^[-*+]\s/.test(value)) return 'unordered';
+  if(/^\d+[.)]\s/.test(value)) return 'ordered';
+  if(/^\|/.test(value)) return 'table';
   return '';
  };
  for(let i=0;i<blocks.length;i++){
@@ -49,13 +48,15 @@ function articleMarkdown(content:string[]){
   const kind=listKind(block);
   const previousKind=previous ? listKind(previous) : '';
   const continuation=kind!=='' && kind===previousKind;
-  markdown += (i===0 ? '' : continuation ? '\\n' : '\\n\\n') + block;
+  markdown += (i===0 ? '' : continuation ? '\n' : '\n\n') + block;
  }
  return markdown;
 }
-const markdownComponents={
- h1:({children}:{children:ReactNode})=><h2>{children}</h2>,
+
+const markdownComponents: Components = {
+ h1: ({children}) => <h2>{children}</h2>,
 };
+
 export default async function ArticlePage({params}:{params:ArticleParams}){
  const { slug } = await params;
  const article=getArticle(slug); if(!article) notFound();
