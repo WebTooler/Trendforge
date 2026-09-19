@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T05:01:46.023Z",
+  "generatedAt": "2026-09-19T05:09:27.326Z",
   "policy": {
     "privacyFirst": true,
     "no_scraping": true,
@@ -20,6 +20,38 @@
       "slug": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
       "title": "The Apple Watch Series 12 is the start of a new wearable era",
       "category": "Digital Life",
+      "channels": [
+        {
+          "channel": "Google Search",
+          "action": "publish and keep canonical/indexable",
+          "reason": "organic discovery"
+        },
+        {
+          "channel": "Newsletter",
+          "action": "include when relevant",
+          "reason": "subscriber retention"
+        },
+        {
+          "channel": "RSS",
+          "action": "make available through feed",
+          "reason": "reader-controlled distribution"
+        },
+        {
+          "channel": "Social",
+          "action": "share a concise human-written excerpt",
+          "reason": "additional discovery"
+        },
+        {
+          "channel": "Direct",
+          "action": "link from related articles",
+          "reason": "internal discovery"
+        }
+      ]
+    },
+    {
+      "slug": "jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean",
+      "title": "JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
+      "category": "Crypto",
       "channels": [
         {
           "channel": "Google Search",
@@ -466,7 +498,7 @@
     }
   ],
   "summary": {
-    "articlesPlanned": 14,
+    "articlesPlanned": 15,
     "externalPostingPerformed": false
   }
 }
