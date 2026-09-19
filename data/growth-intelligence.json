@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T06:58:18.430Z",
+  "generatedAt": "2026-09-19T07:09:33.680Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 17,
-    "averageEditorialScore": 74,
+    "totalArticles": 18,
+    "averageEditorialScore": 75,
     "editorialReviewCount": 14,
     "refreshCandidates": 0
   },
@@ -16,17 +16,17 @@
     {
       "category": "AI",
       "count": 6,
-      "share": 35.3
+      "share": 33.3
     },
     {
       "category": "Technology",
       "count": 4,
-      "share": 23.5
+      "share": 22.2
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 17.6
+      "share": 16.7
     },
     {
       "category": "Innovation",
@@ -40,28 +40,30 @@
     },
     {
       "category": "Digital Life",
-      "count": 2,
-      "share": 11.8
+      "count": 3,
+      "share": 16.7
     },
     {
       "category": "Crypto",
       "count": 2,
-      "share": 11.8
+      "share": 11.1
     }
   ],
   "missingCategories": [
     "Innovation",
     "Product Launches"
   ],
-  "overrepresentedCategories": [
-    "AI"
-  ],
+  "overrepresentedCategories": [],
   "recommendations": [
     "Prioritize missing categories: Innovation, Product Launches.",
-    "Reduce short-term concentration in: AI.",
     "14 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
+    {
+      "title": "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
+      "category": "Digital Life",
+      "publishedAt": "2026-09-19T07:08:56.449Z"
+    },
     {
       "title": "U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
       "category": "AI",
@@ -106,11 +108,6 @@
       "title": "AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026",
       "category": "AI",
       "publishedAt": "2026-09-17T09:11:07.530Z"
-    },
-    {
-      "title": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
-      "category": "Technology",
-      "publishedAt": "2026-09-17T08:51:48.854Z"
     }
   ]
 }

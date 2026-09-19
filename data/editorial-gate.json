@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T05:39:19.431Z",
+  "generatedAt": "2026-09-19T07:08:56.449Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3126,
-      "sentenceCount": 28,
+      "normalizedLength": 3870,
+      "sentenceCount": 29,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,12 +31,15 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "aws.amazon.com"
+    "myfox28columbus.com",
+    "yahoo.com",
+    "northernnewsnow.com",
+    "cbsnews.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 1,
-    "usablePassages": 18,
+    "sourceCount": 4,
+    "usablePassages": 51,
     "primarySourceCount": 0
   }
 }

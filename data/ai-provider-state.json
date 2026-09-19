@@ -7,8 +7,8 @@
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 28,
-      "lastSuccessAt": "2026-09-19T05:39:54.399Z"
+      "successes": 30,
+      "lastSuccessAt": "2026-09-19T07:09:30.790Z"
     },
     "Gemini": {
       "failures": 25,
@@ -32,17 +32,17 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 36,
+      "failures": 37,
       "quotaBlockedUntil": 1789801109661,
       "lastStatus": 200,
-      "lastError": "Invalid structured output",
-      "lastClass": "transient",
+      "lastError": "Empty atomic repair response",
+      "lastClass": "error",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 47,
-      "quotaBlockedUntil": 1789801124770,
+      "failures": 48,
+      "quotaBlockedUntil": 1789801739873,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -51,5 +51,5 @@
     }
   },
   "rotationCursor": 1,
-  "updatedAt": "2026-09-19T06:58:14.770Z"
+  "updatedAt": "2026-09-19T07:09:30.790Z"
 }

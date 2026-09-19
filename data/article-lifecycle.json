@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-19T06:58:54.627Z",
+  "generatedAt": "2026-09-19T07:09:33.649Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,9 +11,9 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 17,
+    "articles": 18,
     "refreshCandidates": 0,
-    "watch": 5,
+    "watch": 6,
     "fresh": 12,
     "stale": 0,
     "duplicateClusters": 0
@@ -70,6 +70,20 @@
       "ageState": "fresh",
       "words": 450,
       "sourceCount": 2,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
+    },
+    {
+      "file": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.md",
+      "title": "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
+      "category": "Digital Life",
+      "publishedAt": "2026-09-19T07:08:56.449Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 677,
+      "sourceCount": 4,
       "refreshScore": 46,
       "status": "watch",
       "action": "watch",
@@ -337,6 +351,21 @@
       "priority": 4
     },
     {
+      "file": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.md",
+      "title": "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
+      "category": "Digital Life",
+      "publishedAt": "2026-09-19T07:08:56.449Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 677,
+      "sourceCount": 4,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 5
+    },
+    {
       "file": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.md",
       "title": "U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
       "category": "AI",
@@ -349,7 +378,7 @@
       "status": "watch",
       "action": "watch",
       "reasons": [],
-      "priority": 5
+      "priority": 6
     }
   ],
   "duplicateClusters": []
