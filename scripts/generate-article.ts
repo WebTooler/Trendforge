@@ -38,6 +38,40 @@ type ProviderResult={text:string;provider:string};
 const generateWithProviders=async(prompt:string,expectedTitle:string,blueprint:any):Promise<ProviderResult>=>generateWithTrendForgeWriter({prompt,category:process.env.TRENDFORGE_WRITER_CATEGORY||'Technology',expectedTitle,blueprint});
 const parseModelJson=(raw:string):{title:string;description:string;content:string}=>{const text=raw.trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'').trim();try{return JSON.parse(text);}catch{}const start=text.indexOf('{'),end=text.lastIndexOf('}');if(start>=0&&end>start){try{return JSON.parse(text.slice(start,end+1));}catch{}}throw new Error('AI output was not valid JSON');};
 
+async function buildEvidencePack(sources:{title?:string;url:string;publishedAt?:string}[],storyTitle:string){
+  const pack:any[]=[];
+  for(const source of sources){
+    try{
+      const response=await fetch(source.url,{redirect:'follow',signal:AbortSignal.timeout(12000),headers:{'user-agent':'TrendForge-Evidence/3.0'}});
+      if(!response.ok) continue;
+      const html=await response.text();
+      const extracted=extractEvidenceFromHtml(html,storyTitle);
+      if(extracted.passages.length<1) continue;
+      const domain=domainOf(source.url);
+      pack.push({
+        title:source.title||storyTitle,
+        url:source.url,
+        publishedAt:source.publishedAt||'',
+        body:extracted.body,
+        passages:extracted.passages,
+        headline:extracted.headline,
+        description:extracted.description,
+        publisherFamily:domain,
+        domain,
+        verified:true,
+        primary:false,
+        extractionKind:extracted.kind,
+        rawParagraphCount:extracted.rawParagraphCount,
+        selectedPassageCount:extracted.selectedPassageCount,
+        selectedChars:extracted.selectedChars
+      });
+    }catch(error){
+      console.log(`Evidence fetch failed for ${source.url}: ${String(error).slice(0,180)}`);
+    }
+  }
+  return pack;
+}
+
 async function main(){
   const input='data/scored-trends.json',outputDir='content/articles';if(!fs.existsSync(input))process.exit(0);
   const payload=JSON.parse(fs.readFileSync(input,'utf8')) as {trends?:Trend[]};const trends=payload.trends??[];
