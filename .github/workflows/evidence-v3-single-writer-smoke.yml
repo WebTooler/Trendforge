@@ -13,6 +13,8 @@ on:
       - ".github/workflows/evidence-v3-single-writer-smoke.yml"
   workflow_dispatch:
 
+# lab trigger: syntax fix verification
+
 permissions:
   contents: write
 
