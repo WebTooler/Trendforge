@@ -10,6 +10,32 @@ const domainOf = (url='') => {
   try { return new URL(url).hostname.toLowerCase().replace(/^www\./,''); } catch { return ''; }
 };
 
+const provenanceText = (source={}) => clean(source.body || (Array.isArray(source.passages) ? source.passages.join(' ') : ''));
+const provenanceTokens = (text='') => new Set(clean(text).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(w => w.length >= 5));
+const provenanceSimilarity = (a='', b='') => {
+  const A=provenanceTokens(a), B=provenanceTokens(b);
+  if(!A.size||!B.size)return 0;
+  let shared=0; for(const token of A)if(B.has(token))shared++;
+  return shared/Math.max(1,Math.min(A.size,B.size));
+};
+const sourceProvenanceGroups = (sources=[]) => {
+  const parent=sources.map((_,i)=>i);
+  const find=i=>{while(parent[i]!==i){parent[i]=parent[parent[i]];i=parent[i];}return i;};
+  const union=(a,b)=>{a=find(a);b=find(b);if(a!==b)parent[b]=a;};
+  for(let i=0;i<sources.length;i++)for(let j=i+1;j<sources.length;j++){
+    const a=sources[i],b=sources[j];
+    const bodySim=provenanceSimilarity(provenanceText(a),provenanceText(b));
+    const titleSim=provenanceSimilarity(a.title||'',b.title||'');
+    const da=domainOf(a.url||a.domain||''),db=domainOf(b.url||b.domain||'');
+    const ab=provenanceText(a).toLowerCase(),bb=provenanceText(b).toLowerCase();
+    const attribution=(da&&bb.includes(da))||(db&&ab.includes(db));
+    if(bodySim>=0.32||(titleSim>=0.55&&bodySim>=0.18)||(attribution&&bodySim>=0.12))union(i,j);
+  }
+  const groups=new Map();
+  for(let i=0;i<sources.length;i++){const root=find(i);if(!groups.has(root))groups.set(root,[]);groups.get(root).push(i);}
+  return [...groups.values()];
+};
+
 const sourceAuthorityScore = (source={}) => {
   if (Number.isFinite(source.authorityScore)) return Math.max(0, Math.min(10, source.authorityScore));
   const domain = domainOf(source.url || source.domain || '');
@@ -58,7 +84,9 @@ export function scoreEvidenceCoverage({ sources=[] }={}) {
   const scoredSources = usable.map(scoreEvidenceSource);
   const totalChars = scoredSources.reduce((n,s)=>n+s.chars,0);
   const totalPassages = scoredSources.reduce((n,s)=>n+s.passages,0);
-  const independentFamilies = unique(usable.map(s => s.publisherFamily || domainOf(s.url || s.domain || '')));
+  const domainFamilies = unique(usable.map(s => s.publisherFamily || domainOf(s.url || s.domain || '')));
+  const provenanceGroups = sourceProvenanceGroups(usable);
+  const independentFamilies = provenanceGroups.map(group => domainFamilies.filter((_,index) => group.includes(index)).sort().join('|')).filter(Boolean);
   const primaryCount = scoredSources.filter(s=>s.primary).length;
   const verifiedCount = scoredSources.filter(s=>s.verified).length;
   const factualSignalsTotal = scoredSources.reduce((n,s)=>n+s.factualSignals,0);
@@ -101,6 +129,9 @@ export function scoreEvidenceCoverage({ sources=[] }={}) {
     blockers,
     sourceCount: usable.length,
     independentPublisherFamilies: independentFamilies.length,
+    domainPublisherFamilies: domainFamilies.length,
+    provenanceGroups: provenanceGroups.map(group => group.map(index => ({domain:domainOf(usable[index].url||usable[index].domain||''),title:usable[index].title||'',index}))),
+    syndicatedSourceGroups: provenanceGroups.filter(group => group.length>1).length,
     totalChars,
     totalPassages,
     factualSignals: factualSignalsTotal,
