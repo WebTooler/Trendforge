@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T05:35:19.760Z",
+  "generatedAt": "2026-09-19T06:54:55.625Z",
   "scoringPolicy": {
     "version": 2,
     "discoverySignalsInfluenceScore": true,
@@ -27,7 +27,7 @@
           "news",
           "publisher"
         ],
-        "corroboratingCandidates": 6
+        "corroboratingCandidates": 5
       },
       "score": 73,
       "reasons": [
@@ -60,7 +60,7 @@
           "publisher",
           "news"
         ],
-        "corroboratingCandidates": 3
+        "corroboratingCandidates": 4
       },
       "score": 73,
       "reasons": [
@@ -91,9 +91,9 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 2
+        "corroboratingCandidates": 3
       },
-      "score": 64,
+      "score": 65,
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
@@ -101,7 +101,71 @@
         "Enough context for original synthesis"
       ],
       "eligible": true,
-      "researchSignalScore": 4
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Disney Hires First-Ever Chief Technology Officer - The Hollywood Reporter",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPd1ZiLU5uRzJuNm1ZTTY5QWNYNF9lazVTQkRCaXVjM1lFUG9VSnI5NVJ2ZEdsU0J1QmJpMjBzVGs5YVExNEQyMzNLMUxYb1ZqNUVfNDVGUWJfa2Q3WFJ2d3Y0Vkp4WVBBVTREb1JkQjhEWjU2QUU1YzlrNUkwVDFTSmt4NWI3Ny1tVlA4X3VlUHlseGRGUWl3enZfVnM?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T16:42:47.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPd1ZiLU5uRzJuNm1ZTTY5QWNYNF9lazVTQkRCaXVjM1lFUG9VSnI5NVJ2ZEdsU0J1QmJpMjBzVGs5YVExNEQyMzNLMUxYb1ZqNUVfNDVGUWJfa2Q3WFJ2d3Y0Vkp4WVBBVTREb1JkQjhEWjU2QUU1YzlrNUkwVDFTSmt4NWI3Ny1tVlA4X3VlUHlseGRGUWl3enZfVnM?oc=5\" target=\"_blank\">Disney Hires First-Ever Chief Technology Officer</a>  <font color=\"#6f6f6f\">The Hollywood Reporter</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 65,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "EXCLUSIVE: OpenAI's Sam Altman to brief UN Security Council next week - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTUFnSGpyQWtoZEdZY3IzTTEzZ2Npd2JTc0MtVUxfMW1LeWgwX0xBWXdXVmNHQ1p0NjF6Y1pPdFl6RnNtZTZjZEZfcW5FX2tWSE1ETHZxTmQyNWFIYzJGWHNoLVJxSFZ5SFFZdklHYWZvd0RMWk4tc3FuelVyck9LWDRzMUFmY2tpNDFlVmhIbVBGV2thR2N5UjlUM2pnMFlYT0FEOWhIVzRTaDRlZnc?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T22:40:06.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQTUFnSGpyQWtoZEdZY3IzTTEzZ2Npd2JTc0MtVUxfMW1LeWgwX0xBWXdXVmNHQ1p0NjF6Y1pPdFl6RnNtZTZjZEZfcW5FX2tWSE1ETHZxTmQyNWFIYzJGWHNoLVJxSFZ5SFFZdklHYWZvd0RMWk4tc3FuelVyck9LWDRzMUFmY2tpNDFlVmhIbVBGV2thR2N5UjlUM2pnMFlYT0FEOWhIVzRTaDRlZnc?oc=5\" target=\"_blank\">EXCLUSIVE: OpenAI's Sam Altman to brief UN Security Council next week</a>  <font color=\"#6f6f6f\">Reuters</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 2,
+        "signalTypeCount": 2,
+        "networks": [
+          "Google News",
+          "The Verge"
+        ],
+        "signalTypes": [
+          "news",
+          "publisher"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 65,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 12
     },
     {
       "title": "News: Mayor Bissen signs County Food and Nutrition Security Plan into law - Maui Recovers",
@@ -124,7 +188,7 @@
           "news",
           "publisher"
         ],
-        "corroboratingCandidates": 7
+        "corroboratingCandidates": 6
       },
       "score": 64,
       "reasons": [
@@ -161,36 +225,6 @@
         "Fresh topic",
         "Strong category relevance",
         "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Why Is Crypto Up Today? Bitcoin Tops $80,000 as Ethereum, XRP and Dogecoin Rise Up to 7% - Finance Magnates",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ1RRMndWQUptTThQRjBjb1VxUVJwbnJKYkJlVUVHbGNVSEUtbEJ2bVhScUZxVzFBbG1kMHdyeENVS01iclpTUGRxNHcwTkdienJjU1RTUE1WRVFHMThwSHlDd2JfdHVSSmNranJ5UUoycmJ0cGlqZGlhSWlPMGM4eWctaVJQVl9aaTREeGNCY2VkVllVbEFtaThUY2RkMzFrN0htWlhvTHBvWlg4aU1NLWtaU2ZvRTZpc2FMR08xRjgxanc?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T18:26:37.000Z",
-      "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ1RRMndWQUptTThQRjBjb1VxUVJwbnJKYkJlVUVHbGNVSEUtbEJ2bVhScUZxVzFBbG1kMHdyeENVS01iclpTUGRxNHcwTkdienJjU1RTUE1WRVFHMThwSHlDd2JfdHVSSmNranJ5UUoycmJ0cGlqZGlhSWlPMGM4eWctaVJQVl9aaTREeGNCY2VkVllVbEFtaThUY2RkMzFrN0htWlhvTHBvWlg4aU1NLWtaU2ZvRTZpc2FMR08xRjgxanc?oc=5\" target=\"_blank\">Why Is Crypto Up Today? Bitcoin Tops $80,000 as Ethereum, XRP and Dogecoin Rise Up to 7%</a>  <font color=\"#6f6f6f\">Finance Magnates</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 8
-      },
-      "score": 63,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
         "Enough context for original synthesis"
       ],
       "eligible": true,
@@ -258,6 +292,36 @@
       "researchSignalScore": 2
     },
     {
+      "title": "Disney names CTO for the first time as media giant expands tech push - CNBC",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BcXF5bUF4LVdfTzg5MFBLVDBGS3NjT0cwalNiRGlLMWFlRGlmX3VKbjVyN1dkSXNNTVYzb1RQeFJkY2ZlMnI3dEhLdV9ZTVZvM0lsRjNWRzRZSjRTWThJYlR30gFnQVVfeXFMUGtJdWs0UWZvZFRrYVRrelJ3UUdKemZoY2hVeGdMaVhhWlR0U0xYQlJrT0pGU1BUSEFTdmhXUWpwU3pBUFkyZ0RlbkZZd2lFaERpQWJMME0tN3ltTE9pdUdlQXFqTnQycw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T16:13:38.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BcXF5bUF4LVdfTzg5MFBLVDBGS3NjT0cwalNiRGlLMWFlRGlmX3VKbjVyN1dkSXNNTVYzb1RQeFJkY2ZlMnI3dEhLdV9ZTVZvM0lsRjNWRzRZSjRTWThJYlR30gFnQVVfeXFMUGtJdWs0UWZvZFRrYVRrelJ3UUdKemZoY2hVeGdMaVhhWlR0U0xYQlJrT0pGU1BUSEFTdmhXUWpwU3pBUFkyZ0RlbkZZd2lFaERpQWJMME0tN3ltTE9pdUdlQXFqTnQycw?oc=5\" target=\"_blank\">Disney names CTO for the first time as media giant expands tech push</a>  <font color=\"#6f6f6f\">CNBC</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 59,
+      "reasons": [
+        "Fresh topic",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
       "title": "Trump says US, Denmark, Greenland entered into agreement on US control over security - Reuters",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQR0lyZGs1ZUF3b0k3YS1laTNXMWZuR2dLaXJaeThJbDItdjdad2RCMk9SRzF5ajAxcWJ3cTJ1ZU9XTE9KMzJuWEJETWFNTW5mV2lZZjh2MFhSZVU4VFJaeUdBRXY5VXdHNHlPMEhwQ2ZfUFYyR0ZqTEc3V3VsLW9oc0pjRENLQ0N0eS12eDB4dlRLczJmemVXQ3dyeXlnMUJ2d1IzSU1idkJOZW8xVlI1S1JBZnZCTG9jQW4yTlZn?oc=5",
       "source": "Google News",
@@ -278,7 +342,7 @@
           "news",
           "publisher"
         ],
-        "corroboratingCandidates": 14
+        "corroboratingCandidates": 15
       },
       "score": 59,
       "reasons": [
@@ -310,7 +374,7 @@
           "news",
           "publisher"
         ],
-        "corroboratingCandidates": 7
+        "corroboratingCandidates": 8
       },
       "score": 58,
       "reasons": [
@@ -350,36 +414,6 @@
       ],
       "eligible": true,
       "researchSignalScore": 0
-    },
-    {
-      "title": "Disney names CTO for the first time as media giant expands tech push - CNBC",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BcXF5bUF4LVdfTzg5MFBLVDBGS3NjT0cwalNiRGlLMWFlRGlmX3VKbjVyN1dkSXNNTVYzb1RQeFJkY2ZlMnI3dEhLdV9ZTVZvM0lsRjNWRzRZSjRTWThJYlR30gFnQVVfeXFMUGtJdWs0UWZvZFRrYVRrelJ3UUdKemZoY2hVeGdMaVhhWlR0U0xYQlJrT0pGU1BUSEFTdmhXUWpwU3pBUFkyZ0RlbkZZd2lFaERpQWJMME0tN3ltTE9pdUdlQXFqTnQycw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T16:13:38.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BcXF5bUF4LVdfTzg5MFBLVDBGS3NjT0cwalNiRGlLMWFlRGlmX3VKbjVyN1dkSXNNTVYzb1RQeFJkY2ZlMnI3dEhLdV9ZTVZvM0lsRjNWRzRZSjRTWThJYlR30gFnQVVfeXFMUGtJdWs0UWZvZFRrYVRrelJ3UUdKemZoY2hVeGdMaVhhWlR0U0xYQlJrT0pGU1BUSEFTdmhXUWpwU3pBUFkyZ0RlbkZZd2lFaERpQWJMME0tN3ltTE9pdUdlQXFqTnQycw?oc=5\" target=\"_blank\">Disney names CTO for the first time as media giant expands tech push</a>  <font color=\"#6f6f6f\">CNBC</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 58,
-      "reasons": [
-        "Fresh topic",
-        "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
     },
     {
       "title": "A new kind of AI model from a ChatGPT inventor is thrilling developers",
@@ -430,7 +464,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 6
+        "corroboratingCandidates": 7
       },
       "score": 57,
       "reasons": [
@@ -504,133 +538,13 @@
       "researchSignalScore": 10
     },
     {
-      "title": "U.S. Reaches Greenland Security Agreement - WSJ",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDdJa01FS3RIcFdHS0FSV2pWUU85TWJwWTlZem4tNVpQcThnSUhHYWRmdHE3bTlqcUhhb2d0SzRMRDNoWnJZU3F0cWpzbzNZMEU0a1p5RC1Db0FpeUpWOU04XzZKdi1YT2d4cmt1RERFSG5yZU1FUk0tSE5SRFdMSmRRVklSMG9GdGhfbUNzeENNckVXcGNSSzBQVXE4c3hsdFlON3RDM1ZLREJNRklUVGplUDFUZUtZajV2ZzFrMm0tdw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T00:27:20.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDdJa01FS3RIcFdHS0FSV2pWUU85TWJwWTlZem4tNVpQcThnSUhHYWRmdHE3bTlqcUhhb2d0SzRMRDNoWnJZU3F0cWpzbzNZMEU0a1p5RC1Db0FpeUpWOU04XzZKdi1YT2d4cmt1RERFSG5yZU1FUk0tSE5SRFdMSmRRVklSMG9GdGhfbUNzeENNckVXcGNSSzBQVXE4c3hsdFlON3RDM1ZLREJNRklUVGplUDFUZUtZajV2ZzFrMm0tdw?oc=5\" target=\"_blank\">U.S. Reaches Greenland Security Agreement</a>  <font color=\"#6f6f6f\">WSJ</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 12
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Trump announces agreement with Denmark to secure ‘permanent’ control over Greenland’s security - NBC News",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNYjZLUXl0bmxiX2JaSWlxTlVCZ2g0Z3F6MWN4cmN6eUd3MmhIZ0ZxMlF0WXBJYzdWazVCaWs5UUo5VHE0YVVXN1ZkOTdHenltRndJVzNqUWJtUFBYcWh2czkwZVBZQ2dOVnlrSFNxZ0pOb1kya240N2lEYVpoM09ER3pMMjRhRDV5eUZ2WHM5VDYyV3RuTEt4T3JDSy02MWFzcFNHZlFvM1MyblRGbDFjSXRhR1FoZnc5Mm9sNVRlRU1fa0ktNXBFOHpXLXpiWUk?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T23:45:29.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNYjZLUXl0bmxiX2JaSWlxTlVCZ2g0Z3F6MWN4cmN6eUd3MmhIZ0ZxMlF0WXBJYzdWazVCaWs5UUo5VHE0YVVXN1ZkOTdHenltRndJVzNqUWJtUFBYcWh2czkwZVBZQ2dOVnlrSFNxZ0pOb1kya240N2lEYVpoM09ER3pMMjRhRDV5eUZ2WHM5VDYyV3RuTEt4T3JDSy02MWFzcFNHZlFvM1MyblRGbDFjSXRhR1FoZnc5Mm9sNVRlRU1fa0ktNXBFOHpXLXpiWUk?oc=5\" target=\"_blank\">Trump announces agreement with Denmark to secure ‘permanent’ control over Greenland’s security</a>  <font color=\"#6f6f6f\">NBC News</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 16
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "U.S. and Denmark Reach Security Deal on Greenland, Trump Says - The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBlWVY0TTlvREROcE9XR0tjbHRHUU05TUNiRW9iZmg3Tnl6aWVXaS03Nlk0dVRReEtuNDhlWDVBby1kc2V2RzROUS1kV3NQSVpNbmFQa1V2Si05cnZvdFAzSVRXZC1FYmpqZ0wwOFUxdzRHbjc3TlE?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T00:53:23.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBlWVY0TTlvREROcE9XR0tjbHRHUU05TUNiRW9iZmg3Tnl6aWVXaS03Nlk0dVRReEtuNDhlWDVBby1kc2V2RzROUS1kV3NQSVpNbmFQa1V2Si05cnZvdFAzSVRXZC1FYmpqZ0wwOFUxdzRHbjc3TlE?oc=5\" target=\"_blank\">U.S. and Denmark Reach Security Deal on Greenland, Trump Says</a>  <font color=\"#6f6f6f\">The New York Times</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 12
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Trump says US has struck security agreement with Denmark over Greenland - ABC News - Breaking News, Latest News and Videos",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRnFFUE00amhVMG1WMmZZMTQ2Smt4cXFrbDlodUg0cnVNZGhyY2lIZEVNaG1uNUUta1dMd2IxeFVBMS1BLURpUlcxOXliQVQtaGhscFVXTkJmZ040ekdpM1V0djF2WXlZYzJ4alVCMmhtNmQzaHlwMTB0TzF4aUVDckRvdzdDMXpVRklvdGpScFFONVpjNmZhVEhvNGhiUlZvMjNPdkJrc1bSAa4BQVVfeXFMTXNXaW41TXQ4WFpCeUh2N3ZxLUJvNmhmUkhlX2pnQU5UakdWZ203VHVMTi1OR0tFTXNHeWxrN0ZrdTRHQ3MtWkVHM1pfNDFJMUhZOFNPX1k3cm9JUGVWT2Zqby1ibTN6OTNJRy0yeXZzQlJ6b1hHZXlDY3EzLWFSeC1ieHBwUlZYdEN2OTBOd2gwWTRGdjJWVl82S3NuQXRLbmc3MDc4a2ZNSDFsLURB?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T23:58:18.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRnFFUE00amhVMG1WMmZZMTQ2Smt4cXFrbDlodUg0cnVNZGhyY2lIZEVNaG1uNUUta1dMd2IxeFVBMS1BLURpUlcxOXliQVQtaGhscFVXTkJmZ040ekdpM1V0djF2WXlZYzJ4alVCMmhtNmQzaHlwMTB0TzF4aUVDckRvdzdDMXpVRklvdGpScFFONVpjNmZhVEhvNGhiUlZvMjNPdkJrc1bSAa4BQVVfeXFMTXNXaW41TXQ4WFpCeUh2N3ZxLUJvNmhmUkhlX2pnQU5UakdWZ203VHVMTi1OR0tFTXNHeWxrN0ZrdTRHQ3MtWkVHM1pfNDFJMUhZOFNPX1k3cm9JUGVWT2Zqby1ibTN6OTNJRy0yeXZzQlJ6b1hHZXlDY3EzLWFSeC1ieHBwUlZYdEN2OTBOd2gwWTRGdjJWVl82S3NuQXRLbmc3MDc4a2ZNSDFsLURB?oc=5\" target=\"_blank\">Trump says US has struck security agreement with Denmark over Greenland</a>  <font color=\"#6f6f6f\">ABC News - Breaking News, Latest News and Videos</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 16
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Trump claims security, military deal with Denmark over Greenland - axios.com",
+      "title": "Trump claims security, military deal with Denmark over Greenland - Axios",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4yTzNFMERzSHJxZ3ZYaW41MHR5VUZabnRMTWNlSTRLYWpBQzlQX2NrNmMyTjVlbnBQOFB5eERYWV94V1d0clpiTDJnUW40OE1jZ2VIS3V3X04yUDBfN1F4MUtLTllZdzhXX2ZhTTV3?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-19T03:49:40.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE4yTzNFMERzSHJxZ3ZYaW41MHR5VUZabnRMTWNlSTRLYWpBQzlQX2NrNmMyTjVlbnBQOFB5eERYWV94V1d0clpiTDJnUW40OE1jZ2VIS3V3X04yUDBfN1F4MUtLTllZdzhXX2ZhTTV3?oc=5\" target=\"_blank\">Trump claims security, military deal with Denmark over Greenland</a>  <font color=\"#6f6f6f\">axios.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE4yTzNFMERzSHJxZ3ZYaW41MHR5VUZabnRMTWNlSTRLYWpBQzlQX2NrNmMyTjVlbnBQOFB5eERYWV94V1d0clpiTDJnUW40OE1jZ2VIS3V3X04yUDBfN1F4MUtLTllZdzhXX2ZhTTV3?oc=5\" target=\"_blank\">Trump claims security, military deal with Denmark over Greenland</a>  <font color=\"#6f6f6f\">Axios</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -654,13 +568,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "US, Denmark reach deal over Greenland's security, Trump says - dw.com",
+      "title": "US, Denmark reach deal over Greenland's security, Trump says - DW.com",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPd05Ra2VzVkc3bWR2SUd4Q1ByY18ySF9zdnZHMG9sVzdjdHhaLUY3R0t5VUVneENqOEp4X3RnM3pEclBtZVJsNUhMZGt1cHIwUjVnNDVSWXBQMFRUUXhqNFV6TGlVdjVjSFJ0enMxX2M0YTRBdjktR3RWcl9qNVplVDFmZHE3VTBweDFJTEhCNDR6SHI3VWY0aXp6aVJiLW1IU3FsMUVzOHBOZnJWQm9keTh30gGyAUFVX3lxTE0xbXVHLVBxVXV2SHFQTjduNHlhSHlBTVRJSEh0SThXeEZSdVJvSlN0VkcyZ0NNUlpsd1dNQmtoTDQ1MEJ5a1lpZFFCdFlrcTBSMWRWQXVCQWxsaGxuVWNaNzJRb2FQbGRWOHhrZm1zak5IV3lXdW9HTzdxeHNoNkVYSHJjSnFYRFh6em02YVRQZVF0VjUzaTdRb0xrcE9SdHdacUZmZm1RQUFjVmlmdl9aQlE?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-19T02:17:45.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPd05Ra2VzVkc3bWR2SUd4Q1ByY18ySF9zdnZHMG9sVzdjdHhaLUY3R0t5VUVneENqOEp4X3RnM3pEclBtZVJsNUhMZGt1cHIwUjVnNDVSWXBQMFRUUXhqNFV6TGlVdjVjSFJ0enMxX2M0YTRBdjktR3RWcl9qNVplVDFmZHE3VTBweDFJTEhCNDR6SHI3VWY0aXp6aVJiLW1IU3FsMUVzOHBOZnJWQm9keTh30gGyAUFVX3lxTE0xbXVHLVBxVXV2SHFQTjduNHlhSHlBTVRJSEh0SThXeEZSdVJvSlN0VkcyZ0NNUlpsd1dNQmtoTDQ1MEJ5a1lpZFFCdFlrcTBSMWRWQXVCQWxsaGxuVWNaNzJRb2FQbGRWOHhrZm1zak5IV3lXdW9HTzdxeHNoNkVYSHJjSnFYRFh6em02YVRQZVF0VjUzaTdRb0xrcE9SdHdacUZmZm1RQUFjVmlmdl9aQlE?oc=5\" target=\"_blank\">US, Denmark reach deal over Greenland's security, Trump says</a>  <font color=\"#6f6f6f\">dw.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPd05Ra2VzVkc3bWR2SUd4Q1ByY18ySF9zdnZHMG9sVzdjdHhaLUY3R0t5VUVneENqOEp4X3RnM3pEclBtZVJsNUhMZGt1cHIwUjVnNDVSWXBQMFRUUXhqNFV6TGlVdjVjSFJ0enMxX2M0YTRBdjktR3RWcl9qNVplVDFmZHE3VTBweDFJTEhCNDR6SHI3VWY0aXp6aVJiLW1IU3FsMUVzOHBOZnJWQm9keTh30gGyAUFVX3lxTE0xbXVHLVBxVXV2SHFQTjduNHlhSHlBTVRJSEh0SThXeEZSdVJvSlN0VkcyZ0NNUlpsd1dNQmtoTDQ1MEJ5a1lpZFFCdFlrcTBSMWRWQXVCQWxsaGxuVWNaNzJRb2FQbGRWOHhrZm1zak5IV3lXdW9HTzdxeHNoNkVYSHJjSnFYRFh6em02YVRQZVF0VjUzaTdRb0xrcE9SdHdacUZmZm1RQUFjVmlmdl9aQlE?oc=5\" target=\"_blank\">US, Denmark reach deal over Greenland's security, Trump says</a>  <font color=\"#6f6f6f\">DW.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -684,13 +598,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Google is the latest AI lab with a security testing mishap - axios.com",
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1uQTYtMzFHOXh2N05IRTFBZks5VERQX05BLUs1T1c4eXhLNlBaWFc1NWttWnBzN3RMdkVCbzNWT2owNmNEN21vbDJNWDR1c3dsU3VKSEQyN0d2SkdnU25ILUxXcFcxQTBGZTBkVENocU5sMUstNkhkamJR?oc=5",
+      "title": "Trump hails Greenland security deal that falls short of takeover - The Washington Post",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPLXFfTGlBbUNVQ0Z1SVZlOEs0NTltVmR0eHFubWJZV2lsbjluVkxDREZWYUVSWlVITnhYN3RIZjRUMTllRy0tWkZrUVFBN09ZZFppS04zdkd4WlJTbTUxRmtmR1poUlJIN3lvOXhyemRvdHlrWmFJUmk5bEMxUWhfQjJITUUxRTVGemhhaENqVGt6UVoxV1lhZ0FpTGZqMmFwc0lqVjVPeVAyNWJGRXZISnJOYWdhdw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T00:20:24.000Z",
+      "publishedAt": "2026-09-19T03:59:00.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE1uQTYtMzFHOXh2N05IRTFBZks5VERQX05BLUs1T1c4eXhLNlBaWFc1NWttWnBzN3RMdkVCbzNWT2owNmNEN21vbDJNWDR1c3dsU3VKSEQyN0d2SkdnU25ILUxXcFcxQTBGZTBkVENocU5sMUstNkhkamJR?oc=5\" target=\"_blank\">Google is the latest AI lab with a security testing mishap</a>  <font color=\"#6f6f6f\">axios.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPLXFfTGlBbUNVQ0Z1SVZlOEs0NTltVmR0eHFubWJZV2lsbjluVkxDREZWYUVSWlVITnhYN3RIZjRUMTllRy0tWkZrUVFBN09ZZFppS04zdkd4WlJTbTUxRmtmR1poUlJIN3lvOXhyemRvdHlrWmFJUmk5bEMxUWhfQjJITUUxRTVGemhhaENqVGt6UVoxV1lhZ0FpTGZqMmFwc0lqVjVPeVAyNWJGRXZISnJOYWdhdw?oc=5\" target=\"_blank\">Trump hails Greenland security deal that falls short of takeover</a>  <font color=\"#6f6f6f\">The Washington Post</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -702,67 +616,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 7
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Australia iPhone 18 launch descends into chaos as line-cutter claims he’s first in world to buy device: ‘I’m the first!’ - New York Post",
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOEZxZHl5Z09vcHROZERHSU00TG1BV2VZcUtLQUo1RHZPRU9qMXFTcEJuYnRxRnRsSzlSQW9Ua21XY3RIeC14NWxuSmhUU3BYZkdMMS1Ed2xDQWtvWDdZcHp6aTdyTXRfMFBHYUg2Q0t6UGUyeVA5QkR3dUkyVWlYQjlxcVJCcDh2X2VxUWdTVlhselNDWTFnUU90aU9aTHVHNjdCbXAxdE9ZYUdOa2NpUGdYcENxczVZLTRBUHN1MzhVdzllN05uazk3d1MwMklNcUFR?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T06:42:00.000Z",
-      "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOEZxZHl5Z09vcHROZERHSU00TG1BV2VZcUtLQUo1RHZPRU9qMXFTcEJuYnRxRnRsSzlSQW9Ua21XY3RIeC14NWxuSmhUU3BYZkdMMS1Ed2xDQWtvWDdZcHp6aTdyTXRfMFBHYUg2Q0t6UGUyeVA5QkR3dUkyVWlYQjlxcVJCcDh2X2VxUWdTVlhselNDWTFnUU90aU9aTHVHNjdCbXAxdE9ZYUdOa2NpUGdYcENxczVZLTRBUHN1MzhVdzllN05uazk3d1MwMklNcUFR?oc=5\" target=\"_blank\">Australia iPhone 18 launch descends into chaos as line-cutter claims he’s first in world to buy device: ‘I’m the first!’</a>  <font color=\"#6f6f6f\">New York Post</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
-      "title": "Tilly Norwood&#8217;s press tour is going about as well as you&#8217;d expect for an AI",
-      "link": "https://techcrunch.com/2026/09/18/tilly-norwoods-press-tour-is-going-about-as-well-as-youd-expect-for-an-ai/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-19T00:12:07.000Z",
-      "category": "AI",
-      "description": "In one particularly odd interview, Norwood seems to malfunction and begin speaking Chinese.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 7
+        "corroboratingCandidates": 11
       },
       "score": 56,
       "reasons": [
@@ -803,6 +657,35 @@
       ],
       "eligible": true,
       "researchSignalScore": 2
+    },
+    {
+      "title": "Bitcoin and ethereum prices today, Thursday, September 17, 2026: Crypto prices move up following Fed's rate increase - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNckpPTDJOMzczTmtIWjhYUGVTMGFCWmN1T19JMVlndnNPWjB2dW1XN2FrLTY3RUhHdlQwU2VRRVF4ZHhDVVFjVURaRGg2UGJfSVlyYmRxT0kyYWJzM0lQdnNRU3lqNGlNLThHVTRxUnNXUTdQQ1FWVW82VFFwdkRXU0ZpbkFwMnU1YndwOE5CNHhnUms1M1pWRDFGMURNTlZRZVVpQWVFVjhjNTVQMlhrcDRBX0I4SEpfdGptR0FyN2xkejhXMWlEdGpxU3ljNDMxbWJkVndvZXN0R21zSkV2V0tSa2YwQ2tXeWFnWWxjbmg3cE1RWjZHMnl6WkhkZU9GeDJSdE0xWWFXWHdfSTV1MUhJYmRCdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-17T11:40:24.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgJBVV95cUxNckpPTDJOMzczTmtIWjhYUGVTMGFCWmN1T19JMVlndnNPWjB2dW1XN2FrLTY3RUhHdlQwU2VRRVF4ZHhDVVFjVURaRGg2UGJfSVlyYmRxT0kyYWJzM0lQdnNRU3lqNGlNLThHVTRxUnNXUTdQQ1FWVW82VFFwdkRXU0ZpbkFwMnU1YndwOE5CNHhnUms1M1pWRDFGMURNTlZRZVVpQWVFVjhjNTVQMlhrcDRBX0I4SEpfdGptR0FyN2xkejhXMWlEdGpxU3ljNDMxbWJkVndvZXN0R21zSkV2V0tSa2YwQ2tXeWFnWWxjbmg3cE1RWjZHMnl6WkhkZU9GeDJSdE0xWWFXWHdfSTV1MUhJYmRCdw?oc=5\" target=\"_blank\">Bitcoin and ethereum prices today, Thursday, September 17, 2026: Crypto prices move up following Fed's rate increase</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 10
+      },
+      "score": 55,
+      "reasons": [
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
     },
     {
       "title": "Open or closed AI? Nvidia&#8217;s Nader Khalil and Sydney Sykes take on one of the decisions shaping next-gen startups at TechCrunch Disrupt 2026",
@@ -956,13 +839,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Governor Newsom issues executive order to accelerate independent oversight and advance the creation of an AI kill switch - California State Portal | CA.gov",
+      "title": "Governor Newsom issues executive order to accelerate independent oversight and advance the creation of an AI kill switch - gov.ca.gov",
       "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNdWNuQ1N2RC1DOTdndklPb2NYbDAwWUx1azRBZjE1R1pCelpZUU9UdEVhNlJUUm9zeDkzcUdTX3laMVU1UkRHaUN5VEY0WWk4S0NuSXNnXzRFMUhVT3RNU3RFWU1PdlowcFFXalMwbHFIR1V6V254c0ZNQ1hkVGFHVnp0Z3BMUzlreFplYTJveHFJZk93Mk5UcUR3cllPT0tGUUdCbU5zbU9rZUp2aWxzTVh2dV9XbXcyWDQ3YUhPdmdJOFhycktnZ1Z3akFwQVhtSUpaRjVRaU9wdUREZm1pNlQ3UXhKa2Uwa2hN?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-18T15:10:22.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6wFBVV95cUxNdWNuQ1N2RC1DOTdndklPb2NYbDAwWUx1azRBZjE1R1pCelpZUU9UdEVhNlJUUm9zeDkzcUdTX3laMVU1UkRHaUN5VEY0WWk4S0NuSXNnXzRFMUhVT3RNU3RFWU1PdlowcFFXalMwbHFIR1V6V254c0ZNQ1hkVGFHVnp0Z3BMUzlreFplYTJveHFJZk93Mk5UcUR3cllPT0tGUUdCbU5zbU9rZUp2aWxzTVh2dV9XbXcyWDQ3YUhPdmdJOFhycktnZ1Z3akFwQVhtSUpaRjVRaU9wdUREZm1pNlQ3UXhKa2Uwa2hN?oc=5\" target=\"_blank\">Governor Newsom issues executive order to accelerate independent oversight and advance the creation of an AI kill switch</a>  <font color=\"#6f6f6f\">California State Portal | CA.gov</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6wFBVV95cUxNdWNuQ1N2RC1DOTdndklPb2NYbDAwWUx1azRBZjE1R1pCelpZUU9UdEVhNlJUUm9zeDkzcUdTX3laMVU1UkRHaUN5VEY0WWk4S0NuSXNnXzRFMUhVT3RNU3RFWU1PdlowcFFXalMwbHFIR1V6V254c0ZNQ1hkVGFHVnp0Z3BMUzlreFplYTJveHFJZk93Mk5UcUR3cllPT0tGUUdCbU5zbU9rZUp2aWxzTVh2dV9XbXcyWDQ3YUhPdmdJOFhycktnZ1Z3akFwQVhtSUpaRjVRaU9wdUREZm1pNlQ3UXhKa2Uwa2hN?oc=5\" target=\"_blank\">Governor Newsom issues executive order to accelerate independent oversight and advance the creation of an AI kill switch</a>  <font color=\"#6f6f6f\">gov.ca.gov</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1127,7 +1010,37 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 6
+        "corroboratingCandidates": 7
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "How New York Can Influence the Future of Artificial Intelligence - New York Focus",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUVhKRW1KVzJ0NzBwWHAzWUxnbUtRMlhpZF8wdGFqMFRhdWhLUU5HQWxVdzdhWFplODJfUGcyS3h6cXFUdFlPMFdYU25jV1UtZG1leXdCU2c4QlJtTi1XVjNXNTNHRExoSjZxOHZNQ01EQWtQZktTV2JvY3V0cFhTQ09rRk5lTV9ZMUI1U0VB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T17:02:00.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNUVhKRW1KVzJ0NzBwWHAzWUxnbUtRMlhpZF8wdGFqMFRhdWhLUU5HQWxVdzdhWFplODJfUGcyS3h6cXFUdFlPMFdYU25jV1UtZG1leXdCU2c4QlJtTi1XVjNXNTNHRExoSjZxOHZNQ01EQWtQZktTV2JvY3V0cFhTQ09rRk5lTV9ZMUI1U0VB?oc=5\" target=\"_blank\">How New York Can Influence the Future of Artificial Intelligence</a>  <font color=\"#6f6f6f\">New York Focus</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 8
       },
       "score": 51,
       "reasons": [
@@ -1157,7 +1070,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 7
+        "corroboratingCandidates": 8
       },
       "score": 51,
       "reasons": [
@@ -1199,13 +1112,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "How New York Can Influence the Future of Artificial Intelligence - New York Focus",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUVhKRW1KVzJ0NzBwWHAzWUxnbUtRMlhpZF8wdGFqMFRhdWhLUU5HQWxVdzdhWFplODJfUGcyS3h6cXFUdFlPMFdYU25jV1UtZG1leXdCU2c4QlJtTi1XVjNXNTNHRExoSjZxOHZNQ01EQWtQZktTV2JvY3V0cFhTQ09rRk5lTV9ZMUI1U0VB?oc=5",
+      "title": "The Walt Disney Company Names Karandeep Anand To Newly Created Role Of Chief Technology Officer - The Walt Disney Company",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPbkNNODdWbVA2YnA0TWJ4eEgzaVRXRWhoY1Y3NWNISFFTa19iUlUxd1dzLS04eGxQdXRKTzFHWjVWTEZwVjVZdVlZZHFRbUgxN2ZlUHFsWURBS2JkNmcyWk5oeHZjcWxGRjJEOUpYaWJOQ0x5clBSSG9TM1JjckU0WXJyOV8tMzVCRUt4Z2h0UEJOVDQ2bFRTZC1yREhoeDVXOGdSSWNyb05HOW9WcmM4ZHVOeXZDaW1VNmZhY1FFcHZFeXNmU20wSEFtRTAzTWxhMklmOXZVOVY0N2ZB?oc=5",
       "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T17:02:00.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNUVhKRW1KVzJ0NzBwWHAzWUxnbUtRMlhpZF8wdGFqMFRhdWhLUU5HQWxVdzdhWFplODJfUGcyS3h6cXFUdFlPMFdYU25jV1UtZG1leXdCU2c4QlJtTi1XVjNXNTNHRExoSjZxOHZNQ01EQWtQZktTV2JvY3V0cFhTQ09rRk5lTV9ZMUI1U0VB?oc=5\" target=\"_blank\">How New York Can Influence the Future of Artificial Intelligence</a>  <font color=\"#6f6f6f\">New York Focus</font>",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T16:10:22.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxPbkNNODdWbVA2YnA0TWJ4eEgzaVRXRWhoY1Y3NWNISFFTa19iUlUxd1dzLS04eGxQdXRKTzFHWjVWTEZwVjVZdVlZZHFRbUgxN2ZlUHFsWURBS2JkNmcyWk5oeHZjcWxGRjJEOUpYaWJOQ0x5clBSSG9TM1JjckU0WXJyOV8tMzVCRUt4Z2h0UEJOVDQ2bFRTZC1yREhoeDVXOGdSSWNyb05HOW9WcmM4ZHVOeXZDaW1VNmZhY1FFcHZFeXNmU20wSEFtRTAzTWxhMklmOXZVOVY0N2ZB?oc=5\" target=\"_blank\">The Walt Disney Company Names Karandeep Anand To Newly Created Role Of Chief Technology Officer</a>  <font color=\"#6f6f6f\">The Walt Disney Company</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1217,7 +1130,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 7
+        "corroboratingCandidates": 3
       },
       "score": 51,
       "reasons": [
@@ -1229,13 +1142,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Card skimming scams evolve as technology advances, experts say - WBRC",
+      "title": "Card skimming scams evolve as technology advances, experts say - wbrc.com",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeTF6bU5sanU4M2kzcFpQOEdidi1aeE5udEI2bGFjNDdwanRQTEpHVFdDcmpvNW0xMTd2bjhDTF9RMWU4MmZoOWZaNkpaSjVYSEdMelNCQTZDb3l3NC1hWEVQTVl2N0NmVF9CWHZIc0JueEpoRF9VbGlJZ3E4dmxKcDlEMWp5SUVWcVFUZHhXdDM2MS1XMGfSAaoBQVVfeXFMT2d5Y2NIRUg2ZVR3dDBFUURaQ0ZGSEtEWEtCZ2pfVHVJd0FCeXhXaTgwcUJfbDE5clNTeVhtcGVRMnNQYVh1eWtVV3FDUzNTblJudmxTZ3FIY1pXS3FtaEt4aUxkbGhKbk5vLXUwaEJXZDA4ZG9iSW1xZFJGeWhXaklkVnZQLWZ1NEgxOExQLVYzQnpQV2gxQ1d6d2tRdDFacTc1STFZTTA3Q3c?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-19T03:35:00.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOeTF6bU5sanU4M2kzcFpQOEdidi1aeE5udEI2bGFjNDdwanRQTEpHVFdDcmpvNW0xMTd2bjhDTF9RMWU4MmZoOWZaNkpaSjVYSEdMelNCQTZDb3l3NC1hWEVQTVl2N0NmVF9CWHZIc0JueEpoRF9VbGlJZ3E4dmxKcDlEMWp5SUVWcVFUZHhXdDM2MS1XMGfSAaoBQVVfeXFMT2d5Y2NIRUg2ZVR3dDBFUURaQ0ZGSEtEWEtCZ2pfVHVJd0FCeXhXaTgwcUJfbDE5clNTeVhtcGVRMnNQYVh1eWtVV3FDUzNTblJudmxTZ3FIY1pXS3FtaEt4aUxkbGhKbk5vLXUwaEJXZDA4ZG9iSW1xZFJGeWhXaklkVnZQLWZ1NEgxOExQLVYzQnpQV2gxQ1d6d2tRdDFacTc1STFZTTA3Q3c?oc=5\" target=\"_blank\">Card skimming scams evolve as technology advances, experts say</a>  <font color=\"#6f6f6f\">WBRC</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOeTF6bU5sanU4M2kzcFpQOEdidi1aeE5udEI2bGFjNDdwanRQTEpHVFdDcmpvNW0xMTd2bjhDTF9RMWU4MmZoOWZaNkpaSjVYSEdMelNCQTZDb3l3NC1hWEVQTVl2N0NmVF9CWHZIc0JueEpoRF9VbGlJZ3E4dmxKcDlEMWp5SUVWcVFUZHhXdDM2MS1XMGfSAaoBQVVfeXFMT2d5Y2NIRUg2ZVR3dDBFUURaQ0ZGSEtEWEtCZ2pfVHVJd0FCeXhXaTgwcUJfbDE5clNTeVhtcGVRMnNQYVh1eWtVV3FDUzNTblJudmxTZ3FIY1pXS3FtaEt4aUxkbGhKbk5vLXUwaEJXZDA4ZG9iSW1xZFJGeWhXaklkVnZQLWZ1NEgxOExQLVYzQnpQV2gxQ1d6d2tRdDFacTc1STFZTTA3Q3c?oc=5\" target=\"_blank\">Card skimming scams evolve as technology advances, experts say</a>  <font color=\"#6f6f6f\">wbrc.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1289,73 +1202,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Deputy Information Technology Director – City of Ontario - PublicCEO",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcEhzZ2VpVkNXZHZLeGZEb0tCSml3eTIyeEI0MXd5SDctQXZMNDc2c1VGcGpHeFd4NjlsOGg4a3gtLTFDUWRibm1WY3JOS2F5R1laX1hUTTdFbnhzNnVZbFpwckJrRl8wZ05xbGhzVmNNakQyTnlJMko1OEtuUldYMHdfTFFOeWVHdUIzRW9R?oc=5",
+      "title": "The software engineer’s role is moving beyond code - calcalistech.com",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0xWkdsS3lwMVJZeGtRNnVDTDhZZzBvbzkyMnYwREZBUFFnNEhSZTJVVmtfWjVnNzhfZy1idU9ULXZ5YVdqZFYwOVVuUE01RURKM1N6dXB2MVp2Tm43TWhqMDZSZG85U0U?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T00:03:54.000Z",
+      "publishedAt": "2026-09-19T05:48:00.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQcEhzZ2VpVkNXZHZLeGZEb0tCSml3eTIyeEI0MXd5SDctQXZMNDc2c1VGcGpHeFd4NjlsOGg4a3gtLTFDUWRibm1WY3JOS2F5R1laX1hUTTdFbnhzNnVZbFpwckJrRl8wZ05xbGhzVmNNakQyTnlJMko1OEtuUldYMHdfTFFOeWVHdUIzRW9R?oc=5\" target=\"_blank\">Deputy Information Technology Director – City of Ontario</a>  <font color=\"#6f6f6f\">PublicCEO</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 51,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "What Does Micron Technology (MU) Warning Of Shortages Through 2027 Mean? - Yahoo Finance",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZmZVMW51UVhWZktkVkg3ajQ0R3pHRUIxVC1odlBZckl4VXVGSXF6eHF0dEItR3NCVkxycDBuY3VCekhkTjdsVzlhZkU3V0t2ZFdOZGdkZnBMc2tvT2RacnVYTlQybGZGZ19MTzRudkNSQkpPM05mdjJjU2l5dkYyM0drczBVWDB0cUI1Nm5oSkpNMVcwRDRSNEVFMElNOGc?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T00:19:00.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQZmZVMW51UVhWZktkVkg3ajQ0R3pHRUIxVC1odlBZckl4VXVGSXF6eHF0dEItR3NCVkxycDBuY3VCekhkTjdsVzlhZkU3V0t2ZFdOZGdkZnBMc2tvT2RacnVYTlQybGZGZ19MTzRudkNSQkpPM05mdjJjU2l5dkYyM0drczBVWDB0cUI1Nm5oSkpNMVcwRDRSNEVFMElNOGc?oc=5\" target=\"_blank\">What Does Micron Technology (MU) Warning Of Shortages Through 2027 Mean?</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 51,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Potato chips recalled because of undeclared soy - foodsafetynews.com",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOM1NBTUlDbEtuS1I2ZHNyU25teDZNeGdEbjl0WFFtOEFxVjNsN3phU0tQWDFiQWhwWnJQbnVFaE9vd3gzekhzMmhZbkJfSjNyclp4N2ctN1U5bXRTNGZtdkFuTHhyQ0tRVFZGQUhCd3A3eUQtXzNwRXY4czVsYm9QWlZzT0VfVXAzdXR0NlhSWXI?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T03:14:24.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOM1NBTUlDbEtuS1I2ZHNyU25teDZNeGdEbjl0WFFtOEFxVjNsN3phU0tQWDFiQWhwWnJQbnVFaE9vd3gzekhzMmhZbkJfSjNyclp4N2ctN1U5bXRTNGZtdkFuTHhyQ0tRVFZGQUhCd3A3eUQtXzNwRXY4czVsYm9QWlZzT0VfVXAzdXR0NlhSWXI?oc=5\" target=\"_blank\">Potato chips recalled because of undeclared soy</a>  <font color=\"#6f6f6f\">foodsafetynews.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0xWkdsS3lwMVJZeGtRNnVDTDhZZzBvbzkyMnYwREZBUFFnNEhSZTJVVmtfWjVnNzhfZy1idU9ULXZ5YVdqZFYwOVVuUE01RURKM1N6dXB2MVp2Tm43TWhqMDZSZG85U0U?oc=5\" target=\"_blank\">The software engineer’s role is moving beyond code</a>  <font color=\"#6f6f6f\">calcalistech.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1409,6 +1262,96 @@
       "researchSignalScore": 5
     },
     {
+      "title": "Trump announces agreement with Denmark to secure ‘permanent’ control over Greenland’s security - NBC News",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNYjZLUXl0bmxiX2JaSWlxTlVCZ2g0Z3F6MWN4cmN6eUd3MmhIZ0ZxMlF0WXBJYzdWazVCaWs5UUo5VHE0YVVXN1ZkOTdHenltRndJVzNqUWJtUFBYcWh2czkwZVBZQ2dOVnlrSFNxZ0pOb1kya240N2lEYVpoM09ER3pMMjRhRDV5eUZ2WHM5VDYyV3RuTEt4T3JDSy02MWFzcFNHZlFvM1MyblRGbDFjSXRhR1FoZnc5Mm9sNVRlRU1fa0ktNXBFOHpXLXpiWUk?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T23:45:29.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNYjZLUXl0bmxiX2JaSWlxTlVCZ2g0Z3F6MWN4cmN6eUd3MmhIZ0ZxMlF0WXBJYzdWazVCaWs5UUo5VHE0YVVXN1ZkOTdHenltRndJVzNqUWJtUFBYcWh2czkwZVBZQ2dOVnlrSFNxZ0pOb1kya240N2lEYVpoM09ER3pMMjRhRDV5eUZ2WHM5VDYyV3RuTEt4T3JDSy02MWFzcFNHZlFvM1MyblRGbDFjSXRhR1FoZnc5Mm9sNVRlRU1fa0ktNXBFOHpXLXpiWUk?oc=5\" target=\"_blank\">Trump announces agreement with Denmark to secure ‘permanent’ control over Greenland’s security</a>  <font color=\"#6f6f6f\">NBC News</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 16
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "U.S. and Denmark Reach Security Deal on Greenland, Trump Says - The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBlWVY0TTlvREROcE9XR0tjbHRHUU05TUNiRW9iZmg3Tnl6aWVXaS03Nlk0dVRReEtuNDhlWDVBby1kc2V2RzROUS1kV3NQSVpNbmFQa1V2Si05cnZvdFAzSVRXZC1FYmpqZ0wwOFUxdzRHbjc3TlE?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-19T00:53:23.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBlWVY0TTlvREROcE9XR0tjbHRHUU05TUNiRW9iZmg3Tnl6aWVXaS03Nlk0dVRReEtuNDhlWDVBby1kc2V2RzROUS1kV3NQSVpNbmFQa1V2Si05cnZvdFAzSVRXZC1FYmpqZ0wwOFUxdzRHbjc3TlE?oc=5\" target=\"_blank\">U.S. and Denmark Reach Security Deal on Greenland, Trump Says</a>  <font color=\"#6f6f6f\">The New York Times</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 12
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "U.S. Reaches Greenland Security Agreement - WSJ",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDdJa01FS3RIcFdHS0FSV2pWUU85TWJwWTlZem4tNVpQcThnSUhHYWRmdHE3bTlqcUhhb2d0SzRMRDNoWnJZU3F0cWpzbzNZMEU0a1p5RC1Db0FpeUpWOU04XzZKdi1YT2d4cmt1RERFSG5yZU1FUk0tSE5SRFdMSmRRVklSMG9GdGhfbUNzeENNckVXcGNSSzBQVXE4c3hsdFlON3RDM1ZLREJNRklUVGplUDFUZUtZajV2ZzFrMm0tdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-19T00:27:20.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxORDdJa01FS3RIcFdHS0FSV2pWUU85TWJwWTlZem4tNVpQcThnSUhHYWRmdHE3bTlqcUhhb2d0SzRMRDNoWnJZU3F0cWpzbzNZMEU0a1p5RC1Db0FpeUpWOU04XzZKdi1YT2d4cmt1RERFSG5yZU1FUk0tSE5SRFdMSmRRVklSMG9GdGhfbUNzeENNckVXcGNSSzBQVXE4c3hsdFlON3RDM1ZLREJNRklUVGplUDFUZUtZajV2ZzFrMm0tdw?oc=5\" target=\"_blank\">U.S. Reaches Greenland Security Agreement</a>  <font color=\"#6f6f6f\">WSJ</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 12
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
       "title": "US and Denmark reach security deal after Trump’s threats to take over Greenland - The Guardian",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOc1gzX0JqUDlzUE50bTRTZHo2Q3dOYVNpTnFpdjIxUXJOT0tWR1FXbUgzclBXNFZsbGE3djNIRDBHMEZHelp4SE01MENHQVBtWmFKbmI0RlhFUC1WVWNIUnFaMG9mRTNDSWNsTHptZkNGMUN5c2NWQzdNQ0pheWtTTTJLdjJKTzlnTWZKSFRpSQ?oc=5",
       "source": "Google News",
@@ -1439,36 +1382,6 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Trump claims 'infinite' Greenland security deal with Denmark - afp.com",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMTR4RTE4Y0pYR3pFaTl2eTdhN0k3Y3lmZ1RndzdtVmlULVNiMWx5RmN3cDMweDBrSVhYVlJsaG42aG00d1BlaWRncnhlbVNtOXhsM0ptODQzdTlUVndWbTI3Z1BmNktIb0RiSzBtZVBLbmdIdnEyVVZ4VUJOTVFLNjVR?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T23:34:03.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNMTR4RTE4Y0pYR3pFaTl2eTdhN0k3Y3lmZ1RndzdtVmlULVNiMWx5RmN3cDMweDBrSVhYVlJsaG42aG00d1BlaWRncnhlbVNtOXhsM0ptODQzdTlUVndWbTI3Z1BmNktIb0RiSzBtZVBLbmdIdnEyVVZ4VUJOTVFLNjVR?oc=5\" target=\"_blank\">Trump claims 'infinite' Greenland security deal with Denmark</a>  <font color=\"#6f6f6f\">afp.com</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 14
-      },
-      "score": 51,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
       "title": "Security measures at Ole Miss will be heightened for Lane Kiffin's high-profile return with LSU - AP News",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSTJBemVqQnJDbFBYTmh1dkhjaEtOSHU0RUViMzZ5aml3UmxuMmhvbGtaTzktQUkzTDd0TE1ZX0EwbFdfQkZXam43VFUwbEY3OFVGd21ZanI5SWpPTW1hWG1Fa0VwcF84d0ZSVHQzQWpvckZPTThLSUI3ZF9UY004YTViMlNjdF9ZdzJ5VEdPcDF1cERMSW9zbkRvdw?oc=5",
       "source": "Google News",
@@ -1487,7 +1400,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 9
+        "corroboratingCandidates": 7
       },
       "score": 51,
       "reasons": [
@@ -1559,6 +1472,66 @@
       "researchSignalScore": 5
     },
     {
+      "title": "US and Denmark reach deal over Greenland's security after Trump threats - BBC",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ZWFFKZURLejNoTy11ejhVQ3hWNkxqRUhGd05RQlBXUlhQaU5obE10ZExXZGw3Xzk3ZWt2ZVkzbktHVDlCcWRfdjBVUHMxaFc2R3E3TldzZXZIX28?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T22:58:55.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ZWFFKZURLejNoTy11ejhVQ3hWNkxqRUhGd05RQlBXUlhQaU5obE10ZExXZGw3Xzk3ZWt2ZVkzbktHVDlCcWRfdjBVUHMxaFc2R3E3TldzZXZIX28?oc=5\" target=\"_blank\">US and Denmark reach deal over Greenland's security after Trump threats</a>  <font color=\"#6f6f6f\">BBC</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 12
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Google is the latest AI lab with a security testing mishap - Axios",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1uQTYtMzFHOXh2N05IRTFBZks5VERQX05BLUs1T1c4eXhLNlBaWFc1NWttWnBzN3RMdkVCbzNWT2owNmNEN21vbDJNWDR1c3dsU3VKSEQyN0d2SkdnU25ILUxXcFcxQTBGZTBkVENocU5sMUstNkhkamJR?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-19T00:19:41.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE1uQTYtMzFHOXh2N05IRTFBZks5VERQX05BLUs1T1c4eXhLNlBaWFc1NWttWnBzN3RMdkVCbzNWT2owNmNEN21vbDJNWDR1c3dsU3VKSEQyN0d2SkdnU25ILUxXcFcxQTBGZTBkVENocU5sMUstNkhkamJR?oc=5\" target=\"_blank\">Google is the latest AI lab with a security testing mishap</a>  <font color=\"#6f6f6f\">Axios</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 5
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
       "title": "Why Ethereum Jumped 5.8% Today - Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPV3AzWUNERWphQ19zQjB6Wkx5MGJyLV9fMm5QanRtbTV5Y0dHNkMzQXQ1MFJMNEM4d0M1SHZUVi1UYTVVYjdZQzhjU1BMaExHdFZiYWFaa1lpQ0lHVlZXbTFUX21WaVJXdktJVlViYVNOUURWRUdKNU5XQk9ZVW1rVTZDSk8wdWQzTXJsWXNKOHJ2Zw?oc=5",
       "source": "Google News",
@@ -1589,13 +1562,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Crypto.com UFC 331 - ufc.com",
+      "title": "Crypto.com UFC 331 - UFC.com",
       "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlZlJ6dVByQkZNX2lZMWF4X1NHS3lHOG0zd3RYeE5ya3JQR1dDMTNsLXVGMWNldHpqZkFqZVAtUmZMM1FQQ2Vac0QwczNkaHYyR1V1aGVR?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T02:20:14.000Z",
+      "publishedAt": "2026-09-19T03:18:27.000Z",
       "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlZlJ6dVByQkZNX2lZMWF4X1NHS3lHOG0zd3RYeE5ya3JQR1dDMTNsLXVGMWNldHpqZkFqZVAtUmZMM1FQQ2Vac0QwczNkaHYyR1V1aGVR?oc=5\" target=\"_blank\">Crypto.com UFC 331</a>  <font color=\"#6f6f6f\">ufc.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlZlJ6dVByQkZNX2lZMWF4X1NHS3lHOG0zd3RYeE5ya3JQR1dDMTNsLXVGMWNldHpqZkFqZVAtUmZMM1FQQ2Vac0QwczNkaHYyR1V1aGVR?oc=5\" target=\"_blank\">Crypto.com UFC 331</a>  <font color=\"#6f6f6f\">UFC.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1667,7 +1640,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 3
+        "corroboratingCandidates": 4
       },
       "score": 51,
       "reasons": [
@@ -1709,13 +1682,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Bitcoin Price Surges Over $81,000 Despite Clarity Act Fail and Interest Rate Hike - bitcoinmagazine.com",
+      "title": "Bitcoin Price Surges Over $81,000 Despite Clarity Act Fail and Interest Rate Hike - Bitcoin Magazine",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5DLVVDZWFpWWxfQzVoanF6dkl5QUc1cWkxZHNwWC1maFBiUG4wNjI4STZJRmRvZ01TNXE5emRHQ0VBdHpPb054TWhFUHhqS2sxU2k0SU1weVpWVG80VjlzSDdhd0NWNjRoNXExU3Izd2I2VHp3?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-18T16:46:48.000Z",
       "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE5DLVVDZWFpWWxfQzVoanF6dkl5QUc1cWkxZHNwWC1maFBiUG4wNjI4STZJRmRvZ01TNXE5emRHQ0VBdHpPb054TWhFUHhqS2sxU2k0SU1weVpWVG80VjlzSDdhd0NWNjRoNXExU3Izd2I2VHp3?oc=5\" target=\"_blank\">Bitcoin Price Surges Over $81,000 Despite Clarity Act Fail and Interest Rate Hike</a>  <font color=\"#6f6f6f\">bitcoinmagazine.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE5DLVVDZWFpWWxfQzVoanF6dkl5QUc1cWkxZHNwWC1maFBiUG4wNjI4STZJRmRvZ01TNXE5emRHQ0VBdHpPb054TWhFUHhqS2sxU2k0SU1weVpWVG80VjlzSDdhd0NWNjRoNXExU3Izd2I2VHp3?oc=5\" target=\"_blank\">Bitcoin Price Surges Over $81,000 Despite Clarity Act Fail and Interest Rate Hike</a>  <font color=\"#6f6f6f\">Bitcoin Magazine</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1727,7 +1700,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 10
       },
       "score": 51,
       "reasons": [
@@ -1919,34 +1892,34 @@
       "researchSignalScore": 5
     },
     {
-      "title": "The Walt Disney Company Names Karandeep Anand To Newly Created Role Of Chief Technology Officer - The Walt Disney Company",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPbkNNODdWbVA2YnA0TWJ4eEgzaVRXRWhoY1Y3NWNISFFTa19iUlUxd1dzLS04eGxQdXRKTzFHWjVWTEZwVjVZdVlZZHFRbUgxN2ZlUHFsWURBS2JkNmcyWk5oeHZjcWxGRjJEOUpYaWJOQ0x5clBSSG9TM1JjckU0WXJyOV8tMzVCRUt4Z2h0UEJOVDQ2bFRTZC1yREhoeDVXOGdSSWNyb05HOW9WcmM4ZHVOeXZDaW1VNmZhY1FFcHZFeXNmU20wSEFtRTAzTWxhMklmOXZVOVY0N2ZB?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T16:10:22.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxPbkNNODdWbVA2YnA0TWJ4eEgzaVRXRWhoY1Y3NWNISFFTa19iUlUxd1dzLS04eGxQdXRKTzFHWjVWTEZwVjVZdVlZZHFRbUgxN2ZlUHFsWURBS2JkNmcyWk5oeHZjcWxGRjJEOUpYaWJOQ0x5clBSSG9TM1JjckU0WXJyOV8tMzVCRUt4Z2h0UEJOVDQ2bFRTZC1yREhoeDVXOGdSSWNyb05HOW9WcmM4ZHVOeXZDaW1VNmZhY1FFcHZFeXNmU20wSEFtRTAzTWxhMklmOXZVOVY0N2ZB?oc=5\" target=\"_blank\">The Walt Disney Company Names Karandeep Anand To Newly Created Role Of Chief Technology Officer</a>  <font color=\"#6f6f6f\">The Walt Disney Company</font>",
-      "signalType": "news",
+      "title": "Tilly Norwood&#8217;s press tour is going about as well as you&#8217;d expect for an AI",
+      "link": "https://techcrunch.com/2026/09/18/tilly-norwoods-press-tour-is-going-about-as-well-as-youd-expect-for-an-ai/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-19T00:12:07.000Z",
+      "category": "AI",
+      "description": "In one particularly odd interview, Norwood seems to malfunction and begin speaking Chinese.",
+      "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
         "networkCount": 1,
         "signalTypeCount": 1,
         "networks": [
-          "Google News"
+          "TechCrunch"
         ],
         "signalTypes": [
-          "news"
+          "publisher"
         ],
-        "corroboratingCandidates": 2
+        "corroboratingCandidates": 7
       },
-      "score": 50,
+      "score": 51,
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
         "Enough context for original synthesis"
       ],
       "eligible": true,
-      "researchSignalScore": 4
+      "researchSignalScore": 5
     },
     {
       "title": "Why Bitcoin Is Up Today - The Motley Fool",
@@ -2040,36 +2013,6 @@
       "researchSignalScore": 10
     },
     {
-      "title": "Wake Tech weaving AI into the classroom as students search for jobs - ABC11 News",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPc3Y3dUtCbnRHcHhCVGRmTGZpVVZvcHJFN2h6dFQzc3RTdlA2cWM2YTl2TzBvclRPR01NUGpxLXN0T1NBNXg4SjlCcGR5WmdScXdkaE5sdVZjUFN0d0Y5dW1kRmhSTG5WY3lPNlJ4Q0FLbE84YzdlZmxFZ0ZaeEMxeFZNRldoLXExU2R4T9IBkgFBVV95cUxPd0pQTnpIdExwUXlHc3MzaS1kWUo3RmJubXFMQ19wTnUtLWtIeUZ4N0hRelktUE52eVVoS2YtQ01JX2dMZnNiek04RzRMSjFOc1pTa2tXNmdjaFNZRkhISTFEVWFMbTRnTDhiUlB6UE10QTd3ZE15clMyNTBTMk9GSFdoT1FrQWJiekJPam5FWTIwdw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T22:40:37.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPc3Y3dUtCbnRHcHhCVGRmTGZpVVZvcHJFN2h6dFQzc3RTdlA2cWM2YTl2TzBvclRPR01NUGpxLXN0T1NBNXg4SjlCcGR5WmdScXdkaE5sdVZjUFN0d0Y5dW1kRmhSTG5WY3lPNlJ4Q0FLbE84YzdlZmxFZ0ZaeEMxeFZNRldoLXExU2R4T9IBkgFBVV95cUxPd0pQTnpIdExwUXlHc3MzaS1kWUo3RmJubXFMQ19wTnUtLWtIeUZ4N0hRelktUE52eVVoS2YtQ01JX2dMZnNiek04RzRMSjFOc1pTa2tXNmdjaFNZRkhISTFEVWFMbTRnTDhiUlB6UE10QTd3ZE15clMyNTBTMk9GSFdoT1FrQWJiekJPam5FWTIwdw?oc=5\" target=\"_blank\">Wake Tech weaving AI into the classroom as students search for jobs</a>  <font color=\"#6f6f6f\">ABC11 News</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 48,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
       "title": "UK air traffic control outage caused by software defect, says operator - Reuters",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNWZ1dFpTYVRsRkJiTDM2clcteEJ4eGpOcHNBOFdJbFBrNWRibGo1SnQ0X0tXdXl1UzlPbVBETlVfcDZhQlRRcGNfZG9iLXloS2pWX2trenFfWDh4SllHanVUcTRTYzFpdVFUTnZWeG9Jci1oSjB3eVFfY25Sb3UySjZsZXNTc0V3TVpzcWZkSWZGSTNLaTZOVUY4LTd5Q2JyaklIYUpJRlBVTGxSaE9MUVhwVXI?oc=5",
       "source": "Google News",
@@ -2100,43 +2043,13 @@
       "researchSignalScore": 2
     },
     {
-      "title": "UNMC demonstrates telehealth, VR technology to help close rural care gaps - wowt.com",
+      "title": "UNMC demonstrates telehealth, VR technology to help close rural care gaps - WOWT",
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNDZCX19JTFRDQlJZLXE0LXlYbXFNdWlRbkVlYndpSE1hcWYxeU9FZ2x2Z0t4bFdKeXZkMHdkaU5pbnE5MHB6YjloYTBvcFBvR3hGTEhSc1NrZlVXRXUzMGttMzVJZ3ZLT0JLQWNValBRTG56QmVpdXF0WGtpcWVGWFZacDlOOXZpa3pqUHZqY3FZNWdPaDBnMkJPVmo4RjNlaDFEUdIBuAFBVV95cUxPaER6dGs5NWtRejdCN1VINmd3ZjQyYVdqWi1kTUUzNWFnSDhxenFFUlVuaTJSSk9fMkdSSUxFQ0YtdzlqckwtXzdBU2F0S3hES1AtMHNJMzdVVm9zWmg2RGQ5T2xCbE4zNFBzeFc0OWNjbDVSMnF3b1V6NmxmYlFpSVBqeUNRbjJ4YTN5U0Mzc1RIRDB3dG5NV09qVVB2aHJVdVN3VVhiYW5sLVp4WUl0TmdiZnRzTnBY?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-18T22:48:00.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNNDZCX19JTFRDQlJZLXE0LXlYbXFNdWlRbkVlYndpSE1hcWYxeU9FZ2x2Z0t4bFdKeXZkMHdkaU5pbnE5MHB6YjloYTBvcFBvR3hGTEhSc1NrZlVXRXUzMGttMzVJZ3ZLT0JLQWNValBRTG56QmVpdXF0WGtpcWVGWFZacDlOOXZpa3pqUHZqY3FZNWdPaDBnMkJPVmo4RjNlaDFEUdIBuAFBVV95cUxPaER6dGs5NWtRejdCN1VINmd3ZjQyYVdqWi1kTUUzNWFnSDhxenFFUlVuaTJSSk9fMkdSSUxFQ0YtdzlqckwtXzdBU2F0S3hES1AtMHNJMzdVVm9zWmg2RGQ5T2xCbE4zNFBzeFc0OWNjbDVSMnF3b1V6NmxmYlFpSVBqeUNRbjJ4YTN5U0Mzc1RIRDB3dG5NV09qVVB2aHJVdVN3VVhiYW5sLVp4WUl0TmdiZnRzTnBY?oc=5\" target=\"_blank\">UNMC demonstrates telehealth, VR technology to help close rural care gaps</a>  <font color=\"#6f6f6f\">wowt.com</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 48,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Technology with Purpose: Supporting Learning in PWCS - Prince William County Public Schools",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9xcTc4LUlpblpPMjlMLTJ0RW54dXo4WGhrQnc2VTJoS0s1QjhybjhpRFZFUWNXZnZRbFNzSkd6ak9LNHlEODZXZUdUeDhFSWlFRU1vaWpQWkdzV0F1alZ3WVRXbVZCc2oxaGtkZ3RCWTg?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T18:38:23.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9xcTc4LUlpblpPMjlMLTJ0RW54dXo4WGhrQnc2VTJoS0s1QjhybjhpRFZFUWNXZnZRbFNzSkd6ak9LNHlEODZXZUdUeDhFSWlFRU1vaWpQWkdzV0F1alZ3WVRXbVZCc2oxaGtkZ3RCWTg?oc=5\" target=\"_blank\">Technology with Purpose: Supporting Learning in PWCS</a>  <font color=\"#6f6f6f\">Prince William County Public Schools</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNNDZCX19JTFRDQlJZLXE0LXlYbXFNdWlRbkVlYndpSE1hcWYxeU9FZ2x2Z0t4bFdKeXZkMHdkaU5pbnE5MHB6YjloYTBvcFBvR3hGTEhSc1NrZlVXRXUzMGttMzVJZ3ZLT0JLQWNValBRTG56QmVpdXF0WGtpcWVGWFZacDlOOXZpa3pqUHZqY3FZNWdPaDBnMkJPVmo4RjNlaDFEUdIBuAFBVV95cUxPaER6dGs5NWtRejdCN1VINmd3ZjQyYVdqWi1kTUUzNWFnSDhxenFFUlVuaTJSSk9fMkdSSUxFQ0YtdzlqckwtXzdBU2F0S3hES1AtMHNJMzdVVm9zWmg2RGQ5T2xCbE4zNFBzeFc0OWNjbDVSMnF3b1V6NmxmYlFpSVBqeUNRbjJ4YTN5U0Mzc1RIRDB3dG5NV09qVVB2aHJVdVN3VVhiYW5sLVp4WUl0TmdiZnRzTnBY?oc=5\" target=\"_blank\">UNMC demonstrates telehealth, VR technology to help close rural care gaps</a>  <font color=\"#6f6f6f\">WOWT</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2167,96 +2080,6 @@
       "publishedAt": "2026-09-18T20:39:09.000Z",
       "category": "Technology",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5sOFR6OC1mcHg1dlRFZG5ub0R1cGZVblh6NWpVcFdNcXZXVnYyYjRIVTUwYlE5NjBOejk1MTlacF9nNFRHb2xlQ2V5Ml9TNWI1UDgyZkZRV0JscUszODVUSE9TdGV4SFFIenJmRjhXTnN5RlpzdEpxSDJTQmp3UTQ?oc=5\" target=\"_blank\">Plasma Technology Could Help Plant-Based Packaging Replace Plastic</a>  <font color=\"#6f6f6f\">NC State University</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 48,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Teachers surveyed about concerns with technology in the classroom - NBC 6 South Florida",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQY25lb0paZU96UjNTd2pnci1SMEJqNk1WQUM1Q3VWeWlMbTJvUEdVNEJwSGNHVTU1NmF2MUdyak9WSzNzbzFFZ0dPUWtjQ2U2czhiYzlHb0VaaWd2MDhkalJZbVJvckRiMks5Z1RDdGh5cHc2QkN5S3RwbG9JYzN3V2U4OVNRUTN2WVBRSTRUY1FCeEJUUFhNQmpqZnotVldrNWNrNnEtNjNJMm1ZVFp2V09fbW1lNVHSAb8BQVVfeXFMTnFWRUQ1emxBY1VzZTJSaUxSYTlfcGRnM3BJT2NyQ0p0b05KXzA3LUZiSTh2MkNYUXc4X05CdzBqTDRpU3hzUkxxQ1lEOFpBS05PNGh2b3JfLVNieW5fSENqWlI0Y1FoVm5zb1RDbEY2ME9lazVNRzRiM2RzTy1WMVhGQ1JGdHpUN19CeG1CRElfX2c3bTRORHlMRUY3bG5vU3NwbGQ0Qk05U1A2VElic3JkLXRDbDEwN0lCWE12RVE?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T22:32:59.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQY25lb0paZU96UjNTd2pnci1SMEJqNk1WQUM1Q3VWeWlMbTJvUEdVNEJwSGNHVTU1NmF2MUdyak9WSzNzbzFFZ0dPUWtjQ2U2czhiYzlHb0VaaWd2MDhkalJZbVJvckRiMks5Z1RDdGh5cHc2QkN5S3RwbG9JYzN3V2U4OVNRUTN2WVBRSTRUY1FCeEJUUFhNQmpqZnotVldrNWNrNnEtNjNJMm1ZVFp2V09fbW1lNVHSAb8BQVVfeXFMTnFWRUQ1emxBY1VzZTJSaUxSYTlfcGRnM3BJT2NyQ0p0b05KXzA3LUZiSTh2MkNYUXc4X05CdzBqTDRpU3hzUkxxQ1lEOFpBS05PNGh2b3JfLVNieW5fSENqWlI0Y1FoVm5zb1RDbEY2ME9lazVNRzRiM2RzTy1WMVhGQ1JGdHpUN19CeG1CRElfX2c3bTRORHlMRUY3bG5vU3NwbGQ0Qk05U1A2VElic3JkLXRDbDEwN0lCWE12RVE?oc=5\" target=\"_blank\">Teachers surveyed about concerns with technology in the classroom</a>  <font color=\"#6f6f6f\">NBC 6 South Florida</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 48,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Thousands of Bay Area, Southern California security guards at major retailers, tech giants begin strike - ABC7 Bay Area",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOTkEzdWYyWGt5N2kyS0NpaExLQXNMVkdKckxmc1NrV2dtYnVIeUVZQVdfYXFLVFUzcEZHeS1LUnBQeU1vc2JmZVlxdS1fLVloWmxZVEtuX0JmOEVwOXliTFNpc2hZTFZCZU93bExFTUFrN0dFeVRjalUyYU9fbHBvTXIwX1ljNHhjRmQ3S1Z1M3VnRDdtdEF2WUhzWE9iaG9LSzRiYkZYemh2c0k5MTBIR3RrMThZeUdRSXZNNDdOTDd2MXlESDJmcW9va9IB0AFBVV95cUxQaWgzOFdsaEV4MGxsN09BR1BtRDhGQmZEeWVVSWtSc0V2MTBVa0d3VDdJUjladXNkREpwa05IcXNERFVlMDRSemtpcVhGTklxZDNUTkVJemFVdzMyYUJ1ejJvY0VxU2lUQUlXd2NWaXZON1FQZTBKaG9iRkI4eFNLTjI0cktJSTBGM09rLURvdXlzMjFZbUctY244Uy1CRk5Eb1FOMVhSOTc2czlPNDVGQXE5Nm9Qc0N2cERNQW80c3FYV1lUUW5OZUdsZW1XNWM0?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T22:01:41.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxOTkEzdWYyWGt5N2kyS0NpaExLQXNMVkdKckxmc1NrV2dtYnVIeUVZQVdfYXFLVFUzcEZHeS1LUnBQeU1vc2JmZVlxdS1fLVloWmxZVEtuX0JmOEVwOXliTFNpc2hZTFZCZU93bExFTUFrN0dFeVRjalUyYU9fbHBvTXIwX1ljNHhjRmQ3S1Z1M3VnRDdtdEF2WUhzWE9iaG9LSzRiYkZYemh2c0k5MTBIR3RrMThZeUdRSXZNNDdOTDd2MXlESDJmcW9va9IB0AFBVV95cUxQaWgzOFdsaEV4MGxsN09BR1BtRDhGQmZEeWVVSWtSc0V2MTBVa0d3VDdJUjladXNkREpwa05IcXNERFVlMDRSemtpcVhGTklxZDNUTkVJemFVdzMyYUJ1ejJvY0VxU2lUQUlXd2NWaXZON1FQZTBKaG9iRkI4eFNLTjI0cktJSTBGM09rLURvdXlzMjFZbUctY244Uy1CRk5Eb1FOMVhSOTc2czlPNDVGQXE5Nm9Qc0N2cERNQW80c3FYV1lUUW5OZUdsZW1XNWM0?oc=5\" target=\"_blank\">Thousands of Bay Area, Southern California security guards at major retailers, tech giants begin strike</a>  <font color=\"#6f6f6f\">ABC7 Bay Area</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 48,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Bay Area Security Workers Guarding Big Tech Offices Strike - kqed.org",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOS1l5RFdGRWNTajlBVlhpV2VfUmVXVFpPZDBvYWVaT3NOOTNKdXg0Qm5DWlkyOF9mbjZXaXlQRlR1ZXhvU3dHYndoV1JyWUZPVmFObVFOSXBrNk1xTmpaMlJOejJmZkdsWlUwZnpaUXRrME4zWW5ZV3RhVmY3SXp0VmFSQ25vcVJtTGFKUjhQTDJNWlFZZXp5TQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T23:18:58.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOS1l5RFdGRWNTajlBVlhpV2VfUmVXVFpPZDBvYWVaT3NOOTNKdXg0Qm5DWlkyOF9mbjZXaXlQRlR1ZXhvU3dHYndoV1JyWUZPVmFObVFOSXBrNk1xTmpaMlJOejJmZkdsWlUwZnpaUXRrME4zWW5ZV3RhVmY3SXp0VmFSQ25vcVJtTGFKUjhQTDJNWlFZZXp5TQ?oc=5\" target=\"_blank\">Bay Area Security Workers Guarding Big Tech Offices Strike</a>  <font color=\"#6f6f6f\">kqed.org</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2430,13 +2253,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "The turbulent AI era is here. The choices we make now are critical. - Gates Notes",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5",
+      "title": "Exclusive: US military had close call after using AI for false intelligence report, sources say - CNN",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNURhdTZha1pnekJvMjV5cE9VQ0tpQmZuSXVfbFVzLVBDbDY1b28zMUluUVNzMUlPZnE2Qk5OLXRVcUVsRkVfZ3d2ZVpvaW9JOGFZUE00SV9uQ0xWcE5QOGlzXzB2bkRaWjZiZVpKblZBU2tsOTdvMllIdTRKb21ScUlwNlIzSDdaTFR0Rg?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T23:11:05.000Z",
+      "publishedAt": "2026-09-18T16:55:50.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5\" target=\"_blank\">The turbulent AI era is here. The choices we make now are critical.</a>  <font color=\"#6f6f6f\">Gates Notes</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQNURhdTZha1pnekJvMjV5cE9VQ0tpQmZuSXVfbFVzLVBDbDY1b28zMUluUVNzMUlPZnE2Qk5OLXRVcUVsRkVfZ3d2ZVpvaW9JOGFZUE00SV9uQ0xWcE5QOGlzXzB2bkRaWjZiZVpKblZBU2tsOTdvMllIdTRKb21ScUlwNlIzSDdaTFR0Rg?oc=5\" target=\"_blank\">Exclusive: US military had close call after using AI for false intelligence report, sources say</a>  <font color=\"#6f6f6f\">CNN</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2460,13 +2283,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Exclusive: US military had close call after using AI for false intelligence report, sources say - CNN",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNURhdTZha1pnekJvMjV5cE9VQ0tpQmZuSXVfbFVzLVBDbDY1b28zMUluUVNzMUlPZnE2Qk5OLXRVcUVsRkVfZ3d2ZVpvaW9JOGFZUE00SV9uQ0xWcE5QOGlzXzB2bkRaWjZiZVpKblZBU2tsOTdvMllIdTRKb21ScUlwNlIzSDdaTFR0Rg?oc=5",
+      "title": "The turbulent AI era is here. The choices we make now are critical. - Gates Notes",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T16:55:50.000Z",
+      "publishedAt": "2026-09-18T23:11:05.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQNURhdTZha1pnekJvMjV5cE9VQ0tpQmZuSXVfbFVzLVBDbDY1b28zMUluUVNzMUlPZnE2Qk5OLXRVcUVsRkVfZ3d2ZVpvaW9JOGFZUE00SV9uQ0xWcE5QOGlzXzB2bkRaWjZiZVpKblZBU2tsOTdvMllIdTRKb21ScUlwNlIzSDdaTFR0Rg?oc=5\" target=\"_blank\">Exclusive: US military had close call after using AI for false intelligence report, sources say</a>  <font color=\"#6f6f6f\">CNN</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5\" target=\"_blank\">The turbulent AI era is here. The choices we make now are critical.</a>  <font color=\"#6f6f6f\">Gates Notes</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2670,6 +2493,66 @@
       "researchSignalScore": 0
     },
     {
+      "title": "Chinese researchers plot path to 3-nm chips using older lithography tools - scmp.com",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOUIxZ09GUDBTME9TR2doV0dZend2bkJaSm5Bdy1Vcld5SnZ2RVdIdk5PRGdXZHVyRmVUR3hIRzNzeW95TFFXYWstNzV4VkxuaXJvZXdLcWlOVmVSNW1zZG0xbmJVZEZMVkdHbG5sTUp6bWF3XzA1bU9VMzhqSTBYSzdZdFBTWXRscG1jdmRzTXFUMmZWWk9RQVlNX0N1Q3V6X2NHZ3VtNDFCcEt1Uk95SkVaVVNBanpm0gG4AUFVX3lxTFBfNkJ3dnhEZWdEZFZFN1hvNWdUb3c3LUtCYS1TVHAwSnBDQUtsVlFoS3JZT2gxYlFXUXJja3pPNXBVNUZqMTd5N0VWQk9NUmVjYVl4T2JfVzR3Y0pIcDRKZ29PZVI2OE5fVFZ1MkFtX3haYjN1TTJBcVRubUdKMkFkckJHYVVRcmZrOGZrZnF2WFpwVFhOMjRzQzVnU3ozd2VDRWZOZE9SOUxXdGF5UmpBXy1zejdURS0?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-19T00:00:21.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOOUIxZ09GUDBTME9TR2doV0dZend2bkJaSm5Bdy1Vcld5SnZ2RVdIdk5PRGdXZHVyRmVUR3hIRzNzeW95TFFXYWstNzV4VkxuaXJvZXdLcWlOVmVSNW1zZG0xbmJVZEZMVkdHbG5sTUp6bWF3XzA1bU9VMzhqSTBYSzdZdFBTWXRscG1jdmRzTXFUMmZWWk9RQVlNX0N1Q3V6X2NHZ3VtNDFCcEt1Uk95SkVaVVNBanpm0gG4AUFVX3lxTFBfNkJ3dnhEZWdEZFZFN1hvNWdUb3c3LUtCYS1TVHAwSnBDQUtsVlFoS3JZT2gxYlFXUXJja3pPNXBVNUZqMTd5N0VWQk9NUmVjYVl4T2JfVzR3Y0pIcDRKZ29PZVI2OE5fVFZ1MkFtX3haYjN1TTJBcVRubUdKMkFkckJHYVVRcmZrOGZrZnF2WFpwVFhOMjRzQzVnU3ozd2VDRWZOZE9SOUxXdGF5UmpBXy1zejdURS0?oc=5\" target=\"_blank\">Chinese researchers plot path to 3-nm chips using older lithography tools</a>  <font color=\"#6f6f6f\">scmp.com</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 46,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Technology with Purpose: Supporting Learning in PWCS - Prince William County Public Schools",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9xcTc4LUlpblpPMjlMLTJ0RW54dXo4WGhrQnc2VTJoS0s1QjhybjhpRFZFUWNXZnZRbFNzSkd6ak9LNHlEODZXZUdUeDhFSWlFRU1vaWpQWkdzV0F1alZ3WVRXbVZCc2oxaGtkZ3RCWTg?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T18:38:23.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9xcTc4LUlpblpPMjlMLTJ0RW54dXo4WGhrQnc2VTJoS0s1QjhybjhpRFZFUWNXZnZRbFNzSkd6ak9LNHlEODZXZUdUeDhFSWlFRU1vaWpQWkdzV0F1alZ3WVRXbVZCc2oxaGtkZ3RCWTg?oc=5\" target=\"_blank\">Technology with Purpose: Supporting Learning in PWCS</a>  <font color=\"#6f6f6f\">Prince William County Public Schools</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 46,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
       "title": "Beyond Bottled Water: EPA Showcases Technology That Provides Safe Drinking Water to Disaster-Hit Areas - U.S. Environmental Protection Agency (.gov)",
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNM3FpZWhjS2h5eXlFTUFhcHFUWFhzc29XVHVQLUJSM1VnOGJoOGE4alpsczB0SGMxbUhZTll0b2FhSmhISGdnem42NGVOTDBQUENBVkZ6Y29GR0hZcnVLOFFTSzVzZGJSbk8xSkt6SUZtdFF3Y3VyY2podjI5UURiSk5WcnM4M1hlYTBfUDVpV05SaG5sNjA4d1RFeXg1VXFjRElPRHRVdXY3bk5JUFMyLTEzaThabGc?oc=5",
       "source": "Google News",
@@ -2730,6 +2613,36 @@
       "researchSignalScore": 0
     },
     {
+      "title": "Deputy Information Technology Director – City of Ontario - PublicCEO",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQcEhzZ2VpVkNXZHZLeGZEb0tCSml3eTIyeEI0MXd5SDctQXZMNDc2c1VGcGpHeFd4NjlsOGg4a3gtLTFDUWRibm1WY3JOS2F5R1laX1hUTTdFbnhzNnVZbFpwckJrRl8wZ05xbGhzVmNNakQyTnlJMko1OEtuUldYMHdfTFFOeWVHdUIzRW9R?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-19T00:03:54.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQcEhzZ2VpVkNXZHZLeGZEb0tCSml3eTIyeEI0MXd5SDctQXZMNDc2c1VGcGpHeFd4NjlsOGg4a3gtLTFDUWRibm1WY3JOS2F5R1laX1hUTTdFbnhzNnVZbFpwckJrRl8wZ05xbGhzVmNNakQyTnlJMko1OEtuUldYMHdfTFFOeWVHdUIzRW9R?oc=5\" target=\"_blank\">Deputy Information Technology Director – City of Ontario</a>  <font color=\"#6f6f6f\">PublicCEO</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 46,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
       "title": "Foundation Model-Based Chest X-Ray AI Software Gets FDA Nod - diagnosticimaging.com",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTy1SZXJxMUgtRmZ0RGpmRFpKaGY0bjlIREhTZnhVNWtBNGNIRHhWQWx4ejRmUmZ1ZWFZQzFYVW1qdTVsdzMtT1RPZ1FWUTNXS1dvQnA2bnp0ZExTS0l5ckJLRGtXNFRMdHlYM2NqUE5IaUw2MFc3dS1JNWlUdHRvY1Bpazh4V1RvNko3NWh3ZHVSaXRNQTY1Yg?oc=5",
       "source": "Google News",
@@ -2760,13 +2673,43 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Leon County investigates court record errors after software upgrade affects thousands - WTXL ABC 27 Tallahassee News",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVFJOY0N0dllOM3NMV3N6Q0s0c0IwUGNHa0lqMkdNZzNZRVBoMGJRb3dmZ2x2bjYyZDFSYUZUNndKNjR4ZVRXeDNOSUR0SmNNbWw0eURMLXdhZkNxQzVKWGJfdHZJUjI5YjFncU9xUHpoMzFzMDFiU213aW9hRUswYlZVeU9LbDRfRVA5UFJIOGZmR3NWakpxVkl1Z0NOVXRudE9hSDhsZW9qWmFMZnByOTQyamFfQzRvendFWHRYUURnTjhYaXc?oc=5",
+      "title": "What Does Micron Technology (MU) Warning Of Shortages Through 2027 Mean? - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZmZVMW51UVhWZktkVkg3ajQ0R3pHRUIxVC1odlBZckl4VXVGSXF6eHF0dEItR3NCVkxycDBuY3VCekhkTjdsVzlhZkU3V0t2ZFdOZGdkZnBMc2tvT2RacnVYTlQybGZGZ19MTzRudkNSQkpPM05mdjJjU2l5dkYyM0drczBVWDB0cUI1Nm5oSkpNMVcwRDRSNEVFMElNOGc?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T23:26:49.000Z",
+      "publishedAt": "2026-09-19T00:19:00.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQVFJOY0N0dllOM3NMV3N6Q0s0c0IwUGNHa0lqMkdNZzNZRVBoMGJRb3dmZ2x2bjYyZDFSYUZUNndKNjR4ZVRXeDNOSUR0SmNNbWw0eURMLXdhZkNxQzVKWGJfdHZJUjI5YjFncU9xUHpoMzFzMDFiU213aW9hRUswYlZVeU9LbDRfRVA5UFJIOGZmR3NWakpxVkl1Z0NOVXRudE9hSDhsZW9qWmFMZnByOTQyamFfQzRvendFWHRYUURnTjhYaXc?oc=5\" target=\"_blank\">Leon County investigates court record errors after software upgrade affects thousands</a>  <font color=\"#6f6f6f\">WTXL ABC 27 Tallahassee News</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQZmZVMW51UVhWZktkVkg3ajQ0R3pHRUIxVC1odlBZckl4VXVGSXF6eHF0dEItR3NCVkxycDBuY3VCekhkTjdsVzlhZkU3V0t2ZFdOZGdkZnBMc2tvT2RacnVYTlQybGZGZ19MTzRudkNSQkpPM05mdjJjU2l5dkYyM0drczBVWDB0cUI1Nm5oSkpNMVcwRDRSNEVFMElNOGc?oc=5\" target=\"_blank\">What Does Micron Technology (MU) Warning Of Shortages Through 2027 Mean?</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 46,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Thousands of Bay Area, Southern California security guards at major retailers, tech giants begin strike - ABC7 Bay Area",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOTkEzdWYyWGt5N2kyS0NpaExLQXNMVkdKckxmc1NrV2dtYnVIeUVZQVdfYXFLVFUzcEZHeS1LUnBQeU1vc2JmZVlxdS1fLVloWmxZVEtuX0JmOEVwOXliTFNpc2hZTFZCZU93bExFTUFrN0dFeVRjalUyYU9fbHBvTXIwX1ljNHhjRmQ3S1Z1M3VnRDdtdEF2WUhzWE9iaG9LSzRiYkZYemh2c0k5MTBIR3RrMThZeUdRSXZNNDdOTDd2MXlESDJmcW9va9IB0AFBVV95cUxQaWgzOFdsaEV4MGxsN09BR1BtRDhGQmZEeWVVSWtSc0V2MTBVa0d3VDdJUjladXNkREpwa05IcXNERFVlMDRSemtpcVhGTklxZDNUTkVJemFVdzMyYUJ1ejJvY0VxU2lUQUlXd2NWaXZON1FQZTBKaG9iRkI4eFNLTjI0cktJSTBGM09rLURvdXlzMjFZbUctY244Uy1CRk5Eb1FOMVhSOTc2czlPNDVGQXE5Nm9Qc0N2cERNQW80c3FYV1lUUW5OZUdsZW1XNWM0?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T22:01:41.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxOTkEzdWYyWGt5N2kyS0NpaExLQXNMVkdKckxmc1NrV2dtYnVIeUVZQVdfYXFLVFUzcEZHeS1LUnBQeU1vc2JmZVlxdS1fLVloWmxZVEtuX0JmOEVwOXliTFNpc2hZTFZCZU93bExFTUFrN0dFeVRjalUyYU9fbHBvTXIwX1ljNHhjRmQ3S1Z1M3VnRDdtdEF2WUhzWE9iaG9LSzRiYkZYemh2c0k5MTBIR3RrMThZeUdRSXZNNDdOTDd2MXlESDJmcW9va9IB0AFBVV95cUxQaWgzOFdsaEV4MGxsN09BR1BtRDhGQmZEeWVVSWtSc0V2MTBVa0d3VDdJUjladXNkREpwa05IcXNERFVlMDRSemtpcVhGTklxZDNUTkVJemFVdzMyYUJ1ejJvY0VxU2lUQUlXd2NWaXZON1FQZTBKaG9iRkI4eFNLTjI0cktJSTBGM09rLURvdXlzMjFZbUctY244Uy1CRk5Eb1FOMVhSOTc2czlPNDVGQXE5Nm9Qc0N2cERNQW80c3FYV1lUUW5OZUdsZW1XNWM0?oc=5\" target=\"_blank\">Thousands of Bay Area, Southern California security guards at major retailers, tech giants begin strike</a>  <font color=\"#6f6f6f\">ABC7 Bay Area</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2970,35 +2913,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Google Says Its A.I. Hacked Three Companies in Testing Breakout - The New York Times",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1oVmRjQVgxMHR6VnBZbUIxamFSQ1lXanpuU080VEhkWFVDNHlXbDJhMHBNNWo0MFBsd2lMSTMwcjJpREJTZUozVzVQLWUzUkdUUG9RbDJtY3hjSVhnR2ZFTFlEOFc1aVNNeTFOZHdTTzNDWHFCNlE?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-19T00:31:38.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1oVmRjQVgxMHR6VnBZbUIxamFSQ1lXanpuU080VEhkWFVDNHlXbDJhMHBNNWo0MFBsd2lMSTMwcjJpREJTZUozVzVQLWUzUkdUUG9RbDJtY3hjSVhnR2ZFTFlEOFc1aVNNeTFOZHdTTzNDWHFCNlE?oc=5\" target=\"_blank\">Google Says Its A.I. Hacked Three Companies in Testing Breakout</a>  <font color=\"#6f6f6f\">The New York Times</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 45,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
       "title": "Jensen Huang says Nvidia will sell twice as many chips next year - CNBC",
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBMZUVscTltc3BSMGJoVVhPeWlDQ2JiendDa3ZsRmF4VGwzVXAtYlNfUE5vVE13OXBsT1N3MXFYdFdRd25jYkhGaFp4QXEwb0g5cXNQdFhicVl0SWlySk1JTXhoc05qd08tcmhBR2VxQU5DLTVq0gF6QVVfeXFMTXo3S3oxZXdkNml4VG1yM09rSUh4cWp4Tlh2SXdSSGZ1Q0Z4NHBPclhJdmdmbUtWTWVUQnd4YUY0N25IV204WWY1QnZISUJ6bl9ZaXVEQ0dnMU1QdHdva0dSdmVOZWctZnBQaHE0WUdBSkFDYWItM2tQTXc?oc=5",
       "source": "Google News",
@@ -3047,7 +2961,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 10
+        "corroboratingCandidates": 9
       },
       "score": 45,
       "reasons": [
@@ -3147,6 +3061,35 @@
       "researchSignalScore": 6
     },
     {
+      "title": "Artificial intelligence now beats some of the best human forecasters - The Economist",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNOVE2WlNjSlVyUjdJZzRYT1ZTSlI1cWFHdHJYcHhMNnREaXYzRzhINE8xWHZIZmh2TTFaOGllS0lTVU5sNDctUzhuOXpNQi1BbjBwalduUkE3SllUbEp3ZTFveEVZajZwOGRSVXhDaS02bnVCMkM3OWdBZTd5STl4a2dBbjNidGhpSlQ1OXlCanZRaXpoay02TU45cXk5b2c5dndkQnRCVHdCbUxvV1ljTkNtMmY4aDFnUEFHNm5iMGdhWjB4SHNR?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-16T18:47:08.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNOVE2WlNjSlVyUjdJZzRYT1ZTSlI1cWFHdHJYcHhMNnREaXYzRzhINE8xWHZIZmh2TTFaOGllS0lTVU5sNDctUzhuOXpNQi1BbjBwalduUkE3SllUbEp3ZTFveEVZajZwOGRSVXhDaS02bnVCMkM3OWdBZTd5STl4a2dBbjNidGhpSlQ1OXlCanZRaXpoay02TU45cXk5b2c5dndkQnRCVHdCbUxvV1ljTkNtMmY4aDFnUEFHNm5iMGdhWjB4SHNR?oc=5\" target=\"_blank\">Artificial intelligence now beats some of the best human forecasters</a>  <font color=\"#6f6f6f\">The Economist</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 7
+      },
+      "score": 43,
+      "reasons": [
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 5
+    },
+    {
       "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
       "source": "Google News",
@@ -3166,6 +3109,35 @@
           "news"
         ],
         "corroboratingCandidates": 10
+      },
+      "score": 43,
+      "reasons": [
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Research, innovation and invention top priority for prosperity, Minister Pun says - risingnepaldaily.com",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rVG5TTXdNYjFEOURLeWluRmNkSHZBYnM5Z2xKY19QTUttZmdzRUVzVnpQTVREVTZPTFRkSTBMYXlXak1udlhIeng4Z25hZmo3?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-08-08T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rVG5TTXdNYjFEOURLeWluRmNkSHZBYnM5Z2xKY19QTUttZmdzRUVzVnpQTVREVTZPTFRkSTBMYXlXak1udlhIeng4Z25hZmo3?oc=5\" target=\"_blank\">Research, innovation and invention top priority for prosperity, Minister Pun says</a>  <font color=\"#6f6f6f\">risingnepaldaily.com</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 9
       },
       "score": 43,
       "reasons": [
@@ -3233,6 +3205,35 @@
       ],
       "eligible": false,
       "researchSignalScore": 2
+    },
+    {
+      "title": "Google Says Its A.I. Hacked Three Companies in Testing Breakout - The New York Times",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1oVmRjQVgxMHR6VnBZbUIxamFSQ1lXanpuU080VEhkWFVDNHlXbDJhMHBNNWo0MFBsd2lMSTMwcjJpREJTZUozVzVQLWUzUkdUUG9RbDJtY3hjSVhnR2ZFTFlEOFc1aVNNeTFOZHdTTzNDWHFCNlE?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-19T00:31:38.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1oVmRjQVgxMHR6VnBZbUIxamFSQ1lXanpuU080VEhkWFVDNHlXbDJhMHBNNWo0MFBsd2lMSTMwcjJpREJTZUozVzVQLWUzUkdUUG9RbDJtY3hjSVhnR2ZFTFlEOFc1aVNNeTFOZHdTTzNDWHFCNlE?oc=5\" target=\"_blank\">Google Says Its A.I. Hacked Three Companies in Testing Breakout</a>  <font color=\"#6f6f6f\">The New York Times</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 40,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
     },
     {
       "title": "Anthropic is operating a lab that conducts biology experiments",
@@ -3670,35 +3671,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Invention - Chronology, Innovations, History - Britannica",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNT2tTWlN5eXpuamdDMjRncmx0QUpNZG1WbmxqdGdNYTJXVlRWQkJyNXRCREJKRUZOdWxBMlNUTDV5QmRvclFWODdZLWdsQldKUjQ1cnBlUVA5UjdMNVRIVHBoaS04Q2FGeFBreDNuWk52SU1SbXNqTC11czQyektoTVFJb2hwUHlzWGlacQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T05:00:00.000Z",
-      "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxNT2tTWlN5eXpuamdDMjRncmx0QUpNZG1WbmxqdGdNYTJXVlRWQkJyNXRCREJKRUZOdWxBMlNUTDV5QmRvclFWODdZLWdsQldKUjQ1cnBlUVA5UjdMNVRIVHBoaS04Q2FGeFBreDNuWk52SU1SbXNqTC11czQyektoTVFJb2hwUHlzWGlacQ?oc=5\" target=\"_blank\">Invention - Chronology, Innovations, History</a>  <font color=\"#6f6f6f\">Britannica</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 39,
-      "reasons": [
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 2
-    },
-    {
       "title": "The Download: AI’s trillion-dollar gamble and OpenAI&#8217;s biology data bid",
       "link": "https://www.technologyreview.com/2026/09/16/1144205/the-download-ai-trillion-dollar-build-openai-biological-data/",
       "source": "MIT Technology Review",
@@ -3758,13 +3730,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "How To Vibe Code: Your 2026 Guide to Building Apps Without Writing Code - allaboutcookies.org",
+      "title": "How To Vibe Code: Your 2026 Guide to Building Apps Without Writing Code - All About Cookies",
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ISGg2bkJ2TlpUZG5JRWJDR256ZlhEckxpRlpHY2JHbFQ0d3dfTXliS2JiUWlCUXNVbnhndUJyUWdHYzhzemlQSThHWWZfUEs2S0g4UlhUZw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=how%20to%20software%20OR%20apps%20guide&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-08-31T07:00:00.000Z",
       "category": "How-To",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ISGg2bkJ2TlpUZG5JRWJDR256ZlhEckxpRlpHY2JHbFQ0d3dfTXliS2JiUWlCUXNVbnhndUJyUWdHYzhzemlQSThHWWZfUEs2S0g4UlhUZw?oc=5\" target=\"_blank\">How To Vibe Code: Your 2026 Guide to Building Apps Without Writing Code</a>  <font color=\"#6f6f6f\">allaboutcookies.org</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ISGg2bkJ2TlpUZG5JRWJDR256ZlhEckxpRlpHY2JHbFQ0d3dfTXliS2JiUWlCUXNVbnhndUJyUWdHYzhzemlQSThHWWZfUEs2S0g4UlhUZw?oc=5\" target=\"_blank\">How To Vibe Code: Your 2026 Guide to Building Apps Without Writing Code</a>  <font color=\"#6f6f6f\">All About Cookies</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3787,13 +3759,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "From Edison’s Invention Factory to the new architecture of innovation - science.org",
+      "title": "From Edison’s Invention Factory to the new architecture of innovation - Science | AAAS",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-07-02T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5\" target=\"_blank\">From Edison’s Invention Factory to the new architecture of innovation</a>  <font color=\"#6f6f6f\">science.org</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5\" target=\"_blank\">From Edison’s Invention Factory to the new architecture of innovation</a>  <font color=\"#6f6f6f\">Science | AAAS</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3805,7 +3777,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 11
+        "corroboratingCandidates": 12
       },
       "score": 37,
       "reasons": [
@@ -3834,7 +3806,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 11
+        "corroboratingCandidates": 12
       },
       "score": 37,
       "reasons": [
@@ -3845,13 +3817,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "NLR Battery Innovation Awarded NASA’s Invention of the Year - CleanTechnica",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNEFEcHd5ZmxxSFlJSVdkRjllUWJnblRldzR1WVRDYmlqaHZFYXFIdnlaZW5TUjVwX2RpZ1RUWWdpczFuc280ZnQ3TFhjWVdndHA2dnMzYUxEMVJuTnRhSmkyZktfTmI1R2lSamgtdVpzbXRwMDE3ZDl6empSSGwtZEd5c3Nna2F6WWdOR0dZTzNKRFlGSkNMLXJEZ3Q5bDg?oc=5",
+      "title": "NLR Battery Innovation Awarded NASA’s Invention of the Year - nlr.gov",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWlFEeGZad0JTSzliMHJSdTllN3VaR08zVFFfRHMxTkpJOWR1TC1jT2dqQW1Hci1XTkRaQ3VvbzduMlJac0Q1VEkzbFN5NzAyVDdFWFU3bGRZVTZpUWkwWTdmSEJmYUpRYWhLWmRhei1tRUNCb0FSdkFqVV8wRndpRHp1bzFMSUpkU3loMGJUTjR5akwyenBQMkYxV3hzWW1tOU1PVHpR?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-07-16T07:00:00.000Z",
+      "publishedAt": "2026-04-28T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPNEFEcHd5ZmxxSFlJSVdkRjllUWJnblRldzR1WVRDYmlqaHZFYXFIdnlaZW5TUjVwX2RpZ1RUWWdpczFuc280ZnQ3TFhjWVdndHA2dnMzYUxEMVJuTnRhSmkyZktfTmI1R2lSamgtdVpzbXRwMDE3ZDl6empSSGwtZEd5c3Nna2F6WWdOR0dZTzNKRFlGSkNMLXJEZ3Q5bDg?oc=5\" target=\"_blank\">NLR Battery Innovation Awarded NASA’s Invention of the Year</a>  <font color=\"#6f6f6f\">CleanTechnica</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQWlFEeGZad0JTSzliMHJSdTllN3VaR08zVFFfRHMxTkpJOWR1TC1jT2dqQW1Hci1XTkRaQ3VvbzduMlJac0Q1VEkzbFN5NzAyVDdFWFU3bGRZVTZpUWkwWTdmSEJmYUpRYWhLWmRhei1tRUNCb0FSdkFqVV8wRndpRHp1bzFMSUpkU3loMGJUTjR5akwyenBQMkYxV3hzWW1tOU1PVHpR?oc=5\" target=\"_blank\">NLR Battery Innovation Awarded NASA’s Invention of the Year</a>  <font color=\"#6f6f6f\">nlr.gov</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3950,7 +3922,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 10
+        "corroboratingCandidates": 9
       },
       "score": 37,
       "reasons": [
@@ -4008,36 +3980,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 11
-      },
-      "score": 37,
-      "reasons": [
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "iQIYI Reaches New Heights: 880 Invention Patents Filed in 2025, Over Half Driven by AI Innovation, Further Building Up Its AIGC Leadership - PR Newswire",
-      "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPT1pqOGxHUWI5YkxVbWhwb0NoVFpSZmRyVWloY2FLUGNVcmlaUEx6QWZZQUFoMmxNR2F5bFoxTnhJa25iU194bWN2WnNNc1RJbjhvYmplck83Xy1udWdjT2NVMGwtY2N4a1BPWXk5RHVQTmsyajBSY1lUVG5iQ2hpM2g3eXZQQjAxdXpxalRGbjVLb2c0X0JSV0kwOGMydVlfbEpYV09Sa3ZWRUVtUzVQbG5QRFd5RXNtMTJYOUJLaDl4bmNZSDZaV2lvUEpiRkQ0UDFJS0hLQ2JFWVlxanE2VTRnYlJLRlNvU3pGa2JmRUtaYlFXWEMyNVAyald2eS1XbEhkNmFKM0tOWmdJQ1N5TmtvY0ZZY0prUjZF?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-01-30T08:00:00.000Z",
-      "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwJBVV95cUxPT1pqOGxHUWI5YkxVbWhwb0NoVFpSZmRyVWloY2FLUGNVcmlaUEx6QWZZQUFoMmxNR2F5bFoxTnhJa25iU194bWN2WnNNc1RJbjhvYmplck83Xy1udWdjT2NVMGwtY2N4a1BPWXk5RHVQTmsyajBSY1lUVG5iQ2hpM2g3eXZQQjAxdXpxalRGbjVLb2c0X0JSV0kwOGMydVlfbEpYV09Sa3ZWRUVtUzVQbG5QRFd5RXNtMTJYOUJLaDl4bmNZSDZaV2lvUEpiRkQ0UDFJS0hLQ2JFWVlxanE2VTRnYlJLRlNvU3pGa2JmRUtaYlFXWEMyNVAyald2eS1XbEhkNmFKM0tOWmdJQ1N5TmtvY0ZZY0prUjZF?oc=5\" target=\"_blank\">iQIYI Reaches New Heights: 880 Invention Patents Filed in 2025, Over Half Driven by AI Innovation, Further Building Up Its AIGC Leadership</a>  <font color=\"#6f6f6f\">PR Newswire</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 9
+        "corroboratingCandidates": 12
       },
       "score": 37,
       "reasons": [
@@ -4153,7 +4096,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 8
+        "corroboratingCandidates": 7
       },
       "score": 37,
       "reasons": [
@@ -4240,7 +4183,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 6
+        "corroboratingCandidates": 7
       },
       "score": 36,
       "reasons": [
@@ -4280,7 +4223,147 @@
       "researchSignalScore": 4
     },
     {
-      "title": "convenience store",
+      "title": "car accident lawyer",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "source": "Google Trends",
+      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
+      "publishedAt": "2026-09-19T06:40:00.000Z",
+      "category": "AI",
+      "description": "",
+      "signalType": "search-trend",
+      "discoveryOnly": true,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google Trends"
+        ],
+        "signalTypes": [
+          "search-trend"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "administration",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "source": "Google Trends",
+      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
+      "publishedAt": "2026-09-19T06:30:00.000Z",
+      "category": "AI",
+      "description": "",
+      "signalType": "search-trend",
+      "discoveryOnly": true,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google Trends"
+        ],
+        "signalTypes": [
+          "search-trend"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "brady bidwell",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "source": "Google Trends",
+      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
+      "publishedAt": "2026-09-19T05:50:00.000Z",
+      "category": "AI",
+      "description": "",
+      "signalType": "search-trend",
+      "discoveryOnly": true,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google Trends"
+        ],
+        "signalTypes": [
+          "search-trend"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "japan",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "source": "Google Trends",
+      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
+      "publishedAt": "2026-09-19T05:40:00.000Z",
+      "category": "AI",
+      "description": "",
+      "signalType": "search-trend",
+      "discoveryOnly": true,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google Trends"
+        ],
+        "signalTypes": [
+          "search-trend"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "jett washington",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "source": "Google Trends",
+      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
+      "publishedAt": "2026-09-19T05:30:00.000Z",
+      "category": "AI",
+      "description": "",
+      "signalType": "search-trend",
+      "discoveryOnly": true,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google Trends"
+        ],
+        "signalTypes": [
+          "search-trend"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "rose friedman",
       "link": "https://trends.google.com/trending/rss?geo=US",
       "source": "Google Trends",
       "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
@@ -4364,123 +4447,11 @@
       "researchSignalScore": 0
     },
     {
-      "title": "osaa football",
+      "title": "convenience store",
       "link": "https://trends.google.com/trending/rss?geo=US",
       "source": "Google Trends",
       "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
       "publishedAt": "2026-09-19T05:20:00.000Z",
-      "category": "AI",
-      "description": "",
-      "signalType": "search-trend",
-      "discoveryOnly": true,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google Trends"
-        ],
-        "signalTypes": [
-          "search-trend"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 35,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "mlb scores today",
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "source": "Google Trends",
-      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
-      "publishedAt": "2026-09-19T05:20:00.000Z",
-      "category": "AI",
-      "description": "",
-      "signalType": "search-trend",
-      "discoveryOnly": true,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google Trends"
-        ],
-        "signalTypes": [
-          "search-trend"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 35,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "diesel fuel",
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "source": "Google Trends",
-      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
-      "publishedAt": "2026-09-19T05:10:00.000Z",
-      "category": "AI",
-      "description": "",
-      "signalType": "search-trend",
-      "discoveryOnly": true,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google Trends"
-        ],
-        "signalTypes": [
-          "search-trend"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 35,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "gas",
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "source": "Google Trends",
-      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
-      "publishedAt": "2026-09-19T05:10:00.000Z",
-      "category": "AI",
-      "description": "",
-      "signalType": "search-trend",
-      "discoveryOnly": true,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google Trends"
-        ],
-        "signalTypes": [
-          "search-trend"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 35,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "fuel",
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "source": "Google Trends",
-      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
-      "publishedAt": "2026-09-19T05:10:00.000Z",
       "category": "AI",
       "description": "",
       "signalType": "search-trend",
@@ -4532,41 +4503,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "betmgm sportsbook",
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "source": "Google Trends",
-      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
-      "publishedAt": "2026-09-19T05:10:00.000Z",
-      "category": "AI",
-      "description": "",
-      "signalType": "search-trend",
-      "discoveryOnly": true,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google Trends"
-        ],
-        "signalTypes": [
-          "search-trend"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 35,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - investor.cummins.com",
+      "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - Cummins",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-07-23T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5\" target=\"_blank\">Cummins Announces Phased Model Year 2027 Product Launch Plan</a>  <font color=\"#6f6f6f\">investor.cummins.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5\" target=\"_blank\">Cummins Announces Phased Model Year 2027 Product Launch Plan</a>  <font color=\"#6f6f6f\">Cummins</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5073,13 +5016,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - Bloomberg",
+      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - Bloomberg.com",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=how%20to%20software%20OR%20apps%20guide&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-07-02T07:00:00.000Z",
       "category": "How-To",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5\" target=\"_blank\">What If the Software Panic Was Overblown? A Discerning Investor’s Guide</a>  <font color=\"#6f6f6f\">Bloomberg</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5\" target=\"_blank\">What If the Software Panic Was Overblown? A Discerning Investor’s Guide</a>  <font color=\"#6f6f6f\">Bloomberg.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5131,13 +5074,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "What to Look for When Purchasing Contact Center Software: The 2026 Buyer’s Guide - CX Today",
+      "title": "What to Look for When Purchasing Contact Center Software: The 2026 Buyer’s Guide - cxtoday.com",
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPY1UwQ3N1bHJrN1lmSXNOUmd4ZFNDT0xDNnh3MlE2OThJZXVsRXJKZFprRkw3dERnZ0lJLXVOanltRWxpR1o3MkJYRFZkeXhYdExiS0l0dDAzSHpiSU1mQlpqSGFqbThNR0pOSnlWM1dKTHdtcldiRDNvMWFwZlVUYThKbEJEcF95MHBhZnNvZHJZR2tSOG1YUlMxNGhCVEI4T3BtQkhybWZfeDV4eUpJU3UweWFSNVhpX2c?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=how%20to%20software%20OR%20apps%20guide&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-06-24T07:00:00.000Z",
       "category": "How-To",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPY1UwQ3N1bHJrN1lmSXNOUmd4ZFNDT0xDNnh3MlE2OThJZXVsRXJKZFprRkw3dERnZ0lJLXVOanltRWxpR1o3MkJYRFZkeXhYdExiS0l0dDAzSHpiSU1mQlpqSGFqbThNR0pOSnlWM1dKTHdtcldiRDNvMWFwZlVUYThKbEJEcF95MHBhZnNvZHJZR2tSOG1YUlMxNGhCVEI4T3BtQkhybWZfeDV4eUpJU3UweWFSNVhpX2c?oc=5\" target=\"_blank\">What to Look for When Purchasing Contact Center Software: The 2026 Buyer’s Guide</a>  <font color=\"#6f6f6f\">CX Today</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPY1UwQ3N1bHJrN1lmSXNOUmd4ZFNDT0xDNnh3MlE2OThJZXVsRXJKZFprRkw3dERnZ0lJLXVOanltRWxpR1o3MkJYRFZkeXhYdExiS0l0dDAzSHpiSU1mQlpqSGFqbThNR0pOSnlWM1dKTHdtcldiRDNvMWFwZlVUYThKbEJEcF95MHBhZnNvZHJZR2tSOG1YUlMxNGhCVEI4T3BtQkhybWZfeDV4eUpJU3UweWFSNVhpX2c?oc=5\" target=\"_blank\">What to Look for When Purchasing Contact Center Software: The 2026 Buyer’s Guide</a>  <font color=\"#6f6f6f\">cxtoday.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5189,13 +5132,13 @@
       "researchSignalScore": 4
     },
     {
-      "title": "[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide - dailyprincetonian.com",
+      "title": "[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide - The Daily Princetonian",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTk5COHRzOGk3aXRzUGFOcTZlT0xENnRFeU4wTWlHRzN0VXRxbUxjUXlqUm9zOVNIUnFzTlpyZlAtMXBqSGdtTmdxNGlHZ3N0ZEJFbXo1dGdTb1FfYllEMjdoNV9CQ1VQOE1RUjRMOTdSdE12UnhfV29NdXJ1SVZNQV9UVkk0R2wwNlpjQk9JT24wOE91VF8wNXFNRU1Uc3VYQzdBUlRmcWtPd2YyYzhlTUJ3?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=how%20to%20software%20OR%20apps%20guide&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-07-30T07:00:00.000Z",
       "category": "How-To",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQTk5COHRzOGk3aXRzUGFOcTZlT0xENnRFeU4wTWlHRzN0VXRxbUxjUXlqUm9zOVNIUnFzTlpyZlAtMXBqSGdtTmdxNGlHZ3N0ZEJFbXo1dGdTb1FfYllEMjdoNV9CQ1VQOE1RUjRMOTdSdE12UnhfV29NdXJ1SVZNQV9UVkk0R2wwNlpjQk9JT24wOE91VF8wNXFNRU1Uc3VYQzdBUlRmcWtPd2YyYzhlTUJ3?oc=5\" target=\"_blank\">[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide</a>  <font color=\"#6f6f6f\">dailyprincetonian.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQTk5COHRzOGk3aXRzUGFOcTZlT0xENnRFeU4wTWlHRzN0VXRxbUxjUXlqUm9zOVNIUnFzTlpyZlAtMXBqSGdtTmdxNGlHZ3N0ZEJFbXo1dGdTb1FfYllEMjdoNV9CQ1VQOE1RUjRMOTdSdE12UnhfV29NdXJ1SVZNQV9UVkk0R2wwNlpjQk9JT24wOE91VF8wNXFNRU1Uc3VYQzdBUlRmcWtPd2YyYzhlTUJ3?oc=5\" target=\"_blank\">[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide</a>  <font color=\"#6f6f6f\">The Daily Princetonian</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5254,6 +5197,35 @@
       "publishedAt": "2026-06-29T07:00:00.000Z",
       "category": "Innovation",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5\" target=\"_blank\">From invention to impact: Hong Kong Science Fair gives young innovators a wider stage</a>  <font color=\"#6f6f6f\">scmp.com</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 5
+      },
+      "score": 31,
+      "reasons": [
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "India’s next challenge — from invention to global scale - The Hindu",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMW9tNXJZd0JQaVM1d0lCTHFNUHBkZFlKRE8wRFYzQjFfdElLLUFUS0ZicmtPRE4xQTNyLVdldkotY2lRWWp2cUxvTFRZcWg2czVnSEQteTRBNzZaLUM0bVRXNV9oenB0TW9nZVdaZHh4dFFyU2thcXBYQjZyMUtvMzBhbm83VU5maURqcndFaU5QYlRZbVN5enFKSGVVXy1LUmpQRjlvQkVwZnNyQTV5Q9IBtwFBVV95cUxOVkczaVBUTW52WEZDdUZQTkdnMmFUSzE1OVJTYWVQbmpvVXRCNXo2SW5QWmxYRFpWSVN3ZTRkOXBmU0tZOUlhbGVJR0F3ei15Ty02ZEEzUTlrcnJhTWtmSlBJRTZWRnltdVdGZnpWTWFQZDNISjRHaWFLUFNvTEp4WU9EMVo1SUpGQktzQjQwdXg2WmtsbFBIaXZxdlpwMzlpcDRzajRfc3lzMS1ucFB5VWVnWm42bVU?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-06-24T07:00:00.000Z",
+      "category": "Innovation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQMW9tNXJZd0JQaVM1d0lCTHFNUHBkZFlKRE8wRFYzQjFfdElLLUFUS0ZicmtPRE4xQTNyLVdldkotY2lRWWp2cUxvTFRZcWg2czVnSEQteTRBNzZaLUM0bVRXNV9oenB0TW9nZVdaZHh4dFFyU2thcXBYQjZyMUtvMzBhbm83VU5maURqcndFaU5QYlRZbVN5enFKSGVVXy1LUmpQRjlvQkVwZnNyQTV5Q9IBtwFBVV95cUxOVkczaVBUTW52WEZDdUZQTkdnMmFUSzE1OVJTYWVQbmpvVXRCNXo2SW5QWmxYRFpWSVN3ZTRkOXBmU0tZOUlhbGVJR0F3ei15Ty02ZEEzUTlrcnJhTWtmSlBJRTZWRnltdVdGZnpWTWFQZDNISjRHaWFLUFNvTEp4WU9EMVo1SUpGQktzQjQwdXg2WmtsbFBIaXZxdlpwMzlpcDRzajRfc3lzMS1ucFB5VWVnWm42bVU?oc=5\" target=\"_blank\">India’s next challenge — from invention to global scale</a>  <font color=\"#6f6f6f\">The Hindu</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5334,13 +5306,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Apple unveils iPhone Duo - apple.com",
+      "title": "Apple unveils iPhone Duo - Apple",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-09T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5\" target=\"_blank\">Apple unveils iPhone Duo</a>  <font color=\"#6f6f6f\">apple.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5\" target=\"_blank\">Apple unveils iPhone Duo</a>  <font color=\"#6f6f6f\">Apple</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5381,7 +5353,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 4
       },
       "score": 31,
       "reasons": [
@@ -5392,13 +5364,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - apple.com",
+      "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - Apple",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-08-25T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5\" target=\"_blank\">Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro</a>  <font color=\"#6f6f6f\">apple.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5\" target=\"_blank\">Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro</a>  <font color=\"#6f6f6f\">Apple</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5421,13 +5393,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Apple Upgrade launches in the United States - apple.com",
+      "title": "Apple Upgrade launches in the United States - Apple",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSjRzdmZCOXJRTkVEWmotS2QzZGM3ejFWeGMzZkRfT3dkLTB3c0s2Rml6RE1nU3FRSmNxNDBaQlpRQ0FJYWxOUWd6MFIwVjEwT3l5aWJXLUdsQU1Sdk9PYnRRTjFLUnJoUkNlQzNXcTRaR0hyNnRQSkdkd2tRSkEtblJnVnZlZTRlUm1N?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-07-28T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSjRzdmZCOXJRTkVEWmotS2QzZGM3ejFWeGMzZkRfT3dkLTB3c0s2Rml6RE1nU3FRSmNxNDBaQlpRQ0FJYWxOUWd6MFIwVjEwT3l5aWJXLUdsQU1Sdk9PYnRRTjFLUnJoUkNlQzNXcTRaR0hyNnRQSkdkd2tRSkEtblJnVnZlZTRlUm1N?oc=5\" target=\"_blank\">Apple Upgrade launches in the United States</a>  <font color=\"#6f6f6f\">apple.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSjRzdmZCOXJRTkVEWmotS2QzZGM3ejFWeGMzZkRfT3dkLTB3c0s2Rml6RE1nU3FRSmNxNDBaQlpRQ0FJYWxOUWd6MFIwVjEwT3l5aWJXLUdsQU1Sdk9PYnRRTjFLUnJoUkNlQzNXcTRaR0hyNnRQSkdkd2tRSkEtblJnVnZlZTRlUm1N?oc=5\" target=\"_blank\">Apple Upgrade launches in the United States</a>  <font color=\"#6f6f6f\">Apple</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5877,13 +5849,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - apple.com",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5",
+      "title": "Introducing Meta One: A Subscription Service With More Features and AI to Create, Connect, and Stand Out - meta.com",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjk1X0RPQVJ6YXU1a08yWGRzMEdHUjVmU3lkbjcySmZibDZ4M2dXQTVodzNrbl9jRUNaZmpHSFJqdlFRaVI5NlZFR0Zab0prdzM3NW9QVm9UM2FTSzgtZGNaTTdydTlBcUFyUHczYTlDcGZZNC15emRpN1hRQl9Dc1pxQTlVS015dldSMHJOc0dMQ2pXV0swadIBngFBVV95cUxQdGRnU0tuRTZhTUt1MVBOMUY0Z3RJWGU2WWJIcDFsT09KNzF4WHBkV1JIaXhfZk0zSUZaRmRrbE9xb1luWDYyYm0xOFFXNjMtQ3BtRUc0TkxTd2FiaUhFS3kzRHlLdWhBaTAxbXNaeTdRakp5dTZmTVFFcFkyOVNyNk9HNXA4aHRDOG5EX1BpaEdFSnkzRmZHdzZUczNwUQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-09T07:00:00.000Z",
+      "publishedAt": "2026-09-15T15:00:59.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5\" target=\"_blank\">Apple debuts iPhone 18 Pro and iPhone 18 Pro Max</a>  <font color=\"#6f6f6f\">apple.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjk1X0RPQVJ6YXU1a08yWGRzMEdHUjVmU3lkbjcySmZibDZ4M2dXQTVodzNrbl9jRUNaZmpHSFJqdlFRaVI5NlZFR0Zab0prdzM3NW9QVm9UM2FTSzgtZGNaTTdydTlBcUFyUHczYTlDcGZZNC15emRpN1hRQl9Dc1pxQTlVS015dldSMHJOc0dMQ2pXV0swadIBngFBVV95cUxQdGRnU0tuRTZhTUt1MVBOMUY0Z3RJWGU2WWJIcDFsT09KNzF4WHBkV1JIaXhfZk0zSUZaRmRrbE9xb1luWDYyYm0xOFFXNjMtQ3BtRUc0TkxTd2FiaUhFS3kzRHlLdWhBaTAxbXNaeTdRakp5dTZmTVFFcFkyOVNyNk9HNXA4aHRDOG5EX1BpaEdFSnkzRmZHdzZUczNwUQ?oc=5\" target=\"_blank\">Introducing Meta One: A Subscription Service With More Features and AI to Create, Connect, and Stand Out</a>  <font color=\"#6f6f6f\">meta.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5895,7 +5867,35 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 10
+        "corroboratingCandidates": 0
+      },
+      "score": 25,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - Apple",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T07:00:00.000Z",
+      "category": "Product Launches",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5\" target=\"_blank\">Apple debuts iPhone 18 Pro and iPhone 18 Pro Max</a>  <font color=\"#6f6f6f\">Apple</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 9
       },
       "score": 25,
       "reasons": [

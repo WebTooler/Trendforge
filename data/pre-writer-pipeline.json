@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T05:38:29.078Z",
+  "generatedAt": "2026-09-19T06:57:55.680Z",
   "policy": "Production pre-writer gate: consumes existing upstream artifacts, performs publisher-page identity/extraction/coverage/blueprint checks, and blocks AI generation when no writer-ready candidate exists.",
   "stages": [
     "trend-research",
@@ -37,13 +37,13 @@
         "independentPublisherCount": 3,
         "independentPublisherFamilies": [
           "cbsnews.com",
-          "yahoo.com",
-          "myfox28columbus.com"
+          "myfox28columbus.com",
+          "yahoo.com"
         ],
         "independentDomains": [
           "cbsnews.com",
-          "yahoo.com",
-          "myfox28columbus.com"
+          "myfox28columbus.com",
+          "yahoo.com"
         ],
         "sources": [
           {
@@ -60,19 +60,6 @@
             "topicOverlap": 9
           },
           {
-            "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
-            "domain": "yahoo.com",
-            "publisherFamily": "yahoo.com",
-            "resolvedFrom": "article-link",
-            "ok": true,
-            "reason": "story-relevant-publisher-article",
-            "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
-            "pageTitle": "Trump says Denmark to give US 'permanent control' over Greenland security",
-            "canonical": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
-            "bodyChars": 3581,
-            "topicOverlap": 9
-          },
-          {
             "suppliedUrl": "https://myfox28columbus.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
             "domain": "myfox28columbus.com",
             "publisherFamily": "myfox28columbus.com",
@@ -86,6 +73,19 @@
             "topicOverlap": 10
           },
           {
+            "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
+            "domain": "yahoo.com",
+            "publisherFamily": "yahoo.com",
+            "resolvedFrom": "article-link",
+            "ok": true,
+            "reason": "story-relevant-publisher-article",
+            "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
+            "pageTitle": "Trump says Denmark to give US 'permanent control' over Greenland security",
+            "canonical": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
+            "bodyChars": 3581,
+            "topicOverlap": 9
+          },
+          {
             "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-says-us-secures-permanent-214042214.html",
             "domain": "yahoo.com",
             "publisherFamily": "yahoo.com",
@@ -95,7 +95,7 @@
             "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-says-us-secures-permanent-214042214.html",
             "pageTitle": "Trump says US secures permanent control over Greenland security",
             "canonical": "https://www.newsweek.com/greenland-deal-donald-trump-denmark-control-agreement-12462682",
-            "bodyChars": 5146,
+            "bodyChars": 5210,
             "topicOverlap": 7
           },
           {
@@ -184,24 +184,24 @@
               "A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance.",
               "At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO.",
               "Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic.",
-              "Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River.",
-              "Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials.",
-              "Police say sending drones to get a first look at incidents could be a more efficient use of resources.",
-              "Families with neurodiverse members will not need to wait for a diagnosis to use the room.",
-              "The county says it will repair \"low-medium\" road defects within 90 days of them being reported.",
-              "The mayor of Cambridgeshire and Peterborough says the money will help change people's lives.",
-              "By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure",
-              "The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units.",
-              "Residents later received the all-clear after explosions were reported in the capital.",
-              "Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month.",
-              "When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that.",
-              "Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS.",
-              "Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence.",
-              "The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin."
+              "The track is believed to be part of a line between Castle Cary and Somerton in Somerset.",
+              "Officials said replacing destroyed military equipment cost $4.3 billion.",
+              "Officials said replacing destroyed military equipment cost $4.3 billion.",
+              "The UK government which funds the parliament has not committed to further grants.",
+              "School governors say the money should be reinvested in education rather than government savings.",
+              "Pakistani security forces ended on Saturday a standoff with militants holed up inside a police compound in northwestern Pakistan, officials said. The confrontation began Friday after a suicide bomber rammed an explosives-laden vehicle into a mosque, and gunmen stormed the facility, killing 21 people and wounding 103 others. The coordinated attack occurred at a compound in Kohat in Khyber Pakhtunkhwa province, which borders Afghanistan.",
+              "The bill is named after the late Senator Lindsey Graham, a staunch advocate of aid for Ukraine.",
+              "The optimistic message comes after its owner reported a net deficit of £3.9m in 2025.",
+              "A round-up of stories from local newspapers and the BBC from the past week in the West of England.",
+              "Rosegarth Square is one of several developments in Boston being paid for with government money.",
+              "Elizabeth Evans, who shared a video of an RNLI training exercise, says the comments were \"really, really bad\".",
+              "Epilepsy affects one in 100 people, according to charity Epilepsy Action.",
+              "Plymouth City Council says the project to restore West Hoe pier is getting \"back on track\".",
+              "During the last 15 years the number of babies born on the Isle of Man has decreased by 45%."
             ],
-            "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River. Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials. Police say sending drones to get a first look at incidents could be a more efficient use of resources. Families with neurodiverse members will not need to wait for a diagnosis to use the room. The county says it will repair \"low-medium\" road defects within 90 days of them being reported. The mayor of Cambridgeshire and Peterborough says the money will help change people's lives. By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units. Residents later received the all-clear after explosions were reported in the capital. Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month. When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that. Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS. Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence. The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin.",
+            "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. The track is believed to be part of a line between Castle Cary and Somerton in Somerset. Officials said replacing destroyed military equipment cost $4.3 billion. Officials said replacing destroyed military equipment cost $4.3 billion. The UK government which funds the parliament has not committed to further grants. School governors say the money should be reinvested in education rather than government savings. Pakistani security forces ended on Saturday a standoff with militants holed up inside a police compound in northwestern Pakistan, officials said. The confrontation began Friday after a suicide bomber rammed an explosives-laden vehicle into a mosque, and gunmen stormed the facility, killing 21 people and wounding 103 others. The coordinated attack occurred at a compound in Kohat in Khyber Pakhtunkhwa province, which borders Afghanistan. The bill is named after the late Senator Lindsey Graham, a staunch advocate of aid for Ukraine. The optimistic message comes after its owner reported a net deficit of £3.9m in 2025. A round-up of stories from local newspapers and the BBC from the past week in the West of England. Rosegarth Square is one of several developments in Boston being paid for with government money. Elizabeth Evans, who shared a video of an RNLI training exercise, says the comments were \"really, really bad\". Epilepsy affects one in 100 people, according to charity Epilepsy Action. Plymouth City Council says the project to restore West Hoe pier is getting \"back on track\". During the last 15 years the number of babies born on the Isle of Man has decreased by 45%.",
             "extraction": {
-              "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River. Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials. Police say sending drones to get a first look at incidents could be a more efficient use of resources. Families with neurodiverse members will not need to wait for a diagnosis to use the room. The county says it will repair \"low-medium\" road defects within 90 days of them being reported. The mayor of Cambridgeshire and Peterborough says the money will help change people's lives. By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units. Residents later received the all-clear after explosions were reported in the capital. Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month. When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that. Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS. Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence. The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin.",
+              "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. The track is believed to be part of a line between Castle Cary and Somerton in Somerset. Officials said replacing destroyed military equipment cost $4.3 billion. Officials said replacing destroyed military equipment cost $4.3 billion. The UK government which funds the parliament has not committed to further grants. School governors say the money should be reinvested in education rather than government savings. Pakistani security forces ended on Saturday a standoff with militants holed up inside a police compound in northwestern Pakistan, officials said. The confrontation began Friday after a suicide bomber rammed an explosives-laden vehicle into a mosque, and gunmen stormed the facility, killing 21 people and wounding 103 others. The coordinated attack occurred at a compound in Kohat in Khyber Pakhtunkhwa province, which borders Afghanistan. The bill is named after the late Senator Lindsey Graham, a staunch advocate of aid for Ukraine. The optimistic message comes after its owner reported a net deficit of £3.9m in 2025. A round-up of stories from local newspapers and the BBC from the past week in the West of England. Rosegarth Square is one of several developments in Boston being paid for with government money. Elizabeth Evans, who shared a video of an RNLI training exercise, says the comments were \"really, really bad\". Epilepsy affects one in 100 people, according to charity Epilepsy Action. Plymouth City Council says the project to restore West Hoe pier is getting \"back on track\". During the last 15 years the number of babies born on the Isle of Man has decreased by 45%.",
               "passages": [
                 "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory.",
                 "Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance.",
@@ -222,27 +222,27 @@
                 "A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance.",
                 "At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO.",
                 "Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic.",
-                "Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River.",
-                "Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials.",
-                "Police say sending drones to get a first look at incidents could be a more efficient use of resources.",
-                "Families with neurodiverse members will not need to wait for a diagnosis to use the room.",
-                "The county says it will repair \"low-medium\" road defects within 90 days of them being reported.",
-                "The mayor of Cambridgeshire and Peterborough says the money will help change people's lives.",
-                "By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure",
-                "The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units.",
-                "Residents later received the all-clear after explosions were reported in the capital.",
-                "Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month.",
-                "When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that.",
-                "Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS.",
-                "Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence.",
-                "The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin."
+                "The track is believed to be part of a line between Castle Cary and Somerton in Somerset.",
+                "Officials said replacing destroyed military equipment cost $4.3 billion.",
+                "Officials said replacing destroyed military equipment cost $4.3 billion.",
+                "The UK government which funds the parliament has not committed to further grants.",
+                "School governors say the money should be reinvested in education rather than government savings.",
+                "Pakistani security forces ended on Saturday a standoff with militants holed up inside a police compound in northwestern Pakistan, officials said. The confrontation began Friday after a suicide bomber rammed an explosives-laden vehicle into a mosque, and gunmen stormed the facility, killing 21 people and wounding 103 others. The coordinated attack occurred at a compound in Kohat in Khyber Pakhtunkhwa province, which borders Afghanistan.",
+                "The bill is named after the late Senator Lindsey Graham, a staunch advocate of aid for Ukraine.",
+                "The optimistic message comes after its owner reported a net deficit of £3.9m in 2025.",
+                "A round-up of stories from local newspapers and the BBC from the past week in the West of England.",
+                "Rosegarth Square is one of several developments in Boston being paid for with government money.",
+                "Elizabeth Evans, who shared a video of an RNLI training exercise, says the comments were \"really, really bad\".",
+                "Epilepsy affects one in 100 people, according to charity Epilepsy Action.",
+                "Plymouth City Council says the project to restore West Hoe pier is getting \"back on track\".",
+                "During the last 15 years the number of babies born on the Isle of Man has decreased by 45%."
               ],
               "kind": "paragraph-evidence",
               "headline": "",
               "description": "",
               "rawParagraphCount": 39,
               "selectedPassageCount": 33,
-              "selectedChars": 7860
+              "selectedChars": 5181
             }
           },
           {
@@ -347,8 +347,8 @@
           }
         ],
         "coverage": {
-          "score": 76,
-          "band": "rich",
+          "score": 73,
+          "band": "usable",
           "readyForRichArticle": true,
           "blockers": [
             "single_publisher_family"
@@ -376,21 +376,21 @@
             ]
           ],
           "syndicatedSourceGroups": 1,
-          "totalChars": 13516,
+          "totalChars": 10837,
           "totalPassages": 60,
-          "factualSignals": 49,
-          "detailSignals": 50,
+          "factualSignals": 47,
+          "detailSignals": 46,
           "primarySourceCount": 0,
           "verifiedSourceCount": 3,
           "scoredSources": [
             {
               "score": 40,
-              "chars": 7860,
+              "chars": 5181,
               "passages": 33,
-              "factualSignals": 24,
-              "numberSignals": 17,
+              "factualSignals": 22,
+              "numberSignals": 15,
               "dateSignals": 6,
-              "quoteSignals": 13,
+              "quoteSignals": 11,
               "authorityScore": 5,
               "primary": false,
               "verified": true
@@ -422,26 +422,261 @@
           ]
         },
         "blueprint": {
-          "mode": "rich",
+          "mode": "bounded",
           "targetWords": {
-            "min": 700,
-            "max": 1000,
-            "soft": 850
+            "min": 450,
+            "max": 750,
+            "soft": 600
           },
           "h2Guidance": {
-            "preferredMin": 3,
-            "preferredMax": 5,
+            "preferredMin": 2,
+            "preferredMax": 4,
             "writerDecides": true,
             "noPadding": true
           },
-          "maxH2": 5,
+          "maxH2": 4,
           "requireCrossCheck": true,
-          "allowContextSection": true,
-          "instruction": "Build a full evidence-led article. The writer chooses the actual H2 structure from the evidence. Prefer 3–5 distinct sections, but never add a section just to reach the preferred range. Every factual section must remain within the supplied evidence."
+          "allowContextSection": false,
+          "instruction": "Write a bounded evidence-led article. The writer chooses the actual H2 structure from the strongest supported evidence. Prefer 2–4 distinct sections, but never add a section merely to increase length or satisfy a count."
         }
       },
       "readyForWriter": true,
       "writerGateReason": "PASS"
+    },
+    {
+      "title": "Disney Hires First-Ever Chief Technology Officer - The Hollywood Reporter",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPd1ZiLU5uRzJuNm1ZTTY5QWNYNF9lazVTQkRCaXVjM1lFUG9VSnI5NVJ2ZEdsU0J1QmJpMjBzVGs5YVExNEQyMzNLMUxYb1ZqNUVfNDVGUWJfa2Q3WFJ2d3Y0Vkp4WVBBVTREb1JkQjhEWjU2QUU1YzlrNUkwVDFTSmt4NWI3Ny1tVlA4X3VlUHlseGRGUWl3enZfVnM?oc=5",
+      "category": "Technology",
+      "verification": {
+        "status": "verified",
+        "confidence": 88,
+        "credibleSourceCount": 1,
+        "reachableSourceCount": 2,
+        "discoveredSourceCount": 1
+      },
+      "integrityPreflight": {
+        "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPd1ZiLU5uRzJuNm1ZTTY5QWNYNF9lazVTQkRCaXVjM1lFUG9VSnI5NVJ2ZEdsU0J1QmJpMjBzVGs5YVExNEQyMzNLMUxYb1ZqNUVfNDVGUWJfa2Q3WFJ2d3Y0Vkp4WVBBVTREb1JkQjhEWjU2QUU1YzlrNUkwVDFTSmt4NWI3Ny1tVlA4X3VlUHlseGRGUWl3enZfVnM?oc=5",
+        "title": "Disney Hires First-Ever Chief Technology Officer - The Hollywood Reporter",
+        "status": "pass",
+        "evidenceLevel": "strong",
+        "validSourceCount": 2,
+        "independentPublisherCount": 2,
+        "independentPublisherFamilies": [
+          "hollywoodreporter.com",
+          "patch.com"
+        ],
+        "independentDomains": [
+          "hollywoodreporter.com",
+          "patch.com"
+        ],
+        "sources": [
+          {
+            "suppliedUrl": "https://www.hollywoodreporter.com/business/business-news/walt-disney-karandeep-anand-1236705379/",
+            "domain": "hollywoodreporter.com",
+            "publisherFamily": "hollywoodreporter.com",
+            "resolvedFrom": "research-story-link",
+            "ok": true,
+            "reason": "story-relevant-publisher-article",
+            "finalUrl": "https://www.hollywoodreporter.com/business/business-news/walt-disney-karandeep-anand-1236705379/",
+            "pageTitle": "Disney Hires First-Ever Chief Technology Officer",
+            "canonical": "https://www.hollywoodreporter.com/business/business-news/walt-disney-karandeep-anand-1236705379/",
+            "bodyChars": 2613,
+            "topicOverlap": 6
+          },
+          {
+            "suppliedUrl": "https://patch.com/california/hollywood/disney-names-first-ever-technology-chief-it-bets-bigger-ai",
+            "domain": "patch.com",
+            "publisherFamily": "patch.com",
+            "resolvedFrom": "article-link",
+            "ok": true,
+            "reason": "story-relevant-publisher-article",
+            "finalUrl": "https://patch.com/california/hollywood/disney-names-first-ever-technology-chief-it-bets-bigger-ai",
+            "pageTitle": "Disney Names First-Ever Technology Chief As It Bets Bigger On AI | Hollywood, CA Patch",
+            "canonical": "https://patch.com/california/hollywood/disney-names-first-ever-technology-chief-it-bets-bigger-ai",
+            "bodyChars": 1557,
+            "topicOverlap": 8
+          }
+        ],
+        "recoveryAttempts": 0,
+        "sourceVerificationStatus": "verified"
+      },
+      "evidence": {
+        "sources": [
+          {
+            "url": "https://www.hollywoodreporter.com/business/business-news/walt-disney-karandeep-anand-1236705379/",
+            "domain": "hollywoodreporter.com",
+            "publisherFamily": "hollywoodreporter.com",
+            "title": "Disney Hires First-Ever Chief Technology Officer - The Hollywood Reporter",
+            "primary": false,
+            "verified": true,
+            "credibilityTier": "trusted",
+            "passages": [
+              "Karandeep Anand, the former Meta and Microsoft exec, will help shape the Hollywood studio for the Generative AI era worldwide.",
+              "Disney has hired Karandeep Anand as its first chief technology officer, in time for an unfolding generative AI tools era.",
+              "While also serving as senior executive vp, Anand comes to Disney after being CEO of Character.AI and also being a former Meta and Microsoft exec. Anand will report directly to Disney CEO Josh D&rsquo;Amaro.",
+              "&ldquo;Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney&rsquo;s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,&rdquo; said D&rsquo;Amaro in a statement. &ldquo;He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.&#8221;",
+              "As CTO, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product, and engineering across the studio&rsquo;s segment technology teams. A number of Character.AI&rsquo;s technical team will follow Anand to Disney from Oct. 2.",
+              "The appointments come as D&rsquo;Amaro since taking the reins at Disney has looked to create a more connected user experience, with Disney+ as the digital centerpiece.",
+              "&ldquo;I&rsquo;ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be. I&rsquo;m honored to join a team with such extraordinary creative talent, and I look forward to building on the company&rsquo;s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways,&rdquo; Anand said in his own statement.",
+              "Besides Character.AI, Anand completed senior executive stints at financial technology company Brex, Meta&rsquo;s Facebook and Microsoft, where he worked for 15 years and was part of the team that built the Azure platform. He holds a Computer Science degree from the International Institute of Information Technology in Hyderabad, India."
+            ],
+            "body": "Karandeep Anand, the former Meta and Microsoft exec, will help shape the Hollywood studio for the Generative AI era worldwide. Disney has hired Karandeep Anand as its first chief technology officer, in time for an unfolding generative AI tools era. While also serving as senior executive vp, Anand comes to Disney after being CEO of Character.AI and also being a former Meta and Microsoft exec. Anand will report directly to Disney CEO Josh D&rsquo;Amaro. &ldquo;Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney&rsquo;s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,&rdquo; said D&rsquo;Amaro in a statement. &ldquo;He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.&#8221; As CTO, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product, and engineering across the studio&rsquo;s segment technology teams. A number of Character.AI&rsquo;s technical team will follow Anand to Disney from Oct. 2. The appointments come as D&rsquo;Amaro since taking the reins at Disney has looked to create a more connected user experience, with Disney+ as the digital centerpiece. &ldquo;I&rsquo;ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be. I&rsquo;m honored to join a team with such extraordinary creative talent, and I look forward to building on the company&rsquo;s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways,&rdquo; Anand said in his own statement. Besides Character.AI, Anand completed senior executive stints at financial technology company Brex, Meta&rsquo;s Facebook and Microsoft, where he worked for 15 years and was part of the team that built the Azure platform. He holds a Computer Science degree from the International Institute of Information Technology in Hyderabad, India.",
+            "extraction": {
+              "body": "Karandeep Anand, the former Meta and Microsoft exec, will help shape the Hollywood studio for the Generative AI era worldwide. Disney has hired Karandeep Anand as its first chief technology officer, in time for an unfolding generative AI tools era. While also serving as senior executive vp, Anand comes to Disney after being CEO of Character.AI and also being a former Meta and Microsoft exec. Anand will report directly to Disney CEO Josh D&rsquo;Amaro. &ldquo;Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney&rsquo;s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,&rdquo; said D&rsquo;Amaro in a statement. &ldquo;He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.&#8221; As CTO, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product, and engineering across the studio&rsquo;s segment technology teams. A number of Character.AI&rsquo;s technical team will follow Anand to Disney from Oct. 2. The appointments come as D&rsquo;Amaro since taking the reins at Disney has looked to create a more connected user experience, with Disney+ as the digital centerpiece. &ldquo;I&rsquo;ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be. I&rsquo;m honored to join a team with such extraordinary creative talent, and I look forward to building on the company&rsquo;s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways,&rdquo; Anand said in his own statement. Besides Character.AI, Anand completed senior executive stints at financial technology company Brex, Meta&rsquo;s Facebook and Microsoft, where he worked for 15 years and was part of the team that built the Azure platform. He holds a Computer Science degree from the International Institute of Information Technology in Hyderabad, India.",
+              "passages": [
+                "Karandeep Anand, the former Meta and Microsoft exec, will help shape the Hollywood studio for the Generative AI era worldwide.",
+                "Disney has hired Karandeep Anand as its first chief technology officer, in time for an unfolding generative AI tools era.",
+                "While also serving as senior executive vp, Anand comes to Disney after being CEO of Character.AI and also being a former Meta and Microsoft exec. Anand will report directly to Disney CEO Josh D&rsquo;Amaro.",
+                "&ldquo;Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney&rsquo;s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,&rdquo; said D&rsquo;Amaro in a statement. &ldquo;He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.&#8221;",
+                "As CTO, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product, and engineering across the studio&rsquo;s segment technology teams. A number of Character.AI&rsquo;s technical team will follow Anand to Disney from Oct. 2.",
+                "The appointments come as D&rsquo;Amaro since taking the reins at Disney has looked to create a more connected user experience, with Disney+ as the digital centerpiece.",
+                "&ldquo;I&rsquo;ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be. I&rsquo;m honored to join a team with such extraordinary creative talent, and I look forward to building on the company&rsquo;s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways,&rdquo; Anand said in his own statement.",
+                "Besides Character.AI, Anand completed senior executive stints at financial technology company Brex, Meta&rsquo;s Facebook and Microsoft, where he worked for 15 years and was part of the team that built the Azure platform. He holds a Computer Science degree from the International Institute of Information Technology in Hyderabad, India."
+              ],
+              "kind": "paragraph-evidence",
+              "headline": "",
+              "description": "",
+              "rawParagraphCount": 8,
+              "selectedPassageCount": 8,
+              "selectedChars": 2403
+            }
+          },
+          {
+            "url": "https://patch.com/california/hollywood/disney-names-first-ever-technology-chief-it-bets-bigger-ai",
+            "domain": "patch.com",
+            "publisherFamily": "patch.com",
+            "title": "Disney Names First-Ever Technology Chief As It Bets Bigger On AI - Patch",
+            "primary": false,
+            "verified": true,
+            "credibilityTier": "unknown",
+            "passages": [
+              "BURBANK, CA — Disney is creating its first companywide chief technology officer position as its executives put technology at the center of a broader strategy built around storytelling, creativity and a more unified company.",
+              "Karandeep Anand, most recently CEO of Character.AI, will join the Walt Disney Company on Oct. 2 as senior executive vice president and chief technology officer, reporting directly to CEO Josh D’Amaro.",
+              "In announcing the hire, D’Amaro laid out three priorities for Disney: keeping “great storytelling as our North Star,” using technology “in service of creativity” and operating as “One Disney.”",
+              "Anand will oversee enterprise technology, infrastructure, data and artificial intelligence platforms, product and engineering across Disney. Several members of Character.AI’s technical team are also expected to join the company.",
+              "The appointment comes as D’Amaro pushes for a more connected relationship between Disney and its customers, with Disney+ positioned as a central digital hub for the company’s brands and experiences.",
+              "Anand has also held senior roles at Brex, Facebook and Microsoft, where he spent 15 years and helped build the Azure cloud platform, the Hollywood Reporter reported.",
+              "His hiring also underscores Disney’s evolving relationship with generative AI. Engadget noted that Disney sent Character.AI a cease-and-desist letter in 2025 over chatbots based on Disney characters before later embracing other AI partnerships.",
+              "Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts."
+            ],
+            "body": "BURBANK, CA — Disney is creating its first companywide chief technology officer position as its executives put technology at the center of a broader strategy built around storytelling, creativity and a more unified company. Karandeep Anand, most recently CEO of Character.AI, will join the Walt Disney Company on Oct. 2 as senior executive vice president and chief technology officer, reporting directly to CEO Josh D’Amaro. In announcing the hire, D’Amaro laid out three priorities for Disney: keeping “great storytelling as our North Star,” using technology “in service of creativity” and operating as “One Disney.” Anand will oversee enterprise technology, infrastructure, data and artificial intelligence platforms, product and engineering across Disney. Several members of Character.AI’s technical team are also expected to join the company. The appointment comes as D’Amaro pushes for a more connected relationship between Disney and its customers, with Disney+ positioned as a central digital hub for the company’s brands and experiences. Anand has also held senior roles at Brex, Facebook and Microsoft, where he spent 15 years and helped build the Azure cloud platform, the Hollywood Reporter reported. His hiring also underscores Disney’s evolving relationship with generative AI. Engadget noted that Disney sent Character.AI a cease-and-desist letter in 2025 over chatbots based on Disney characters before later embracing other AI partnerships. Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts.",
+            "extraction": {
+              "body": "BURBANK, CA — Disney is creating its first companywide chief technology officer position as its executives put technology at the center of a broader strategy built around storytelling, creativity and a more unified company. Karandeep Anand, most recently CEO of Character.AI, will join the Walt Disney Company on Oct. 2 as senior executive vice president and chief technology officer, reporting directly to CEO Josh D’Amaro. In announcing the hire, D’Amaro laid out three priorities for Disney: keeping “great storytelling as our North Star,” using technology “in service of creativity” and operating as “One Disney.” Anand will oversee enterprise technology, infrastructure, data and artificial intelligence platforms, product and engineering across Disney. Several members of Character.AI’s technical team are also expected to join the company. The appointment comes as D’Amaro pushes for a more connected relationship between Disney and its customers, with Disney+ positioned as a central digital hub for the company’s brands and experiences. Anand has also held senior roles at Brex, Facebook and Microsoft, where he spent 15 years and helped build the Azure cloud platform, the Hollywood Reporter reported. His hiring also underscores Disney’s evolving relationship with generative AI. Engadget noted that Disney sent Character.AI a cease-and-desist letter in 2025 over chatbots based on Disney characters before later embracing other AI partnerships. Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts.",
+              "passages": [
+                "BURBANK, CA — Disney is creating its first companywide chief technology officer position as its executives put technology at the center of a broader strategy built around storytelling, creativity and a more unified company.",
+                "Karandeep Anand, most recently CEO of Character.AI, will join the Walt Disney Company on Oct. 2 as senior executive vice president and chief technology officer, reporting directly to CEO Josh D’Amaro.",
+                "In announcing the hire, D’Amaro laid out three priorities for Disney: keeping “great storytelling as our North Star,” using technology “in service of creativity” and operating as “One Disney.”",
+                "Anand will oversee enterprise technology, infrastructure, data and artificial intelligence platforms, product and engineering across Disney. Several members of Character.AI’s technical team are also expected to join the company.",
+                "The appointment comes as D’Amaro pushes for a more connected relationship between Disney and its customers, with Disney+ positioned as a central digital hub for the company’s brands and experiences.",
+                "Anand has also held senior roles at Brex, Facebook and Microsoft, where he spent 15 years and helped build the Azure cloud platform, the Hollywood Reporter reported.",
+                "His hiring also underscores Disney’s evolving relationship with generative AI. Engadget noted that Disney sent Character.AI a cease-and-desist letter in 2025 over chatbots based on Disney characters before later embracing other AI partnerships.",
+                "Get more local news delivered straight to your inbox. Sign up for free Patch newsletters and alerts."
+              ],
+              "kind": "paragraph-evidence",
+              "headline": "",
+              "description": "",
+              "rawParagraphCount": 8,
+              "selectedPassageCount": 8,
+              "selectedChars": 1557
+            }
+          }
+        ],
+        "coverage": {
+          "score": 47,
+          "band": "thin",
+          "readyForRichArticle": false,
+          "blockers": [
+            "single_publisher_family"
+          ],
+          "sourceCount": 2,
+          "independentPublisherFamilies": 1,
+          "domainPublisherFamilies": 2,
+          "provenanceGroups": [
+            [
+              {
+                "domain": "hollywoodreporter.com",
+                "title": "Disney Hires First-Ever Chief Technology Officer - The Hollywood Reporter",
+                "index": 0
+              },
+              {
+                "domain": "patch.com",
+                "title": "Disney Names First-Ever Technology Chief As It Bets Bigger On AI - Patch",
+                "index": 1
+              }
+            ]
+          ],
+          "syndicatedSourceGroups": 1,
+          "totalChars": 3960,
+          "totalPassages": 16,
+          "factualSignals": 17,
+          "detailSignals": 11,
+          "primarySourceCount": 0,
+          "verifiedSourceCount": 2,
+          "scoredSources": [
+            {
+              "score": 33,
+              "chars": 2403,
+              "passages": 8,
+              "factualSignals": 8,
+              "numberSignals": 3,
+              "dateSignals": 1,
+              "quoteSignals": 0,
+              "authorityScore": 5,
+              "primary": false,
+              "verified": true
+            },
+            {
+              "score": 37,
+              "chars": 1557,
+              "passages": 8,
+              "factualSignals": 9,
+              "numberSignals": 3,
+              "dateSignals": 2,
+              "quoteSignals": 2,
+              "authorityScore": 5,
+              "primary": false,
+              "verified": true
+            }
+          ]
+        },
+        "blueprint": {
+          "mode": "narrow",
+          "targetWords": {
+            "min": 300,
+            "max": 500,
+            "soft": 400
+          },
+          "h2Guidance": {
+            "preferredMin": 1,
+            "preferredMax": 2,
+            "writerDecides": true,
+            "noPadding": true
+          },
+          "maxH2": 2,
+          "requireCrossCheck": false,
+          "allowContextSection": false,
+          "instruction": "Keep the article narrow and factual. The writer chooses the actual H2 structure. Prefer 1–2 sections when supported, but use fewer if the evidence does not justify more. Never pad with unsupported sections."
+        }
+      },
+      "readyForWriter": false,
+      "writerGateReason": "same-underlying-story-provenance-overlap",
+      "duplicateStory": {
+        "duplicate": true,
+        "reason": "same-underlying-story-provenance-overlap",
+        "matchedFile": "disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.md",
+        "matchedTitle": "Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
+        "titleSimilarity": {
+          "jaccard": 0.2,
+          "containment": 0.4,
+          "shared": 2
+        },
+        "bodySimilarity": {
+          "jaccard": 0.20333333333333334,
+          "containment": 0.3388888888888889,
+          "shared": 61
+        },
+        "sharedPhrases": 41
+      }
     },
     {
       "title": "Disney names CTO for the first time as media giant expands tech push - CNBC",
@@ -1944,223 +2179,20 @@
       },
       "readyForWriter": false,
       "writerGateReason": "insufficient-evidence"
-    },
-    {
-      "title": "Migrating multi-model AI agents to Amazon Bedrock AgentCore runtime - Amazon Web Services (AWS)",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWEtXNnpERlFacFpIcmltdmZNMzlONTZOZjJNcGZTc083NFoxWEstZXFyNFlCMUdlSnRlVTlRSVNCcG5LSXNPUUxJcWdJRzFJMVdjbV9rLUxtem9Ob1ZNcXVYeFJUbVEtM1Z4VEpFblI0VC1laVBQQ1lwd1JwanVjV1FZZ2JUTU9YSFdmbXVFdHQ1U0Rlb3VyX0xFaG4wTnlZdjFPM3JiZ2Z1UFhvT1U1b2xnTTA?oc=5",
-      "category": "AI",
-      "verification": {
-        "status": "verified",
-        "confidence": 85,
-        "credibleSourceCount": 1,
-        "reachableSourceCount": 1,
-        "discoveredSourceCount": 0
-      },
-      "integrityPreflight": {
-        "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWEtXNnpERlFacFpIcmltdmZNMzlONTZOZjJNcGZTc083NFoxWEstZXFyNFlCMUdlSnRlVTlRSVNCcG5LSXNPUUxJcWdJRzFJMVdjbV9rLUxtem9Ob1ZNcXVYeFJUbVEtM1Z4VEpFblI0VC1laVBQQ1lwd1JwanVjV1FZZ2JUTU9YSFdmbXVFdHQ1U0Rlb3VyX0xFaG4wTnlZdjFPM3JiZ2Z1UFhvT1U1b2xnTTA?oc=5",
-        "title": "Migrating multi-model AI agents to Amazon Bedrock AgentCore runtime - Amazon Web Services (AWS)",
-        "status": "pass",
-        "evidenceLevel": "single-source",
-        "validSourceCount": 1,
-        "independentPublisherCount": 1,
-        "independentPublisherFamilies": [
-          "amazon.com"
-        ],
-        "independentDomains": [
-          "aws.amazon.com"
-        ],
-        "sources": [
-          {
-            "suppliedUrl": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
-            "domain": "aws.amazon.com",
-            "publisherFamily": "amazon.com",
-            "resolvedFrom": "research-story-link",
-            "ok": true,
-            "reason": "story-relevant-publisher-article",
-            "finalUrl": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
-            "pageTitle": "Migrating multi-model AI agents to Amazon Bedrock AgentCore runtime | Artificial Intelligence",
-            "canonical": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
-            "bodyChars": 10499,
-            "topicOverlap": 9
-          }
-        ],
-        "recoveryAttempts": 0,
-        "sourceVerificationStatus": "verified"
-      },
-      "evidence": {
-        "sources": [
-          {
-            "url": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
-            "domain": "aws.amazon.com",
-            "publisherFamily": "amazon.com",
-            "title": "Migrating multi-model AI agents to Amazon Bedrock AgentCore runtime - Amazon Web Services (AWS)",
-            "primary": false,
-            "verified": true,
-            "credibilityTier": "trusted",
-            "passages": [
-              "Organizations building multi-model agentic AI applications face growing infrastructure complexity. Managing container orchestration, scaling policies, identity, and observability for multiple model types adds operational overhead. Teams often spend more time on infrastructure than on agent logic development.",
-              "Developers running agentic frameworks on self-managed infrastructure such as Amazon Elastic Container Service (Amazon ECS) with AWS Fargate have full control over their deployment configuration. As agentic workloads evolve and scale, teams might choose to adopt managed runtimes that provide built-in session management, identity, and observability.",
-              "Amazon Bedrock AgentCore is a platform to build, connect, and optimize agents at scale, with any framework or model. AgentCore runtime, its managed deployment capability, handles container lifecycle, scaling, identity, and observability, so you can focus on your agent code.",
-              "In a previous post, Agentic AI with multi-model framework using Hugging Face smolagents on AWS , we showed how to build a healthcare AI agent with multi-model orchestration on self-managed infrastructure. In this post, we show you how to migrate that multi-model agent to Amazon Bedrock AgentCore runtime. The migration reduces infrastructure management while preserving agent capabilities, including triple-model orchestration and vector-enhanced knowledge retrieval.",
-              "This solution migrates a multi-model healthcare AI agent to Amazon Bedrock AgentCore runtime while preserving the existing agent logic. The agent processes medical queries across three model backends with vector-enhanced knowledge retrieval, all running inside a single AgentCore-managed container. You can direct each query to the model backend suited to the task. A domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI handles specialized biomedical queries, and a foundation model (FM) such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock handles broader medical reasoning. This approach helps healthcare teams address a range of query types while reducing the operational overhead of managing the underlying infrastructure.",
-              "The standalone version from the previous post deployed on Amazon ECS with AWS Fargate includes container orchestration, scaling, identity, and observability configured by the user. The AgentCore version wraps the same agent logic with the AgentCore runtime decorator pattern, and AgentCore runtime handles these operational concerns automatically.",
-              "Hugging Face smolagents is an open source Python library designed to build and run agents using a few lines of code. This solution uses Hugging Face smolagents framework as a reference implementation, demonstrating that AgentCore runtime supports any agentic framework. With the bring-your-own (BYO) agent approach, you can deploy existing agent code to AgentCore runtime without rewriting or adapting to a specific framework.",
-              "Note: This solution is a sample implementation for demonstration purposes. Production deployments handling medical or other sensitive queries use Amazon Bedrock Guardrails for content filtering and grounding validation as a standard control.",
-              "The solution consists of the following services and features:",
-              "Note: The previous post (standalone version) uses Claude 3.5 Sonnet V2 by Anthropic . This post uses Llama 3.1 70B Instruct by Meta, demonstrating that AgentCore runtime is model-agnostic. The model choice is an implementation decision, not a requirement.",
-              "The following diagram illustrates the solution architecture and how the agent orchestrates across three model backends.",
-              "Figure 1: Multi-model healthcare agent architecture on Amazon Bedrock AgentCore runtime",
-              "A client web interface connects to Amazon Bedrock AgentCore runtime, which hosts the healthcare agent container. The container uses the Hugging Face smolagents framework with the AgentCore runtime decorator. AgentCore runtime provides built-in identity and observability. The agent orchestrates across three model backends: Amazon SageMaker AI with BioM-ELECTRA, Amazon Bedrock with Llama 3.1 70B Instruct by Meta, and a containerized model server with BioM-ELECTRA. The solution includes Amazon OpenSearch Service for vector-enhanced knowledge retrieval.",
-              "This solution supports deployment options with each backend optimized for different scenarios:",
-              "The complete implementation is available in the sample-healthcare-agent-with-agentcore-on-aws GitHub repository.",
-              "This section walks through migrating the existing healthcare AI agent to Amazon Bedrock AgentCore runtime using the AgentCore CLI.",
-              "Before you deploy the solution, you need the following:",
-              "Amazon Bedrock AgentCore runtime uses a decorator pattern to wrap your agent logic. The key components are:",
-              "The following code shows the AgentCore integration pattern:",
-              "The agent code between the decorator and return statement remains unchanged from the standalone version. AgentCore runtime handles container lifecycle, scaling, identity, and observability automatically.",
-              "Create an AgentCore project and add your existing agent using the AgentCore CLI.",
-              "Add your existing agent as a bring-your-own (BYO) agent:",
-              "Note: The --framework flag specifies the CLI template. The actual agent code uses Hugging Face smolagents, which is compatible with AgentCore runtime regardless of the template selection.",
-              "With the project configured, you can deploy the agent using a single CLI command.",
-              "The CLI builds the container, pushes it to Amazon Elastic Container Registry (Amazon ECR), and creates the AgentCore runtime agent. Deployment takes approximately 10–15 minutes.",
-              "You can test the deployed agent in two ways: using the AgentCore CLI or programmatically with boto3.",
-              "This path invokes the same deployed agent as the CLI, using the boto3 SDK directly. The agentRuntimeArn identifies your deployed agent, contentType specifies the request format, and payload carries the prompt and model selection.",
-              "The standalone version and the AgentCore runtime version deploy the same agent in different ways. The following sections describe what each path provides.",
-              "The standalone version runs on Amazon ECS with AWS Fargate. You define ECS task definitions and service configuration, set auto scaling policies, configure IAM roles per service, and set up observability through Amazon CloudWatch . Deployment uses a Docker build, an Amazon ECR push, and an ECS service update. This path gives you full control over container configuration, networking, and scaling behavior. The agent code lives in healthcare_agentcore.py , integrates with Amazon Bedrock, Amazon SageMaker AI, and the containerized backend, and uses Amazon OpenSearch Service for vector search.",
-              "The AgentCore runtime version runs the same healthcare_agentcore.py agent code with the AgentCore decorator pattern. AgentCore runtime provides container orchestration, session-based scaling, identity management through IAM integration, and observability through built-in tracing and logging. Deployment uses a single command ( agentcore deploy ). The model integration (Amazon Bedrock, Amazon SageMaker AI, containerized backend) and vector search (Amazon OpenSearch Service) remain the same as the standalone version.",
-              "Both deployment approaches have distinct advantages. Amazon ECS with AWS Fargate provides full control over container configuration, networking, and scaling policies, suitable for teams with existing container operations expertise or specific infrastructure requirements. Amazon Bedrock AgentCore runtime is suited for teams that prefer managed infrastructure and want to focus primarily on agent logic development.",
-              "Regardless of the deployment path, the following elements remain unchanged when migrating from the standalone version to AgentCore runtime:",
-              "Then deploy again to tear down the AWS resources:",
-              "In this post, we showed how to migrate a multi-model healthcare AI agent from self-managed Amazon ECS with AWS Fargate infrastructure to Amazon Bedrock AgentCore runtime. The migration required no changes to the core agent logic. The same healthcare_agentcore.py file orchestrates across Amazon Bedrock, Amazon SageMaker AI, and a containerized model server. It runs on AgentCore runtime with the addition of the AgentCore decorator pattern ( BedrockAgentCoreApp , @app.entrypoint , and app.run() ). For healthcare teams, this pattern directs specialized biomedical queries to a domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI. It routes broader medical reasoning to a foundation model such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock. Together, these backends support a range of query types.",
-              "For teams that choose managed infrastructure, AgentCore runtime handles container orchestration, scaling, identity management, and observability. You can focus on agent logic development instead. The framework-agnostic design supports a wide combination of models and agentic frameworks, making this migration pattern applicable across industries including healthcare, financial services, and manufacturing.",
-              "To get started, clone the sample-healthcare-agent-with-agentcore-on-aws GitHub repository and follow the deployment steps in this post. To understand the standalone implementation that this post migrates from, see Agentic AI with multi-model framework using Hugging Face smolagents on AWS . If there are questions about getting started with Amazon Bedrock AgentCore, speak with an AWS generative AI Specialist ."
-            ],
-            "body": "Organizations building multi-model agentic AI applications face growing infrastructure complexity. Managing container orchestration, scaling policies, identity, and observability for multiple model types adds operational overhead. Teams often spend more time on infrastructure than on agent logic development. Developers running agentic frameworks on self-managed infrastructure such as Amazon Elastic Container Service (Amazon ECS) with AWS Fargate have full control over their deployment configuration. As agentic workloads evolve and scale, teams might choose to adopt managed runtimes that provide built-in session management, identity, and observability. Amazon Bedrock AgentCore is a platform to build, connect, and optimize agents at scale, with any framework or model. AgentCore runtime, its managed deployment capability, handles container lifecycle, scaling, identity, and observability, so you can focus on your agent code. In a previous post, Agentic AI with multi-model framework using Hugging Face smolagents on AWS , we showed how to build a healthcare AI agent with multi-model orchestration on self-managed infrastructure. In this post, we show you how to migrate that multi-model agent to Amazon Bedrock AgentCore runtime. The migration reduces infrastructure management while preserving agent capabilities, including triple-model orchestration and vector-enhanced knowledge retrieval. This solution migrates a multi-model healthcare AI agent to Amazon Bedrock AgentCore runtime while preserving the existing agent logic. The agent processes medical queries across three model backends with vector-enhanced knowledge retrieval, all running inside a single AgentCore-managed container. You can direct each query to the model backend suited to the task. A domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI handles specialized biomedical queries, and a foundation model (FM) such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock handles broader medical reasoning. This approach helps healthcare teams address a range of query types while reducing the operational overhead of managing the underlying infrastructure. The standalone version from the previous post deployed on Amazon ECS with AWS Fargate includes container orchestration, scaling, identity, and observability configured by the user. The AgentCore version wraps the same agent logic with the AgentCore runtime decorator pattern, and AgentCore runtime handles these operational concerns automatically. Hugging Face smolagents is an open source Python library designed to build and run agents using a few lines of code. This solution uses Hugging Face smolagents framework as a reference implementation, demonstrating that AgentCore runtime supports any agentic framework. With the bring-your-own (BYO) agent approach, you can deploy existing agent code to AgentCore runtime without rewriting or adapting to a specific framework. Note: This solution is a sample implementation for demonstration purposes. Production deployments handling medical or other sensitive queries use Amazon Bedrock Guardrails for content filtering and grounding validation as a standard control. The solution consists of the following services and features: Note: The previous post (standalone version) uses Claude 3.5 Sonnet V2 by Anthropic . This post uses Llama 3.1 70B Instruct by Meta, demonstrating that AgentCore runtime is model-agnostic. The model choice is an implementation decision, not a requirement. The following diagram illustrates the solution architecture and how the agent orchestrates across three model backends. Figure 1: Multi-model healthcare agent architecture on Amazon Bedrock AgentCore runtime A client web interface connects to Amazon Bedrock AgentCore runtime, which hosts the healthcare agent container. The container uses the Hugging Face smolagents framework with the AgentCore runtime decorator. AgentCore runtime provides built-in identity and observability. The agent orchestrates across three model backends: Amazon SageMaker AI with BioM-ELECTRA, Amazon Bedrock with Llama 3.1 70B Instruct by Meta, and a containerized model server with BioM-ELECTRA. The solution includes Amazon OpenSearch Service for vector-enhanced knowledge retrieval. This solution supports deployment options with each backend optimized for different scenarios: The complete implementation is available in the sample-healthcare-agent-with-agentcore-on-aws GitHub repository. This section walks through migrating the existing healthcare AI agent to Amazon Bedrock AgentCore runtime using the AgentCore CLI. Before you deploy the solution, you need the following: Amazon Bedrock AgentCore runtime uses a decorator pattern to wrap your agent logic. The key components are: The following code shows the AgentCore integration pattern: The agent code between the decorator and return statement remains unchanged from the standalone version. AgentCore runtime handles container lifecycle, scaling, identity, and observability automatically. Create an AgentCore project and add your existing agent using the AgentCore CLI. Add your existing agent as a bring-your-own (BYO) agent: Note: The --framework flag specifies the CLI template. The actual agent code uses Hugging Face smolagents, which is compatible with AgentCore runtime regardless of the template selection. With the project configured, you can deploy the agent using a single CLI command. The CLI builds the container, pushes it to Amazon Elastic Container Registry (Amazon ECR), and creates the AgentCore runtime agent. Deployment takes approximately 10–15 minutes. You can test the deployed agent in two ways: using the AgentCore CLI or programmatically with boto3. This path invokes the same deployed agent as the CLI, using the boto3 SDK directly. The agentRuntimeArn identifies your deployed agent, contentType specifies the request format, and payload carries the prompt and model selection. The standalone version and the AgentCore runtime version deploy the same agent in different ways. The following sections describe what each path provides. The standalone version runs on Amazon ECS with AWS Fargate. You define ECS task definitions and service configuration, set auto scaling policies, configure IAM roles per service, and set up observability through Amazon CloudWatch . Deployment uses a Docker build, an Amazon ECR push, and an ECS service update. This path gives you full control over container configuration, networking, and scaling behavior. The agent code lives in healthcare_agentcore.py , integrates with Amazon Bedrock, Amazon SageMaker AI, and the containerized backend, and uses Amazon OpenSearch Service for vector search. The AgentCore runtime version runs the same healthcare_agentcore.py agent code with the AgentCore decorator pattern. AgentCore runtime provides container orchestration, session-based scaling, identity management through IAM integration, and observability through built-in tracing and logging. Deployment uses a single command ( agentcore deploy ). The model integration (Amazon Bedrock, Amazon SageMaker AI, containerized backend) and vector search (Amazon OpenSearch Service) remain the same as the standalone version. Both deployment approaches have distinct advantages. Amazon ECS with AWS Fargate provides full control over container configuration, networking, and scaling policies, suitable for teams with existing container operations expertise or specific infrastructure requirements. Amazon Bedrock AgentCore runtime is suited for teams that prefer managed infrastructure and want to focus primarily on agent logic development. Regardless of the deployment path, the following elements remain unchanged when migrating from the standalone version to AgentCore runtime: Then deploy again to tear down the AWS resources: In this post, we showed how to migrate a multi-model healthcare AI agent from self-managed Amazon ECS with AWS Fargate infrastructure to Amazon Bedrock AgentCore runtime. The migration required no changes to the core agent logic. The same healthcare_agentcore.py file orchestrates across Amazon Bedrock, Amazon SageMaker AI, and a containerized model server. It runs on AgentCore runtime with the addition of the AgentCore decorator pattern ( BedrockAgentCoreApp , @app.entrypoint , and app.run() ). For healthcare teams, this pattern directs specialized biomedical queries to a domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI. It routes broader medical reasoning to a foundation model such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock. Together, these backends support a range of query types. For teams that choose managed infrastructure, AgentCore runtime handles container orchestration, scaling, identity management, and observability. You can focus on agent logic development instead. The framework-agnostic design supports a wide combination of models and agentic frameworks, making this migration pattern applicable across industries including healthcare, financial services, and manufacturing. To get started, clone the sample-healthcare-agent-with-agentcore-on-aws GitHub repository and follow the deployment steps in this post. To understand the standalone implementation that this post migrates from, see Agentic AI with multi-model framework using Hugging Face smolagents on AWS . If there are questions about getting started with Amazon Bedrock AgentCore, speak with an AWS generative AI Specialist .",
-            "extraction": {
-              "body": "Organizations building multi-model agentic AI applications face growing infrastructure complexity. Managing container orchestration, scaling policies, identity, and observability for multiple model types adds operational overhead. Teams often spend more time on infrastructure than on agent logic development. Developers running agentic frameworks on self-managed infrastructure such as Amazon Elastic Container Service (Amazon ECS) with AWS Fargate have full control over their deployment configuration. As agentic workloads evolve and scale, teams might choose to adopt managed runtimes that provide built-in session management, identity, and observability. Amazon Bedrock AgentCore is a platform to build, connect, and optimize agents at scale, with any framework or model. AgentCore runtime, its managed deployment capability, handles container lifecycle, scaling, identity, and observability, so you can focus on your agent code. In a previous post, Agentic AI with multi-model framework using Hugging Face smolagents on AWS , we showed how to build a healthcare AI agent with multi-model orchestration on self-managed infrastructure. In this post, we show you how to migrate that multi-model agent to Amazon Bedrock AgentCore runtime. The migration reduces infrastructure management while preserving agent capabilities, including triple-model orchestration and vector-enhanced knowledge retrieval. This solution migrates a multi-model healthcare AI agent to Amazon Bedrock AgentCore runtime while preserving the existing agent logic. The agent processes medical queries across three model backends with vector-enhanced knowledge retrieval, all running inside a single AgentCore-managed container. You can direct each query to the model backend suited to the task. A domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI handles specialized biomedical queries, and a foundation model (FM) such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock handles broader medical reasoning. This approach helps healthcare teams address a range of query types while reducing the operational overhead of managing the underlying infrastructure. The standalone version from the previous post deployed on Amazon ECS with AWS Fargate includes container orchestration, scaling, identity, and observability configured by the user. The AgentCore version wraps the same agent logic with the AgentCore runtime decorator pattern, and AgentCore runtime handles these operational concerns automatically. Hugging Face smolagents is an open source Python library designed to build and run agents using a few lines of code. This solution uses Hugging Face smolagents framework as a reference implementation, demonstrating that AgentCore runtime supports any agentic framework. With the bring-your-own (BYO) agent approach, you can deploy existing agent code to AgentCore runtime without rewriting or adapting to a specific framework. Note: This solution is a sample implementation for demonstration purposes. Production deployments handling medical or other sensitive queries use Amazon Bedrock Guardrails for content filtering and grounding validation as a standard control. The solution consists of the following services and features: Note: The previous post (standalone version) uses Claude 3.5 Sonnet V2 by Anthropic . This post uses Llama 3.1 70B Instruct by Meta, demonstrating that AgentCore runtime is model-agnostic. The model choice is an implementation decision, not a requirement. The following diagram illustrates the solution architecture and how the agent orchestrates across three model backends. Figure 1: Multi-model healthcare agent architecture on Amazon Bedrock AgentCore runtime A client web interface connects to Amazon Bedrock AgentCore runtime, which hosts the healthcare agent container. The container uses the Hugging Face smolagents framework with the AgentCore runtime decorator. AgentCore runtime provides built-in identity and observability. The agent orchestrates across three model backends: Amazon SageMaker AI with BioM-ELECTRA, Amazon Bedrock with Llama 3.1 70B Instruct by Meta, and a containerized model server with BioM-ELECTRA. The solution includes Amazon OpenSearch Service for vector-enhanced knowledge retrieval. This solution supports deployment options with each backend optimized for different scenarios: The complete implementation is available in the sample-healthcare-agent-with-agentcore-on-aws GitHub repository. This section walks through migrating the existing healthcare AI agent to Amazon Bedrock AgentCore runtime using the AgentCore CLI. Before you deploy the solution, you need the following: Amazon Bedrock AgentCore runtime uses a decorator pattern to wrap your agent logic. The key components are: The following code shows the AgentCore integration pattern: The agent code between the decorator and return statement remains unchanged from the standalone version. AgentCore runtime handles container lifecycle, scaling, identity, and observability automatically. Create an AgentCore project and add your existing agent using the AgentCore CLI. Add your existing agent as a bring-your-own (BYO) agent: Note: The --framework flag specifies the CLI template. The actual agent code uses Hugging Face smolagents, which is compatible with AgentCore runtime regardless of the template selection. With the project configured, you can deploy the agent using a single CLI command. The CLI builds the container, pushes it to Amazon Elastic Container Registry (Amazon ECR), and creates the AgentCore runtime agent. Deployment takes approximately 10–15 minutes. You can test the deployed agent in two ways: using the AgentCore CLI or programmatically with boto3. This path invokes the same deployed agent as the CLI, using the boto3 SDK directly. The agentRuntimeArn identifies your deployed agent, contentType specifies the request format, and payload carries the prompt and model selection. The standalone version and the AgentCore runtime version deploy the same agent in different ways. The following sections describe what each path provides. The standalone version runs on Amazon ECS with AWS Fargate. You define ECS task definitions and service configuration, set auto scaling policies, configure IAM roles per service, and set up observability through Amazon CloudWatch . Deployment uses a Docker build, an Amazon ECR push, and an ECS service update. This path gives you full control over container configuration, networking, and scaling behavior. The agent code lives in healthcare_agentcore.py , integrates with Amazon Bedrock, Amazon SageMaker AI, and the containerized backend, and uses Amazon OpenSearch Service for vector search. The AgentCore runtime version runs the same healthcare_agentcore.py agent code with the AgentCore decorator pattern. AgentCore runtime provides container orchestration, session-based scaling, identity management through IAM integration, and observability through built-in tracing and logging. Deployment uses a single command ( agentcore deploy ). The model integration (Amazon Bedrock, Amazon SageMaker AI, containerized backend) and vector search (Amazon OpenSearch Service) remain the same as the standalone version. Both deployment approaches have distinct advantages. Amazon ECS with AWS Fargate provides full control over container configuration, networking, and scaling policies, suitable for teams with existing container operations expertise or specific infrastructure requirements. Amazon Bedrock AgentCore runtime is suited for teams that prefer managed infrastructure and want to focus primarily on agent logic development. Regardless of the deployment path, the following elements remain unchanged when migrating from the standalone version to AgentCore runtime: Then deploy again to tear down the AWS resources: In this post, we showed how to migrate a multi-model healthcare AI agent from self-managed Amazon ECS with AWS Fargate infrastructure to Amazon Bedrock AgentCore runtime. The migration required no changes to the core agent logic. The same healthcare_agentcore.py file orchestrates across Amazon Bedrock, Amazon SageMaker AI, and a containerized model server. It runs on AgentCore runtime with the addition of the AgentCore decorator pattern ( BedrockAgentCoreApp , @app.entrypoint , and app.run() ). For healthcare teams, this pattern directs specialized biomedical queries to a domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI. It routes broader medical reasoning to a foundation model such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock. Together, these backends support a range of query types. For teams that choose managed infrastructure, AgentCore runtime handles container orchestration, scaling, identity management, and observability. You can focus on agent logic development instead. The framework-agnostic design supports a wide combination of models and agentic frameworks, making this migration pattern applicable across industries including healthcare, financial services, and manufacturing. To get started, clone the sample-healthcare-agent-with-agentcore-on-aws GitHub repository and follow the deployment steps in this post. To understand the standalone implementation that this post migrates from, see Agentic AI with multi-model framework using Hugging Face smolagents on AWS . If there are questions about getting started with Amazon Bedrock AgentCore, speak with an AWS generative AI Specialist .",
-              "passages": [
-                "Organizations building multi-model agentic AI applications face growing infrastructure complexity. Managing container orchestration, scaling policies, identity, and observability for multiple model types adds operational overhead. Teams often spend more time on infrastructure than on agent logic development.",
-                "Developers running agentic frameworks on self-managed infrastructure such as Amazon Elastic Container Service (Amazon ECS) with AWS Fargate have full control over their deployment configuration. As agentic workloads evolve and scale, teams might choose to adopt managed runtimes that provide built-in session management, identity, and observability.",
-                "Amazon Bedrock AgentCore is a platform to build, connect, and optimize agents at scale, with any framework or model. AgentCore runtime, its managed deployment capability, handles container lifecycle, scaling, identity, and observability, so you can focus on your agent code.",
-                "In a previous post, Agentic AI with multi-model framework using Hugging Face smolagents on AWS , we showed how to build a healthcare AI agent with multi-model orchestration on self-managed infrastructure. In this post, we show you how to migrate that multi-model agent to Amazon Bedrock AgentCore runtime. The migration reduces infrastructure management while preserving agent capabilities, including triple-model orchestration and vector-enhanced knowledge retrieval.",
-                "This solution migrates a multi-model healthcare AI agent to Amazon Bedrock AgentCore runtime while preserving the existing agent logic. The agent processes medical queries across three model backends with vector-enhanced knowledge retrieval, all running inside a single AgentCore-managed container. You can direct each query to the model backend suited to the task. A domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI handles specialized biomedical queries, and a foundation model (FM) such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock handles broader medical reasoning. This approach helps healthcare teams address a range of query types while reducing the operational overhead of managing the underlying infrastructure.",
-                "The standalone version from the previous post deployed on Amazon ECS with AWS Fargate includes container orchestration, scaling, identity, and observability configured by the user. The AgentCore version wraps the same agent logic with the AgentCore runtime decorator pattern, and AgentCore runtime handles these operational concerns automatically.",
-                "Hugging Face smolagents is an open source Python library designed to build and run agents using a few lines of code. This solution uses Hugging Face smolagents framework as a reference implementation, demonstrating that AgentCore runtime supports any agentic framework. With the bring-your-own (BYO) agent approach, you can deploy existing agent code to AgentCore runtime without rewriting or adapting to a specific framework.",
-                "Note: This solution is a sample implementation for demonstration purposes. Production deployments handling medical or other sensitive queries use Amazon Bedrock Guardrails for content filtering and grounding validation as a standard control.",
-                "The solution consists of the following services and features:",
-                "Note: The previous post (standalone version) uses Claude 3.5 Sonnet V2 by Anthropic . This post uses Llama 3.1 70B Instruct by Meta, demonstrating that AgentCore runtime is model-agnostic. The model choice is an implementation decision, not a requirement.",
-                "The following diagram illustrates the solution architecture and how the agent orchestrates across three model backends.",
-                "Figure 1: Multi-model healthcare agent architecture on Amazon Bedrock AgentCore runtime",
-                "A client web interface connects to Amazon Bedrock AgentCore runtime, which hosts the healthcare agent container. The container uses the Hugging Face smolagents framework with the AgentCore runtime decorator. AgentCore runtime provides built-in identity and observability. The agent orchestrates across three model backends: Amazon SageMaker AI with BioM-ELECTRA, Amazon Bedrock with Llama 3.1 70B Instruct by Meta, and a containerized model server with BioM-ELECTRA. The solution includes Amazon OpenSearch Service for vector-enhanced knowledge retrieval.",
-                "This solution supports deployment options with each backend optimized for different scenarios:",
-                "The complete implementation is available in the sample-healthcare-agent-with-agentcore-on-aws GitHub repository.",
-                "This section walks through migrating the existing healthcare AI agent to Amazon Bedrock AgentCore runtime using the AgentCore CLI.",
-                "Before you deploy the solution, you need the following:",
-                "Amazon Bedrock AgentCore runtime uses a decorator pattern to wrap your agent logic. The key components are:",
-                "The following code shows the AgentCore integration pattern:",
-                "The agent code between the decorator and return statement remains unchanged from the standalone version. AgentCore runtime handles container lifecycle, scaling, identity, and observability automatically.",
-                "Create an AgentCore project and add your existing agent using the AgentCore CLI.",
-                "Add your existing agent as a bring-your-own (BYO) agent:",
-                "Note: The --framework flag specifies the CLI template. The actual agent code uses Hugging Face smolagents, which is compatible with AgentCore runtime regardless of the template selection.",
-                "With the project configured, you can deploy the agent using a single CLI command.",
-                "The CLI builds the container, pushes it to Amazon Elastic Container Registry (Amazon ECR), and creates the AgentCore runtime agent. Deployment takes approximately 10–15 minutes.",
-                "You can test the deployed agent in two ways: using the AgentCore CLI or programmatically with boto3.",
-                "This path invokes the same deployed agent as the CLI, using the boto3 SDK directly. The agentRuntimeArn identifies your deployed agent, contentType specifies the request format, and payload carries the prompt and model selection.",
-                "The standalone version and the AgentCore runtime version deploy the same agent in different ways. The following sections describe what each path provides.",
-                "The standalone version runs on Amazon ECS with AWS Fargate. You define ECS task definitions and service configuration, set auto scaling policies, configure IAM roles per service, and set up observability through Amazon CloudWatch . Deployment uses a Docker build, an Amazon ECR push, and an ECS service update. This path gives you full control over container configuration, networking, and scaling behavior. The agent code lives in healthcare_agentcore.py , integrates with Amazon Bedrock, Amazon SageMaker AI, and the containerized backend, and uses Amazon OpenSearch Service for vector search.",
-                "The AgentCore runtime version runs the same healthcare_agentcore.py agent code with the AgentCore decorator pattern. AgentCore runtime provides container orchestration, session-based scaling, identity management through IAM integration, and observability through built-in tracing and logging. Deployment uses a single command ( agentcore deploy ). The model integration (Amazon Bedrock, Amazon SageMaker AI, containerized backend) and vector search (Amazon OpenSearch Service) remain the same as the standalone version.",
-                "Both deployment approaches have distinct advantages. Amazon ECS with AWS Fargate provides full control over container configuration, networking, and scaling policies, suitable for teams with existing container operations expertise or specific infrastructure requirements. Amazon Bedrock AgentCore runtime is suited for teams that prefer managed infrastructure and want to focus primarily on agent logic development.",
-                "Regardless of the deployment path, the following elements remain unchanged when migrating from the standalone version to AgentCore runtime:",
-                "Then deploy again to tear down the AWS resources:",
-                "In this post, we showed how to migrate a multi-model healthcare AI agent from self-managed Amazon ECS with AWS Fargate infrastructure to Amazon Bedrock AgentCore runtime. The migration required no changes to the core agent logic. The same healthcare_agentcore.py file orchestrates across Amazon Bedrock, Amazon SageMaker AI, and a containerized model server. It runs on AgentCore runtime with the addition of the AgentCore decorator pattern ( BedrockAgentCoreApp , @app.entrypoint , and app.run() ). For healthcare teams, this pattern directs specialized biomedical queries to a domain-specific model such as BioM-ELECTRA-Large-SQuAD2 on Amazon SageMaker AI. It routes broader medical reasoning to a foundation model such as Llama 3.1 70B Instruct by Meta on Amazon Bedrock. Together, these backends support a range of query types.",
-                "For teams that choose managed infrastructure, AgentCore runtime handles container orchestration, scaling, identity management, and observability. You can focus on agent logic development instead. The framework-agnostic design supports a wide combination of models and agentic frameworks, making this migration pattern applicable across industries including healthcare, financial services, and manufacturing.",
-                "To get started, clone the sample-healthcare-agent-with-agentcore-on-aws GitHub repository and follow the deployment steps in this post. To understand the standalone implementation that this post migrates from, see Agentic AI with multi-model framework using Hugging Face smolagents on AWS . If there are questions about getting started with Amazon Bedrock AgentCore, speak with an AWS generative AI Specialist ."
-              ],
-              "kind": "paragraph-evidence",
-              "headline": "",
-              "description": "",
-              "rawParagraphCount": 42,
-              "selectedPassageCount": 36,
-              "selectedChars": 9473
-            }
-          }
-        ],
-        "coverage": {
-          "score": 59,
-          "band": "usable",
-          "readyForRichArticle": true,
-          "blockers": [
-            "single_publisher_family"
-          ],
-          "sourceCount": 1,
-          "independentPublisherFamilies": 1,
-          "domainPublisherFamilies": 1,
-          "provenanceGroups": [
-            [
-              {
-                "domain": "aws.amazon.com",
-                "title": "Migrating multi-model AI agents to Amazon Bedrock AgentCore runtime - Amazon Web Services (AWS)",
-                "index": 0
-              }
-            ]
-          ],
-          "syndicatedSourceGroups": 0,
-          "totalChars": 9473,
-          "totalPassages": 36,
-          "factualSignals": 61,
-          "detailSignals": 8,
-          "primarySourceCount": 0,
-          "verifiedSourceCount": 1,
-          "scoredSources": [
-            {
-              "score": 40,
-              "chars": 9473,
-              "passages": 36,
-              "factualSignals": 61,
-              "numberSignals": 8,
-              "dateSignals": 0,
-              "quoteSignals": 0,
-              "authorityScore": 5,
-              "primary": false,
-              "verified": true
-            }
-          ]
-        },
-        "blueprint": {
-          "mode": "bounded",
-          "targetWords": {
-            "min": 450,
-            "max": 750,
-            "soft": 600
-          },
-          "h2Guidance": {
-            "preferredMin": 2,
-            "preferredMax": 4,
-            "writerDecides": true,
-            "noPadding": true
-          },
-          "maxH2": 4,
-          "requireCrossCheck": false,
-          "allowContextSection": false,
-          "instruction": "Write a bounded evidence-led article. The writer chooses the actual H2 structure from the strongest supported evidence. Prefer 2–4 distinct sections, but never add a section merely to increase length or satisfy a count."
-        }
-      },
-      "readyForWriter": true,
-      "writerGateReason": "PASS"
     }
   ],
   "summary": {
     "candidatesFromVerification": 210,
-    "verifiedCandidates": 99,
+    "verifiedCandidates": 104,
     "candidatesInspected": 8,
-    "duplicateHistoryBlocked": 4,
+    "duplicateHistoryBlocked": 5,
     "duplicateQueueBlocked": 0,
     "integrityPass": 8,
-    "strongEvidence": 3,
-    "rich": 2,
+    "strongEvidence": 4,
+    "rich": 1,
     "usable": 3,
-    "thin": 1,
+    "thin": 2,
     "insufficient": 2,
-    "readyForWriter": 2
+    "readyForWriter": 1
   }
 }
