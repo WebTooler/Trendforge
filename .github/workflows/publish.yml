@@ -11,6 +11,11 @@ on:
       - 'scripts/verify-trend-sources.mjs'
       - 'scripts/recover-publisher-links.mjs'
       - 'scripts/evidence-integrity-preflight.mjs'
+      - 'scripts/pre-writer-pipeline.mjs'
+      - 'scripts/evidence-extraction.mjs'
+      - 'scripts/evidence-coverage.mjs'
+      - 'scripts/evidence-article-blueprint.mjs'
+      - 'scripts/evidence-article-prompt.mjs'
       - 'scripts/verify-article-claims.mjs'
       - 'scripts/verify-article-claims-v2.mjs'
       - 'scripts/verify-article-claims-smart.mjs'
@@ -75,6 +80,8 @@ jobs:
         run: node scripts/recover-publisher-links.mjs
       - name: Evidence integrity preflight
         run: node scripts/evidence-integrity-preflight.mjs
+      - name: Evidence V3 pre-writer gate
+        run: node scripts/pre-writer-pipeline.mjs
       - name: AI provider state check
         run: node scripts/ai-provider-router.mjs
       - name: Deterministic Claim Verifier fixtures
