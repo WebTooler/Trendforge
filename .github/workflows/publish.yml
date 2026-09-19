@@ -21,6 +21,8 @@ on:
       - 'scripts/verify-article-claims-v2.mjs'
       - 'scripts/verify-article-claims-smart.mjs'
       - 'scripts/test-claim-verifier-deterministic.mjs'
+      - 'scripts/test-claim-verifier.mjs'
+      - 'package.json'
       - 'scripts/repair-article-grounding.mjs'
       - 'scripts/editorial-intelligence.mjs'
       - 'scripts/article-lifecycle.mjs'
