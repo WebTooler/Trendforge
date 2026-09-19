@@ -1,18 +1,18 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-19T02:30:45.612Z",
-  "articlePath": "content/articles/california-governor-orders-ai-safety-panel-and-considers-kill-switch.md",
-  "articleTitle": "California Governor Orders AI Safety Panel and Considers ‘Kill Switch’",
+  "generatedAt": "2026-09-19T03:49:42.300Z",
+  "articlePath": "content/articles/disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.md",
+  "articleTitle": "Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
-  "sourceCount": 3,
-  "usableSourceCount": 3,
+  "sourceCount": 2,
+  "usableSourceCount": 2,
   "claimCount": 14,
   "editorialCount": 1,
   "verified": 14,
   "partial": 0,
   "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 77,
+  "averageConfidence": 89,
   "pass": true,
   "policy": {
     "verifiedMin": 62,
@@ -37,25 +37,17 @@
   "sources": [
     {
       "id": "S1",
-      "title": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "url": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "domain": "hanfordsentinel.com",
+      "title": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "url": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "domain": "moneycontrol.com",
       "passageCount": 18,
       "articleBodyLength": 0
     },
     {
       "id": "S2",
-      "title": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
-      "url": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
-      "domain": "yahoo.com",
-      "passageCount": 18,
-      "articleBodyLength": 0
-    },
-    {
-      "id": "S3",
-      "title": "Newsom creates AI safety panel, suggests possible 'kill switch'",
-      "url": "https://www.latimes.com/california/story/2026-09-18/newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch",
-      "domain": "latimes.com",
+      "title": "Disney names CTO for the first time as media giant expands tech push",
+      "url": "https://www.cnbc.com/2026/09/18/disney-cto-tech.html",
+      "domain": "cnbc.com",
       "passageCount": 18,
       "articleBodyLength": 0
     }
@@ -63,49 +55,40 @@
   "claims": [
     {
       "index": 1,
-      "claim": "On Friday, California Governor Gavin Newsom issued an executive order creating a panel to develop safety regulations for the state’s artificial intelligence companies.",
+      "claim": "Walt Disney Co. announced that Karandeep Anand will become the company’s first chief technology officer, a position that did not exist in Disney’s C‑suite before.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 93,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
+      "confidence": 75,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue. Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue. Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI security, according to a statement from the governor’s office.",
-      "bestPassage": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue.",
+      "bestPassageId": "S1-P2",
+      "evidence": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
+      "bestPassage": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
       "matchedPassages": [
-        "S1-P1",
-        "S1-P6",
-        "S1-P7"
+        "S1-P2"
       ],
       "sharedTerms": [
-        "friday",
-        "governor",
-        "gavin",
-        "newsom",
-        "issu",
-        "executive",
-        "order",
-        "panel",
-        "safety",
-        "regulation",
-        "for",
+        "walt",
+        "disney",
+        "karandeep",
+        "anand",
         "the",
-        "state",
-        "compani"
+        "first",
+        "chief",
+        "officer"
       ],
       "entityShared": [
-        "friday",
-        "gavin",
-        "newsom"
+        "walt",
+        "disney",
+        "karandeep",
+        "anand"
       ],
       "topicShared": [
-        "newsom",
-        "creat",
-        "panel",
-        "safety",
-        "regulation"
+        "disney",
+        "the",
+        "first"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -114,35 +97,48 @@
     },
     {
       "index": 2,
-      "claim": "The order calls for a “group of world‑leading experts” to provide a guide that would strengthen California’s AI security laws.",
+      "claim": "Anand will report directly to CEO Josh D’Amaro and will oversee enterprise technology, infrastructure, data and artificial intelligence platforms, as well as product and engineering across the company.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 78,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P7",
-      "evidence": "Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI security, according to a statement from the governor’s office. Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI ...",
-      "bestPassage": "Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI security, according to a statement from the governor’s office.",
+      "confidence": 99,
+      "bestSource": "Disney names CTO for the first time as media giant expands tech push",
+      "bestUrl": "https://www.cnbc.com/2026/09/18/disney-cto-tech.html",
+      "bestDomain": "cnbc.com",
+      "sourceId": "S2",
+      "bestPassageId": "S2-P6",
+      "evidence": "Disney said Anand will oversee enterprise technology, infrastructure, data and artificial intelligence platforms, product and engineering at Disney, and will work across across various tech teams to \"further modernize how Disney builds and delivers technology company-wide.\" \"Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney's senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,\" D'Amaro said in Friday's release. The newly created position in the Mouse House's C-suite will report directly to CEO Josh D'Amaro .",
+      "bestPassage": "Disney said Anand will oversee enterprise technology, infrastructure, data and artificial intelligence platforms, product and engineering at Disney, and will work across across various tech teams to \"further modernize how Disney builds and delivers technology company-wide.\" \"Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney's senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,\" D'Amaro said in Friday's release.",
       "matchedPassages": [
-        "S1-P7",
-        "S1-P2"
+        "S2-P6",
+        "S2-P4"
       ],
       "sharedTerms": [
-        "the",
-        "order",
-        "for",
-        "group",
-        "world",
-        "lead",
-        "expert",
-        "provide",
-        "security",
-        "laws"
+        "anand",
+        "report",
+        "directly",
+        "ceo",
+        "josh",
+        "amaro",
+        "and",
+        "oversee",
+        "enterprise",
+        "infrastructure",
+        "data",
+        "platform",
+        "product",
+        "engineer",
+        "acros",
+        "the"
       ],
-      "entityShared": [],
-      "topicShared": [],
+      "entityShared": [
+        "anand",
+        "ceo",
+        "josh",
+        "amaro"
+      ],
+      "topicShared": [
+        "the"
+      ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -150,34 +146,38 @@
     },
     {
       "index": 3,
-      "claim": "The panel is tasked, among other things, with exploring a potential “kill switch” for AI programs that might act maliciously.",
+      "claim": "The role was created in October and is intended to modernise how Disney builds and delivers technology company‑wide.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 54,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
+      "classification": "supported",
+      "confidence": 78,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue. Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue.",
-      "bestPassage": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue.",
+      "bestPassageId": "S1-P13",
+      "evidence": "He will work with technology teams across Disney’s business segments to modernise how the company builds and delivers technology. Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
+      "bestPassage": "He will work with technology teams across Disney’s business segments to modernise how the company builds and delivers technology.",
       "matchedPassages": [
-        "S1-P1",
-        "S1-P6"
+        "S1-P13",
+        "S1-P2"
       ],
       "sharedTerms": [
         "the",
-        "panel",
-        "kill",
-        "switch",
-        "for",
-        "program"
+        "role",
+        "creat",
+        "and",
+        "modernise",
+        "disney",
+        "build",
+        "deliver",
+        "wide"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "disney"
+      ],
       "topicShared": [
-        "panel",
-        "kill",
-        "switch"
+        "the",
+        "disney"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -186,37 +186,54 @@
     },
     {
       "index": 4,
-      "claim": "The panel’s mandate includes evaluating proposals for independent third parties to draft safety plans and for companies to build emergency shut‑off mechanisms.",
+      "claim": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate‑wide technology chief.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 67,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
+      "confidence": 100,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "The panel could consider proposals for independent third parties to write safety plans or for companies to develop an emergency shutoff.",
-      "bestPassage": "The panel could consider proposals for independent third parties to write safety plans or for companies to develop an emergency shutoff.",
+      "bestPassageId": "S1-P2",
+      "evidence": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
+      "bestPassage": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
       "matchedPassages": [
-        "S1-P8"
+        "S1-P2"
       ],
       "sharedTerms": [
+        "walt",
+        "disney",
+        "has",
+        "nam",
+        "karandeep",
+        "anand",
         "the",
-        "panel",
-        "proposal",
-        "for",
-        "independent",
-        "third",
-        "parti",
-        "safety",
-        "plan",
-        "compani",
-        "emergency"
+        "newly",
+        "creat",
+        "role",
+        "chief",
+        "officer",
+        "mark",
+        "first",
+        "time",
+        "entertainment",
+        "giant",
+        "corporate",
+        "wide"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "walt",
+        "disney",
+        "karandeep",
+        "anand"
+      ],
       "topicShared": [
-        "panel",
-        "safety"
+        "disney",
+        "nam",
+        "the",
+        "first",
+        "time",
+        "giant"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -225,85 +242,50 @@
     },
     {
       "index": 5,
-      "claim": "A researcher from Anthropic, who left the firm over concerns that AI could become dangerous, said the technology might “kill us all by the end of the decade.” Political leaders across the country have responded.",
+      "claim": "He was chief executive officer of Character.AI, an online chatbot platform, and before that served as president and chief product officer at Brex and held vice‑presidential roles at Meta’s Facebook and Microsoft.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
-      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
-      "bestDomain": "yahoo.com",
-      "sourceId": "S2",
-      "bestPassageId": "S2-P12",
-      "evidence": "Advertisement Advertisement A researcher for AI company Anthropic said earlier this month that he left the firm over concerns that AI companies, including OpenAI, for whom he also worked, are \"gambling with our lives\" as they race ahead to improve AI that could surpass human intelligence. The researcher, Jacob Coxon, said in a social media post: \"People building AI earnestly believe that it could kill us all by the end of the decade.\" State Sen.",
-      "bestPassage": "Advertisement Advertisement A researcher for AI company Anthropic said earlier this month that he left the firm over concerns that AI companies, including OpenAI, for whom he also worked, are \"gambling with our lives\" as they race ahead to improve AI that could surpass human intelligence.",
+      "confidence": 99,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P17",
+      "evidence": "Before Character.AI, he was president and chief product officer of financial technology company Brex. Anand previously served as chief executive officer of Character.AI, an online chatbot platform that allows users to interact with artificially created characters. Before joining Character.AI, Anand worked at Microsoft Corp. and Facebook, where he served as vice president for ads and business products. He also held several leadership roles at Meta’s Facebook, most recently as vice president of Ads & Business Products.",
+      "bestPassage": "Before Character.AI, he was president and chief product officer of financial technology company Brex.",
       "matchedPassages": [
-        "S2-P12",
-        "S2-P13"
+        "S1-P17",
+        "S1-P3",
+        "S1-P9",
+        "S1-P18"
       ],
       "sharedTerms": [
-        "researcher",
-        "anthropic",
-        "left",
-        "the",
-        "firm",
-        "fear",
-        "kill",
-        "all",
-        "end",
-        "decade"
-      ],
-      "entityShared": [
-        "anthropic"
-      ],
-      "topicShared": [
-        "kill"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 6,
-      "claim": "In July, lawmakers Lieu (D‑Torrance) and Nathaniel Moran (R‑Texas) introduced legislation that would have required developers to possess the capability to shut down powerful AI systems.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 94,
-      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
-      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
-      "bestDomain": "yahoo.com",
-      "sourceId": "S2",
-      "bestPassageId": "S2-P8",
-      "evidence": "Lieu (D-Torrance) and Nathaniel Moran (R-Texas) introduced a bill in July that would have required developers to have the capability to shut down powerful AI systems.",
-      "bestPassage": "Lieu (D-Torrance) and Nathaniel Moran (R-Texas) introduced a bill in July that would have required developers to have the capability to shut down powerful AI systems.",
-      "matchedPassages": [
-        "S2-P8"
-      ],
-      "sharedTerms": [
-        "july",
-        "lieu",
-        "torrance",
+        "was",
+        "chief",
+        "executive",
+        "officer",
+        "character",
+        "online",
+        "chatbot",
+        "platform",
         "and",
-        "nathaniel",
-        "moran",
-        "texa",
-        "introduc",
-        "requir",
-        "developer",
-        "the",
-        "capability",
-        "shut",
-        "down",
-        "powerful",
-        "system"
+        "serv",
+        "president",
+        "product",
+        "brex",
+        "held",
+        "vice",
+        "rol",
+        "meta",
+        "facebook",
+        "microsoft"
       ],
       "entityShared": [
-        "july",
-        "lieu",
-        "torrance",
-        "nathaniel",
-        "moran",
-        "texa"
+        "character",
+        "brex",
+        "meta",
+        "facebook",
+        "microsoft"
       ],
       "topicShared": [],
       "numericMismatch": false,
@@ -312,38 +294,85 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 7,
-      "claim": "At the same time, executive leaders such as Nvidia’s Jensen Huang have publicly argued that no new regulation is needed, insisting that accountability should come from within the industry.",
+      "index": 6,
+      "claim": "He holds a Computer Science degree from the International Institute of Information Technology in Hyderabad.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 72,
-      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
-      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
-      "bestDomain": "yahoo.com",
-      "sourceId": "S2",
-      "bestPassageId": "S2-P10",
-      "evidence": "Executives including Nvidia Chief Executive Jensen Huang, who has close ties to Trump, have said publicly that no new regulation is needed.",
-      "bestPassage": "Executives including Nvidia Chief Executive Jensen Huang, who has close ties to Trump, have said publicly that no new regulation is needed.",
+      "confidence": 100,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P5",
+      "evidence": "Anand holds a Computer Science degree from the International Institute of Information Technology, Hyderabad.",
+      "bestPassage": "Anand holds a Computer Science degree from the International Institute of Information Technology, Hyderabad.",
       "matchedPassages": [
-        "S2-P10"
+        "S1-P5"
       ],
       "sharedTerms": [
-        "executive",
-        "nvidia",
-        "jensen",
-        "huang",
-        "publicly",
-        "new",
-        "regulation",
-        "need"
+        "hold",
+        "computer",
+        "science",
+        "degree",
+        "the",
+        "international",
+        "institute",
+        "information",
+        "hyderabad"
       ],
       "entityShared": [
-        "nvidia",
-        "jensen",
-        "huang"
+        "computer",
+        "science",
+        "international",
+        "institute",
+        "information",
+        "hyderabad"
       ],
       "topicShared": [
-        "regulation"
+        "the"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 7,
+      "claim": "Disney’s CEO, Josh D’Amaro, has highlighted technology as a priority since taking the helm, particularly in expanding digital offerings.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 83,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P6",
+      "evidence": "Disney’s new CEO, Josh D’Amaro, has made technology a priority as the company looks to expand its digital offerings.",
+      "bestPassage": "Disney’s new CEO, Josh D’Amaro, has made technology a priority as the company looks to expand its digital offerings.",
+      "matchedPassages": [
+        "S1-P6"
+      ],
+      "sharedTerms": [
+        "disney",
+        "ceo",
+        "josh",
+        "amaro",
+        "has",
+        "priority",
+        "the",
+        "expand",
+        "offering"
+      ],
+      "entityShared": [
+        "disney",
+        "ceo",
+        "josh",
+        "amaro"
+      ],
+      "topicShared": [
+        "disney",
+        "the",
+        "expand"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -352,39 +381,47 @@
     },
     {
       "index": 8,
-      "claim": "Newsom himself noted that the term “means a lot of things depending on who you talk to” and that the state wants to define what a workable framework would look like.",
+      "claim": "D’Amaro’s prior role as head of theme parks and cruises involved investment in Epic Games, and he has outlined plans to broaden Disney+ beyond movies and television into gaming and other experiences.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 73,
-      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
-      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
-      "bestDomain": "yahoo.com",
-      "sourceId": "S2",
-      "bestPassageId": "S2-P16",
-      "evidence": "In a video about the executive order, Newsom said an AI kill switch \"means a lot of things depending on who you talk to.\" \"We want to flesh out exactly what that means and how to come up with a framework that works,\" he said.",
-      "bestPassage": "In a video about the executive order, Newsom said an AI kill switch \"means a lot of things depending on who you talk to.\" \"We want to flesh out exactly what that means and how to come up with a framework that works,\" he said.",
+      "confidence": 88,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P7",
+      "evidence": "In his previous role as head of theme parks and cruises, D’Amaro led Disney’s investment in video-game maker Epic Games. D’Amaro also plans to develop Disney+ beyond movies and TV shows by turning the streaming service into a hub for gaming and other experiences.",
+      "bestPassage": "In his previous role as head of theme parks and cruises, D’Amaro led Disney’s investment in video-game maker Epic Games.",
       "matchedPassages": [
-        "S2-P16"
+        "S1-P7",
+        "S1-P8"
       ],
       "sharedTerms": [
-        "newsom",
-        "the",
-        "mean",
-        "lot",
-        "thing",
-        "depend",
-        "who",
-        "you",
-        "talk",
+        "amaro",
+        "role",
+        "head",
+        "theme",
+        "park",
         "and",
-        "want",
-        "framework"
+        "cruis",
+        "invest",
+        "epic",
+        "gam",
+        "plan",
+        "disney",
+        "beyond",
+        "movi",
+        "other",
+        "experienc"
       ],
       "entityShared": [
-        "newsom"
+        "amaro",
+        "epic",
+        "gam",
+        "disney"
       ],
       "topicShared": [
-        "newsom"
+        "disney"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -393,36 +430,40 @@
     },
     {
       "index": 9,
-      "claim": "AI expert Geoffrey Hinton, a 2024 Nobel laureate in machine learning, expressed skepticism.",
+      "claim": "D’Amaro has focused on maintaining Disney's momentum in core growth areas such as streaming and parks.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 89,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P16",
-      "evidence": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
-      "bestPassage": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
+      "confidence": 90,
+      "bestSource": "Disney names CTO for the first time as media giant expands tech push",
+      "bestUrl": "https://www.cnbc.com/2026/09/18/disney-cto-tech.html",
+      "bestDomain": "cnbc.com",
+      "sourceId": "S2",
+      "bestPassageId": "S2-P7",
+      "evidence": "D'Amaro's immediate goal has been to maintain Disney's momentum in its core growth areas -- particularly streaming and parks, which have helped lift the company's earnings in recent quarters .",
+      "bestPassage": "D'Amaro's immediate goal has been to maintain Disney's momentum in its core growth areas -- particularly streaming and parks, which have helped lift the company's earnings in recent quarters .",
       "matchedPassages": [
-        "S1-P16"
+        "S2-P7"
       ],
       "sharedTerms": [
-        "expert",
-        "geoffrey",
-        "hinton",
-        "2024",
-        "nobel",
-        "machine",
-        "learn",
-        "express"
+        "amaro",
+        "has",
+        "maintain",
+        "disney",
+        "momentum",
+        "core",
+        "growth",
+        "area",
+        "stream",
+        "and",
+        "park"
       ],
       "entityShared": [
-        "geoffrey",
-        "hinton",
-        "nobel"
+        "amaro",
+        "disney"
       ],
-      "topicShared": [],
+      "topicShared": [
+        "disney"
+      ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -430,42 +471,53 @@
     },
     {
       "index": 10,
-      "claim": "In a recent interview with CNN, Hinton said a kill switch might not work because an advanced AI could persuade the people who control the switch not to pull it, increasing the risk that the system would become even more intelligent.",
+      "claim": "D’Amaro has repeatedly emphasized the need to keep Disney’s storytelling at the forefront while using technology to enhance creativity and operate as “One Disney.” With the new CTO, Disney aims to deepen its direct relationship with fans, turning Disney+ into a hub that combines streaming, gaming, shopping and other services.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 78,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
+      "confidence": 82,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P16",
-      "evidence": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
-      "bestPassage": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
+      "bestPassageId": "S1-P8",
+      "evidence": "D’Amaro also plans to develop Disney+ beyond movies and TV shows by turning the streaming service into a hub for gaming and other experiences. Since becoming CEO, D’Amaro has emphasised deepening Disney’s direct relationships with fans by creating a more connected Disney experience, with Disney+ as its digital centerpiece. “Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney’s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,” said D’Amaro. Disney’s new CEO, Josh D’Amaro, has made technology a priority as the company looks to expand its digital offerings.",
+      "bestPassage": "D’Amaro also plans to develop Disney+ beyond movies and TV shows by turning the streaming service into a hub for gaming and other experiences.",
       "matchedPassages": [
-        "S1-P16"
+        "S1-P8",
+        "S1-P14",
+        "S1-P10",
+        "S1-P6"
       ],
       "sharedTerms": [
-        "cnn",
-        "hinton",
-        "kill",
-        "switch",
-        "not",
-        "work",
-        "persuade",
+        "amaro",
+        "has",
         "the",
-        "people",
-        "who",
-        "pull",
-        "risk",
-        "intelligent"
+        "disney",
+        "storytell",
+        "creativity",
+        "and",
+        "one",
+        "new",
+        "deepen",
+        "its",
+        "direct",
+        "relationship",
+        "fans",
+        "turn",
+        "hub",
+        "stream",
+        "gam",
+        "other"
       ],
       "entityShared": [
-        "cnn",
-        "hinton"
+        "amaro",
+        "disney",
+        "one"
       ],
       "topicShared": [
-        "kill",
-        "switch"
+        "the",
+        "disney",
+        "cto"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -474,74 +526,40 @@
     },
     {
       "index": 11,
-      "claim": "California houses many of the world’s leading AI companies, so any new regulations could have a disproportionate effect on the global tech industry.",
+      "claim": "The company has floated the idea of a free, ad‑supported tier for Disney+ as a “front porch” to attract more users and has hinted at integrating the platform with its parks, cruises and merchandise.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 77,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P15",
-      "evidence": "Any new laws could have a disproportionate effect on the global tech industry because many top AI companies are based in California.",
-      "bestPassage": "Any new laws could have a disproportionate effect on the global tech industry because many top AI companies are based in California.",
+      "confidence": 69,
+      "bestSource": "Disney names CTO for the first time as media giant expands tech push",
+      "bestUrl": "https://www.cnbc.com/2026/09/18/disney-cto-tech.html",
+      "bestDomain": "cnbc.com",
+      "sourceId": "S2",
+      "bestPassageId": "S2-P11",
+      "evidence": "D'Amaro has said Disney is considering a free, ad-supported tier for its Disney+ streaming service as a so-called \"front porch\" to get more consumers onto the platform.",
+      "bestPassage": "D'Amaro has said Disney is considering a free, ad-supported tier for its Disney+ streaming service as a so-called \"front porch\" to get more consumers onto the platform.",
       "matchedPassages": [
-        "S1-P15"
-      ],
-      "sharedTerms": [
-        "california",
-        "the",
-        "compani",
-        "any",
-        "new",
-        "disproportionate",
-        "effect",
-        "global"
-      ],
-      "entityShared": [
-        "california"
-      ],
-      "topicShared": [
-        "regulation"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 12,
-      "claim": "The panel will hold hearings in the fall, as noted by State Sen.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 81,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall. AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen. The researcher, Jacob Coxon, said in a social media post: “People building AI earnestly believe that it could kill us all by the end of the decade.” State Sen.",
-      "bestPassage": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall.",
-      "matchedPassages": [
-        "S1-P13",
-        "S1-P16",
-        "S1-P12"
+        "S2-P11"
       ],
       "sharedTerms": [
         "the",
-        "hold",
-        "hearing",
-        "fall",
-        "not",
-        "state",
-        "sen"
+        "has",
+        "free",
+        "support",
+        "tier",
+        "for",
+        "disney",
+        "front",
+        "porch",
+        "platform",
+        "its"
       ],
       "entityShared": [
-        "state",
-        "sen"
+        "disney"
       ],
       "topicShared": [
-        "panel"
+        "the",
+        "for",
+        "disney"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -550,33 +568,35 @@
     },
     {
       "index": 13,
-      "claim": "Christopher Cabaldon, who chairs the committee overseeing technology issues.",
+      "claim": "As chief technology officer, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product and engineering.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 98,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
+      "confidence": 94,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall.",
-      "bestPassage": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall.",
+      "bestPassageId": "S1-P12",
+      "evidence": "He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.” As chief technology officer, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product and engineering.",
+      "bestPassage": "He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.” As chief technology officer, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product and engineering.",
       "matchedPassages": [
-        "S1-P13"
+        "S1-P12"
       ],
       "sharedTerms": [
-        "christopher",
-        "cabaldon",
-        "who",
-        "chair",
-        "the",
-        "committee",
+        "chief",
+        "officer",
+        "anand",
         "oversee",
-        "issu"
+        "enterprise",
+        "infrastructure",
+        "data",
+        "and",
+        "platform",
+        "product",
+        "engineer"
       ],
       "entityShared": [
-        "christopher",
-        "cabaldon"
+        "anand"
       ],
       "topicShared": [],
       "numericMismatch": false,
@@ -586,31 +606,96 @@
     },
     {
       "index": 14,
-      "claim": "These hearings will be informed by recent warnings about AI’s dangers and by the evolving debate over kill‑switch feasibility.",
+      "claim": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate‑wide technology chief.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 55,
-      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
-      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
-      "bestDomain": "hanfordsentinel.com",
+      "classification": "supported",
+      "confidence": 100,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P14",
-      "evidence": "Those meetings were planned before the recent warnings about AI’s dangers, but will be informed by the events of the last few weeks, he said.",
-      "bestPassage": "Those meetings were planned before the recent warnings about AI’s dangers, but will be informed by the events of the last few weeks, he said.",
+      "bestPassageId": "S1-P2",
+      "evidence": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
+      "bestPassage": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
       "matchedPassages": [
-        "S1-P14"
+        "S1-P2"
       ],
       "sharedTerms": [
-        "inform",
-        "recent",
-        "warning",
-        "danger",
-        "the"
+        "walt",
+        "disney",
+        "has",
+        "nam",
+        "karandeep",
+        "anand",
+        "the",
+        "newly",
+        "creat",
+        "role",
+        "chief",
+        "officer",
+        "mark",
+        "first",
+        "time",
+        "entertainment",
+        "giant",
+        "corporate",
+        "wide"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "walt",
+        "disney",
+        "karandeep",
+        "anand"
+      ],
       "topicShared": [
-        "kill",
-        "switch"
+        "disney",
+        "nam",
+        "the",
+        "first",
+        "time",
+        "giant"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 15,
+      "claim": "Anand has expressed enthusiasm about helping Disney connect fans worldwide with its stories and characters in new ways.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 88,
+      "bestSource": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
+      "bestUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+      "bestDomain": "moneycontrol.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P16",
+      "evidence": "“I’m honored to join a team with such extraordinary creative talent, and I look forward to building on the company’s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways.” Anand led Character.AI through a period of rapid growth, building one of the world’s most engaged consumer-AI audiences while prioritising user trust and safety as the platform expanded.",
+      "bestPassage": "“I’m honored to join a team with such extraordinary creative talent, and I look forward to building on the company’s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways.” Anand led Character.AI through a period of rapid growth, building one of the world’s most engaged consumer-AI audiences while prioritising user trust and safety as the platform expanded.",
+      "matchedPassages": [
+        "S1-P16"
+      ],
+      "sharedTerms": [
+        "anand",
+        "help",
+        "disney",
+        "connect",
+        "fans",
+        "worldwide",
+        "its",
+        "stori",
+        "and",
+        "character",
+        "new",
+        "ways"
+      ],
+      "entityShared": [
+        "anand",
+        "disney"
+      ],
+      "topicShared": [
+        "disney"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -620,8 +705,8 @@
   ],
   "editorial": [
     {
-      "index": 15,
-      "claim": "While Newsom’s executive order signals a clear commitment to addressing AI safety, the exact mechanisms and legal authority of a kill switch remain untested.",
+      "index": 12,
+      "claim": "While the creation of a company‑wide CTO signals a strategic shift, the evidence does not detail specific projects or timelines.",
       "type": "editorial-analysis",
       "status": "editorial-excluded"
     }

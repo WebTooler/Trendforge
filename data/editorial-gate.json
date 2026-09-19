@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T02:30:26.450Z",
+  "generatedAt": "2026-09-19T03:49:39.937Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 4053,
-      "sentenceCount": 27,
+      "normalizedLength": 3551,
+      "sentenceCount": 21,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,12 +31,11 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "hanfordsentinel.com",
-    "yahoo.com",
-    "latimes.com"
+    "moneycontrol.com",
+    "cnbc.com"
   ],
   "grounding": {
-    "sourceCount": 3,
-    "usablePassages": 54
+    "sourceCount": 2,
+    "usablePassages": 36
   }
 }

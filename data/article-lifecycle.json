@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-19T03:14:32.586Z",
+  "generatedAt": "2026-09-19T03:49:45.863Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,9 +11,9 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 13,
+    "articles": 14,
     "refreshCandidates": 0,
-    "watch": 3,
+    "watch": 4,
     "fresh": 10,
     "stale": 0,
     "duplicateClusters": 0
@@ -38,11 +38,25 @@
       "title": "Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
       "category": "Digital Life",
       "publishedAt": "2026-09-13T11:49:56.851Z",
-      "ageDays": 5.6,
+      "ageDays": 5.7,
       "ageState": "fresh",
       "words": 851,
       "sourceCount": 2,
       "refreshScore": 51,
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
+    },
+    {
+      "file": "disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.md",
+      "title": "Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
+      "category": "Technology",
+      "publishedAt": "2026-09-19T03:49:39.936Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 564,
+      "sourceCount": 2,
+      "refreshScore": 46,
       "status": "watch",
       "action": "watch",
       "reasons": []
@@ -66,7 +80,7 @@
       "title": "California Governor Orders AI Safety Panel and Considers ‘Kill Switch’",
       "category": "AI",
       "publishedAt": "2026-09-19T02:30:26.449Z",
-      "ageDays": 0,
+      "ageDays": 0.1,
       "ageState": "fresh",
       "words": 421,
       "sourceCount": 3,
@@ -82,7 +96,7 @@
       "title": "How to Set Up a Passkey for Your Google Account",
       "category": "How-To",
       "publishedAt": "2026-09-14T04:53:59.646Z",
-      "ageDays": 4.9,
+      "ageDays": 5,
       "ageState": "fresh",
       "words": 373,
       "sourceCount": 2,
@@ -172,7 +186,7 @@
       "title": "Comp AI raises $34M Series A to build agentic security and compliance platform",
       "category": "AI",
       "publishedAt": "2026-09-17T11:43:31.038Z",
-      "ageDays": 1.6,
+      "ageDays": 1.7,
       "ageState": "fresh",
       "words": 374,
       "sourceCount": 1,
@@ -204,7 +218,7 @@
       "title": "The Apple Watch Series 12 is the start of a new wearable era",
       "category": "Digital Life",
       "publishedAt": "2026-09-17T17:01:14.943Z",
-      "ageDays": 1.4,
+      "ageDays": 1.5,
       "ageState": "fresh",
       "words": 397,
       "sourceCount": 1,
@@ -238,7 +252,7 @@
       "title": "Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
       "category": "Digital Life",
       "publishedAt": "2026-09-13T11:49:56.851Z",
-      "ageDays": 5.6,
+      "ageDays": 5.7,
       "ageState": "fresh",
       "words": 851,
       "sourceCount": 2,
@@ -247,6 +261,21 @@
       "action": "watch",
       "reasons": [],
       "priority": 2
+    },
+    {
+      "file": "disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.md",
+      "title": "Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
+      "category": "Technology",
+      "publishedAt": "2026-09-19T03:49:39.936Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 564,
+      "sourceCount": 2,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 3
     },
     {
       "file": "how-to-move-passwords-and-passkeys-between-managers-on-android.md",
@@ -261,7 +290,7 @@
       "status": "watch",
       "action": "watch",
       "reasons": [],
-      "priority": 3
+      "priority": 4
     }
   ],
   "duplicateClusters": []
