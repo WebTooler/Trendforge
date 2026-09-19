@@ -25,7 +25,9 @@ const semanticDuplicate=(candidateText:string,existingText:string)=>{const a=pro
 // the evidence/AI gates. Exact title duplication is already handled separately.
 const existingTopicMatches=(candidate:Trend,existing:string[])=>existing.some(text=>semanticDuplicate(candidate.title,text).duplicate);
 const relatedEnough=(candidate:Trend,item:Trend)=>{if(candidate.category.toLowerCase()!==item.category.toLowerCase())return false;const a=profile(`${candidate.title} ${candidate.description??''}`),b=profile(`${item.title} ${item.description??''}`);const candidateTitle=topicWords(candidate.title),itemTitle=topicWords(item.title);const titleOverlap=[...candidateTitle].filter(w=>itemTitle.has(w)).length;const descA=topicWords(candidate.description??''),descB=topicWords(item.description??'');const descOverlap=[...descA].filter(w=>descB.has(w)).length;const entityOverlap=[...a.entities].filter(e=>b.entities.has(e)).length;return titleOverlap>=2||entityOverlap>=1||(titleOverlap>=1&&descOverlap>=3);};
-const domainOf=(value:string)=>{try{return new URL(value).hostname.replace(/^www\./,'').toLowerCase();}catch{return '';}};
+const domainOf=(value:string)=>{try{return new URL(value).hostname.replace(/^www\./,'').toLowerCase();}catch{return '';}}
+const OFFICIAL_DOMAINS=new Set(['reginfo.gov','federalregister.gov','sec.gov','cftc.gov','ftc.gov','fcc.gov','fda.gov','nasa.gov','nist.gov','whitehouse.gov','congress.gov','supremecourt.gov','justice.gov','treasury.gov','state.gov','commerce.gov','energy.gov','epa.gov','gov.uk','europa.eu']);
+const sourceRole=(source:{title?:string;url?:string}={})=>{const domain=domainOf(source.url||'');const title=String(source.title||'').toLowerCase();const officialDomain=[...OFFICIAL_DOMAINS].some(d=>domain===d||domain.endsWith('.'+d));const primarySignals=/\b(official|filing|filings|order|rules?|notice|docket|register|reginfo|regulatory agenda|press release|pressroom|statement|transcript|decision|proposed rule)\b/i.test(title);return officialDomain||primarySignals?'primary':'secondary'};
 const isMirror=(value:string)=>{const d=domainOf(value);return d==='news.google.com'||d==='google.com'||d==='google.co.uk';};
 const loadVerification=()=>{try{const raw=JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));return new Map<string,VerificationRecord>((raw.records??[]).map((r:VerificationRecord)=>[r.link,r]));}catch{return new Map<string,VerificationRecord>();}};
 const verifiedEvidence=(item:Trend,verification:Map<string,VerificationRecord>)=>{const record=verification.get(item.link);const sources=(record?.sources??[]).filter(s=>s.ok&&/^https:\/\//.test(s.finalUrl||s.url||'')&&!isMirror(s.finalUrl||s.url||'')&&isCrediblePublisher(s.domain||domainOf(s.finalUrl||s.url||'')));const deduped:typeof sources=[];const seenDomains=new Set<string>();for(const source of sources.sort((a,b)=>Number(Boolean(b.discovered))-Number(Boolean(a.discovered)))){const domain=source.domain||domainOf(source.finalUrl||source.url||'');if(!domain||seenDomains.has(domain))continue;seenDomains.add(domain);deduped.push(source);}return{record,sources:deduped,domains:[...seenDomains]};};
@@ -52,7 +54,7 @@ async function main(){
   const trend=eligible.find(candidate=>{const evidence=verifiedEvidence(candidate,verification);return evidence.sources.length>=1;});
   if(!trend){console.log('No new eligible trend with at least one independent reachable verified publisher evidence source and semantic uniqueness found.');process.exit(0);}
   const candidateEvidence=verifiedEvidence(trend,verification);
-  const sources=candidateEvidence.sources.slice(0,8).map(s=>({title:s.title||`${publisherName(trend)}: ${trend.title}`,url:s.finalUrl||s.url||'',publishedAt:trend.publishedAt})).filter(s=>s.url);
+  const sources=candidateEvidence.sources.slice(0,8).map(s=>({title:s.title||`${publisherName(trend)}: ${trend.title}`,url:s.finalUrl||s.url||'',publishedAt:trend.publishedAt,role:sourceRole({title:s.title,url:s.finalUrl||s.url||''})})).filter(s=>s.url);
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
   const uniqueSourceDomains=[...new Set(sources.map(s=>domainOf(s.url)).filter(Boolean))];
   if(uniqueSourceDomains.length<1){console.log('Verified evidence did not contain a reachable publisher domain; publication blocked.');process.exit(0);}
@@ -72,9 +74,11 @@ ${s.passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\
 ')}`).join('\
 \
 ');
+  const primarySources=evidencePack.filter(s=>sourceRole(s)==='primary');
+  evidencePack.sort((a,b)=>Number(sourceRole(b)==='primary')-Number(sourceRole(a)==='primary'));
   const evidenceInstruction=strongEvidence
-    ? `Cross-check the development across ${evidenceDomains.length} independent reachable source domains.`
-    : 'Ground the article entirely in the single validated publisher source; preserve attribution and uncertainty where applicable.';
+    ? `Cross-check the development across ${evidenceDomains.length} independent reachable source domains. Prefer primary/official evidence when available, while retaining independent secondary reporting for corroboration.`
+    : primarySources.length ? 'Prefer the primary/official source for claims it directly establishes; preserve attribution and uncertainty for secondary reporting.' : 'Ground the article entirely in the validated publisher source; preserve attribution and uncertainty where applicable.';
   const brief:ArticleBrief={title:trend.title,category:trend.category,angle:'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.',keyPoints:[trend.description??'Use only retrieved evidence passages.',evidenceInstruction],sources:evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt}))};
   const prompt=buildArticlePrompt(brief)+`\
 \
@@ -92,7 +96,7 @@ GROUNDING CONTRACT:\
 - Prefer a smaller, fully grounded article over a longer article with unsupported context.\
 \
 OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
-  fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:6,strongEvidence,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,sources:evidencePack.map(s=>({title:s.title,url:s.url,kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
+  fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:7,strongEvidence,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,primarySourceCount:primarySources.length,sources:evidencePack.map(s=>({title:s.title,url:s.url,role:sourceRole(s),kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
   let output:ProviderResult;try{output=await generateWithProviders(prompt,trend.title);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
   console.log(`Article generation provider: ${output.provider}`);
   let generated:{title:string;description:string;content:string};try{generated=parseModelJson(output.text);}catch(e){console.log(`${e instanceof Error?e.message:String(e)}; publishing blocked.`);process.exit(0);}
@@ -101,7 +105,7 @@ OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys:
   const generatedDuplicate=existingTopics.map(text=>semanticDuplicate(`${generated.title} ${generated.description} ${generated.content.slice(0,5000)}`,text)).find(x=>x.duplicate);if(generatedDuplicate){console.log(`Generated article is semantically duplicate; shared concepts: ${generatedDuplicate.sharedConcepts.join(', ')}; entities: ${generatedDuplicate.sharedEntities.join(', ')}; shared phrases: ${generatedDuplicate.sharedPhrases}. Publication blocked.`);process.exit(0);}
   const article={...generated,slug:slugify(generated.title),category:brief.category,sources:brief.sources.map(s=>({title:s.title,url:s.url})),generatedAt:new Date().toISOString()};
   const editorial=editorialGate(article);const copyright=copyrightSafetyGate({content:article.content,sources:article.sources.map(s=>s.url),images:[]});
-  fs.writeFileSync('data/editorial-gate.json',JSON.stringify({generatedAt:new Date().toISOString(),provider:output.provider,editorial,copyright,semanticDuplicateCheck:'passed',sourceRelationshipCheck:'passed',verifiedEvidenceDomains:evidenceDomains,grounding:{sourceCount:evidencePack.length,usablePassages}},null,2));
+  fs.writeFileSync('data/editorial-gate.json',JSON.stringify({generatedAt:new Date().toISOString(),provider:output.provider,editorial,copyright,semanticDuplicateCheck:'passed',sourceRelationshipCheck:'passed',verifiedEvidenceDomains:evidenceDomains,primarySourceCount:primarySources.length,grounding:{sourceCount:evidencePack.length,usablePassages,primarySourceCount:primarySources.length}},null,2));
   if(!editorial.passed||!copyright.passed){console.log(`Quality/copyright gate blocked publication. editorial=${editorial.passed?'PASS':'FAIL'} copyright=${copyright.passed?'PASS':'FAIL'}`);process.exit(0);}
   fs.mkdirSync(outputDir,{recursive:true});fs.writeFileSync(`${outputDir}/${article.slug}.md`,articleToMarkdown(article));console.log(`Published article draft: ${article.slug}`);
 }
