@@ -90,7 +90,7 @@ async function main(){
   const evidencePack=await buildEvidencePack(sources,trend.title);
   const usablePassages=evidencePack.reduce((n,s)=>n+s.passages.length,0);
   const sourceWithEvidence=evidencePack.filter(x=>x.passages.length>=1).length;
-  const evidenceDomains=[...new Set(evidencePack.map(s=>domainOf(s.url)).filter(Boolean))];
+  const evidenceDomains=[...new Set(evidencePack.map(s=>s.domain||domainOf(s.url)).filter(Boolean))];
   const coverage=scoreEvidenceCoverage({sources:evidencePack});
   const blueprint=deriveEvidenceArticleBlueprint(coverage);
   const strongEvidence=coverage.score>=75&&evidencePack.length>=2&&sourceWithEvidence>=2&&evidenceDomains.length>=2;
@@ -124,7 +124,7 @@ GROUNDING CONTRACT:\
 - The evidence-pack source IDs are internal and must NOT appear in the published prose.\
 - Prefer a smaller, fully grounded article over a longer article with unsupported context.\
 \
-OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
+OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Follow the evidence-capacity blueprint above for word count and H2s; do not use a generic minimum that conflicts with that blueprint. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
   fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:7,strongEvidence,coverage,blueprint,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,sources:evidencePack.map(s=>({title:s.title,url:s.url,kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
   let output:ProviderResult;try{output=await generateWithProviders(prompt,trend.title,blueprint);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
   console.log(`Article generation provider: ${output.provider}`);
