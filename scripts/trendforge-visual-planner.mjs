@@ -50,8 +50,9 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
   const explicitPersonContext = /\b(?:ceo|chief executive|cto|founder|president|minister|researcher|scientist|spokesperson|executive|analyst)\b/i.test(text) && Boolean(person);
   const howTo = /\b(?:how to|steps|setup|set up|guide|tutorial|safely|keep them current|between managers)\b/i.test(lower);
   const personFirst = explicitPersonContext && !howTo;
-  const product = PRODUCT_TERMS.find(term => lower.includes(term));
-  const infrastructure = INFRA_TERMS.find(term => lower.includes(term));
+  const storyText = title + ' ' + description;
+  const product = PRODUCT_TERMS.find(term => new RegExp('\\b' + term + '\\b', 'i').test(storyText));
+  const infrastructure = INFRA_TERMS.find(term => new RegExp('\\b' + term + '\\b', 'i').test(lower));
   const abstract = ABSTRACT_TERMS.find(term => lower.includes(term));
 
   if (personFirst) {
@@ -61,6 +62,12 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
     supportingElements = ['softly blurred audience or event environment', company ? company + '-specific event context without invented logos or text' : 'minimal event context'];
     composition = 'Medium or medium-wide horizontal frame; subject slightly off-center; back, side, over-the-shoulder, cropped, silhouette, or natural-distance framing so the face is not clearly identifiable.';
     avoid.push('generic product hero replacing the person','invented facial likeness','random consumer electronics as the main subject');
+  } else if (infrastructure) {
+    mode = 'environment-infrastructure';
+    primarySubject = 'the specific ' + infrastructure + ' or physical infrastructure central to the story';
+    scene = 'A realistic editorial photograph of the named infrastructure or environment, captured as the concrete subject rather than as generic technology scenery.';
+    supportingElements = ['one contextual scale or human element only when useful'];
+    composition = 'Architectural or documentary framing with one dominant physical structure and clear visual hierarchy.';
   } else if (product) {
     mode = 'editorial-product';
     primarySubject = 'the specific ' + product + ' or physical technology named by the story';
