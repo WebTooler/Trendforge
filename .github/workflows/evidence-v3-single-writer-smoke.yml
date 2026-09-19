@@ -59,6 +59,7 @@ jobs:
           node --check scripts/trendforge-editorial-policy.mjs
           node --check scripts/evidence-article-blueprint.mjs
           node --check scripts/evidence-article-prompt.mjs
+          rm -f data/article-brief.json data/editorial-gate.json
           npx tsx scripts/generate-article.ts
 
       - name: Report writer result
