@@ -1,12 +1,48 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-19T18:51:45.389Z",
+  "generatedAt": "2026-09-19T20:42:46.724Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 0,
+  "generated": 1,
   "skipped": 0,
   "failed": 0,
-  "images": {}
+  "images": {
+    "ai-doomsday-fears-what-can-ordinary-people-actually-do": {
+      "status": "generated",
+      "image": "/Trendforge/images/articles/ai-doomsday-fears-what-can-ordinary-people-actually-do.1024x576.png",
+      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
+      "width": 1024,
+      "height": 576,
+      "steps": 4,
+      "elapsedMs": 2165,
+      "bytes": 607320,
+      "visualBrief": {
+        "version": 1,
+        "mode": "conceptual-editorial",
+        "primarySubject": "the specific policy, governance, market, or industry action described by the story",
+        "scene": "A sophisticated editorial photo-illustration or carefully staged metaphor that makes the specific central idea immediately understandable without relying on generic AI symbols.",
+        "supportingElements": [
+          "at most one concrete metaphorical object or environmental cue tied directly to the story"
+        ],
+        "composition": "One strong metaphor or visual action, restrained editorial treatment, clear hierarchy, no collage of unrelated symbols.",
+        "company": null,
+        "namedPerson": null,
+        "category": "AI",
+        "avoid": [
+          "generic office imagery",
+          "random tablet or laptop",
+          "generic futuristic technology",
+          "glowing holograms, floating code, HUDs and neon sci-fi effects",
+          "prominent readable text or fake headlines",
+          "generic AI brain",
+          "random server rack",
+          "generic circuit board",
+          "stock-looking technology montage"
+        ]
+      },
+      "promptLength": 1900
+    }
+  }
 }

@@ -7,15 +7,15 @@
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 30,
-      "lastSuccessAt": "2026-09-19T07:09:30.790Z"
+      "successes": 32,
+      "lastSuccessAt": "2026-09-19T20:42:39.683Z"
     },
     "Gemini": {
-      "failures": 25,
+      "failures": 26,
       "quotaBlockedUntil": 1789816473548,
-      "lastStatus": 429,
-      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 26.466041527s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
-      "lastClass": "quota"
+      "lastStatus": 200,
+      "lastError": "Invalid repair structured output",
+      "lastClass": "error"
     },
     "OpenAI": {
       "failures": 3,
@@ -32,24 +32,24 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 37,
-      "quotaBlockedUntil": 1789801109661,
+      "failures": 38,
+      "quotaBlockedUntil": 1789850555927,
       "lastStatus": 200,
-      "lastError": "Empty atomic repair response",
-      "lastClass": "error",
+      "lastError": "Empty model response",
+      "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 49,
+      "failures": 50,
       "quotaBlockedUntil": 0,
       "lastStatus": 200,
-      "lastError": null,
-      "lastClass": "success",
+      "lastError": "Empty atomic repair response",
+      "lastClass": "error",
       "successes": 10,
       "lastSuccessAt": "2026-09-19T14:45:41.823Z"
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-19T18:51:40.181Z"
+  "updatedAt": "2026-09-19T20:42:39.683Z"
 }
