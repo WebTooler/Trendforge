@@ -12,7 +12,9 @@ function clean(value = '') { return value.replace(/\s+/g, ' ').trim(); }
 
 function namedPerson(title, description) {
   const text = title + '. ' + description;
-  const matches = [...text.matchAll(/\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})\b/g)].map(m => m[1]).filter(x => !/^(When|What|The|This|AI|US|CEO|Dario Amodei)$/.test(x));
+  const matches = [...text.matchAll(/\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})\b/g)]
+    .map(m => m[1].replace(/^(When|What|The|This)\s+/i, '').trim())
+    .filter(x => x && !/^(AI|US|CEO|Anthropic|OpenAI|Google|Microsoft|Apple|Meta|Amazon|Nvidia|Tesla|Samsung)$/i.test(x));
   return matches[0] || '';
 }
 
