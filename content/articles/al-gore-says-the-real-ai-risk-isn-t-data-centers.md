@@ -18,7 +18,7 @@ Gore said that the public backlash at planning‑commission meetings has less to
 
 Gore explained that the total emissions from all AI data centers combined are only a sliver of what landfills worldwide produce. He also pointed out that the electricity needed for air conditioning in these facilities is far less scrutinized, yet it already outpaces the entire European Union’s annual electricity use. The International Energy Agency projects that air‑conditioning demand could triple by 2050, which would place more strain on power grids than AI data‑center growth over the same period.
 
-Gore noted that some large cloud providers are investing in new methane turbines, which would lock in decades more of fossil‑fuel generation. Gore noted that some large cloud providers are investing in new methane turbines, which would lock in decades more of fossil‑fuel generation. He prefers power sources that rely on renewables and batteries, stating that renewable energy is increasingly the cheapest option.
+Gore noted that some large cloud providers are investing in new methane turbines, which would lock in decades more of fossil‑fuel generation. He prefers power sources that rely on renewables and batteries, stating that renewable energy is increasingly the cheapest option.
 
 ## The Bigger AI‑Industry Warning
 
