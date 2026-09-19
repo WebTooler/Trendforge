@@ -4,7 +4,9 @@ on:
   push:
     branches: ["main"]
   workflow_run:
-    workflows: ["TrendForge Pipeline"]
+    workflows:
+      - "TrendForge Pipeline"
+      - "TrendForge — FLUX.1 Schnell 1024x576 Article Images"
     types: [completed]
   workflow_dispatch:
 
