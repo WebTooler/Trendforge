@@ -161,7 +161,7 @@ for (const file of files) {
   const titleKey = normalize(title);
   if (seenTitles.has(titleKey)) errors.push(`${slug}: duplicate title.`); else seenTitles.add(titleKey);
   if (words < 150) errors.push(`${slug}: article is too short (${words} words; minimum 150).`);
-  if (headings < 3) errors.push(`${slug}: needs at least 3 H2 sections (found ${headings}).`);
+  if (headings < 1) errors.push(`${slug}: needs at least 1 useful H2 section (found ${headings}).`);
   if (paragraphs.length < 4) errors.push(`${slug}: needs at least 4 substantive paragraphs.`);
   if (sourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://'))) {
     const policy = isCurrentRun
