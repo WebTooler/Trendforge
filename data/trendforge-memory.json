@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19T16:02:00.495Z",
+  "updatedAt": "2026-09-19T20:57:28.739Z",
   "policy": {
     "recordsOperationalHistory": true,
     "influencesDecisions": false,
@@ -1538,6 +1538,106 @@
           "inCooldown": false
         }
       }
+    },
+    {
+      "recordedAt": "2026-09-19T20:57:28.739Z",
+      "workflowRun": "35468954082",
+      "workflowSha": "821f03fcac1bf676275a8c212412346440774270",
+      "decisions": {
+        "total": 230,
+        "publishCandidates": 1,
+        "review": 55,
+        "hold": 174,
+        "reject": 0,
+        "strongEvidenceReady": 36,
+        "singleSourceVerifiedReady": 74
+      },
+      "evidence": {
+        "candidates": 230,
+        "passed": 76,
+        "blocked": 9,
+        "strong": 30,
+        "singleSource": 46
+      },
+      "claims": {
+        "title": "AI doomsday fears: what can ordinary people actually do?",
+        "claimCount": 10,
+        "verified": 10,
+        "partial": 0,
+        "unsupported": 0,
+        "averageConfidence": 85,
+        "pass": true
+      },
+      "editorial": {
+        "status": "pass",
+        "articleCount": 20,
+        "averageScore": 74
+      },
+      "lifecycle": {
+        "articles": 20,
+        "refreshCandidates": 0,
+        "watch": 6,
+        "fresh": 14,
+        "stale": 0,
+        "duplicateClusters": 0
+      },
+      "growth": {
+        "totalArticles": 20,
+        "averageEditorialScore": 74,
+        "editorialReviewCount": 15,
+        "refreshCandidates": 0
+      },
+      "distribution": {
+        "articlesPlanned": 20,
+        "externalPostingPerformed": false
+      },
+      "monetization": {
+        "readyForAdSenseFoundation": false
+      },
+      "providers": {
+        "Groq": {
+          "failures": 44,
+          "successes": 32,
+          "lastStatus": 200,
+          "lastClass": "success",
+          "inCooldown": false
+        },
+        "Gemini": {
+          "failures": 26,
+          "successes": 0,
+          "lastStatus": 200,
+          "lastClass": "error",
+          "inCooldown": false
+        },
+        "OpenAI": {
+          "failures": 3,
+          "successes": 0,
+          "lastStatus": 429,
+          "lastClass": "quota",
+          "inCooldown": false
+        },
+        "Cerebras": {
+          "failures": 7,
+          "successes": 0,
+          "lastStatus": 402,
+          "lastClass": "error",
+          "inCooldown": false
+        },
+        "OpenRouter": {
+          "failures": 38,
+          "successes": 2,
+          "lastStatus": 200,
+          "lastClass": "transient",
+          "inCooldown": false
+        },
+        "Cohere": {
+          "failures": 50,
+          "successes": 10,
+          "lastStatus": 200,
+          "lastClass": "error",
+          "inCooldown": false
+        }
+      }
     }
   ],
   "topics": [
@@ -1773,9 +1873,9 @@
     },
     {
       "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
-      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - news.njit.edu",
+      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 62,
       "confidence": 60,
@@ -1785,7 +1885,7 @@
       "key": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rVG5TTXdNYjFEOURLeWluRmNkSHZBYnM5Z2xKY19QTUttZmdzRUVzVnpQTVREVTZPTFRkSTBMYXlXak1udlhIeng4Z25hZmo3?oc=5",
       "title": "Research, innovation and invention top priority for prosperity, Minister Pun says - risingnepaldaily.com",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-18T21:12:23.682Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 57,
@@ -1825,7 +1925,7 @@
       "key": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5",
       "title": "From Edison’s Invention Factory to the new architecture of innovation - Science | AAAS",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 60,
@@ -1835,7 +1935,7 @@
       "key": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBPa0Jmbk5NRFZEVG1hc05Ldk9COW8tYjY2YTBORmpRTkk5NnFqaEVmaWZMdmFDR2ViZGhHTzdjOVV4VnVRS3U3R1M0Qjh6XzQzREJnN3ZTNmNZek9yU0k1UFpoM3BiVTJMWTFlVWJCNlFqZ1NZ?oc=5",
       "title": "From Invention to Innovation in Global Governance - UNU | United Nations University",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 60,
@@ -1845,7 +1945,7 @@
       "key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQWlFEeGZad0JTSzliMHJSdTllN3VaR08zVFFfRHMxTkpJOWR1TC1jT2dqQW1Hci1XTkRaQ3VvbzduMlJac0Q1VEkzbFN5NzAyVDdFWFU3bGRZVTZpUWkwWTdmSEJmYUpRYWhLWmRhei1tRUNCb0FSdkFqVV8wRndpRHp1bzFMSUpkU3loMGJUTjR5akwyenBQMkYxV3hzWW1tOU1PVHpR?oc=5",
       "title": "NLR Battery Innovation Awarded NASA’s Invention of the Year - nlr.gov",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-18T21:12:23.682Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 60,
@@ -1855,7 +1955,7 @@
       "key": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5",
       "title": "A History of Invention and Innovation - Boston University",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 60,
@@ -1865,7 +1965,7 @@
       "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5",
       "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - University of Waterloo",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 60,
@@ -1875,7 +1975,7 @@
       "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjlFdlN6cXhuRFUybHJiWS1XY1A4Rk9KaUhIMjcyRXY2bDFkYWtIUjRWM3ZUY29xNWlseFZpUEJwcXRwTm93cWQ4VUxEclJNa29iclBWc2Z3Z1hyejJVOWhZLWRiMER0dXg0aEZQa1BjVzFLaEw3SlIxUDJUaW1xVWhIdGJWbm5IbXpJakhTQjMwUk1EQmszdThqS0N0b1FTRTEtM0J5Ujk?oc=5",
       "title": "Malaysian Brothers Win Highest Invention Award at WYIE 2026 for AI Education Innovation - SME & Entrepreneurship Magazine",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 58,
       "confidence": 58,
@@ -1885,7 +1985,7 @@
       "key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTnFtQzhYUEdEY3lJeUp2WHFkTktKX2dWYUFReU1GaFdaMncweWtySDd5bFhCT3lWRkhxTU45d2xzenpqbUx5QVA3WmRIaTNzak43NU1iWkhfTElGWlYtb2UyRlRKWTlURDc2MUZnaHVETUR2Znd6YTFldzRudkQ3eGc3c0ttRXZGdVFrNTZ0b1hkVE9zMzhxXzVUNE5vRkQzQW5sT2NnTkVNODQ1T2M3dzI5RUpQTTlQU3ZtOXRlRQ?oc=5",
       "title": "From Invention to Impact: How India’s Deep Tech Startups Are Building an Innovation Economy Rooted in IP - CII Blog",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 60,
@@ -1905,7 +2005,7 @@
       "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOLWpnZVlpcElablcwOEszaWhVOTAxZHNyUFFEY1NsRVhJSTJiTUcxemZLSk1vSUxKVExKN2RKc0hvendSb1B4SDhfbVdNb0lOMnpaQ3B3MGEyTE5hZ1VYR1dQdTc3aFNUUHc1Vl85M1k2a0o1bjV1Qjk1eWdKZm9tSWFseWNmWUlmN0RV?oc=5",
       "title": "Apple Launching Seven New Products This Month - MacRumors",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 57,
       "confidence": 57,
@@ -1935,7 +2035,7 @@
       "key": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
       "title": "Apple unveils iPhone Duo - Apple",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 55,
       "confidence": 63,
@@ -2005,7 +2105,7 @@
       "key": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeGNzcmIteUo2YXdxbHlGS1k0YTlQRThCNXFpQUFZYkowNUZsamdReWQ4WmYxSVU2RXd6UUhXLWNUZUxkdW1SUFdiUlhIUzVlMF9UMWx2ZUJuWl9hdk1uU2tYck1uaVp1WlFkRmNuOFpFQTRfalpnYWZxbjN0RW5WLTZXZ3lPN3VmTlRla1Q0d0pJVWVINVVkcWdzQ2xISWhMc2tHWGVNc2xZM0NCbzVZ?oc=5",
       "title": "Innovation beyond invention will bring novel medicines to Europe’s patients - pharmaphorum",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 58,
       "confidence": 58,
@@ -2015,9 +2115,9 @@
       "key": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMG1IQ2lfeEpmYkE1ak9raUhiSS1HUkhxZmpKeTBqenQtX2tSQ2tzbGhYOVhZTzAyNGJ3UTFKTmZMaUZ1cjc2Qjg3M0lkVHIxUkF4eFRCWjk1ZE5YcXhTLVpBQndVa3A5V21jS1dSUjJDYlhBREpMNjhUY1ZuQ1VhQWN3NzN4bnNxelHSAZ4BQVVfeXFMUFJoZkIwQXZlb21BUkhjTXVKdnhpdl9QREtReVVxU1lqdXBRRHNUNTRFUFB4aDg5TW5kZG0xcGhwRzgtMnBXelJHa2hfR3NQTHFQeU9SNWZoOV9fWEpyY3g5cmhCRzZOMGotRWRJOFY5NzFaMFBmYkZlcVVBOVlTZVpZeU1qTHZvUE9ta2RKWUMtbDlfeUR1VGtGLVhmV1E?oc=5",
       "title": "How to improve medical device marketing strategies and accelerate product adoption - WSOC TV",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
-      "score": 55,
+      "score": 56,
       "confidence": 60,
       "evidenceLevel": "none"
     },
@@ -2193,9 +2293,9 @@
     },
     {
       "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWXlqTWJneVp6Zk1wNThKc3FZeVZWTlpBanMwYWNWeW52UmFwYk10SzY3WW1YTmcxdVJsLXpodS1OYlpNb3h1NFhaN2RDQVNpdVlQZHhGOTFBMlFFQnRNZkNPUXpDd3VENDVRYmZMc2tLREM0cU53U25NS0R4MkJERjh1N1ptd3VDQm8tNzBzXzF6MjVFcG4zS2pR?oc=5",
-      "title": "Apple will launch 15+ new products this fall, here’s what’s coming - 9to5Mac",
+      "title": "Apple will launch 15+ new products this fall, here’s what’s coming - 9to5mac.com",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 60,
       "confidence": 65,
@@ -2213,9 +2313,9 @@
     },
     {
       "key": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5",
-      "title": "Apple is about to launch five new products that I’m very excited for - 9to5Mac",
+      "title": "Apple is about to launch five new products that I’m very excited for - 9to5mac.com",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 59,
       "confidence": 64,
@@ -2225,7 +2325,7 @@
       "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
       "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - Cummins",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 56,
       "confidence": 58,
@@ -2235,7 +2335,7 @@
       "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
       "title": "America's true innovation advantage: we don't just invent technologies — we reinvent how innovation works - Fortune",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 57,
       "confidence": 60,
@@ -2245,7 +2345,7 @@
       "key": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
       "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - South China Morning Post",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 57,
       "confidence": 60,
@@ -2265,7 +2365,7 @@
       "key": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1zbDBtWTVVdFRiT29nNDR6eTEzNE5Fd0NmLTJVdWMzTEFZUEFhZ0dSY1V5cjRIRFA4eFNWb1RZVFN0RGdUQVFLYjB3NHZLTXNzSTdhNDhMQ0I2eHFVTW1n?oc=5",
       "title": "Optimal new product announcement strategies in supply chains: preannouncement or sudden announcement? - Nature",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T04:58:24.553Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 56,
       "confidence": 60,
@@ -2715,7 +2815,7 @@
       "key": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5",
       "title": "Leaders at Davos 2026 on how we can deploy innovation and technology at scale and responsibly - The World Economic Forum",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 55,
       "confidence": 58,
@@ -2723,9 +2823,9 @@
     },
     {
       "key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQT0Q2OWJjRkhxV1MtVkNZXzc0eVpVTlpHSF9ady1TWmdkRjJ5RGZPNkw0TTI5NTlwTUNlU1FCRGh6Qy1tcEl1QjJ4LTJ0SGFGZmg2R3F2dGpCNHRnbGVCZi1nZktqeUhqZ3ViUUwyc1NXQ2xwZzdUNUFXbXBzV2tVLVhMTlQ?oc=5",
-      "title": "6 recent scientific breakthroughs and discoveries - The Week",
+      "title": "6 recent scientific breakthroughs and discoveries - theweek.com",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 55,
       "confidence": 60,
@@ -2735,7 +2835,7 @@
       "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
       "title": "100K-winning invention could help better understand N.B. bridge integrity - CBC",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 55,
       "confidence": 60,
@@ -2855,7 +2955,7 @@
       "key": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVmszS2FVUEdhSXpxSVpMV0RuekNCbkExbWlUZDU0ckwtaGNfUkw1MjJEX01OTklia3JwamViXzdIRzQzMVMydGhJdnFKMXd0UG90ODM0UEF0WWd1S1pvSnFWLWJnanpDWjB6Z3E2azZpYTI2UlR4YzNaOXp4THI3YXl4bXZadWJGUzgwM25n?oc=5",
       "title": "Everything Apple could still launch before the end of 2026 - Macworld",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T04:58:24.553Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 57,
       "confidence": 57,
@@ -2865,7 +2965,7 @@
       "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZVUxTW01MHAtYk5NU3BqRU92OVRBUTAwenV3elJGaEVvSU44V1FpVFE3ZzBNQnp2NWJSQ1ZKTVBleFNGcmJ3MU1mZ2U4N3BNc0E0RkU1elpYSGNxTzZfZHBUUElrWkhCZnFwNElPNEVKN0NyRFBEWEo3dzlFV3pnbGoyTVBJeUM1VjhaTGdWTUZ6Qkt4cXpRQXdn?oc=5",
       "title": "China is the real winner from Europe’s war on food innovation - euractiv.com",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 54,
       "confidence": 57,
@@ -2875,9 +2975,9 @@
       "key": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOEZxZHl5Z09vcHROZERHSU00TG1BV2VZcUtLQUo1RHZPRU9qMXFTcEJuYnRxRnRsSzlSQW9Ua21XY3RIeC14NWxuSmhUU3BYZkdMMS1Ed2xDQWtvWDdZcHp6aTdyTXRfMFBHYUg2Q0t6UGUyeVA5QkR3dUkyVWlYQjlxcVJCcDh2X2VxUWdTVlhselNDWTFnUU90aU9aTHVHNjdCbXAxdE9ZYUdOa2NpUGdYcENxczVZLTRBUHN1MzhVdzllN05uazk3d1MwMklNcUFR?oc=5",
       "title": "Australia iPhone 18 launch descends into chaos as line-cutter claims he’s first in world to buy device: ‘I’m the first!’ - New York Post",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
-      "score": 64,
+      "score": 62,
       "confidence": 66,
       "evidenceLevel": "none"
     },
@@ -3005,7 +3105,7 @@
       "key": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9BR2ZzcDRMbGphY1pfMF9mVWVCZGUyV25mbHpZMnRjQUxWWWgtWGZqSk93eXEweHNlOU1MTW85d2hLc3NvT2E4Znd4ZG5DR1diQTZPcFExTi1wcC1t?oc=5",
       "title": "Previewing GPT-5.6 Sol: a next-generation model - OpenAI",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 55,
       "confidence": 64,
@@ -3385,9 +3485,9 @@
       "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4aDVWTV9VN3ZUSF9CemZCNXNrWktncnBiOWF4cjRqOUxqcURLMUFWYm1DY3VxM0kwbk5tM1VEYkl1aXFibVFzMHpEUWNvbTBaejBkSk1LV2NzOW5MLXpKMVZuM0xvUnJ2?oc=5",
       "title": "Best New Product Launch Email Templates to Use in 2026 - Designmodo",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
-      "score": 56,
+      "score": 57,
       "confidence": 58,
       "evidenceLevel": "none"
     },
@@ -3405,7 +3505,7 @@
       "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
       "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - Apple",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 56,
       "confidence": 64,
@@ -3415,19 +3515,19 @@
       "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBDbHYwX2dSOHducXZsZGQ0N1hVOGI5Ymh2RGpUT1l0d0stX2RVT0ZMNW5IMUpEUVRUV3M1OUZSbjc0dVdoLTVTTlFkOXhMSUY3X29Sc0pmeGdmVGtQa0U2TklYV242RDB6V0JadThfNG1YZlNianRFcExPbw?oc=5",
       "title": "On Enters Football alongside Kylian Mbappé - press.on-running.com",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T11:28:05.875Z",
-      "decision": "review",
-      "score": 66,
-      "confidence": 76,
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "hold",
+      "score": 60,
+      "confidence": 69,
       "evidenceLevel": "none"
     },
     {
       "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxONV9aTW53YlMzR1RyNVVnT01TWGJIM2xSbzcwUHI3aURlNlhIZ2NLUVV1Q2Jpb1hkeGFLcC1qTzdQRGV6OXBQNFIwRnZIR0s1TUM0VUpqMFcwTWtibm1qTE90NkJOb3NCTzFkS3FOaml1SzVvZ1M1OXU0VjNDSVc0R3BR?oc=5",
       "title": "Google Gemini Broke Into Real Company Systems After Security Test Domain Mix-Up - The Hacker News",
       "category": "Digital Life",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "review",
-      "score": 72,
+      "score": 75,
       "confidence": 80,
       "evidenceLevel": "none"
     },
@@ -3435,7 +3535,7 @@
       "key": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMW9tNXJZd0JQaVM1d0lCTHFNUHBkZFlKRE8wRFYzQjFfdElLLUFUS0ZicmtPRE4xQTNyLVdldkotY2lRWWp2cUxvTFRZcWg2czVnSEQteTRBNzZaLUM0bVRXNV9oenB0TW9nZVdaZHh4dFFyU2thcXBYQjZyMUtvMzBhbm83VU5maURqcndFaU5QYlRZbVN5enFKSGVVXy1LUmpQRjlvQkVwZnNyQTV5Q9IBtwFBVV95cUxOVkczaVBUTW52WEZDdUZQTkdnMmFUSzE1OVJTYWVQbmpvVXRCNXo2SW5QWmxYRFpWSVN3ZTRkOXBmU0tZOUlhbGVJR0F3ei15Ty02ZEEzUTlrcnJhTWtmSlBJRTZWRnltdVdGZnpWTWFQZDNISjRHaWFLUFNvTEp4WU9EMVo1SUpGQktzQjQwdXg2WmtsbFBIaXZxdlpwMzlpcDRzajRfc3lzMS1ucFB5VWVnWm42bVU?oc=5",
       "title": "India’s next challenge — from invention to global scale - The Hindu",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 57,
       "confidence": 60,
@@ -3455,7 +3555,7 @@
       "key": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbmlKWWxnQzVUbTIxMVhhTVd4a2cycVpqaHEtNkZseDFtNk5RUzRPeVhVb1hkaS1HZUh0WFRkMUx6LVM2a3UzZjJSeDAxVE1aaWctMkZMT2J6cmtZZXNfRjVNM3JZckxfYmJYN19EXzNFclVQZHl4eVpjS3RjcDJ4QkRkY3ZXYnlPY3Bxb1dXUXdNckE4cXpCOW1qaUUzbFphYjlTbUgtSDVmbFJDenZvb0VDbmpDNUVVc3FRQXlR?oc=5",
       "title": "New product identifiers show up in Apple's backend, don't indicate release timing - AppleInsider",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 56,
       "confidence": 58,
@@ -3465,7 +3565,7 @@
       "key": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
       "title": "News | The University of Alabama in Huntsville - The University of Alabama in Huntsville",
       "category": "Innovation",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 54,
       "confidence": 60,
@@ -3555,27 +3655,27 @@
       "key": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xQ25WNU1mQW41eU9JajRkSzl3M3NNSVJ3dVM4TmRzZTByWm84clhCYWpXZzJuTGE0LWpBUERxWXNuQVhiSHhabGlBOGFrWVZNaVA0U21nbExmOW8?oc=5",
       "title": "Google's Gemini AI hacked three companies in security test - BBC",
       "category": "Digital Life",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "review",
       "score": 77,
-      "confidence": 89,
+      "confidence": 85,
       "evidenceLevel": "strong"
     },
     {
       "key": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
       "title": "Gemini went rogue, hacked three companies, and Google hid it",
       "category": "Digital Life",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "review",
-      "score": 73,
-      "confidence": 84,
+      "score": 76,
+      "confidence": 85,
       "evidenceLevel": "strong"
     },
     {
       "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSjRzdmZCOXJRTkVEWmotS2QzZGM3ejFWeGMzZkRfT3dkLTB3c0s2Rml6RE1nU3FRSmNxNDBaQlpRQ0FJYWxOUWd6MFIwVjEwT3l5aWJXLUdsQU1Sdk9PYnRRTjFLUnJoUkNlQzNXcTRaR0hyNnRQSkdkd2tRSkEtblJnVnZlZTRlUm1N?oc=5",
       "title": "Apple Upgrade launches in the United States - Apple",
       "category": "Product Launches",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "hold",
       "score": 55,
       "confidence": 63,
@@ -3584,10 +3684,10 @@
     {
       "key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWjdUWU9tYzBhcjAwR1AzWkhVczUyUG9SUThfTFNuWEl0VFdHVUFzR1pDb3l3amRZWktfRUtvOFp3a0xZellIODVSTGdJOGd0dnQ2NlNoeVE5OHNEY0swRXJPcDhxSDI5bmJlV29icV91dXYxZGNRdDA2LTV3OTlnQUp6RldkYTJKT1IydVgtTnk5QXRUVkFGdEl3WFp1OVlOMWVaeHpEcw?oc=5",
       "title": "Exclusive | Gemini Hacked Three Companies in First Known Breakout by Google’s AI - WSJ",
-      "category": "Digital Life",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "category": "AI",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "review",
-      "score": 70,
+      "score": 73,
       "confidence": 80,
       "evidenceLevel": "strong"
     },
@@ -3615,7 +3715,7 @@
       "key": "https://www.theverge.com/entertainment/996855/anamanaguchi-anyway-yeah-i-guess-interview-music",
       "title": "Anamanaguchi has ‘too goddamn many’ browser tabs open right now",
       "category": "Digital Life",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "review",
       "score": 69,
       "confidence": 93,
@@ -3625,7 +3725,7 @@
       "key": "https://www.theverge.com/gadgets/997467/hyte-x50-pc-case-deal-sale",
       "title": "The colorful, unique Hyte X50 PC case is $50 off",
       "category": "Digital Life",
-      "lastSeenAt": "2026-09-19T16:02:00.495Z",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
       "decision": "review",
       "score": 69,
       "confidence": 93,
@@ -3660,6 +3760,96 @@
       "score": 67,
       "confidence": 91,
       "evidenceLevel": "single-source-verified"
+    },
+    {
+      "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNkJoMXpka2RtQ2Y4ZTFGQ1hfellDbDBBSVgxR2ZWMW5xeXF3aU5KellVM09aa0hMTnYyZXhEWkRYTS1uZTdGVGJmbHhaZGJXZk95NWQtdkgyVFBaVmlNUFhDT1g0UmpMdTBYSFJjN0gxdVpkTS1YU0tZckQ3Ni1EeG1fd29RUDNIZzhBb184dDVXRVdpR1hXV2lRSEZHdw?oc=5",
+      "title": "Google’s Gemini AI hacked 3 companies during security tests - New York Post",
+      "category": "Digital Life",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "publish_candidate",
+      "score": 80,
+      "confidence": 88,
+      "evidenceLevel": "strong"
+    },
+    {
+      "key": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOd2JUVnRBU0lXS2FuZmJqcUVfRXZiUW1ZZkU2QUxTeVBVRWlMWW5jcm1FXzJ4UzV5Q1QtSTVmNzdrekFQS2pNVXhpVmtUZUpqMGdhS1Z5T3pNMkZJVEdOTjBqMUl6V3pLRkZMdHgxMnNMVzhhbnBmWXdoZ1lFSXQ5aXBLaDNYLUN6Rm1CNjY0V0xjSURVcV8zcTA1ZUFNVmlGVTV3MXpvVXljbmRQZUMxYzRiY0xzNmktS2xOUVhoQklZYUdOdjBxcmh6c1hNT254d2Vj?oc=5",
+      "title": "Google’s artificial intelligence system, Gemini, escaped its testing environment in May and hacked into three companies, the search giant said on Friday. https://nyti.ms/4xDyj2O - facebook.com",
+      "category": "AI",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "review",
+      "score": 81,
+      "confidence": 86,
+      "evidenceLevel": "none"
+    },
+    {
+      "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdkNoYkh1c3Q5M202YVZEV0FvWVRPVGxndFRkR3hNMGpZT2I2N0JUSGlsZWZHVDFUM2R1cXBPRjFxbS1CZkhjS3lrRFN1eTFkWWloT1Q2VHNNOVVWSVVOUHFIbkNjT3g5VXVFQ3dTeEhaTjdXd0dleVhmVHRGcEh0MFdUZ1dTbnhwYjVTNDBqdzZaTm1hSDVhRnlEQdIBoAFBVV95cUxOc1hic1lOWTVoak1NUE1raHJ4QVV5aDlZNmxFVndqV1A4eTVPN19FNWhCNElfMDAycHNWbG12dktoS29WX1RuSGg1RFBqOFE3cENSVXNtZW1sQm9QYzdvRmVKMkRCNjdnT3lpWmY4dmM5TXRUaHFSbTJLcmVkVGZzdC10TXhfTWNFWWMxOHR1c0hua0lYbHhjcll6SlNuZEl2?oc=5",
+      "title": "Google Gemini also Broke Out of Its Test Environment - Security Affairs",
+      "category": "Digital Life",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "review",
+      "score": 76,
+      "confidence": 82,
+      "evidenceLevel": "strong"
+    },
+    {
+      "key": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+      "title": "Google’s Gemini is the latest AI model to hack other companies",
+      "category": "AI",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "review",
+      "score": 77,
+      "confidence": 90,
+      "evidenceLevel": "strong"
+    },
+    {
+      "key": "https://www.theverge.com/policy/997805/trump-cnn-msnow-politico-ban",
+      "title": "Trump treads further on free speech with new journalist bans",
+      "category": "Digital Life",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "review",
+      "score": 72,
+      "confidence": 91,
+      "evidenceLevel": "strong"
+    },
+    {
+      "key": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yVXE5YTI5dDR5YjNpVHIzYnhMQ3huclFnajVuczZBaU40U2RqQkFXMFVOVXJJTWo5SzlVN0tQMkhvdm84bDJMa2lkc2NKbDlHWVFlX2c4VzFyVmFqdFdzbkdqMDNBSXE0N3ZHR3BKdVBzcG44emoxcA?oc=5",
+      "title": "Trump to create ‘AI Force’ to monitor technology as fears over out-of-control agents grow - The Guardian",
+      "category": "Technology",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "review",
+      "score": 70,
+      "confidence": 90,
+      "evidenceLevel": "single-source-verified"
+    },
+    {
+      "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRnFFUE00amhVMG1WMmZZMTQ2Smt4cXFrbDlodUg0cnVNZGhyY2lIZEVNaG1uNUUta1dMd2IxeFVBMS1BLURpUlcxOXliQVQtaGhscFVXTkJmZ040ekdpM1V0djF2WXlZYzJ4alVCMmhtNmQzaHlwMTB0TzF4aUVDckRvdzdDMXpVRklvdGpScFFONVpjNmZhVEhvNGhiUlZvMjNPdkJrc1bSAa4BQVVfeXFMTXNXaW41TXQ4WFpCeUh2N3ZxLUJvNmhmUkhlX2pnQU5UakdWZ203VHVMTi1OR0tFTXNHeWxrN0ZrdTRHQ3MtWkVHM1pfNDFJMUhZOFNPX1k3cm9JUGVWT2Zqby1ibTN6OTNJRy0yeXZzQlJ6b1hHZXlDY3EzLWFSeC1ieHBwUlZYdEN2OTBOd2gwWTRGdjJWVl82S3NuQXRLbmc3MDc4a2ZNSDFsLURB?oc=5",
+      "title": "Trump says US has struck security agreement with Denmark over Greenland - ABC News - Breaking News, Latest News and Videos",
+      "category": "Digital Life",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "review",
+      "score": 68,
+      "confidence": 77,
+      "evidenceLevel": "strong"
+    },
+    {
+      "key": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdlUxSzVyRDR0XzBRTk1iWDRRcDRKQU40eG1mc3hKNk5jV0JpSFlKODh3czVtek0xaE9uelpfbzFzNlRrOExPX2l1ZFNTQU85dzUtc19rck1nQXZweFllekpGeHVBQWp2VXN4WkhRLUVaSjR5RGo4MEsyLWdkZmhiaWk1ZGdjQl9j?oc=5",
+      "title": "How Long Will Apple Provide Software Support For Your AirPods? - bgr.com",
+      "category": "Technology",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "review",
+      "score": 68,
+      "confidence": 84,
+      "evidenceLevel": "none"
+    },
+    {
+      "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2ZIZm96WTJEd0VmOHpDRlh5NXhvNjRwSVhQTHR2U3JIRjJ6QVdqRjgtYkxMaFRvVzRVTkxDMDcxV1FOOXpYeDhaMGU1M3h6NlBUR2p2Y054d1I5enVQR1JwbnRVN3RHSHJRVVFWcjNfcFNqTU9OWmFyajNRWWM3XzJyb1hCNm10dFVTRGdxaUMtd19lZVc3SURLMGZMQVRILUdfbUVXZVRNUQ?oc=5",
+      "title": "Army invention identifies bio-materials for future military technology - army.mil",
+      "category": "Innovation",
+      "lastSeenAt": "2026-09-19T20:57:28.739Z",
+      "decision": "hold",
+      "score": 52,
+      "confidence": 58,
+      "evidenceLevel": "none"
     }
   ],
   "articles": [
@@ -3668,6 +3858,12 @@
       "title": "AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026",
       "category": "AI",
       "publishedAt": "2026-09-17T09:11:07.530Z"
+    },
+    {
+      "file": "ai-doomsday-fears-what-can-ordinary-people-actually-do.md",
+      "title": "AI doomsday fears: what can ordinary people actually do?",
+      "category": "AI",
+      "publishedAt": "2026-09-19T20:42:07.386Z"
     },
     {
       "file": "al-gore-says-the-real-ai-risk-isn-t-data-centers.md",
@@ -3779,7 +3975,7 @@
     }
   ],
   "categories": {
-    "AI": 6,
+    "AI": 7,
     "Technology": 4,
     "Digital Life": 2,
     "Crypto": 3,
@@ -3788,13 +3984,13 @@
   },
   "sources": {
     "evidenceCandidates": 230,
-    "passed": 79,
-    "blocked": 19,
-    "strong": 22,
-    "singleSource": 57
+    "passed": 76,
+    "blocked": 9,
+    "strong": 30,
+    "singleSource": 46
   },
   "decisionMemory": {
     "records": 200,
-    "updatedAt": "2026-09-19T15:55:03.824Z"
+    "updatedAt": "2026-09-19T20:41:59.295Z"
   }
 }
