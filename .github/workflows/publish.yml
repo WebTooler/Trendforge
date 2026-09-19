@@ -21,6 +21,8 @@ on:
       - 'scripts/verify-article-claims-v2.mjs'
       - 'scripts/verify-article-claims-smart.mjs'
       - 'scripts/test-claim-verifier-deterministic.mjs'
+      - 'scripts/test-claim-verifier.mjs'
+      - 'package.json'
       - 'scripts/repair-article-grounding.mjs'
       - 'scripts/editorial-intelligence.mjs'
       - 'scripts/article-lifecycle.mjs'
@@ -57,7 +59,10 @@ env:
   COHERE_MODEL: ${{ vars.COHERE_MODEL }}
 
 jobs:
+  # Production publishing remains main-only. Feature branches run deterministic
+  # regression checks below so source changes never spend AI/image quota.
   pipeline:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -235,3 +240,20 @@ jobs:
           git commit -m 'chore: update TrendForge content pipeline'
           git push origin HEAD:main
           echo 'Pipeline output pushed successfully without rebasing source commits.'
+
+
+  claim-verifier-regression:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install dependencies
+        run: npm install
+      - name: Claim verifier regression suite
+        run: npm run claims:test
