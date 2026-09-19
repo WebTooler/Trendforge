@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "generatedAt": "2026-09-19T03:48:08.523Z",
+  "generatedAt": "2026-09-19T03:58:05.719Z",
   "minimumStrongSources": 2,
   "minimumStrongPublisherFamilies": 2,
   "minimumStrongDomains": 2,
@@ -10,6 +10,37 @@
   ],
   "policy": "Source-page integrity is required for generation. Two independent publisher families is strong evidence, but a single verified publisher article may enter the generation path and remains subject to writer grounding, claim verification, editorial quality, safety and SEO gates.",
   "report": [
+    {
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE80cm9TNHlBT0xsOHVSN09RM0VnOVlzNFJmVWFGNmtqSF94YmlxVHhkTkZfbGI5dFV0U3NGb0lqaVR1S2VJS2Vyb0FNVERwdnpZSkFWSmNhcWd0U0J1TFVaZUVjeExza3BSbVV3dWMxUlJMdm5wc2F6dlBjOFI?oc=5",
+      "title": "Google Gemini AI model hacks three other companies - WVTM",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "wvtm13.com"
+      ],
+      "independentDomains": [
+        "wvtm13.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.wvtm13.com/article/google-gemini-ai-hacks-companies/73797054",
+          "domain": "wvtm13.com",
+          "publisherFamily": "wvtm13.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.wvtm13.com/article/google-gemini-ai-hacks-companies/73797054",
+          "pageTitle": "Google Gemini AI model hacks three other companies - WVTM",
+          "canonical": "https://www.wvtm13.com/article/google-gemini-ai-hacks-companies/73797054",
+          "bodyChars": 2249,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
     {
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNeUo4TFlnSHFTVTg5MlhVZC1lM2FkZER1MHZDWEJQaHp1YVdCVExBTE5EdUF6Tk1ZTmpzQjc3c3JWU3RDV04zWTN0VFNZN0MyUndHcTFZNFh0cFVQMndIMkRlaE8yTWY3WHBIYUk3RjFSWWxv?oc=5",
       "title": "AI security experts say they used Claude to hack ChatGPT - CBS News",
@@ -206,37 +237,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1GR215MXpFWG9NeE9FWEZrNm9wRE1MaXJHdGZrMUQ0NEtUQ1dxb3pKWWtCN25MbURsc0tlN1ItT0FBSk9uaU5mZWx2cGJZLTFNTHRIdGc2bHljUW9GaUJtaGNUWEM5VnJtTHpXTFRPa1BEVnBYeHhxS2x3?oc=5",
-      "title": "Hackers breached OpenAI, adding to fever pitch of security and safety concerns - NBC News",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "nbcnews.com"
-      ],
-      "independentDomains": [
-        "nbcnews.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.nbcnews.com/tech/security/hackers-breach-openai-rcna598518",
-          "domain": "nbcnews.com",
-          "publisherFamily": "nbcnews.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.nbcnews.com/tech/security/hackers-breach-openai-rcna598518",
-          "pageTitle": "Hackers breached OpenAI, adding to fever pitch of security and safety concerns",
-          "canonical": "https://www.nbcnews.com/tech/security/hackers-breach-openai-rcna598518",
-          "bodyChars": 3241,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQd0thaHR4aDhGeFJGS1BCUlZ0Y1lla1JBbnRZeXM2dFdTV1V3dXk2UE1QeU9oSDQwc2YwZFlQMEtqY2UzTUFLNmh5THVQZ1lsblFOSFlrNkQyUmdiMF9ka21pb09JRERWS2pPVWdlUUp3MWV3LTNrTDdacWhMLWk4QklOVUdmWjhuV3p2ZkFGdWMzamlHWDJzMU9GMkE4a2lfcVd3RGdLZnNCZmdaQmk5czJScTlGRzZr?oc=5",
       "title": "Disney names first-ever chief technology officer, a day after tapping ex-YouTube executive to run streaming - Los Angeles Times",
       "status": "pass",
@@ -365,17 +365,19 @@
       "title": "Bitcoin and ethereum prices today, Friday, September 18, 2026: Crypto prices rise as investors move past CLARITY's failure - Yahoo Finance",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 6,
-      "independentPublisherCount": 4,
+      "validSourceCount": 7,
+      "independentPublisherCount": 5,
       "independentPublisherFamilies": [
         "247wallst.com",
         "financemagnates.com",
+        "hindustantimes.com",
         "ssbcrack.com",
         "cryptotimes.io"
       ],
       "independentDomains": [
         "247wallst.com",
         "financemagnates.com",
+        "hindustantimes.com",
         "news.ssbcrack.com",
         "cryptotimes.io"
       ],
@@ -398,7 +400,7 @@
           "finalUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
           "pageTitle": "Crypto Prices Today: Why Bitcoin, XRP and Solana Are All Down Before the CLARITY Act Vote - 24/7 Wall St.",
           "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
-          "bodyChars": 7603,
+          "bodyChars": 7687,
           "topicOverlap": 12
         },
         {
@@ -424,8 +426,21 @@
           "finalUrl": "https://247wallst.com/investing/2026/09/18/bitmine-climbs-4-as-ethereum-rallies-despite-clarity-act-failure-sharplink-gains-3/",
           "pageTitle": "Bitmine Climbs 4% as Ethereum Rallies Despite CLARITY Act Failure; Sharplink Gains 3% - 24/7 Wall St.",
           "canonical": "https://247wallst.com/investing/2026/09/18/bitmine-climbs-4-as-ethereum-rallies-despite-clarity-act-failure-sharplink-gains-3/",
-          "bodyChars": 7991,
+          "bodyChars": 8075,
           "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.hindustantimes.com/world-news/us-news/why-are-bitcoin-and-ethereum-falling-today-crypto-prices-drop-after-clarity-act-setback-and-ahead-of-us-fed-meeting-tod-101789568800564.html",
+          "domain": "hindustantimes.com",
+          "publisherFamily": "hindustantimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.hindustantimes.com/world-news/us-news/why-are-bitcoin-and-ethereum-falling-today-crypto-prices-drop-after-clarity-act-setback-and-ahead-of-us-fed-meeting-tod-101789568800564.html",
+          "pageTitle": "Why are BTC and ETH falling today? Crypto prices drop after CLARITY Act setback and ahead of US Fed meeting today | Hindustan Times",
+          "canonical": "https://www.hindustantimes.com/world-news/us-news/why-are-bitcoin-and-ethereum-falling-today-crypto-prices-drop-after-clarity-act-setback-and-ahead-of-us-fed-meeting-tod-101789568800564.html",
+          "bodyChars": 7526,
+          "topicOverlap": 13
         },
         {
           "suppliedUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/the-clarity-act-died-on-tuesday-by-friday-the-sec-and-cftc-had-written-three-rules-what-changed-for-xrp-bitcoin-and-solana/",
@@ -437,7 +452,7 @@
           "finalUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/the-clarity-act-died-on-tuesday-by-friday-the-sec-and-cftc-had-written-three-rules-what-changed-for-xrp-bitcoin-and-solana/",
           "pageTitle": "The CLARITY Act Died on Tuesday. By Friday the SEC and CFTC Had Written Three Rules. What Changed for XRP, Bitcoin, and Solana? - 24/7 Wall St.",
           "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/18/the-clarity-act-died-on-tuesday-by-friday-the-sec-and-cftc-had-written-three-rules-what-changed-for-xrp-bitcoin-and-solana/",
-          "bodyChars": 8960,
+          "bodyChars": 9044,
           "topicOverlap": 12
         },
         {
@@ -454,19 +469,6 @@
           "topicOverlap": 13
         },
         {
-          "suppliedUrl": "https://www.openpr.com/news/4635956/best-crypto-to-invest-in-as-senate-votes-on-clarity-act-bitcoin",
-          "domain": "openpr.com",
-          "publisherFamily": "openpr.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.openpr.com/news/4635956/best-crypto-to-invest-in-as-senate-votes-on-clarity-act-bitcoin",
-          "pageTitle": "Best Crypto to Invest in as Senate Votes on CLARITY Act: Bitcoin,",
-          "canonical": "https://www.openpr.com/news/4635956/best-crypto-to-invest-in-as-senate-votes-on-clarity-act-bitcoin",
-          "bodyChars": 0,
-          "topicOverlap": 10
-        },
-        {
           "suppliedUrl": "https://www.cryptotimes.io/2026/09/18/bitcoin-reclaims-80k-as-crypto-markets-recover-from-clarity-act-blow/",
           "domain": "cryptotimes.io",
           "publisherFamily": "cryptotimes.io",
@@ -478,6 +480,67 @@
           "canonical": "https://www.cryptotimes.io/2026/09/18/bitcoin-reclaims-80k-as-crypto-markets-recover-from-clarity-act-blow/",
           "bodyChars": 4330,
           "topicOverlap": 12
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
+      "title": "World model companies are keeping a lot of secrets",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
+      "independentPublisherFamilies": [
+        "techcrunch.com",
+        "theguardian.com",
+        "thedebrief.org"
+      ],
+      "independentDomains": [
+        "techcrunch.com",
+        "theguardian.com",
+        "thedebrief.org"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
+          "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
+          "pageTitle": "World model companies are keeping a lot of secrets | TechCrunch",
+          "canonical": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
+          "bodyChars": 4877,
+          "topicOverlap": 4
+        },
+        {
+          "suppliedUrl": "https://www.theguardian.com/news/2021/oct/03/pandora-papers-biggest-ever-leak-of-offshore-data-exposes-financial-secrets-of-rich-and-powerful",
+          "domain": "theguardian.com",
+          "publisherFamily": "theguardian.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theguardian.com/news/2021/oct/03/pandora-papers-biggest-ever-leak-of-offshore-data-exposes-financial-secrets-of-rich-and-powerful",
+          "pageTitle": "Pandora papers: biggest ever leak of offshore data exposes financial secrets of rich and powerful | World news | The Guardian",
+          "canonical": "https://www.theguardian.com/news/2021/oct/03/pandora-papers-biggest-ever-leak-of-offshore-data-exposes-financial-secrets-of-rich-and-powerful",
+          "bodyChars": 14833,
+          "topicOverlap": 14
+        },
+        {
+          "suppliedUrl": "https://thedebrief.org/its-classified-a-deep-dive-into-the-dark-world-of-keeping-secrets/",
+          "domain": "thedebrief.org",
+          "publisherFamily": "thedebrief.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://thedebrief.org/its-classified-a-deep-dive-into-the-dark-world-of-keeping-secrets/",
+          "pageTitle": "It&#039;s Classified! A Deep Dive Into the Dark World of Keeping Secrets - The Debrief",
+          "canonical": "https://thedebrief.org/its-classified-a-deep-dive-into-the-dark-world-of-keeping-secrets/",
+          "bodyChars": 25011,
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
@@ -546,29 +609,118 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1oVmRjQVgxMHR6VnBZbUIxamFSQ1lXanpuU080VEhkWFVDNHlXbDJhMHBNNWo0MFBsd2lMSTMwcjJpREJTZUozVzVQLWUzUkdUUG9RbDJtY3hjSVhnR2ZFTFlEOFc1aVNNeTFOZHdTTzNDWHFCNlE?oc=5",
+      "title": "Gemini AI Hacked Three Companies in a Testing Breakout, Google Says - The New York Times",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 5,
+      "independentPublisherCount": 5,
+      "independentPublisherFamilies": [
+        "trendingtopics.eu",
+        "straitstimes.com",
+        "ndtv.com",
+        "news18.com",
+        "livemint.com"
+      ],
+      "independentDomains": [
+        "trendingtopics.eu",
+        "straitstimes.com",
+        "ndtv.com",
+        "news18.com",
+        "livemint.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.trendingtopics.eu/gemini-agents-hacked-three-companies/",
+          "domain": "trendingtopics.eu",
+          "publisherFamily": "trendingtopics.eu",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.trendingtopics.eu/gemini-agents-hacked-three-companies/",
+          "pageTitle": "Google&#039;s Gemini Agents Hacked Three Companies in Testing Breakout",
+          "canonical": "https://www.trendingtopics.eu/gemini-agents-hacked-three-companies/",
+          "bodyChars": 6586,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://www.straitstimes.com/world/united-states/gemini-hacked-3-companies-in-first-known-breakout-by-googles-ai-wall-street-journal",
+          "domain": "straitstimes.com",
+          "publisherFamily": "straitstimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.straitstimes.com/world/united-states/gemini-hacked-3-companies-in-first-known-breakout-by-googles-ai-wall-street-journal",
+          "pageTitle": "Gemini hacked 3 companies in first known breakout by Google’s AI | The Straits Times",
+          "canonical": "https://www.straitstimes.com/world/united-states/gemini-hacked-3-companies-in-first-known-breakout-by-googles-ai-wall-street-journal",
+          "bodyChars": 2104,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.ndtv.com/world-news/gemini-hacked-three-companies-in-first-known-breakout-by-google-ai-wsj-reports-12066939",
+          "domain": "ndtv.com",
+          "publisherFamily": "ndtv.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.ndtv.com/world-news/gemini-hacked-three-companies-in-first-known-breakout-by-google-ai-wsj-reports-12066939",
+          "pageTitle": "Gemini Hacked 3 Companies In First Known Breakout By Google&#039;s AI: Report",
+          "canonical": "https://www.ndtv.com/world-news/gemini-hacked-three-companies-in-first-known-breakout-by-google-ai-wsj-reports-12066939",
+          "bodyChars": 1525,
+          "topicOverlap": 6
+        },
+        {
+          "suppliedUrl": "https://www.news18.com/world/google-gemini-ai-accessed-internet-hacked-other-companies-cybersecurity-test-guessed-passwords-public-credentials-ws-l-10340174.html",
+          "domain": "news18.com",
+          "publisherFamily": "news18.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.news18.com/world/google-gemini-ai-accessed-internet-hacked-other-companies-cybersecurity-test-guessed-passwords-public-credentials-ws-l-10340174.html",
+          "pageTitle": "Google Gemini Hacked Three Companies, Accessed Internet, Guessed Credentials During Cybersecurity Test | World News - News18",
+          "canonical": "https://www.news18.com/world/google-gemini-ai-accessed-internet-hacked-other-companies-cybersecurity-test-guessed-passwords-public-credentials-ws-l-10340174.html",
+          "bodyChars": 4596,
+          "topicOverlap": 12
+        },
+        {
+          "suppliedUrl": "https://www.livemint.com/technology/googles-gemini-breaks-out-of-test-environment-to-hack-three-external-firms-report-11789785729332.html",
+          "domain": "livemint.com",
+          "publisherFamily": "livemint.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.livemint.com/technology/googles-gemini-breaks-out-of-test-environment-to-hack-three-external-firms-report-11789785729332.html",
+          "pageTitle": "Google’s Gemini breaks out of test environment to hack three external firms: Report | Mint",
+          "canonical": "https://www.livemint.com/technology/googles-gemini-breaks-out-of-test-environment-to-hack-three-external-firms-report-11789785729332.html",
+          "bodyChars": 3151,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQR0lyZGs1ZUF3b0k3YS1laTNXMWZuR2dLaXJaeThJbDItdjdad2RCMk9SRzF5ajAxcWJ3cTJ1ZU9XTE9KMzJuWEJETWFNTW5mV2lZZjh2MFhSZVU4VFJaeUdBRXY5VXdHNHlPMEhwQ2ZfUFYyR0ZqTEc3V3VsLW9oc0pjRENLQ0N0eS12eDB4dlRLczJmemVXQ3dyeXlnMUJ2d1IzSU1idkJOZW8xVlI1S1JBZnZCTG9jQW4yTlZn?oc=5",
       "title": "Trump says US, Denmark, Greenland entered into agreement on US control over security - Reuters",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 7,
+      "validSourceCount": 6,
+      "independentPublisherCount": 6,
       "independentPublisherFamilies": [
         "cedarnews.net",
         "dw.com",
         "newscord.org",
         "globalbankingandfinance.com",
-        "com.my",
-        "firstpost.com",
-        "aljazeera.com"
+        "nypost.com",
+        "com.my"
       ],
       "independentDomains": [
         "cedarnews.net",
         "dw.com",
         "newscord.org",
         "globalbankingandfinance.com",
-        "nst.com.my",
-        "firstpost.com",
-        "aljazeera.com"
+        "nypost.com",
+        "nst.com.my"
       ],
       "sources": [
         {
@@ -637,6 +789,19 @@
           "topicOverlap": 9
         },
         {
+          "suppliedUrl": "https://nypost.com/2026/09/18/us-news/trump-announces-greenland-deal-with-denmark-giving-us-permanent-control-over-security/",
+          "domain": "nypost.com",
+          "publisherFamily": "nypost.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://nypost.com/2026/09/18/us-news/trump-announces-greenland-deal-with-denmark-giving-us-permanent-control-over-security/",
+          "pageTitle": "Trump announces Greenland deal with Denmark giving US 'permanent control over security'",
+          "canonical": "https://nypost.com/2026/09/18/us-news/trump-announces-greenland-deal-with-denmark-giving-us-permanent-control-over-security/",
+          "bodyChars": 4972,
+          "topicOverlap": 9
+        },
+        {
           "suppliedUrl": "https://www.nst.com.my/amp/world/world/2026/09/1535836/trump-unveils-infinite-deal-permanent-us-security-control-over",
           "domain": "nst.com.my",
           "publisherFamily": "com.my",
@@ -648,36 +813,10 @@
           "canonical": "https://www.nst.com.my/world/world/2026/09/1535836/trump-unveils-infinite-deal-permanent-us-security-control-over",
           "bodyChars": 3283,
           "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.firstpost.com/world/us-denmark-greenland-reach-deal-to-expand-american-military-presence-on-the-island-trump-says-14046956.html",
-          "domain": "firstpost.com",
-          "publisherFamily": "firstpost.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.firstpost.com/world/us-denmark-greenland-reach-deal-to-expand-american-military-presence-on-the-island-trump-says-14046956.html",
-          "pageTitle": "Trump gets 'permanent control' over Greenland, announces deal with Denmark",
-          "canonical": "https://www.firstpost.com/world/us-denmark-greenland-reach-deal-to-expand-american-military-presence-on-the-island-trump-says-14046956.html",
-          "bodyChars": 3784,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.aljazeera.com/news/2026/1/22/trumps-greenland-pact-will-demand-allies-boost-arctic-security-nato-chief",
-          "domain": "aljazeera.com",
-          "publisherFamily": "aljazeera.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.aljazeera.com/news/2026/1/22/trumps-greenland-pact-will-demand-allies-boost-arctic-security-nato-chief",
-          "pageTitle": "Greenland and Denmark say sovereignty ‘red line’ after latest Trump remarks | Donald Trump News | Al Jazeera",
-          "canonical": "https://www.aljazeera.com/news/2026/1/22/trumps-greenland-pact-will-demand-allies-boost-arctic-security-nato-chief",
-          "bodyChars": 5488,
-          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVWk0bGVJdm9YYWxjbzlnV3dqQjdTSlc4VUFlVldob20zSzMyVi1MUUNzUll6Q2t6MjN2M2Z4Wk9nVkpvUkVaYzlkaUFqdkxyRjA0WEtydzk3ckF2aTFOLXZEekJtVFlLS3BWcnpFZDF0amowajNFNXA5THhnczZqN3hVVzdITG95cXZBVFJZVGJMcUN2Vk1zbV9PNEV6djhLWlpGeUZHY1ZjdjZIYVN2WEZZWGV5N211ZDZMZzdtN1QxUFBSdWtj?oc=5",
@@ -736,52 +875,6 @@
           "canonical": "https://aws.amazon.com/blogs/machine-learning/migrating-multi-model-ai-agents-to-amazon-bedrock-agentcore-runtime/",
           "bodyChars": 10499,
           "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZ0cxMVRQMTF4TFhQTlJGQ2dKMUo2WEFRWGVKQmN2OGJVZl9TTEtUMXJIbXdyWWlUc3pVM0lhYUhuRzIwNEtBd21hODRFMExFM3hGQ3drRFhzZGFSOGVpQXRQeVU1R1ZqeVowenA4QzI3Ry14VlhKZGtsbmtnd21YS21iV0RLVTFudUhtUVY2aDNNcU9Bb1Z0SkctdnlfdjQxeWd5NHVwdUtyOXV0Slk3S3B5S1liM0RlUDNILXRYSQ?oc=5",
-      "title": "Space Force to prototype new software to fuse commercial, military space tracking data - Breaking Defense",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "breakingdefense.com",
-        "ts2.tech"
-      ],
-      "independentDomains": [
-        "breakingdefense.com",
-        "ts2.tech"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://breakingdefense.com/2026/09/space-force-to-prototype-new-software-to-fuse-commercial-military-space-tracking-data/",
-          "domain": "breakingdefense.com",
-          "publisherFamily": "breakingdefense.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://breakingdefense.com/2026/09/space-force-to-prototype-new-software-to-fuse-commercial-military-space-tracking-data/",
-          "pageTitle": "Space Force to prototype new software to fuse commercial, military space tracking data - Breaking Defense",
-          "canonical": "https://breakingdefense.com/2026/09/space-force-to-prototype-new-software-to-fuse-commercial-military-space-tracking-data/",
-          "bodyChars": 3725,
-          "topicOverlap": 11
-        },
-        {
-          "suppliedUrl": "https://ts2.tech/en/space-forces-secret-480-satellite-milnet-inside-spacexs-new-military-starlink-revolution/",
-          "domain": "ts2.tech",
-          "publisherFamily": "ts2.tech",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://ts2.tech/en/space-forces-secret-480-satellite-milnet-inside-spacexs-new-military-starlink-revolution/",
-          "pageTitle": "Space Force’s Secret 480-Satellite MILNET: Inside SpaceX’s New Military “Starlink” Revolution",
-          "canonical": "https://ts2.tech/en/space-forces-secret-480-satellite-milnet-inside-spacexs-new-military-starlink-revolution/",
-          "bodyChars": 46224,
-          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -924,97 +1017,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1oVmRjQVgxMHR6VnBZbUIxamFSQ1lXanpuU080VEhkWFVDNHlXbDJhMHBNNWo0MFBsd2lMSTMwcjJpREJTZUozVzVQLWUzUkdUUG9RbDJtY3hjSVhnR2ZFTFlEOFc1aVNNeTFOZHdTTzNDWHFCNlE?oc=5",
-      "title": "Gemini AI Hacked Three Companies in a Testing Breakout, Google Says - The New York Times",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 5,
-      "independentPublisherCount": 5,
-      "independentPublisherFamilies": [
-        "trendingtopics.eu",
-        "straitstimes.com",
-        "ndtv.com",
-        "news18.com",
-        "livemint.com"
-      ],
-      "independentDomains": [
-        "trendingtopics.eu",
-        "straitstimes.com",
-        "ndtv.com",
-        "news18.com",
-        "livemint.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.trendingtopics.eu/gemini-agents-hacked-three-companies/",
-          "domain": "trendingtopics.eu",
-          "publisherFamily": "trendingtopics.eu",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.trendingtopics.eu/gemini-agents-hacked-three-companies/",
-          "pageTitle": "Google&#039;s Gemini Agents Hacked Three Companies in Testing Breakout",
-          "canonical": "https://www.trendingtopics.eu/gemini-agents-hacked-three-companies/",
-          "bodyChars": 6586,
-          "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://www.straitstimes.com/world/united-states/gemini-hacked-3-companies-in-first-known-breakout-by-googles-ai-wall-street-journal",
-          "domain": "straitstimes.com",
-          "publisherFamily": "straitstimes.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.straitstimes.com/world/united-states/gemini-hacked-3-companies-in-first-known-breakout-by-googles-ai-wall-street-journal",
-          "pageTitle": "Gemini hacked 3 companies in first known breakout by Google’s AI | The Straits Times",
-          "canonical": "https://www.straitstimes.com/world/united-states/gemini-hacked-3-companies-in-first-known-breakout-by-googles-ai-wall-street-journal",
-          "bodyChars": 2104,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.ndtv.com/world-news/gemini-hacked-three-companies-in-first-known-breakout-by-google-ai-wsj-reports-12066939",
-          "domain": "ndtv.com",
-          "publisherFamily": "ndtv.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.ndtv.com/world-news/gemini-hacked-three-companies-in-first-known-breakout-by-google-ai-wsj-reports-12066939",
-          "pageTitle": "Gemini Hacked 3 Companies In First Known Breakout By Google&#039;s AI: Report",
-          "canonical": "https://www.ndtv.com/world-news/gemini-hacked-three-companies-in-first-known-breakout-by-google-ai-wsj-reports-12066939",
-          "bodyChars": 1525,
-          "topicOverlap": 6
-        },
-        {
-          "suppliedUrl": "https://www.news18.com/world/google-gemini-ai-accessed-internet-hacked-other-companies-cybersecurity-test-guessed-passwords-public-credentials-ws-l-10340174.html",
-          "domain": "news18.com",
-          "publisherFamily": "news18.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.news18.com/world/google-gemini-ai-accessed-internet-hacked-other-companies-cybersecurity-test-guessed-passwords-public-credentials-ws-l-10340174.html",
-          "pageTitle": "Google Gemini Hacked Three Companies, Accessed Internet, Guessed Credentials During Cybersecurity Test | World News - News18",
-          "canonical": "https://www.news18.com/world/google-gemini-ai-accessed-internet-hacked-other-companies-cybersecurity-test-guessed-passwords-public-credentials-ws-l-10340174.html",
-          "bodyChars": 4596,
-          "topicOverlap": 12
-        },
-        {
-          "suppliedUrl": "https://www.livemint.com/technology/googles-gemini-breaks-out-of-test-environment-to-hack-three-external-firms-report-11789785729332.html",
-          "domain": "livemint.com",
-          "publisherFamily": "livemint.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.livemint.com/technology/googles-gemini-breaks-out-of-test-environment-to-hack-three-external-firms-report-11789785729332.html",
-          "pageTitle": "Google’s Gemini breaks out of test environment to hack three external firms: Report | Mint",
-          "canonical": "https://www.livemint.com/technology/googles-gemini-breaks-out-of-test-environment-to-hack-three-external-firms-report-11789785729332.html",
-          "bodyChars": 3151,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQWVd2TGlYS3ZxOWlMT3A0ZVJtZGZYcGlqLXMtUlBuQzJyZEtfSkxkaWJrQWxMNHg5cHZ5TUh6cnJhNE1SRWprWVM2dkduNFNHTVRGYVpzYWNSUXFlN2xwdllITFYtbm10NHpxUngwd1A3TjFBNlp3TXJCZVVtbEloM1FBc3FZZEN3czRYRlVFY25MN2g0VjVJZlZ0NVlxYldhVUdHT25wZEI2aGFOcGtUalVMSDBHbGNIekthZUxmZUZUN3hUTWs1c0xvZ05sdnhFZlpONw?oc=5",
@@ -1170,95 +1172,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBlWVY0TTlvREROcE9XR0tjbHRHUU05TUNiRW9iZmg3Tnl6aWVXaS03Nlk0dVRReEtuNDhlWDVBby1kc2V2RzROUS1kV3NQSVpNbmFQa1V2Si05cnZvdFAzSVRXZC1FYmpqZ0wwOFUxdzRHbjc3TlE?oc=5",
-      "title": "U.S. and Denmark Reach Security Deal on Greenland, Trump Says - The New York Times",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 4,
-      "independentPublisherCount": 4,
-      "independentPublisherFamilies": [
-        "straitstimes.com",
-        "economictimes.com",
-        "newscord.org",
-        "theguardian.com"
-      ],
-      "independentDomains": [
-        "straitstimes.com",
-        "m.economictimes.com",
-        "newscord.org",
-        "theguardian.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
-          "domain": "straitstimes.com",
-          "publisherFamily": "straitstimes.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
-          "pageTitle": "US and Denmark reach deal on Greenland, Trump says | The Straits Times",
-          "canonical": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
-          "bodyChars": 3742,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/amp_articleshow/134346089.cms",
-          "domain": "m.economictimes.com",
-          "publisherFamily": "economictimes.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/amp_articleshow/134346089.cms",
-          "pageTitle": "Trump says US reached 'infinite' security deal with Denmark over Greenland - The Economic Times",
-          "canonical": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/articleshow/134346089.cms",
-          "bodyChars": 2888,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
-          "domain": "newscord.org",
-          "publisherFamily": "newscord.org",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
-          "pageTitle": "Trump Secures Permanent U.S. Control Of Greenland Security In Deal With Denmark: how 96 outlets framed it | NewsCord",
-          "canonical": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
-          "bodyChars": 4463,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.theguardian.com/world/2026/sep/18/united-states-denmark-greenland-security",
-          "domain": "theguardian.com",
-          "publisherFamily": "theguardian.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theguardian.com/world/2026/sep/18/united-states-denmark-greenland-security",
-          "pageTitle": "US and Denmark reach security deal after Trump’s threats to take over Greenland | World news | The Guardian",
-          "canonical": "https://www.theguardian.com/world/2026/sep/18/united-states-denmark-greenland-security",
-          "bodyChars": 4952,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
-          "domain": "devdiscourse.com",
-          "publisherFamily": "devdiscourse.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
-          "pageTitle": "Trump says US, Denmark, Greenland entered into agreement on US control over security",
-          "canonical": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security",
-          "bodyChars": 458,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLVFWbWM5bmhTQk9aeEdObkhoYkREZTI4bklidjRCMHI0M2FkaURESmFkR3ZuelU5WGQ1cEl4cElORlkweGZsdnJUTnpMUnVLUFNFeXpwbHlNUHJxcjlndENXNnI0eDhPYS1zMzI4aVhMYWdjQzNCSVdRa0xscEYxWExIYw?oc=5",
       "title": "Trump says he's struck deal to give U.S. \"permanent control over security\" in Greenland - CBS News",
       "status": "pass",
@@ -1385,6 +1298,95 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBlWVY0TTlvREROcE9XR0tjbHRHUU05TUNiRW9iZmg3Tnl6aWVXaS03Nlk0dVRReEtuNDhlWDVBby1kc2V2RzROUS1kV3NQSVpNbmFQa1V2Si05cnZvdFAzSVRXZC1FYmpqZ0wwOFUxdzRHbjc3TlE?oc=5",
+      "title": "U.S. and Denmark Reach Security Deal on Greenland, Trump Says - The New York Times",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 4,
+      "independentPublisherCount": 4,
+      "independentPublisherFamilies": [
+        "straitstimes.com",
+        "newscord.org",
+        "economictimes.com",
+        "theguardian.com"
+      ],
+      "independentDomains": [
+        "straitstimes.com",
+        "newscord.org",
+        "m.economictimes.com",
+        "theguardian.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "domain": "straitstimes.com",
+          "publisherFamily": "straitstimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "pageTitle": "US and Denmark reach deal on Greenland, Trump says | The Straits Times",
+          "canonical": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "bodyChars": 3742,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
+          "domain": "newscord.org",
+          "publisherFamily": "newscord.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
+          "pageTitle": "Trump Secures Permanent U.S. Control Of Greenland Security In Deal With Denmark: how 96 outlets framed it | NewsCord",
+          "canonical": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
+          "bodyChars": 4463,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/amp_articleshow/134346089.cms",
+          "domain": "m.economictimes.com",
+          "publisherFamily": "economictimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/amp_articleshow/134346089.cms",
+          "pageTitle": "Trump says US reached 'infinite' security deal with Denmark over Greenland - The Economic Times",
+          "canonical": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/articleshow/134346089.cms",
+          "bodyChars": 2888,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.theguardian.com/world/2026/sep/18/united-states-denmark-greenland-security",
+          "domain": "theguardian.com",
+          "publisherFamily": "theguardian.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theguardian.com/world/2026/sep/18/united-states-denmark-greenland-security",
+          "pageTitle": "US and Denmark reach security deal after Trump’s threats to take over Greenland | World news | The Guardian",
+          "canonical": "https://www.theguardian.com/world/2026/sep/18/united-states-denmark-greenland-security",
+          "bodyChars": 4952,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
+          "domain": "devdiscourse.com",
+          "publisherFamily": "devdiscourse.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
+          "pageTitle": "Trump says US, Denmark, Greenland entered into agreement on US control over security",
+          "canonical": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security",
+          "bodyChars": 458,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNYjZLUXl0bmxiX2JaSWlxTlVCZ2g0Z3F6MWN4cmN6eUd3MmhIZ0ZxMlF0WXBJYzdWazVCaWs5UUo5VHE0YVVXN1ZkOTdHenltRndJVzNqUWJtUFBYcWh2czkwZVBZQ2dOVnlrSFNxZ0pOb1kya240N2lEYVpoM09ER3pMMjRhRDV5eUZ2WHM5VDYyV3RuTEt4T3JDSy02MWFzcFNHZlFvM1MyblRGbDFjSXRhR1FoZnc5Mm9sNVRlRU1fa0ktNXBFOHpXLXpiWUk?oc=5",
       "title": "Trump announces agreement with Denmark to secure ‘permanent’ control over Greenland’s security - NBC News",
       "status": "pass",
@@ -1450,21 +1452,23 @@
       "title": "US and Denmark reach security deal after Trump’s threats to take over Greenland - The Guardian",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 6,
-      "independentPublisherCount": 5,
+      "validSourceCount": 7,
+      "independentPublisherCount": 6,
       "independentPublisherFamilies": [
         "theguardian.com",
         "aol.com",
         "sundayguardianlive.com",
         "newscord.org",
-        "inkl.com"
+        "inkl.com",
+        "yahoo.com"
       ],
       "independentDomains": [
         "theguardian.com",
         "aol.com",
         "sundayguardianlive.com",
         "newscord.org",
-        "inkl.com"
+        "inkl.com",
+        "uk.news.yahoo.com"
       ],
       "sources": [
         {
@@ -1490,7 +1494,7 @@
           "finalUrl": "https://www.aol.com/articles/us-denmark-reach-security-deal-230227000.html",
           "pageTitle": "US and Denmark reach security deal after Trump’s threats to take over Greenland - AOL",
           "canonical": "https://www.theguardian.com/world/2026/sep/18/united-states-denmark-greenland-security",
-          "bodyChars": 4716,
+          "bodyChars": 4884,
           "topicOverlap": 8
         },
         {
@@ -1533,6 +1537,19 @@
           "topicOverlap": 9
         },
         {
+          "suppliedUrl": "https://uk.news.yahoo.com/trump-says-us-reached-greenland-221727958.html",
+          "domain": "uk.news.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://uk.news.yahoo.com/trump-says-us-reached-greenland-221727958.html",
+          "pageTitle": "Trump says US reached Greenland security deal - Yahoo News UK",
+          "canonical": "https://www.cnn.com/2026/09/18/politics/trump-us-greenland-security",
+          "bodyChars": 4059,
+          "topicOverlap": 7
+        },
+        {
           "suppliedUrl": "https://www.inkl.com/news/unacceptable-for-greenland-not-to-be-in-us-hands-says-trump",
           "domain": "inkl.com",
           "publisherFamily": "inkl.com",
@@ -1551,7 +1568,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPd05Ra2VzVkc3bWR2SUd4Q1ByY18ySF9zdnZHMG9sVzdjdHhaLUY3R0t5VUVneENqOEp4X3RnM3pEclBtZVJsNUhMZGt1cHIwUjVnNDVSWXBQMFRUUXhqNFV6TGlVdjVjSFJ0enMxX2M0YTRBdjktR3RWcl9qNVplVDFmZHE3VTBweDFJTEhCNDR6SHI3VWY0aXp6aVJiLW1IU3FsMUVzOHBOZnJWQm9keTh30gGyAUFVX3lxTE0xbXVHLVBxVXV2SHFQTjduNHlhSHlBTVRJSEh0SThXeEZSdVJvSlN0VkcyZ0NNUlpsd1dNQmtoTDQ1MEJ5a1lpZFFCdFlrcTBSMWRWQXVCQWxsaGxuVWNaNzJRb2FQbGRWOHhrZm1zak5IV3lXdW9HTzdxeHNoNkVYSHJjSnFYRFh6em02YVRQZVF0VjUzaTdRb0xrcE9SdHdacUZmZm1RQUFjVmlmdl9aQlE?oc=5",
-      "title": "US, Denmark reach deal over Greenland's security, Trump says - dw.com",
+      "title": "US, Denmark reach deal over Greenland's security, Trump says - DW.com",
       "status": "pass",
       "evidenceLevel": "strong",
       "validSourceCount": 4,
@@ -1643,21 +1660,17 @@
       "title": "Trump claims security, military deal with Denmark over Greenland - Axios",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 5,
-      "independentPublisherCount": 5,
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
       "independentPublisherFamilies": [
         "nypost.com",
         "independent.co.uk",
-        "censor.net",
-        "salon.com",
-        "yahoo.com"
+        "censor.net"
       ],
       "independentDomains": [
         "nypost.com",
         "independent.co.uk",
-        "censor.net",
-        "salon.com",
-        "yahoo.com"
+        "censor.net"
       ],
       "sources": [
         {
@@ -1698,32 +1711,112 @@
           "canonical": "https://censor.net/en/news/3529745/denmark-sends-private-messages-to-trump-team-on-greenland",
           "bodyChars": 3541,
           "topicOverlap": 8
-        },
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRnFFUE00amhVMG1WMmZZMTQ2Smt4cXFrbDlodUg0cnVNZGhyY2lIZEVNaG1uNUUta1dMd2IxeFVBMS1BLURpUlcxOXliQVQtaGhscFVXTkJmZ040ekdpM1V0djF2WXlZYzJ4alVCMmhtNmQzaHlwMTB0TzF4aUVDckRvdzdDMXpVRklvdGpScFFONVpjNmZhVEhvNGhiUlZvMjNPdkJrc1bSAa4BQVVfeXFMTXNXaW41TXQ4WFpCeUh2N3ZxLUJvNmhmUkhlX2pnQU5UakdWZ203VHVMTi1OR0tFTXNHeWxrN0ZrdTRHQ3MtWkVHM1pfNDFJMUhZOFNPX1k3cm9JUGVWT2Zqby1ibTN6OTNJRy0yeXZzQlJ6b1hHZXlDY3EzLWFSeC1ieHBwUlZYdEN2OTBOd2gwWTRGdjJWVl82S3NuQXRLbmc3MDc4a2ZNSDFsLURB?oc=5",
+      "title": "Trump says US has struck security agreement with Denmark over Greenland - ABC News - Breaking News, Latest News and Videos",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 6,
+      "independentPublisherCount": 6,
+      "independentPublisherFamilies": [
+        "abcnews.com",
+        "yahoo.com",
+        "abc7.com",
+        "net.au",
+        "abc7news.com",
+        "abc7chicago.com"
+      ],
+      "independentDomains": [
+        "abcnews.com",
+        "yahoo.com",
+        "abc7.com",
+        "abc.net.au",
+        "abc7news.com",
+        "abc7chicago.com"
+      ],
+      "sources": [
         {
-          "suppliedUrl": "https://www.salon.com/2025/01/12/we-have-troops-in-greenland-vance-nods-at-using-military-to-get-expansionist-deal-done/",
-          "domain": "salon.com",
-          "publisherFamily": "salon.com",
-          "resolvedFrom": "article-link",
+          "suppliedUrl": "https://abcnews.com/International/trump-us-struck-security-agreement-denmark-greenland/story?id=136572790",
+          "domain": "abcnews.com",
+          "publisherFamily": "abcnews.com",
+          "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.salon.com/2025/01/12/we-have-troops-in-greenland-vance-nods-at-using-military-to-get-expansionist-deal-done/",
-          "pageTitle": "\"We have troops in Greenland\": Vance nods at using military to get Trump&#039;s expansionist deal done - Salon.com",
-          "canonical": "https://www.salon.com/2025/01/12/we-have-troops-in-greenland-vance-nods-at-using-military-to-get-expansionist-deal-done/",
-          "bodyChars": 2271,
-          "topicOverlap": 11
+          "finalUrl": "https://abcnews.com/International/trump-us-struck-security-agreement-denmark-greenland/story?id=136572790",
+          "pageTitle": "Trump says US has struck security agreement with Denmark over Greenland - ABC News",
+          "canonical": "https://abcnews.com/International/trump-us-struck-security-agreement-denmark-greenland/story?id=136572790",
+          "bodyChars": 5741,
+          "topicOverlap": 7
         },
         {
-          "suppliedUrl": "https://www.yahoo.com/news/world/article/what-are-the-details-of-trumps-new-greenland-deal-and-why-did-he-back-down-from-acquiring-the-whole-arctic-island-190346334.html",
+          "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-says-hes-struck-deal-231627306.html",
           "domain": "yahoo.com",
           "publisherFamily": "yahoo.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.yahoo.com/news/world/article/what-are-the-details-of-trumps-new-greenland-deal-and-why-did-he-back-down-from-acquiring-the-whole-arctic-island-190346334.html",
-          "pageTitle": "What are the details of Trump's new Greenland 'deal'? And why did he back down from acquiring the whole Arctic island?",
-          "canonical": "https://www.yahoo.com/news/world/article/what-are-the-details-of-trumps-new-greenland-deal-and-why-did-he-back-down-from-acquiring-the-whole-arctic-island-190346334.html",
-          "bodyChars": 8984,
+          "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-says-hes-struck-deal-231627306.html",
+          "pageTitle": "Trump says he's struck deal for \"permanent control over security\" in Greenland",
+          "canonical": "https://www.cbsnews.com/news/trump-u-s-greenland-deal-security-denmark-bases/",
+          "bodyChars": 4366,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://abc7.com/story/trump-says-he-has-deal-denmark-bolster-us-military-presence-greenland/19847856/",
+          "domain": "abc7.com",
+          "publisherFamily": "abc7.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://abc7.com/story/trump-says-he-has-deal-denmark-bolster-us-military-presence-greenland/19847856/",
+          "pageTitle": "Trump says he has a deal with Denmark to bolster US military presence in Greenland - ABC7 Los Angeles",
+          "canonical": "https://abc7.com/story/trump-says-he-has-deal-denmark-bolster-us-military-presence-greenland/19847856/",
+          "bodyChars": 1719,
           "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.abc.net.au/news/2026-09-19/donald-trump-announces-deal-with-denmark-us-military-greenland/107171964",
+          "domain": "abc.net.au",
+          "publisherFamily": "net.au",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.abc.net.au/news/2026-09-19/donald-trump-announces-deal-with-denmark-us-military-greenland/107171964",
+          "pageTitle": "US and Denmark reach deal over Greenland after Donald Trump's vows to take island - ABC News",
+          "canonical": "https://www.abc.net.au/news/2026-09-19/donald-trump-announces-deal-with-denmark-us-military-greenland/107171964",
+          "bodyChars": 6698,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://abc7news.com/story/danish-pm-says-greenland-is-not-sale-trump-joins-nato-leaders-turkey/19470369/",
+          "domain": "abc7news.com",
+          "publisherFamily": "abc7news.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://abc7news.com/story/danish-pm-says-greenland-is-not-sale-trump-joins-nato-leaders-turkey/19470369/",
+          "pageTitle": "Danish PM says Greenland is 'not for sale' as Trump joins NATO leaders in Turkey - ABC7 San Francisco",
+          "canonical": "https://abc7news.com/story/danish-pm-says-greenland-is-not-sale-trump-joins-nato-leaders-turkey/19470369/",
+          "bodyChars": 6279,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://abc7chicago.com/post/donald-trump-greenland-news-how-us-could-take-region-part-nato-ally-denmark-potential-challenges/18382220/",
+          "domain": "abc7chicago.com",
+          "publisherFamily": "abc7chicago.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://abc7chicago.com/post/donald-trump-greenland-news-how-us-could-take-region-part-nato-ally-denmark-potential-challenges/18382220/",
+          "pageTitle": "Donald Trump, Greenland news: How US could take over region that's part of NATO ally Denmark and potential challenges - ABC7 Chicago",
+          "canonical": "https://abc7chicago.com/post/donald-trump-greenland-news-how-us-could-take-region-part-nato-ally-denmark-potential-challenges/18382220/",
+          "bodyChars": 7058,
+          "topicOverlap": 13
         }
       ],
       "recoveryAttempts": 0,
@@ -1741,6 +1834,37 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOEZxZHl5Z09vcHROZERHSU00TG1BV2VZcUtLQUo1RHZPRU9qMXFTcEJuYnRxRnRsSzlSQW9Ua21XY3RIeC14NWxuSmhUU3BYZkdMMS1Ed2xDQWtvWDdZcHp6aTdyTXRfMFBHYUg2Q0t6UGUyeVA5QkR3dUkyVWlYQjlxcVJCcDh2X2VxUWdTVlhselNDWTFnUU90aU9aTHVHNjdCbXAxdE9ZYUdOa2NpUGdYcENxczVZLTRBUHN1MzhVdzllN05uazk3d1MwMklNcUFR?oc=5",
+      "title": "Australia iPhone 18 launch descends into chaos as line-cutter claims he’s first in world to buy device: ‘I’m the first!’ - New York Post",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "nypost.com"
+      ],
+      "independentDomains": [
+        "nypost.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://nypost.com/2026/09/18/tech/australia-iphone-18-launch-descends-into-chaos-as-line-cutter-claims-hes-first-in-world-to-buy-device/",
+          "domain": "nypost.com",
+          "publisherFamily": "nypost.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://nypost.com/2026/09/18/tech/australia-iphone-18-launch-descends-into-chaos-as-line-cutter-claims-hes-first-in-world-to-buy-device/",
+          "pageTitle": "Australia iPhone 18 launch descends into chaos as line-cutter claims he's first in world to buy device",
+          "canonical": "https://www.news.com.au/technology/gadgets/mobile-phones/iphone-18-pro-sydney-launch-queuejumper-sparks-chaos/news-story/29a89074e2fbae3e350e64e5f5dc1ee7",
+          "bodyChars": 3977,
+          "topicOverlap": 11
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcTctd0dHaWRvVldNejZuV0d2Xy13Q3VRaTBOdjdzVldjYWxVOEFWZWJiakM2bWtJLU9NOVh6LWlYS0ZuV3dsMzFQOHFvXzBKaHlDSVhxb3lack9fcHUwQWwwUjhoSDVMLTZNbjZPbEMwMklzeU93T2xBWTltbmFOa3YzNXRZZlEzcXYyUzZSVVlrQnRGTHhuTUZ0Z0U?oc=5",
@@ -1969,37 +2093,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOEZxZHl5Z09vcHROZERHSU00TG1BV2VZcUtLQUo1RHZPRU9qMXFTcEJuYnRxRnRsSzlSQW9Ua21XY3RIeC14NWxuSmhUU3BYZkdMMS1Ed2xDQWtvWDdZcHp6aTdyTXRfMFBHYUg2Q0t6UGUyeVA5QkR3dUkyVWlYQjlxcVJCcDh2X2VxUWdTVlhselNDWTFnUU90aU9aTHVHNjdCbXAxdE9ZYUdOa2NpUGdYcENxczVZLTRBUHN1MzhVdzllN05uazk3d1MwMklNcUFR?oc=5",
-      "title": "Australia iPhone 18 launch descends into chaos as line-cutter claims he’s first in world to buy device: ‘I’m the first!’ - New York Post",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "nypost.com"
-      ],
-      "independentDomains": [
-        "nypost.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://nypost.com/2026/09/18/tech/australia-iphone-18-launch-descends-into-chaos-as-line-cutter-claims-hes-first-in-world-to-buy-device/",
-          "domain": "nypost.com",
-          "publisherFamily": "nypost.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://nypost.com/2026/09/18/tech/australia-iphone-18-launch-descends-into-chaos-as-line-cutter-claims-hes-first-in-world-to-buy-device/",
-          "pageTitle": "Australia iPhone 18 launch descends into chaos as line-cutter claims he's first in world to buy device",
-          "canonical": "https://www.news.com.au/technology/gadgets/mobile-phones/iphone-18-pro-sydney-launch-queuejumper-sparks-chaos/news-story/29a89074e2fbae3e350e64e5f5dc1ee7",
-          "bodyChars": 3977,
-          "topicOverlap": 11
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNLWxxSUpCZk1JVkJ5ajlxLWZZcU16Q09tSDBtbUxCTmxsM3lhejlxX3ZCbnEwSk1MMkVRb1BYYWkwb0NNdmU5SzdreUN6b2wxVWJ4TU91YWxxMGVBUERpcV94bjVKdG1qbnRUYThGMm10VmhtZl9nUklwLVZpU1JOVXdjaWQ?oc=5",
       "title": "Bitcoin, Strategy Stock, Coinbase Surge. Why Cryptos Are Rallying Against All Odds. - Barron's",
       "status": "block",
@@ -2042,12 +2135,11 @@
       "title": "Researchers used Claude to hack OpenAI",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 8,
-      "independentPublisherCount": 8,
+      "validSourceCount": 7,
+      "independentPublisherCount": 7,
       "independentPublisherFamilies": [
         "arstechnica.com",
         "techcrunch.com",
-        "theregister.com",
         "the-decoder.com",
         "newscord.org",
         "theverge.com",
@@ -2057,7 +2149,6 @@
       "independentDomains": [
         "arstechnica.com",
         "techcrunch.com",
-        "theregister.com",
         "the-decoder.com",
         "newscord.org",
         "theverge.com",
@@ -2096,13 +2187,13 @@
           "domain": "theregister.com",
           "publisherFamily": "theregister.com",
           "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
+          "ok": false,
+          "reason": "insufficient-article-body",
           "finalUrl": "https://www.theregister.com/security/2026/09/18/researchers-used-claude-to-hack-openai-employees-chatgpt-accounts/5297517",
-          "pageTitle": "Researchers used Claude to hack OpenAI employees' ChatGPT accounts",
-          "canonical": "https://www.theregister.com/security/2026/09/18/researchers-used-claude-to-hack-openai-employees-chatgpt-accounts/5297517",
-          "bodyChars": 5548,
-          "topicOverlap": 9
+          "pageTitle": "Are we human?",
+          "canonical": "",
+          "bodyChars": 0,
+          "topicOverlap": 5
         },
         {
           "suppliedUrl": "https://the-decoder.com/security-researchers-used-anthropics-claude-to-hack-openais-internal-systems-in-under-72-hours/",
@@ -2231,19 +2322,6 @@
           "topicOverlap": 7
         },
         {
-          "suppliedUrl": "https://www.govtech.com/artificial-intelligence/virginia-takes-aim-at-data-center-development-energy-use",
-          "domain": "govtech.com",
-          "publisherFamily": "govtech.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.govtech.com/artificial-intelligence/virginia-takes-aim-at-data-center-development-energy-use",
-          "pageTitle": "Virginia Takes Aim at Data Center Development, Energy Use",
-          "canonical": "https://www.govtech.com/artificial-intelligence/virginia-takes-aim-at-data-center-development-energy-use",
-          "bodyChars": 0,
-          "topicOverlap": 5
-        },
-        {
           "suppliedUrl": "https://www.washingtonpost.com/politics/2026/09/18/spanberger-acts-restrict-new-data-centers-virginia/",
           "domain": "washingtonpost.com",
           "publisherFamily": "washingtonpost.com",
@@ -2255,6 +2333,19 @@
           "canonical": "https://www.washingtonpost.com/politics/2026/09/18/spanberger-acts-restrict-new-data-centers-virginia/",
           "bodyChars": 379,
           "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.govtech.com/artificial-intelligence/virginia-takes-aim-at-data-center-development-energy-use",
+          "domain": "govtech.com",
+          "publisherFamily": "govtech.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.govtech.com/artificial-intelligence/virginia-takes-aim-at-data-center-development-energy-use",
+          "pageTitle": "Virginia Takes Aim at Data Center Development, Energy Use",
+          "canonical": "https://www.govtech.com/artificial-intelligence/virginia-takes-aim-at-data-center-development-energy-use",
+          "bodyChars": 0,
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -2270,22 +2361,22 @@
       "independentPublisherFamilies": [
         "theverge.com",
         "americankahani.com",
+        "biggo.com",
         "ibtimes.sg",
         "variety.com",
         "newscord.org",
         "ua.news",
-        "cartoonbrew.com",
-        "mediaplaynews.com"
+        "cartoonbrew.com"
       ],
       "independentDomains": [
         "theverge.com",
         "americankahani.com",
+        "finance.biggo.com",
         "ibtimes.sg",
         "variety.com",
         "newscord.org",
         "ua.news",
-        "cartoonbrew.com",
-        "mediaplaynews.com"
+        "cartoonbrew.com"
       ],
       "sources": [
         {
@@ -2312,6 +2403,19 @@
           "pageTitle": "‘Someone to Wire the Worlds Together’: How Karandeep Anand Became Disney&#039;s First Ever Chief Technology Officer - American Kahani",
           "canonical": "https://americankahani.com/business/someone-to-wire-the-worlds-together-how-karandeep-anand-became-disneys-first-ever-chief-technology-officer/",
           "bodyChars": 8500,
+          "topicOverlap": 12
+        },
+        {
+          "suppliedUrl": "https://finance.biggo.com/news/ef5d5fe9-335b-446d-82ba-197a2eee975c",
+          "domain": "finance.biggo.com",
+          "publisherFamily": "biggo.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://finance.biggo.com/news/ef5d5fe9-335b-446d-82ba-197a2eee975c",
+          "pageTitle": "Disney Creates First-Ever CTO Role, Taps Character.AI Chief Karandeep Anand — BigGo Finance",
+          "canonical": "https://finance.biggo.com/news/ef5d5fe9-335b-446d-82ba-197a2eee975c",
+          "bodyChars": 5317,
           "topicOverlap": 12
         },
         {
@@ -2378,19 +2482,6 @@
           "canonical": "https://www.cartoonbrew.com/artificial-intelligence/disney-karandeep-anand-chief-technology-officer-266827.html",
           "bodyChars": 2458,
           "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.mediaplaynews.com/disney-hires-ai-executive-karandeep-anand-as-companys-first-chief-technology-officer/",
-          "domain": "mediaplaynews.com",
-          "publisherFamily": "mediaplaynews.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.mediaplaynews.com/disney-hires-ai-executive-karandeep-anand-as-companys-first-chief-technology-officer/",
-          "pageTitle": "Disney Hires AI Executive Karandeep Anand as Company&#039;s First Chief Technology Officer - Media Play News",
-          "canonical": "https://www.mediaplaynews.com/disney-hires-ai-executive-karandeep-anand-as-companys-first-chief-technology-officer/",
-          "bodyChars": 3273,
-          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -2487,6 +2578,52 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOZ0cxMVRQMTF4TFhQTlJGQ2dKMUo2WEFRWGVKQmN2OGJVZl9TTEtUMXJIbXdyWWlUc3pVM0lhYUhuRzIwNEtBd21hODRFMExFM3hGQ3drRFhzZGFSOGVpQXRQeVU1R1ZqeVowenA4QzI3Ry14VlhKZGtsbmtnd21YS21iV0RLVTFudUhtUVY2aDNNcU9Bb1Z0SkctdnlfdjQxeWd5NHVwdUtyOXV0Slk3S3B5S1liM0RlUDNILXRYSQ?oc=5",
+      "title": "Space Force to prototype new software to fuse commercial, military space tracking data - Breaking Defense",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "breakingdefense.com",
+        "ts2.tech"
+      ],
+      "independentDomains": [
+        "breakingdefense.com",
+        "ts2.tech"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://breakingdefense.com/2026/09/space-force-to-prototype-new-software-to-fuse-commercial-military-space-tracking-data/",
+          "domain": "breakingdefense.com",
+          "publisherFamily": "breakingdefense.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://breakingdefense.com/2026/09/space-force-to-prototype-new-software-to-fuse-commercial-military-space-tracking-data/",
+          "pageTitle": "Space Force to prototype new software to fuse commercial, military space tracking data - Breaking Defense",
+          "canonical": "https://breakingdefense.com/2026/09/space-force-to-prototype-new-software-to-fuse-commercial-military-space-tracking-data/",
+          "bodyChars": 3725,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://ts2.tech/en/space-forces-secret-480-satellite-milnet-inside-spacexs-new-military-starlink-revolution/",
+          "domain": "ts2.tech",
+          "publisherFamily": "ts2.tech",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://ts2.tech/en/space-forces-secret-480-satellite-milnet-inside-spacexs-new-military-starlink-revolution/",
+          "pageTitle": "Space Force’s Secret 480-Satellite MILNET: Inside SpaceX’s New Military “Starlink” Revolution",
+          "canonical": "https://ts2.tech/en/space-forces-secret-480-satellite-milnet-inside-spacexs-new-military-starlink-revolution/",
+          "bodyChars": 46224,
+          "topicOverlap": 10
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNDZCX19JTFRDQlJZLXE0LXlYbXFNdWlRbkVlYndpSE1hcWYxeU9FZ2x2Z0t4bFdKeXZkMHdkaU5pbnE5MHB6YjloYTBvcFBvR3hGTEhSc1NrZlVXRXUzMGttMzVJZ3ZLT0JLQWNValBRTG56QmVpdXF0WGtpcWVGWFZacDlOOXZpa3pqUHZqY3FZNWdPaDBnMkJPVmo4RjNlaDFEUdIBuAFBVV95cUxPaER6dGs5NWtRejdCN1VINmd3ZjQyYVdqWi1kTUUzNWFnSDhxenFFUlVuaTJSSk9fMkdSSUxFQ0YtdzlqckwtXzdBU2F0S3hES1AtMHNJMzdVVm9zWmg2RGQ5T2xCbE4zNFBzeFc0OWNjbDVSMnF3b1V6NmxmYlFpSVBqeUNRbjJ4YTN5U0Mzc1RIRDB3dG5NV09qVVB2aHJVdVN3VVhiYW5sLVp4WUl0TmdiZnRzTnBY?oc=5",
@@ -2669,33 +2806,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOeEhXdkctcXdpVG5RdzFRVkFRMEdjTUdBeUtrZnNTc1FoRW1MZVlmN0hvVVFDSTNPWUtWUk5yeU5DZjI2U2l2SWZua21seml2elJVaEJIMTVSUmlHajFXYmJ2a3ZXb0piZGtuVmhlSE5lYWIwdVlXLW84alVvTUFFVjJudVc2Ym5ZaVdHUDlJbEs3VjdpTlNSU3ExRDRPamUxRE00cQ?oc=5",
-      "title": "Montgomery County, Pa., Has ‘Taken a Number of Steps’ on AI - GovTech",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.govtech.com/artificial-intelligence/montgomery-county-pa-has-taken-a-number-of-steps-on-ai",
-          "domain": "govtech.com",
-          "publisherFamily": "govtech.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.govtech.com/artificial-intelligence/montgomery-county-pa-has-taken-a-number-of-steps-on-ai",
-          "pageTitle": "Montgomery County, Pa., Has ‘Taken a Number of Steps’ on AI",
-          "canonical": "https://www.govtech.com/artificial-intelligence/montgomery-county-pa-has-taken-a-number-of-steps-on-ai",
-          "bodyChars": 0,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQ0JSZ0gzUjFpU2FPZjNuQjVFMHQ1RklMMWFTM3NLc3VGWnM3MXlKZHB2ckFnSzZ6YnM5cVJzM1RpQ3lSWTN0aFFFV2E4WkdwWUUtdkpBWU4wSW9UYXJFbmgyNU9pOWZNWnc0OXVFM2RKNXd1aU9SdC0tV2o5b20yaXlpNk5hZGRQYy1EWjFXQW04VU4teU03NTZFQXJYVW5XcnJvTnI3T2FEQVdQUC1WNGhuTF9aV2gxbExwTWJFczh2VWhLTkcyc3dR?oc=5",
@@ -2918,25 +3028,23 @@
       "title": "The Walt Disney Company Names Karandeep Anand To Newly Created Role Of Chief Technology Officer - The Walt Disney Company",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 7,
+      "validSourceCount": 6,
+      "independentPublisherCount": 6,
       "independentPublisherFamilies": [
         "thewaltdisneycompany.com",
         "eagletribune.com",
-        "joplinglobe.com",
         "bdtonline.com",
         "laughingplace.com",
         "newscord.org",
-        "americanbazaaronline.com"
+        "dapsmagic.com"
       ],
       "independentDomains": [
         "thewaltdisneycompany.com",
         "eagletribune.com",
-        "joplinglobe.com",
         "bdtonline.com",
         "laughingplace.com",
         "newscord.org",
-        "americanbazaaronline.com"
+        "dapsmagic.com"
       ],
       "sources": [
         {
@@ -2979,19 +3087,6 @@
           "topicOverlap": 10
         },
         {
-          "suppliedUrl": "https://www.joplinglobe.com/region/national_business/the-walt-disney-company-names-karandeep-anand-to-newly-created-role-of-chief-technology-officer/article_05c0b87d-8352-5e77-a84c-c11b4b8fa738.html",
-          "domain": "joplinglobe.com",
-          "publisherFamily": "joplinglobe.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.joplinglobe.com/region/national_business/the-walt-disney-company-names-karandeep-anand-to-newly-created-role-of-chief-technology-officer/article_05c0b87d-8352-5e77-a84c-c11b4b8fa738.html",
-          "pageTitle": "The Walt Disney Company Names Karandeep Anand to Newly Created Role of Chief Technology Officer | National Business | joplinglobe.com",
-          "canonical": "https://www.businesswire.com/news/home/20260918458816/en/",
-          "bodyChars": 1212,
-          "topicOverlap": 10
-        },
-        {
           "suppliedUrl": "https://www.bdtonline.com/region/the-walt-disney-company-names-karandeep-anand-to-newly-created-role-of-chief-technology-officer/article_4829c27a-a23b-5ff3-9459-73d71649bb08.html",
           "domain": "bdtonline.com",
           "publisherFamily": "bdtonline.com",
@@ -3031,21 +3126,52 @@
           "topicOverlap": 13
         },
         {
-          "suppliedUrl": "https://americanbazaaronline.com/2026/09/18/disney-names-former-character-ai-ceo-karandeep-anand-as-chief-technology-officer-488456/",
-          "domain": "americanbazaaronline.com",
-          "publisherFamily": "americanbazaaronline.com",
+          "suppliedUrl": "https://dapsmagic.com/2026/09/karandeep-anand-named-chief-technology-officer-of-the-walt-disney-company/",
+          "domain": "dapsmagic.com",
+          "publisherFamily": "dapsmagic.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://americanbazaaronline.com/2026/09/18/disney-names-former-character-ai-ceo-karandeep-anand-as-chief-technology-officer-488456/",
-          "pageTitle": "Disney names former Character.AI CEO Karandeep Anand as chief technology officer",
-          "canonical": "https://americanbazaaronline.com/2026/09/18/disney-names-former-character-ai-ceo-karandeep-anand-as-chief-technology-officer-488456/",
-          "bodyChars": 3820,
-          "topicOverlap": 9
+          "finalUrl": "https://dapsmagic.com/2026/09/karandeep-anand-named-chief-technology-officer-of-the-walt-disney-company/",
+          "pageTitle": "Karandeep Anand Named Chief Technology Officer of The Walt Disney Company",
+          "canonical": "https://dapsmagic.com/2026/09/karandeep-anand-named-chief-technology-officer-of-the-walt-disney-company/",
+          "bodyChars": 4686,
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeTF6bU5sanU4M2kzcFpQOEdidi1aeE5udEI2bGFjNDdwanRQTEpHVFdDcmpvNW0xMTd2bjhDTF9RMWU4MmZoOWZaNkpaSjVYSEdMelNCQTZDb3l3NC1hWEVQTVl2N0NmVF9CWHZIc0JueEpoRF9VbGlJZ3E4dmxKcDlEMWp5SUVWcVFUZHhXdDM2MS1XMGfSAaoBQVVfeXFMT2d5Y2NIRUg2ZVR3dDBFUURaQ0ZGSEtEWEtCZ2pfVHVJd0FCeXhXaTgwcUJfbDE5clNTeVhtcGVRMnNQYVh1eWtVV3FDUzNTblJudmxTZ3FIY1pXS3FtaEt4aUxkbGhKbk5vLXUwaEJXZDA4ZG9iSW1xZFJGeWhXaklkVnZQLWZ1NEgxOExQLVYzQnpQV2gxQ1d6d2tRdDFacTc1STFZTTA3Q3c?oc=5",
+      "title": "Card skimming scams evolve as technology advances, experts say - WBRC",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "wbrc.com"
+      ],
+      "independentDomains": [
+        "wbrc.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.wbrc.com/2026/09/19/card-skimming-scams-evolve-technology-advances-experts-say/",
+          "domain": "wbrc.com",
+          "publisherFamily": "wbrc.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.wbrc.com/2026/09/19/card-skimming-scams-evolve-technology-advances-experts-say/",
+          "pageTitle": "Card skimming scams evolve as technology advances, experts say",
+          "canonical": "https://www.wbrc.com/2026/09/19/card-skimming-scams-evolve-technology-advances-experts-say/",
+          "bodyChars": 6129,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5aTkg5WloxeGtEYlJzRWlVdVdtREtlOEF3eEpTRG1uem03emNiZUpFRlJCSzdka3luclo0ZmgxalNpSmhIeF9tSV9ROW9VeWVnbFdYWDFKVQ?oc=5",
@@ -3079,28 +3205,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZmZVMW51UVhWZktkVkg3ajQ0R3pHRUIxVC1odlBZckl4VXVGSXF6eHF0dEItR3NCVkxycDBuY3VCekhkTjdsVzlhZkU3V0t2ZFdOZGdkZnBMc2tvT2RacnVYTlQybGZGZ19MTzRudkNSQkpPM05mdjJjU2l5dkYyM0drczBVWDB0cUI1Nm5oSkpNMVcwRDRSNEVFMElNOGc?oc=5",
-      "title": "What Does Micron Technology (MU) Warning Of Shortages Through 2027 Mean? - Yahoo Finance",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://finance.yahoo.com/markets/stocks/articles/does-micron-technology-mu-warning-001915512.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMTBtbmh0Ul95UTdjLXNLTDZjaEhrWTEzb2lFTG1fdkhKakhvNjNTNDU1TDZXaHBGbWxqaFctY2hjay1wVVdRM0hYWGJRNnh5cVdGRHFjQ0xBeTFaQjBfQ01SMUJ1QWl6Vl9VNGN0VmVvZVBiSThQT2VsWHJyR3VoNV9rT0RvTktJUlVZZzF4MWQ?oc=5",
       "title": "Could trees developed with gene-editing technology protect Florida's citrus industry? - NPR",
       "status": "pass",
@@ -3132,14 +3236,37 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZmZVMW51UVhWZktkVkg3ajQ0R3pHRUIxVC1odlBZckl4VXVGSXF6eHF0dEItR3NCVkxycDBuY3VCekhkTjdsVzlhZkU3V0t2ZFdOZGdkZnBMc2tvT2RacnVYTlQybGZGZ19MTzRudkNSQkpPM05mdjJjU2l5dkYyM0drczBVWDB0cUI1Nm5oSkpNMVcwRDRSNEVFMElNOGc?oc=5",
+      "title": "What Does Micron Technology (MU) Warning Of Shortages Through 2027 Mean? - Yahoo Finance",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://finance.yahoo.com/markets/stocks/articles/does-micron-technology-mu-warning-001915512.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSTJBemVqQnJDbFBYTmh1dkhjaEtOSHU0RUViMzZ5aml3UmxuMmhvbGtaTzktQUkzTDd0TE1ZX0EwbFdfQkZXam43VFUwbEY3OFVGd21ZanI5SWpPTW1hWG1Fa0VwcF84d0ZSVHQzQWpvckZPTThLSUI3ZF9UY004YTViMlNjdF9ZdzJ5VEdPcDF1cERMSW9zbkRvdw?oc=5",
       "title": "Security measures at Ole Miss will be heightened for Lane Kiffin's high-profile return with LSU - AP News",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 6,
-      "independentPublisherCount": 6,
+      "validSourceCount": 7,
+      "independentPublisherCount": 7,
       "independentPublisherFamilies": [
         "wxxv25.com",
+        "bozemandailychronicle.com",
         "mdjonline.com",
         "ottumwacourier.com",
         "times-news.com",
@@ -3148,6 +3275,7 @@
       ],
       "independentDomains": [
         "wxxv25.com",
+        "bozemandailychronicle.com",
         "mdjonline.com",
         "ottumwacourier.com",
         "times-news.com",
@@ -3167,6 +3295,19 @@
           "canonical": "https://www.wxxv25.com/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with-lsu/",
           "bodyChars": 4508,
           "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.bozemandailychronicle.com/wire/sports/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_16a3abeb-d2bb-5ce7-8010-62b83d1c7b83.html",
+          "domain": "bozemandailychronicle.com",
+          "publisherFamily": "bozemandailychronicle.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.bozemandailychronicle.com/wire/sports/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_16a3abeb-d2bb-5ce7-8010-62b83d1c7b83.html",
+          "pageTitle": "Security measures at Ole Miss will be heightened for Lane Kiffin's high-profile return with LSU",
+          "canonical": "",
+          "bodyChars": 3310,
+          "topicOverlap": 9
         },
         {
           "suppliedUrl": "https://www.mdjonline.com/news/national/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_a3d11ef1-ebde-54e0-9495-4c7c9584cb56.html",
@@ -3366,37 +3507,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMjZZUWZFZ2dOSzZQZFdNejI5ZXpRMVd2blA4Rkp6OFczVXIyQ0l4MXY4U0tPbnBRTzJvQXRiRVpyTzk5bXllekFPT2JiZ3ZHWmpVcUVlWmlwOGpLMTFKSFFQbHYyU0p5bGpKdGc0Um1DQ2JnbkQwRjM4Zm1qempSVUQyVUJCTVpBNm5FV253bTU2dFZmRzQwekdPY2R4YnJuenpXM1JwSlRzcFdCRy1aZzdVUXk2eUdUUlY2SQ?oc=5",
-      "title": "Quantum Computing, AI, Digital Assets Expert to Conclude UW Blockchain Stampede - University of Wyoming",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "uwyo.edu"
-      ],
-      "independentDomains": [
-        "uwyo.edu"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.uwyo.edu/news/2026/09/quantum-computing-ai-digital-assets-expert-to-conclude-the-uw-blockchain-stampede.html",
-          "domain": "uwyo.edu",
-          "publisherFamily": "uwyo.edu",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.uwyo.edu/news/2026/09/quantum-computing-ai-digital-assets-expert-to-conclude-the-uw-blockchain-stampede.html",
-          "pageTitle": "Quantum Computing, AI, Digital Assets Expert to Conclude UW Blockchain Stampede",
-          "canonical": "https://www.uwyo.edu/news/2026/09/quantum-computing-ai-digital-assets-expert-to-conclude-the-uw-blockchain-stampede.html",
-          "bodyChars": 3614,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPV3AzWUNERWphQ19zQjB6Wkx5MGJyLV9fMm5QanRtbTV5Y0dHNkMzQXQ1MFJMNEM4d0M1SHZUVi1UYTVVYjdZQzhjU1BMaExHdFZiYWFaa1lpQ0lHVlZXbTFUX21WaVJXdktJVlViYVNOUURWRUdKNU5XQk9ZVW1rVTZDSk8wdWQzTXJsWXNKOHJ2Zw?oc=5",
@@ -3611,7 +3721,7 @@
           "finalUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
           "pageTitle": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#039;s Trading Below $81,000? - 24/7 Wall St.",
           "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-          "bodyChars": 9182,
+          "bodyChars": 9266,
           "topicOverlap": 8
         }
       ],
@@ -3967,16 +4077,14 @@
       "title": "US and Denmark reach new agreement on defense and investment in Greenland - Politico",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 3,
-      "independentPublisherCount": 3,
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
       "independentPublisherFamilies": [
         "nbcnews.com",
-        "wbkb11.com",
         "politico.eu"
       ],
       "independentDomains": [
         "nbcnews.com",
-        "wbkb11.com",
         "politico.eu"
       ],
       "sources": [
@@ -3992,19 +4100,6 @@
           "canonical": "https://www.nbcnews.com/politics/trump-administration/trump-announces-agreement-denmark-secure-permanent-control-greenlands-rcna598641",
           "bodyChars": 4708,
           "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://www.wbkb11.com/news/politics/national-politics/us-denmark-reach-greenland-deal-trump-says/article_572265ba-5e5b-5d61-be8e-13e9def6792d.html",
-          "domain": "wbkb11.com",
-          "publisherFamily": "wbkb11.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.wbkb11.com/news/politics/national-politics/us-denmark-reach-greenland-deal-trump-says/article_572265ba-5e5b-5d61-be8e-13e9def6792d.html",
-          "pageTitle": "US, Denmark reach Greenland deal, Trump says | Politics | wbkb11.com",
-          "canonical": "https://news.lee.net/tncms/asset/editorial/d680efa1-2000-4265-bf02-49fd88238354/",
-          "bodyChars": 4729,
-          "topicOverlap": 7
         },
         {
           "suppliedUrl": "https://www.politico.eu/article/eu-us-agreement-trade-deal-within-reach-top-lawmaker/",
@@ -4075,19 +4170,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNWZ1dFpTYVRsRkJiTDM2clcteEJ4eGpOcHNBOFdJbFBrNWRibGo1SnQ0X0tXdXl1UzlPbVBETlVfcDZhQlRRcGNfZG9iLXloS2pWX2trenFfWDh4SllHanVUcTRTYzFpdVFUTnZWeG9Jci1oSjB3eVFfY25Sb3UySjZsZXNTc0V3TVpzcWZkSWZGSTNLaTZOVUY4LTd5Q2JyaklIYUpJRlBVTGxSaE9MUVhwVXI?oc=5",
-      "title": "UK air traffic control outage caused by software defect, says operator - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOGdKd0p5WVZPY3lBYlZoLUQwajRKeGd4ckM4ZWlTU0QtLXE2aWppckVuY2FrUGRnMjFsOHJFWlR2dWZUbjhDMkR0Zjg2VG5oczhsRFBKTkJJREdDY0c4UTVkd0dOWE51OGk1aElybGlzMjVHWWtIdkNLdVlRbDZqeXdiSEhiUmZ3enQwX001TGNKaHRndm5Hamo0bzJra0xiUFpnWnlwTVJIUDBOampEcjBGbGt6M1dUU1pNMVhvaGRFSUJ2?oc=5",
       "title": "Too little, too late: The inadequacy of reactive antitrust enforcement in technology markets - Brookings",
       "status": "pass",
@@ -4130,37 +4212,6 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNSkJ3ZEpOSmQ4YmV0MFBGbG9Eam5zOGtnYkJucGxLVnYwOVVzb3BrU0pZVHFYNXljLVBKRjZJdXpqc2RYM3BGYmw1aFdUVWQxSEJjZEFWRFVUeUhoQTFLaTh4WC1QVFJuSXhXWF91bkZJcEQ5SndEbERwXy1WTmhya1BhenU0czhWUWRVbmdXYlI4ZG1kXzZwTXdGZ1pJNjB1bU90dEV6akFKajlMOFFFOHozU1doVGFRVFY1MkRKZkpDckpnQmdGdjg3aEtEdw?oc=5",
-      "title": "Flight chaos for hundreds of thousands was caused in ‘millisecond’ by software error - The Guardian",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "theguardian.com"
-      ],
-      "independentDomains": [
-        "theguardian.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theguardian.com/world/2026/sep/18/flight-chaos-affecting-hundreds-of-thousands-caused-in-millisecond-by-software-error-uk",
-          "domain": "theguardian.com",
-          "publisherFamily": "theguardian.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theguardian.com/world/2026/sep/18/flight-chaos-affecting-hundreds-of-thousands-caused-in-millisecond-by-software-error-uk",
-          "pageTitle": "Flight chaos for hundreds of thousands was caused in ‘millisecond’ by software error | Air transport | The Guardian",
-          "canonical": "https://www.theguardian.com/world/2026/sep/18/flight-chaos-affecting-hundreds-of-thousands-caused-in-millisecond-by-software-error-uk",
-          "bodyChars": 5572,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTV9qaG5DbW9HU2Z1M0JtZXBkMjJTc29KZ0tsSUlTNUoxd216QzhGN3JVY3I1c245eGZ3REV3NDJheC1fRUsxQzF4RHRWOVdHbm95dTg4UTlKZnYzR1JLekN1dzJtakZxX19DZ2ZRa3F0X0Q2Y25zSjZnQ0M0SV9zdHRZMW1PTWxpU1dfZmdPUVVYU3NZZUpWamFtVkpHQXVudTBoVWlQSXBuVTRLWXF2V2hDRjRGUUd3Wmw4WUdvWllZanp6ZF9j?oc=5",
@@ -4349,31 +4400,27 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPdldXV21UVWJGZGhQSWRvTDk0ZmFYcjUyR1dVbWlTLVpVQ19yejBfcnhFcE5JQjZqRFJuUmNQVi1NQXM1MXUxX1FQWWkxcmVFSTNWRk40NkN5Umd6R05pNWdwWUVLb3dDbVFNQUtua3F5RFJaLUV5eF9CamRyTGJnb2FoaGxqUDFXZUpsakNWX2dpLXM2Rm4wSk1qLWRGbHltR3JFUFY3UmVmYmZJTnpTeEJKajBXNkh2R3JOckR5cE8wNGNua1BmSmxpOXRyU3dEVENTWW5aYUgtMk44dzNacllfSjNudjRrcFNrX2NCeDg1RG15SlRBTXJEQkJpekZzNHNV?oc=5",
-      "title": "AI is now building its own successor. New reports show how much (and how little) control anyone has over it - Scripps News",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "scrippsnews.com"
-      ],
-      "independentDomains": [
-        "scrippsnews.com"
-      ],
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOeEhXdkctcXdpVG5RdzFRVkFRMEdjTUdBeUtrZnNTc1FoRW1MZVlmN0hvVVFDSTNPWUtWUk5yeU5DZjI2U2l2SWZua21seml2elJVaEJIMTVSUmlHajFXYmJ2a3ZXb0piZGtuVmhlSE5lYWIwdVlXLW84alVvTUFFVjJudVc2Ym5ZaVdHUDlJbEs3VjdpTlNSU3ExRDRPamUxRE00cQ?oc=5",
+      "title": "Montgomery County, Pa., Has ‘Taken a Number of Steps’ on AI - GovTech",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
       "sources": [
         {
-          "suppliedUrl": "https://www.scrippsnews.com/science-and-tech/artificial-intelligence/ai-is-now-building-its-own-successor-new-reports-show-how-much-and-how-little-control-anyone-has-over-it",
-          "domain": "scrippsnews.com",
-          "publisherFamily": "scrippsnews.com",
+          "suppliedUrl": "https://www.govtech.com/artificial-intelligence/montgomery-county-pa-has-taken-a-number-of-steps-on-ai",
+          "domain": "govtech.com",
+          "publisherFamily": "govtech.com",
           "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.scrippsnews.com/science-and-tech/artificial-intelligence/ai-is-now-building-its-own-successor-new-reports-show-how-much-and-how-little-control-anyone-has-over-it",
-          "pageTitle": "AI is building its own successor. Who has control over its choices?",
-          "canonical": "https://www.scrippsnews.com/science-and-tech/artificial-intelligence/ai-is-now-building-its-own-successor-new-reports-show-how-much-and-how-little-control-anyone-has-over-it",
-          "bodyChars": 3089,
-          "topicOverlap": 8
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.govtech.com/artificial-intelligence/montgomery-county-pa-has-taken-a-number-of-steps-on-ai",
+          "pageTitle": "Montgomery County, Pa., Has ‘Taken a Number of Steps’ on AI",
+          "canonical": "https://www.govtech.com/artificial-intelligence/montgomery-county-pa-has-taken-a-number-of-steps-on-ai",
+          "bodyChars": 0,
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -4409,6 +4456,19 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNWZ1dFpTYVRsRkJiTDM2clcteEJ4eGpOcHNBOFdJbFBrNWRibGo1SnQ0X0tXdXl1UzlPbVBETlVfcDZhQlRRcGNfZG9iLXloS2pWX2trenFfWDh4SllHanVUcTRTYzFpdVFUTnZWeG9Jci1oSjB3eVFfY25Sb3UySjZsZXNTc0V3TVpzcWZkSWZGSTNLaTZOVUY4LTd5Q2JyaklIYUpJRlBVTGxSaE9MUVhwVXI?oc=5",
+      "title": "UK air traffic control outage caused by software defect, says operator - Reuters",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNM3FpZWhjS2h5eXlFTUFhcHFUWFhzc29XVHVQLUJSM1VnOGJoOGE4alpsczB0SGMxbUhZTll0b2FhSmhISGdnem42NGVOTDBQUENBVkZ6Y29GR0hZcnVLOFFTSzVzZGJSbk8xSkt6SUZtdFF3Y3VyY2podjI5UURiSk5WcnM4M1hlYTBfUDVpV05SaG5sNjA4d1RFeXg1VXFjRElPRHRVdXY3bk5JUFMyLTEzaThabGc?oc=5",
@@ -4455,35 +4515,35 @@
       "sourceVerificationStatus": "unverified"
     },
     {
-      "link": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
-      "title": "World model companies are keeping a lot of secrets",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMjZZUWZFZ2dOSzZQZFdNejI5ZXpRMVd2blA4Rkp6OFczVXIyQ0l4MXY4U0tPbnBRTzJvQXRiRVpyTzk5bXllekFPT2JiZ3ZHWmpVcUVlWmlwOGpLMTFKSFFQbHYyU0p5bGpKdGc0Um1DQ2JnbkQwRjM4Zm1qempSVUQyVUJCTVpBNm5FV253bTU2dFZmRzQwekdPY2R4YnJuenpXM1JwSlRzcFdCRy1aZzdVUXk2eUdUUlY2SQ?oc=5",
+      "title": "Quantum Computing, AI, Digital Assets Expert to Conclude UW Blockchain Stampede - University of Wyoming",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "techcrunch.com"
+        "uwyo.edu"
       ],
       "independentDomains": [
-        "techcrunch.com"
+        "uwyo.edu"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
+          "suppliedUrl": "https://www.uwyo.edu/news/2026/09/quantum-computing-ai-digital-assets-expert-to-conclude-the-uw-blockchain-stampede.html",
+          "domain": "uwyo.edu",
+          "publisherFamily": "uwyo.edu",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
-          "pageTitle": "World model companies are keeping a lot of secrets | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
-          "bodyChars": 4877,
-          "topicOverlap": 4
+          "finalUrl": "https://www.uwyo.edu/news/2026/09/quantum-computing-ai-digital-assets-expert-to-conclude-the-uw-blockchain-stampede.html",
+          "pageTitle": "Quantum Computing, AI, Digital Assets Expert to Conclude UW Blockchain Stampede",
+          "canonical": "https://www.uwyo.edu/news/2026/09/quantum-computing-ai-digital-assets-expert-to-conclude-the-uw-blockchain-stampede.html",
+          "bodyChars": 3614,
+          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://techcrunch.com/2026/09/18/joby-aviations-3100-mile-autonomous-flight-signals-its-push-beyond-electric-air-taxis/",
@@ -4969,8 +5029,15 @@
       "sources": []
     },
     {
-      "link": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/",
-      "title": "Anthropic&#8217;s first embedded evaluator is … Accenture?",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "padres game",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "padres game today",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4998,14 +5065,42 @@
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "mlb wildcard standings",
+      "title": "polar vortex",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "brewers standings",
+      "title": "concerts",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "nyt connections hints",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "mlb playoff picture",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "colleges",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "mauricio ruffy",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5019,49 +5114,7 @@
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "fishing",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "rae burrell",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "carrot top",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "mlb playoff standings",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "ty france",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "cpl 2026",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "george lombard jr.",
+      "title": "mlb wildcard standings",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5097,6 +5150,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9BR2ZzcDRMbGphY1pfMF9mVWVCZGUyV25mbHpZMnRjQUxWWWgtWGZqSk93eXEweHNlOU1MTW85d2hLc3NvT2E4Znd4ZG5DR1diQTZPcFExTi1wcC1t?oc=5",
       "title": "Previewing GPT-5.6 Sol: a next-generation model - openai.com",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/",
+      "title": "Anthropic&#8217;s first embedded evaluator is … Accenture?",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5249,6 +5309,13 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQT3UyWW9zTUswX3BSWng0ZGRTUldTVkpEc2ZoelpXaFBDeHZNMWJ6RnlrT0YyZVdNN0ZOTFRpdFg2N1EzRkJLN3ZVMThwZFRUcjN6MUxmSnUwZndHRGJWUVlTZi1kOU5IYW9hdVlVZktyVWFNX1ROakVkWERRYTZRQnZWQmhUZEVoRk9Pd0xzVUk3YnZWeHJMTUVrdG5fZXEtNmpFTdIBqgFBVV95cUxQRlRIMWU4ZFRQdjMxa0tyV1k3XzlTSEEwVjlCc2NRNjdjRzYySi1mYzdoNWtPM2N0cjBqaThsWjRMRm5sM0RhYjFzaWVGc3ZsOVd5b1h4MEhPMTJHRHBzUVJtZ25vUTFBWHhpRVpFWWJfd3c0TmFzcE1mV1JkQjk4cklUdTNhY294SlRHdTl4NnNndkcxTGQ1WlpvdGtVTXM4ek5aNTBhb05pdw?oc=5",
+      "title": "Apple unveils $1,999 iPhone Duo, its first foldable phone - Al Jazeera",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
       "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - Apple",
       "status": "not-eligible",
@@ -5342,13 +5409,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBON3JwY0Q2dTRTSUs5NVp5R1B4T2hOMkMtQTFrNDVlR2RaRjFyTmp4d0hUal9HbzM1cVpRYlB4T3B4M3g1cDUwSjdYS2k4RDBfWTBkaEVhS2IzdlBXWEJLOGhB?oc=5",
       "title": "How Do Apps Make Money? Proven App Monetization Strategies 2026 - appinventiv.com",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjk1X0RPQVJ6YXU1a08yWGRzMEdHUjVmU3lkbjcySmZibDZ4M2dXQTVodzNrbl9jRUNaZmpHSFJqdlFRaVI5NlZFR0Zab0prdzM3NW9QVm9UM2FTSzgtZGNaTTdydTlBcUFyUHczYTlDcGZZNC15emRpN1hRQl9Dc1pxQTlVS015dldSMHJOc0dMQ2pXV0swadIBngFBVV95cUxQdGRnU0tuRTZhTUt1MVBOMUY0Z3RJWGU2WWJIcDFsT09KNzF4WHBkV1JIaXhfZk0zSUZaRmRrbE9xb1luWDYyYm0xOFFXNjMtQ3BtRUc0TkxTd2FiaUhFS3kzRHlLdWhBaTAxbXNaeTdRakp5dTZmTVFFcFkyOVNyNk9HNXA4aHRDOG5EX1BpaEdFSnkzRmZHdzZUczNwUQ?oc=5",
-      "title": "Introducing Meta One: A Subscription Service With More Features and AI to Create, Connect, and Stand Out - meta.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []

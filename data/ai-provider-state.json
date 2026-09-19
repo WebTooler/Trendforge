@@ -11,8 +11,8 @@
       "lastSuccessAt": "2026-09-19T03:49:42.100Z"
     },
     "Gemini": {
-      "failures": 22,
-      "quotaBlockedUntil": 1789789762160,
+      "failures": 23,
+      "quotaBlockedUntil": 1789790393040,
       "lastStatus": 200,
       "lastError": "Invalid structured output",
       "lastClass": "transient"
@@ -32,24 +32,24 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 31,
-      "quotaBlockedUntil": 1789789808498,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
+      "failures": 32,
+      "quotaBlockedUntil": 1789790409684,
+      "lastStatus": 200,
+      "lastError": "Invalid structured output",
       "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 40,
-      "quotaBlockedUntil": 1789789833421,
-      "lastStatus": 500,
-      "lastError": "500: {\"id\":\"ea924dd4-b57a-4d12-861b-70a9cfc18dc4\",\"message\":\"internal server error, this has been reported to our developers. id fb166b0dc7a729dbca0469aa35554695\"}",
-      "lastClass": "server",
+      "failures": 41,
+      "quotaBlockedUntil": 1789790369617,
+      "lastStatus": 200,
+      "lastError": "Empty model response",
+      "lastClass": "transient",
       "successes": 7,
       "lastSuccessAt": "2026-09-18T12:48:53.508Z"
     }
   },
-  "rotationCursor": 0,
-  "updatedAt": "2026-09-19T03:49:42.100Z"
+  "rotationCursor": 1,
+  "updatedAt": "2026-09-19T03:59:39.968Z"
 }
