@@ -191,17 +191,24 @@ jobs:
             fs.writeFileSync('klein-backfill/manifest.json', JSON.stringify(summary, null, 2) + '\\n');
 
             if (production && failures === 0) {
+              const articlesTsPath = 'lib/articles.ts';
+              let articlesTs = fs.readFileSync(articlesTsPath, 'utf8');
+
               for (const row of manifest.filter(x => x.status === 'success')) {
                 const articlePath = path.join(articleDir, row.file);
+                const outputPath = path.join(outDir, row.output);
+                const productionPath = path.join('public/images/articles', row.output);
+                fs.copyFileSync(outputPath, productionPath);
+
                 let raw = fs.readFileSync(articlePath, 'utf8');
                 const separator = raw.indexOf('---', 3);
                 if (separator < 0) throw new Error('invalid frontmatter: ' + row.file);
                 const front = raw.slice(3, separator).trim();
                 const body = raw.slice(separator + 3);
-                const lines = front.split(/\\r?\\n/).filter(Boolean);
+                const lines = front.split(/\r?\n/).filter(Boolean);
                 const values = {
-                  image: `/Trendforge/images/articles/${row.output}`,
-                  imageAlt: `Editorial image for ${row.title}`,
+                  image: '/Trendforge/images/articles/' + row.output,
+                  imageAlt: 'Editorial image for ' + row.title,
                   imageSource: 'Cloudflare Workers AI — FLUX.2 Klein 4B',
                   imageLicense: 'Model-generated',
                   imageGeneratedBy: 'Cloudflare FLUX.2 Klein 4B'
@@ -212,8 +219,29 @@ jobs:
                   if (index >= 0) lines[index] = line;
                   else lines.push(line);
                 }
-                fs.writeFileSync(articlePath, '---\\n' + lines.join('\\n') + '\\n---' + body);
+                fs.writeFileSync(articlePath, '---\n' + lines.join('\n') + '\n---' + body);
+
+                const startMarker = '  {\n    "slug": "' + row.slug + '",';
+                const objectStart = articlesTs.indexOf(startMarker);
+                if (objectStart < 0) throw new Error('slug not found in lib/articles.ts: ' + row.slug);
+                const objectEnd = articlesTs.indexOf('\n  },', objectStart);
+                if (objectEnd < 0) throw new Error('article object end not found in lib/articles.ts: ' + row.slug);
+                let articleObject = articlesTs.slice(objectStart, objectEnd + 5);
+                const setField = (key, value) => {
+                  const pattern = new RegExp('    "' + key + '": .*');
+                  const line = '    "' + key + '": ' + JSON.stringify(value) + ',';
+                  if (!pattern.test(articleObject)) throw new Error('field not found in lib/articles.ts: ' + key + ' / ' + row.slug);
+                  articleObject = articleObject.replace(pattern, line);
+                };
+                setField('image', '/Trendforge/images/articles/' + row.output);
+                setField('imageAlt', 'Editorial image for ' + row.title);
+                setField('imageSource', 'Cloudflare Workers AI — FLUX.2 Klein 4B');
+                setField('imageLicense', 'Model-generated');
+                setField('imageGeneratedBy', 'Cloudflare FLUX.2 Klein 4B');
+                articlesTs = articlesTs.slice(0, objectStart) + articleObject + articlesTs.slice(objectEnd + 5);
               }
+
+              fs.writeFileSync(articlesTsPath, articlesTs);
             }
 
             if (failures > 0) process.exitCode = 1;
@@ -235,7 +263,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/articles klein-backfill/manifest.json
+          git add content/articles lib/articles.ts public/images/articles klein-backfill/manifest.json
           git status --short
           git commit -m "feat(images): promote Klein 4B 1200x630 article images" || echo "No changes to commit"
           git push
