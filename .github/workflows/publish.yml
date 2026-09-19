@@ -9,6 +9,7 @@ on:
       - 'scripts/score-trends.ts'
       - 'scripts/trend-decision-engine.mjs'
       - 'scripts/verify-trend-sources.mjs'
+      - 'scripts/google-news-url-resolver.mjs'
       - 'scripts/recover-publisher-links.mjs'
       - 'scripts/evidence-integrity-preflight.mjs'
       - 'scripts/pre-writer-pipeline.mjs'
