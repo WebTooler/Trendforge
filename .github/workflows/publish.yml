@@ -36,6 +36,7 @@ on:
       - 'scripts/generate-article.ts'
       - 'scripts/generate-article-adaptive.mjs'
       - 'scripts/generate-article-image.ts'
+      - 'scripts/trendforge-visual-planner.mjs'
       - 'scripts/validate-article-assets.ts'
       - 'scripts/validate-article-quality.ts'
   schedule:
@@ -55,6 +56,8 @@ env:
   OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
   COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
   COHERE_MODEL: ${{ vars.COHERE_MODEL }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
 jobs:
   pipeline:
@@ -189,6 +192,8 @@ jobs:
         run: node scripts/editorial-intelligence.mjs
       - name: Validate content quality gate
         run: npx tsx scripts/validate-article-quality.ts
+      - name: Install FLUX image normalizer
+        run: npm install --no-save --no-package-lock sharp@0.35.4
       - name: Generate article-specific images
         run: npx tsx scripts/generate-article-image.ts
       - name: Validate article image safety gate
