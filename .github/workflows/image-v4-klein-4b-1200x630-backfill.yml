@@ -1,6 +1,8 @@
 name: TrendForge — FLUX.1 Schnell 1024x576 Article Images
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       limit:
@@ -19,6 +21,7 @@ permissions:
 
 jobs:
   generate:
+    if: ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[flux-production]') }}
     runs-on: ubuntu-latest
     env:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -30,8 +33,8 @@ jobs:
       OUTPUT_NEURONS_PER_TILE: "4.80"
       NEURONS_PER_STEP: "9.60"
       STEPS: "4"
-      LIMIT: ${{ inputs.limit }}
-      PRODUCTION: ${{ inputs.production }}
+      LIMIT: ${{ github.event_name == 'push' && '0' || inputs.limit }}
+      PRODUCTION: ${{ github.event_name == 'push' && 'true' || inputs.production }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
