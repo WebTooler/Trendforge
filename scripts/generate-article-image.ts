@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
-import { buildImagePrompt } from './trendforge-visual-planner.mjs';
 
 const articleDir = 'content/articles';
 const publicDir = 'public/images/articles';
@@ -72,6 +71,9 @@ for (const file of files) {
   const outputFile = `${slug}.1024x576.png`;
   const outputPath = path.join(publicDir, outputFile);
 
+  const { buildImagePrompt } = await import('./trendforge-visual-planner.mjs') as unknown as {
+    buildImagePrompt: (input: { title: string; description: string; category: string; body: string }) => { brief: any; prompt: string };
+  };
   const { brief, prompt } = buildImagePrompt({ title, description, category, body: raw });
   console.log(`Generating FLUX image for ${file}: ${brief.mode}; prompt=${prompt.length} chars`);
 
