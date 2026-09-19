@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T05:09:27.287Z",
+  "generatedAt": "2026-09-19T05:14:14.710Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 15,
+    "totalArticles": 16,
     "averageEditorialScore": 74,
-    "editorialReviewCount": 13,
+    "editorialReviewCount": 14,
     "refreshCandidates": 0
   },
   "categoryMix": [
     {
       "category": "AI",
       "count": 5,
-      "share": 33.3
+      "share": 31.3
     },
     {
       "category": "Technology",
       "count": 4,
-      "share": 26.7
+      "share": 25
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 20
+      "share": 18.8
     },
     {
       "category": "Innovation",
@@ -41,12 +41,12 @@
     {
       "category": "Digital Life",
       "count": 2,
-      "share": 13.3
+      "share": 12.5
     },
     {
       "category": "Crypto",
-      "count": 1,
-      "share": 6.7
+      "count": 2,
+      "share": 12.5
     }
   ],
   "missingCategories": [
@@ -56,9 +56,14 @@
   "overrepresentedCategories": [],
   "recommendations": [
     "Prioritize missing categories: Innovation, Product Launches.",
-    "13 article(s) are in editorial review; improve them before treating them as growth winners."
+    "14 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
+    {
+      "title": "CFTC Sends Crypto Rule Draft to White House for Review",
+      "category": "Crypto",
+      "publishedAt": "2026-09-19T05:13:39.960Z"
+    },
     {
       "title": "JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
       "category": "Crypto",
@@ -103,11 +108,6 @@
       "title": "Al Gore Says the Real AI Risk Isn’t Data Centers",
       "category": "AI",
       "publishedAt": "2026-09-17T07:41:26.386Z"
-    },
-    {
-      "title": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
-      "category": "Technology",
-      "publishedAt": "2026-09-16T09:01:41.744Z"
     }
   ]
 }

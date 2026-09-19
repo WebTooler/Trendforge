@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-19T05:10:02.297Z",
+  "generatedAt": "2026-09-19T05:14:14.670Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,10 +11,10 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 15,
+    "articles": 16,
     "refreshCandidates": 0,
     "watch": 4,
-    "fresh": 11,
+    "fresh": 12,
     "stale": 0,
     "duplicateClusters": 0
   },
@@ -187,6 +187,22 @@
       "ageDays": 1.8,
       "ageState": "fresh",
       "words": 375,
+      "sourceCount": 1,
+      "refreshScore": 35,
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": [
+        "content below 450 words"
+      ]
+    },
+    {
+      "file": "cftc-sends-crypto-rule-draft-to-white-house-for-review.md",
+      "title": "CFTC Sends Crypto Rule Draft to White House for Review",
+      "category": "Crypto",
+      "publishedAt": "2026-09-19T05:13:39.960Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 411,
       "sourceCount": 1,
       "refreshScore": 35,
       "status": "fresh",

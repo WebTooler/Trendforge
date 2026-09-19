@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "generatedAt": "2026-09-19T05:08:11.521Z",
+  "generatedAt": "2026-09-19T05:12:54.952Z",
   "minimumStrongSources": 2,
   "minimumStrongPublisherFamilies": 2,
   "minimumStrongDomains": 2,
@@ -337,16 +337,16 @@
       "validSourceCount": 6,
       "independentPublisherCount": 4,
       "independentPublisherFamilies": [
+        "financemagnates.com",
         "247wallst.com",
         "hindustantimes.com",
-        "ssbcrack.com",
-        "cryptotimes.io"
+        "ssbcrack.com"
       ],
       "independentDomains": [
+        "financemagnates.com",
         "247wallst.com",
         "hindustantimes.com",
-        "news.ssbcrack.com",
-        "cryptotimes.io"
+        "news.ssbcrack.com"
       ],
       "sources": [
         {
@@ -356,6 +356,19 @@
           "resolvedFrom": "research-story-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://www.financemagnates.com/trending/why-is-crypto-up-today-bitcoin-tops-80000-as-ethereum-xrp-and-dogecoin-rise-up-to-7/",
+          "domain": "financemagnates.com",
+          "publisherFamily": "financemagnates.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.financemagnates.com/trending/why-is-crypto-up-today-bitcoin-tops-80000-as-ethereum-xrp-and-dogecoin-rise-up-to-7/",
+          "pageTitle": "Why Is Crypto Up Today? Bitcoin Tops $80,000 as Ethereum, XRP and Dogecoin Rise Up to 7%",
+          "canonical": "https://www.financemagnates.com/trending/why-is-crypto-up-today-bitcoin-tops-80000-as-ethereum-xrp-and-dogecoin-rise-up-to-7/",
+          "bodyChars": 14585,
+          "topicOverlap": 11
         },
         {
           "suppliedUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
@@ -434,19 +447,6 @@
           "canonical": "https://www.openpr.com/news/4635956/best-crypto-to-invest-in-as-senate-votes-on-clarity-act-bitcoin",
           "bodyChars": 0,
           "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://www.cryptotimes.io/2026/09/18/bitcoin-reclaims-80k-as-crypto-markets-recover-from-clarity-act-blow/",
-          "domain": "cryptotimes.io",
-          "publisherFamily": "cryptotimes.io",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cryptotimes.io/2026/09/18/bitcoin-reclaims-80k-as-crypto-markets-recover-from-clarity-act-blow/",
-          "pageTitle": "Bitcoin Reclaims $80K as Crypto Markets Recover From CLARITY Act Blow",
-          "canonical": "https://www.cryptotimes.io/2026/09/18/bitcoin-reclaims-80k-as-crypto-markets-recover-from-clarity-act-blow/",
-          "bodyChars": 4330,
-          "topicOverlap": 12
         }
       ],
       "recoveryAttempts": 0,
@@ -485,39 +485,28 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQR0lyZGs1ZUF3b0k3YS1laTNXMWZuR2dLaXJaeThJbDItdjdad2RCMk9SRzF5ajAxcWJ3cTJ1ZU9XTE9KMzJuWEJETWFNTW5mV2lZZjh2MFhSZVU4VFJaeUdBRXY5VXdHNHlPMEhwQ2ZfUFYyR0ZqTEc3V3VsLW9oc0pjRENLQ0N0eS12eDB4dlRLczJmemVXQ3dyeXlnMUJ2d1IzSU1idkJOZW8xVlI1S1JBZnZCTG9jQW4yTlZn?oc=5",
-      "title": "Trump says US, Denmark, Greenland entered into agreement on US control over security - reuters.com",
+      "title": "Trump says US, Denmark, Greenland entered into agreement on US control over security - Reuters",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 5,
-      "independentPublisherCount": 5,
+      "validSourceCount": 6,
+      "independentPublisherCount": 6,
       "independentPublisherFamilies": [
         "cedarnews.net",
         "dw.com",
+        "newscord.org",
         "globalbankingandfinance.com",
-        "nypost.com",
-        "san.com"
+        "com.my",
+        "internazionale.it"
       ],
       "independentDomains": [
         "cedarnews.net",
         "dw.com",
+        "newscord.org",
         "globalbankingandfinance.com",
-        "nypost.com",
-        "san.com"
+        "nst.com.my",
+        "internazionale.it"
       ],
       "sources": [
-        {
-          "suppliedUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
-          "domain": "devdiscourse.com",
-          "publisherFamily": "devdiscourse.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
-          "pageTitle": "Trump says US, Denmark, Greenland entered into agreement on US control over security",
-          "canonical": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security",
-          "bodyChars": 458,
-          "topicOverlap": 9
-        },
         {
           "suppliedUrl": "https://www.anews.com.tr/world/2026/09/18/trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security",
           "domain": "anews.com.tr",
@@ -558,6 +547,19 @@
           "topicOverlap": 7
         },
         {
+          "suppliedUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
+          "domain": "newscord.org",
+          "publisherFamily": "newscord.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
+          "pageTitle": "Trump Secures Permanent U.S. Control Of Greenland Security In Deal With Denmark: how 96 outlets framed it | NewsCord",
+          "canonical": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
+          "bodyChars": 4463,
+          "topicOverlap": 11
+        },
+        {
           "suppliedUrl": "https://www.globalbankingandfinance.com/trump-us-denmark-greenland-entered-agreement-us-control-over/",
           "domain": "globalbankingandfinance.com",
           "publisherFamily": "globalbankingandfinance.com",
@@ -568,33 +570,33 @@
           "pageTitle": "US Gains Permanent Control Over Security in Greenland, Says Trump",
           "canonical": "https://www.globalbankingandfinance.com/trump-us-denmark-greenland-entered-agreement-us-control-over/",
           "bodyChars": 2775,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://nypost.com/2026/09/18/us-news/trump-announces-greenland-deal-with-denmark-giving-us-permanent-control-over-security/",
-          "domain": "nypost.com",
-          "publisherFamily": "nypost.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://nypost.com/2026/09/18/us-news/trump-announces-greenland-deal-with-denmark-giving-us-permanent-control-over-security/",
-          "pageTitle": "Trump announces Greenland deal with Denmark giving US 'permanent control over security'",
-          "canonical": "https://nypost.com/2026/09/18/us-news/trump-announces-greenland-deal-with-denmark-giving-us-permanent-control-over-security/",
-          "bodyChars": 4972,
           "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://san.com/cc/trump-announces-security-deal-with-denmark-greenland/",
-          "domain": "san.com",
-          "publisherFamily": "san.com",
+          "suppliedUrl": "https://www.nst.com.my/amp/world/world/2026/09/1535836/trump-unveils-infinite-deal-permanent-us-security-control-over",
+          "domain": "nst.com.my",
+          "publisherFamily": "com.my",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://san.com/cc/trump-announces-security-deal-with-denmark-greenland/",
-          "pageTitle": "Trump announces security deal with Denmark, Greenland",
-          "canonical": "https://san.com/cc/trump-announces-security-deal-with-denmark-greenland/",
-          "bodyChars": 4870,
-          "topicOverlap": 7
+          "finalUrl": "https://www.nst.com.my/amp/world/world/2026/09/1535836/trump-unveils-infinite-deal-permanent-us-security-control-over",
+          "pageTitle": "Trump unveils &#039;infinite&#039; deal for permanent US security control over Greenland | New Straits Times",
+          "canonical": "https://www.nst.com.my/world/world/2026/09/1535836/trump-unveils-infinite-deal-permanent-us-security-control-over",
+          "bodyChars": 3283,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/19/exclusive-us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "domain": "internazionale.it",
+          "publisherFamily": "internazionale.it",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/19/exclusive-us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "pageTitle": "US and Denmark reach deal on Greenland, Trump says - Internazionale",
+          "canonical": "",
+          "bodyChars": 8566,
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
@@ -602,7 +604,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVWk0bGVJdm9YYWxjbzlnV3dqQjdTSlc4VUFlVldob20zSzMyVi1MUUNzUll6Q2t6MjN2M2Z4Wk9nVkpvUkVaYzlkaUFqdkxyRjA0WEtydzk3ckF2aTFOLXZEekJtVFlLS3BWcnpFZDF0amowajNFNXA5THhnczZqN3hVVzdITG95cXZBVFJZVGJMcUN2Vk1zbV9PNEV6djhLWlpGeUZHY1ZjdjZIYVN2WEZZWGV5N211ZDZMZzdtN1QxUFBSdWtj?oc=5",
-      "title": "Coast Guard debuts new collaboration and research hub on artificial intelligence - United States Coast Guard (.mil)",
+      "title": "Coast Guard debuts new collaboration and research hub on artificial intelligence - mycg.uscg.mil",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -625,7 +627,7 @@
           "pageTitle": "Coast Guard debuts new collaboration and research hub on artificial intelligence > United States Coast Guard > My Coast Guard News",
           "canonical": "",
           "bodyChars": 3795,
-          "topicOverlap": 7
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -948,12 +950,12 @@
       "independentPublisherFamilies": [
         "cbsnews.com",
         "yahoo.com",
-        "myfox28columbus.com"
+        "wpde.com"
       ],
       "independentDomains": [
         "cbsnews.com",
         "yahoo.com",
-        "myfox28columbus.com"
+        "wpde.com"
       ],
       "sources": [
         {
@@ -983,13 +985,13 @@
           "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://myfox28columbus.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
-          "domain": "myfox28columbus.com",
-          "publisherFamily": "myfox28columbus.com",
+          "suppliedUrl": "https://wpde.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
+          "domain": "wpde.com",
+          "publisherFamily": "wpde.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://myfox28columbus.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
+          "finalUrl": "https://wpde.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
           "pageTitle": "US, Denmark, and Greenland reach security deal giving U.S. permanent control, Trump says",
           "canonical": "https://abc45.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
           "bodyChars": 1997,
@@ -1118,29 +1120,16 @@
       "validSourceCount": 3,
       "independentPublisherCount": 3,
       "independentPublisherFamilies": [
-        "straitstimes.com",
         "economictimes.com",
+        "straitstimes.com",
         "theguardian.com"
       ],
       "independentDomains": [
-        "straitstimes.com",
         "m.economictimes.com",
+        "straitstimes.com",
         "theguardian.com"
       ],
       "sources": [
-        {
-          "suppliedUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
-          "domain": "straitstimes.com",
-          "publisherFamily": "straitstimes.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
-          "pageTitle": "US and Denmark reach deal on Greenland, Trump says | The Straits Times",
-          "canonical": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
-          "bodyChars": 3742,
-          "topicOverlap": 8
-        },
         {
           "suppliedUrl": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/amp_articleshow/134346089.cms",
           "domain": "m.economictimes.com",
@@ -1152,6 +1141,19 @@
           "pageTitle": "Trump says US reached 'infinite' security deal with Denmark over Greenland - The Economic Times",
           "canonical": "https://m.economictimes.com/news/international/global-trends/trump-claims-infinite-greenland-security-deal-with-denmark/articleshow/134346089.cms",
           "bodyChars": 2888,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "domain": "straitstimes.com",
+          "publisherFamily": "straitstimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "pageTitle": "US and Denmark reach deal on Greenland, Trump says | The Straits Times",
+          "canonical": "https://www.straitstimes.com/world/europe/us-and-denmark-close-in-on-a-greenland-deal-sources-say",
+          "bodyChars": 3742,
           "topicOverlap": 8
         },
         {
@@ -1265,16 +1267,15 @@
       "title": "Trump says US has struck security agreement with Denmark over Greenland - ABC News - Breaking News, Latest News and Videos",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 7,
+      "validSourceCount": 6,
+      "independentPublisherCount": 6,
       "independentPublisherFamilies": [
         "abcnews.com",
         "yahoo.com",
         "abc7.com",
         "net.au",
         "abc7news.com",
-        "abc7chicago.com",
-        "bbc.co.uk"
+        "abc7chicago.com"
       ],
       "independentDomains": [
         "abcnews.com",
@@ -1282,8 +1283,7 @@
         "abc7.com",
         "abc.net.au",
         "abc7news.com",
-        "abc7chicago.com",
-        "bbc.co.uk"
+        "abc7chicago.com"
       ],
       "sources": [
         {
@@ -1363,19 +1363,6 @@
           "canonical": "https://abc7chicago.com/post/donald-trump-greenland-news-how-us-could-take-region-part-nato-ally-denmark-potential-challenges/18382220/",
           "bodyChars": 7058,
           "topicOverlap": 13
-        },
-        {
-          "suppliedUrl": "https://www.bbc.co.uk/news/articles/cly39pgmvrzo",
-          "domain": "bbc.co.uk",
-          "publisherFamily": "bbc.co.uk",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.bbc.co.uk/news/articles/cly39pgmvrzo",
-          "pageTitle": "Trump actively discussing potentially buying Greenland, White House says - BBC News",
-          "canonical": "https://www.bbc.co.uk/news/articles/cly39pgmvrzo",
-          "bodyChars": 7058,
-          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -1389,20 +1376,33 @@
       "validSourceCount": 5,
       "independentPublisherCount": 5,
       "independentPublisherFamilies": [
+        "nypost.com",
         "independent.co.uk",
         "censor.net",
         "salon.com",
-        "thesun.ie",
         "yahoo.com"
       ],
       "independentDomains": [
+        "nypost.com",
         "independent.co.uk",
         "censor.net",
         "salon.com",
-        "thesun.ie",
         "yahoo.com"
       ],
       "sources": [
+        {
+          "suppliedUrl": "https://nypost.com/2025/01/12/us-news/denmark-offers-trump-security-concession-for-greenland-in-effort-to-appease-him-report/",
+          "domain": "nypost.com",
+          "publisherFamily": "nypost.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://nypost.com/2025/01/12/us-news/denmark-offers-trump-security-concession-for-greenland-in-effort-to-appease-him-report/",
+          "pageTitle": "Denmark offers Trump security concession for Greenland in effort to appease him: report",
+          "canonical": "https://nypost.com/2025/01/12/us-news/denmark-offers-trump-security-concession-for-greenland-in-effort-to-appease-him-report/",
+          "bodyChars": 2278,
+          "topicOverlap": 9
+        },
         {
           "suppliedUrl": "https://www.independent.co.uk/news/world/americas/us-politics/trump-denmark-greenland-military-b2677960.html",
           "domain": "independent.co.uk",
@@ -1441,19 +1441,6 @@
           "canonical": "https://www.salon.com/2025/01/12/we-have-troops-in-greenland-vance-nods-at-using-military-to-get-expansionist-deal-done/",
           "bodyChars": 2271,
           "topicOverlap": 11
-        },
-        {
-          "suppliedUrl": "https://www.thesun.ie/news/16417069/europe-braces-trump-davos-ominous-greenland-invasion/",
-          "domain": "thesun.ie",
-          "publisherFamily": "thesun.ie",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.thesun.ie/news/16417069/europe-braces-trump-davos-ominous-greenland-invasion/",
-          "pageTitle": "Denmark 'to keep owning Greenland in Trump deal' as Don cancels UK tariffs but Nato chief says 'there's more work to do'",
-          "canonical": "https://www.thesun.ie/news/16417069/europe-braces-trump-davos-ominous-greenland-invasion/",
-          "bodyChars": 10020,
-          "topicOverlap": 8
         },
         {
           "suppliedUrl": "https://www.yahoo.com/news/world/article/what-are-the-details-of-trumps-new-greenland-deal-and-why-did-he-back-down-from-acquiring-the-whole-arctic-island-190346334.html",
@@ -1579,8 +1566,8 @@
       "title": "Trump claims 'infinite' Greenland security deal with Denmark - afp.com",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 7,
+      "validSourceCount": 8,
+      "independentPublisherCount": 8,
       "independentPublisherFamilies": [
         "afp.com",
         "wionews.com",
@@ -1588,6 +1575,7 @@
         "arabnews.com",
         "punchng.com",
         "mathrubhumi.com",
+        "khaleejtimes.com",
         "yahoo.com"
       ],
       "independentDomains": [
@@ -1597,6 +1585,7 @@
         "arabnews.com",
         "punchng.com",
         "english.mathrubhumi.com",
+        "khaleejtimes.com",
         "sg.news.yahoo.com"
       ],
       "sources": [
@@ -1679,6 +1668,19 @@
           "topicOverlap": 12
         },
         {
+          "suppliedUrl": "https://www.khaleejtimes.com/world/americas/trump-denmark-us-permanent-control-greenland-security?amp=1",
+          "domain": "khaleejtimes.com",
+          "publisherFamily": "khaleejtimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.khaleejtimes.com/world/americas/trump-denmark-us-permanent-control-greenland-security?amp=1",
+          "pageTitle": "Trump says Denmark to give US &#039;permanent control&#039; over Greenland security | Khaleej Times",
+          "canonical": "https://www.khaleejtimes.com/world/americas/trump-denmark-us-permanent-control-greenland-security",
+          "bodyChars": 3834,
+          "topicOverlap": 10
+        },
+        {
           "suppliedUrl": "https://sg.news.yahoo.com/trump-says-us-reached-greenland-221727958.html",
           "domain": "sg.news.yahoo.com",
           "publisherFamily": "yahoo.com",
@@ -1690,19 +1692,6 @@
           "canonical": "https://www.cnn.com/2026/09/18/politics/trump-us-greenland-security",
           "bodyChars": 4059,
           "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.ynetnews.com/article/bkvbfbotgl",
-          "domain": "ynetnews.com",
-          "publisherFamily": "ynetnews.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.ynetnews.com/article/bkvbfbotgl",
-          "pageTitle": "Trump says US gains permanent Greenland security control, plans major military buildu",
-          "canonical": "https://www.ynetnews.com/article/bkvbfbotgl",
-          "bodyChars": 0,
-          "topicOverlap": 11
         }
       ],
       "recoveryAttempts": 0,
@@ -1872,7 +1861,7 @@
           "reason": "unreachable-or-non-html"
         },
         {
-          "suppliedUrl": "https://finance.yahoo.com/markets/crypto/articles/robinhood-jumps-6-bullish-analyst-142945000.html",
+          "suppliedUrl": "https://finance.yahoo.com/news/bitcoin-price-hits-time-high-215719604.html",
           "domain": "finance.yahoo.com",
           "publisherFamily": "yahoo.com",
           "resolvedFrom": "article-link",
@@ -2120,8 +2109,8 @@
         "ibtimes.sg",
         "variety.com",
         "newscord.org",
-        "mediaplaynews.com",
-        "ua.news"
+        "ua.news",
+        "cartoonbrew.com"
       ],
       "independentDomains": [
         "theverge.com",
@@ -2130,8 +2119,8 @@
         "ibtimes.sg",
         "variety.com",
         "newscord.org",
-        "mediaplaynews.com",
-        "ua.news"
+        "ua.news",
+        "cartoonbrew.com"
       ],
       "sources": [
         {
@@ -2196,7 +2185,7 @@
           "finalUrl": "https://variety.com/2026/biz/news/disney-cto-karandeep-anand-character-ai-1236866528/",
           "pageTitle": "Disney Hires First CTO: Karandeep Anand, Former CEO of Character.AI",
           "canonical": "https://variety.com/2026/biz/news/disney-cto-karandeep-anand-character-ai-1236866528/",
-          "bodyChars": 4395,
+          "bodyChars": 4486,
           "topicOverlap": 8
         },
         {
@@ -2213,19 +2202,6 @@
           "topicOverlap": 13
         },
         {
-          "suppliedUrl": "https://www.mediaplaynews.com/disney-hires-ai-executive-karandeep-anand-as-companys-first-chief-technology-officer/",
-          "domain": "mediaplaynews.com",
-          "publisherFamily": "mediaplaynews.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.mediaplaynews.com/disney-hires-ai-executive-karandeep-anand-as-companys-first-chief-technology-officer/",
-          "pageTitle": "Disney Hires AI Executive Karandeep Anand as Company&#039;s First Chief Technology Officer - Media Play News",
-          "canonical": "https://www.mediaplaynews.com/disney-hires-ai-executive-karandeep-anand-as-companys-first-chief-technology-officer/",
-          "bodyChars": 3273,
-          "topicOverlap": 10
-        },
-        {
           "suppliedUrl": "https://ua.news/en/technologies/disney-priznachila-karandepa-ananda-pershim-tekhnichnim-direktorom-techcrunch",
           "domain": "ua.news",
           "publisherFamily": "ua.news",
@@ -2236,6 +2212,19 @@
           "pageTitle": "Disney appoints Karandeep Anand as first CTO — TechCrunch | UA.NEWS",
           "canonical": "https://ua.news/en/technologies/disney-priznachila-karandepa-ananda-pershim-tekhnichnim-direktorom-techcrunch",
           "bodyChars": 2488,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.cartoonbrew.com/artificial-intelligence/disney-karandeep-anand-chief-technology-officer-266827.html",
+          "domain": "cartoonbrew.com",
+          "publisherFamily": "cartoonbrew.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.cartoonbrew.com/artificial-intelligence/disney-karandeep-anand-chief-technology-officer-266827.html",
+          "pageTitle": "Disney Appoints AI Evangelist Karandeep Anand As CTO",
+          "canonical": "https://www.cartoonbrew.com/artificial-intelligence/disney-karandeep-anand-chief-technology-officer-266827.html",
+          "bodyChars": 2458,
           "topicOverlap": 8
         }
       ],
@@ -2351,7 +2340,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNelU1WkhKOWh1Uks3VmNZaE1DRDJIU0tCLUVfT2JCaVYtRmxUZ1lrUGhmLV9aVllSVmY4eExJM2ZEZVpqeXhQbV9TTVNoUy1kbUdZUGJXMzk5MnNpYXVYRURDeHZlV3R1RGVhQkMtOFFhWlpfQ2FCWm5tUGRfRS1DSzNaTV9qUFdt0gGOAUFVX3lxTE5VaUhneVMwNWxkSThsX0xJUEJROFQ0UlYtUVhIb2JpWXdRWVdQbU9oMU9Dd0lSeS1BYV9KOU1OUG9OZEt6OVQ5bEZMWlhudEU3eTIwSXdvYzI3ZlFsTnFFY1lTbVMxX1NNbzFVemtCaFZGYzJmMUdlWWQ5YmR5czlvaWhvMDNzQ25aS040akE?oc=5",
-      "title": "FAA deploying AI-powered air traffic control software amid concerns - NewsNation",
+      "title": "FAA deploying AI-powered air traffic control software amid concerns - newsnationnow.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -2553,7 +2542,7 @@
           "pageTitle": "\"0% chance of the end of the world\": Jensen Huang dismisses extinction level threat from AI, bats for fast development",
           "canonical": "https://www.bignewsnetwork.com/news/279316413/0-chance-of-the-end-of-the-world-jensen-huang-dismisses-extinction-level-threat-from-ai-bats-for-fast-development",
           "bodyChars": 5748,
-          "topicOverlap": 11
+          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -2629,7 +2618,7 @@
           "finalUrl": "https://federalnewsnetwork.com/artificial-intelligence/2026/09/artificial-intelligence-is-making-it-easier-to-create-fake-identities-and-harder-for-agencies-to-tell-whos-real/",
           "pageTitle": "Artificial intelligence is making it easier to create fake identities and harder for agencies to tell who&#8217;s real | Federal News Network",
           "canonical": "https://federalnewsnetwork.com/artificial-intelligence/2026/09/artificial-intelligence-is-making-it-easier-to-create-fake-identities-and-harder-for-agencies-to-tell-whos-real/",
-          "bodyChars": 9197,
+          "bodyChars": 9103,
           "topicOverlap": 11
         }
       ],
@@ -2669,7 +2658,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUVhKRW1KVzJ0NzBwWHAzWUxnbUtRMlhpZF8wdGFqMFRhdWhLUU5HQWxVdzdhWFplODJfUGcyS3h6cXFUdFlPMFdYU25jV1UtZG1leXdCU2c4QlJtTi1XVjNXNTNHRExoSjZxOHZNQ01EQWtQZktTV2JvY3V0cFhTQ09rRk5lTV9ZMUI1U0VB?oc=5",
-      "title": "How New York Can Influence the Future of Artificial Intelligence - nysfocus.com",
+      "title": "How New York Can Influence the Future of Artificial Intelligence - New York Focus",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -2692,7 +2681,7 @@
           "pageTitle": "How New York Can Influence the Future of Artificial Intelligence",
           "canonical": "",
           "bodyChars": 7136,
-          "topicOverlap": 3
+          "topicOverlap": 4
         }
       ],
       "recoveryAttempts": 0,
@@ -2792,6 +2781,37 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVFJOY0N0dllOM3NMV3N6Q0s0c0IwUGNHa0lqMkdNZzNZRVBoMGJRb3dmZ2x2bjYyZDFSYUZUNndKNjR4ZVRXeDNOSUR0SmNNbWw0eURMLXdhZkNxQzVKWGJfdHZJUjI5YjFncU9xUHpoMzFzMDFiU213aW9hRUswYlZVeU9LbDRfRVA5UFJIOGZmR3NWakpxVkl1Z0NOVXRudE9hSDhsZW9qWmFMZnByOTQyamFfQzRvendFWHRYUURnTjhYaXc?oc=5",
+      "title": "Leon County investigates court record errors after software upgrade affects thousands - WTXL ABC 27 Tallahassee News",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "wtxl.com"
+      ],
+      "independentDomains": [
+        "wtxl.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.wtxl.com/downtown-tallahassee/leon-county-investigates-court-record-errors-after-software-upgrade-affects-thousands",
+          "domain": "wtxl.com",
+          "publisherFamily": "wtxl.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.wtxl.com/downtown-tallahassee/leon-county-investigates-court-record-errors-after-software-upgrade-affects-thousands",
+          "pageTitle": "Leon County probes court record errors after software upgrade",
+          "canonical": "https://www.wtxl.com/downtown-tallahassee/leon-county-investigates-court-record-errors-after-software-upgrade-affects-thousands",
+          "bodyChars": 2915,
+          "topicOverlap": 10
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQZmZVMW51UVhWZktkVkg3ajQ0R3pHRUIxVC1odlBZckl4VXVGSXF6eHF0dEItR3NCVkxycDBuY3VCekhkTjdsVzlhZkU3V0t2ZFdOZGdkZnBMc2tvT2RacnVYTlQybGZGZ19MTzRudkNSQkpPM05mdjJjU2l5dkYyM0drczBVWDB0cUI1Nm5oSkpNMVcwRDRSNEVFMElNOGc?oc=5",
       "title": "What Does Micron Technology (MU) Warning Of Shortages Through 2027 Mean? - Yahoo Finance",
       "status": "block",
@@ -2876,44 +2896,16 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPc2RVVm5uSkNpRVBlZVF1ZkI3U3dMN3NWLXdKa0lCaTFSRTZndm92aERNUm4tNTltankxZDJ5WDRwMmhYZ19oeXIzUzVfTzVPM2xKdjh4STFfd200cGJoV3ctcmx2WTItZFNLR1lWVmRUdHp1WkluT2JUVVdHaVpVVTY3WTUxTWpVdWNUSHVfSDNKTUhhckE?oc=5",
-      "title": "Women's Cross Country Fifth At MAC Preview Meet - Stevens Institute of Technology Athletics",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://stevensducks.com/news/2026/9/18/womens-cross-country-fifth-at-mac-preview-meet.aspx",
-          "domain": "stevensducks.com",
-          "publisherFamily": "stevensducks.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://stevensducks.com/news/2026/9/18/womens-cross-country-fifth-at-mac-preview-meet.aspx",
-          "pageTitle": "Women's Cross Country Fifth At MAC Preview Meet - Stevens Institute of Technology Athletics",
-          "canonical": "https://stevensducks.com/news/2026/9/18/womens-cross-country-fifth-at-mac-preview-meet.aspx",
-          "bodyChars": 228,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOc1gzX0JqUDlzUE50bTRTZHo2Q3dOYVNpTnFpdjIxUXJOT0tWR1FXbUgzclBXNFZsbGE3djNIRDBHMEZHelp4SE01MENHQVBtWmFKbmI0RlhFUC1WVWNIUnFaMG9mRTNDSWNsTHptZkNGMUN5c2NWQzdNQ0pheWtTTTJLdjJKTzlnTWZKSFRpSQ?oc=5",
       "title": "US and Denmark reach security deal after Trump’s threats to take over Greenland - The Guardian",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 6,
+      "validSourceCount": 5,
+      "independentPublisherCount": 5,
       "independentPublisherFamilies": [
         "theguardian.com",
         "aol.com",
         "sundayguardianlive.com",
-        "newscord.org",
         "inkl.com",
         "yahoo.com"
       ],
@@ -2921,7 +2913,6 @@
         "theguardian.com",
         "aol.com",
         "sundayguardianlive.com",
-        "newscord.org",
         "inkl.com",
         "uk.news.yahoo.com"
       ],
@@ -2966,19 +2957,6 @@
           "topicOverlap": 13
         },
         {
-          "suppliedUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
-          "domain": "newscord.org",
-          "publisherFamily": "newscord.org",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
-          "pageTitle": "Trump Secures Permanent U.S. Control Of Greenland Security In Deal With Denmark: how 96 outlets framed it | NewsCord",
-          "canonical": "https://newscord.org/article/trump-says-us-reaches-greenland-security-deal-with-denmark-securing-permanent-mi--Story_20260918_TrumpsaysUStobuildal25ac8276",
-          "bodyChars": 4463,
-          "topicOverlap": 11
-        },
-        {
           "suppliedUrl": "https://www.inkl.com/news/trump-says-us-denmark-reach-deal-to-expand-military-presence-in-greenland",
           "domain": "inkl.com",
           "publisherFamily": "inkl.com",
@@ -2992,30 +2970,17 @@
           "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://uk.news.yahoo.com/trump-says-us-reached-greenland-221727958.html",
+          "suppliedUrl": "https://uk.news.yahoo.com/greenland-know-trumps-deal-denmark-050400988.html",
           "domain": "uk.news.yahoo.com",
           "publisherFamily": "yahoo.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://uk.news.yahoo.com/trump-says-us-reached-greenland-221727958.html",
-          "pageTitle": "Trump says US reached Greenland security deal - Yahoo News UK",
-          "canonical": "https://www.cnn.com/2026/09/18/politics/trump-us-greenland-security",
-          "bodyChars": 4059,
+          "finalUrl": "https://uk.news.yahoo.com/greenland-know-trumps-deal-denmark-050400988.html",
+          "pageTitle": "Greenland: What do we know about Trump's deal with Denmark over the territory? - Yahoo News UK",
+          "canonical": "https://uk.news.yahoo.com/greenland-know-trumps-deal-denmark-050400988.html",
+          "bodyChars": 4406,
           "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://www.inkl.com/news/unacceptable-for-greenland-not-to-be-in-us-hands-says-trump",
-          "domain": "inkl.com",
-          "publisherFamily": "inkl.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.inkl.com/news/unacceptable-for-greenland-not-to-be-in-us-hands-says-trump",
-          "pageTitle": "Trump insists Greenland is crucial for national…",
-          "canonical": "https://www.theguardian.com/world/2026/jan/14/greenland-us-trump-talks-denmark",
-          "bodyChars": 6840,
-          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
@@ -3030,15 +2995,15 @@
       "independentPublisherCount": 4,
       "independentPublisherFamilies": [
         "wxxv25.com",
-        "bozemandailychronicle.com",
         "mdjonline.com",
-        "ottumwacourier.com"
+        "kokomotribune.com",
+        "tribstar.com"
       ],
       "independentDomains": [
         "wxxv25.com",
-        "bozemandailychronicle.com",
         "mdjonline.com",
-        "ottumwacourier.com"
+        "kokomotribune.com",
+        "tribstar.com"
       ],
       "sources": [
         {
@@ -3059,13 +3024,8 @@
           "domain": "bozemandailychronicle.com",
           "publisherFamily": "bozemandailychronicle.com",
           "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.bozemandailychronicle.com/wire/sports/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_16a3abeb-d2bb-5ce7-8010-62b83d1c7b83.html",
-          "pageTitle": "Security measures at Ole Miss will be heightened for Lane Kiffin's high-profile return with LSU",
-          "canonical": "",
-          "bodyChars": 3310,
-          "topicOverlap": 9
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         },
         {
           "suppliedUrl": "https://www.mdjonline.com/news/national/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_a3d11ef1-ebde-54e0-9495-4c7c9584cb56.html",
@@ -3081,30 +3041,43 @@
           "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://www.ottumwacourier.com/sports/national_sports/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_7125b275-8547-55f8-ba28-d5b9c88c3a70.html",
-          "domain": "ottumwacourier.com",
-          "publisherFamily": "ottumwacourier.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.ottumwacourier.com/sports/national_sports/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_7125b275-8547-55f8-ba28-d5b9c88c3a70.html",
-          "pageTitle": "Security measures at Ole Miss will be heightened for Lane Kiffin's high-profile return with LSU | National Sports | ottumwacourier.com",
-          "canonical": "https://apnews.com/article/lsu-ole-miss-football-game-security-83531e6c4683f798c570124bbb7564f3",
-          "bodyChars": 3687,
-          "topicOverlap": 9
-        },
-        {
           "suppliedUrl": "https://www.kokomotribune.com/news/nation_world_news/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_10e62097-0a4e-5d9c-aca8-e250e263387f.html",
           "domain": "kokomotribune.com",
           "publisherFamily": "kokomotribune.com",
           "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.kokomotribune.com/news/nation_world_news/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_10e62097-0a4e-5d9c-aca8-e250e263387f.html",
+          "pageTitle": "Security measures at Ole Miss will be heightened for Lane Kiffin's high-profile return with LSU | Nation/World News | kokomotribune.com",
+          "canonical": "https://apnews.com/article/lsu-ole-miss-football-game-security-83531e6c4683f798c570124bbb7564f3",
+          "bodyChars": 3434,
+          "topicOverlap": 9
         },
         {
           "suppliedUrl": "https://www.eagletribune.com/region/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_509a15e6-443f-54ec-ab04-117121533811.html",
           "domain": "eagletribune.com",
           "publisherFamily": "eagletribune.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://www.tribstar.com/region/security-measures-at-ole-miss-to-be-heightened-for-lane-kiffins-high-profile-return-with/article_331126b7-e35d-5947-9c05-8f6d6655fff5.html",
+          "domain": "tribstar.com",
+          "publisherFamily": "tribstar.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.tribstar.com/region/security-measures-at-ole-miss-to-be-heightened-for-lane-kiffins-high-profile-return-with/article_331126b7-e35d-5947-9c05-8f6d6655fff5.html",
+          "pageTitle": "Security measures at Ole Miss to be heightened for Lane Kiffin's high-profile return with LSU | Region | tribstar.com",
+          "canonical": "https://apnews.com/article/lsu-ole-miss-football-game-security-83531e6c4683f798c570124bbb7564f3",
+          "bodyChars": 3241,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://www.goshennews.com/news/national_news/security-measures-at-ole-miss-will-be-heightened-for-lane-kiffins-high-profile-return-with/article_d5f8e5fb-1ec3-558b-8a1d-347e20405341.html",
+          "domain": "goshennews.com",
+          "publisherFamily": "goshennews.com",
           "resolvedFrom": "article-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
@@ -3131,27 +3104,25 @@
       "title": "Trump says US reached Greenland security deal - CNN",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 8,
-      "independentPublisherCount": 8,
+      "validSourceCount": 7,
+      "independentPublisherCount": 7,
       "independentPublisherFamilies": [
         "cnn.com",
         "yahoo.com",
         "kake.com",
+        "cnbc.com",
         "com.au",
         "bbc.com",
-        "newscord.org",
-        "thedailystar.net",
-        "newsweek.com"
+        "newscord.org"
       ],
       "independentDomains": [
         "cnn.com",
         "yahoo.com",
         "kake.com",
+        "cnbc.com",
         "theaustralian.com.au",
         "bbc.com",
-        "newscord.org",
-        "thedailystar.net",
-        "newsweek.com"
+        "newscord.org"
       ],
       "sources": [
         {
@@ -3194,6 +3165,19 @@
           "topicOverlap": 7
         },
         {
+          "suppliedUrl": "https://www.cnbc.com/2026/01/21/trump-tariffs-nato-greenland-davos.html",
+          "domain": "cnbc.com",
+          "publisherFamily": "cnbc.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.cnbc.com/2026/01/21/trump-tariffs-nato-greenland-davos.html",
+          "pageTitle": "Trump: Greenland framework reached with NATO, backing off tariffs",
+          "canonical": "https://www.cnbc.com/2026/01/21/trump-tariffs-nato-greenland-davos.html",
+          "bodyChars": 5084,
+          "topicOverlap": 11
+        },
+        {
           "suppliedUrl": "https://www.theaustralian.com.au/nocookies?a=A.flavipes",
           "domain": "theaustralian.com.au",
           "publisherFamily": "com.au",
@@ -3233,30 +3217,17 @@
           "topicOverlap": 11
         },
         {
-          "suppliedUrl": "https://www.thedailystar.net/news/world/news/us-and-denmark-reach-deal-greenland-trump-says-4276751",
-          "domain": "thedailystar.net",
-          "publisherFamily": "thedailystar.net",
+          "suppliedUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
+          "domain": "devdiscourse.com",
+          "publisherFamily": "devdiscourse.com",
           "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.thedailystar.net/news/world/news/us-and-denmark-reach-deal-greenland-trump-says-4276751",
-          "pageTitle": "US and Denmark reach deal on Greenland, Trump says | The Daily Star",
-          "canonical": "https://www.thedailystar.net/news/world/news/us-and-denmark-reach-deal-greenland-trump-says-4276751",
-          "bodyChars": 3797,
-          "topicOverlap": 6
-        },
-        {
-          "suppliedUrl": "https://www.newsweek.com/greenland-deal-donald-trump-denmark-control-agreement-12462682",
-          "domain": "newsweek.com",
-          "publisherFamily": "newsweek.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.newsweek.com/greenland-deal-donald-trump-denmark-control-agreement-12462682",
-          "pageTitle": "Trump Says US Secures Permanent Control Over Greenland Security - Newsweek",
-          "canonical": "https://www.newsweek.com/greenland-deal-donald-trump-denmark-control-agreement-12462682",
-          "bodyChars": 4493,
-          "topicOverlap": 8
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security?amp",
+          "pageTitle": "Trump says US, Denmark, Greenland entered into agreement on US control over security",
+          "canonical": "https://www.devdiscourse.com/article/international/3979174-trump-says-us-denmark-greenland-entered-into-agreement-on-us-control-over-security",
+          "bodyChars": 458,
+          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -3414,7 +3385,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5DLVVDZWFpWWxfQzVoanF6dkl5QUc1cWkxZHNwWC1maFBiUG4wNjI4STZJRmRvZ01TNXE5emRHQ0VBdHpPb054TWhFUHhqS2sxU2k0SU1weVpWVG80VjlzSDdhd0NWNjRoNXExU3Izd2I2VHp3?oc=5",
-      "title": "Bitcoin Price Surges Over $81,000 Despite Clarity Act Fail and Interest Rate Hike - bitcoinmagazine.com",
+      "title": "Bitcoin Price Surges Over $81,000 Despite Clarity Act Fail and Interest Rate Hike - Bitcoin Magazine",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -3442,106 +3413,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQQXFtZ2hIbkZNVDRDVlhiN2h2LUdSWHpNSFRscjBFZTFZRUdmNDZlaHdiaFJ1Qm5FY1E1bHlwQXB0bEVCNTBpanA4Vkp5bjM1Q3gwSVRfQ1hjZWpWRWhZcDBWZVpfQTNybGRwZ0tyeU9GS0czMl8tdFQybFlUZkNNWlJucnBNa3U2LTMtV3dDa1dUV3NneV83enJYdUgtOVFCa2JjTEc1VXVMdU90NU9XVktEYW1GSm9IM0RoNXZWN0QwUGprYVJ3ZjVn?oc=5",
-      "title": "Bitcoin surges 5% to top $80,000 as investors look past Clarity Act's failure - Yahoo Finance",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "aol.com"
-      ],
-      "independentDomains": [
-        "aol.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://finance.yahoo.com/markets/article/bitcoin-surges-5-to-top-80000-as-investors-look-past-clarity-acts-failure-145857106.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        },
-        {
-          "suppliedUrl": "https://www.aol.com/articles/bitcoin-surges-5-top-80-145857000.html",
-          "domain": "aol.com",
-          "publisherFamily": "aol.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.aol.com/articles/bitcoin-surges-5-top-80-145857000.html",
-          "pageTitle": "Bitcoin surges 5% to top $80,000 as investors look past Clarity Act's failure - AOL",
-          "canonical": "https://finance.yahoo.com/markets/article/bitcoin-surges-5-to-top-80000-as-investors-look-past-clarity-acts-failure-145857106.html",
-          "bodyChars": 1741,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQWtnQmUwbWZrMTd0Zi0zM1VVYkxNVmdqUHB6SjRaZjlSeDB2TUxNLVpHOWJCNzVpUlF5V2ExWU9UeFFvMWdQWnFWVTROZWZmRllvM3VldGU3X3d1NUlQTTZnQzZoRWtIZG5YUnVpaXdzdXhvRjhueHQtWHlvMXUyNmJnWXJJSEhLV0QyMThwN0ZtUUdFa0N0NjEtdGZWdGFYZHZtYWNtd01SaHFHb0pZSmJtUmtRLVZES1BnZnlSVjhwYm8?oc=5",
-      "title": "CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act - CoinDesk",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 3,
-      "independentPublisherCount": 3,
-      "independentPublisherFamilies": [
-        "coindesk.com",
-        "cryptonews.net",
-        "newscord.org"
-      ],
-      "independentDomains": [
-        "coindesk.com",
-        "cryptonews.net",
-        "newscord.org"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
-          "domain": "coindesk.com",
-          "publisherFamily": "coindesk.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
-          "pageTitle": "CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act",
-          "canonical": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
-          "bodyChars": 3100,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://cryptonews.net/news/legal/33461603/",
-          "domain": "cryptonews.net",
-          "publisherFamily": "cryptonews.net",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://cryptonews.net/news/legal/33461603/",
-          "pageTitle": "CFTC submits crypto market structure proposal for White House review",
-          "canonical": "",
-          "bodyChars": 1255,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://newscord.org/article/senators-john-thune-and-cynthia-lummis-push-clarity-act-ahead-of-senate-cloture--Story_20260909_Whatcouldhappenifthe844e9335",
-          "domain": "newscord.org",
-          "publisherFamily": "newscord.org",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://newscord.org/article/senators-john-thune-and-cynthia-lummis-push-clarity-act-ahead-of-senate-cloture--Story_20260909_Whatcouldhappenifthe844e9335",
-          "pageTitle": "CFTC Submits Crypto Market Rulemaking to White House After Senate Rejects CLARITY Act: how 146 outlets framed it | NewsCord",
-          "canonical": "https://newscord.org/article/senators-john-thune-and-cynthia-lummis-push-clarity-act-ahead-of-senate-cloture--Story_20260909_Whatcouldhappenifthe844e9335",
-          "bodyChars": 3778,
-          "topicOverlap": 13
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTDFNQnEtWEpVMEgxTmE2dkREN3dDZVdqSWt2eDNvUEFSdVBlMTdMS1lHN2EtSkxLU0NMM3VwY0c4cUQ5MzFEeUtlZno3X0dhT0RnS241Y0tQdHZETlpicHk2TjgyT3lBWGs4QXBkRUtqT1F6LVVoRUNNNGQwTEpSVDcwRjhVRW45YzY2WXAyQkFQS3VDZ1pFQjBVTFg?oc=5",
@@ -3583,19 +3454,132 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQWtnQmUwbWZrMTd0Zi0zM1VVYkxNVmdqUHB6SjRaZjlSeDB2TUxNLVpHOWJCNzVpUlF5V2ExWU9UeFFvMWdQWnFWVTROZWZmRllvM3VldGU3X3d1NUlQTTZnQzZoRWtIZG5YUnVpaXdzdXhvRjhueHQtWHlvMXUyNmJnWXJJSEhLV0QyMThwN0ZtUUdFa0N0NjEtdGZWdGFYZHZtYWNtd01SaHFHb0pZSmJtUmtRLVZES1BnZnlSVjhwYm8?oc=5",
+      "title": "CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act - CoinDesk",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 4,
+      "independentPublisherCount": 4,
+      "independentPublisherFamilies": [
+        "coindesk.com",
+        "cryptonews.net",
+        "newscord.org",
+        "eciks.org"
+      ],
+      "independentDomains": [
+        "coindesk.com",
+        "cryptonews.net",
+        "newscord.org",
+        "eciks.org"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
+          "domain": "coindesk.com",
+          "publisherFamily": "coindesk.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
+          "pageTitle": "CFTC sends crypto rules to White House to review as Congress stalls on Clarity Act",
+          "canonical": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act",
+          "bodyChars": 3100,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://cryptonews.net/news/legal/33461603/",
+          "domain": "cryptonews.net",
+          "publisherFamily": "cryptonews.net",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://cryptonews.net/news/legal/33461603/",
+          "pageTitle": "CFTC submits crypto market structure proposal for White House review",
+          "canonical": "",
+          "bodyChars": 1255,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://newscord.org/article/senators-john-thune-and-cynthia-lummis-push-clarity-act-ahead-of-senate-cloture--Story_20260909_Whatcouldhappenifthe844e9335",
+          "domain": "newscord.org",
+          "publisherFamily": "newscord.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://newscord.org/article/senators-john-thune-and-cynthia-lummis-push-clarity-act-ahead-of-senate-cloture--Story_20260909_Whatcouldhappenifthe844e9335",
+          "pageTitle": "CFTC Submits Crypto Market Rulemaking to White House After Senate Rejects CLARITY Act: how 146 outlets framed it | NewsCord",
+          "canonical": "https://newscord.org/article/senators-john-thune-and-cynthia-lummis-push-clarity-act-ahead-of-senate-cloture--Story_20260909_Whatcouldhappenifthe844e9335",
+          "bodyChars": 3778,
+          "topicOverlap": 13
+        },
+        {
+          "suppliedUrl": "https://eciks.org/22479-clarity-act-senate-vote-trump-crypto",
+          "domain": "eciks.org",
+          "publisherFamily": "eciks.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://eciks.org/22479-clarity-act-senate-vote-trump-crypto",
+          "pageTitle": "Clarity Act gets Senate vote date as Trump pushes crypto bill at White House summit",
+          "canonical": "https://eciks.org/22479-clarity-act-senate-vote-trump-crypto",
+          "bodyChars": 4690,
+          "topicOverlap": 12
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQQXFtZ2hIbkZNVDRDVlhiN2h2LUdSWHpNSFRscjBFZTFZRUdmNDZlaHdiaFJ1Qm5FY1E1bHlwQXB0bEVCNTBpanA4Vkp5bjM1Q3gwSVRfQ1hjZWpWRWhZcDBWZVpfQTNybGRwZ0tyeU9GS0czMl8tdFQybFlUZkNNWlJucnBNa3U2LTMtV3dDa1dUV3NneV83enJYdUgtOVFCa2JjTEc1VXVMdU90NU9XVktEYW1GSm9IM0RoNXZWN0QwUGprYVJ3ZjVn?oc=5",
+      "title": "Bitcoin surges 5% to top $80,000 as investors look past Clarity Act's failure - Yahoo Finance",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "aol.com"
+      ],
+      "independentDomains": [
+        "aol.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://finance.yahoo.com/markets/article/bitcoin-surges-5-to-top-80000-as-investors-look-past-clarity-acts-failure-145857106.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://www.aol.com/articles/bitcoin-surges-5-top-80-145857000.html",
+          "domain": "aol.com",
+          "publisherFamily": "aol.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.aol.com/articles/bitcoin-surges-5-top-80-145857000.html",
+          "pageTitle": "Bitcoin surges 5% to top $80,000 as investors look past Clarity Act's failure - AOL",
+          "canonical": "https://finance.yahoo.com/markets/article/bitcoin-surges-5-to-top-80000-as-investors-look-past-clarity-acts-failure-145857106.html",
+          "bodyChars": 1741,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQckFlT1JJZldZcnJGQTdXS2xmekk3NnlGd0NTSEc0amlIZ0l6M2FJOGxVS3VtOUJtdnMwRm93N1lIU2Q2TE1BZ3F1OEJlWTV2b2V2YjlZS3pzeWlLOUJ6N1ZOazUteVdxbzVJdWxZWmhQSnQ0VDZFR3ppQzlkNlNOaXlXZGhtYU1oVWhwUlJOVnBoZHc2N0k0?oc=5",
       "title": "The CFTC Just Sent Its Crypto Rules to the White House. What’s in the Filing, and How Quickly Could It Move? - Yahoo Finance",
       "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "cryptotimes.io",
-        "247wallst.com"
+        "cryptotimes.io"
       ],
       "independentDomains": [
-        "cryptotimes.io",
-        "247wallst.com"
+        "cryptotimes.io"
       ],
       "sources": [
         {
@@ -3618,19 +3602,6 @@
           "canonical": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
           "bodyChars": 4471,
           "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/17/the-sec-and-cftc-say-they-will-write-crypto-rules-without-congress-what-atkins-and-selig-can-actually-do-for-xrp-and-bitcoin/",
-          "domain": "247wallst.com",
-          "publisherFamily": "247wallst.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/17/the-sec-and-cftc-say-they-will-write-crypto-rules-without-congress-what-atkins-and-selig-can-actually-do-for-xrp-and-bitcoin/",
-          "pageTitle": "The SEC and CFTC Say They Will Write Crypto Rules Without Congress. What Atkins and Selig Can Actually Do for XRP and Bitcoin. - 24/7 Wall St.",
-          "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/17/the-sec-and-cftc-say-they-will-write-crypto-rules-without-congress-what-atkins-and-selig-can-actually-do-for-xrp-and-bitcoin/",
-          "bodyChars": 7948,
-          "topicOverlap": 11
         }
       ],
       "recoveryAttempts": 0,
@@ -3754,11 +3725,12 @@
       "title": "The Walt Disney Company Names Karandeep Anand To Newly Created Role Of Chief Technology Officer - The Walt Disney Company",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 6,
-      "independentPublisherCount": 6,
+      "validSourceCount": 7,
+      "independentPublisherCount": 7,
       "independentPublisherFamilies": [
         "thewaltdisneycompany.com",
         "joplinglobe.com",
+        "eagletribune.com",
         "laughingplace.com",
         "newscord.org",
         "dapsmagic.com",
@@ -3767,6 +3739,7 @@
       "independentDomains": [
         "thewaltdisneycompany.com",
         "joplinglobe.com",
+        "eagletribune.com",
         "laughingplace.com",
         "newscord.org",
         "dapsmagic.com",
@@ -3817,8 +3790,13 @@
           "domain": "eagletribune.com",
           "publisherFamily": "eagletribune.com",
           "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.eagletribune.com/region/the-walt-disney-company-names-karandeep-anand-to-newly-created-role-of-chief-technology-officer/article_13f72aff-13b2-53f8-a065-f35abf612850.html",
+          "pageTitle": "The Walt Disney Company Names Karandeep Anand to Newly Created Role of Chief Technology Officer | Region | eagletribune.com",
+          "canonical": "https://www.businesswire.com/news/home/20260918458816/en/",
+          "bodyChars": 1671,
+          "topicOverlap": 10
         },
         {
           "suppliedUrl": "https://www.laughingplace.com/disney-business/karandeep-anand-chief-technology-officer-disney/",
@@ -3869,7 +3847,7 @@
           "finalUrl": "https://americanbazaaronline.com/2026/09/18/disney-names-former-character-ai-ceo-karandeep-anand-as-chief-technology-officer-488456/",
           "pageTitle": "Disney names former Character.AI CEO Karandeep Anand as chief technology officer",
           "canonical": "https://americanbazaaronline.com/2026/09/18/disney-names-former-character-ai-ceo-karandeep-anand-as-chief-technology-officer-488456/",
-          "bodyChars": 3826,
+          "bodyChars": 3818,
           "topicOverlap": 9
         }
       ],
@@ -3958,20 +3936,39 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNekJ6LTQ2WEZmWmQwcGdVb2dWNWx2MTI3YW1hQ0N3ZVNZd0hMcVRyU2d2MXN5NlRHeXRFSy1xemZMOUp4bGZzNlpmMjV6VEdNdjk1VEt5TjNodUNndnNvM2JQSHY0VXYwR2gweXZ3ZFhvR216Nml1OGFPYk5VVWFWbFdlS1hvRDRNdmViRXdDNktaNEVlRGV0X1kzbjU?oc=5",
-      "title": "US and Denmark reach new agreement on defense and investment in Greenland - Politico",
+      "title": "US and Denmark reach new agreement on defense and investment in Greenland - politico.com",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "validSourceCount": 5,
+      "independentPublisherCount": 5,
       "independentPublisherFamilies": [
+        "pbs.org",
         "nbcnews.com",
-        "politico.eu"
+        "theglobeandmail.com",
+        "firstpost.com",
+        "breitbart.com"
       ],
       "independentDomains": [
+        "pbs.org",
         "nbcnews.com",
-        "politico.eu"
+        "theglobeandmail.com",
+        "firstpost.com",
+        "breitbart.com"
       ],
       "sources": [
+        {
+          "suppliedUrl": "https://www.pbs.org/newshour/show/whats-in-the-greenland-agreement-between-u-s-and-denmark",
+          "domain": "pbs.org",
+          "publisherFamily": "pbs.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.pbs.org/newshour/show/whats-in-the-greenland-agreement-between-u-s-and-denmark",
+          "pageTitle": "What's in the Greenland agreement between U.S. and Denmark | PBS News",
+          "canonical": "https://www.pbs.org/newshour/show/whats-in-the-greenland-agreement-between-u-s-and-denmark",
+          "bodyChars": 3907,
+          "topicOverlap": 4
+        },
         {
           "suppliedUrl": "https://www.nbcnews.com/politics/trump-administration/trump-announces-agreement-denmark-secure-permanent-control-greenlands-rcna598641",
           "domain": "nbcnews.com",
@@ -3986,17 +3983,43 @@
           "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://www.politico.eu/article/eu-us-agreement-trade-deal-within-reach-top-lawmaker/",
-          "domain": "politico.eu",
-          "publisherFamily": "politico.eu",
+          "suppliedUrl": "https://www.theglobeandmail.com/world/article-us-denmark-reach-deal-to-expand-american-military-presence-on/",
+          "domain": "theglobeandmail.com",
+          "publisherFamily": "theglobeandmail.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.politico.eu/article/eu-us-agreement-trade-deal-within-reach-top-lawmaker/",
-          "pageTitle": "EU agreement on US trade deal within reach, says top lawmaker &#8211; POLITICO",
-          "canonical": "https://www.politico.eu/article/eu-us-agreement-trade-deal-within-reach-top-lawmaker/",
-          "bodyChars": 5102,
-          "topicOverlap": 8
+          "finalUrl": "https://www.theglobeandmail.com/world/article-us-denmark-reach-deal-to-expand-american-military-presence-on/",
+          "pageTitle": "U.S., Denmark reach deal to expand American military presence on Greenland, Trump says - The Globe and Mail",
+          "canonical": "https://www.theglobeandmail.com/world/article-us-denmark-reach-deal-to-expand-american-military-presence-on/",
+          "bodyChars": 4126,
+          "topicOverlap": 12
+        },
+        {
+          "suppliedUrl": "https://www.firstpost.com/world/us-denmark-greenland-reach-deal-to-expand-american-military-presence-on-the-island-trump-says-14046956.html/amp",
+          "domain": "firstpost.com",
+          "publisherFamily": "firstpost.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.firstpost.com/world/us-denmark-greenland-reach-deal-to-expand-american-military-presence-on-the-island-trump-says-14046956.html/amp",
+          "pageTitle": "Trump gets 'permanent control' over Greenland, announces deal with Denmark",
+          "canonical": "https://www.firstpost.com/world/us-denmark-greenland-reach-deal-to-expand-american-military-presence-on-the-island-trump-says-14046956.html",
+          "bodyChars": 3832,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.breitbart.com/news/u-s-denmark-reach-security-deal-on-greenland/amp/",
+          "domain": "breitbart.com",
+          "publisherFamily": "breitbart.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.breitbart.com/news/u-s-denmark-reach-security-deal-on-greenland/amp/",
+          "pageTitle": "U.S., Denmark reach security deal on Greenland - Breitbart",
+          "canonical": "https://www.breitbart.com/news/u-s-denmark-reach-security-deal-on-greenland/",
+          "bodyChars": 2075,
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
@@ -4086,7 +4109,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNWZ1dFpTYVRsRkJiTDM2clcteEJ4eGpOcHNBOFdJbFBrNWRibGo1SnQ0X0tXdXl1UzlPbVBETlVfcDZhQlRRcGNfZG9iLXloS2pWX2trenFfWDh4SllHanVUcTRTYzFpdVFUTnZWeG9Jci1oSjB3eVFfY25Sb3UySjZsZXNTc0V3TVpzcWZkSWZGSTNLaTZOVUY4LTd5Q2JyaklIYUpJRlBVTGxSaE9MUVhwVXI?oc=5",
-      "title": "UK air traffic control outage caused by software defect, says operator - reuters.com",
+      "title": "UK air traffic control outage caused by software defect, says operator - Reuters",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -4467,7 +4490,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNM3FpZWhjS2h5eXlFTUFhcHFUWFhzc29XVHVQLUJSM1VnOGJoOGE4alpsczB0SGMxbUhZTll0b2FhSmhISGdnem42NGVOTDBQUENBVkZ6Y29GR0hZcnVLOFFTSzVzZGJSbk8xSkt6SUZtdFF3Y3VyY2podjI5UURiSk5WcnM4M1hlYTBfUDVpV05SaG5sNjA4d1RFeXg1VXFjRElPRHRVdXY3bk5JUFMyLTEzaThabGc?oc=5",
-      "title": "Beyond Bottled Water: EPA Showcases Technology That Provides Safe Drinking Water to Disaster-Hit Areas - U.S. Environmental Protection Agency (.gov)",
+      "title": "Beyond Bottled Water: EPA Showcases Technology That Provides Safe Drinking Water to Disaster-Hit Areas - epa.gov",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -4859,7 +4882,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
-      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - news.njit.edu",
+      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5027,7 +5050,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5",
-      "title": "From Edison’s Invention Factory to the new architecture of innovation - science.org",
+      "title": "From Edison’s Invention Factory to the new architecture of innovation - Science | AAAS",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5195,7 +5218,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
-      "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - investor.cummins.com",
+      "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - Cummins",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5321,14 +5344,14 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeURITVRSSk1qeERYM3J4NkxRY09MdWJXY01CVjBGbG5uQUJuOUtWOXNuTFllNUExNFptYTQ0WUpmNjNXZTczN3ZhX2ZpNS14V216RUM1aTNXZElmcURNN3FOeEZGeThpRHlqUS1NYnlRMWRiWWxXVnc2Sm93TmlSb0FXaDNBNmdLdjJveXdBaHF2R0IxZm9fSUhFeGtSTFVVeWZxaU5Uamh2TVpxem9TOWNMLW1zcnZwdWItb3l0amE?oc=5",
-      "title": "Software Defined Vehicle Architecture: A Guide for Automotive OEMs - theautochannel.com",
+      "title": "Software Defined Vehicle Architecture: A Guide for Automotive OEMs - The Auto Channel",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5",
-      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - Bloomberg",
+      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - bloomberg.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5370,7 +5393,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
-      "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - South China Morning Post",
+      "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - scmp.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5391,7 +5414,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
-      "title": "Apple unveils iPhone Duo - apple.com",
+      "title": "Apple unveils iPhone Duo - Apple",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5405,14 +5428,14 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
-      "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - apple.com",
+      "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - Apple",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSjRzdmZCOXJRTkVEWmotS2QzZGM3ejFWeGMzZkRfT3dkLTB3c0s2Rml6RE1nU3FRSmNxNDBaQlpRQ0FJYWxOUWd6MFIwVjEwT3l5aWJXLUdsQU1Sdk9PYnRRTjFLUnJoUkNlQzNXcTRaR0hyNnRQSkdkd2tRSkEtblJnVnZlZTRlUm1N?oc=5",
-      "title": "Apple Upgrade launches in the United States - apple.com",
+      "title": "Apple Upgrade launches in the United States - Apple",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5509,15 +5532,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
-      "title": "News | The University of Alabama in Huntsville - The University of Alabama in Huntsville",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5",
-      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - apple.com",
+      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - Apple",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5579,8 +5595,15 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
+      "title": "News | The University of Alabama in Huntsville - uah.edu",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVGdrMUpNdE5PVXdkMFQtaXBlRUxHbzd5aE04T3JIYk4tcUQ5Vi1Fc0sybFZJUDFSVzFrNDJQbnowalR3LXprM0xWSWt6OXUxamlmS0tEVllSdXZUMU1lRW1BUE85U0xkOEd2NkwtQ1lkRHlwS0IwdDRlbWN5NzJMYUpuaXhxZ2V4V2RjendTRTVySTgtTHJMNm1OOWNkcURNdEVKQ3YxYnNNOXZWeE54dF9TdmdVLTN5Nl9QZmpKSGtHbGZkT29SeC1pVHo5WjdkXy01MVpqTnlwa1pJUFd3b09Na3pUVlYyZWhHTlpHUFNQeUliOGVxUg?oc=5",
-      "title": "IonQ Debuts Superion 256 Quantum Computing Platform - ionq.com",
+      "title": "IonQ Debuts Superion 256 Quantum Computing Platform - IonQ",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []

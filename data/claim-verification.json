@@ -1,19 +1,19 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-19T05:01:42.514Z",
-  "articlePath": "content/articles/jpmorgan-s-266-000-bitcoin-benchmark-vs-current-80-950-price.md",
-  "articleTitle": "JPMorgan’s $266,000 Bitcoin Benchmark vs. Current $80,950 Price",
+  "generatedAt": "2026-09-19T05:14:12.183Z",
+  "articlePath": "content/articles/cftc-sends-crypto-rule-draft-to-white-house-for-review.md",
+  "articleTitle": "CFTC Sends Crypto Rule Draft to White House for Review",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
   "sourceCount": 1,
   "usableSourceCount": 1,
-  "claimCount": 16,
-  "editorialCount": 3,
-  "verified": 14,
+  "claimCount": 17,
+  "editorialCount": 0,
+  "verified": 17,
   "partial": 0,
-  "unsupported": 2,
+  "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 70,
-  "pass": false,
+  "averageConfidence": 86,
+  "pass": true,
   "policy": {
     "verifiedMin": 62,
     "partialMin": 45,
@@ -37,9 +37,9 @@
   "sources": [
     {
       "id": "S1",
-      "title": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "url": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "domain": "247wallst.com",
+      "title": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "url": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "domain": "cryptotimes.io",
       "passageCount": 18,
       "articleBodyLength": 0
     }
@@ -47,50 +47,59 @@
   "claims": [
     {
       "index": 1,
-      "claim": "The article, written by Sam Daodu and published on Yahoo Finance on September 18, 2026, reports that JPMorgan’s internal model values Bitcoin at $266,000.",
+      "claim": "The Commodity Futures Trading Commission (CFTC) has submitted a new regulatory action to the White House’s Office of Information and Regulatory Affairs.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 85,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 99,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "2 See for yourself (Sponsor) This post may contain links from our sponsors and affiliates, and Flywheel Publishing may receive compensation for actions taken through them. &copy; Scott Olson / Getty Images As of September 18, 2026, Bitcoin ( CRYPTO:BTC ) is trading at $80,950, while JPMorgan’s internal model estimates its value at $266,000. By Sam Daodu Published September 18, 2026, 1:03pm ET · 4 min read 𝕏 f ⧉ Quick Read JPMorgan's $266,000 Bitcoin figure is a volatility-adjusted benchmark against gold with no attached date, not a directional price forecast.",
-      "bestPassage": "2 See for yourself (Sponsor) This post may contain links from our sponsors and affiliates, and Flywheel Publishing may receive compensation for actions taken through them. &copy; Scott Olson / Getty Images As of September 18, 2026, Bitcoin ( CRYPTO:BTC ) is trading at $80,950, while JPMorgan’s internal model estimates its value at $266,000.",
+      "bestPassageId": "S1-P3",
+      "evidence": "Commodity Futures Trading Commission (CFTC) has sent a new crypto market regulatory action to the White House for review, marking an early step toward potentially broader federal rules governing digital-asset transactions and markets. The White House Office of Information and Regulatory Affairs will review the CFTC action under Executive Order 12866.",
+      "bestPassage": "Commodity Futures Trading Commission (CFTC) has sent a new crypto market regulatory action to the White House for review, marking an early step toward potentially broader federal rules governing digital-asset transactions and markets.",
       "matchedPassages": [
-        "S1-P8",
-        "S1-P4"
+        "S1-P3",
+        "S1-P15"
       ],
       "sharedTerms": [
-        "sam",
-        "daodu",
+        "the",
+        "commodity",
+        "futur",
+        "trad",
+        "commission",
+        "cftc",
+        "has",
+        "new",
+        "regulatory",
+        "action",
+        "white",
+        "house",
+        "office",
+        "information",
         "and",
-        "publish",
-        "september",
-        "2026",
-        "jpmorgan",
-        "internal",
-        "models",
-        "btc",
-        "266",
-        "000"
+        "affair"
       ],
       "entityShared": [
-        "sam",
-        "daodu",
-        "september",
-        "jpmorgan",
-        "btc"
+        "the",
+        "commodity",
+        "futur",
+        "trad",
+        "commission",
+        "cftc",
+        "white",
+        "house",
+        "office",
+        "information",
+        "regulatory",
+        "affair"
       ],
       "topicShared": [
-        "yahoo",
-        "finance",
-        "jpmorgan",
-        "valu",
-        "btc",
-        "266",
-        "000"
+        "the",
+        "cftc",
+        "white",
+        "house",
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -99,35 +108,51 @@
     },
     {
       "index": 2,
-      "claim": "This figure is described as a volatility‑adjusted benchmark against gold rather than a directional price forecast, and it carries no specified timeline.",
+      "claim": "The filing, identified by RIN 3038‑AF80 and titled “Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets,” is currently listed as a prerule on Reginfo.gov and is not deemed economically significant.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 81,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
       "bestPassageId": "S1-P4",
-      "evidence": "By Sam Daodu Published September 18, 2026, 1:03pm ET · 4 min read 𝕏 f ⧉ Quick Read JPMorgan's $266,000 Bitcoin figure is a volatility-adjusted benchmark against gold with no attached date, not a directional price forecast.",
-      "bestPassage": "By Sam Daodu Published September 18, 2026, 1:03pm ET · 4 min read 𝕏 f ⧉ Quick Read JPMorgan's $266,000 Bitcoin figure is a volatility-adjusted benchmark against gold with no attached date, not a directional price forecast.",
+      "evidence": "A new Reginfo.gov regulatory review entry lists RIN 3038-AF80, titled “Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets,” as pending review under Executive Order 12866.",
+      "bestPassage": "A new Reginfo.gov regulatory review entry lists RIN 3038-AF80, titled “Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets,” as pending review under Executive Order 12866.",
       "matchedPassages": [
         "S1-P4"
       ],
       "sharedTerms": [
-        "figure",
-        "volatility",
-        "adjust",
-        "benchmark",
-        "against",
-        "gold",
-        "directional",
-        "price",
-        "forecast"
+        "rin",
+        "3038",
+        "af80",
+        "and",
+        "titl",
+        "regulation",
+        "crypto",
+        "asset",
+        "transaction",
+        "market",
+        "list",
+        "reginfo",
+        "gov"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "rin",
+        "af80",
+        "regulation",
+        "crypto",
+        "asset",
+        "transaction",
+        "market",
+        "reginfo",
+        "gov"
+      ],
       "topicShared": [
-        "against",
-        "gold"
+        "the",
+        "fil",
+        "and",
+        "crypto"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -136,31 +161,40 @@
     },
     {
       "index": 3,
-      "claim": "At the same time, Bitcoin was trading at $80,950 on that date.",
-      "status": "unsupported",
-      "classification": "unsupported",
-      "confidence": 39,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "claim": "This move follows the Senate’s failure to advance the CLARITY Act, a piece of legislation that would have expanded the CFTC’s authority over digital commodities.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 71,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "2 See for yourself (Sponsor) This post may contain links from our sponsors and affiliates, and Flywheel Publishing may receive compensation for actions taken through them. &copy; Scott Olson / Getty Images As of September 18, 2026, Bitcoin ( CRYPTO:BTC ) is trading at $80,950, while JPMorgan’s internal model estimates its value at $266,000.",
-      "bestPassage": "2 See for yourself (Sponsor) This post may contain links from our sponsors and affiliates, and Flywheel Publishing may receive compensation for actions taken through them. &copy; Scott Olson / Getty Images As of September 18, 2026, Bitcoin ( CRYPTO:BTC ) is trading at $80,950, while JPMorgan’s internal model estimates its value at $266,000.",
+      "bestPassageId": "S1-P1",
+      "evidence": "Regulations & Policies CFTC Sends Crypto Market Rulemaking to White House for Review The CFTC’s new crypto market action reached the White House regulatory review office two days after the Senate failed to advance the CLARITY Act. Senate failed to advance the CLARITY Act in a 49–50 cloture vote.",
+      "bestPassage": "Regulations & Policies CFTC Sends Crypto Market Rulemaking to White House for Review The CFTC’s new crypto market action reached the White House regulatory review office two days after the Senate failed to advance the CLARITY Act.",
       "matchedPassages": [
+        "S1-P1",
         "S1-P8"
       ],
       "sharedTerms": [
-        "btc",
-        "trad",
-        "950"
+        "the",
+        "senate",
+        "advance",
+        "clarity",
+        "act",
+        "cftc",
+        "regulatory"
       ],
       "entityShared": [
-        "btc"
+        "senate",
+        "clarity",
+        "act",
+        "cftc"
       ],
       "topicShared": [
-        "btc",
-        "trad"
+        "move",
+        "the",
+        "cftc"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -169,47 +203,37 @@
     },
     {
       "index": 4,
-      "claim": "According to JPMorgan analysts, the $266,000 target reflects a scenario where Bitcoin captures a store‑of‑value share comparable to gold, after accounting for Bitcoin’s higher volatility.",
+      "claim": "The Senate failed to advance the CLARITY Act in a 49–50 cloture vote.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 75,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 100,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "At $266,000, Bitcoin's market cap would reach $5.3 trillion, claiming roughly a quarter of all gold ever mined as store-of-value share. Comparing $266,000 Against Other Bank Targets Kamil Zajaczkowski / Shutterstock.com For Bitcoin to reach JPMorgan’s target of $266,000 from its current price of $80,950, it would need to increase by approximately 229%, or about three and a quarter times. By Sam Daodu Published September 18, 2026, 1:03pm ET · 4 min read 𝕏 f ⧉ Quick Read JPMorgan's $266,000 Bitcoin figure is a volatility-adjusted benchmark against gold with no attached date, not a directional price forecast. 2 See for yourself (Sponsor) This post may contain links from our sponsors and affiliates, and Flywheel Publishing may receive compensation for actions taken through them. &copy; Scott Olson / Getty Images As of September 18, 2026, Bitcoin ( CRYPTO:BTC ) is trading at $80,950, while JPMorgan’s internal model estimates its value at $266,000. Cryptocurrency JPMorgan Values Bitcoin at $266,000 Against Gold.",
-      "bestPassage": "At $266,000, Bitcoin's market cap would reach $5.3 trillion, claiming roughly a quarter of all gold ever mined as store-of-value share.",
+      "bestPassageId": "S1-P8",
+      "evidence": "Senate failed to advance the CLARITY Act in a 49–50 cloture vote.",
+      "bestPassage": "Senate failed to advance the CLARITY Act in a 49–50 cloture vote.",
       "matchedPassages": [
-        "S1-P5",
-        "S1-P17",
-        "S1-P4",
-        "S1-P8",
-        "S1-P1"
+        "S1-P8"
       ],
       "sharedTerms": [
-        "jpmorgan",
-        "266",
-        "000",
-        "target",
-        "btc",
-        "store",
-        "value",
-        "share",
-        "gold",
-        "for",
-        "volatility"
+        "the",
+        "senate",
+        "fail",
+        "advance",
+        "clarity",
+        "act",
+        "cloture",
+        "vote"
       ],
       "entityShared": [
-        "jpmorgan",
-        "btc"
+        "senate",
+        "clarity",
+        "act"
       ],
       "topicShared": [
-        "jpmorgan",
-        "266",
-        "000",
-        "btc",
-        "gold"
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -218,38 +242,34 @@
     },
     {
       "index": 5,
-      "claim": "If Bitcoin reached that price, its market capitalization would be roughly $5.3 trillion, which the model equates to about a quarter of all gold ever mined.",
+      "claim": "A prerule designation indicates that the agency is still exploring whether and how to begin formal rulemaking.",
       "status": "verified",
-      "classification": "supported",
-      "confidence": 75,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "classification": "supported_with_context",
+      "confidence": 61,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P5",
-      "evidence": "At $266,000, Bitcoin's market cap would reach $5.3 trillion, claiming roughly a quarter of all gold ever mined as store-of-value share.",
-      "bestPassage": "At $266,000, Bitcoin's market cap would reach $5.3 trillion, claiming roughly a quarter of all gold ever mined as store-of-value share.",
+      "bestPassageId": "S1-P6",
+      "evidence": "CFTC Crypto Action Is Still at an Early Rulemaking Stage The “prerule” designation is important because the CFTC has not yet submitted a formal proposed rule for public comment. Reginfo defines the prerule stage as actions taken by agencies to determine whether or how to begin rulemaking.",
+      "bestPassage": "CFTC Crypto Action Is Still at an Early Rulemaking Stage The “prerule” designation is important because the CFTC has not yet submitted a formal proposed rule for public comment.",
       "matchedPassages": [
-        "S1-P5"
+        "S1-P6",
+        "S1-P7"
       ],
       "sharedTerms": [
-        "btc",
-        "reach",
-        "market",
-        "roughly",
-        "trillion",
-        "quarter",
-        "all",
-        "gold",
-        "ever",
-        "min"
+        "prerule",
+        "designation",
+        "the",
+        "whether",
+        "begin",
+        "formal",
+        "rulemak"
       ],
-      "entityShared": [
-        "btc"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "btc",
-        "gold"
+        "the",
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -258,33 +278,40 @@
     },
     {
       "index": 6,
-      "claim": "The bank’s analysts note that this target dwarfs forecasts from other banks, yet the coin continues to trade at a fraction of that level.",
+      "claim": "The CFTC has not yet released a proposed rule for public comment.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 71,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 93,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "JPMorgan&#039;s analysts put a staggering price tag on Bitcoin that dwarfs every other bank&#039;s forecast, yet the coin keeps trading at a fraction of that figure.",
-      "bestPassage": "JPMorgan&#039;s analysts put a staggering price tag on Bitcoin that dwarfs every other bank&#039;s forecast, yet the coin keeps trading at a fraction of that figure.",
+      "bestPassageId": "S1-P6",
+      "evidence": "CFTC Crypto Action Is Still at an Early Rulemaking Stage The “prerule” designation is important because the CFTC has not yet submitted a formal proposed rule for public comment.",
+      "bestPassage": "CFTC Crypto Action Is Still at an Early Rulemaking Stage The “prerule” designation is important because the CFTC has not yet submitted a formal proposed rule for public comment.",
       "matchedPassages": [
-        "S1-P2"
+        "S1-P6"
       ],
       "sharedTerms": [
         "the",
-        "bank",
-        "analyst",
-        "dwarf",
-        "forecast",
-        "other",
+        "cftc",
+        "has",
+        "not",
         "yet",
-        "coin",
-        "fraction"
+        "propos",
+        "rule",
+        "for",
+        "public",
+        "comment"
       ],
-      "entityShared": [],
-      "topicShared": [],
+      "entityShared": [
+        "the",
+        "cftc"
+      ],
+      "topicShared": [
+        "the",
+        "cftc"
+      ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -292,80 +319,79 @@
     },
     {
       "index": 7,
-      "claim": "JPMorgan’s $266,000 estimate ignores timing, the 4.94% 10‑year Treasury yield, and ETF flows.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 24,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "claim": "According to Reginfo.gov, the prerule stage is used to determine whether or how to begin rulemaking.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 84,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "JPMorgan's model ignores timing, the 4.94% 10-year Treasury yield, and ETF flows, which drove Bitcoin to $58,000 in June before any recovery.",
-      "bestPassage": "JPMorgan's model ignores timing, the 4.94% 10-year Treasury yield, and ETF flows, which drove Bitcoin to $58,000 in June before any recovery.",
-      "matchedPassages": [],
+      "bestPassageId": "S1-P7",
+      "evidence": "Reginfo defines the prerule stage as actions taken by agencies to determine whether or how to begin rulemaking.",
+      "bestPassage": "Reginfo defines the prerule stage as actions taken by agencies to determine whether or how to begin rulemaking.",
+      "matchedPassages": [
+        "S1-P7"
+      ],
       "sharedTerms": [
-        "jpmorgan",
-        "000",
-        "ignor",
-        "tim",
+        "reginfo",
         "the",
-        "year",
-        "treasury",
-        "yield",
-        "and",
-        "etf",
-        "flow"
+        "prerule",
+        "stage",
+        "determine",
+        "whether",
+        "begin",
+        "rulemak"
       ],
       "entityShared": [
-        "jpmorgan",
-        "treasury",
-        "etf"
+        "reginfo"
       ],
       "topicShared": [
-        "jpmorgan",
-        "266",
-        "000"
+        "the"
       ],
-      "numericMismatch": true,
+      "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
       "index": 8,
-      "claim": "Those ETF flows, for example, drove Bitcoin to $58,000 in June before any broader recovery.",
+      "claim": "Because the action remains at this preliminary stage, the next milestone will be the release of additional documents that explain which markets and activities the CFTC intends to regulate.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 85,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 82,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "JPMorgan's model ignores timing, the 4.94% 10-year Treasury yield, and ETF flows, which drove Bitcoin to $58,000 in June before any recovery.",
-      "bestPassage": "JPMorgan's model ignores timing, the 4.94% 10-year Treasury yield, and ETF flows, which drove Bitcoin to $58,000 in June before any recovery.",
+      "bestPassageId": "S1-P18",
+      "evidence": "Because RIN 3038-AF80 remains at the prerule stage, the next important development will be the release of additional CFTC documents explaining what markets and activities the agency intends to address .",
+      "bestPassage": "Because RIN 3038-AF80 remains at the prerule stage, the next important development will be the release of additional CFTC documents explaining what markets and activities the agency intends to address .",
       "matchedPassages": [
-        "S1-P6"
+        "S1-P18"
       ],
       "sharedTerms": [
-        "etf",
-        "flow",
-        "drove",
-        "btc",
-        "000",
-        "june",
-        "any",
-        "recovery"
+        "the",
+        "remain",
+        "stage",
+        "next",
+        "release",
+        "additional",
+        "document",
+        "explain",
+        "market",
+        "and",
+        "activiti",
+        "cftc",
+        "intend"
       ],
       "entityShared": [
-        "etf",
-        "btc",
-        "june"
+        "cftc"
       ],
       "topicShared": [
-        "btc",
-        "000"
+        "the",
+        "and",
+        "cftc"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -374,37 +400,54 @@
     },
     {
       "index": 9,
-      "claim": "In September, attention moved from the headline valuation to Bitcoin’s volatility relative to gold.",
+      "claim": "The White House Office of Information and Regulatory Affairs (OIRA) will review the CFTC action under Executive Order 12866.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 77,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 99,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "Bitcoin’s Volatility Against Gold Hits a Record Low UVL / Shutterstock.com In September, the focus shifted from the valuation target to the volatility ratio. JPMorgan reported that Bitcoin’s volatility relative to gold has reached a record low, improving Bitcoin’s risk-adjusted appeal without any change in Bitcoin’s price.",
-      "bestPassage": "Bitcoin’s Volatility Against Gold Hits a Record Low UVL / Shutterstock.com In September, the focus shifted from the valuation target to the volatility ratio.",
+      "bestPassageId": "S1-P15",
+      "evidence": "The White House Office of Information and Regulatory Affairs will review the CFTC action under Executive Order 12866.",
+      "bestPassage": "The White House Office of Information and Regulatory Affairs will review the CFTC action under Executive Order 12866.",
       "matchedPassages": [
-        "S1-P13",
-        "S1-P14"
+        "S1-P15"
       ],
       "sharedTerms": [
-        "september",
         "the",
-        "valuation",
-        "btc",
-        "volatility",
-        "relative",
-        "gold"
+        "white",
+        "house",
+        "office",
+        "information",
+        "and",
+        "regulatory",
+        "affair",
+        "review",
+        "cftc",
+        "action",
+        "executive",
+        "order",
+        "12866"
       ],
       "entityShared": [
-        "september",
-        "btc"
+        "the",
+        "white",
+        "house",
+        "office",
+        "information",
+        "regulatory",
+        "affair",
+        "cftc",
+        "executive",
+        "order"
       ],
       "topicShared": [
-        "btc",
-        "gold"
+        "the",
+        "white",
+        "house",
+        "and",
+        "cftc"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -413,45 +456,40 @@
     },
     {
       "index": 10,
-      "claim": "JPMorgan reported that Bitcoin’s volatility against gold reached a record low, which improves its risk‑adjusted appeal without altering its price.",
+      "claim": "OIRA’s review allows the regulatory office to examine an agency action before it moves further through the rulemaking process.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 89,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 94,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P14",
-      "evidence": "JPMorgan reported that Bitcoin’s volatility relative to gold has reached a record low, improving Bitcoin’s risk-adjusted appeal without any change in Bitcoin’s price.",
-      "bestPassage": "JPMorgan reported that Bitcoin’s volatility relative to gold has reached a record low, improving Bitcoin’s risk-adjusted appeal without any change in Bitcoin’s price.",
+      "bestPassageId": "S1-P16",
+      "evidence": "OIRA review allows the White House regulatory office to examine an agency action before it moves further through the rulemaking process.",
+      "bestPassage": "OIRA review allows the White House regulatory office to examine an agency action before it moves further through the rulemaking process.",
       "matchedPassages": [
-        "S1-P14"
+        "S1-P16"
       ],
       "sharedTerms": [
-        "jpmorgan",
-        "report",
-        "btc",
-        "volatility",
-        "gold",
-        "reach",
-        "record",
-        "low",
-        "improv",
-        "risk",
-        "adjust",
-        "appeal",
-        "without",
-        "price"
+        "oira",
+        "review",
+        "allow",
+        "the",
+        "regulatory",
+        "office",
+        "examine",
+        "agency",
+        "action",
+        "mov",
+        "further",
+        "rulemak",
+        "proces"
       ],
       "entityShared": [
-        "jpmorgan",
-        "btc"
+        "oira"
       ],
       "topicShared": [
-        "jpmorgan",
-        "btc",
-        "against",
-        "gold"
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -460,36 +498,35 @@
     },
     {
       "index": 11,
-      "claim": "Gold appreciated more than 30% through late 2025, increasing its market capitalization to $28.3 trillion.",
+      "claim": "While the action is under review, members of the public can request meetings with OIRA to discuss the proposed regulations.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 94,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 77,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P15",
-      "evidence": "Gold appreciated more than 30% through late 2025, increasing its market capitalization to $28.3 trillion, while gold’s volatility rose as it climbed.",
-      "bestPassage": "Gold appreciated more than 30% through late 2025, increasing its market capitalization to $28.3 trillion, while gold’s volatility rose as it climbed.",
+      "bestPassageId": "S1-P17",
+      "evidence": "The public can also request meetings with OIRA while an action is under review.",
+      "bestPassage": "The public can also request meetings with OIRA while an action is under review.",
       "matchedPassages": [
-        "S1-P15"
+        "S1-P17"
       ],
       "sharedTerms": [
-        "gold",
-        "appreciat",
-        "late",
-        "2025",
-        "rise",
-        "its",
-        "market",
-        "capitalization",
-        "trillion"
+        "the",
+        "action",
+        "review",
+        "public",
+        "can",
+        "request",
+        "meeting",
+        "oira"
       ],
       "entityShared": [
-        "gold"
+        "oira"
       ],
       "topicShared": [
-        "gold"
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -498,43 +535,95 @@
     },
     {
       "index": 12,
-      "claim": "As gold’s price climbed, its volatility also increased, making the comparison asset less favorable for Bitcoin.",
+      "claim": "The CFTC’s latest filing is part of a wider effort to clarify jurisdictional boundaries between the CFTC and the Securities and Exchange Commission (SEC).",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 71,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P12",
+      "evidence": "SEC and CFTC Are Already Building Crypto Rules The CFTC&#8217;s latest action also sits within a broader regulatory push between the derivatives regulator and the Securities and Exchange Commission.",
+      "bestPassage": "SEC and CFTC Are Already Building Crypto Rules The CFTC&#8217;s latest action also sits within a broader regulatory push between the derivatives regulator and the Securities and Exchange Commission.",
+      "matchedPassages": [
+        "S1-P12"
+      ],
+      "sharedTerms": [
+        "the",
+        "cftc",
+        "and",
+        "securiti",
+        "exchange",
+        "commission",
+        "sec"
+      ],
+      "entityShared": [
+        "the",
+        "cftc",
+        "securiti",
+        "exchange",
+        "commission",
+        "sec"
+      ],
+      "topicShared": [
+        "the",
+        "cftc",
+        "fil",
+        "and"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 13,
+      "claim": "The two agencies have been working through a formal harmonization initiative intended to clarify jurisdictional boundaries, reduce overlapping requirements and develop a regulatory framework covering crypto assets and emerging market structures.",
       "status": "verified",
       "classification": "supported",
       "confidence": 90,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P16",
-      "evidence": "Thus, the argument for Bitcoin strengthened because the comparison asset became less favorable, although this is not as robust a reason for investment as the headline figure suggests. The market price reflects what buyers and sellers agree on, while the bank’s figure suggests what Bitcoin could be worth if it captured a similar share of the store-of-value market as gold, adjusted for Bitcoin’s higher volatility. Comparing $266,000 Against Other Bank Targets Kamil Zajaczkowski / Shutterstock.com For Bitcoin to reach JPMorgan’s target of $266,000 from its current price of $80,950, it would need to increase by approximately 229%, or about three and a quarter times. Gold appreciated more than 30% through late 2025, increasing its market capitalization to $28.3 trillion, while gold’s volatility rose as it climbed.",
-      "bestPassage": "Thus, the argument for Bitcoin strengthened because the comparison asset became less favorable, although this is not as robust a reason for investment as the headline figure suggests.",
+      "bestPassageId": "S1-P13",
+      "evidence": "The two agencies have been working through a formal harmonization initiative intended to clarify jurisdictional boundaries, reduce overlapping requirements and develop a regulatory framework covering crypto assets and emerging market structures.",
+      "bestPassage": "The two agencies have been working through a formal harmonization initiative intended to clarify jurisdictional boundaries, reduce overlapping requirements and develop a regulatory framework covering crypto assets and emerging market structures.",
       "matchedPassages": [
-        "S1-P16",
-        "S1-P10",
-        "S1-P17",
-        "S1-P15"
+        "S1-P13"
       ],
       "sharedTerms": [
-        "gold",
-        "price",
-        "climb",
-        "its",
-        "volatility",
-        "rise",
         "the",
-        "comparison",
+        "two",
+        "agenci",
+        "work",
+        "formal",
+        "harmonization",
+        "initiative",
+        "intend",
+        "clarify",
+        "jurisdictional",
+        "boundari",
+        "reduce",
+        "overlapp",
+        "requirement",
+        "and",
+        "develop",
+        "regulatory",
+        "framework",
+        "cover",
+        "crypto",
         "asset",
-        "favorable",
-        "for",
-        "btc"
+        "emerg",
+        "market",
+        "structur"
       ],
-      "entityShared": [
-        "btc"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "gold",
-        "btc"
+        "the",
+        "and",
+        "crypto"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -543,37 +632,53 @@
     },
     {
       "index": 14,
-      "claim": "JPMorgan has not specified a timeline for the $266,000 benchmark.",
+      "claim": "Former CFTC Chair Christopher Giancarlo has indicated that the SEC and CFTC will continue to write crypto rules even without new market‑structure legislation this year.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 63,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 94,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P4",
-      "evidence": "By Sam Daodu Published September 18, 2026, 1:03pm ET · 4 min read 𝕏 f ⧉ Quick Read JPMorgan's $266,000 Bitcoin figure is a volatility-adjusted benchmark against gold with no attached date, not a directional price forecast. Comparing $266,000 Against Other Bank Targets Kamil Zajaczkowski / Shutterstock.com For Bitcoin to reach JPMorgan’s target of $266,000 from its current price of $80,950, it would need to increase by approximately 229%, or about three and a quarter times. 2 See for yourself (Sponsor) This post may contain links from our sponsors and affiliates, and Flywheel Publishing may receive compensation for actions taken through them. &copy; Scott Olson / Getty Images As of September 18, 2026, Bitcoin ( CRYPTO:BTC ) is trading at $80,950, while JPMorgan’s internal model estimates its value at $266,000.",
-      "bestPassage": "By Sam Daodu Published September 18, 2026, 1:03pm ET · 4 min read 𝕏 f ⧉ Quick Read JPMorgan's $266,000 Bitcoin figure is a volatility-adjusted benchmark against gold with no attached date, not a directional price forecast.",
+      "bestPassageId": "S1-P14",
+      "evidence": "Former CFTC Chair Christopher Giancarlo expects the SEC and CFTC to continue writing crypto rules even without new market-structure legislation this year.",
+      "bestPassage": "Former CFTC Chair Christopher Giancarlo expects the SEC and CFTC to continue writing crypto rules even without new market-structure legislation this year.",
       "matchedPassages": [
-        "S1-P4",
-        "S1-P17",
-        "S1-P8"
+        "S1-P14"
       ],
       "sharedTerms": [
-        "jpmorgan",
-        "not",
-        "for",
-        "266",
-        "000",
-        "benchmark"
+        "former",
+        "cftc",
+        "chair",
+        "christopher",
+        "giancarlo",
+        "the",
+        "sec",
+        "and",
+        "continue",
+        "crypto",
+        "rul",
+        "without",
+        "new",
+        "market",
+        "structure",
+        "legislation",
+        "year"
       ],
       "entityShared": [
-        "jpmorgan"
+        "former",
+        "cftc",
+        "chair",
+        "christopher",
+        "giancarlo",
+        "sec"
       ],
       "topicShared": [
-        "jpmorgan",
-        "266",
-        "000"
+        "cftc",
+        "the",
+        "and",
+        "crypto",
+        "rul"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -582,37 +687,43 @@
     },
     {
       "index": 15,
-      "claim": "Second, continued monitoring of Bitcoin’s volatility relative to gold could signal whether the risk‑adjusted case improves further.",
+      "claim": "The next important development will be the release of additional CFTC documents explaining what markets and activities the agency intends to address.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 70,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "confidence": 94,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P14",
-      "evidence": "JPMorgan reported that Bitcoin’s volatility relative to gold has reached a record low, improving Bitcoin’s risk-adjusted appeal without any change in Bitcoin’s price. The market price reflects what buyers and sellers agree on, while the bank’s figure suggests what Bitcoin could be worth if it captured a similar share of the store-of-value market as gold, adjusted for Bitcoin’s higher volatility.",
-      "bestPassage": "JPMorgan reported that Bitcoin’s volatility relative to gold has reached a record low, improving Bitcoin’s risk-adjusted appeal without any change in Bitcoin’s price.",
+      "bestPassageId": "S1-P18",
+      "evidence": "Because RIN 3038-AF80 remains at the prerule stage, the next important development will be the release of additional CFTC documents explaining what markets and activities the agency intends to address .",
+      "bestPassage": "Because RIN 3038-AF80 remains at the prerule stage, the next important development will be the release of additional CFTC documents explaining what markets and activities the agency intends to address .",
       "matchedPassages": [
-        "S1-P14",
-        "S1-P10"
+        "S1-P18"
       ],
       "sharedTerms": [
-        "btc",
-        "volatility",
-        "relative",
-        "gold",
         "the",
-        "risk",
-        "adjust",
-        "improv"
+        "next",
+        "important",
+        "release",
+        "additional",
+        "cftc",
+        "document",
+        "explain",
+        "market",
+        "and",
+        "activiti",
+        "agency",
+        "intend",
+        "addres"
       ],
       "entityShared": [
-        "btc"
+        "cftc"
       ],
       "topicShared": [
-        "btc",
-        "gold"
+        "the",
+        "cftc",
+        "and"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -621,31 +732,47 @@
     },
     {
       "index": 16,
-      "claim": "Other banks provide different targets, so tracking how those forecasts evolve could also provide context.",
+      "claim": "OIRA review allows the White House regulatory office to examine an agency action before it moves further through the rulemaking process.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 58,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "classification": "supported",
+      "confidence": 100,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P18",
-      "evidence": "Other banks provide different targets, as shown here.",
-      "bestPassage": "Other banks provide different targets, as shown here.",
+      "bestPassageId": "S1-P16",
+      "evidence": "OIRA review allows the White House regulatory office to examine an agency action before it moves further through the rulemaking process.",
+      "bestPassage": "OIRA review allows the White House regulatory office to examine an agency action before it moves further through the rulemaking process.",
       "matchedPassages": [
-        "S1-P18"
+        "S1-P16"
       ],
       "sharedTerms": [
-        "other",
-        "bank",
-        "provide",
-        "different",
-        "target"
+        "oira",
+        "review",
+        "allow",
+        "the",
+        "white",
+        "house",
+        "regulatory",
+        "office",
+        "examine",
+        "agency",
+        "action",
+        "mov",
+        "further",
+        "rulemak",
+        "proces"
       ],
       "entityShared": [
-        "other"
+        "oira",
+        "white",
+        "house"
       ],
-      "topicShared": [],
+      "topicShared": [
+        "the",
+        "white",
+        "house"
+      ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -653,36 +780,43 @@
     },
     {
       "index": 17,
-      "claim": "In summary, JPMorgan’s $266,000 figure is a store‑of‑value projection that requires a roughly 229% price increase from $80,950 to materialize.",
+      "claim": "Until those next steps occur, the CFTC’s filing remains an early, exploratory stage in the federal oversight of crypto markets.",
       "status": "verified",
-      "classification": "supported_with_context",
-      "confidence": 56,
-      "bestSource": "JPMorgan Values Bitcoin at $266,000 Against Gold. Why It&#8217;s Trading Below $81,000?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/",
-      "bestDomain": "247wallst.com",
+      "classification": "supported",
+      "confidence": 72,
+      "bestSource": "CFTC Sends Crypto Market Rulemaking to White House for Review",
+      "bestUrl": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/",
+      "bestDomain": "cryptotimes.io",
       "sourceId": "S1",
-      "bestPassageId": "S1-P17",
-      "evidence": "Comparing $266,000 Against Other Bank Targets Kamil Zajaczkowski / Shutterstock.com For Bitcoin to reach JPMorgan’s target of $266,000 from its current price of $80,950, it would need to increase by approximately 229%, or about three and a quarter times.",
-      "bestPassage": "Comparing $266,000 Against Other Bank Targets Kamil Zajaczkowski / Shutterstock.com For Bitcoin to reach JPMorgan’s target of $266,000 from its current price of $80,950, it would need to increase by approximately 229%, or about three and a quarter times.",
+      "bestPassageId": "S1-P3",
+      "evidence": "Commodity Futures Trading Commission (CFTC) has sent a new crypto market regulatory action to the White House for review, marking an early step toward potentially broader federal rules governing digital-asset transactions and markets. CFTC Crypto Action Is Still at an Early Rulemaking Stage The “prerule” designation is important because the CFTC has not yet submitted a formal proposed rule for public comment. Because RIN 3038-AF80 remains at the prerule stage, the next important development will be the release of additional CFTC documents explaining what markets and activities the agency intends to address . Regulations & Policies CFTC Sends Crypto Market Rulemaking to White House for Review The CFTC’s new crypto market action reached the White House regulatory review office two days after the Senate failed to advance the CLARITY Act.",
+      "bestPassage": "Commodity Futures Trading Commission (CFTC) has sent a new crypto market regulatory action to the White House for review, marking an early step toward potentially broader federal rules governing digital-asset transactions and markets.",
       "matchedPassages": [
-        "S1-P17"
+        "S1-P3",
+        "S1-P6",
+        "S1-P18",
+        "S1-P1"
       ],
       "sharedTerms": [
-        "jpmorgan",
-        "266",
-        "000",
-        "229",
-        "price",
-        "rise",
-        "950"
+        "next",
+        "step",
+        "the",
+        "cftc",
+        "remain",
+        "early",
+        "stage",
+        "federal",
+        "crypto",
+        "market"
       ],
       "entityShared": [
-        "jpmorgan"
+        "cftc"
       ],
       "topicShared": [
-        "jpmorgan",
-        "266",
-        "000"
+        "the",
+        "cftc",
+        "fil",
+        "crypto"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -690,24 +824,5 @@
       "matchingMode": "semantic-context-evidence-pack"
     }
   ],
-  "editorial": [
-    {
-      "index": 13,
-      "claim": "The article notes that while this shift strengthens Bitcoin’s argument in a relative sense, it is not as robust a reason for investment as the $266,000 headline suggests.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 18,
-      "claim": "The market price reflects what buyers and sellers agree on, while the bank’s figure suggests what Bitcoin could be worth if it captured a similar share of the store‑of‑value market as gold, adjusted for Bitcoin’s higher volatility.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 19,
-      "claim": "Understanding the distinction, the role of volatility, and the influence of ETF and macro trends gives investors a clearer picture of what to expect and what to watch for in the coming months.",
-      "type": "editorial-recommendation",
-      "status": "editorial-excluded"
-    }
-  ]
+  "editorial": []
 }
