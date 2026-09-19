@@ -1,25 +1,133 @@
 import fs from 'node:fs';
 import path from 'node:path';
-const articleDir='content/articles',publicDir='public/images/articles',manifestPath='data/image-manifest.json',VISUAL_VERSION=2;
-function field(text:string,key:string){const match=text.match(new RegExp(`^${key}:\\s*"([\\s\\S]*?)"\\s*$`,'m'));return match?match[1].replace(/\\"/g,'"'):'';}
-function yamlEscape(value:string){return value.replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\r?\n/g,' ');}
-function xmlEscape(value:string){return value.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function slugify(value:string){return value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,90);}
-function hash(input:string){let h=2166136261;for(let i=0;i<input.length;i++){h^=input.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
-function keywords(title:string,description:string,category:string){const stop=new Set(['the','and','for','with','from','what','this','that','into','about','after','your','will','how','why','are','was','has','have','its','their','industry','latest']);return[...new Set(`${title} ${description} ${category}`.toLowerCase().split(/[^a-z0-9]+/).filter(w=>w.length>=4&&!stop.has(w)))].slice(0,8);}
-function visualFamily(title:string,description:string,category:string){const t=`${title} ${description} ${category}`.toLowerCase();if(/\b(drone|drones|uav|uavs|counter-drone|counterdrone)\b/.test(t))return'drone';if(/\b(cyber|cybersecurity|vulnerability|vulnerabilities|exploit|exploits|malware|security|attack|attacks)\b/.test(t))return'cyber';if(/\b(bitcoin|ethereum|crypto|blockchain|token|tokens|defi)\b/.test(t))return'crypto';if(/\b(product|launch|launched|release|released|unveiled|debut|availability|device|phone|laptop|chip)\b/.test(t))return'product';if(/\b(policy|policies|governance|regulation|regulatory|oversight|lawmakers|policymakers|government|anthropic|openai)\b/.test(t))return'ai-governance';if(/\b(ai|model|models|neural|robot|robots|machine-learning|artificial-intelligence|setai)\b/.test(t))return'ai';if(/\b(how-to|how to|guide|tutorial|step|setup|install|fix|troubleshoot)\b/.test(t))return'howto';if(/\b(innovation|prototype|research|lab|scientific|breakthrough|invention)\b/.test(t))return'innovation';if(/\b(server|cloud|data center|database|software|app|technology|tech)\b/.test(t))return'technology';return category.toLowerCase().includes('digital')?'cyber':'technology';}
-function palette(family:string){const map:Record<string,[string,string,string,string]>={'ai-governance':['#071a2b','#2dd4bf','#a7f3d0','#f8fafc'],ai:['#081a2e','#38bdf8','#c4b5fd','#f8fafc'],drone:['#1c1510','#fb923c','#fde68a','#f8fafc'],cyber:['#071b18','#34d399','#99f6e4','#f8fafc'],crypto:['#17120a','#f59e0b','#fde68a','#fff7ed'],product:['#1a1022','#e879f9','#f5d0fe','#fff7ed'],howto:['#111827','#60a5fa','#bfdbfe','#f8fafc'],innovation:['#15110a','#facc15','#fef08a','#fff7ed'],technology:['#0b1520','#818cf8','#c7d2fe','#f8fafc']};return map[family]||map.technology;}
-function grid(a:string){let s='';for(let x=80;x<1200;x+=80)s+=`<path d="M${x} 0V630" stroke="${a}" stroke-opacity="0.045"/>`;for(let y=70;y<630;y+=70)s+=`<path d="M0 ${y}H1200" stroke="${a}" stroke-opacity="0.045"/>`;return s;}
-function common(bg:string,a:string,g:string){return`<rect width="1200" height="630" fill="${bg}"/><circle cx="980" cy="110" r="300" fill="${a}" opacity="0.08"/><circle cx="980" cy="110" r="170" fill="${a}" opacity="0.07"/><path d="M0 500 C260 420 420 610 700 500 S1030 390 1200 470" fill="none" stroke="${g}" stroke-opacity="0.12" stroke-width="90"/>`;}
-function node(x:number,y:number,r:number,f:string,s:string){return`<circle cx="${x}" cy="${y}" r="${r}" fill="${f}" stroke="${s}" stroke-width="3"/><circle cx="${x}" cy="${y}" r="${Math.max(2,r/4)}" fill="${s}" opacity="0.8"/>`;}
-function aiScene(a:string,b:string,c:string,seed:number){const p=[[690,145],[820,95],[955,170],[1060,105],[770,255],[930,275],[1090,245]];let lines='';p.forEach((x,i)=>p.slice(i+1).filter((_,j)=>(i+j+seed)%3===0).forEach(y=>lines+=`<path d="M${x[0]} ${x[1]}L${y[0]} ${y[1]}" stroke="${a}" stroke-opacity="0.5" stroke-width="3"/>`));return`${lines}${p.map((x,i)=>node(x[0],x[1],10+(i%3)*3,b,a)).join('')}<path d="M180 390 C180 300 255 245 335 270 C410 245 480 310 470 395 C460 470 395 520 325 515 C245 525 180 475 180 390Z" fill="none" stroke="${c}" stroke-width="12"/><path d="M255 370 C285 330 360 330 405 375 M250 420 C300 455 370 455 420 415" fill="none" stroke="${a}" stroke-width="7" stroke-linecap="round"/>`;}
-function droneScene(a:string,b:string,c:string,seed:number){const y=150+(seed%100),rot=seed%20-10;return`<path d="M0 455 Q230 360 430 450 T850 430 T1200 455V630H0Z" fill="${a}" opacity="0.22"/><g transform="translate(760 ${y}) rotate(${rot})"><path d="M-105 0H105L55 35H-55Z" fill="${b}" stroke="${c}" stroke-width="6"/><circle cx="-105" cy="0" r="42" fill="none" stroke="${b}" stroke-width="6"/><circle cx="105" cy="0" r="42" fill="none" stroke="${b}" stroke-width="6"/><path d="M-130 -45L-80 0M130 -45L80 0" stroke="${c}" stroke-width="5"/><circle cx="0" cy="15" r="14" fill="${c}"/></g><rect x="105" y="155" width="340" height="210" rx="16" fill="${c}" fill-opacity="0.08" stroke="${b}" stroke-opacity="0.65" stroke-width="5"/><path d="M135 320L225 245L300 295L390 205" fill="none" stroke="${b}" stroke-width="8"/>`;}
-function cyberScene(a:string,b:string,c:string){let racks='';for(let i=0;i<4;i++){const x=650+i*115;racks+=`<rect x="${x}" y="120" width="85" height="390" rx="10" fill="${c}" fill-opacity="0.07" stroke="${a}" stroke-width="4"/><path d="M${x+15} 175H${x+70}M${x+15} 235H${x+70}M${x+15} 295H${x+70}M${x+15} 355H${x+70}M${x+15} 415H${x+70}" stroke="${b}" stroke-width="8" stroke-linecap="round"/>`;}return`${racks}<path d="M120 360 C190 280 300 270 390 335 S520 430 590 335" fill="none" stroke="${b}" stroke-width="9"/><path d="M120 360L155 405H215L250 350L315 395L360 330L430 385L485 310L550 350" fill="none" stroke="${c}" stroke-width="5"/><path d="M220 140L285 105L350 140V215L285 250L220 215Z" fill="${b}" fill-opacity="0.13" stroke="${b}" stroke-width="5"/>`;}
-function productScene(a:string,b:string,c:string,seed:number){const tilt=seed%12-6;return`<ellipse cx="805" cy="535" rx="310" ry="45" fill="${a}" opacity="0.18"/><g transform="translate(805 325) rotate(${tilt})"><rect x="-210" y="-135" width="420" height="270" rx="34" fill="${c}" fill-opacity="0.08" stroke="${b}" stroke-width="8"/><rect x="-170" y="-95" width="340" height="190" rx="18" fill="${a}" fill-opacity="0.18" stroke="${c}" stroke-width="4"/><circle cx="0" cy="0" r="55" fill="${b}" fill-opacity="0.22" stroke="${b}" stroke-width="7"/><circle cx="0" cy="0" r="24" fill="${c}"/></g>`;}
-function cryptoScene(a:string,b:string,c:string){let blocks='';for(let i=0;i<5;i++){const x=650+i*105,y=220+(i%2)*75;blocks+=`<g transform="translate(${x} ${y})"><rect width="78" height="78" rx="14" fill="${b}" fill-opacity="0.14" stroke="${b}" stroke-width="5"/><path d="M20 39H58M39 20V58" stroke="${c}" stroke-width="5"/></g>`;}return`${blocks}<path d="M690 259L755 334L860 259L965 334L1070 259" fill="none" stroke="${b}" stroke-width="6" stroke-dasharray="12 10"/><circle cx="250" cy="315" r="125" fill="${b}" fill-opacity="0.12" stroke="${b}" stroke-width="9"/><path d="M250 225L285 270V365L250 405L215 365V270Z" fill="${c}" fill-opacity="0.2" stroke="${c}" stroke-width="6"/>`;}
-function innovationScene(a:string,b:string,c:string){return`<path d="M150 500H520" stroke="${c}" stroke-width="10" stroke-linecap="round"/><path d="M210 490V335L255 275H415L460 335V490" fill="${a}" fill-opacity="0.08" stroke="${b}" stroke-width="7"/><path d="M290 360 C330 320 365 320 405 360 C365 400 330 400 290 360Z" fill="${c}" fill-opacity="0.2" stroke="${c}" stroke-width="6"/><circle cx="930" cy="310" r="120" fill="none" stroke="${b}" stroke-width="10"/><path d="M930 190V430M810 310H1050M845 225L1015 395M1015 225L845 395" stroke="${b}" stroke-width="5"/><circle cx="930" cy="310" r="32" fill="${c}"/>`;}
-function howtoScene(a:string,b:string,c:string){return`<rect x="125" y="110" width="650" height="390" rx="28" fill="${c}" fill-opacity="0.07" stroke="${b}" stroke-width="8"/><rect x="165" y="150" width="570" height="300" rx="16" fill="${a}" fill-opacity="0.18"/><path d="M215 235H460M215 285H610M215 335H520" stroke="${c}" stroke-width="12" stroke-linecap="round"/><circle cx="960" cy="220" r="75" fill="${b}" fill-opacity="0.15" stroke="${b}" stroke-width="8"/><path d="M925 220L950 245L1005 185" fill="none" stroke="${c}" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>`;}
-function technologyScene(a:string,b:string,c:string){return`<path d="M120 180H470V430H120Z" fill="${c}" fill-opacity="0.07" stroke="${b}" stroke-width="8"/><path d="M160 220H430V390H160Z" fill="${a}" fill-opacity="0.2"/><circle cx="295" cy="305" r="58" fill="${b}" fill-opacity="0.18" stroke="${b}" stroke-width="7"/><path d="M295 220V165M295 445V390M210 305H155M435 305H380M235 245L195 205M355 365L395 405M355 245L395 205M235 365L195 405" stroke="${c}" stroke-width="7" stroke-linecap="round"/><path d="M620 170L1060 170L1110 230V500L620 500Z" fill="${c}" fill-opacity="0.05" stroke="${b}" stroke-width="7"/><path d="M680 255H1040M680 325H980M680 395H1015" stroke="${b}" stroke-opacity="0.7" stroke-width="9" stroke-linecap="round"/>`;}
-function makeSvg(title:string,description:string,category:string){const seed=hash(`${title}|${description}|${category}`);const family=visualFamily(title,description,category);const[bg,a,g,light]=palette(family);let scene='';if(family==='ai-governance'||family==='ai')scene=aiScene(a,g,light,seed);else if(family==='drone')scene=droneScene(a,g,light,seed);else if(family==='cyber')scene=cyberScene(a,g,light);else if(family==='product')scene=productScene(a,g,light,seed);else if(family==='crypto')scene=cryptoScene(a,g,light);else if(family==='innovation')scene=innovationScene(a,g,light);else if(family==='howto')scene=howtoScene(a,g,light);else scene=technologyScene(a,g,light);return`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc"><title id="title">${xmlEscape(title)}</title><desc id="desc">Original TrendForge ${family} illustration. ${xmlEscape(description)}</desc>${common(bg,a,g)}${grid(a)}${scene}<path d="M0 600H1200" stroke="${a}" stroke-opacity="0.2" stroke-width="3"/></svg>`;}
-function updateFrontmatter(raw:string,values:Record<string,string>){const separator=raw.indexOf('---',3);if(separator<0)return raw;const front=raw.slice(3,separator).trim(),body=raw.slice(separator+3);const lines=front.split(/\r?\n/).filter(Boolean);for(const[key,value]of Object.entries(values)){const index=lines.findIndex(line=>line.startsWith(`${key}:`)),line=`${key}: "${yamlEscape(value)}"`;if(index>=0)lines[index]=line;else lines.push(line);}return`---\n${lines.join('\n')}\n---${body}`;}
-fs.mkdirSync(publicDir,{recursive:true});fs.mkdirSync('data',{recursive:true});const manifest:Record<string,unknown>={};const files=fs.existsSync(articleDir)?fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort():[];for(const file of files){const full=path.join(articleDir,file);let raw=fs.readFileSync(full,'utf8');const title=field(raw,'title'),description=field(raw,'description'),category=field(raw,'category')||'Technology',slug=field(raw,'slug')||slugify(title)||file.replace(/\.md$/,'');if(!title||!description)continue;const family=visualFamily(title,description,category),imageFile=`${slug}.svg`,imagePath=path.join(publicDir,imageFile),currentGenerator=field(raw,'imageGeneratedBy'),needsRegeneration=currentGenerator!=='TrendForge topic illustration engine v2'||!fs.existsSync(imagePath);if(needsRegeneration)fs.writeFileSync(imagePath,makeSvg(title,description,category));const imageUrl=`/Trendforge/images/articles/${imageFile}`,imageAlt=`Original ${family} illustration for ${title}`;raw=updateFrontmatter(raw,{image:imageUrl,imageAlt,imageSource:'TrendForge original editorial visual',imageLicense:'Original',imageGeneratedBy:'TrendForge topic illustration engine v2'});fs.writeFileSync(full,raw);manifest[slug]={image:imageUrl,alt:imageAlt,source:'TrendForge original editorial visual',license:'Original',generatedBy:'TrendForge topic illustration engine v2',visualVersion:VISUAL_VERSION,visualFamily:family,relatedTo:{title,category,keywords:keywords(title,description,category)}};}fs.writeFileSync(manifestPath,JSON.stringify({version:VISUAL_VERSION,generatedAt:new Date().toISOString(),images:manifest},null,2)+'\n');console.log(`Image pipeline complete: ${Object.keys(manifest).length} topic-specific illustration(s) generated/verified.`);
+import sharp from 'sharp';
+import { buildImagePrompt } from './trendforge-visual-planner.mjs';
+
+const articleDir = 'content/articles';
+const publicDir = 'public/images/articles';
+const manifestPath = 'data/image-manifest.json';
+const MODEL = '@cf/black-forest-labs/flux-1-schnell';
+const WIDTH = 1024;
+const HEIGHT = 576;
+const STEPS = 4;
+
+function field(text: string, key: string) {
+  const match = text.match(new RegExp(`^${key}:\\s*"([\\s\\S]*?)"\\s*$`, 'm'));
+  return match ? match[1].replace(/\\\"/g, '"') : '';
+}
+function yamlEscape(value: string) {
+  return value.replace(/\\/g, '\\\\').replace(/"/g, '\\\"').replace(/\r?\n/g, ' ');
+}
+function slugify(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 90);
+}
+function updateFrontmatter(raw: string, values: Record<string, string>) {
+  const separator = raw.indexOf('---', 3);
+  if (separator < 0) throw new Error('invalid frontmatter');
+  const front = raw.slice(3, separator).trim();
+  const body = raw.slice(separator + 3);
+  const lines = front.split(/\r?\n/).filter(Boolean);
+  for (const [key, value] of Object.entries(values)) {
+    const line = `${key}: "${yamlEscape(value)}"`;
+    const index = lines.findIndex(x => x.startsWith(key + ':'));
+    if (index >= 0) lines[index] = line;
+    else lines.push(line);
+  }
+  return `---\n${lines.join('\n')}\n---${body}`;
+}
+
+const account = process.env.CLOUDFLARE_ACCOUNT_ID;
+const token = process.env.CLOUDFLARE_API_TOKEN;
+if (!account || !token) throw new Error('CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN are required');
+
+fs.mkdirSync(publicDir, { recursive: true });
+fs.mkdirSync('data', { recursive: true });
+
+const files = fs.existsSync(articleDir) ? fs.readdirSync(articleDir).filter(f => f.endsWith('.md')).sort() : [];
+const manifest: Record<string, unknown> = {};
+let generated = 0;
+let skipped = 0;
+let failures = 0;
+
+for (const file of files) {
+  const full = path.join(articleDir, file);
+  let raw = fs.readFileSync(full, 'utf8');
+  const title = field(raw, 'title');
+  const description = field(raw, 'description');
+  const category = field(raw, 'category') || 'Technology';
+  const slug = field(raw, 'slug') || slugify(title) || file.replace(/\.md$/, '');
+  if (!title || !description) continue;
+
+  const outputFile = `${slug}.1024x576.png`;
+  const outputPath = path.join(publicDir, outputFile);
+  const currentGenerator = field(raw, 'imageGeneratedBy');
+  const needsGeneration = currentGenerator !== 'Cloudflare FLUX.1 Schnell' || !fs.existsSync(outputPath);
+
+  if (!needsGeneration) {
+    skipped++;
+    manifest[slug] = { status: 'existing', image: '/Trendforge/images/articles/' + outputFile, generatedBy: MODEL, width: WIDTH, height: HEIGHT };
+    continue;
+  }
+
+  const { brief, prompt } = buildImagePrompt({ title, description, category, body: raw });
+  console.log(`Generating FLUX image for ${file}: ${brief.mode}; prompt=${prompt.length} chars`);
+
+  try {
+    const url = 'https://api.cloudflare.com/client/v4/accounts/' + account + '/ai/run/' + MODEL;
+    const started = Date.now();
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt, steps: STEPS })
+    });
+    const bytes = Buffer.from(await response.arrayBuffer());
+    if (!response.ok) throw new Error('HTTP ' + response.status + ': ' + bytes.toString('utf8').slice(0, 500));
+
+    const payload = JSON.parse(bytes.toString('utf8'));
+    const encoded = payload?.result?.image || payload?.image;
+    if (typeof encoded !== 'string' || !encoded.trim()) throw new Error('missing result.image');
+    const base64 = encoded.includes(',') ? encoded.slice(encoded.indexOf(',') + 1) : encoded;
+    const imageBytes = Buffer.from(base64, 'base64');
+    const jpeg = imageBytes[0] === 0xff && imageBytes[1] === 0xd8 && imageBytes[2] === 0xff;
+    const png = imageBytes[0] === 0x89 && imageBytes[1] === 0x50 && imageBytes[2] === 0x4e && imageBytes[3] === 0x47;
+    if (!jpeg && !png) throw new Error('decoded payload is not JPEG/PNG');
+
+    const normalized = await sharp(imageBytes)
+      .resize({ width: WIDTH, height: HEIGHT, fit: 'cover', position: 'centre' })
+      .png({ compressionLevel: 9, adaptiveFiltering: true, palette: false })
+      .toBuffer();
+    const meta = await sharp(normalized).metadata();
+    if (meta.width !== WIDTH || meta.height !== HEIGHT) throw new Error(`normalized dimensions are ${meta.width}x${meta.height}`);
+
+    fs.writeFileSync(outputPath, normalized);
+    raw = updateFrontmatter(raw, {
+      image: '/Trendforge/images/articles/' + outputFile,
+      imageAlt: 'Editorial image for ' + title,
+      imageSource: 'Cloudflare Workers AI — FLUX.1 Schnell',
+      imageLicense: 'Model-generated',
+      imageGeneratedBy: 'Cloudflare FLUX.1 Schnell'
+    });
+    fs.writeFileSync(full, raw);
+
+    const elapsedMs = Date.now() - started;
+    manifest[slug] = {
+      status: 'generated', image: '/Trendforge/images/articles/' + outputFile,
+      generatedBy: MODEL, width: WIDTH, height: HEIGHT, steps: STEPS,
+      elapsedMs, bytes: normalized.length, visualBrief: brief, promptLength: prompt.length
+    };
+    generated++;
+    console.log(`SUCCESS ${file}: ${WIDTH}x${HEIGHT}, ${normalized.length} bytes, ${elapsedMs}ms`);
+  } catch (error) {
+    failures++;
+    manifest[slug] = { status: 'failed', error: String(error), generatedBy: MODEL, visualBrief: brief };
+    console.error(`FAILED ${file}: ${String(error)}`);
+  }
+}
+
+fs.writeFileSync(manifestPath, JSON.stringify({
+  version: 3, generatedAt: new Date().toISOString(), model: MODEL,
+  width: WIDTH, height: HEIGHT, steps: STEPS, generated, skipped, failed: failures, images: manifest
+}, null, 2) + '\n');
+
+console.log(`FLUX article image pipeline: generated=${generated}, existing=${skipped}, failed=${failures}`);
+if (failures > 0) process.exit(1);
