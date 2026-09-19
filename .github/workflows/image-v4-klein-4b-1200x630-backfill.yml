@@ -161,7 +161,7 @@ jobs:
                 width, height, rawWidth: rawMeta.width, rawHeight: rawMeta.height,
                 status: 'success', output: outFile, bytes: normalized.length, elapsedMs,
                 contentType: resp.headers.get('content-type'), outputContentType: 'image/png',
-                outputTiles, outputTilesX, outputTilesY,
+                outputTiles, outputTilesX: 1, outputTilesY: 1,
                 estimatedInputNeurons, estimatedOutputNeurons, estimatedNeuronsPerImage,
                 normalized: rawMeta.width !== width || rawMeta.height !== height, model
               };
@@ -233,9 +233,9 @@ jobs:
               };
               setField('image', '/Trendforge/images/articles/' + row.output);
               setField('imageAlt', 'Editorial image for ' + row.title);
-              setField('imageSource', 'Cloudflare Workers AI — FLUX.2 Klein 4B');
+              setField('imageSource', 'Cloudflare Workers AI — FLUX.1 Schnell');
               setField('imageLicense', 'Model-generated');
-              setField('imageGeneratedBy', 'Cloudflare FLUX.2 Klein 4B');
+              setField('imageGeneratedBy', 'Cloudflare FLUX.1 Schnell');
               articlesTs = articlesTs.slice(0, objectStart) + articleObject + articlesTs.slice(objectEnd + 5);
             }
             fs.writeFileSync(articlesTsPath, articlesTs);
@@ -248,13 +248,13 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: trendforge-klein-4b-1024x576-backfill
+          name: trendforge-flux-1-schnell-1024x576-backfill
           path: flux-backfill/
           if-no-files-found: error
           retention-days: 14
 
       - name: Promote validated images to production
-        if: ${{ inputs.production && success() }}
+        if: ${{ env.PRODUCTION == 'true' && success() }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
