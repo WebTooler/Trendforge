@@ -1,4 +1,4 @@
-name: TrendForge — Klein 4B 1024x576 PNG Article Image Test
+name: TrendForge — FLUX.1 Schnell 1024x576 Article Images
 
 on:
   workflow_dispatch:
@@ -23,12 +23,13 @@ jobs:
     env:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      MODEL: "@cf/black-forest-labs/flux-2-klein-4b"
+      MODEL: "@cf/black-forest-labs/flux-1-schnell"
       WIDTH: "1024"
       HEIGHT: "576"
       OUTPUT_FORMAT: "png"
-      OUTPUT_NEURONS_PER_TILE: "26.05"
-      INPUT_NEURONS_PER_TILE: "5.37"
+      OUTPUT_NEURONS_PER_TILE: "4.80"
+      NEURONS_PER_STEP: "9.60"
+      STEPS: "4"
       LIMIT: ${{ inputs.limit }}
       PRODUCTION: ${{ inputs.production }}
     steps:
@@ -42,16 +43,16 @@ jobs:
           set -euo pipefail
           test -n "$CLOUDFLARE_ACCOUNT_ID"
           test -n "$CLOUDFLARE_API_TOKEN"
-          test "$MODEL" = "@cf/black-forest-labs/flux-2-klein-4b"
+          test "$MODEL" = "@cf/black-forest-labs/flux-1-schnell"
           test "$WIDTH" = "1024"
           test "$HEIGHT" = "576"
           test "$OUTPUT_FORMAT" = "png"
-          mkdir -p klein-backfill/{images,results}
+          mkdir -p flux-backfill/{images,results}
           echo "Model: $MODEL"
           echo "Dimensions: ${WIDTH}x${HEIGHT}"
           echo "Format: ${OUTPUT_FORMAT}"
-          echo "Estimated output tiles: $(( (WIDTH + 511) / 512 * (HEIGHT + 511) / 512 ))"
-          echo "Estimated output neurons/image: 104.20 (4 output tiles × 26.05)"
+          echo "FLUX.1 Schnell request: prompt + steps=${STEPS}; output dimensions are normalized after generation"
+          echo "Pricing basis: 4.80 neurons per 512x512 tile + 9.60 neurons per step"
           echo "Limit: ${LIMIT:-0}"
           echo "Production promotion: $PRODUCTION"
 
@@ -76,16 +77,18 @@ jobs:
           const height = Number(process.env.HEIGHT);
           const limit = Math.max(0, Number(process.env.LIMIT || 0));
           const production = process.env.PRODUCTION === 'true';
-          const outputNeuronsPerTile = Number(process.env.OUTPUT_NEURONS_PER_TILE || 26.05);
-          const outputTilesX = Math.ceil(width / 512);
-          const outputTilesY = Math.ceil(height / 512);
-          const outputTiles = outputTilesX * outputTilesY;
-          const estimatedOutputNeurons = outputTiles * outputNeuronsPerTile;
+          const outputNeuronsPerTile = Number(process.env.OUTPUT_NEURONS_PER_TILE || 4.80);
+          const neuronsPerStep = Number(process.env.NEURONS_PER_STEP || 9.60);
+          const steps = Number(process.env.STEPS || 4);
+          // FLUX.1 Schnell does not accept width/height; its generated image is normalized to 1024x576 below.
+          // Keep this estimate conservative as a one-tile baseline; actual usage is authoritative in Cloudflare.
+          const outputTiles = 1;
           const estimatedInputNeurons = 0;
-          const estimatedNeuronsPerImage = estimatedInputNeurons + estimatedOutputNeurons;
+          const estimatedOutputNeurons = outputTiles * outputNeuronsPerTile;
+          const estimatedNeuronsPerImage = estimatedOutputNeurons + (neuronsPerStep * steps);
           const articleDir = 'content/articles';
-          const outDir = 'klein-backfill/images';
-          const resultDir = 'klein-backfill/results';
+          const outDir = 'flux-backfill/images';
+          const resultDir = 'flux-backfill/results';
 
           const field = (text, key) => {
             const m = text.match(new RegExp('^' + key + ':\\s*"([\\s\\S]*?)"\\s*$', 'm'));
@@ -117,17 +120,13 @@ jobs:
             console.log('PROMPT LENGTH:', prompt.length);
 
             const url = 'https://api.cloudflare.com/client/v4/accounts/' + account + '/ai/run/' + model;
-            const form = new FormData();
-            form.append('prompt', prompt);
-            form.append('width', String(width));
-            form.append('height', String(height));
-
             const started = Date.now();
             try {
+              // FLUX.1 Schnell currently accepts prompt + steps; width/height are not valid model inputs.
               const resp = await fetch(url, {
                 method: 'POST',
-                headers: { Authorization: 'Bearer ' + token },
-                body: form
+                headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt, steps })
               });
               const body = Buffer.from(await resp.arrayBuffer());
               const elapsedMs = Date.now() - started;
@@ -185,7 +184,7 @@ jobs:
             succeeded: manifest.filter(x => x.status === 'success').length,
             failed: failures, images: manifest
           };
-          fs.writeFileSync('klein-backfill/manifest.json', JSON.stringify(summary, null, 2) + '\n');
+          fs.writeFileSync('flux-backfill/manifest.json', JSON.stringify(summary, null, 2) + '\n');
 
           if (production && failures === 0) {
             const articlesTsPath = 'lib/articles.ts';
@@ -205,9 +204,9 @@ jobs:
               const values = {
                 image: '/Trendforge/images/articles/' + row.output,
                 imageAlt: 'Editorial image for ' + row.title,
-                imageSource: 'Cloudflare Workers AI — FLUX.2 Klein 4B',
+                imageSource: 'Cloudflare Workers AI — FLUX.1 Schnell',
                 imageLicense: 'Model-generated',
-                imageGeneratedBy: 'Cloudflare FLUX.2 Klein 4B'
+                imageGeneratedBy: 'Cloudflare FLUX.1 Schnell'
               };
               for (const [key, value] of Object.entries(values)) {
                 const line = key + ': "' + yamlEscape(value) + '"';
@@ -242,12 +241,12 @@ jobs:
           if (failures > 0) process.exitCode = 1;
           NODE
 
-      - name: Upload Klein 4B benchmark artifact
+      - name: Upload FLUX.1 Schnell backfill artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: trendforge-klein-4b-1024x576-backfill
-          path: klein-backfill/
+          path: flux-backfill/
           if-no-files-found: error
           retention-days: 14
 
@@ -257,7 +256,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/articles lib/articles.ts public/images/articles klein-backfill/manifest.json
+          git add content/articles lib/articles.ts public/images/articles flux-backfill/manifest.json
           git status --short
-          git commit -m "feat(images): promote Klein 4B 1024x576 PNG article images" || echo "No changes to commit"
+          git commit -m "feat(images): promote FLUX.1 Schnell 1024x576 PNG article images" || echo "No changes to commit"
           git push
