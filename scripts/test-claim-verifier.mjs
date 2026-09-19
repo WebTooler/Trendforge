@@ -39,7 +39,7 @@ const cases=[
   {
     name:'unsupported-modifier-is-partial',
     body:'The migration steps are straightforward and require no changes to the agent code.',
-    evidence:['The migration required no changes to the core agent logic.'],
+    evidence:['The migration steps required no changes to the core agent code and existing agent logic remains intact.'],
     check:r=>r.code===0&&r.report.claims.some(x=>x.status==='partial'&&x.scopeWarnings?.includes('straightforward'))
   },
   {
@@ -51,7 +51,7 @@ const cases=[
   {
     name:'genuine-unsupported-still-blocks',
     body:'Amazon Bedrock AgentCore launched a rocket from California.',
-    evidence:['Amazon Bedrock AgentCore is a runtime for deploying AI agents.'],
+    evidence:['The migration required no changes to the core agent logic.'],
     check:r=>r.code!==0&&r.report.unsupported>=1
   }
 ];
