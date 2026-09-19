@@ -4,6 +4,9 @@ import { articleToMarkdown, buildArticlePrompt, editorialGate, slugify, type Art
 import { copyrightSafetyGate } from '../lib/copyright-safety';
 import { generateWithTrendForgeWriter } from './trendforge-writer-engine.mjs';
 import { extractEvidenceFromHtml } from './evidence-extraction.mjs';
+import { scoreEvidenceCoverage } from './evidence-coverage.mjs';
+import { deriveEvidenceArticleBlueprint } from './evidence-article-blueprint.mjs';
+import { buildEvidenceArticlePrompt } from './evidence-article-prompt.mjs';
 
 type Trend = { title:string; link:string; source:string; sourceName?:string; publishedAt?:string; category:string; description?:string; eligible?:boolean; score?:number; sources?:{title?:string;url:string;publishedAt?:string}[] };
 type VerificationRecord = { link:string; sources?:{title?:string;url?:string;domain?:string;ok?:boolean;status?:number;finalUrl?:string;discovered?:boolean;resolvedFrom?:string}[]; independentReachableDomains?:string[]; relevantReachableSourceCount?:number; status?:string };
@@ -54,7 +57,9 @@ async function main(){
   const usablePassages=evidencePack.reduce((n,s)=>n+s.passages.length,0);
   const sourceWithEvidence=evidencePack.filter(x=>x.passages.length>=1).length;
   const evidenceDomains=[...new Set(evidencePack.map(s=>domainOf(s.url)).filter(Boolean))];
-  const strongEvidence=evidencePack.length>=2&&sourceWithEvidence>=2&&evidenceDomains.length>=2;
+  const coverage=scoreEvidenceCoverage({sources:evidencePack});
+  const blueprint=deriveEvidenceArticleBlueprint(coverage);
+  const strongEvidence=coverage.score>=75&&evidencePack.length>=2&&sourceWithEvidence>=2&&evidenceDomains.length>=2;
   const minimumPassages=strongEvidence?6:3;
   console.log(`Grounding preflight: ${sources.length} verified publisher URL(s) fetched; ${sourceWithEvidence} source(s) yielded evidence across ${evidenceDomains.length} domain(s).`);
   if(evidencePack.length<1||sourceWithEvidence<1||evidenceDomains.length<1||usablePassages<minimumPassages){console.log(`Grounding evidence pack incomplete: ${evidencePack.length} source(s), ${usablePassages} usable evidence passages, ${evidenceDomains.length} independent evidence domain(s); publication blocked before AI generation.`);process.exit(0);}
@@ -70,7 +75,7 @@ ${s.passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\
     ? `Cross-check the development across ${evidenceDomains.length} independent reachable source domains.`
     : 'Ground the article entirely in the single validated publisher source; preserve attribution and uncertainty where applicable.';
   const brief:ArticleBrief={title:trend.title,category:trend.category,angle:'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.',keyPoints:[trend.description??'Use only retrieved evidence passages.',evidenceInstruction],sources:evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt}))};
-  const prompt=buildArticlePrompt(brief)+`\
+  const prompt=buildEvidenceArticlePrompt(buildArticlePrompt(brief),blueprint)+`\
 \
 RETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:\
 ${evidenceText}\
@@ -86,7 +91,7 @@ GROUNDING CONTRACT:\
 - Prefer a smaller, fully grounded article over a longer article with unsupported context.\
 \
 OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
-  fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:6,strongEvidence,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,sources:evidencePack.map(s=>({title:s.title,url:s.url,kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
+  fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:7,strongEvidence,coverage,blueprint,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,sources:evidencePack.map(s=>({title:s.title,url:s.url,kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
   let output:ProviderResult;try{output=await generateWithProviders(prompt,trend.title);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
   console.log(`Article generation provider: ${output.provider}`);
   let generated:{title:string;description:string;content:string};try{generated=parseModelJson(output.text);}catch(e){console.log(`${e instanceof Error?e.message:String(e)}; publishing blocked.`);process.exit(0);}
