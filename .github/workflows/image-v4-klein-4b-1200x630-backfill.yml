@@ -263,3 +263,4 @@ jobs:
           git status --short
           git commit -m "feat(images): promote FLUX.1 Schnell 1024x576 PNG article images" || echo "No changes to commit"
           git push
+# Phase 2 production backfill trigger
