@@ -566,7 +566,7 @@ export const articles: Article[] = [
     "slug": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig",
     "title": "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
     "description": "President Trump said the United States has secured permanent control over security in Greenland, while Denmark and Greenland said sovereignty remains intact. The agreement is expected to be signed next week, subject to required parliamentary procedures.",
-    "category": "Digital Life",
+    "category": "World",
     "date": "2026-09-19",
     "publishedAt": "2026-09-19T07:08:56.449Z",
     "author": "Tejendra Pal Singh",
