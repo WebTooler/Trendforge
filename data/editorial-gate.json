@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T20:55:55.712Z",
+  "generatedAt": "2026-09-19T02:30:26.450Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2729,
-      "sentenceCount": 18,
+      "normalizedLength": 4053,
+      "sentenceCount": 27,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,10 +31,12 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "theverge.com"
+    "hanfordsentinel.com",
+    "yahoo.com",
+    "latimes.com"
   ],
   "grounding": {
-    "sourceCount": 1,
-    "usablePassages": 18
+    "sourceCount": 3,
+    "usablePassages": 54
   }
 }

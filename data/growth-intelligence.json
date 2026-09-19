@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T20:56:06.197Z",
+  "generatedAt": "2026-09-19T02:30:49.115Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 12,
+    "totalArticles": 13,
     "averageEditorialScore": 73,
     "editorialReviewCount": 11,
     "refreshCandidates": 0
@@ -15,18 +15,18 @@
   "categoryMix": [
     {
       "category": "AI",
-      "count": 4,
-      "share": 33.3
+      "count": 5,
+      "share": 38.5
     },
     {
       "category": "Technology",
       "count": 3,
-      "share": 25
+      "share": 23.1
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 25
+      "share": 23.1
     },
     {
       "category": "Innovation",
@@ -41,7 +41,7 @@
     {
       "category": "Digital Life",
       "count": 2,
-      "share": 16.7
+      "share": 15.4
     },
     {
       "category": "Crypto",
@@ -54,12 +54,20 @@
     "Product Launches",
     "Crypto"
   ],
-  "overrepresentedCategories": [],
+  "overrepresentedCategories": [
+    "AI"
+  ],
   "recommendations": [
     "Prioritize missing categories: Innovation, Product Launches, Crypto.",
+    "Reduce short-term concentration in: AI.",
     "11 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
+    {
+      "title": "California Governor Orders AI Safety Panel and Considers ‘Kill Switch’",
+      "category": "AI",
+      "publishedAt": "2026-09-19T02:30:26.449Z"
+    },
     {
       "title": "The Apple Watch Series 12 is the start of a new wearable era",
       "category": "Digital Life",
@@ -104,11 +112,6 @@
       "title": "How to Update Android Apps Safely and Keep Them Current",
       "category": "How-To",
       "publishedAt": "2026-09-14T04:13:03.838Z"
-    },
-    {
-      "title": "How to Move Passwords and Passkeys Between Managers on Android",
-      "category": "How-To",
-      "publishedAt": "2026-09-14T03:19:21.719Z"
     }
   ]
 }

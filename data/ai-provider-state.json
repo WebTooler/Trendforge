@@ -7,15 +7,15 @@
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 17,
-      "lastSuccessAt": "2026-09-18T20:56:03.715Z"
+      "successes": 19,
+      "lastSuccessAt": "2026-09-19T02:30:45.410Z"
     },
     "Gemini": {
-      "failures": 19,
+      "failures": 20,
       "quotaBlockedUntil": 1789765081348,
-      "lastStatus": 503,
-      "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
-      "lastClass": "server"
+      "lastStatus": 200,
+      "lastError": "Invalid repair structured output",
+      "lastClass": "error"
     },
     "OpenAI": {
       "failures": 3,
@@ -32,17 +32,17 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 28,
-      "quotaBlockedUntil": 1789764971596,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
+      "failures": 29,
+      "quotaBlockedUntil": 1789785041072,
+      "lastStatus": 200,
+      "lastError": "Empty model response",
       "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 37,
-      "quotaBlockedUntil": 1789764984239,
+      "failures": 38,
+      "quotaBlockedUntil": 1789785054998,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -50,6 +50,6 @@
       "lastSuccessAt": "2026-09-18T12:48:53.508Z"
     }
   },
-  "rotationCursor": 0,
-  "updatedAt": "2026-09-18T20:56:03.715Z"
+  "rotationCursor": 1,
+  "updatedAt": "2026-09-19T02:30:45.410Z"
 }

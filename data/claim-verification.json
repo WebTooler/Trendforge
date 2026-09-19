@@ -1,19 +1,19 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-18T20:56:03.820Z",
-  "articlePath": "content/articles/three-hacktron-researchers-used-anthropic-s-claude-to-break-into-openai-in-under-72-hours.md",
-  "articleTitle": "Three Hacktron Researchers Used Anthropic’s Claude to Break into OpenAI in Under 72 Hours",
+  "generatedAt": "2026-09-19T02:30:45.612Z",
+  "articlePath": "content/articles/california-governor-orders-ai-safety-panel-and-considers-kill-switch.md",
+  "articleTitle": "California Governor Orders AI Safety Panel and Considers ‘Kill Switch’",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
-  "sourceCount": 1,
-  "usableSourceCount": 1,
-  "claimCount": 15,
-  "editorialCount": 3,
+  "sourceCount": 3,
+  "usableSourceCount": 3,
+  "claimCount": 14,
+  "editorialCount": 1,
   "verified": 14,
   "partial": 0,
-  "unsupported": 1,
+  "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 80,
-  "pass": false,
+  "averageConfidence": 77,
+  "pass": true,
   "policy": {
     "verifiedMin": 62,
     "partialMin": 45,
@@ -37,9 +37,25 @@
   "sources": [
     {
       "id": "S1",
-      "title": "Security researchers used Claude to help them hack into OpenAI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "domain": "theverge.com",
+      "title": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "url": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "domain": "hanfordsentinel.com",
+      "passageCount": 18,
+      "articleBodyLength": 0
+    },
+    {
+      "id": "S2",
+      "title": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
+      "url": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
+      "domain": "yahoo.com",
+      "passageCount": 18,
+      "articleBodyLength": 0
+    },
+    {
+      "id": "S3",
+      "title": "Newsom creates AI safety panel, suggests possible 'kill switch'",
+      "url": "https://www.latimes.com/california/story/2026-09-18/newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch",
+      "domain": "latimes.com",
       "passageCount": 18,
       "articleBodyLength": 0
     }
@@ -47,37 +63,49 @@
   "claims": [
     {
       "index": 1,
-      "claim": "A trio of security researchers from Hacktron announced that they had breached OpenAI employee accounts in less than 72 hours.",
+      "claim": "On Friday, California Governor Gavin Newsom issued an executive order creating a panel to develop safety regulations for the state’s artificial intelligence companies.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 74,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "confidence": 93,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports.",
-      "bestPassage": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports.",
+      "bestPassageId": "S1-P1",
+      "evidence": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue. Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue. Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI security, according to a statement from the governor’s office.",
+      "bestPassage": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue.",
       "matchedPassages": [
-        "S1-P6"
+        "S1-P1",
+        "S1-P6",
+        "S1-P7"
       ],
       "sharedTerms": [
-        "security",
-        "researcher",
-        "hacktron",
-        "openai",
-        "worker",
-        "account",
-        "hour"
+        "friday",
+        "governor",
+        "gavin",
+        "newsom",
+        "issu",
+        "executive",
+        "order",
+        "panel",
+        "safety",
+        "regulation",
+        "for",
+        "the",
+        "state",
+        "compani"
       ],
       "entityShared": [
-        "hacktron",
-        "openai"
+        "friday",
+        "gavin",
+        "newsom"
       ],
       "topicShared": [
-        "security",
-        "researcher",
-        "openai"
+        "newsom",
+        "creat",
+        "panel",
+        "safety",
+        "regulation"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -86,36 +114,35 @@
     },
     {
       "index": 2,
-      "claim": "The team employed Anthropic’s Claude Opus 4.8 and 5 to carry out the attack.",
+      "claim": "The order calls for a “group of world‑leading experts” to provide a guide that would strengthen California’s AI security laws.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 76,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "confidence": 78,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports.",
-      "bestPassage": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports.",
+      "bestPassageId": "S1-P7",
+      "evidence": "Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI security, according to a statement from the governor’s office. Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI ...",
+      "bestPassage": "Newsom issued an executive order to convene “a group of world-leading experts” to provide a “guide” for the state to bolster its laws around AI security, according to a statement from the governor’s office.",
       "matchedPassages": [
-        "S1-P6"
+        "S1-P7",
+        "S1-P2"
       ],
       "sharedTerms": [
         "the",
-        "team",
-        "anthropic",
-        "claude",
-        "opus",
-        "and"
+        "order",
+        "for",
+        "group",
+        "world",
+        "lead",
+        "expert",
+        "provide",
+        "security",
+        "laws"
       ],
-      "entityShared": [
-        "anthropic",
-        "claude",
-        "opus"
-      ],
-      "topicShared": [
-        "claude"
-      ],
+      "entityShared": [],
+      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -123,39 +150,34 @@
     },
     {
       "index": 3,
-      "claim": "The breach occurred through Discourse, the forum platform that hosts OpenAI’s community boards, by exploiting a flaw in the system that processes HEIF images.",
+      "claim": "The panel is tasked, among other things, with exploring a potential “kill switch” for AI programs that might act maliciously.",
       "status": "verified",
-      "classification": "supported",
-      "confidence": 83,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "classification": "supported_with_context",
+      "confidence": 54,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "They were able to get in through Discourse, the third-party service that hosts OpenAI’s community forums, by exploiting an issue with the system it uses to process HEIF images.",
-      "bestPassage": "They were able to get in through Discourse, the third-party service that hosts OpenAI’s community forums, by exploiting an issue with the system it uses to process HEIF images.",
+      "bestPassageId": "S1-P1",
+      "evidence": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue. Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue.",
+      "bestPassage": "Gavin Newsom on Friday ordered the formation of a panel to come up with safety regulations for the state’s artificial intelligence companies, including the development of a possible “kill switch” for AI programs that go rogue.",
       "matchedPassages": [
-        "S1-P9"
+        "S1-P1",
+        "S1-P6"
       ],
       "sharedTerms": [
         "the",
-        "discourse",
-        "forum",
-        "host",
-        "openai",
-        "community",
-        "exploit",
-        "system",
-        "heif",
-        "imag"
+        "panel",
+        "kill",
+        "switch",
+        "for",
+        "program"
       ],
-      "entityShared": [
-        "discourse",
-        "openai",
-        "heif"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "openai"
+        "panel",
+        "kill",
+        "switch"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -164,36 +186,37 @@
     },
     {
       "index": 4,
-      "claim": "The researchers began by uploading a corrupted HEIF image to Discourse, exploiting an issue with the system it uses to process HEIF images.",
+      "claim": "The panel’s mandate includes evaluating proposals for independent third parties to draft safety plans and for companies to build emergency shut‑off mechanisms.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 78,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "confidence": 67,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P9",
-      "evidence": "They were able to get in through Discourse, the third-party service that hosts OpenAI’s community forums, by exploiting an issue with the system it uses to process HEIF images.",
-      "bestPassage": "They were able to get in through Discourse, the third-party service that hosts OpenAI’s community forums, by exploiting an issue with the system it uses to process HEIF images.",
+      "bestPassageId": "S1-P8",
+      "evidence": "The panel could consider proposals for independent third parties to write safety plans or for companies to develop an emergency shutoff.",
+      "bestPassage": "The panel could consider proposals for independent third parties to write safety plans or for companies to develop an emergency shutoff.",
       "matchedPassages": [
-        "S1-P9"
+        "S1-P8"
       ],
       "sharedTerms": [
         "the",
-        "heif",
-        "discourse",
-        "exploit",
-        "issue",
-        "system",
-        "proces",
-        "imag"
+        "panel",
+        "proposal",
+        "for",
+        "independent",
+        "third",
+        "parti",
+        "safety",
+        "plan",
+        "compani",
+        "emergency"
       ],
-      "entityShared": [
-        "heif",
-        "discourse"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "researcher"
+        "panel",
+        "safety"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -202,101 +225,38 @@
     },
     {
       "index": 5,
-      "claim": "According to Hacktron, Claude Opus 5 launched in the evening on July 24th, and by 10 AM the next day they had used it to achieve RCE on Discourse Cloud and accessed OpenAI’s instance.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 32,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P10",
-      "evidence": "According to Hacktron, Claude Opus 5 launched in the evening on July 24th, and by 10AM the next day they had used it to achieve RCE on Discourse Cloud and accessed OpenAI’s instance.",
-      "bestPassage": "According to Hacktron, Claude Opus 5 launched in the evening on July 24th, and by 10AM the next day they had used it to achieve RCE on Discourse Cloud and accessed OpenAI’s instance.",
-      "matchedPassages": [
-        "S1-P10"
-      ],
-      "sharedTerms": [
-        "accord",
-        "hacktron",
-        "claude",
-        "opus",
-        "launch",
-        "the",
-        "july",
-        "24th",
-        "and",
-        "next",
-        "day",
-        "had",
-        "achieve",
-        "rce",
-        "discourse",
-        "cloud",
-        "access",
-        "openai",
-        "instance"
-      ],
-      "entityShared": [
-        "accord",
-        "hacktron",
-        "claude",
-        "opus",
-        "july",
-        "rce",
-        "discourse",
-        "cloud",
-        "openai"
-      ],
-      "topicShared": [
-        "claude",
-        "openai"
-      ],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 6,
-      "claim": "They then used an employee’s Codex account to submit a pull request to OpenAI’s GitHub repository, called “Monorepo,” which reportedly holds OpenAI’s algorithmic secrets.",
+      "claim": "A researcher from Anthropic, who left the firm over concerns that AI could become dangerous, said the technology might “kill us all by the end of the decade.” Political leaders across the country have responded.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 95,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P7",
-      "evidence": "They were able to access OpenAI’s GitHub repository, called “Monorepo,” which reportedly contains “OpenAI’s algorithmic secrets,” according to The Wall Street Journal ’s sources. They stopped short of accessing internal code in Monorepo themselves, but sent a pull request from an employee’s Codex account to prove they gained access.",
-      "bestPassage": "They were able to access OpenAI’s GitHub repository, called “Monorepo,” which reportedly contains “OpenAI’s algorithmic secrets,” according to The Wall Street Journal ’s sources.",
+      "confidence": 69,
+      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
+      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
+      "bestDomain": "yahoo.com",
+      "sourceId": "S2",
+      "bestPassageId": "S2-P12",
+      "evidence": "Advertisement Advertisement A researcher for AI company Anthropic said earlier this month that he left the firm over concerns that AI companies, including OpenAI, for whom he also worked, are \"gambling with our lives\" as they race ahead to improve AI that could surpass human intelligence. The researcher, Jacob Coxon, said in a social media post: \"People building AI earnestly believe that it could kill us all by the end of the decade.\" State Sen.",
+      "bestPassage": "Advertisement Advertisement A researcher for AI company Anthropic said earlier this month that he left the firm over concerns that AI companies, including OpenAI, for whom he also worked, are \"gambling with our lives\" as they race ahead to improve AI that could surpass human intelligence.",
       "matchedPassages": [
-        "S1-P7",
-        "S1-P8"
+        "S2-P12",
+        "S2-P13"
       ],
       "sharedTerms": [
-        "worker",
-        "codex",
-        "account",
-        "pull",
-        "request",
-        "openai",
-        "github",
-        "repository",
-        "call",
-        "monorepo",
-        "report",
-        "algorithmic",
-        "secret"
+        "researcher",
+        "anthropic",
+        "left",
+        "the",
+        "firm",
+        "fear",
+        "kill",
+        "all",
+        "end",
+        "decade"
       ],
       "entityShared": [
-        "codex",
-        "openai",
-        "github",
-        "monorepo"
+        "anthropic"
       ],
       "topicShared": [
-        "openai"
+        "kill"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -304,43 +264,46 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 7,
-      "claim": "They stopped short of accessing internal code in Monorepo themselves, but sent a pull request from an employee’s Codex account to prove they gained access.",
+      "index": 6,
+      "claim": "In July, lawmakers Lieu (D‑Torrance) and Nathaniel Moran (R‑Texas) introduced legislation that would have required developers to possess the capability to shut down powerful AI systems.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 98,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P8",
-      "evidence": "They stopped short of accessing internal code in Monorepo themselves, but sent a pull request from an employee’s Codex account to prove they gained access.",
-      "bestPassage": "They stopped short of accessing internal code in Monorepo themselves, but sent a pull request from an employee’s Codex account to prove they gained access.",
+      "confidence": 94,
+      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
+      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
+      "bestDomain": "yahoo.com",
+      "sourceId": "S2",
+      "bestPassageId": "S2-P8",
+      "evidence": "Lieu (D-Torrance) and Nathaniel Moran (R-Texas) introduced a bill in July that would have required developers to have the capability to shut down powerful AI systems.",
+      "bestPassage": "Lieu (D-Torrance) and Nathaniel Moran (R-Texas) introduced a bill in July that would have required developers to have the capability to shut down powerful AI systems.",
       "matchedPassages": [
-        "S1-P8"
+        "S2-P8"
       ],
       "sharedTerms": [
-        "stopp",
-        "short",
-        "access",
-        "internal",
-        "code",
-        "monorepo",
-        "themselv",
-        "but",
-        "sent",
-        "pull",
-        "request",
-        "worker",
-        "codex",
-        "account",
-        "prove",
-        "rise",
-        "acces"
+        "july",
+        "lieu",
+        "torrance",
+        "and",
+        "nathaniel",
+        "moran",
+        "texa",
+        "introduc",
+        "requir",
+        "developer",
+        "the",
+        "capability",
+        "shut",
+        "down",
+        "powerful",
+        "system"
       ],
       "entityShared": [
-        "monorepo",
-        "codex"
+        "july",
+        "lieu",
+        "torrance",
+        "nathaniel",
+        "moran",
+        "texa"
       ],
       "topicShared": [],
       "numericMismatch": false,
@@ -349,53 +312,79 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 8,
-      "claim": "Hacktron’s project, dubbed “HEIF Heist,” reportedly required only one or two days to adapt to multiple organizations, including OpenAI, Slack, Meta, GitHub Enterprise, Rails, Next.js, ImageMagick, and others.",
+      "index": 7,
+      "claim": "At the same time, executive leaders such as Nvidia’s Jensen Huang have publicly argued that no new regulation is needed, insisting that accountability should come from within the industry.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 87,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "Their HEIF Heist project took “only one or two days” to adapt to different companies, including OpenAI, Slack, Meta, GitHub Ent, Rails, Next.js, ImageMagick, and others , using less than $3,000 in tokens, and to their knowledge, was only detected by one target, Shopify.",
-      "bestPassage": "Their HEIF Heist project took “only one or two days” to adapt to different companies, including OpenAI, Slack, Meta, GitHub Ent, Rails, Next.js, ImageMagick, and others , using less than $3,000 in tokens, and to their knowledge, was only detected by one target, Shopify.",
+      "confidence": 72,
+      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
+      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
+      "bestDomain": "yahoo.com",
+      "sourceId": "S2",
+      "bestPassageId": "S2-P10",
+      "evidence": "Executives including Nvidia Chief Executive Jensen Huang, who has close ties to Trump, have said publicly that no new regulation is needed.",
+      "bestPassage": "Executives including Nvidia Chief Executive Jensen Huang, who has close ties to Trump, have said publicly that no new regulation is needed.",
       "matchedPassages": [
-        "S1-P11"
+        "S2-P10"
       ],
       "sharedTerms": [
-        "project",
-        "heif",
-        "heist",
-        "one",
-        "two",
-        "days",
-        "adapt",
-        "includ",
-        "openai",
-        "slack",
-        "meta",
-        "github",
-        "rail",
-        "next",
-        "imagemagick",
-        "and",
-        "other"
+        "executive",
+        "nvidia",
+        "jensen",
+        "huang",
+        "publicly",
+        "new",
+        "regulation",
+        "need"
       ],
       "entityShared": [
-        "heif",
-        "heist",
-        "openai",
-        "slack",
-        "meta",
-        "github",
-        "rail",
-        "next",
-        "imagemagick"
+        "nvidia",
+        "jensen",
+        "huang"
       ],
       "topicShared": [
-        "openai"
+        "regulation"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 8,
+      "claim": "Newsom himself noted that the term “means a lot of things depending on who you talk to” and that the state wants to define what a workable framework would look like.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 73,
+      "bestSource": "Newsom creates panel on AI safety regulation, suggests possible 'kill switch'",
+      "bestUrl": "https://www.yahoo.com/news/politics/articles/newsom-creates-panel-ai-safety-150451727.html",
+      "bestDomain": "yahoo.com",
+      "sourceId": "S2",
+      "bestPassageId": "S2-P16",
+      "evidence": "In a video about the executive order, Newsom said an AI kill switch \"means a lot of things depending on who you talk to.\" \"We want to flesh out exactly what that means and how to come up with a framework that works,\" he said.",
+      "bestPassage": "In a video about the executive order, Newsom said an AI kill switch \"means a lot of things depending on who you talk to.\" \"We want to flesh out exactly what that means and how to come up with a framework that works,\" he said.",
+      "matchedPassages": [
+        "S2-P16"
+      ],
+      "sharedTerms": [
+        "newsom",
+        "the",
+        "mean",
+        "lot",
+        "thing",
+        "depend",
+        "who",
+        "you",
+        "talk",
+        "and",
+        "want",
+        "framework"
+      ],
+      "entityShared": [
+        "newsom"
+      ],
+      "topicShared": [
+        "newsom"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -404,33 +393,34 @@
     },
     {
       "index": 9,
-      "claim": "The team used fewer than $3,000 in tokens for the attack and, to their knowledge, the flaw was detected by only one target, Shopify.",
+      "claim": "AI expert Geoffrey Hinton, a 2024 Nobel laureate in machine learning, expressed skepticism.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 73,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "confidence": 89,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "Their HEIF Heist project took “only one or two days” to adapt to different companies, including OpenAI, Slack, Meta, GitHub Ent, Rails, Next.js, ImageMagick, and others , using less than $3,000 in tokens, and to their knowledge, was only detected by one target, Shopify.",
-      "bestPassage": "Their HEIF Heist project took “only one or two days” to adapt to different companies, including OpenAI, Slack, Meta, GitHub Ent, Rails, Next.js, ImageMagick, and others , using less than $3,000 in tokens, and to their knowledge, was only detected by one target, Shopify.",
+      "bestPassageId": "S1-P16",
+      "evidence": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
+      "bestPassage": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
       "matchedPassages": [
-        "S1-P11"
+        "S1-P16"
       ],
       "sharedTerms": [
-        "000",
-        "token",
-        "and",
-        "knowledge",
-        "was",
-        "detect",
-        "one",
-        "target",
-        "shopify"
+        "expert",
+        "geoffrey",
+        "hinton",
+        "2024",
+        "nobel",
+        "machine",
+        "learn",
+        "express"
       ],
       "entityShared": [
-        "shopify"
+        "geoffrey",
+        "hinton",
+        "nobel"
       ],
       "topicShared": [],
       "numericMismatch": false,
@@ -440,34 +430,42 @@
     },
     {
       "index": 10,
-      "claim": "The vulnerability was reported to both Discourse and OpenAI, and the companies have since patched the issue.",
+      "claim": "In a recent interview with CNN, Hinton said a kill switch might not work because an advanced AI could persuade the people who control the switch not to pull it, increasing the risk that the system would become even more intelligent.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 62,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "confidence": 78,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
-      "bestPassage": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
+      "bestPassageId": "S1-P16",
+      "evidence": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
+      "bestPassage": "AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen.",
       "matchedPassages": [
-        "S1-P12"
+        "S1-P16"
       ],
       "sharedTerms": [
+        "cnn",
+        "hinton",
+        "kill",
+        "switch",
+        "not",
+        "work",
+        "persuade",
         "the",
-        "report",
-        "discourse",
-        "and",
-        "openai",
-        "since"
+        "people",
+        "who",
+        "pull",
+        "risk",
+        "intelligent"
       ],
       "entityShared": [
-        "discourse",
-        "openai"
+        "cnn",
+        "hinton"
       ],
       "topicShared": [
-        "openai"
+        "kill",
+        "switch"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -476,35 +474,35 @@
     },
     {
       "index": 11,
-      "claim": "OpenAI paid Hacktron $6,500 for discovering the bug.",
+      "claim": "California houses many of the world’s leading AI companies, so any new regulations could have a disproportionate effect on the global tech industry.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 81,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "confidence": 77,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
-      "bestPassage": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
+      "bestPassageId": "S1-P15",
+      "evidence": "Any new laws could have a disproportionate effect on the global tech industry because many top AI companies are based in California.",
+      "bestPassage": "Any new laws could have a disproportionate effect on the global tech industry because many top AI companies are based in California.",
       "matchedPassages": [
-        "S1-P12"
+        "S1-P15"
       ],
       "sharedTerms": [
-        "openai",
-        "paid",
-        "hacktron",
-        "500",
-        "for",
+        "california",
         "the",
-        "bug"
+        "compani",
+        "any",
+        "new",
+        "disproportionate",
+        "effect",
+        "global"
       ],
       "entityShared": [
-        "openai",
-        "hacktron"
+        "california"
       ],
       "topicShared": [
-        "openai"
+        "regulation"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -513,42 +511,72 @@
     },
     {
       "index": 12,
-      "claim": "Hacktron’s chief technology officer, Mohan Pedhapati, told the Wall Street Journal that the team does not see themselves as matching the capabilities of large state‑run threat actors.",
+      "claim": "The panel will hold hearings in the fall, as noted by State Sen.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 76,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "confidence": 81,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports. The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates. They were able to access OpenAI’s GitHub repository, called “Monorepo,” which reportedly contains “OpenAI’s algorithmic secrets,” according to The Wall Street Journal ’s sources.",
-      "bestPassage": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports.",
+      "bestPassageId": "S1-P13",
+      "evidence": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall. AI expert Geoffrey Hinton, who won a Nobel Prize in 2024 for his work on machine learning, expressed doubt on CNN this week that a “kill switch” would be effective since AI would “persuade the people in charge of the switch not to pull the switch.” The risk, he said, is “AI itself getting much more intelligent and taking over.” A proposed law in 2024 by state Sen. The researcher, Jacob Coxon, said in a social media post: “People building AI earnestly believe that it could kill us all by the end of the decade.” State Sen.",
+      "bestPassage": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall.",
       "matchedPassages": [
-        "S1-P6",
-        "S1-P12",
-        "S1-P7"
+        "S1-P13",
+        "S1-P16",
+        "S1-P12"
       ],
       "sharedTerms": [
-        "hacktron",
-        "mohan",
-        "pedhapati",
         "the",
-        "wall",
-        "street",
-        "journal",
-        "team",
-        "see",
-        "threat",
-        "actor"
+        "hold",
+        "hearing",
+        "fall",
+        "not",
+        "state",
+        "sen"
       ],
       "entityShared": [
-        "hacktron",
-        "mohan",
-        "pedhapati",
-        "wall",
-        "street",
-        "journal"
+        "state",
+        "sen"
+      ],
+      "topicShared": [
+        "panel"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 13,
+      "claim": "Christopher Cabaldon, who chairs the committee overseeing technology issues.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 98,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P13",
+      "evidence": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall.",
+      "bestPassage": "Christopher Cabaldon, a West Sacramento Democrat who chairs the state committee overseeing technology issues, told the Los Angeles Times he’ll hold hearings on artificial intelligence this fall.",
+      "matchedPassages": [
+        "S1-P13"
+      ],
+      "sharedTerms": [
+        "christopher",
+        "cabaldon",
+        "who",
+        "chair",
+        "the",
+        "committee",
+        "oversee",
+        "issu"
+      ],
+      "entityShared": [
+        "christopher",
+        "cabaldon"
       ],
       "topicShared": [],
       "numericMismatch": false,
@@ -557,136 +585,32 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 13,
-      "claim": "“We’re just three guys with Claude and Codex subscriptions,” he said.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 93,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
-      "bestPassage": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
-      "matchedPassages": [
-        "S1-P12"
-      ],
-      "sharedTerms": [
-        "three",
-        "guys",
-        "claude",
-        "and",
-        "codex",
-        "subscription"
-      ],
-      "entityShared": [
-        "claude",
-        "codex"
-      ],
-      "topicShared": [
-        "claude"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
       "index": 14,
-      "claim": "The incident shows that it took less than 72 hours for a team of three independent security researchers at Hacktron to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5.",
+      "claim": "These hearings will be informed by recent warnings about AI’s dangers and by the evolving debate over kill‑switch feasibility.",
       "status": "verified",
-      "classification": "supported",
-      "confidence": 97,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
+      "classification": "supported_with_context",
+      "confidence": 55,
+      "bestSource": "California Gov. Gavin Newsom creates panel on AI safety regulation, suggests possible 'kill switch' | National News | hanfordsentinel.com",
+      "bestUrl": "https://hanfordsentinel.com/news/national/california-gov-gavin-newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch/article_6aa5610f-7738-50cd-85ce-7d8c89a78293.html",
+      "bestDomain": "hanfordsentinel.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports.",
-      "bestPassage": "A team of three independent security researchers at Hacktron says it took less than 72 hours for them to hack into OpenAI employee accounts using Anthropic’s Claude Opus 4.8 and 5, The Wall Street Journal reports.",
+      "bestPassageId": "S1-P14",
+      "evidence": "Those meetings were planned before the recent warnings about AI’s dangers, but will be informed by the events of the last few weeks, he said.",
+      "bestPassage": "Those meetings were planned before the recent warnings about AI’s dangers, but will be informed by the events of the last few weeks, he said.",
       "matchedPassages": [
-        "S1-P6"
+        "S1-P14"
       ],
       "sharedTerms": [
-        "the",
-        "took",
-        "hour",
-        "for",
-        "team",
-        "three",
-        "independent",
-        "security",
-        "researcher",
-        "hacktron",
-        "hack",
-        "openai",
-        "worker",
-        "account",
-        "anthropic",
-        "claude",
-        "opus",
-        "and"
+        "inform",
+        "recent",
+        "warning",
+        "danger",
+        "the"
       ],
-      "entityShared": [
-        "hacktron",
-        "openai",
-        "anthropic",
-        "claude",
-        "opus"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "security",
-        "researcher",
-        "hack",
-        "openai",
-        "claude"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 16,
-      "claim": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 100,
-      "bestSource": "Security researchers used Claude to help them hack into OpenAI",
-      "bestUrl": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist",
-      "bestDomain": "theverge.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P12",
-      "evidence": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
-      "bestPassage": "The vulnerabilities Hacktron reported to Discourse and OpenAI have since been fixed, and Hacktron says OpenAI paid it $6,500 for finding the bug, but as Hacktron CTO Mohan Pedhapati said to the WSJ , “I don’t think we are as strong as Chinese threat actors… We’re just three guys with Claude and Codex subscriptions.” Follow topics and authors from this story to see more like this in your personalized homepage feed and to receive email updates.",
-      "matchedPassages": [
-        "S1-P12"
-      ],
-      "sharedTerms": [
-        "the",
-        "vulnerabiliti",
-        "hacktron",
-        "report",
-        "discourse",
-        "and",
-        "openai",
-        "since",
-        "fix",
-        "says",
-        "paid",
-        "500",
-        "for",
-        "find",
-        "bug"
-      ],
-      "entityShared": [
-        "hacktron",
-        "discourse",
-        "openai"
-      ],
-      "topicShared": [
-        "openai"
+        "kill",
+        "switch"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -697,19 +621,7 @@
   "editorial": [
     {
       "index": 15,
-      "claim": "It also highlights the importance of securing image‑processing pipelines, especially in third‑party services that handle user uploads.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 17,
-      "claim": "Readers should note that the researchers did not access the internal code of OpenAI’s Monorepo; they only demonstrated that they could gain access to employee accounts and submit a pull request.",
-      "type": "editorial-recommendation",
-      "status": "editorial-excluded"
-    },
-    {
-      "index": 18,
-      "claim": "The incident also illustrates the potential for AI tools to accelerate vulnerability exploitation, a development that may prompt tighter controls on how such models are deployed and accessed by developers and researchers alike.",
+      "claim": "While Newsom’s executive order signals a clear commitment to addressing AI safety, the exact mechanisms and legal authority of a kill switch remain untested.",
       "type": "editorial-analysis",
       "status": "editorial-excluded"
     }
