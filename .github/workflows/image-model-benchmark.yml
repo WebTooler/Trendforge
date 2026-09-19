@@ -28,8 +28,9 @@ jobs:
           test -n "$CLOUDFLARE_API_TOKEN"
           test "$WIDTH" = "1024"
           test "$HEIGHT" = "576"
-          echo "Benchmark: 3 models × 3 fixed stories = 9 images"
+          echo "Controlled benchmark: 3 models × 1 fixed story = 3 images"
           echo "Production writes: NONE"
+          echo "Quota guard: only 3 generation requests in this controlled run"
 
       - name: Install image normalizer
         run: |
@@ -57,8 +58,6 @@ jobs:
           ];
 
           const articleFiles = [
-            'ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.md',
-            'al-gore-says-the-real-ai-risk-isn-t-data-centers.md',
             'anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.md'
           ];
 
@@ -142,18 +141,40 @@ jobs:
               for (const model of models) {
                 const prompt = buildPrompt(title, description, category);
                 const url = `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${model.api}`;
-                const form = new FormData();
-                form.append('prompt', prompt);
-                form.append('width', String(width));
-                form.append('height', String(height));
-
                 const started = Date.now();
                 try {
-                  const resp = await fetch(url, {
-                    method: 'POST',
-                    headers: { Authorization: `Bearer ${token}` },
-                    body: form
-                  });
+                  let resp;
+                  if (model.id === 'klein-4b') {
+                    const form = new FormData();
+                    form.append('prompt', prompt);
+                    form.append('width', String(width));
+                    form.append('height', String(height));
+                    resp = await fetch(url, {
+                      method: 'POST',
+                      headers: { Authorization: `Bearer ${token}` },
+                      body: form
+                    });
+                  } else if (model.id === 'flux-1-schnell') {
+                    resp = await fetch(url, {
+                      method: 'POST',
+                      headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({ prompt, width, height, steps: 4 })
+                    });
+                  } else if (model.id === 'sdxl-lightning') {
+                    resp = await fetch(url, {
+                      method: 'POST',
+                      headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({ prompt, width, height, num_steps: 4 })
+                    });
+                  } else {
+                    throw new Error(`unsupported benchmark model: ${model.id}`);
+                  }
                   const body = Buffer.from(await resp.arrayBuffer());
                   const elapsedMs = Date.now() - started;
                   if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${body.toString('utf8').slice(0, 500)}`);
