@@ -37,6 +37,54 @@ async function fetchPage(url){
   }catch{return null;}
 }
 
+
+function normalizeUrl(u=''){
+  try{const x=new URL(u);x.hash='';for(const k of [...x.searchParams.keys()])if(/^(utm_|fbclid|gclid|mc_cid|mc_eid)/i.test(k))x.searchParams.delete(k);return x.toString().replace(/\/$/,'');}catch{return String(u||'').trim();}
+}
+function storyTokens(text=''){
+  const stop=new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','latest','news','article','story','report','reports','reported','according']);
+  return new Set(clean(text).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(w=>w.length>=5&&!stop.has(w)));
+}
+function similarity(a='',b=''){
+  const A=storyTokens(a),B=storyTokens(b);if(!A.size||!B.size)return{jaccard:0,containment:0,shared:0};
+  const shared=[...A].filter(x=>B.has(x)).length;
+  return{jaccard:shared/Math.max(1,new Set([...A,...B]).size),containment:shared/Math.max(1,Math.min(A.size,B.size)),shared};
+}
+function phraseOverlap(a='',b=''){
+  const words=x=>clean(x).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(Boolean);
+  const grams=arr=>{const s=new Set();for(let i=0;i<=arr.length-4;i++)s.add(arr.slice(i,i+4).join(' '));return s;};
+  const A=grams(words(a)),B=grams(words(b));return[...A].filter(x=>B.has(x)).length;
+}
+function loadPublishedHistory(){
+  const dir='content/articles';if(!fs.existsSync(dir))return[];
+  return fs.readdirSync(dir).filter(n=>n.endsWith('.md')).map(file=>{
+    const raw=fs.readFileSync(dir+'/'+file,'utf8');
+    const title=(raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)||[])[1]||'';
+    const body=raw.replace(/^---[\s\S]*?---/,'').replace(/^## Sources[\s\S]*$/m,'').slice(0,12000);
+    const sourceUrls=[...raw.matchAll(/\]\((https?:\/\/[^)]+)\)/g)].map(m=>normalizeUrl(m[1]));
+    return{file,title,body,sourceUrls};
+  });
+}
+function duplicateAgainstHistory(record,sources,history){
+  const candidateUrls=new Set(sources.map(s=>normalizeUrl(s.url||'')).filter(Boolean));
+  const candidateEvidence=sources.map(s=>s.body||s.passages?.join(' ')||'').join(' ');
+  for(const old of history){
+    const exact=[...candidateUrls].filter(u=>old.sourceUrls.includes(u));
+    if(exact.length)return{duplicate:true,reason:'exact-published-source-reuse',matchedFile:old.file,matchedTitle:old.title,matchedUrls:exact};
+    const titleSim=similarity(record.title||'',old.title),bodySim=similarity(candidateEvidence,old.body),phrases=phraseOverlap(candidateEvidence,old.body);
+    if((titleSim.shared>=4&&titleSim.jaccard>=0.28&&bodySim.containment>=0.16)||(titleSim.shared>=3&&bodySim.jaccard>=0.12&&phrases>=2)||(bodySim.containment>=0.32&&bodySim.shared>=12))
+      return{duplicate:true,reason:'same-underlying-story-provenance-overlap',matchedFile:old.file,matchedTitle:old.title,titleSimilarity:titleSim,bodySimilarity:bodySim,sharedPhrases:phrases};
+  }
+  return{duplicate:false};
+}
+function duplicateWithinQueue(a,b){
+  const urlsA=new Set((a.evidence?.sources||[]).map(s=>normalizeUrl(s.url||'')).filter(Boolean));
+  const urlsB=new Set((b.evidence?.sources||[]).map(s=>normalizeUrl(s.url||'')).filter(Boolean));
+  if([...urlsA].some(u=>urlsB.has(u)))return{duplicate:true,reason:'same-source-url'};
+  const titleSim=similarity(a.title,b.title),bodyA=(a.evidence?.sources||[]).map(s=>s.body||'').join(' '),bodyB=(b.evidence?.sources||[]).map(s=>s.body||'').join(' '),bodySim=similarity(bodyA,bodyB),phrases=phraseOverlap(bodyA,bodyB);
+  return{duplicate:(titleSim.shared>=4&&titleSim.jaccard>=0.28&&bodySim.containment>=0.16)||(bodySim.containment>=0.32&&bodySim.shared>=12&&phrases>=2),reason:'same-underlying-story-candidates'};
+}
+
 console.log('TrendForge Pre-Writer Pipeline V1');
 console.log('Policy: pre-writer gate only; consumes existing research/scoring/source-verification/evidence-integrity artifacts. No AI generation.');
 
@@ -66,6 +114,10 @@ const candidates=(verification.records||[])
 
 const integrityByLink=new Map((integrity.report||[]).map(r=>[r.link,r]));
 const results=[];
+const publishedHistory=loadPublishedHistory();
+const queueAccepted=[];
+let duplicateHistoryBlocked=0;
+let duplicateQueueBlocked=0;
 
 for(const record of candidates){
   const preflight=integrityByLink.get(record.link)||null;
@@ -101,38 +153,32 @@ for(const record of candidates){
     if(sources.length>=4)break;
   }
 
+  const duplicateHistory=duplicateAgainstHistory(record,sources,publishedHistory);
+  if(duplicateHistory.duplicate){
+    duplicateHistoryBlocked++;
+    const blockedCoverage=scoreEvidenceCoverage({sources});
+    results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage)},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
+    continue;
+  }
   const coverage=scoreEvidenceCoverage({sources});
   const blueprint=deriveEvidenceArticleBlueprint(coverage);
 
   const hasValidatedSource=preflight?.status==='pass';
   const readyForWriter=hasValidatedSource && coverage.readyForRichArticle===true && blueprint.mode!=='blocked';
 
-  results.push({
-    title:record.title,
-    link:record.link,
-    category:record.category,
-    verification:{
-      status:record.status,
-      confidence:record.confidence,
-      credibleSourceCount:record.credibleSourceCount,
-      reachableSourceCount:record.reachableSourceCount,
-      discoveredSourceCount:record.discoveredSourceCount
-    },
-    integrityPreflight:preflight,
-    evidence:{
-      sources,
-      coverage,
-      blueprint
-    },
-    readyForWriter,
-    writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')
-  });
+  const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources,coverage,blueprint},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
+  const queueDuplicate=queueAccepted.map(x=>duplicateWithinQueue(resultRow,x)).find(x=>x.duplicate);
+  if(queueDuplicate){duplicateQueueBlocked++;resultRow.readyForWriter=false;resultRow.writerGateReason=queueDuplicate.reason;resultRow.duplicateStory=queueDuplicate;}
+  else if(resultRow.readyForWriter)queueAccepted.push(resultRow);
+  results.push(resultRow);
 }
 
 const summary={
   candidatesFromVerification:verification.records?.length||0,
   verifiedCandidates:verification.records?.filter(r=>r.status==='verified').length||0,
   candidatesInspected:candidates.length,
+  duplicateHistoryBlocked,
+  duplicateQueueBlocked,
   integrityPass:results.filter(r=>r.integrityPreflight?.status==='pass').length,
   strongEvidence:results.filter(r=>r.integrityPreflight?.evidenceLevel==='strong').length,
   rich:results.filter(r=>r.evidence.coverage.band==='rich').length,
@@ -150,7 +196,7 @@ fs.writeFileSync(OUTPUT,JSON.stringify({
   stages:[
     'trend-research','trend-scoring','source-verification','publisher-discovery',
     'evidence-integrity-preflight','article-identity-and-source-page-validation',
-    'evidence-extraction','evidence-coverage','evidence-band','article-blueprint'
+    'evidence-extraction','evidence-coverage','evidence-band','article-blueprint','published-story-deduplication','same-run-story-deduplication'
   ],
   candidates:results,
   summary
@@ -170,4 +216,5 @@ for(const r of results){
     gate:r.writerGateReason
   }));
 }
+console.log(`Published-story duplicate gate: ${duplicateHistoryBlocked} candidate(s) blocked; same-run story dedupe: ${duplicateQueueBlocked} candidate(s) blocked.`);
 console.log('\nPre-Writer pipeline completed. Generate Article was NOT executed by this gate.');
