@@ -49,7 +49,8 @@ const status = await import('node:child_process').then(({ execFileSync }) => {
 });
 const files = status.split(/\r?\n/)
   .map(line => line.match(/^\?\?\s+(.+)$/)?.[1])
-  .filter((file): file is string => Boolean(file) && file.startsWith(articleDir + '/') && file.endsWith('.md'))
+  .filter((file): file is string => typeof file === 'string')
+  .filter(file => file.startsWith(articleDir + '/') && file.endsWith('.md'))
   .map(file => file.slice(articleDir.length + 1))
   .filter(file => allFiles.includes(file))
   .sort();
