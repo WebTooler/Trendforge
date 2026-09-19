@@ -67,12 +67,11 @@ jobs:
           const resultDir = 'klein-backfill/results';
 
           const field = (text, key) => {
-            const m = text.match(new RegExp('^' + key + ':\\s*"([\\s\\S]*?)"\\s*);
-            return m ? m[1].replace(/\\\\\"/g, '"') : '';
+            const m = text.match(new RegExp('^' + key + ':\\s*"([\\s\\S]*?)"\\s*$', 'm'));
+            return m ? m[1].replace(/\\\"/g, '"') : '';
           };
 
-          const yamlEscape = value => value.replace(/\\/g, '\\\\').replace(/"/g, '\\\\"').replace(/\r?\n/g, ' ');
-
+          const yamlEscape = value => value.replace(/\\/g, '\\\\').replace(/"/g, '\\\"').replace(/\\r?\\n/g, ' ');
           const slugify = value => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 90);
 
           function buildPrompt(title, description, category) {
