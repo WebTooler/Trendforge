@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T03:49:39.937Z",
+  "generatedAt": "2026-09-19T04:59:08.455Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3551,
-      "sentenceCount": 21,
+      "normalizedLength": 3562,
+      "sentenceCount": 25,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,11 +31,10 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "moneycontrol.com",
-    "cnbc.com"
+    "247wallst.com"
   ],
   "grounding": {
-    "sourceCount": 2,
-    "usablePassages": 36
+    "sourceCount": 1,
+    "usablePassages": 18
   }
 }
