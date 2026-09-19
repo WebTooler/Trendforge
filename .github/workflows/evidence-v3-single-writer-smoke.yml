@@ -1,0 +1,73 @@
+name: Evidence V3 — Single Writer Smoke
+
+on:
+  push:
+    branches: ["evidence-v3-lab"]
+    paths:
+      - "scripts/generate-article.ts"
+      - "scripts/trendforge-writer-engine.mjs"
+      - "scripts/trendforge-editorial-policy.mjs"
+      - "scripts/evidence-article-blueprint.mjs"
+      - "scripts/evidence-article-prompt.mjs"
+      - "scripts/evidence-coverage.mjs"
+      - ".github/workflows/evidence-v3-single-writer-smoke.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: evidence-v3-single-writer-smoke
+  cancel-in-progress: true
+
+jobs:
+  writer-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout lab
+        uses: actions/checkout@v7
+        with:
+          ref: evidence-v3-lab
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run one-provider writer smoke
+        env:
+          TRENDFORGE_PROVIDER_ONLY: Gemini
+          TRENDFORGE_MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE: "1"
+        run: |
+          node --check scripts/generate-article.ts
+          node --check scripts/trendforge-writer-engine.mjs
+          node --check scripts/trendforge-editorial-policy.mjs
+          node --check scripts/evidence-article-blueprint.mjs
+          node --check scripts/evidence-article-prompt.mjs
+          npx tsx scripts/generate-article.ts
+
+      - name: Report writer result
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          if(fs.existsSync('data/article-brief.json')){
+            const x=JSON.parse(fs.readFileSync('data/article-brief.json','utf8'));
+            console.log('Evidence blueprint:',JSON.stringify(x.grounding?.blueprint||null));
+            console.log('Evidence coverage:',JSON.stringify(x.grounding?.coverage||null));
+            console.log('Evidence domains:',JSON.stringify(x.grounding?.verifiedEvidenceDomains||[]));
+          }
+          if(fs.existsSync('data/editorial-gate.json')){
+            const x=JSON.parse(fs.readFileSync('data/editorial-gate.json','utf8'));
+            console.log('Writer provider:',x.provider);
+            console.log('Writer grounding:',JSON.stringify(x.grounding||null));
+            console.log('Editorial:',JSON.stringify(x.editorial||null));
+          }
+          const files=fs.existsSync('content/articles')?fs.readdirSync('content/articles').filter(x=>x.endsWith('.md')):[];
+          console.log('Lab article files:',files.slice(-5));
+          NODE
