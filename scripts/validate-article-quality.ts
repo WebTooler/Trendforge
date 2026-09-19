@@ -155,6 +155,7 @@ for (const file of files) {
 
   if (!title || title.length < 20 || title.length > 110) errors.push(`${slug}: title quality/length check failed.`);
   if (!description || description.length < 80 || description.length > 320) errors.push(`${slug}: description quality/length check failed.`);
+  if (description.length >= 300 && !/[.!?…]$/.test(description.trim())) errors.push(`${slug}: description appears truncated or incomplete.`);
   if (!category.trim()) errors.push(`${slug}: missing category.`);
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) errors.push(`${slug}: invalid slug.`);
   if (seenSlugs.has(slug)) errors.push(`${slug}: duplicate slug.`); else seenSlugs.add(slug);
@@ -174,7 +175,10 @@ for (const file of files) {
   const normalizedParagraphs = paragraphs.map(normalize).filter((p) => p.length >= 80);
   const paragraphSimilarity=(a:string,b:string)=>{const A=new Set(a.split(/\s+/).filter(w=>w.length>=4)),B=new Set(b.split(/\s+/).filter(w=>w.length>=4));if(!A.size||!B.size)return 0;return[...A].filter(x=>B.has(x)).length/Math.max(1,Math.min(A.size,B.size));};
   const duplicateParagraph = normalizedParagraphs.some((p,i)=>normalizedParagraphs.some((q,j)=>j>i&&(p===q||(Math.min(p.length,q.length)>=140&&paragraphSimilarity(p,q)>=0.88))));
+  const sentenceList = main.split(/(?<=[.!?])\s+/).map(s => normalize(s)).filter(Boolean);
+  const duplicateSentence = sentenceList.some((s,i)=>i>0 && s.length>=50 && s===sentenceList[i-1]);
   if (duplicateParagraph) errors.push(`${slug}: duplicate substantive paragraph detected.`);
+  if (duplicateSentence) errors.push(`${slug}: consecutive duplicate sentence detected.`);
 
   const genericFailure = /^(click here|read more|lorem ipsum|test article)\.?$/i.test(main.trim());
   if (genericFailure) errors.push(`${slug}: generic/placeholder content detected.`);

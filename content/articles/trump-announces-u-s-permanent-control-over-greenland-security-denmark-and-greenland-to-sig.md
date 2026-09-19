@@ -1,8 +1,8 @@
 ---
 title: "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal"
-description: "President Trump said the United States has secured permanent control over security in Greenland, a move that could reshape U.S. military presence in the Arctic and raise questions about sovereignty and international security. The agreement will be signed next week at the U.N. General Assembly and is expected to allow m"
+description: "President Trump said the United States has secured permanent control over security in Greenland, while Denmark and Greenland said sovereignty remains intact. The agreement is expected to be signed next week, subject to required parliamentary procedures."
 slug: "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig"
-category: "Digital Life"
+category: "World"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-19T07:08:56.449Z"
 image: "/Trendforge/images/articles/trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.svg"
@@ -30,7 +30,7 @@ Denmark and Greenland clarified that the deal does not transfer sovereignty to t
 Trump has repeatedly argued that the U.S. needs control over Greenland because of its strategic position between North America, Europe, and Russia across the Arctic Ocean. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance.
 
 ## Uncertainty About the Terms
-Denmark and Greenland said it is expected to be signed next week at the United Nations General Assembly, but Danish Prime Minister Mette Frederiksen said it must first complete required parliamentary procedures. Denmark and Greenland said it is expected to be signed next week at the United Nations General Assembly, but Danish Prime Minister Mette Frederiksen said it must first complete required parliamentary procedures.
+Denmark and Greenland said it is expected to be signed next week at the United Nations General Assembly, but Danish Prime Minister Mette Frederiksen said it must first complete required parliamentary procedures.
 
 ## Practical Implications for the Arctic
 If the agreement takes effect, the United States would be able to expand its footprint in the Arctic, potentially establishing three new military bases in southern Greenland in addition to the existing Pituffik base. The 1951 defense pact, updated in 2004, already allows Washington to increase troop deployments and installations on the island with advance notification to Denmark and Greenland.

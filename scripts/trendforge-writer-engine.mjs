@@ -52,8 +52,10 @@ const normalizeGeneratedDraft=draft=>{
   if(removed) out.content=cleaned.join('').trim();
   const desc=String(out.description||'').trim();
   if(desc.length>320){
-    const clipped=desc.slice(0,320).replace(/\\s+\\S*$/,'').trim();
-    if(clipped.length>=100) out.description=clipped;
+    const limit=desc.slice(0,320).trim();
+    const sentenceCut=Math.max(limit.lastIndexOf('.'),limit.lastIndexOf('!'),limit.lastIndexOf('?'),limit.lastIndexOf('…'));
+    if(sentenceCut>=100) out.description=limit.slice(0,sentenceCut+1).trim();
+    else { const wordCut=limit.replace(/\\s+\\S*$/,'').trim(); if(wordCut.length>=100) out.description=`${wordCut}…`; }
   }
   return {draft:out,removedDuplicateSentences:removed};
 };

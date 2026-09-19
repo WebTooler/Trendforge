@@ -12,6 +12,7 @@ const feeds = [
   ['Innovation', 'Google News', 'https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en', 'news'],
   ['Product Launches', 'Google News', 'https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en', 'news'],
   ['Crypto', 'Google News', 'https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en', 'news'],
+  ['World', 'Google News', 'https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en', 'news'],
 
   // Independent news discovery network. These are discovery signals only;
   // downstream source verification still requires real article pages.
@@ -21,6 +22,7 @@ const feeds = [
   ['Innovation', 'Bing News', 'https://www.bing.com/news/search?q=innovation%20OR%20breakthrough%20technology&format=rss', 'news'],
   ['Product Launches', 'Bing News', 'https://www.bing.com/news/search?q=new%20product%20launch%20OR%20device%20launch&format=rss', 'news'],
   ['Crypto', 'Bing News', 'https://www.bing.com/news/search?q=crypto%20OR%20bitcoin%20OR%20ethereum&format=rss', 'news'],
+  ['World', 'Bing News', 'https://www.bing.com/news/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&format=rss', 'news'],
 
   // Search-interest signal. Google Trends is not evidence and is marked
   // discoveryOnly so verification never treats it as a publisher source.
@@ -33,7 +35,7 @@ const feeds = [
   ['Digital Life', 'The Verge', 'https://www.theverge.com/rss/index.xml', 'publisher'],
 ];
 
-const SUPPORTED_CATEGORIES = ['AI', 'Technology', 'How-To', 'Innovation', 'Product Launches', 'Digital Life', 'Crypto'];
+const SUPPORTED_CATEGORIES = ['AI', 'Technology', 'How-To', 'Innovation', 'Product Launches', 'Digital Life', 'Crypto', 'World'];
 const PER_FEED_LIMIT = 20;
 const CATEGORY_MIN_RESEARCH_TARGET = 8;
 const CATEGORY_MAX_RESEARCH_TARGET = 24;

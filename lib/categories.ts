@@ -6,6 +6,7 @@ export const TREND_FORGE_CATEGORIES = [
   'Product Launches',
   'Digital Life',
   'Crypto',
+  'World',
 ] as const;
 
 export type TrendForgeCategory = (typeof TREND_FORGE_CATEGORIES)[number];
