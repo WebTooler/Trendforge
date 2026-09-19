@@ -63,10 +63,11 @@ jobs:
       - name: Generate article-specific images
         run: |
           set -euo pipefail
-          node <<'NODE'
-          const fs = require('fs');
-          const path = require('path');
-          const sharp = require('sharp');
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import sharp from 'sharp';
+          import { buildImagePrompt } from './scripts/trendforge-visual-planner.mjs';
 
           const account = process.env.CLOUDFLARE_ACCOUNT_ID;
           const token = process.env.CLOUDFLARE_API_TOKEN;
@@ -76,12 +77,11 @@ jobs:
           const limit = Math.max(0, Number(process.env.LIMIT || 0));
           const production = process.env.PRODUCTION === 'true';
           const outputNeuronsPerTile = Number(process.env.OUTPUT_NEURONS_PER_TILE || 26.05);
-          const inputNeuronsPerTile = Number(process.env.INPUT_NEURONS_PER_TILE || 5.37);
           const outputTilesX = Math.ceil(width / 512);
           const outputTilesY = Math.ceil(height / 512);
           const outputTiles = outputTilesX * outputTilesY;
           const estimatedOutputNeurons = outputTiles * outputNeuronsPerTile;
-          const estimatedInputNeurons = 0; // text-only request; no reference image is sent
+          const estimatedInputNeurons = 0;
           const estimatedNeuronsPerImage = estimatedInputNeurons + estimatedOutputNeurons;
           const articleDir = 'content/articles';
           const outDir = 'klein-backfill/images';
@@ -91,223 +91,155 @@ jobs:
             const m = text.match(new RegExp('^' + key + ':\\s*"([\\s\\S]*?)"\\s*$', 'm'));
             return m ? m[1].replace(/\\\"/g, '"') : '';
           };
-
           const yamlEscape = value => value.replace(/\\/g, '\\\\').replace(/"/g, '\\\"').replace(/\r?\n/g, ' ');
           const slugify = value => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 90);
 
-          function selectVisualMode(title, description, category) {
-            const text = `${title} ${description} ${category}`.toLowerCase();
-            const productTerms = ['iphone','ipad','macbook','pixel','galaxy','phone','smartphone','laptop','tablet','watch','headset','earbuds','camera','console','device','product launch','product review','unveils','launches'];
-            const hardwareTerms = ['chip','processor','gpu','cpu','motherboard','semiconductor','server rack','data center','data-centre','robotics','sensor','hardware','microchip'];
-            const personTerms = ['interview','ceo','chief executive','founder','researcher','spokesperson','executive','speaks','said','says','profile'];
-            const conceptualTerms = ['cybersecurity','cyber security','blockchain','cryptography','cloud architecture','network architecture','ai agents','software architecture','protocol','infrastructure'];
-            const abstractTerms = ['policy','regulation','legislation','economic shift','digital transformation','societal','risk','governance','geopolitics','trade policy'];
-            if (productTerms.some(term => text.includes(term))) return 'editorial-product';
-            if (personTerms.some(term => text.includes(term))) return 'editorial-person';
-            if (hardwareTerms.some(term => text.includes(term))) return 'cinematic-hardware';
-            if (conceptualTerms.some(term => text.includes(term))) return 'isometric-3d';
-            if (abstractTerms.some(term => text.includes(term))) return 'abstract-editorial';
-            return 'editorial-photography';
-          }
-
-          function buildPrompt(title, description, category) {
-            const visualMode = selectVisualMode(title, description, category);
-            const modeGuidance = {
-              'editorial-product': 'VISUAL MODE: EDITORIAL PRODUCT. Make the specific product the single hero subject. Use clean premium product/editorial photography, and reproduce known physical design details from the story context as faithfully as possible. Never replace a named real product with a generic futuristic device.',
-              'editorial-person': 'VISUAL MODE: DOCUMENTARY PERSON. If a person is central, show them from behind, over-the-shoulder, side/back silhouette, cropped, or at a natural distance with no clearly identifiable face. Surround them only with story-specific context that explains what the article is about.',
-              'cinematic-hardware': 'VISUAL MODE: CINEMATIC HARDWARE. Make the specific hardware, infrastructure, machine, component, or physical technology named by the story the hero subject. Use restrained cinematic or macro editorial photography, realistic materials, and controlled depth of field. Avoid generic sci-fi styling.',
-              'isometric-3d': 'VISUAL MODE: MINIMAL ISOMETRIC 3D. Use a clean premium isometric 3D editorial illustration only when the story is fundamentally technical or conceptual. Show the actual story concept as one clear geometric hero system or object, with soft studio lighting, restrained materials, and no decorative clutter. Do not use this style to avoid choosing the real subject.',
-              'abstract-editorial': 'VISUAL MODE: ABSTRACT EDITORIAL. Use a sophisticated flat/editorial illustration with restrained geometric forms and subtle texture only when the story is genuinely abstract, policy-driven, or difficult to photograph literally. The composition must still encode the specific central idea of the story, not a generic technology symbol.',
-              'editorial-photography': 'VISUAL MODE: EDITORIAL PHOTOGRAPHY. Create a commissioned technology-publication photograph of the concrete subject or event that best represents the story. Prefer physical objects, infrastructure, environments, or documentary scenes over generic office imagery.'
-            }[visualMode];
-            return [
-              'Create a premium editorial visual that looks commissioned by a major technology publication, not a generic AI image.',
-              'Canvas: exactly 1024x576 pixels, horizontal 16:9 composition.',
-              modeGuidance,
-              'STORY-SPECIFIC VISUAL RULE: the image must directly represent the central story, event, subject, or claim in the article. Do not create a merely related, generic, or category-level image.',
-              'Before choosing the scene, identify the single most important visual meaning of the story context. Make that meaning the hero subject. The category is supporting context only and must never override the actual story.',
-              'If the article describes a specific event, announcement, product, person, organization, technology, place, or action, visually represent that specific subject or event whenever the available context supports it.',
-              'Do not substitute a loosely related concept. An energy story should not become generic solar panels; an AI-company story should not become a random tablet; a server story should not become a generic office. Choose the concrete visual subject that best explains the article.',
-              'MINIMALISM IS A CORE RULE: one clear hero subject or visual idea, with only one or two supporting elements when they directly explain the story.',
-              'Remove anything that does not help communicate the story. Prefer clean framing, breathing room, negative space, and strong visual hierarchy.',
-              'Do not fill the scene with multiple people, laptops, monitors, robots, props, decorative technology, city skylines, or unrelated objects.',
-              'Avoid generic AI imagery and technology clichés: no glowing holograms, floating code, circuit overlays, futuristic HUDs, neon sci-fi interfaces, fake dashboards, or decorative digital effects unless a specific story element genuinely requires a restrained version.',
-              'When a specific real-world product is the subject of a review, launch, announcement, or comparison, prioritize visual fidelity to its known physical design, proportions, materials, distinctive hardware layout, camera arrangement, ports, buttons, controls, and finish as far as the available story context supports. Do not invent or redesign it.',
-              'When a specific person is central to the story, do not create a clearly identifiable face. Prefer documentary-style framing from behind, over-the-shoulder, side/back silhouette, cropped framing, hands, or a natural distant view.',
-              'ABSOLUTE READABLE-TEXT BAN: do not render article titles, summaries, captions, labels, signs, watermarks, subtitles, UI text, readable documents, fake headlines, or prominent intentional typography.',
-              'Background screens, monitors, phones, posters, papers, signs, dashboards, and interfaces may exist only as naturally blurred, cropped, distant, or unreadable environmental details.',
-              'Do not copy or spell words from article metadata into the image. Treat metadata only as semantic story context.',
-              'Choose the simplest believable visual that communicates the article. When in doubt, simplify rather than add more objects, people, screens, effects, or visual detail.',
-              'Do not force a brand color palette. Let colors follow the real subject and story, using restrained editorial color grading for consistency.',
-              'Do not reserve a large empty header band. Use the full 16:9 frame for the editorial scene; any headline overlay will be handled separately by the website.',
-              'Selected visual mode: ' + visualMode,
-              'Semantic story context — NEVER reproduce as visible text: ' + title,
-              'Category context: ' + category,
-              'Story context — visualize the meaning, not the words: ' + description
-            ].join('\\n');
-          }
-
-          function decodeImage(value) {
-            if (typeof value !== 'string' || !value.trim()) throw new Error('missing result.image');
-            const encoded = value.includes(',') ? value.slice(value.indexOf(',') + 1) : value;
-            const bytes = Buffer.from(encoded, 'base64');
-            if (bytes.length < 1000) throw new Error('decoded image unexpectedly small: ' + bytes.length);
-            const isJpeg = bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
-            const isPng = bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47;
-            if (!isJpeg && !isPng) throw new Error('decoded payload is not JPEG/PNG');
-            return { bytes, extension: isJpeg ? 'jpg' : 'png' };
-          }
-
-          const files = fs.readdirSync(articleDir)
-            .filter(f => f.endsWith('.md'))
-            .sort();
-
+          const files = fs.readdirSync(articleDir).filter(f => f.endsWith('.md')).sort();
           const selected = limit > 0 ? files.slice(0, limit) : files;
           const manifest = [];
           let failures = 0;
 
-          (async () => {
-            for (const file of selected) {
-              const raw = fs.readFileSync(path.join(articleDir, file), 'utf8');
-              const title = field(raw, 'title');
-              const description = field(raw, 'description');
-              const category = field(raw, 'category') || 'Technology';
-              const slug = field(raw, 'slug') || slugify(title) || file.replace(/\\.md$/, '');
-              if (!title || !description) {
-                failures++;
-                manifest.push({ file, slug, status: 'failed', error: 'missing title or description' });
-                continue;
-              }
-
-              const url = `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${model}`;
-              const form = new FormData();
-              form.append('prompt', buildPrompt(title, description, category));
-              form.append('width', String(width));
-              form.append('height', String(height));
-
-              const started = Date.now();
-              try {
-                const resp = await fetch(url, {
-                  method: 'POST',
-                  headers: { Authorization: `Bearer ${token}` },
-                  body: form
-                });
-                const body = Buffer.from(await resp.arrayBuffer());
-                const elapsedMs = Date.now() - started;
-                if (!resp.ok) throw new Error(`HTTP ${resp.status}: ${body.toString('utf8').slice(0, 500)}`);
-
-                const payload = JSON.parse(body.toString('utf8'));
-                const decoded = decodeImage(payload?.result?.image);
-                const rawMeta = await sharp(decoded.bytes).metadata();
-                if (!rawMeta.width || !rawMeta.height) throw new Error('unable to read generated image dimensions');
-                const normalized = await sharp(decoded.bytes)
-                  .resize({ width, height, fit: 'cover', position: 'centre' })
-                  .png({ compressionLevel: 9, adaptiveFiltering: true, palette: false })
-                  .toBuffer();
-                const finalMeta = await sharp(normalized).metadata();
-                if (finalMeta.width !== width || finalMeta.height !== height) {
-                  throw new Error(`normalized image dimensions are ${finalMeta.width}x${finalMeta.height}, expected ${width}x${height}`);
-                }
-                const outFile = `${slug}.1024x576.png`;
-                fs.writeFileSync(path.join(outDir, outFile), normalized);
-
-                const row = {
-                  file, slug, title, category, width, height,
-                  rawWidth: rawMeta.width, rawHeight: rawMeta.height,
-                  status: 'success', output: outFile,
-                  bytes: normalized.length, elapsedMs,
-                  contentType: resp.headers.get('content-type'),
-                  outputContentType: 'image/png',
-                  outputTiles,
-                  outputTilesX,
-                  outputTilesY,
-                  estimatedInputNeurons,
-                  estimatedOutputNeurons,
-                  estimatedNeuronsPerImage,
-                  normalized: rawMeta.width !== width || rawMeta.height !== height,
-                  model
-                };
-                manifest.push(row);
-                fs.writeFileSync(path.join(resultDir, `${slug}.json`), JSON.stringify(row, null, 2));
-                console.log(`SUCCESS ${file}: raw ${rawMeta.width}x${rawMeta.height} -> ${width}x${height}, ${normalized.length} bytes in ${elapsedMs}ms; estimated neurons=${estimatedNeuronsPerImage.toFixed(2)}`);
-              } catch (err) {
-                failures++;
-                const row = { file, slug, title, category, width, height, status: 'failed', error: String(err), elapsedMs: Date.now() - started, model };
-                manifest.push(row);
-                fs.writeFileSync(path.join(resultDir, `${slug}.json`), JSON.stringify(row, null, 2));
-                console.error(`FAILED ${file}: ${row.error}`);
-              }
+          for (const file of selected) {
+            const raw = fs.readFileSync(path.join(articleDir, file), 'utf8');
+            const title = field(raw, 'title');
+            const description = field(raw, 'description');
+            const category = field(raw, 'category') || 'Technology';
+            const slug = field(raw, 'slug') || slugify(title) || file.replace(/\\.md$/, '');
+            if (!title || !description) {
+              failures++;
+              manifest.push({ file, slug, status: 'failed', error: 'missing title or description' });
+              continue;
             }
 
-            const summary = {
-              generatedAt: new Date().toISOString(),
-              model, width, height, outputFormat: 'png', production, requested: selected.length,
-              outputTiles, outputNeuronsPerTile, estimatedNeuronsPerImage,
-              estimatedBatchNeurons: selected.length * estimatedNeuronsPerImage,
-              freeDailyNeurons: 10000,
-              estimatedImagesWithinFreeDailyAllocation: Math.floor(10000 / estimatedNeuronsPerImage),
-              succeeded: manifest.filter(x => x.status === 'success').length,
-              failed: failures,
-              images: manifest
-            };
-            fs.writeFileSync('klein-backfill/manifest.json', JSON.stringify(summary, null, 2) + '\\n');
+            const planned = buildImagePrompt({ title, description, category, body: raw });
+            const { brief, prompt } = planned;
+            console.log('VISUAL BRIEF:', JSON.stringify(brief));
+            console.log('PROMPT LENGTH:', prompt.length);
 
-            if (production && failures === 0) {
-              const articlesTsPath = 'lib/articles.ts';
-              let articlesTs = fs.readFileSync(articlesTsPath, 'utf8');
+            const url = 'https://api.cloudflare.com/client/v4/accounts/' + account + '/ai/run/' + model;
+            const form = new FormData();
+            form.append('prompt', prompt);
+            form.append('width', String(width));
+            form.append('height', String(height));
 
-              for (const row of manifest.filter(x => x.status === 'success')) {
-                const articlePath = path.join(articleDir, row.file);
-                const outputPath = path.join(outDir, row.output);
-                const productionPath = path.join('public/images/articles', row.output);
-                fs.copyFileSync(outputPath, productionPath);
+            const started = Date.now();
+            try {
+              const resp = await fetch(url, {
+                method: 'POST',
+                headers: { Authorization: 'Bearer ' + token },
+                body: form
+              });
+              const body = Buffer.from(await resp.arrayBuffer());
+              const elapsedMs = Date.now() - started;
+              if (!resp.ok) throw new Error('HTTP ' + resp.status + ': ' + body.toString('utf8').slice(0, 500));
 
-                let raw = fs.readFileSync(articlePath, 'utf8');
-                const separator = raw.indexOf('---', 3);
-                if (separator < 0) throw new Error('invalid frontmatter: ' + row.file);
-                const front = raw.slice(3, separator).trim();
-                const body = raw.slice(separator + 3);
-                const lines = front.split(/\r?\n/).filter(Boolean);
-                const values = {
-                  image: '/Trendforge/images/articles/' + row.output,
-                  imageAlt: 'Editorial image for ' + row.title,
-                  imageSource: 'Cloudflare Workers AI — FLUX.2 Klein 4B',
-                  imageLicense: 'Model-generated',
-                  imageGeneratedBy: 'Cloudflare FLUX.2 Klein 4B'
-                };
-                for (const [key, value] of Object.entries(values)) {
-                  const line = key + ': "' + yamlEscape(value) + '"';
-                  const index = lines.findIndex(x => x.startsWith(key + ':'));
-                  if (index >= 0) lines[index] = line;
-                  else lines.push(line);
-                }
-                fs.writeFileSync(articlePath, '---\n' + lines.join('\n') + '\n---' + body);
+              const payload = JSON.parse(body.toString('utf8'));
+              const value = payload?.result?.image || payload?.image;
+              if (typeof value !== 'string' || !value.trim()) throw new Error('missing result.image');
+              const encoded = value.includes(',') ? value.slice(value.indexOf(',') + 1) : value;
+              const bytes = Buffer.from(encoded, 'base64');
+              const isJpeg = bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
+              const isPng = bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4e && bytes[3] === 0x47;
+              if (!isJpeg && !isPng) throw new Error('decoded payload is not JPEG/PNG');
 
-                const startMarker = '  {\n    "slug": "' + row.slug + '",';
-                const objectStart = articlesTs.indexOf(startMarker);
-                if (objectStart < 0) throw new Error('slug not found in lib/articles.ts: ' + row.slug);
-                const objectEnd = articlesTs.indexOf('\n  },', objectStart);
-                if (objectEnd < 0) throw new Error('article object end not found in lib/articles.ts: ' + row.slug);
-                let articleObject = articlesTs.slice(objectStart, objectEnd + 5);
-                const setField = (key, value) => {
-                  const pattern = new RegExp('    "' + key + '": .*');
-                  const line = '    "' + key + '": ' + JSON.stringify(value) + ',';
-                  if (!pattern.test(articleObject)) throw new Error('field not found in lib/articles.ts: ' + key + ' / ' + row.slug);
-                  articleObject = articleObject.replace(pattern, line);
-                };
-                setField('image', '/Trendforge/images/articles/' + row.output);
-                setField('imageAlt', 'Editorial image for ' + row.title);
-                setField('imageSource', 'Cloudflare Workers AI — FLUX.2 Klein 4B');
-                setField('imageLicense', 'Model-generated');
-                setField('imageGeneratedBy', 'Cloudflare FLUX.2 Klein 4B');
-                articlesTs = articlesTs.slice(0, objectStart) + articleObject + articlesTs.slice(objectEnd + 5);
-              }
+              const rawMeta = await sharp(bytes).metadata();
+              if (!rawMeta.width || !rawMeta.height) throw new Error('unable to read generated image dimensions');
+              const normalized = await sharp(bytes)
+                .resize({ width, height, fit: 'cover', position: 'centre' })
+                .png({ compressionLevel: 9, adaptiveFiltering: true, palette: false })
+                .toBuffer();
+              const finalMeta = await sharp(normalized).metadata();
+              if (finalMeta.width !== width || finalMeta.height !== height) throw new Error('normalized image dimensions are ' + finalMeta.width + 'x' + finalMeta.height);
 
-              fs.writeFileSync(articlesTsPath, articlesTs);
+              const outFile = slug + '.1024x576.png';
+              fs.writeFileSync(path.join(outDir, outFile), normalized);
+
+              const row = {
+                file, slug, title, category, visualBrief: brief, promptLength: prompt.length,
+                width, height, rawWidth: rawMeta.width, rawHeight: rawMeta.height,
+                status: 'success', output: outFile, bytes: normalized.length, elapsedMs,
+                contentType: resp.headers.get('content-type'), outputContentType: 'image/png',
+                outputTiles, outputTilesX, outputTilesY,
+                estimatedInputNeurons, estimatedOutputNeurons, estimatedNeuronsPerImage,
+                normalized: rawMeta.width !== width || rawMeta.height !== height, model
+              };
+              manifest.push(row);
+              fs.writeFileSync(path.join(resultDir, slug + '.json'), JSON.stringify(row, null, 2));
+              console.log('SUCCESS ' + file + ': ' + brief.mode + '; raw ' + rawMeta.width + 'x' + rawMeta.height + ' -> ' + width + 'x' + height + ', ' + normalized.length + ' bytes in ' + elapsedMs + 'ms');
+            } catch (err) {
+              failures++;
+              const row = { file, slug, title, category, visualBrief: brief, promptLength: prompt.length, width, height, status: 'failed', error: String(err), elapsedMs: Date.now() - started, model };
+              manifest.push(row);
+              fs.writeFileSync(path.join(resultDir, slug + '.json'), JSON.stringify(row, null, 2));
+              console.error('FAILED ' + file + ': ' + row.error);
             }
+          }
 
-            if (failures > 0) process.exitCode = 1;
-          })().catch(err => { console.error(err); process.exitCode = 1; });
+          const summary = {
+            generatedAt: new Date().toISOString(),
+            model, visualPlanner: 'v1', width, height, outputFormat: 'png', production,
+            requested: selected.length, outputTiles, outputNeuronsPerTile, estimatedNeuronsPerImage,
+            estimatedBatchNeurons: selected.length * estimatedNeuronsPerImage,
+            freeDailyNeurons: 10000,
+            estimatedImagesWithinFreeDailyAllocation: Math.floor(10000 / estimatedNeuronsPerImage),
+            succeeded: manifest.filter(x => x.status === 'success').length,
+            failed: failures, images: manifest
+          };
+          fs.writeFileSync('klein-backfill/manifest.json', JSON.stringify(summary, null, 2) + '\n');
+
+          if (production && failures === 0) {
+            const articlesTsPath = 'lib/articles.ts';
+            let articlesTs = fs.readFileSync(articlesTsPath, 'utf8');
+            for (const row of manifest.filter(x => x.status === 'success')) {
+              const articlePath = path.join(articleDir, row.file);
+              const outputPath = path.join(outDir, row.output);
+              const productionPath = path.join('public/images/articles', row.output);
+              fs.copyFileSync(outputPath, productionPath);
+
+              let raw = fs.readFileSync(articlePath, 'utf8');
+              const separator = raw.indexOf('---', 3);
+              if (separator < 0) throw new Error('invalid frontmatter: ' + row.file);
+              const front = raw.slice(3, separator).trim();
+              const body = raw.slice(separator + 3);
+              const lines = front.split(/\r?\n/).filter(Boolean);
+              const values = {
+                image: '/Trendforge/images/articles/' + row.output,
+                imageAlt: 'Editorial image for ' + row.title,
+                imageSource: 'Cloudflare Workers AI — FLUX.2 Klein 4B',
+                imageLicense: 'Model-generated',
+                imageGeneratedBy: 'Cloudflare FLUX.2 Klein 4B'
+              };
+              for (const [key, value] of Object.entries(values)) {
+                const line = key + ': "' + yamlEscape(value) + '"';
+                const index = lines.findIndex(x => x.startsWith(key + ':'));
+                if (index >= 0) lines[index] = line;
+                else lines.push(line);
+              }
+              fs.writeFileSync(articlePath, '---\n' + lines.join('\n') + '\n---' + body);
+
+              const startMarker = '  {\n    "slug": "' + row.slug + '",';
+              const objectStart = articlesTs.indexOf(startMarker);
+              if (objectStart < 0) throw new Error('slug not found in lib/articles.ts: ' + row.slug);
+              const objectEnd = articlesTs.indexOf('\n  },', objectStart);
+              if (objectEnd < 0) throw new Error('article object end not found in lib/articles.ts: ' + row.slug);
+              let articleObject = articlesTs.slice(objectStart, objectEnd + 5);
+              const setField = (key, value) => {
+                const pattern = new RegExp('    "' + key + '": .*');
+                const line = '    "' + key + '": ' + JSON.stringify(value) + ',';
+                if (!pattern.test(articleObject)) throw new Error('field not found in lib/articles.ts: ' + key + ' / ' + row.slug);
+                articleObject = articleObject.replace(pattern, line);
+              };
+              setField('image', '/Trendforge/images/articles/' + row.output);
+              setField('imageAlt', 'Editorial image for ' + row.title);
+              setField('imageSource', 'Cloudflare Workers AI — FLUX.2 Klein 4B');
+              setField('imageLicense', 'Model-generated');
+              setField('imageGeneratedBy', 'Cloudflare FLUX.2 Klein 4B');
+              articlesTs = articlesTs.slice(0, objectStart) + articleObject + articlesTs.slice(objectEnd + 5);
+            }
+            fs.writeFileSync(articlesTsPath, articlesTs);
+          }
+
+          if (failures > 0) process.exitCode = 1;
           NODE
 
       - name: Upload Klein 4B benchmark artifact
