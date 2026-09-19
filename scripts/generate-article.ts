@@ -35,7 +35,7 @@ const loadVerification=()=>{try{const raw=JSON.parse(fs.readFileSync('data/sourc
 const verifiedEvidence=(item:Trend,verification:Map<string,VerificationRecord>)=>{const record=verification.get(item.link);const sources=(record?.sources??[]).filter(s=>s.ok&&/^https:\/\//.test(s.finalUrl||s.url||'')&&!isMirror(s.finalUrl||s.url||'')&&isCrediblePublisher(s.domain||domainOf(s.finalUrl||s.url||'')));const deduped:typeof sources=[];const seenDomains=new Set<string>();for(const source of sources.sort((a,b)=>Number(Boolean(b.discovered))-Number(Boolean(a.discovered)))){const domain=source.domain||domainOf(source.finalUrl||source.url||'');if(!domain||seenDomains.has(domain))continue;seenDomains.add(domain);deduped.push(source);}return{record,sources:deduped,domains:[...seenDomains]};};
 
 type ProviderResult={text:string;provider:string};
-const generateWithProviders=async(prompt:string,expectedTitle:string):Promise<ProviderResult>=>generateWithTrendForgeWriter({prompt,category:process.env.TRENDFORGE_WRITER_CATEGORY||'Technology',expectedTitle});
+const generateWithProviders=async(prompt:string,expectedTitle:string,blueprint:any):Promise<ProviderResult>=>generateWithTrendForgeWriter({prompt,category:process.env.TRENDFORGE_WRITER_CATEGORY||'Technology',expectedTitle,blueprint});
 const parseModelJson=(raw:string):{title:string;description:string;content:string}=>{const text=raw.trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'').trim();try{return JSON.parse(text);}catch{}const start=text.indexOf('{'),end=text.lastIndexOf('}');if(start>=0&&end>start){try{return JSON.parse(text.slice(start,end+1));}catch{}}throw new Error('AI output was not valid JSON');};
 
 async function main(){
@@ -92,7 +92,7 @@ GROUNDING CONTRACT:\
 \
 OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
   fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:7,strongEvidence,coverage,blueprint,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,sources:evidencePack.map(s=>({title:s.title,url:s.url,kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
-  let output:ProviderResult;try{output=await generateWithProviders(prompt,trend.title);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
+  let output:ProviderResult;try{output=await generateWithProviders(prompt,trend.title,blueprint);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
   console.log(`Article generation provider: ${output.provider}`);
   let generated:{title:string;description:string;content:string};try{generated=parseModelJson(output.text);}catch(e){console.log(`${e instanceof Error?e.message:String(e)}; publishing blocked.`);process.exit(0);}
   if(!generated.title?.trim()||!generated.description?.trim()||!generated.content?.trim()){console.log('AI output is missing required article fields; publishing blocked.');process.exit(0);}
