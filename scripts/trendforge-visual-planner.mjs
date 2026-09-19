@@ -73,13 +73,14 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
 
 function buildImagePrompt({ title, description, category, body = '' }) {
   const brief = buildVisualBrief({ title, description, category, body });
+  const storyContext = clean(title + '. ' + description).slice(0, 520);
   const prompt = [
     'Create a premium editorial visual commissioned by a major technology publication, not a generic AI image.',
     'Canvas: exactly 1024x576 pixels, horizontal 16:9 composition.',
     'VISUAL MODE: ' + brief.mode + '.',
     'PRIMARY VISUAL SUBJECT: ' + brief.primarySubject + '.',
     'SCENE: ' + brief.scene,
-    'SUPPORTING ELEMENTS: ' + brief.supportingElements.join('; ') + '.',
+    'SUPPORTING ELEMENTS: ' + brief.supportingElements.slice(0, 2).join('; ') + '.',
     'COMPOSITION: ' + brief.composition,
     'STORY RULE: represent the actual central story/event/subject/action, not merely the article category.',
     'STYLE MUST NEVER OVERRIDE STORY. Choose the concrete visual subject first, then apply editorial treatment.',
@@ -89,12 +90,13 @@ function buildImagePrompt({ title, description, category, body = '' }) {
     'For real products, preserve known physical design and do not replace a named product with a generic futuristic device.',
     'No prominent readable text, captions, labels, watermarks, fake headlines, or intentional typography. Background text may be naturally blurred or unreadable.',
     'Do not force a fixed brand palette. Use restrained colors appropriate to the real subject.',
-    'AVOID: ' + brief.avoid.join('; ') + '.',
-    'ARTICLE TITLE (semantic context only; never render as text): ' + title,
-    'ARTICLE DESCRIPTION (semantic context only; never render as text): ' + description,
-    'CATEGORY (context only): ' + category
+    'AVOID: ' + brief.avoid.slice(0, 6).join('; ') + '.',
+    'ARTICLE STORY (semantic context only; never render as text): ' + storyContext
   ].join('\n');
-  return { brief, prompt };
+
+  // Keep the shared planner prompt safely below strict model prompt limits such as FLUX.1 Schnell.
+  const maxPromptChars = 1900;
+  return { brief, prompt: prompt.length <= maxPromptChars ? prompt : prompt.slice(0, maxPromptChars) };
 }
 
 export { buildVisualBrief, buildImagePrompt };
