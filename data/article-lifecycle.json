@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-19T05:14:45.664Z",
+  "generatedAt": "2026-09-19T05:15:54.432Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -13,8 +13,8 @@
   "summary": {
     "articles": 16,
     "refreshCandidates": 0,
-    "watch": 4,
-    "fresh": 12,
+    "watch": 5,
+    "fresh": 11,
     "stale": 0,
     "duplicateClusters": 0
   },
@@ -70,6 +70,20 @@
       "ageState": "fresh",
       "words": 450,
       "sourceCount": 2,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
+    },
+    {
+      "file": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.md",
+      "title": "U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
+      "category": "AI",
+      "publishedAt": "2026-09-19T05:15:21.452Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 489,
+      "sourceCount": 4,
       "refreshScore": 46,
       "status": "watch",
       "action": "watch",
@@ -142,7 +156,7 @@
       "title": "Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
       "category": "Technology",
       "publishedAt": "2026-09-17T08:51:48.854Z",
-      "ageDays": 1.8,
+      "ageDays": 1.9,
       "ageState": "fresh",
       "words": 459,
       "sourceCount": 1,
@@ -187,22 +201,6 @@
       "ageDays": 1.8,
       "ageState": "fresh",
       "words": 375,
-      "sourceCount": 1,
-      "refreshScore": 35,
-      "status": "fresh",
-      "action": "no-action",
-      "reasons": [
-        "content below 450 words"
-      ]
-    },
-    {
-      "file": "cftc-sends-crypto-rule-draft-to-white-house-for-review.md",
-      "title": "CFTC Sends Crypto Rule Draft to White House for Review",
-      "category": "Crypto",
-      "publishedAt": "2026-09-19T05:13:39.960Z",
-      "ageDays": 0,
-      "ageState": "fresh",
-      "words": 411,
       "sourceCount": 1,
       "refreshScore": 35,
       "status": "fresh",
@@ -321,6 +319,21 @@
       "action": "watch",
       "reasons": [],
       "priority": 4
+    },
+    {
+      "file": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.md",
+      "title": "U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
+      "category": "AI",
+      "publishedAt": "2026-09-19T05:15:21.452Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 489,
+      "sourceCount": 4,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 5
     }
   ],
   "duplicateClusters": []

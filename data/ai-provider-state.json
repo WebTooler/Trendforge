@@ -2,20 +2,20 @@
   "version": 10,
   "providers": {
     "Groq": {
-      "failures": 40,
-      "quotaBlockedUntil": 0,
-      "lastStatus": 200,
-      "lastError": null,
-      "lastClass": "success",
+      "failures": 42,
+      "quotaBlockedUntil": 1789794950598,
+      "lastStatus": 429,
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6781, Requested 1916. Please try again in 5.2275s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastClass": "rate_limit",
       "successes": 25,
-      "lastSuccessAt": "2026-09-19T05:14:12.073Z"
+      "lastSuccessAt": "2026-09-19T05:15:37.143Z"
     },
     "Gemini": {
       "failures": 25,
-      "quotaBlockedUntil": 1789794848110,
-      "lastStatus": 200,
-      "lastError": "Invalid structured output",
-      "lastClass": "transient"
+      "quotaBlockedUntil": 1789816473548,
+      "lastStatus": 429,
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 26.466041527s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
+      "lastClass": "quota"
     },
     "OpenAI": {
       "failures": 3,
@@ -33,23 +33,23 @@
     },
     "OpenRouter": {
       "failures": 34,
-      "quotaBlockedUntil": 1789794114737,
-      "lastStatus": 200,
-      "lastError": "Empty atomic repair response",
-      "lastClass": "error",
+      "quotaBlockedUntil": 1789794949416,
+      "lastStatus": 0,
+      "lastError": "The operation was aborted due to timeout",
+      "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 43,
-      "quotaBlockedUntil": 1789794826446,
+      "failures": 44,
+      "quotaBlockedUntil": 0,
       "lastStatus": 200,
-      "lastError": "Empty model response",
-      "lastClass": "transient",
-      "successes": 8,
-      "lastSuccessAt": "2026-09-19T05:00:26.505Z"
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 9,
+      "lastSuccessAt": "2026-09-19T05:15:51.244Z"
     }
   },
   "rotationCursor": 1,
-  "updatedAt": "2026-09-19T05:14:12.073Z"
+  "updatedAt": "2026-09-19T05:15:51.244Z"
 }

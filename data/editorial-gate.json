@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T05:13:39.961Z",
+  "generatedAt": "2026-09-19T05:15:21.453Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2825,
-      "sentenceCount": 18,
+      "normalizedLength": 3335,
+      "sentenceCount": 21,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,10 +31,13 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "cryptotimes.io"
+    "cbsnews.com",
+    "therecord.media",
+    "goodmorningamerica.com",
+    "techcrunch.com"
   ],
   "grounding": {
-    "sourceCount": 1,
-    "usablePassages": 18
+    "sourceCount": 4,
+    "usablePassages": 64
   }
 }

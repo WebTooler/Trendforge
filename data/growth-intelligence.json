@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T05:14:14.710Z",
+  "generatedAt": "2026-09-19T05:15:54.469Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
@@ -9,14 +9,14 @@
   "summary": {
     "totalArticles": 16,
     "averageEditorialScore": 74,
-    "editorialReviewCount": 14,
+    "editorialReviewCount": 13,
     "refreshCandidates": 0
   },
   "categoryMix": [
     {
       "category": "AI",
-      "count": 5,
-      "share": 31.3
+      "count": 6,
+      "share": 37.5
     },
     {
       "category": "Technology",
@@ -45,24 +45,27 @@
     },
     {
       "category": "Crypto",
-      "count": 2,
-      "share": 12.5
+      "count": 1,
+      "share": 6.3
     }
   ],
   "missingCategories": [
     "Innovation",
     "Product Launches"
   ],
-  "overrepresentedCategories": [],
+  "overrepresentedCategories": [
+    "AI"
+  ],
   "recommendations": [
     "Prioritize missing categories: Innovation, Product Launches.",
-    "14 article(s) are in editorial review; improve them before treating them as growth winners."
+    "Reduce short-term concentration in: AI.",
+    "13 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
     {
-      "title": "CFTC Sends Crypto Rule Draft to White House for Review",
-      "category": "Crypto",
-      "publishedAt": "2026-09-19T05:13:39.960Z"
+      "title": "U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
+      "category": "AI",
+      "publishedAt": "2026-09-19T05:15:21.452Z"
     },
     {
       "title": "JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",

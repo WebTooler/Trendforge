@@ -229,37 +229,6 @@ export const articles: Article[] = [
     "imageGeneratedBy": "TrendForge topic illustration engine v2"
   },
   {
-    "slug": "cftc-sends-crypto-rule-draft-to-white-house-for-review",
-    "title": "CFTC Sends Crypto Rule Draft to White House for Review",
-    "description": "The Commodity Futures Trading Commission has forwarded a preliminary crypto‑asset regulation package to the White House, marking an early step in potential federal oversight. The filing, titled RIN 3038‑AF80, is a prerule entry that has not yet moved to public comment, and its status follows a Senate defeat of the CLAR",
-    "category": "Crypto",
-    "date": "2026-09-19",
-    "publishedAt": "2026-09-19T05:13:39.960Z",
-    "author": "Tejendra Pal Singh",
-    "readTime": "2 min read",
-    "content": [
-      "## A Preliminary Step in Federal Crypto Oversight\nThe Commodity Futures Trading Commission (CFTC) has submitted a new regulatory action to the White House’s Office of Information and Regulatory Affairs. The filing, identified by RIN 3038‑AF80 and titled “Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets,” is currently listed as a prerule on Reginfo.gov and is not deemed economically significant.",
-      "This move follows the Senate’s failure to advance the CLARITY Act, a piece of legislation that would have expanded the CFTC’s authority over digital commodities. The Senate failed to advance the CLARITY Act in a 49–50 cloture vote.",
-      "## What a Prerule Means for the Process\nA prerule designation indicates that the agency is still exploring whether and how to begin formal rulemaking. The CFTC has not yet released a proposed rule for public comment. According to Reginfo.gov, the prerule stage is used to determine whether or how to begin rulemaking.",
-      "Because the action remains at this preliminary stage, the next milestone will be the release of additional documents that explain which markets and activities the CFTC intends to regulate.",
-      "## OIRA Review and Public Engagement\nThe White House Office of Information and Regulatory Affairs (OIRA) will review the CFTC action under Executive Order 12866. OIRA’s review allows the regulatory office to examine an agency action before it moves further through the rulemaking process. While the action is under review, members of the public can request meetings with OIRA to discuss the proposed regulations.",
-      "## A Broader Regulatory Context\nThe CFTC’s latest filing is part of a wider effort to clarify jurisdictional boundaries between the CFTC and the Securities and Exchange Commission (SEC). The two agencies have been working through a formal harmonization initiative intended to clarify jurisdictional boundaries, reduce overlapping requirements and develop a regulatory framework covering crypto assets and emerging market structures. Former CFTC Chair Christopher Giancarlo has indicated that the SEC and CFTC will continue to write crypto rules even without new market‑structure legislation this year.",
-      "## What Readers Should Watch\nThe next important development will be the release of additional CFTC documents explaining what markets and activities the agency intends to address.\nOIRA review allows the White House regulatory office to examine an agency action before it moves further through the rulemaking process.",
-      "Until those next steps occur, the CFTC’s filing remains an early, exploratory stage in the federal oversight of crypto markets."
-    ],
-    "sources": [
-      {
-        "title": "CFTC Sends Crypto Market Rulemaking to White House for Review",
-        "url": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/"
-      }
-    ],
-    "image": "/Trendforge/images/articles/cftc-sends-crypto-rule-draft-to-white-house-for-review.svg",
-    "imageAlt": "Original crypto illustration for CFTC Sends Crypto Rule Draft to White House for Review",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
-  },
-  {
     "slug": "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform",
     "title": "Comp AI raises $34M Series A to build agentic security and compliance platform",
     "description": "Comp AI secured $34 million in Series A funding to develop an AI‑driven platform that continuously monitors and automates security and compliance tasks for companies.",
@@ -558,6 +527,49 @@ export const articles: Article[] = [
     ],
     "image": "/Trendforge/images/articles/the-apple-watch-series-12-is-the-start-of-a-new-wearable-era.svg",
     "imageAlt": "Original ai illustration for The Apple Watch Series 12 is the start of a new wearable era",
+    "imageSource": "TrendForge original editorial visual",
+    "imageLicense": "Original",
+    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+  },
+  {
+    "slug": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems",
+    "title": "U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
+    "description": "Coast Guard and FBI boarded two Texas‑bound tankers after hackers disrupted vessel systems, prompting investigations into the incidents and raising concerns about maritime cyber security.",
+    "category": "AI",
+    "date": "2026-09-19",
+    "publishedAt": "2026-09-19T05:15:21.452Z",
+    "author": "Tejendra Pal Singh",
+    "readTime": "2 min read",
+    "content": [
+      "## Incident Overview\nCoast Guard personnel and FBI agents boarded two oil tankers last month after the vessels were hit by cyberattacks while heading toward the United States. The attacks targeted the ships’ networks and, in one case, interfered with propulsion, navigation and cargo systems, leaving the vessel’s communications offline for more than 30 hours.",
+      "## The Vessels and the Attacks\nOne of the ships was the VL Prosperity, a 1,093‑foot Liberian‑flagged crude oil tanker that was bound for Galveston, Texas. Iranian state media reported that hackers had accessed the ship’s propulsion, navigation and cargo systems and knocked out communications for a full day. The Coast Guard has not publicly attributed the attacks to any country.",
+      "## Boarding Operations\nOn August 21, a highly specialized team comprised of Coast Guard law‑enforcement officers, Coast Guard Cyber Protection Team members, a vessel inspector and FBI Cyber Action Team operators boarded the ship for four days. The boarding was carried out to ensure the integrity of the vessel’s operational and information‑technology systems after indications that the ship’s network had been compromised by foreign cyber actors.",
+      "## Findings and Current Status\nCurrently, there are no reports of operational disruptions, vessel instability, physical danger to crews, or environmental impacts. The crew cooperated with authorities and were considered critical partners in mitigating the threat. The Coast Guard and FBI are continuing their investigations into the incidents.",
+      "## Broader Maritime Context\nThe incident highlights the increasing vulnerability of shipping vessels as they adopt satellite communications and connect IT networks with onboard control systems. Because these ships face the internet, they present a potential vector for attackers to gain access and deploy malicious activity on the vessels.",
+      "## Industry and Government Response\nAccording to Grable, the federal government has increasingly imposed baseline cyber requirements across the sector, and he warned that all vessels should pay attention to the threat. The incident underscores the need for vessel owners and operators to remain vigilant, as even a relatively small disruption could cause significant delays at U.S. ports, where an estimated $5.4 trillion in commerce flows annually.",
+      "## What to Watch\nThe Coast Guard and FBI are still investigating whether Iran or another actor was involved. Coast Guard and the FBI boarded two U.S.-bound oil tankers last month after hackers reportedly compromised at least one of the ship’s networks and took control of its navigation, propulsion, and cargo systems. Observers should monitor follow‑up statements from the agencies for additional details, including any evidence that could link the attacks to nation‑state actors or explain the attackers’ tactics, techniques and procedures.",
+      "## Conclusion"
+    ],
+    "sources": [
+      {
+        "title": "Coast Guard and FBI boarded 2 energy tankers due to cyberattacks. How big is the risk?",
+        "url": "https://www.cbsnews.com/news/coast-guard-fbi-boarded-energy-tankers-cyberattacks-amy-grable-iran/"
+      },
+      {
+        "title": "Coast Guard, FBI boarded tanker after attack by ‘foreign cyber actors’",
+        "url": "https://therecord.media/oil-tanker-cyberattack-coast-guard-fbi"
+      },
+      {
+        "title": "Coast Guard, FBI investigating after 2 oil tankers bound for US hit with cyberattacks: Sources",
+        "url": "https://www.goodmorningamerica.com/news/story/coast-guard-fbi-investigating-after-2-oil-tankers-136482324"
+      },
+      {
+        "title": "FBI, Coast Guard boarded hacked oil tankers heading toward US coast",
+        "url": "https://techcrunch.com/2026/09/18/fbi-coast-guard-boarded-hacked-oil-tankers-heading-towards-us-coast/"
+      }
+    ],
+    "image": "/Trendforge/images/articles/u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.svg",
+    "imageAlt": "Original cyber illustration for U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
     "imageSource": "TrendForge original editorial visual",
     "imageLicense": "Original",
     "imageGeneratedBy": "TrendForge topic illustration engine v2"
