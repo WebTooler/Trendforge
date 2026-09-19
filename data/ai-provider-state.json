@@ -2,20 +2,20 @@
   "version": 10,
   "providers": {
     "Groq": {
-      "failures": 39,
+      "failures": 40,
       "quotaBlockedUntil": 0,
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 22,
-      "lastSuccessAt": "2026-09-19T04:59:08.447Z"
+      "successes": 23,
+      "lastSuccessAt": "2026-09-19T05:01:42.352Z"
     },
     "Gemini": {
-      "failures": 23,
-      "quotaBlockedUntil": 1789790393040,
-      "lastStatus": 200,
-      "lastError": "Invalid structured output",
-      "lastClass": "transient"
+      "failures": 24,
+      "quotaBlockedUntil": 1789794164734,
+      "lastStatus": 503,
+      "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "lastClass": "server"
     },
     "OpenAI": {
       "failures": 3,
@@ -32,24 +32,24 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 32,
-      "quotaBlockedUntil": 1789790409684,
-      "lastStatus": 200,
-      "lastError": "Invalid structured output",
+      "failures": 33,
+      "quotaBlockedUntil": 1789794114737,
+      "lastStatus": 0,
+      "lastError": "The operation was aborted due to timeout",
       "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 41,
-      "quotaBlockedUntil": 1789790369617,
+      "failures": 42,
+      "quotaBlockedUntil": 0,
       "lastStatus": 200,
-      "lastError": "Empty model response",
-      "lastClass": "transient",
-      "successes": 7,
-      "lastSuccessAt": "2026-09-18T12:48:53.508Z"
+      "lastError": "Empty atomic repair response",
+      "lastClass": "error",
+      "successes": 8,
+      "lastSuccessAt": "2026-09-19T05:00:26.505Z"
     }
   },
-  "rotationCursor": 3,
-  "updatedAt": "2026-09-19T04:59:08.447Z"
+  "rotationCursor": 1,
+  "updatedAt": "2026-09-19T05:01:42.352Z"
 }

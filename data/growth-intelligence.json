@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T04:59:12.094Z",
+  "generatedAt": "2026-09-19T05:01:45.984Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 15,
+    "totalArticles": 14,
     "averageEditorialScore": 74,
-    "editorialReviewCount": 13,
+    "editorialReviewCount": 12,
     "refreshCandidates": 0
   },
   "categoryMix": [
     {
       "category": "AI",
       "count": 5,
-      "share": 33.3
+      "share": 35.7
     },
     {
       "category": "Technology",
       "count": 4,
-      "share": 26.7
+      "share": 28.6
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 20
+      "share": 21.4
     },
     {
       "category": "Innovation",
@@ -41,29 +41,28 @@
     {
       "category": "Digital Life",
       "count": 2,
-      "share": 13.3
+      "share": 14.3
     },
     {
       "category": "Crypto",
-      "count": 1,
-      "share": 6.7
+      "count": 0,
+      "share": 0
     }
   ],
   "missingCategories": [
     "Innovation",
-    "Product Launches"
+    "Product Launches",
+    "Crypto"
   ],
-  "overrepresentedCategories": [],
+  "overrepresentedCategories": [
+    "AI"
+  ],
   "recommendations": [
-    "Prioritize missing categories: Innovation, Product Launches.",
-    "13 article(s) are in editorial review; improve them before treating them as growth winners."
+    "Prioritize missing categories: Innovation, Product Launches, Crypto.",
+    "Reduce short-term concentration in: AI.",
+    "12 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
-    {
-      "title": "JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
-      "category": "Crypto",
-      "publishedAt": "2026-09-19T04:59:08.454Z"
-    },
     {
       "title": "Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
       "category": "Technology",
@@ -108,6 +107,11 @@
       "title": "Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
       "category": "Technology",
       "publishedAt": "2026-09-16T09:01:41.744Z"
+    },
+    {
+      "title": "How to Set Up a Passkey for Your Google Account",
+      "category": "How-To",
+      "publishedAt": "2026-09-14T04:53:59.646Z"
     }
   ]
 }
