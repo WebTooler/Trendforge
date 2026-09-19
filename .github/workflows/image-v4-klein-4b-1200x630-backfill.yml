@@ -156,7 +156,7 @@ jobs:
                 if (finalMeta.width !== width || finalMeta.height !== height) {
                   throw new Error(`normalized image dimensions are ${finalMeta.width}x${finalMeta.height}, expected ${width}x${height}`);
                 }
-                const outFile = `\${slug}.1200x630.jpg`;
+                const outFile = `${slug}.1200x630.jpg`;
                 fs.writeFileSync(path.join(outDir, outFile), normalized);
 
                 const row = {
@@ -171,7 +171,7 @@ jobs:
                 };
                 manifest.push(row);
                 fs.writeFileSync(path.join(resultDir, `${slug}.json`), JSON.stringify(row, null, 2));
-                console.log(`SUCCESS ${file}: ${decoded.bytes.length} bytes in ${elapsedMs}ms`);
+                console.log(`SUCCESS ${file}: raw ${rawMeta.width}x${rawMeta.height} -> ${width}x${height}, ${normalized.length} bytes in ${elapsedMs}ms`);
               } catch (err) {
                 failures++;
                 const row = { file, slug, title, category, width, height, status: 'failed', error: String(err), elapsedMs: Date.now() - started, model };
