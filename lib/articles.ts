@@ -27,7 +27,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "al-gore-says-the-real-ai-risk-isn-t-data-centers",
@@ -67,7 +67,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Al Gore Says the Real AI Risk Isn’t Data Centers",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry",
@@ -105,7 +105,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "apple-eyes-2029-ai-server-with-m-series-ultra-chips",
@@ -136,7 +136,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities",
@@ -182,7 +182,41 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
+  },
+  {
+    "slug": "bitcoin-returns-above-80k-coinbase-stock-jumps-11-5-amid-sec-exemption",
+    "title": "Bitcoin Returns Above $80K, Coinbase Stock Jumps 11.5% Amid SEC Exemption",
+    "description": "Bitcoin reclaimed the $80,000 level, driving Coinbase shares up 11.53% to $194.03 as the SEC’s temporary tokenized‑stock exemption and broader crypto rally lifted related equities.",
+    "category": "Crypto",
+    "date": "2026-09-19",
+    "publishedAt": "2026-09-19T14:45:41.829Z",
+    "author": "Tejendra Pal Singh",
+    "readTime": "2 min read",
+    "content": [
+      "## Bitcoin crosses $80,000 again",
+      "Bitcoin moved back above the $80,000 threshold, a level that has historically drawn market attention. The price move was captured by Yahoo Finance on September 18 at 7:10 PM UTC, and the headline from that source framed the moment as part of a wider crypto rally. The rally was not isolated to Bitcoin; it extended to equities whose businesses are tied to cryptocurrency activity.",
+      "## Coinbase stock surges on the rally",
+      "Coinbase Global Inc. (COIN) responded strongly to Bitcoin’s advance. Shares jumped 11.53% during Friday’s session, closing at $194.03. Yahoo Finance data confirmed the price and reported a market capitalization of roughly $51.29 billion with a trading volume of $15.1 million. The stock’s gain of $20.06 reflected the broader upward pressure on crypto‑linked equities.",
+      "## SEC exemption fuels tokenized stock trading",
+      "The rally coincided with a regulatory development: the SEC introduced a temporary exemption for certain blockchain‑based venues that trade tokenized U.S. stocks. This exemption opened a limited pathway for those venues to operate, a factor that market participants cited as contributing to investor optimism. The timing of the exemption aligned with Bitcoin’s price movement, creating a confluence of technical and regulatory catalysts.",
+      "## Other crypto stocks join the move",
+      "Coinbase was not the only crypto‑focused equity to benefit. Strategy’s MSTR shares rose more than 13%, climbing from an intraday low near $137 to $150.89 before retreating slightly. The Crypto Times reported the move, indicating that the broader rally in Bitcoin and related assets was pulling multiple stocks higher.",
+      "## What investors should watch next",
+      "The rally illustrates how quickly crypto and traditional equities can move together when a major cryptocurrency crosses a psychological price level and regulatory clarity emerges. Investors may monitor whether the SEC exemption is extended beyond its temporary scope, and whether additional blockchain venues take advantage of the new trading path. Continued Bitcoin price stability above $80,000 could sustain pressure on crypto‑linked stocks, while any reversal in the broader market—potentially influenced by future Federal Reserve decisions—might temper gains. Monitoring Coinbase’s ongoing expansion, such as its recent filing to list more than 50 single‑stock perpetual futures tied to Nvidia, Microsoft, and Tesla, could provide additional context for equity performance.",
+      "Overall, the evidence points to a coordinated market response driven by Bitcoin’s price milestone, a temporary regulatory allowance, and the resulting uplift in crypto‑focused equities. Readers should consider these factors as part of a broader assessment rather than as guarantees of future performance."
+    ],
+    "sources": [
+      {
+        "title": "Coinbase Stock Jumps 11.5% as Bitcoin Climbs Back Above $80K",
+        "url": "https://www.cryptotimes.io/2026/09/19/coinbase-stock-jumps-11-5-as-bitcoin-climbs-back-above-80k/"
+      }
+    ],
+    "image": "/Trendforge/images/articles/bitcoin-returns-above-80k-coinbase-stock-jumps-11-5-amid-sec-exemption.1024x576.png",
+    "imageAlt": "Editorial image for Bitcoin Returns Above $80K, Coinbase Stock Jumps 11.5% Amid SEC Exemption",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "california-governor-orders-ai-safety-panel-and-considers-kill-switch",
@@ -226,7 +260,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for California Governor Orders AI Safety Panel and Considers ‘Kill Switch’",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "cftc-sends-crypto-rule-draft-to-white-house-for-review",
@@ -257,7 +291,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for CFTC Sends Crypto Rule Draft to White House for Review",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform",
@@ -288,7 +322,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Comp AI raises $34M Series A to build agentic security and compliance platform",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing",
@@ -321,7 +355,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost",
@@ -350,7 +384,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "how-to-move-passwords-and-passkeys-between-managers-on-android",
@@ -391,7 +425,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for How to Move Passwords and Passkeys Between Managers on Android",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "how-to-set-up-a-passkey-for-your-google-account",
@@ -430,7 +464,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for How to Set Up a Passkey for Your Google Account",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "how-to-update-android-apps-safely-and-keep-them-current",
@@ -469,7 +503,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for How to Update Android Apps Safely and Keep Them Current",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae",
@@ -502,7 +536,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean",
@@ -532,7 +566,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
@@ -560,7 +594,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for The Apple Watch Series 12 is the start of a new wearable era",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig",
@@ -606,7 +640,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
     "slug": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems",
@@ -649,7 +683,7 @@ export const articles: Article[] = [
     "imageAlt": "Editorial image for U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   }
 ];
 

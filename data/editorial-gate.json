@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-19T07:08:56.449Z",
-  "provider": "Groq",
+  "generatedAt": "2026-09-19T14:45:41.829Z",
+  "provider": "Cohere",
   "editorial": {
     "passed": true,
     "checks": {
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3870,
-      "sentenceCount": 29,
+      "normalizedLength": 2779,
+      "sentenceCount": 20,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,15 +31,12 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "myfox28columbus.com",
-    "yahoo.com",
-    "northernnewsnow.com",
-    "cbsnews.com"
+    "cryptotimes.io"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 4,
-    "usablePassages": 51,
+    "sourceCount": 1,
+    "usablePassages": 18,
     "primarySourceCount": 0
   }
 }
