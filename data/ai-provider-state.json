@@ -3,12 +3,12 @@
   "providers": {
     "Groq": {
       "failures": 44,
-      "quotaBlockedUntil": 1789796341788,
-      "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6863, Requested 2307. Please try again in 8.774999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
-      "lastClass": "rate_limit",
-      "successes": 27,
-      "lastSuccessAt": "2026-09-19T05:38:48.450Z"
+      "quotaBlockedUntil": 0,
+      "lastStatus": 200,
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 28,
+      "lastSuccessAt": "2026-09-19T05:39:54.399Z"
     },
     "Gemini": {
       "failures": 25,
@@ -33,7 +33,7 @@
     },
     "OpenRouter": {
       "failures": 35,
-      "quotaBlockedUntil": 1789796332382,
+      "quotaBlockedUntil": 1789796369679,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -41,15 +41,15 @@
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 45,
-      "quotaBlockedUntil": 0,
+      "failures": 46,
+      "quotaBlockedUntil": 1789796353636,
       "lastStatus": 200,
-      "lastError": null,
-      "lastClass": "success",
-      "successes": 10,
-      "lastSuccessAt": "2026-09-19T05:38:58.974Z"
+      "lastError": "Empty atomic repair response",
+      "lastClass": "error",
+      "successes": 9,
+      "lastSuccessAt": "2026-09-19T05:15:51.244Z"
     }
   },
-  "rotationCursor": 1,
-  "updatedAt": "2026-09-19T05:38:58.974Z"
+  "rotationCursor": 2,
+  "updatedAt": "2026-09-19T05:39:54.399Z"
 }

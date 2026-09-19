@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T05:37:56.638Z",
+  "generatedAt": "2026-09-19T05:38:29.078Z",
   "policy": "Production pre-writer gate: consumes existing upstream artifacts, performs publisher-page identity/extraction/coverage/blueprint checks, and blocks AI generation when no writer-ready candidate exists.",
   "stages": [
     "trend-research",
@@ -37,13 +37,13 @@
         "independentPublisherCount": 3,
         "independentPublisherFamilies": [
           "cbsnews.com",
-          "myfox28columbus.com",
-          "yahoo.com"
+          "yahoo.com",
+          "myfox28columbus.com"
         ],
         "independentDomains": [
           "cbsnews.com",
-          "myfox28columbus.com",
-          "yahoo.com"
+          "yahoo.com",
+          "myfox28columbus.com"
         ],
         "sources": [
           {
@@ -60,19 +60,6 @@
             "topicOverlap": 9
           },
           {
-            "suppliedUrl": "https://myfox28columbus.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
-            "domain": "myfox28columbus.com",
-            "publisherFamily": "myfox28columbus.com",
-            "resolvedFrom": "article-link",
-            "ok": true,
-            "reason": "story-relevant-publisher-article",
-            "finalUrl": "https://myfox28columbus.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
-            "pageTitle": "US, Denmark, and Greenland reach security deal giving U.S. permanent control, Trump says",
-            "canonical": "https://abc45.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
-            "bodyChars": 1997,
-            "topicOverlap": 10
-          },
-          {
             "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
             "domain": "yahoo.com",
             "publisherFamily": "yahoo.com",
@@ -84,6 +71,19 @@
             "canonical": "https://www.yahoo.com/news/politics/articles/trump-claims-infinite-greenland-security-223332989.html",
             "bodyChars": 3581,
             "topicOverlap": 9
+          },
+          {
+            "suppliedUrl": "https://myfox28columbus.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
+            "domain": "myfox28columbus.com",
+            "publisherFamily": "myfox28columbus.com",
+            "resolvedFrom": "article-link",
+            "ok": true,
+            "reason": "story-relevant-publisher-article",
+            "finalUrl": "https://myfox28columbus.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
+            "pageTitle": "US, Denmark, and Greenland reach security deal giving U.S. permanent control, Trump says",
+            "canonical": "https://abc45.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says",
+            "bodyChars": 1997,
+            "topicOverlap": 10
           },
           {
             "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-says-us-secures-permanent-214042214.html",
@@ -138,17 +138,17 @@
             "topicOverlap": 7
           },
           {
-            "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-says-us-reached-greenland-221727958.html",
+            "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-announces-agreement-denmark-secure-223715374.html",
             "domain": "yahoo.com",
             "publisherFamily": "yahoo.com",
             "resolvedFrom": "article-link",
             "ok": true,
             "reason": "story-relevant-publisher-article",
-            "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-says-us-reached-greenland-221727958.html",
-            "pageTitle": "Trump says US reached Greenland security deal",
-            "canonical": "https://www.cnn.com/2026/09/18/politics/trump-us-greenland-security",
-            "bodyChars": 4059,
-            "topicOverlap": 7
+            "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-announces-agreement-denmark-secure-223715374.html",
+            "pageTitle": "Trump announces agreement with Denmark to secure ‘permanent’ control over Greenland’s security",
+            "canonical": "https://www.nbcnews.com/politics/trump-administration/trump-announces-agreement-denmark-secure-permanent-control-greenlands-rcna598641",
+            "bodyChars": 4588,
+            "topicOverlap": 9
           }
         ],
         "recoveryAttempts": 0,
@@ -185,9 +185,8 @@
               "At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO.",
               "Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic.",
               "Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River.",
-              "\"This is a community that knows tragedy and has had to contend with tragedy in recent years,\" says rector.",
               "Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials.",
-              "The work was carried out to improve \"public safety\" and create \"cleaner, safer spaces\".",
+              "Police say sending drones to get a first look at incidents could be a more efficient use of resources.",
               "Families with neurodiverse members will not need to wait for a diagnosis to use the room.",
               "The county says it will repair \"low-medium\" road defects within 90 days of them being reported.",
               "The mayor of Cambridgeshire and Peterborough says the money will help change people's lives.",
@@ -195,11 +194,14 @@
               "The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units.",
               "Residents later received the all-clear after explosions were reported in the capital.",
               "Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month.",
-              "When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that."
+              "When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that.",
+              "Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS.",
+              "Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence.",
+              "The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin."
             ],
-            "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River. \"This is a community that knows tragedy and has had to contend with tragedy in recent years,\" says rector. Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials. The work was carried out to improve \"public safety\" and create \"cleaner, safer spaces\". Families with neurodiverse members will not need to wait for a diagnosis to use the room. The county says it will repair \"low-medium\" road defects within 90 days of them being reported. The mayor of Cambridgeshire and Peterborough says the money will help change people's lives. By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units. Residents later received the all-clear after explosions were reported in the capital. Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month. When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that.",
+            "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River. Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials. Police say sending drones to get a first look at incidents could be a more efficient use of resources. Families with neurodiverse members will not need to wait for a diagnosis to use the room. The county says it will repair \"low-medium\" road defects within 90 days of them being reported. The mayor of Cambridgeshire and Peterborough says the money will help change people's lives. By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units. Residents later received the all-clear after explosions were reported in the capital. Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month. When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that. Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS. Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence. The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin.",
             "extraction": {
-              "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River. \"This is a community that knows tragedy and has had to contend with tragedy in recent years,\" says rector. Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials. The work was carried out to improve \"public safety\" and create \"cleaner, safer spaces\". Families with neurodiverse members will not need to wait for a diagnosis to use the room. The county says it will repair \"low-medium\" road defects within 90 days of them being reported. The mayor of Cambridgeshire and Peterborough says the money will help change people's lives. By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units. Residents later received the all-clear after explosions were reported in the capital. Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month. When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that.",
+              "body": "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory. Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance. Denmark and Greenland -- an autonomous territory controlled by Copenhagen -- both hailed the deal and said they would sign it on the sidelines of the UN General Assembly in New York next week. But the terms of the deal remain uncertain, and Denmark maintains its sovereignty remains intact. In a statement, Danish Prime Minister Mette Frederiksen described the deal as \"an agreement which at the same time recognizes the sovereignty an territorial integrity of the Kingdom and the Greenlandic people's right to self-determination.\" \"I am pleased to announce that the United States of America has entered into an Agreement with The Kingdom of Denmark, and Greenland, that gives the United States permanent control over security, and all other needs, in Greenland,\" Trump said on his Truth Social network. \"From now on, no US adversary can EVER have a base in Greenland, have a military presence in Greenland, or make sensitive investments in Greenland, without our express written approval.\" The 80-year-old said it was an \"'Infinite Life' Agreement, there is no end!\" and said Washington would immediately start building up a large military presence in the territory. Trump has repeatedly warned about Russia and China trying to establish a foothold in Greenland as a strategic battle for supremacy in a warming Arctic unfolds, and the State Department left no doubt that they would not be allowed to do so. \"This agreement guarantees that China and Russia cannot have a base in Greenland, they cannot send troops to Greenland, and the necessary mechanisms are in place to prevent investment in sensitive sectors,\" a State Department official said. At the Davos economic forum this past January, Trump reached a purported deal with NATO Secretary General Mark Rutte over the future of Greenland, the terms of which have remained vague. Frederiksen had said Monday that she was \"optimistic\" that ongoing discussions with the United States and Greenland since January could resolve the dispute. She said Friday she was \"pleased that there is a prospect of a good agreement for Greenland, the Kingdom of Denmark and the United States,\" adding that it was \"good for NATO and Europe.\" Greenland Prime Minister Jens-Frederik Nielsen said the deal with the United States \"strengthens\" the territory's security. Trump gave no details about how the deal would work, and it was not clear if it was linked to or substantially different from the Rutte deal. But several media outlets have reported that the United States wants to open three new military bases in southern Greenland, in addition to the Pituffik base it already has in the north of the territory. A 1951 defense pact, updated in 2004, already allows Washington to ramp up troop deployments and military installations on the island provided it informs Denmark and Greenland in advance. At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO. Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic. Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River. Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials. Police say sending drones to get a first look at incidents could be a more efficient use of resources. Families with neurodiverse members will not need to wait for a diagnosis to use the room. The county says it will repair \"low-medium\" road defects within 90 days of them being reported. The mayor of Cambridgeshire and Peterborough says the money will help change people's lives. By Dave Sherwood HAVANA, Sept 18 (Reuters) - Cuba's electrical grid suffered a total collapse on Friday, plunging the nation into darkness and leaving millions without power amid a US pressure The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units. Residents later received the all-clear after explosions were reported in the capital. Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month. When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that. Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS. Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence. The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin.",
               "passages": [
                 "US President Donald Trump said Friday that he had struck a deal with Denmark to give Washington \"permanent control\" over Greenland's security that would bar Russia and China from setting up bases in the Arctic territory.",
                 "Since returning to the White House in January 2025, Trump has repeatedly insisted that Washington needed to control Greenland for strategic reasons, alarming NATO ally Denmark and sparking fierce pushback from the alliance.",
@@ -221,9 +223,8 @@
                 "At the height of the crisis, Trump would not rule out using force to seize the territory of 57,000 inhabitants, sowing anxiety within the EU and NATO.",
                 "Since then, tensions have cooled somewhat, and in an apparent move to assuage Trump, NATO launched a new mission to bolster security in the Arctic.",
                 "Protesters formed a human chain on Friday around the Kennedy Center, the Washington arts hub that US President Donald Trump threatened to demolish unless his name is restored to it.Racioppo, 57, joined a human chain that formed as night fell on the imposing, white, marble building, with crowds sprawling out onto the esplanade overlooking the Potomac River.",
-                "\"This is a community that knows tragedy and has had to contend with tragedy in recent years,\" says rector.",
                 "Trump said the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics haven't been confirmed by Danish officials.",
-                "The work was carried out to improve \"public safety\" and create \"cleaner, safer spaces\".",
+                "Police say sending drones to get a first look at incidents could be a more efficient use of resources.",
                 "Families with neurodiverse members will not need to wait for a diagnosis to use the room.",
                 "The county says it will repair \"low-medium\" road defects within 90 days of them being reported.",
                 "The mayor of Cambridgeshire and Peterborough says the money will help change people's lives.",
@@ -231,14 +232,17 @@
                 "The death toll from an explosion and gun attack at a police headquarters in northern Pakistan rose to at least 31, including 16 police personnel, a senior police official told AFP on Saturday, with fighting ongoing.The police compound serves as a district-level police headquarters, housing key offices of the Counter Terrorism Department (CTD), Special Branch and several other police units.",
                 "Residents later received the all-clear after explosions were reported in the capital.",
                 "Russia’s parliamentary election for the first time includes residents of regions that Moscow illegally annexed from Ukraine after the start of its full-scale invasion more than 4 1/2 years ago, part of Kremlin efforts to cement its gains. Officials in Kyiv vigorously denounced the action as illegal, and a human rights activist described residents there as being coerced to participate in the election. While the vote across Russia started Friday and lasts until Sunday to help boost turnout, balloting actually has been underway in the annexed parts of Ukraine and some areas on the Russian side of the border since the end of last month.",
-                "When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that."
+                "When President Donald Trump launched his war against Iran in late February, energy analysts issued dire warnings that oil prices could more than double during a protracted conflict and urged investors and motorists to buckle up for a bumpy ride. The war grinds on and oil prices certainly remain volatile. But the most dire projections have not yet come to pass six months into a conflict that has no end in sight. Chinese President Xi Jinping, who is making a much-anticipated state visit to Washington next week, could make a credible argument that the world has his country's energy strategy to thank for that.",
+                "Italian health authorities see evidence that rising temperatures and longer warm seasons are helping mosquitoes spread West Nile virus across a wider area, during more months of the year. More than 650 infections have been reported in Italy so far this year, accounting for roughly half of all cases recorded in Europe, according to local health authorities. “Higher temperatures linked to climate change help mosquitoes reproduce and extend the transmission season, increasing the chances that infected mosquitoes will spread the virus to people,” said Antonino Bella, researcher at Italy’s National Institute of Health, or ISS.",
+                "Emerson Hyde and Dan Ewart, both Republicans, stood outside a contentious city council meeting earlier this week in the central Michigan town of Mason and grappled with the fact that the most prominent person to stand with them against a possible artificial intelligence data center was the local Democratic candidate for Congress. Hyde, 70, a farmer and former construction worker, said he is supporting 36-year-old Will Lawrence, a longtime liberal activist who until recently was a member of the Democratic Socialists of America, instead of incumbent Rep. Tom Barrett, a Republican who has not flatly opposed the Mason project. “He's been out to my house several times,” Hyde said of Lawrence.",
+                "The fruit hanging on the branch looks tantalizingly good – round and plump, with a fragrant, deep orange skin."
               ],
               "kind": "paragraph-evidence",
               "headline": "",
               "description": "",
               "rawParagraphCount": 39,
-              "selectedPassageCount": 31,
-              "selectedChars": 6514
+              "selectedPassageCount": 33,
+              "selectedChars": 7860
             }
           },
           {
@@ -343,8 +347,8 @@
           }
         ],
         "coverage": {
-          "score": 74,
-          "band": "usable",
+          "score": 76,
+          "band": "rich",
           "readyForRichArticle": true,
           "blockers": [
             "single_publisher_family"
@@ -372,21 +376,21 @@
             ]
           ],
           "syndicatedSourceGroups": 1,
-          "totalChars": 12170,
-          "totalPassages": 58,
-          "factualSignals": 44,
-          "detailSignals": 48,
+          "totalChars": 13516,
+          "totalPassages": 60,
+          "factualSignals": 49,
+          "detailSignals": 50,
           "primarySourceCount": 0,
           "verifiedSourceCount": 3,
           "scoredSources": [
             {
               "score": 40,
-              "chars": 6514,
-              "passages": 31,
-              "factualSignals": 19,
-              "numberSignals": 14,
+              "chars": 7860,
+              "passages": 33,
+              "factualSignals": 24,
+              "numberSignals": 17,
               "dateSignals": 6,
-              "quoteSignals": 14,
+              "quoteSignals": 13,
               "authorityScore": 5,
               "primary": false,
               "verified": true
@@ -418,22 +422,22 @@
           ]
         },
         "blueprint": {
-          "mode": "bounded",
+          "mode": "rich",
           "targetWords": {
-            "min": 450,
-            "max": 750,
-            "soft": 600
+            "min": 700,
+            "max": 1000,
+            "soft": 850
           },
           "h2Guidance": {
-            "preferredMin": 2,
-            "preferredMax": 4,
+            "preferredMin": 3,
+            "preferredMax": 5,
             "writerDecides": true,
             "noPadding": true
           },
-          "maxH2": 4,
+          "maxH2": 5,
           "requireCrossCheck": true,
-          "allowContextSection": false,
-          "instruction": "Write a bounded evidence-led article. The writer chooses the actual H2 structure from the strongest supported evidence. Prefer 2–4 distinct sections, but never add a section merely to increase length or satisfy a count."
+          "allowContextSection": true,
+          "instruction": "Build a full evidence-led article. The writer chooses the actual H2 structure from the evidence. Prefer 3–5 distinct sections, but never add a section just to reach the preferred range. Every factual section must remain within the supplied evidence."
         }
       },
       "readyForWriter": true,
@@ -480,16 +484,16 @@
             "topicOverlap": 8
           },
           {
-            "suppliedUrl": "https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+            "suppliedUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
             "domain": "moneycontrol.com",
             "publisherFamily": "moneycontrol.com",
             "resolvedFrom": "article-link",
             "ok": true,
             "reason": "story-relevant-publisher-article",
-            "finalUrl": "https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+            "finalUrl": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
             "pageTitle": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push",
             "canonical": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
-            "bodyChars": 3001,
+            "bodyChars": 5196,
             "topicOverlap": 10
           }
         ],
@@ -558,7 +562,7 @@
             }
           },
           {
-            "url": "https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
+            "url": "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html",
             "domain": "moneycontrol.com",
             "publisherFamily": "moneycontrol.com",
             "title": "Disney names Karandeep Anand as first-ever CTO as media giant expands tech push - Moneycontrol.com",
@@ -566,15 +570,43 @@
             "verified": true,
             "credibilityTier": "unknown",
             "passages": [
+              "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
+              "Anand previously served as chief executive officer of Character.AI, an online chatbot platform that allows users to interact with artificially created characters. Disney has had chief technology officers for individual business units, but not in a company-wide role.",
+              "Anand holds a Computer Science degree from the International Institute of Information Technology, Hyderabad.",
+              "Disney’s new CEO, Josh D’Amaro, has made technology a priority as the company looks to expand its digital offerings. In his previous role as head of theme parks and cruises, D’Amaro led Disney’s investment in video-game maker Epic Games.",
+              "D’Amaro also plans to develop Disney+ beyond movies and TV shows by turning the streaming service into a hub for gaming and other experiences.",
+              "Before joining Character.AI, Anand worked at Microsoft Corp. and Facebook, where he served as vice president for ads and business products.",
+              "“Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney’s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,” said D’Amaro. “He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.”",
+              "As chief technology officer, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product and engineering. He will work with technology teams across Disney’s business segments to modernise how the company builds and delivers technology.",
+              "The move comes as D’Amaro sharpens Disney’s focus on technology as a driver of growth across the company. Since becoming CEO, D’Amaro has emphasised deepening Disney’s direct relationships with fans by creating a more connected Disney experience, with Disney+ as its digital centerpiece.",
+              "“I’ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be,” Anand said. “I’m honored to join a team with such extraordinary creative talent, and I look forward to building on the company’s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways.”",
+              "Anand led Character.AI through a period of rapid growth, building one of the world’s most engaged consumer-AI audiences while prioritising user trust and safety as the platform expanded.",
+              "Before Character.AI, he was president and chief product officer of financial technology company Brex. He also held several leadership roles at Meta’s Facebook, most recently as vice president of Ads & Business Products.",
+              "Earlier in his career, Anand spent 15 years at Microsoft in senior product and engineering leadership roles and was part of the team that built the Azure platform.",
+              "Moneycontrol News first published: Sep 18, 2026 10:55 pm Discover the latest Business News , Sensex , and Nifty updates. Obtain Personal Finance insights, tax queries, and expert opinions on Moneycontrol or download the Moneycontrol App to stay updated!",
               "Find the best of Al News in one place, specially curated for you every weekend.",
               "Stay on top of the latest tech trends and biggest startup news.",
               "News18 Firstpost CNBC TV18 News18 Hindi Cricketnext Overdrive",
               "Copyright © Network18 Media & Investments Limited. All rights reserved. Reproduction of news articles, photos, videos or any other content in whole or in part in any form or medium without express written permission of moneycontrol.com is prohibited."
             ],
-            "body": "Find the best of Al News in one place, specially curated for you every weekend. Stay on top of the latest tech trends and biggest startup news. News18 Firstpost CNBC TV18 News18 Hindi Cricketnext Overdrive Copyright © Network18 Media & Investments Limited. All rights reserved. Reproduction of news articles, photos, videos or any other content in whole or in part in any form or medium without express written permission of moneycontrol.com is prohibited.",
+            "body": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief. Anand previously served as chief executive officer of Character.AI, an online chatbot platform that allows users to interact with artificially created characters. Disney has had chief technology officers for individual business units, but not in a company-wide role. Anand holds a Computer Science degree from the International Institute of Information Technology, Hyderabad. Disney’s new CEO, Josh D’Amaro, has made technology a priority as the company looks to expand its digital offerings. In his previous role as head of theme parks and cruises, D’Amaro led Disney’s investment in video-game maker Epic Games. D’Amaro also plans to develop Disney+ beyond movies and TV shows by turning the streaming service into a hub for gaming and other experiences. Before joining Character.AI, Anand worked at Microsoft Corp. and Facebook, where he served as vice president for ads and business products. “Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney’s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,” said D’Amaro. “He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.” As chief technology officer, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product and engineering. He will work with technology teams across Disney’s business segments to modernise how the company builds and delivers technology. The move comes as D’Amaro sharpens Disney’s focus on technology as a driver of growth across the company. Since becoming CEO, D’Amaro has emphasised deepening Disney’s direct relationships with fans by creating a more connected Disney experience, with Disney+ as its digital centerpiece. “I’ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be,” Anand said. “I’m honored to join a team with such extraordinary creative talent, and I look forward to building on the company’s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways.” Anand led Character.AI through a period of rapid growth, building one of the world’s most engaged consumer-AI audiences while prioritising user trust and safety as the platform expanded. Before Character.AI, he was president and chief product officer of financial technology company Brex. He also held several leadership roles at Meta’s Facebook, most recently as vice president of Ads & Business Products. Earlier in his career, Anand spent 15 years at Microsoft in senior product and engineering leadership roles and was part of the team that built the Azure platform. Moneycontrol News first published: Sep 18, 2026 10:55 pm Discover the latest Business News , Sensex , and Nifty updates. Obtain Personal Finance insights, tax queries, and expert opinions on Moneycontrol or download the Moneycontrol App to stay updated! Find the best of Al News in one place, specially curated for you every weekend. Stay on top of the latest tech trends and biggest startup news. News18 Firstpost CNBC TV18 News18 Hindi Cricketnext Overdrive Copyright © Network18 Media & Investments Limited. All rights reserved. Reproduction of news articles, photos, videos or any other content in whole or in part in any form or medium without express written permission of moneycontrol.com is prohibited.",
             "extraction": {
-              "body": "Find the best of Al News in one place, specially curated for you every weekend. Stay on top of the latest tech trends and biggest startup news. News18 Firstpost CNBC TV18 News18 Hindi Cricketnext Overdrive Copyright © Network18 Media & Investments Limited. All rights reserved. Reproduction of news articles, photos, videos or any other content in whole or in part in any form or medium without express written permission of moneycontrol.com is prohibited.",
+              "body": "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief. Anand previously served as chief executive officer of Character.AI, an online chatbot platform that allows users to interact with artificially created characters. Disney has had chief technology officers for individual business units, but not in a company-wide role. Anand holds a Computer Science degree from the International Institute of Information Technology, Hyderabad. Disney’s new CEO, Josh D’Amaro, has made technology a priority as the company looks to expand its digital offerings. In his previous role as head of theme parks and cruises, D’Amaro led Disney’s investment in video-game maker Epic Games. D’Amaro also plans to develop Disney+ beyond movies and TV shows by turning the streaming service into a hub for gaming and other experiences. Before joining Character.AI, Anand worked at Microsoft Corp. and Facebook, where he served as vice president for ads and business products. “Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney’s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,” said D’Amaro. “He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.” As chief technology officer, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product and engineering. He will work with technology teams across Disney’s business segments to modernise how the company builds and delivers technology. The move comes as D’Amaro sharpens Disney’s focus on technology as a driver of growth across the company. Since becoming CEO, D’Amaro has emphasised deepening Disney’s direct relationships with fans by creating a more connected Disney experience, with Disney+ as its digital centerpiece. “I’ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be,” Anand said. “I’m honored to join a team with such extraordinary creative talent, and I look forward to building on the company’s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways.” Anand led Character.AI through a period of rapid growth, building one of the world’s most engaged consumer-AI audiences while prioritising user trust and safety as the platform expanded. Before Character.AI, he was president and chief product officer of financial technology company Brex. He also held several leadership roles at Meta’s Facebook, most recently as vice president of Ads & Business Products. Earlier in his career, Anand spent 15 years at Microsoft in senior product and engineering leadership roles and was part of the team that built the Azure platform. Moneycontrol News first published: Sep 18, 2026 10:55 pm Discover the latest Business News , Sensex , and Nifty updates. Obtain Personal Finance insights, tax queries, and expert opinions on Moneycontrol or download the Moneycontrol App to stay updated! Find the best of Al News in one place, specially curated for you every weekend. Stay on top of the latest tech trends and biggest startup news. News18 Firstpost CNBC TV18 News18 Hindi Cricketnext Overdrive Copyright © Network18 Media & Investments Limited. All rights reserved. Reproduction of news articles, photos, videos or any other content in whole or in part in any form or medium without express written permission of moneycontrol.com is prohibited.",
               "passages": [
+                "Walt Disney Co. has named Karandeep Anand to the newly created role of chief technology officer, marking the first time the entertainment giant will have a corporate-wide technology chief.",
+                "Anand previously served as chief executive officer of Character.AI, an online chatbot platform that allows users to interact with artificially created characters. Disney has had chief technology officers for individual business units, but not in a company-wide role.",
+                "Anand holds a Computer Science degree from the International Institute of Information Technology, Hyderabad.",
+                "Disney’s new CEO, Josh D’Amaro, has made technology a priority as the company looks to expand its digital offerings. In his previous role as head of theme parks and cruises, D’Amaro led Disney’s investment in video-game maker Epic Games.",
+                "D’Amaro also plans to develop Disney+ beyond movies and TV shows by turning the streaming service into a hub for gaming and other experiences.",
+                "Before joining Character.AI, Anand worked at Microsoft Corp. and Facebook, where he served as vice president for ads and business products.",
+                "“Karandeep brings a rare mix of experience across infrastructure, consumer technology and AI, and will be a vital addition to Disney’s senior leadership team as we further our three priorities: great storytelling as our North Star, technology in service of creativity, and operating as One Disney,” said D’Amaro. “He is an expert builder and strategist, technical and product-minded, with sharp instincts for what fans actually want. He also has real enthusiasm and respect for Disney, a clear sense of where technology and creativity meet, and shares our belief that technology creates the most value when it helps people do their best work.”",
+                "As chief technology officer, Anand will oversee enterprise technology, infrastructure, data and AI platforms, product and engineering. He will work with technology teams across Disney’s business segments to modernise how the company builds and delivers technology.",
+                "The move comes as D’Amaro sharpens Disney’s focus on technology as a driver of growth across the company. Since becoming CEO, D’Amaro has emphasised deepening Disney’s direct relationships with fans by creating a more connected Disney experience, with Disney+ as its digital centerpiece.",
+                "“I’ve admired Disney my entire life for how it blends unforgettable storytelling with the latest technology to constantly push the boundaries of what entertainment can be,” Anand said. “I’m honored to join a team with such extraordinary creative talent, and I look forward to building on the company’s impressive technology capabilities to help Disney connect fans worldwide with its beloved stories and characters in new and innovative ways.”",
+                "Anand led Character.AI through a period of rapid growth, building one of the world’s most engaged consumer-AI audiences while prioritising user trust and safety as the platform expanded.",
+                "Before Character.AI, he was president and chief product officer of financial technology company Brex. He also held several leadership roles at Meta’s Facebook, most recently as vice president of Ads & Business Products.",
+                "Earlier in his career, Anand spent 15 years at Microsoft in senior product and engineering leadership roles and was part of the team that built the Azure platform.",
+                "Moneycontrol News first published: Sep 18, 2026 10:55 pm Discover the latest Business News , Sensex , and Nifty updates. Obtain Personal Finance insights, tax queries, and expert opinions on Moneycontrol or download the Moneycontrol App to stay updated!",
                 "Find the best of Al News in one place, specially curated for you every weekend.",
                 "Stay on top of the latest tech trends and biggest startup news.",
                 "News18 Firstpost CNBC TV18 News18 Hindi Cricketnext Overdrive",
@@ -583,16 +615,16 @@
               "kind": "paragraph-evidence",
               "headline": "",
               "description": "",
-              "rawParagraphCount": 18,
-              "selectedPassageCount": 4,
-              "selectedChars": 456
+              "rawParagraphCount": 27,
+              "selectedPassageCount": 18,
+              "selectedChars": 4008
             }
           }
         ],
         "coverage": {
-          "score": 50,
-          "band": "thin",
-          "readyForRichArticle": false,
+          "score": 61,
+          "band": "usable",
+          "readyForRichArticle": true,
           "blockers": [
             "single_publisher_family"
           ],
@@ -614,10 +646,10 @@
             ]
           ],
           "syndicatedSourceGroups": 1,
-          "totalChars": 4259,
-          "totalPassages": 22,
-          "factualSignals": 17,
-          "detailSignals": 11,
+          "totalChars": 7811,
+          "totalPassages": 36,
+          "factualSignals": 33,
+          "detailSignals": 22,
           "primarySourceCount": 0,
           "verifiedSourceCount": 2,
           "scoredSources": [
@@ -634,13 +666,13 @@
               "verified": true
             },
             {
-              "score": 15,
-              "chars": 456,
-              "passages": 4,
-              "factualSignals": 0,
-              "numberSignals": 0,
-              "dateSignals": 0,
-              "quoteSignals": 0,
+              "score": 40,
+              "chars": 4008,
+              "passages": 18,
+              "factualSignals": 16,
+              "numberSignals": 5,
+              "dateSignals": 2,
+              "quoteSignals": 4,
               "authorityScore": 5,
               "primary": false,
               "verified": true
@@ -648,22 +680,22 @@
           ]
         },
         "blueprint": {
-          "mode": "narrow",
+          "mode": "bounded",
           "targetWords": {
-            "min": 300,
-            "max": 500,
-            "soft": 400
+            "min": 450,
+            "max": 750,
+            "soft": 600
           },
           "h2Guidance": {
-            "preferredMin": 1,
-            "preferredMax": 2,
+            "preferredMin": 2,
+            "preferredMax": 4,
             "writerDecides": true,
             "noPadding": true
           },
-          "maxH2": 2,
-          "requireCrossCheck": false,
+          "maxH2": 4,
+          "requireCrossCheck": true,
           "allowContextSection": false,
-          "instruction": "Keep the article narrow and factual. The writer chooses the actual H2 structure. Prefer 1–2 sections when supported, but use fewer if the evidence does not justify more. Never pad with unsupported sections."
+          "instruction": "Write a bounded evidence-led article. The writer chooses the actual H2 structure from the strongest supported evidence. Prefer 2–4 distinct sections, but never add a section merely to increase length or satisfy a count."
         }
       },
       "readyForWriter": false,
@@ -674,7 +706,8 @@
         "matchedFile": "disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.md",
         "matchedTitle": "Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
         "matchedUrls": [
-          "https://www.cnbc.com/2026/09/18/disney-cto-tech.html"
+          "https://www.cnbc.com/2026/09/18/disney-cto-tech.html",
+          "https://www.moneycontrol.com/news/business/companies/disney-names-karandeep-anand-as-first-ever-cto-as-media-giant-expands-tech-push-14033282.html"
         ]
       }
     },
@@ -2118,15 +2151,15 @@
   ],
   "summary": {
     "candidatesFromVerification": 210,
-    "verifiedCandidates": 97,
+    "verifiedCandidates": 99,
     "candidatesInspected": 8,
     "duplicateHistoryBlocked": 4,
     "duplicateQueueBlocked": 0,
     "integrityPass": 8,
     "strongEvidence": 3,
-    "rich": 1,
+    "rich": 2,
     "usable": 3,
-    "thin": 2,
+    "thin": 1,
     "insufficient": 2,
     "readyForWriter": 2
   }
