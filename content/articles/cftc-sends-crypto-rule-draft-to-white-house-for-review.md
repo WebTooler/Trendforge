@@ -5,11 +5,11 @@ slug: "cftc-sends-crypto-rule-draft-to-white-house-for-review"
 category: "Crypto"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-19T05:13:39.960Z"
-image: "/Trendforge/images/articles/cftc-sends-crypto-rule-draft-to-white-house-for-review.svg"
-imageAlt: "Original crypto illustration for CFTC Sends Crypto Rule Draft to White House for Review"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/cftc-sends-crypto-rule-draft-to-white-house-for-review.1024x576.png"
+imageAlt: "Editorial image for CFTC Sends Crypto Rule Draft to White House for Review"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## A Preliminary Step in Federal Crypto Oversight

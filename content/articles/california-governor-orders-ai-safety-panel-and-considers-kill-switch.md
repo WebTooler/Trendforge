@@ -5,11 +5,11 @@ slug: "california-governor-orders-ai-safety-panel-and-considers-kill-switch"
 category: "AI"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-19T02:30:26.449Z"
-image: "/Trendforge/images/articles/california-governor-orders-ai-safety-panel-and-considers-kill-switch.svg"
-imageAlt: "Original product illustration for California Governor Orders AI Safety Panel and Considers ‘Kill Switch’"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/california-governor-orders-ai-safety-panel-and-considers-kill-switch.1024x576.png"
+imageAlt: "Editorial image for California Governor Orders AI Safety Panel and Considers ‘Kill Switch’"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## The Executive Order and Its Scope

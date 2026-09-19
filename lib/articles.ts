@@ -23,11 +23,11 @@ export const articles: Article[] = [
         "url": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/"
       }
     ],
-    "image": "/Trendforge/images/articles/ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.svg",
-    "imageAlt": "Original ai illustration for AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.1024x576.png",
+    "imageAlt": "Editorial image for AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "al-gore-says-the-real-ai-risk-isn-t-data-centers",
@@ -63,11 +63,11 @@ export const articles: Article[] = [
         "url": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/"
       }
     ],
-    "image": "/Trendforge/images/articles/al-gore-says-the-real-ai-risk-isn-t-data-centers.svg",
-    "imageAlt": "Original ai illustration for Al Gore Says the Real AI Risk Isn’t Data Centers",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/al-gore-says-the-real-ai-risk-isn-t-data-centers.1024x576.png",
+    "imageAlt": "Editorial image for Al Gore Says the Real AI Risk Isn’t Data Centers",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry",
@@ -101,11 +101,11 @@ export const articles: Article[] = [
         "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcU1YS0xFaGIxT09LRnlVc3AxVWdtZUJrYmxiY3ctc3FxZmVCbWx6LXdxaXZkUWY1TUl4N0xnZ3A3aDA0SmFNZm5xU2hQM0I4YXc3RHZUeWozQnJxcHJra3ZwNXJ2WEvTzltSy1ZdHoyMUVRNm1Ua1ZWdWF0TUw1cFpLRmVyUVI2U0dBZV9welJMczBPR1ZWN0RVYkpMTk5BRDY2Q0k5OE81Y1JPM0tmc08wWXc?oc=5"
       }
     ],
-    "image": "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.svg",
-    "imageAlt": "Original ai-governance illustration for Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.1024x576.png",
+    "imageAlt": "Editorial image for Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "apple-eyes-2029-ai-server-with-m-series-ultra-chips",
@@ -132,11 +132,11 @@ export const articles: Article[] = [
         "url": "https://arstechnica.com/ai/2026/09/apple-reportedly-building-server-packed-with-m-series-ultra-chips-for-ai/"
       }
     ],
-    "image": "/Trendforge/images/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.svg",
-    "imageAlt": "Original ai illustration for Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.1024x576.png",
+    "imageAlt": "Editorial image for Apple Eyes 2029 AI Server With M‑Series Ultra Chips",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities",
@@ -178,11 +178,11 @@ export const articles: Article[] = [
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZ1hTNkVMZU9hM2lkbnBTdEZMakdiZzNyYWNUVy16aU9sajM5cGRkVy03cWtfZHoya0l4UFlrbmhNTU9tN3o0YTRpNy03TnNhQWV2UFllcTBkc0J5cWt5OFZMVHpGNllnMkQwaGQyUWpCeDhqSi1yMkFlUVZlSG00TjhvMGZVX2ZSdWdkVS1xQ0MzSnJicy0wNTFpUnNoSFNOQS1iRWlCaVB4aGtTS1pqcUlVdGlUUHNCQW1wQnRuQQ?oc=5"
       }
     ],
-    "image": "/Trendforge/images/articles/beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.svg",
-    "imageAlt": "Original drone illustration for Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.1024x576.png",
+    "imageAlt": "Editorial image for Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "california-governor-orders-ai-safety-panel-and-considers-kill-switch",
@@ -222,11 +222,11 @@ export const articles: Article[] = [
         "url": "https://www.latimes.com/california/story/2026-09-18/newsom-creates-panel-on-ai-safety-regulation-suggests-possible-kill-switch"
       }
     ],
-    "image": "/Trendforge/images/articles/california-governor-orders-ai-safety-panel-and-considers-kill-switch.svg",
-    "imageAlt": "Original product illustration for California Governor Orders AI Safety Panel and Considers ‘Kill Switch’",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/california-governor-orders-ai-safety-panel-and-considers-kill-switch.1024x576.png",
+    "imageAlt": "Editorial image for California Governor Orders AI Safety Panel and Considers ‘Kill Switch’",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "cftc-sends-crypto-rule-draft-to-white-house-for-review",
@@ -253,11 +253,11 @@ export const articles: Article[] = [
         "url": "https://www.cryptotimes.io/2026/09/18/cftc-sends-crypto-market-rulemaking-to-white-house-for-review/"
       }
     ],
-    "image": "/Trendforge/images/articles/cftc-sends-crypto-rule-draft-to-white-house-for-review.svg",
-    "imageAlt": "Original crypto illustration for CFTC Sends Crypto Rule Draft to White House for Review",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/cftc-sends-crypto-rule-draft-to-white-house-for-review.1024x576.png",
+    "imageAlt": "Editorial image for CFTC Sends Crypto Rule Draft to White House for Review",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform",
@@ -284,11 +284,11 @@ export const articles: Article[] = [
         "url": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/"
       }
     ],
-    "image": "/Trendforge/images/articles/comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform.svg",
-    "imageAlt": "Original cyber illustration for Comp AI raises $34M Series A to build agentic security and compliance platform",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform.1024x576.png",
+    "imageAlt": "Editorial image for Comp AI raises $34M Series A to build agentic security and compliance platform",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing",
@@ -317,11 +317,11 @@ export const articles: Article[] = [
         "url": "https://www.cnbc.com/2026/09/18/disney-cto-tech.html"
       }
     ],
-    "image": "/Trendforge/images/articles/disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.svg",
-    "imageAlt": "Original ai illustration for Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.1024x576.png",
+    "imageAlt": "Editorial image for Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost",
@@ -346,11 +346,11 @@ export const articles: Article[] = [
         "url": "https://arstechnica.com/ai/2026/09/exclusive-open-chinese-models-close-gap-with-silicon-valleys-frontier-ai-models/"
       }
     ],
-    "image": "/Trendforge/images/articles/exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost.svg",
-    "imageAlt": "Original ai illustration for Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost.1024x576.png",
+    "imageAlt": "Editorial image for Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "how-to-move-passwords-and-passkeys-between-managers-on-android",
@@ -387,11 +387,11 @@ export const articles: Article[] = [
         "url": "https://techcrunch.com/2026/09/10/google-is-making-it-easier-to-switch-between-password-managers-on-android/"
       }
     ],
-    "image": "/Trendforge/images/articles/how-to-move-passwords-and-passkeys-between-managers-on-android.svg",
-    "imageAlt": "Original howto illustration for How to Move Passwords and Passkeys Between Managers on Android",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/how-to-move-passwords-and-passkeys-between-managers-on-android.1024x576.png",
+    "imageAlt": "Editorial image for How to Move Passwords and Passkeys Between Managers on Android",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "how-to-set-up-a-passkey-for-your-google-account",
@@ -426,11 +426,11 @@ export const articles: Article[] = [
         "url": "https://blog.google/innovation-and-ai/technology/safety-security/world-password-day-2026/"
       }
     ],
-    "image": "/Trendforge/images/articles/how-to-set-up-a-passkey-for-your-google-account.svg",
-    "imageAlt": "Original cyber illustration for How to Set Up a Passkey for Your Google Account",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/how-to-set-up-a-passkey-for-your-google-account.1024x576.png",
+    "imageAlt": "Editorial image for How to Set Up a Passkey for Your Google Account",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "how-to-update-android-apps-safely-and-keep-them-current",
@@ -465,11 +465,11 @@ export const articles: Article[] = [
         "url": "https://www.androidauthority.com/how-to-update-apps-on-android-3265904/"
       }
     ],
-    "image": "/Trendforge/images/articles/how-to-update-android-apps-safely-and-keep-them-current.svg",
-    "imageAlt": "Original cyber illustration for How to Update Android Apps Safely and Keep Them Current",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/how-to-update-android-apps-safely-and-keep-them-current.1024x576.png",
+    "imageAlt": "Editorial image for How to Update Android Apps Safely and Keep Them Current",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae",
@@ -498,11 +498,11 @@ export const articles: Article[] = [
         "url": "https://arstechnica.com/gadgets/2026/09/iran-strikes-on-amazon-data-centers-caused-permanent-loss-of-customer-data/"
       }
     ],
-    "image": "/Trendforge/images/articles/iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae.svg",
-    "imageAlt": "Original drone illustration for Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae.1024x576.png",
+    "imageAlt": "Editorial image for Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean",
@@ -528,11 +528,11 @@ export const articles: Article[] = [
         "url": "https://247wallst.com/investing/cryptocurrency/2026/09/18/jpmorgan-values-bitcoin-at-266000-against-gold-why-its-trading-below-81000/"
       }
     ],
-    "image": "/Trendforge/images/articles/jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean.svg",
-    "imageAlt": "Original crypto illustration for JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean.1024x576.png",
+    "imageAlt": "Editorial image for JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
@@ -556,11 +556,11 @@ export const articles: Article[] = [
         "url": "https://www.theverge.com/tech/996715/apple-watch-series-12-review-wearables-smartwatch"
       }
     ],
-    "image": "/Trendforge/images/articles/the-apple-watch-series-12-is-the-start-of-a-new-wearable-era.svg",
-    "imageAlt": "Original ai illustration for The Apple Watch Series 12 is the start of a new wearable era",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/the-apple-watch-series-12-is-the-start-of-a-new-wearable-era.1024x576.png",
+    "imageAlt": "Editorial image for The Apple Watch Series 12 is the start of a new wearable era",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig",
@@ -602,11 +602,11 @@ export const articles: Article[] = [
         "url": "https://www.cbsnews.com/news/trump-u-s-greenland-deal-security-denmark-bases/"
       }
     ],
-    "image": "/Trendforge/images/articles/trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.svg",
-    "imageAlt": "Original cyber illustration for Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.1024x576.png",
+    "imageAlt": "Editorial image for Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   },
   {
     "slug": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems",
@@ -645,11 +645,11 @@ export const articles: Article[] = [
         "url": "https://techcrunch.com/2026/09/18/fbi-coast-guard-boarded-hacked-oil-tankers-heading-towards-us-coast/"
       }
     ],
-    "image": "/Trendforge/images/articles/u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.svg",
-    "imageAlt": "Original cyber illustration for U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
-    "imageSource": "TrendForge original editorial visual",
-    "imageLicense": "Original",
-    "imageGeneratedBy": "TrendForge topic illustration engine v2"
+    "image": "/Trendforge/images/articles/u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.1024x576.png",
+    "imageAlt": "Editorial image for U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell",
   }
 ];
 

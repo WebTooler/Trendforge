@@ -5,11 +5,11 @@ slug: "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era"
 category: "Digital Life"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-17T17:01:14.943Z"
-image: "/Trendforge/images/articles/the-apple-watch-series-12-is-the-start-of-a-new-wearable-era.svg"
-imageAlt: "Original ai illustration for The Apple Watch Series 12 is the start of a new wearable era"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/the-apple-watch-series-12-is-the-start-of-a-new-wearable-era.1024x576.png"
+imageAlt: "Editorial image for The Apple Watch Series 12 is the start of a new wearable era"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## Why the Series 12 matters beyond its look

@@ -5,11 +5,11 @@ slug: "how-to-update-android-apps-safely-and-keep-them-current"
 category: "How-To"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-14T04:13:03.838Z"
-image: "/Trendforge/images/articles/how-to-update-android-apps-safely-and-keep-them-current.svg"
-imageAlt: "Original cyber illustration for How to Update Android Apps Safely and Keep Them Current"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/how-to-update-android-apps-safely-and-keep-them-current.1024x576.png"
+imageAlt: "Editorial image for How to Update Android Apps Safely and Keep Them Current"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## Why app updates matter

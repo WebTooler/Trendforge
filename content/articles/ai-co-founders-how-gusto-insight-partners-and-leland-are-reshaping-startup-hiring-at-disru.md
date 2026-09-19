@@ -5,11 +5,11 @@ slug: "ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startu
 category: "AI"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-17T09:11:07.530Z"
-image: "/Trendforge/images/articles/ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.svg"
-imageAlt: "Original ai illustration for AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/ai-co-founders-how-gusto-insight-partners-and-leland-are-reshaping-startup-hiring-at-disru.1024x576.png"
+imageAlt: "Editorial image for AI Co‑Founders: How Gusto, Insight Partners, and Leland Are Reshaping Startup Hiring at Disrupt 2026"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## Redefining Early‑Stage Hiring with AI Co‑Founders

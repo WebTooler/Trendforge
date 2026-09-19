@@ -5,11 +5,11 @@ slug: "comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-plat
 category: "AI"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-17T11:43:31.038Z"
-image: "/Trendforge/images/articles/comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform.svg"
-imageAlt: "Original cyber illustration for Comp AI raises $34M Series A to build agentic security and compliance platform"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/comp-ai-raises-34m-series-a-to-build-agentic-security-and-compliance-platform.1024x576.png"
+imageAlt: "Editorial image for Comp AI raises $34M Series A to build agentic security and compliance platform"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## Funding round and founding story

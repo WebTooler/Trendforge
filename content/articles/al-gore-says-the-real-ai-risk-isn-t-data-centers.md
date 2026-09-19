@@ -5,11 +5,11 @@ slug: "al-gore-says-the-real-ai-risk-isn-t-data-centers"
 category: "AI"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-17T07:41:26.386Z"
-image: "/Trendforge/images/articles/al-gore-says-the-real-ai-risk-isn-t-data-centers.svg"
-imageAlt: "Original ai illustration for Al Gore Says the Real AI Risk Isn’t Data Centers"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/al-gore-says-the-real-ai-risk-isn-t-data-centers.1024x576.png"
+imageAlt: "Editorial image for Al Gore Says the Real AI Risk Isn’t Data Centers"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## Climate Concerns About AI Data Centers

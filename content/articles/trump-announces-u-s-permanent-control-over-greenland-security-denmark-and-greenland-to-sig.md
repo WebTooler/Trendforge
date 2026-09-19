@@ -5,11 +5,11 @@ slug: "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and
 category: "World"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-19T07:08:56.449Z"
-image: "/Trendforge/images/articles/trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.svg"
-imageAlt: "Original cyber illustration for Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.1024x576.png"
+imageAlt: "Editorial image for Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## Trump Declares a New Arctic Deal

@@ -5,11 +5,11 @@ slug: "iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae"
 category: "Technology"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-17T09:55:20.528Z"
-image: "/Trendforge/images/articles/iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae.svg"
-imageAlt: "Original drone illustration for Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/iranian-strikes-wipe-out-amazon-cloud-data-in-bahrain-uae.1024x576.png"
+imageAlt: "Editorial image for Iranian Strikes Wipe Out Amazon Cloud Data in Bahrain, UAE"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## What Happened: Iranian Strikes Hit Amazon Cloud Infrastructure

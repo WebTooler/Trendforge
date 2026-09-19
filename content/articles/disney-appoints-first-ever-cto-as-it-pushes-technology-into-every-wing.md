@@ -5,11 +5,11 @@ slug: "disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing"
 category: "Technology"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-19T03:49:39.936Z"
-image: "/Trendforge/images/articles/disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.svg"
-imageAlt: "Original ai illustration for Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/disney-appoints-first-ever-cto-as-it-pushes-technology-into-every-wing.1024x576.png"
+imageAlt: "Editorial image for Disney Appoints First‑Ever CTO as It Pushes Technology into Every Wing"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## A New Tech Flagship at Disney

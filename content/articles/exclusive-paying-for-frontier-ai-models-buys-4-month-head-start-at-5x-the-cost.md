@@ -5,11 +5,11 @@ slug: "exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the
 category: "Technology"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-16T09:01:41.744Z"
-image: "/Trendforge/images/articles/exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost.svg"
-imageAlt: "Original ai illustration for Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/exclusive-paying-for-frontier-ai-models-buys-4-month-head-start-at-5x-the-cost.1024x576.png"
+imageAlt: "Editorial image for Exclusive: Paying for frontier AI models buys 4-month head start at 5x the cost"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## The shrinking frontier between open and closed AI

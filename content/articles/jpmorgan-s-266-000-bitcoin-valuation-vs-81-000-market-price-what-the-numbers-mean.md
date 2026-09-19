@@ -5,11 +5,11 @@ slug: "jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numb
 category: "Crypto"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-19T04:59:08.454Z"
-image: "/Trendforge/images/articles/jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean.svg"
-imageAlt: "Original crypto illustration for JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean.1024x576.png"
+imageAlt: "Editorial image for JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## The Two Numbers at Play

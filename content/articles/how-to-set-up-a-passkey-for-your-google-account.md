@@ -5,11 +5,11 @@ slug: "how-to-set-up-a-passkey-for-your-google-account"
 category: "How-To"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-14T04:53:59.646Z"
-image: "/Trendforge/images/articles/how-to-set-up-a-passkey-for-your-google-account.svg"
-imageAlt: "Original cyber illustration for How to Set Up a Passkey for Your Google Account"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/how-to-set-up-a-passkey-for-your-google-account.1024x576.png"
+imageAlt: "Editorial image for How to Set Up a Passkey for Your Google Account"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## What a passkey changes

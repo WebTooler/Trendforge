@@ -5,11 +5,11 @@ slug: "apple-eyes-2029-ai-server-with-m-series-ultra-chips"
 category: "Technology"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-17T08:51:48.854Z"
-image: "/Trendforge/images/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.svg"
-imageAlt: "Original ai illustration for Apple Eyes 2029 AI Server With M‑Series Ultra Chips"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/apple-eyes-2029-ai-server-with-m-series-ultra-chips.1024x576.png"
+imageAlt: "Editorial image for Apple Eyes 2029 AI Server With M‑Series Ultra Chips"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## A Long‑Abandoned Line Re‑Enters the Spotlight

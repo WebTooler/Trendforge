@@ -5,11 +5,11 @@ slug: "beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-
 category: "Digital Life"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-13T11:49:56.851Z"
-image: "/Trendforge/images/articles/beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.svg"
-imageAlt: "Original drone illustration for Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/beyond-obscurity-navigating-the-dual-eras-of-drone-threats-and-ai-driven-vulnerabilities.1024x576.png"
+imageAlt: "Editorial image for Beyond Obscurity: Navigating the Dual Eras of Drone Threats and AI-Driven Vulnerabilities"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## The Collapse of Hidden Defenses

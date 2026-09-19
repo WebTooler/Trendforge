@@ -5,11 +5,11 @@ slug: "anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry"
 category: "AI"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-12T20:32:22.309Z"
-image: "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.svg"
-imageAlt: "Original ai-governance illustration for Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/anthropic-s-ceo-calls-for-an-ai-slow-down-what-it-means-for-the-industry.1024x576.png"
+imageAlt: "Editorial image for Anthropic’s CEO Calls for an AI Slow‑Down – What It Means for the Industry"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## The Moment of Caution

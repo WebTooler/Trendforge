@@ -5,11 +5,11 @@ slug: "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-p
 category: "AI"
 author: "Tejendra Pal Singh"
 publishedAt: "2026-09-19T05:15:21.452Z"
-image: "/Trendforge/images/articles/u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.svg"
-imageAlt: "Original cyber illustration for U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems"
-imageSource: "TrendForge original editorial visual"
-imageLicense: "Original"
-imageGeneratedBy: "TrendForge topic illustration engine v2"
+image: "/Trendforge/images/articles/u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.1024x576.png"
+imageAlt: "Editorial image for U.S. Agencies Board Oil Tankers After Cyberattacks Target Navigation and Propulsion Systems"
+imageSource: "Cloudflare Workers AI — FLUX.1 Schnell"
+imageLicense: "Model-generated"
+imageGeneratedBy: "Cloudflare FLUX.1 Schnell"
 ---
 
 ## Incident Overview
