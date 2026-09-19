@@ -44,7 +44,7 @@ jobs:
           test "$HEIGHT" = "630"
           mkdir -p klein-backfill/{images,results}
           echo "Model: $MODEL"
-          echo "Dimensions: $WIDTHx$HEIGHT"
+          echo "Dimensions: ${WIDTH}x${HEIGHT}"
           echo "Limit: ${LIMIT:-0}"
           echo "Production promotion: $PRODUCTION"
 
