@@ -43,8 +43,19 @@ if (!account || !token) throw new Error('CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_AP
 fs.mkdirSync(publicDir, { recursive: true });
 fs.mkdirSync('data', { recursive: true });
 
-const files = fs.existsSync(articleDir) ? fs.readdirSync(articleDir).filter(f => f.endsWith('.md')).sort() : [];
+const allFiles = fs.existsSync(articleDir) ? fs.readdirSync(articleDir).filter(f => f.endsWith('.md')).sort() : [];
+const status = await import('node:child_process').then(({ execFileSync }) => {
+  try { return execFileSync('git', ['status', '--porcelain', '--untracked-files=all', '--', articleDir], { encoding: 'utf8' }); }
+  catch { return ''; }
+});
+const files = status.split(/\r?\n/)
+  .map(line => line.match(/^\?\?\s+(.+)$/)?.[1])
+  .filter((file): file is string => Boolean(file) && file.startsWith(articleDir + '/') && file.endsWith('.md'))
+  .map(file => file.slice(articleDir.length + 1))
+  .filter(file => allFiles.includes(file))
+  .sort();
 const manifest: Record<string, unknown> = {};
+console.log(`FLUX image scope: ${files.length} newly generated article(s); existing published articles are intentionally excluded.`);
 let generated = 0;
 let skipped = 0;
 let failures = 0;
@@ -60,14 +71,6 @@ for (const file of files) {
 
   const outputFile = `${slug}.1024x576.png`;
   const outputPath = path.join(publicDir, outputFile);
-  const currentGenerator = field(raw, 'imageGeneratedBy');
-  const needsGeneration = currentGenerator !== 'Cloudflare FLUX.1 Schnell' || !fs.existsSync(outputPath);
-
-  if (!needsGeneration) {
-    skipped++;
-    manifest[slug] = { status: 'existing', image: '/Trendforge/images/articles/' + outputFile, generatedBy: MODEL, width: WIDTH, height: HEIGHT };
-    continue;
-  }
 
   const { brief, prompt } = buildImagePrompt({ title, description, category, body: raw });
   console.log(`Generating FLUX image for ${file}: ${brief.mode}; prompt=${prompt.length} chars`);
@@ -129,5 +132,5 @@ fs.writeFileSync(manifestPath, JSON.stringify({
   width: WIDTH, height: HEIGHT, steps: STEPS, generated, skipped, failed: failures, images: manifest
 }, null, 2) + '\n');
 
-console.log(`FLUX article image pipeline: generated=${generated}, existing=${skipped}, failed=${failures}`);
+console.log(`FLUX article image pipeline: generated=${generated}, existing=${skipped}, failed=${failures}, scopedToNewArticles=${files.length}`);
 if (failures > 0) process.exit(1);
