@@ -1,6 +1,6 @@
 ---
 title: "CFTC Sends Crypto Rule Draft to White House for Review"
-description: "The Commodity Futures Trading Commission has forwarded a preliminary crypto‑asset regulation package to the White House, marking an early step in potential federal oversight. The filing, titled RIN 3038‑AF80, is a prerule entry that has not yet moved to public comment, and its status follows a Senate defeat of the CLAR"
+description: "The Commodity Futures Trading Commission has forwarded a preliminary crypto‑asset regulation package to the White House, marking an early step in potential federal oversight. The filing, titled RIN 3038‑AF80, is a prerule entry that has not yet moved to public comment."
 slug: "cftc-sends-crypto-rule-draft-to-white-house-for-review"
 category: "Crypto"
 author: "Tejendra Pal Singh"
