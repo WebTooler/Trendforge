@@ -37,16 +37,22 @@ function formatPublishedAt(value?: string, fallback?: string) {
 function articleMarkdown(content:string[]){
  const blocks=content.map(block=>block.trim()).filter(Boolean);
  let markdown='';
+ const listKind=(value:string)=>{
+  if(/^[-*+]\\s/.test(value)) return 'unordered';
+  if(/^\\d+[.)]\\s/.test(value)) return 'ordered';
+  if(/^\\|/.test(value)) return 'table';
+  return '';
+ };
  for(let i=0;i<blocks.length;i++){
   const block=blocks[i];
   const previous=blocks[i-1];
-  const isList=/^(?:[-*+]\\s|\\d+[.)]\\s)/.test(block);
-  const previousIsList=previous ? /^(?:[-*+]\\s|\\d+[.)]\\s)/.test(previous) : false;
-  markdown += (i===0 ? '' : isList && previousIsList ? '\\n' : '\\n\\n') + block;
+  const kind=listKind(block);
+  const previousKind=previous ? listKind(previous) : '';
+  const continuation=kind!=='' && kind===previousKind;
+  markdown += (i===0 ? '' : continuation ? '\\n' : '\\n\\n') + block;
  }
  return markdown;
 }
-
 const markdownComponents={
  h1:({children}:{children:ReactNode})=><h2>{children}</h2>,
 };
