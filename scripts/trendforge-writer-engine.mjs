@@ -38,6 +38,25 @@ const loadEvidenceBlueprint=expectedTitle=>{
     return row?.readyForWriter ? row.evidence?.blueprint||null : null;
   }catch{return null;}
 };
+const normalizeGeneratedDraft=draft=>{
+  const out={...draft};
+  const text=String(out.content||'');
+  const parts=text.match(/[^.!?]+[.!?](?:\\s|$)/g)||[];
+  const cleaned=[]; let removed=0;
+  for(const sentence of parts){
+    const norm=sentence.toLowerCase().replace(/[^a-z0-9\\s]/g,'').replace(/\\s+/g,' ').trim();
+    const prev=cleaned.length?cleaned[cleaned.length-1].toLowerCase().replace(/[^a-z0-9\\s]/g,'').replace(/\\s+/g,' ').trim():'';
+    if(norm&&norm===prev){removed++;continue;}
+    cleaned.push(sentence);
+  }
+  if(removed) out.content=cleaned.join('').trim();
+  const desc=String(out.description||'').trim();
+  if(desc.length>320){
+    const clipped=desc.slice(0,320).replace(/\\s+\\S*$/,'').trim();
+    if(clipped.length>=100) out.description=clipped;
+  }
+  return {draft:out,removedDuplicateSentences:removed};
+};
 const topicAlignment=(requested,draft)=>{const source=String(requested||'');const generated=`${draft.title} ${draft.description} ${draft.content.slice(0,7000)}`;const a=topicTokens(source),b=topicTokens(generated),titleB=topicTokens(draft.title);const shared=[...a].filter(x=>b.has(x)),titleShared=[...a].filter(x=>titleB.has(x));const entities=[...entityTokens(source)].filter(x=>entityTokens(generated).has(x));const titleLower=draft.title.toLowerCase(),requestedLower=source.toLowerCase();const titleExactConcept=!!requestedLower&&(titleLower.includes(requestedLower.slice(0,Math.min(32,requestedLower.length)))||requestedLower.includes(titleLower.slice(0,Math.min(32,titleLower.length))));return{score:shared.length,shared:shared.slice(0,12),titleShared:titleShared.slice(0,12),entities:entities.slice(0,8),passed:titleShared.length>=1&&shared.length>=2||titleShared.length>=2||shared.length>=4||entities.length>=1||titleExactConcept};};
 
 export async function generateWithTrendForgeWriter({prompt,category='Technology',expectedTitle=''}){
@@ -53,7 +72,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
     if(!process.env[keyFor(provider)])continue;
     if(candidateAttempts>=MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE)break;
     const budget=loadBudget('writer');if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)break;budget.attempts+=1;candidateAttempts+=1;saveBudget(budget,'writer');console.log(`TrendForge Writer Engine: provider attempt ${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN} (candidate ${candidateAttempts}/${MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE}) — ${provider}.`);const started=Date.now();
-    try{const text=await request(provider,enginePrompt);if(!text.trim()){mark(provider,200,'Empty model response');console.log(`TrendForge Writer Engine: ${provider} returned an empty writer response after ${Date.now()-started}ms; no downstream validation was attempted.`);continue;}const draft=parseWriterJson(text);if(!draft||typeof draft.title!=='string'||typeof draft.description!=='string'||typeof draft.content!=='string'){mark(provider,200,'Invalid structured output');console.log(`TrendForge Writer Engine: ${provider} returned non-empty but invalid structured output after ${Date.now()-started}ms.`);continue;}const alignment=topicAlignment(requested,draft);if(requested&&!alignment.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected for topic drift after ${Date.now()-started}ms.`);continue;}const validation=validateDraft({title:draft.title,description:draft.description,content:draft.content,category:inferred});if(!validation.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication — ${validation.errors.join('; ')}.`);continue;}if(validation.metrics.words<MIN_WRITER_WORDS){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication — word count ${validation.metrics.words}.`);continue;}console.log(`TrendForge Writer Engine: ${provider} produced ${validation.metrics.words} words.`);markSuccess(provider);return{text:JSON.stringify(draft),provider,policyVersion:'2.7',topicAlignment:alignment};}catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Writer Engine: ${provider} failed [${status||'network'}] — ${message.slice(0,260)}.`);if(isHardQuota(status,message))break;}}
+    try{const text=await request(provider,enginePrompt);if(!text.trim()){mark(provider,200,'Empty model response');console.log(`TrendForge Writer Engine: ${provider} returned an empty writer response after ${Date.now()-started}ms; no downstream validation was attempted.`);continue;}let draft=parseWriterJson(text);if(!draft||typeof draft.title!=='string'||typeof draft.description!=='string'||typeof draft.content!=='string'){mark(provider,200,'Invalid structured output');console.log(`TrendForge Writer Engine: ${provider} returned non-empty but invalid structured output after ${Date.now()-started}ms.`);continue;}const normalized=normalizeGeneratedDraft(draft);draft=normalized.draft;if(normalized.removedDuplicateSentences)console.log(`TrendForge Writer Engine: ${provider} removed ${normalized.removedDuplicateSentences} exact consecutive duplicate sentence(s) deterministically before validation.`);const alignment=topicAlignment(requested,draft);if(requested&&!alignment.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected for topic drift after ${Date.now()-started}ms.`);continue;}const validation=validateDraft({title:draft.title,description:draft.description,content:draft.content,category:inferred});if(!validation.passed){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication — ${validation.errors.join('; ')}.`);continue;}if(validation.metrics.words<MIN_WRITER_WORDS){console.log(`TrendForge Writer Engine: ${provider} output rejected before publication — word count ${validation.metrics.words}.`);continue;}console.log(`TrendForge Writer Engine: ${provider} produced ${validation.metrics.words} words.`);markSuccess(provider);return{text:JSON.stringify(draft),provider,policyVersion:'2.7',topicAlignment:alignment};}catch(e){const message=e instanceof Error?e.message:String(e);const status=Number(message.match(/^(\d+)/)?.[1]||0);mark(provider,status,message);console.log(`TrendForge Writer Engine: ${provider} failed [${status||'network'}] — ${message.slice(0,260)}.`);if(isHardQuota(status,message))break;}}
   throw new Error('TrendForge Writer Engine: no provider produced a policy-valid article.');
 }
 
