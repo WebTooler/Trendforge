@@ -36,7 +36,32 @@ const topicAlignment=(requested,draft)=>{const source=String(requested||'');cons
 export async function generateWithTrendForgeWriter({prompt,category='Technology',expectedTitle='',blueprint=null}){
   const inferred=category&&category!=='Technology'?category:prompt.match(/(?:category|section)\s*[:=]\s*(AI|Technology|How-To|Innovation|Product Launches|Digital Life|Crypto)/i)?.[1]||category;
   const contract=buildWriterContract(inferred);
-  const evidenceCapacity=blueprint&&blueprint.mode&&blueprint.mode!=='blocked' ? `\n\nEVIDENCE CAPACITY OVERRIDE — ${blueprint.mode}:\n- Word range: ${blueprint.targetWords.min}-${blueprint.targetWords.max}; soft target ${blueprint.targetWords.soft}. Never pad.\n- H2 range: prefer ${blueprint.h2Guidance.preferredMin}-${blueprint.h2Guidance.preferredMax}; maximum ${blueprint.maxH2}. Fewer is valid when evidence does not justify more.\n- ${blueprint.instruction}` : '';\n  const contractWithEvidenceCapacity=`${contract}${evidenceCapacity}`;\n  const enginePrompt=`${contractWithEvidenceCapacity}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nSTRICT EVIDENCE WRITING CONTRACT:\n1. The retrieved evidence pack is the ONLY factual knowledge you may use.\n2. Before writing each factual sentence, identify the exact evidence passage that supports it. If no passage supports it, do not write the sentence.\n3. Never infer a product specification, comparison, motive, effect, user reaction, future outcome, price, date, rating, compatibility detail, competitor comparison, or market implication that is not explicit in the evidence.\n4. Do not combine passages into a stronger claim than either passage supports. Preserve attribution.\n5. POLARITY LOCK: preserve the exact direction of every factual relationship. Never turn increased into decreased, reduced into increased, rose into fell, gain into loss, approved into rejected, allowed into banned, launched into cancelled, confirmed into denied, or supports into opposes. Do not strengthen or weaken a factual relationship while paraphrasing.\n6. Preserve every material number, date, named entity, causal relationship and attribution. If the evidence does not support an exact value or relationship, omit the claim rather than guess.\n7. Avoid speculative future language unless the evidence explicitly states that possibility.\n8. Recommendations may be opinion only and must add no new factual premise.\n9. Write about ${WRITER_TARGET_MIN_WORDS}-${WRITER_TARGET_MAX_WORDS} words when evidence supports it; hard floor is ${MIN_WRITER_WORDS}. Do not pad or invent.\n10. Use 3-5 useful H2 sections.\n11. The requested story title is the hard topic boundary. Do not switch stories.\n12. Return only JSON with exactly title, description and content.\nFINAL SELF-CHECK: For every factual sentence, verify source support, polarity/direction, numbers, dates, entities, causal relationship and attribution. Delete any sentence that fails any check.`;
+  const evidenceCapacity=blueprint&&blueprint.mode&&blueprint.mode!=='blocked' ? `
+
+EVIDENCE CAPACITY OVERRIDE — ${blueprint.mode}:
+- Word range: ${blueprint.targetWords.min}-${blueprint.targetWords.max}; soft target ${blueprint.targetWords.soft}. Never pad.
+- H2 range: prefer ${blueprint.h2Guidance.preferredMin}-${blueprint.h2Guidance.preferredMax}; maximum ${blueprint.maxH2}. Fewer is valid when evidence does not justify more.
+- ${blueprint.instruction}` : '';
+  const contractWithEvidenceCapacity=`${contract}${evidenceCapacity}`;
+  const enginePrompt=`${contractWithEvidenceCapacity}
+
+RESEARCH / ARTICLE BRIEF:
+${prompt}
+
+STRICT EVIDENCE WRITING CONTRACT:
+1. The retrieved evidence pack is the ONLY factual knowledge you may use.
+2. Before writing each factual sentence, identify the exact evidence passage that supports it. If no passage supports it, do not write the sentence.
+3. Never infer a product specification, comparison, motive, effect, user reaction, future outcome, price, date, rating, compatibility detail, competitor comparison, or market implication that is not explicit in the evidence.
+4. Do not combine passages into a stronger claim than either passage supports. Preserve attribution.
+5. POLARITY LOCK: preserve the exact direction of every factual relationship.
+6. Preserve every material number, date, named entity, causal relationship and attribution. If unsupported, omit the claim rather than guess.
+7. Avoid speculative future language unless the evidence explicitly states that possibility.
+8. Recommendations may be opinion only and must add no new factual premise.
+9. Write within the evidence capacity above. Do not pad or invent.
+10. Use only the H2 range allowed by the evidence capacity above.
+11. The requested story title is the hard topic boundary. Do not switch stories.
+12. Return only JSON with exactly title, description and content.
+FINAL SELF-CHECK: Delete any sentence that fails evidence support, polarity, numbers, dates, entities, causality or attribution.`;
   const requested=expectedTitle||requestedTitle(prompt);let candidateAttempts=0;
   if(loadBudget('writer').attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)throw new Error('TrendForge Writer Engine: run-level AI provider budget exhausted.');
   for(const provider of available){
