@@ -84,14 +84,18 @@ jobs:
             return [
               'Create a polished, publication-quality editorial hero image for a technology/news article.',
               'Canvas: exactly 1200x630 pixels, horizontal 16:9 composition.',
-              'Visual-first, realistic editorial photography/illustration hybrid; strong subject hierarchy; cinematic but natural lighting; sophisticated newsroom aesthetic.',
-              'Represent the specific story visually, not generically. Use concrete objects, environments, systems, people only when genuinely useful to the story.',
-              'No logos, no brand marks, no watermarks, no captions, no headlines, no readable text, no letters or numbers, no fake UI text, no dashboards with legible content; screens must be blank or abstract.',
-              'Avoid generic abstract AI imagery unless the article is specifically about AI infrastructure or models.',
-              'Leave useful negative space where an article headline may overlay in a web layout.',
-              'Article title: ' + title,
-              'Article category: ' + category,
-              'Article summary: ' + description
+              'Visual-first, realistic editorial photography; strong subject hierarchy; natural newsroom/photojournalism lighting; sophisticated publication aesthetic; believable human anatomy and faces.',
+              'Create one clean editorial scene that communicates the story through people, objects, environment, and action — never through typography or interface graphics.',
+              'ABSOLUTE TEXT BAN: do not render the article title, summary, captions, labels, signs, logos, brand names, watermarks, letters, numbers, subtitles, UI text, charts with text, or readable writing anywhere in the image.',
+              'Computer monitors, phones, presentation screens, posters, badges, walls, papers and signs must be blank, softly blurred, cropped away, or contain only non-readable abstract shapes.',
+              'Do not create a title card, poster, presentation slide, hero banner, giant text area, holographic typography, fake dashboard, or decorative lettering.',
+              'Avoid generic glowing AI holograms and sci-fi interfaces. If people are shown, keep them natural and photographic rather than futuristic or synthetic.',
+              'Do not copy or spell any words from the article metadata into the image. Treat the metadata below as semantic context only.',
+              'Prefer a simple, credible composition similar to a major technology/business publication: one clear subject, supporting context, realistic depth, restrained visual effects.',
+              'Do not reserve a large empty header band. Use the full 16:9 frame for the editorial scene; any future headline overlay will be handled by the website separately.',
+              'Semantic story context — NEVER reproduce as visible text: ' + title,
+              'Category context: ' + category,
+              'Story context — visualize the meaning, not the words: ' + description
             ].join('\\n');
           }
 
