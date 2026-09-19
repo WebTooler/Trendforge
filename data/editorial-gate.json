@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T05:15:21.453Z",
+  "generatedAt": "2026-09-19T05:38:27.122Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3335,
-      "sentenceCount": 21,
+      "normalizedLength": 4015,
+      "sentenceCount": 23,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,13 +31,12 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "cbsnews.com",
-    "therecord.media",
-    "goodmorningamerica.com",
-    "techcrunch.com"
+    "aws.amazon.com"
   ],
+  "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 4,
-    "usablePassages": 64
+    "sourceCount": 1,
+    "usablePassages": 18,
+    "primarySourceCount": 0
   }
 }

@@ -2,13 +2,13 @@
   "version": 10,
   "providers": {
     "Groq": {
-      "failures": 42,
-      "quotaBlockedUntil": 1789794950598,
+      "failures": 44,
+      "quotaBlockedUntil": 1789796341788,
       "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6781, Requested 1916. Please try again in 5.2275s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6863, Requested 2307. Please try again in 8.774999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
       "lastClass": "rate_limit",
-      "successes": 25,
-      "lastSuccessAt": "2026-09-19T05:15:37.143Z"
+      "successes": 27,
+      "lastSuccessAt": "2026-09-19T05:38:48.450Z"
     },
     "Gemini": {
       "failures": 25,
@@ -32,24 +32,24 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 34,
-      "quotaBlockedUntil": 1789794949416,
-      "lastStatus": 0,
-      "lastError": "The operation was aborted due to timeout",
+      "failures": 35,
+      "quotaBlockedUntil": 1789796332382,
+      "lastStatus": 200,
+      "lastError": "Empty model response",
       "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 44,
+      "failures": 45,
       "quotaBlockedUntil": 0,
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 9,
-      "lastSuccessAt": "2026-09-19T05:15:51.244Z"
+      "successes": 10,
+      "lastSuccessAt": "2026-09-19T05:38:58.974Z"
     }
   },
   "rotationCursor": 1,
-  "updatedAt": "2026-09-19T05:15:51.244Z"
+  "updatedAt": "2026-09-19T05:38:58.974Z"
 }
