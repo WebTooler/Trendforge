@@ -142,7 +142,7 @@ for(const record of candidates){
       url:page.finalUrl,
       domain:domainOf(page.finalUrl),
       publisherFamily:fam,
-      title:source.title||record.title,
+      title:evidence.headline||source.title||record.title,
       primary:false,
       verified:true,
       credibilityTier:source.credibilityTier||'unknown',
