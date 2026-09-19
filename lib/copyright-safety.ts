@@ -18,8 +18,9 @@ const SAFE_LICENSES = new Set([
 export function isImageLicenseAllowed(image: ImageCandidate): boolean {
   const isLocalOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.source === 'TrendForge original editorial visual' && image.license === 'Original';
   const isAiOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.source === 'TrendForge AI image generator' && image.license === 'AI-generated original';
+  const isCloudflareAiOriginal = image.url.startsWith('/Trendforge/images/articles/') && image.source === 'Cloudflare Workers AI — FLUX.1 Schnell' && image.license === 'Model-generated';
   const isRemoteLicensed = image.url.startsWith('https://') && SAFE_LICENSES.has(image.license);
-  return isLocalOriginal || isAiOriginal || isRemoteLicensed;
+  return isLocalOriginal || isAiOriginal || isCloudflareAiOriginal || isRemoteLicensed;
 }
 
 export function filterSafeImages(images: ImageCandidate[]): ImageCandidate[] {
