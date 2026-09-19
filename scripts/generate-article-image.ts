@@ -35,9 +35,46 @@ function updateFrontmatter(raw: string, values: Record<string, string>) {
   return `---\n${lines.join('\n')}\n---${body}`;
 }
 
+function xmlEscape(value: string) {
+  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function fallbackFamily(title: string, description: string, category: string) {
+  const t = `${title} ${description} ${category}`.toLowerCase();
+  if (/\\b(bitcoin|ethereum|crypto|blockchain|token|defi)\\b/.test(t)) return 'crypto';
+  if (/\\b(cyber|security|malware|vulnerability|exploit|attack)\\b/.test(t)) return 'cyber';
+  if (/\\b(ai|artificial intelligence|model|robot)\\b/.test(t)) return 'ai';
+  if (/\\b(product|device|phone|laptop|chip|launch|release)\\b/.test(t)) return 'product';
+  if (/\\b(regulation|regulatory|policy|government|lawmakers|oversight)\\b/.test(t)) return 'governance';
+  return 'technology';
+}
+function makeSvgFallback(title: string, description: string, category: string) {
+  const family = fallbackFamily(title, description, category);
+  const palette: Record<string, [string, string, string]> = {
+    crypto: ['#17120a', '#f59e0b', '#fff7ed'],
+    cyber: ['#071b18', '#34d399', '#ecfdf5'],
+    ai: ['#081a2e', '#38bdf8', '#f8fafc'],
+    product: ['#1a1022', '#e879f9', '#fff7ed'],
+    governance: ['#071a2b', '#2dd4bf', '#f8fafc'],
+    technology: ['#0b1520', '#818cf8', '#f8fafc']
+  };
+  const [bg, accent, light] = palette[family] || palette.technology;
+  const safeTitle = xmlEscape(title);
+  const safeDescription = xmlEscape(description);
+  const shapes = family === 'crypto'
+    ? `<circle cx="850" cy="315" r="145" fill="${accent}" fill-opacity=".12" stroke="${accent}" stroke-width="8"/><path d="M850 205l55 70v80l-55 70-55-70v-80z" fill="${light}" fill-opacity=".12" stroke="${light}" stroke-width="6"/><path d="M620 315h460M850 145v340" stroke="${accent}" stroke-opacity=".28" stroke-width="5"/>`
+    : family === 'cyber'
+    ? `<rect x="680" y="120" width="110" height="390" rx="12" fill="${light}" fill-opacity=".06" stroke="${accent}" stroke-width="6"/><rect x="820" y="120" width="110" height="390" rx="12" fill="${light}" fill-opacity=".06" stroke="${accent}" stroke-width="6"/><rect x="960" y="120" width="110" height="390" rx="12" fill="${light}" fill-opacity=".06" stroke="${accent}" stroke-width="6"/><path d="M705 190h60m80 0h60m80 0h60M705 270h60m80 0h60m80 0h60M705 350h60m80 0h60m80 0h60" stroke="${accent}" stroke-width="8" stroke-linecap="round"/>`
+    : family === 'product'
+    ? `<ellipse cx="850" cy="510" rx="270" ry="34" fill="${accent}" opacity=".16"/><rect x="620" y="160" width="460" height="300" rx="34" fill="${light}" fill-opacity=".06" stroke="${accent}" stroke-width="8"/><rect x="665" y="205" width="370" height="210" rx="18" fill="${bg}" stroke="${light}" stroke-opacity=".5" stroke-width="4"/>`
+    : family === 'ai'
+    ? `<path d="M700 310h300M850 160v300M745 205l210 210M955 205L745 415" stroke="${accent}" stroke-opacity=".5" stroke-width="5"/><circle cx="850" cy="310" r="120" fill="${accent}" fill-opacity=".1" stroke="${accent}" stroke-width="8"/><circle cx="850" cy="310" r="32" fill="${light}" fill-opacity=".5"/>`
+    : `<rect x="650" y="155" width="420" height="300" rx="28" fill="${light}" fill-opacity=".05" stroke="${accent}" stroke-width="8"/><path d="M700 235h320M700 315h240M700 395h290" stroke="${accent}" stroke-opacity=".65" stroke-width="10" stroke-linecap="round"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc"><title id="title">${safeTitle}</title><desc id="desc">Original TrendForge ${family} fallback illustration. ${safeDescription}</desc><rect width="1200" height="630" fill="${bg}"/><circle cx="1030" cy="80" r="260" fill="${accent}" opacity=".07"/><circle cx="160" cy="560" r="220" fill="${accent}" opacity=".05"/>${shapes}<path d="M0 575H1200" stroke="${accent}" stroke-opacity=".25" stroke-width="3"/></svg>`;
+}
+
 const account = process.env.CLOUDFLARE_ACCOUNT_ID;
 const token = process.env.CLOUDFLARE_API_TOKEN;
-if (!account || !token) throw new Error('CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN are required');
+const cloudflareAvailable = Boolean(account && token);
 
 fs.mkdirSync(publicDir, { recursive: true });
 fs.mkdirSync('data', { recursive: true });
@@ -79,6 +116,7 @@ for (const file of files) {
   console.log(`Generating FLUX image for ${file}: ${brief.mode}; prompt=${prompt.length} chars`);
 
   try {
+    if (!cloudflareAvailable) throw new Error('Cloudflare AI credentials unavailable');
     const url = 'https://api.cloudflare.com/client/v4/accounts/' + account + '/ai/run/' + MODEL;
     const started = Date.now();
     const response = await fetch(url, {
@@ -124,9 +162,31 @@ for (const file of files) {
     generated++;
     console.log(`SUCCESS ${file}: ${WIDTH}x${HEIGHT}, ${normalized.length} bytes, ${elapsedMs}ms`);
   } catch (error) {
-    failures++;
-    manifest[slug] = { status: 'failed', error: String(error), generatedBy: MODEL, visualBrief: brief };
-    console.error(`FAILED ${file}: ${String(error)}`);
+    const reason = String(error);
+    try {
+      const fallbackFile = `${slug}.svg`;
+      const fallbackPath = path.join(publicDir, fallbackFile);
+      fs.writeFileSync(fallbackPath, makeSvgFallback(title, description, category));
+      raw = updateFrontmatter(raw, {
+        image: '/Trendforge/images/articles/' + fallbackFile,
+        imageAlt: 'Original TrendForge fallback illustration for ' + title,
+        imageSource: 'TrendForge original editorial visual',
+        imageLicense: 'Original',
+        imageGeneratedBy: 'TrendForge SVG fallback'
+      });
+      fs.writeFileSync(full, raw);
+      manifest[slug] = {
+        status: 'fallback', image: '/Trendforge/images/articles/' + fallbackFile,
+        generatedBy: 'TrendForge SVG fallback', fallbackFrom: MODEL,
+        fallbackReason: reason, width: 1200, height: 630, visualBrief: brief
+      };
+      console.warn(`FLUX unavailable for ${file}; using zero-quota SVG fallback: ${reason}`);
+      skipped++;
+    } catch (fallbackError) {
+      failures++;
+      manifest[slug] = { status: 'failed', error: reason, fallbackError: String(fallbackError), generatedBy: MODEL, visualBrief: brief };
+      console.error(`FAILED ${file}: FLUX and SVG fallback both failed: ${reason}; fallback=${String(fallbackError)}`);
+    }
   }
 }
 
@@ -135,5 +195,5 @@ fs.writeFileSync(manifestPath, JSON.stringify({
   width: WIDTH, height: HEIGHT, steps: STEPS, generated, skipped, failed: failures, images: manifest
 }, null, 2) + '\n');
 
-console.log(`FLUX article image pipeline: generated=${generated}, existing=${skipped}, failed=${failures}, scopedToNewArticles=${files.length}`);
+console.log(`FLUX article image pipeline: generated=${generated}, svgFallback=${skipped}, failed=${failures}, scopedToNewArticles=${files.length}`);
 if (failures > 0) process.exit(1);
