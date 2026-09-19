@@ -41,6 +41,8 @@ const buildEvidencePack=async(sources:{title?:string;url:string}[],storyTitle:st
 
 type ProviderResult={text:string;provider:string};
 const generateWithProviders=async(prompt:string,expectedTitle:string):Promise<ProviderResult>=>generateWithTrendForgeWriter({prompt,category:process.env.TRENDFORGE_WRITER_CATEGORY||'Technology',expectedTitle});
+const WORLD_CATEGORY_SIGNALS=/\b(greenland|denmark|nato|president|prime minister|parliament|diplomatic|diplomacy|geopolitics|sanctions|treaty|ceasefire|government|sovereignty|united nations|u\.n\.|foreign policy|military alliance)\b/gi;
+const classifyArticleCategory=(trend:Trend)=>{const text=`${trend.title} ${trend.description??''}`;const hits=new Set((text.match(WORLD_CATEGORY_SIGNALS)||[]).map(x=>x.toLowerCase()));const strong=/\b(greenland|denmark|nato|president|prime minister|parliament|geopolitics|sovereignty|diplomatic|treaty|ceasefire)\b/i.test(text);return strong&&hits.size>=2?'World':trend.category;};
 const parseModelJson=(raw:string):{title:string;description:string;content:string}=>{const text=raw.trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'').trim();try{return JSON.parse(text);}catch{}const start=text.indexOf('{'),end=text.lastIndexOf('}');if(start>=0&&end>start){try{return JSON.parse(text.slice(start,end+1));}catch{}}throw new Error('AI output was not valid JSON');};
 
 async function main(){
@@ -53,6 +55,9 @@ async function main(){
   const findRelated=(candidate:Trend)=>{const pa=publisherName(candidate);return trends.filter(item=>{if(item===candidate||item.link===candidate.link||existingTopicMatches(item,existingTopics))return false;const pb=publisherName(item);if(!isCrediblePublisher(pb)||pa.toLowerCase()===pb.toLowerCase())return false;const evidence=verifiedEvidence(item,verification);return evidence.sources.length>=2&&relatedEnough(candidate,item);}).sort((a,b)=>(b.score??0)-(a.score??0))[0];};
   const trend=eligible.find(candidate=>{const evidence=verifiedEvidence(candidate,verification);return evidence.sources.length>=1;});
   if(!trend){console.log('No new eligible trend with at least one independent reachable verified publisher evidence source and semantic uniqueness found.');process.exit(0);}
+  const category=classifyArticleCategory(trend);
+  process.env.TRENDFORGE_WRITER_CATEGORY=category;
+  console.log(`Editorial category: ${trend.category} -> ${category}`);
   const candidateEvidence=verifiedEvidence(trend,verification);
   const sources=candidateEvidence.sources.slice(0,8).map(s=>({title:s.title||`${publisherName(trend)}: ${trend.title}`,url:s.finalUrl||s.url||'',publishedAt:trend.publishedAt,role:sourceRole({title:s.title,url:s.finalUrl||s.url||''})})).filter(s=>s.url);
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
@@ -79,7 +84,7 @@ ${s.passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\
   const evidenceInstruction=strongEvidence
     ? `Cross-check the development across ${evidenceDomains.length} independent reachable source domains. Prefer primary/official evidence when available, while retaining independent secondary reporting for corroboration.`
     : primarySources.length ? 'Prefer the primary/official source for claims it directly establishes; preserve attribution and uncertainty for secondary reporting.' : 'Ground the article entirely in the validated publisher source; preserve attribution and uncertainty where applicable.';
-  const brief:ArticleBrief={title:trend.title,category:trend.category,angle:'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.',keyPoints:[trend.description??'Use only retrieved evidence passages.',evidenceInstruction],sources:evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt}))};
+  const brief:ArticleBrief={title:trend.title,category,angle:'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.',keyPoints:[trend.description??'Use only retrieved evidence passages.',evidenceInstruction],sources:evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt}))};
   const prompt=buildArticlePrompt(brief)+`\
 \
 RETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:\
