@@ -51,12 +51,27 @@ const evidenceReady=item=>integrityPassed(item)&&(
 );
 const readyPrimary=primary.filter(evidenceReady);
 const readyFallback=fallback.filter(evidenceReady);
-const queue=[...readyPrimary,...readyFallback].slice(0,8);
+const preWriterPath='data/pre-writer-pipeline.json';
+let preWriterByLink=new Map();
+let hasPreWriterGate=false;
+if(fs.existsSync(preWriterPath)){
+  try{
+    const preWriter=JSON.parse(fs.readFileSync(preWriterPath,'utf8'));
+    preWriterByLink=new Map((preWriter.candidates??[]).map(item=>[item.link,item]));
+    hasPreWriterGate=true;
+  }catch{preWriterByLink=new Map();hasPreWriterGate=false;}
+}
+const preWriterReady=item=>!hasPreWriterGate||preWriterByLink.get(item.link)?.readyForWriter===true;
+const queue=[...readyPrimary,...readyFallback].filter(preWriterReady).slice(0,8);
 
 const rawEligibleCount=ranked.filter(item=>item.eligible&&item.decision!=='reject').length;
 const integrityPassCount=ranked.filter(integrityPassed).length;
 console.log(`Evidence Integrity queue gate: ${integrityPassCount}/${rawEligibleCount} decision candidates passed source-page integrity.`);
-console.log(`Adaptive publishing queue: ${queue.length} candidate(s) (${readyPrimary.length+readyFallback.length} integrity-passed + evidence-ready before cap).`);
+console.log(`Adaptive publishing queue: ${queue.length} candidate(s) after pre-writer gate (${readyPrimary.length+readyFallback.length} integrity/evidence-ready before pre-writer filter).`);
+if(hasPreWriterGate && queue.length===0){
+  console.log('Pre-Writer Gate: BLOCK — no candidate reached readyForWriter. Generate Article and all AI generation paths are skipped.');
+  process.exit(0);
+}
 
 let published=false;
 let attempted=0;
