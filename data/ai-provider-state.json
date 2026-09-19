@@ -11,11 +11,11 @@
       "lastSuccessAt": "2026-09-19T02:30:45.410Z"
     },
     "Gemini": {
-      "failures": 20,
-      "quotaBlockedUntil": 1789765081348,
+      "failures": 21,
+      "quotaBlockedUntil": 1789787656025,
       "lastStatus": 200,
-      "lastError": "Invalid repair structured output",
-      "lastClass": "error"
+      "lastError": "Invalid structured output",
+      "lastClass": "transient"
     },
     "OpenAI": {
       "failures": 3,
@@ -32,8 +32,8 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 29,
-      "quotaBlockedUntil": 1789785041072,
+      "failures": 30,
+      "quotaBlockedUntil": 1789787693215,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -41,8 +41,8 @@
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
     "Cohere": {
-      "failures": 38,
-      "quotaBlockedUntil": 1789785054998,
+      "failures": 39,
+      "quotaBlockedUntil": 1789787612674,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -50,6 +50,6 @@
       "lastSuccessAt": "2026-09-18T12:48:53.508Z"
     }
   },
-  "rotationCursor": 1,
-  "updatedAt": "2026-09-19T02:30:45.410Z"
+  "rotationCursor": 2,
+  "updatedAt": "2026-09-19T03:14:27.571Z"
 }
