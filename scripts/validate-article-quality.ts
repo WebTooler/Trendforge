@@ -172,7 +172,8 @@ for (const file of files) {
   if (unsafe) errors.push(`${slug}: unsafe HTML/script content detected.`);
 
   const normalizedParagraphs = paragraphs.map(normalize).filter((p) => p.length >= 80);
-  const duplicateParagraph = normalizedParagraphs.some((p, i) => normalizedParagraphs.indexOf(p) !== i);
+  const paragraphSimilarity=(a:string,b:string)=>{const A=new Set(a.split(/\s+/).filter(w=>w.length>=4)),B=new Set(b.split(/\s+/).filter(w=>w.length>=4));if(!A.size||!B.size)return 0;return[...A].filter(x=>B.has(x)).length/Math.max(1,Math.min(A.size,B.size));};
+  const duplicateParagraph = normalizedParagraphs.some((p,i)=>normalizedParagraphs.some((q,j)=>j>i&&(p===q||(Math.min(p.length,q.length)>=140&&paragraphSimilarity(p,q)>=0.88))));
   if (duplicateParagraph) errors.push(`${slug}: duplicate substantive paragraph detected.`);
 
   const genericFailure = /^(click here|read more|lorem ipsum|test article)\.?$/i.test(main.trim());
