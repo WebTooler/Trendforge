@@ -12,15 +12,16 @@ const tokens=t=>new Set(String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').split
 function nums(t){
   const text=String(t),out=new Set();
   const wordNums={zero:0,one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12};
+  // Normalize compact clock forms such as 10AM to the same semantic value as 10 AM.\n  const normalizedTime=text.replace(/\\b(\\d{1,2})(?::(\\d{2}))?\\s*(am|pm)\\b/gi,(_,h,m,ampm)=>` ${h}:${m||'00'} ${ampm.toLowerCase()} `);
   const masked=text
     .replace(/\b[A-Za-z][A-Za-z0-9_-]*[-_]\d+(?:\.\d+)?\b/g,m=>' '.repeat(m.length))
     .replace(/\b[A-Z][A-Za-z0-9_-]*\s+\d+(?:\.\d+)?\b/g,m=>' '.repeat(m.length));
-  const re=/\b\d+(?:[.,]\d+)?\s*(?:%|percent|percentage|bn|billion|b|m|million|mn|thousand|k|x)?(?=$|[^A-Za-z0-9])/gi;
+  const re=/\b\d+(?:[.,]\d+)?\s*(?:%|percent|percentage|bn|billion|b|m|million|mn|thousand|k|x|am|pm)?(?=$|[^A-Za-z0-9])/gi;
   for(const raw of masked.match(re)||[]){
-    const m=raw.toLowerCase().replace(/,/g,'').trim().match(/^(\d+(?:\.\d+)?)\s*(%|percent|percentage|bn|billion|b|m|million|mn|thousand|k|x)?$/);
+    const m=raw.toLowerCase().replace(/,/g,'').trim().match(/^(\d+(?:\.\d+)?)\s*(%|percent|percentage|bn|billion|b|m|million|mn|thousand|k|x|am|pm)?$/);
     if(!m)continue;
     const u=m[2]||'';
-    const unit=u==='%'||u==='percent'||u==='percentage'?'pct':u==='bn'||u==='billion'||u==='b'?'b':u==='m'||u==='million'||u==='mn'?'m':u==='thousand'||u==='k'?'k':u==='x'?'x':'';
+    const unit=u==='%'||u==='percent'||u==='percentage'?'pct':u==='bn'||u==='billion'||u==='b'?'b':u==='m'||u==='million'||u==='mn'?'m':u==='thousand'||u==='k'?'k':u==='x'?'x':u==='am'||u==='pm'?'time':'';
     out.add(`${Number(m[1])}${unit}`)
   }
   for(const [word,n] of Object.entries(wordNums)){
