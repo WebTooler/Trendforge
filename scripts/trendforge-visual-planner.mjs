@@ -11,28 +11,27 @@ const ABSTRACT_TERMS = ['regulation','policy','legislation','governance','antitr
 function clean(value = '') { return value.replace(/\s+/g, ' ').trim(); }
 
 function namedPerson(title, description, body = '') {
-  const text = title + '. ' + description + ' ' + body.slice(0, 8000);
-  const blocked = /^(When|What|The|This|Moment|Why|Current|Industry|Regulatory|Economic|Open|Sources|AI|US|CEO|Anthropic|OpenAI|Google|Microsoft|Apple|Meta|Amazon|Nvidia|Tesla|Samsung)$/i;
-
-  // Prefer a person explicitly tied to a role/action in the article body.
+  const text = clean(title + '. ' + description + ' ' + body.slice(0, 8000));
+  const blocked = new Set(['When','What','The','This','Moment','Why','Current','Industry','Regulatory','Economic','Open','Sources','AI','US','CEO','CTO','Anthropic','OpenAI','Google','Microsoft','Apple','Meta','Amazon','Nvidia','Tesla','Samsung','Disney','Android','Crypto','Bitcoin','Digital Life','Move Passwords','Account Help','Sends Crypto Rule']);
+  const orgWords = /\b(?:Anthropic|OpenAI|Google|Microsoft|Apple|Meta|Amazon|Nvidia|Tesla|Samsung|Disney|JPMorgan|CFTC|Comp AI)\b/i;
+  const badPhrase = /\b(?:appoints|appointed|first-ever|first|raises|sends|moves|move|update|updates|set up|setup|what it means|valuation|rule|draft|passwords|apps|account|digital life)\b/i;
+  const isValid = value => {
+    const name = clean(value);
+    if (!name || blocked.has(name) || orgWords.test(name) || badPhrase.test(name)) return false;
+    const parts = name.split(/\s+/);
+    return parts.length >= 2 && parts.length <= 3 && parts.every(part => /^[A-Z][a-z'’-]+$/.test(part));
+  };
   const rolePatterns = [
-    /\b([A-Z][a-z]+\s+[A-Z][a-z]+),\s+(?:the\s+)?(?:chief executive|CEO|founder|president|minister|researcher|scientist|spokesperson|executive)\b/,
-    /\b([A-Z][a-z]+\s+[A-Z][a-z]+)\s+(?:publicly\s+)?(?:urged|called|warned|announced|argued|said|says)\b/,
-    /\b(?:by|when|from)\s+([A-Z][a-z]+\s+[A-Z][a-z]+)\b/
+    /\b([A-Z][a-z'’-]+\s+[A-Z][a-z'’-]+(?:\s+[A-Z][a-z'’-]+)?)\s*,\s+(?:the\s+)?(?:chief executive|CEO|CTO|founder|president|minister|researcher|scientist|spokesperson|executive|analyst)\b/,
+    /\b([A-Z][a-z'’-]+\s+[A-Z][a-z'’-]+(?:\s+[A-Z][a-z'’-]+)?)\s+(?:publicly\s+)?(?:urged|called|warned|announced|argued|said|says)\b/,
+    /\b(?:according to|interview with|interviewed by|led by|from|by)\s+([A-Z][a-z'’-]+\s+[A-Z][a-z'’-]+(?:\s+[A-Z][a-z'’-]+)?)\b/
   ];
   for (const pattern of rolePatterns) {
     const match = text.match(pattern);
-    if (match?.[1] && !blocked.test(match[1])) return match[1];
+    if (match?.[1] && isValid(match[1])) return clean(match[1]);
   }
-
-  // Fall back to two/three-word capitalized names, while excluding headings and organizations.
-  const matches = [...text.matchAll(/\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})\b/g)]
-    .map(m => m[1].trim())
-    .filter(x => !blocked.test(x) && !/^(The|When|What|This|AI|US)\s/i.test(x))
-    .filter(x => !/\b(?:Anthropic|OpenAI|Google|Microsoft|Apple|Meta|Amazon|Nvidia|Tesla|Samsung)\b/i.test(x));
-  return matches[0] || '';
+  return '';
 }
-
 function companyName(title, description) {
   const known = ['Anthropic','OpenAI','Google','Microsoft','Apple','Meta','Amazon','Nvidia','Tesla','Samsung','xAI','OpenRouter'];
   const text = (title + ' ' + description).toLowerCase();
@@ -48,11 +47,14 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
   let mode = 'editorial-photography', primarySubject = '', scene = '', supportingElements = [], composition = '';
   const avoid = ['generic office imagery','random tablet or laptop','generic futuristic technology','glowing holograms, floating code, HUDs and neon sci-fi effects','prominent readable text or fake headlines'];
   const personSignal = PERSON_PATTERNS.some(p => p.test(text));
+  const explicitPersonContext = /\b(?:ceo|chief executive|cto|founder|president|minister|researcher|scientist|spokesperson|executive|analyst)\b/i.test(text) && Boolean(person);
+  const howTo = /\b(?:how to|steps|setup|set up|guide|tutorial|safely|keep them current|between managers)\b/i.test(lower);
+  const personFirst = explicitPersonContext && !howTo;
   const product = PRODUCT_TERMS.find(term => lower.includes(term));
   const infrastructure = INFRA_TERMS.find(term => lower.includes(term));
   const abstract = ABSTRACT_TERMS.find(term => lower.includes(term));
 
-  if (personSignal && (person || company || /ceo|chief executive|founder|executive|researcher|spokesperson/i.test(text))) {
+  if (personFirst) {
     mode = 'documentary-person';
     primarySubject = person ? person + ', the central person named by the story' : (company ? company + ' executive/representative central to the story' : 'the central technology-industry executive or speaker');
     scene = 'A restrained documentary technology-publication photograph of the central person publicly speaking, being interviewed, or addressing an industry audience in a context that directly matches the article.';
@@ -79,6 +81,13 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
     supportingElements = ['at most one concrete metaphorical object or environmental cue tied directly to the story'];
     composition = 'One strong metaphor or visual action, restrained editorial treatment, clear hierarchy, no collage of unrelated symbols.';
     avoid.push('generic AI brain','random server rack','generic circuit board','stock-looking technology montage');
+  } else if (howTo) {
+    mode = 'editorial-product';
+    primarySubject = product ? 'the specific ' + product + ' and the concrete task described by the guide' : 'the concrete device, interface, or action required by the guide';
+    scene = 'A clean commissioned technology-publication photograph showing the real-world object or device involved in the procedure, with the action implied through physical context rather than fake interface text.';
+    supportingElements = ['one restrained contextual object directly involved in the task'];
+    composition = 'Single hero object or close physical detail, clean 16:9 framing, realistic materials, controlled depth of field, generous negative space.';
+    avoid.push('fake app screens','invented interface labels');
   } else {
     primarySubject = 'the most concrete physical subject, event, organization, or action explicitly described by the story';
     scene = 'A commissioned technology-publication photograph of that concrete subject or event, not a category-level representation.';
