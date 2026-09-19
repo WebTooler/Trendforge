@@ -97,17 +97,24 @@ jobs:
 
           function buildPrompt(title, description, category) {
             return [
-              'Create a polished, publication-quality editorial hero image for a technology/news article.',
-              'Canvas: exactly 1200x630 pixels, horizontal 16:9 composition.',
-              'Visual-first, realistic editorial photography; strong subject hierarchy; natural newsroom/photojournalism lighting; sophisticated publication aesthetic; believable human anatomy and faces.',
-              'Create one clean editorial scene that communicates the story through people, objects, environment, and action — never through typography or interface graphics.',
-              'ABSOLUTE TEXT BAN: do not render the article title, summary, captions, labels, signs, logos, brand names, watermarks, letters, numbers, subtitles, UI text, charts with text, or readable writing anywhere in the image.',
-              'Computer monitors, phones, presentation screens, posters, badges, walls, papers and signs must be blank, softly blurred, cropped away, or contain only non-readable abstract shapes.',
-              'Do not create a title card, poster, presentation slide, hero banner, giant text area, holographic typography, fake dashboard, or decorative lettering.',
-              'Avoid generic glowing AI holograms and sci-fi interfaces. If people are shown, keep them natural and photographic rather than futuristic or synthetic.',
-              'Do not copy or spell any words from the article metadata into the image. Treat the metadata below as semantic context only.',
-              'Prefer a simple, credible composition similar to a major technology/business publication: one clear subject, supporting context, realistic depth, restrained visual effects.',
-              'Do not reserve a large empty header band. Use the full 16:9 frame for the editorial scene; any future headline overlay will be handled by the website separately.',
+              'Create a premium editorial photograph that looks commissioned by a major technology publication, not an AI illustration.',
+              'Canvas: exactly 1024x576 pixels, horizontal 16:9 composition.',
+              'Use realistic editorial photography, natural lighting, believable materials and anatomy, restrained color, authentic depth of field, and a sophisticated technology-news magazine aesthetic.',
+              'MINIMALISM IS A CORE RULE: build the image around one clear hero subject or visual idea. Use only one or two supporting elements when they directly explain the story. Remove anything that does not help communicate the story.',
+              'Strong visual hierarchy: the subject should be immediately understandable at a glance. Prefer clean framing, breathing room, negative space, and an uncluttered background over busy scenes.',
+              'Prefer a compelling physical object, device, machine, infrastructure, environment, or other tangible subject over generic people-in-an-office imagery.',
+              'Do not fill the scene with multiple people, laptops, monitors, robots, props, decorative technology, city skylines, or unrelated objects. Avoid crowded compositions and visual clutter.',
+              'Avoid generic AI imagery and technology clichés: no glowing holograms, floating code, circuit overlays, futuristic HUDs, neon sci-fi interfaces, fake dashboards, or decorative digital effects.',
+              'When a specific real-world product is the subject of a review, launch, announcement, or comparison, prioritize visual fidelity to that product. Represent its known physical design, proportions, materials, distinctive hardware layout, camera arrangement, ports, buttons, controls, and finish as accurately as the available story context allows. Do not substitute a generic futuristic product.',
+              'For specific products, keep the product as the single hero subject and use only minimal contextual elements. Do not invent unrelated features or redesign the product.',
+              'If a recognizable brand or product name cannot be rendered accurately as text, do not fabricate readable branding. Preserve the product identity through its physical design rather than malformed lettering.',
+              'When a specific person is central to the story, do not create a clearly identifiable face. Prefer documentary-style framing from behind, over-the-shoulder, side/back silhouette, cropped framing, hands, or a person naturally shown from a distance. The human should support the story, not become a generic office-scene cliché.',
+              'ABSOLUTE READABLE-TEXT BAN: do not render article titles, summaries, captions, labels, signs, watermarks, subtitles, UI text, readable documents, fake headlines, or prominent intentional typography.',
+              'Background screens, monitors, phones, posters, papers, signs, dashboards, and interfaces may exist only as naturally blurred, cropped, distant, or unreadable environmental details. They must never become a visual focal point.',
+              'No title card, poster, presentation slide, giant text area, holographic typography, fake dashboard, or decorative lettering.',
+              'Do not copy or spell words from article metadata into the image. Treat metadata only as semantic story context.',
+              'Choose the simplest believable scene that communicates the article. When in doubt, simplify rather than add more objects, people, screens, effects, or visual detail.',
+              'Do not reserve a large empty header band. Use the full 16:9 frame for the editorial scene; any headline overlay will be handled separately by the website.',
               'Semantic story context — NEVER reproduce as visible text: ' + title,
               'Category context: ' + category,
               'Story context — visualize the meaning, not the words: ' + description
@@ -281,7 +288,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: trendforge-klein-4b-1200x630-backfill
+          name: trendforge-klein-4b-1024x576-backfill
           path: klein-backfill/
           if-no-files-found: error
           retention-days: 14
