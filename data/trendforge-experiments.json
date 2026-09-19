@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-19T16:02:23.238Z",
+  "updatedAt": "2026-09-19T20:57:59.883Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,9 +14,9 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 15,
-    "topics": 212,
-    "articles": 19
+    "runs": 16,
+    "topics": 221,
+    "articles": 20
   },
   "learningInput": {
     "version": 2,
@@ -88,42 +88,6 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9mSlhvWFNBVV9EYmNCcXBjVTBJSW5zM29EYmpBVl9QcF91R0hlTnZlQTRQOXBaS3dJSFF4d1VBTVpiX3NubEN2VGNtcnBTXzZBN19zQ0RvSTBraVVvSC03bzJ1TEhScVFVNmttSkZsRV9Rd25vNWFIaWNMU1dQUQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BcXF5bUF4LVdfTzg5MFBLVDBGS3NjT0cwalNiRGlLMWFlRGlmX3VKbjVyN1dkSXNNTVYzb1RQeFJkY2ZlMnI3dEhLdV9ZTVZvM0lsRjNWRzRZSjRTWThJYlR30gFnQVVfeXFMUGtJdWs0UWZvZFRrYVRrelJ3UUdKemZoY2hVeGdMaVhhWlR0U0xYQlJrT0pGU1BUSEFTdmhXUWpwU3pBUFkyZ0RlbkZZd2lFaERpQWJMME0tN3ltTE9pdUdlQXFqTnQycw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPb3Z4S3lUejNoakNEaEViQ3JMMXJhMlJicmJFYWNSb0hVX2xYMFVmQXJnbDV1UlJwX0NlOEVSVUpLc2NteXJobWY0Qm9wV2ZoVHZrc0ZzZ1lHemJVWUxrWmxSQjVwZTZPLWNveG0xNUM1YUhfcWotNWVaY3gwZlJMcXhuS0V3ck1XMGZWOGV2d1EwZG5TZ0FaaXR4a0RYVFlFRHVOZjRRUFI2TWY3LWVySVV2QUFTOWwwSENXaXU3cVJIc1UwSXAwYTZzWkxZNWV60gHWAUFVX3lxTE9lUVo4ZE1uTTh6aHp1eEIyTXFNc3BEVjZJeTVGT1dPSFRMN1F4WXhKSWxFUHVSbEZrcjIwRFRVMTd6Y1JsdmczZU15QzlPWDFxUTZXNDN1VUFoMVpwVG9lQlIwRmk1MmdkZHh0dlhsZ1dmT0tINXpNSTd5UVhyMl8tRVBsc1JPRFRwU2hwZVV4MUFlV05SUk1IYm40cTJfT1ZLYjRMMHVKaGxUemk3cGRTaHFTbTh4M1VrV3dDNWYzTnhPZzFrSW9VUXJHcHVuS0ZVYnN5NXc?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR08yYzN5SDdENWJmT1BXQUZYU3RwdDBydGt1OFdZNE9PaUx3bVg1eGtZbGRlVktRdlQ3bFFFbFc2TmoySW5YQ2tMTzluWnZJeENIWkRYdGQ0MDlxbDdUNG9oWTBkSEhNMFZnUlQtNEVZNjFqbEttMEhQdWtRNE5Kd2pOOGdCbmN4WEdlZTAwaTh6eUw3UXZnWFMwTFA?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1oVnJHU0hFU1p6Rk54WUFyckU5SnlndTJQY0NEcUEtS0lOQW5EUElYUjVuMnpOT2JRVmZ5TFdzNkIzR2xjUlB1NEhtYU1fV0l6WDczQk0xaW1SZHVBXzViS1FxMjNzcDg?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSTJBemVqQnJDbFBYTmh1dkhjaEtOSHU0RUViMzZ5aml3UmxuMmhvbGtaTzktQUkzTDd0TE1ZX0EwbFdfQkZXam43VFUwbEY3OFVGd21ZanI5SWpPTW1hWG1Fa0VwcF84d0ZSVHQzQWpvckZPTThLSUI3ZF9UY004YTViMlNjdF9ZdzJ5VEdPcDF1cERMSW9zbkRvdw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSWZPMlZuOVJIUXh6RWxndUJmdmVUVEhpa0E4NGZ1WWlQWHZ5alkxbmhwWmRRU1VLQjRSZEYzanA3M2Z1MXFoVDJiSFNCWGw4dWNuVXB0UEJFWDBBQ1FWMDhsVUVYWDZfTlRuUE1pYUVlOHpQTFdaX19vV3NpMTZDd2hwQWJubXc2WW83RWZTNDhYLTZDNGgwZGZyVjRIbGwxdnBQZE5Eb9IBrAFBVV95cUxPaUxhcXdfcWc1RUFfQWhiX2JNS0hhbGlMQ0s5VzRYV0NHdjNVRXJOSkVjQ0xYTlpfMndoeVZDdHVWWDNQMTg2YkhmUkNIY3VYV1dDTUFYaU1UU0E4SzU5eVR3UHMzR3Zla0NtUmxLaFo0QWcxeXhLMU1yeTJsbmlsSjBZNGJ5RWZJUVdYQWtMVVpDcDlPVGNwWFdXd0dhVmVWSVhNREcyTEhVR2FN?oc=5",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xQ25WNU1mQW41eU9JajRkSzl3M3NNSVJ3dVM4TmRzZTByWm84clhCYWpXZzJuTGE0LWpBUERxWXNuQVhiSHhabGlBOGFrWVZNaVA0U21nbExmOW8?oc=5",
         "bucket": "control"
       },
@@ -166,46 +130,46 @@
       {
         "key": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNkJoMXpka2RtQ2Y4ZTFGQ1hfellDbDBBSVgxR2ZWMW5xeXF3aU5KellVM09aa0hMTnYyZXhEWkRYTS1uZTdGVGJmbHhaZGJXZk95NWQtdkgyVFBaVmlNUFhDT1g0UmpMdTBYSFJjN0gxdVpkTS1YU0tZckQ3Ni1EeG1fd29RUDNIZzhBb184dDVXRVdpR1hXV2lRSEZHdw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOd2JUVnRBU0lXS2FuZmJqcUVfRXZiUW1ZZkU2QUxTeVBVRWlMWW5jcm1FXzJ4UzV5Q1QtSTVmNzdrekFQS2pNVXhpVmtUZUpqMGdhS1Z5T3pNMkZJVEdOTjBqMUl6V3pLRkZMdHgxMnNMVzhhbnBmWXdoZ1lFSXQ5aXBLaDNYLUN6Rm1CNjY0V0xjSURVcV8zcTA1ZUFNVmlGVTV3MXpvVXljbmRQZUMxYzRiY0xzNmktS2xOUVhoQklZYUdOdjBxcmh6c1hNT254d2Vj?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdkNoYkh1c3Q5M202YVZEV0FvWVRPVGxndFRkR3hNMGpZT2I2N0JUSGlsZWZHVDFUM2R1cXBPRjFxbS1CZkhjS3lrRFN1eTFkWWloT1Q2VHNNOVVWSVVOUHFIbkNjT3g5VXVFQ3dTeEhaTjdXd0dleVhmVHRGcEh0MFdUZ1dTbnhwYjVTNDBqdzZaTm1hSDVhRnlEQdIBoAFBVV95cUxOc1hic1lOWTVoak1NUE1raHJ4QVV5aDlZNmxFVndqV1A4eTVPN19FNWhCNElfMDAycHNWbG12dktoS29WX1RuSGg1RFBqOFE3cENSVXNtZW1sQm9QYzdvRmVKMkRCNjdnT3lpWmY4dmM5TXRUaHFSbTJLcmVkVGZzdC10TXhfTWNFWWMxOHR1c0hua0lYbHhjcll6SlNuZEl2?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/policy/997805/trump-cnn-msnow-politico-ban",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yVXE5YTI5dDR5YjNpVHIzYnhMQ3huclFnajVuczZBaU40U2RqQkFXMFVOVXJJTWo5SzlVN0tQMkhvdm84bDJMa2lkc2NKbDlHWVFlX2c4VzFyVmFqdFdzbkdqMDNBSXE0N3ZHR3BKdVBzcG44emoxcA?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRnFFUE00amhVMG1WMmZZMTQ2Smt4cXFrbDlodUg0cnVNZGhyY2lIZEVNaG1uNUUta1dMd2IxeFVBMS1BLURpUlcxOXliQVQtaGhscFVXTkJmZ040ekdpM1V0djF2WXlZYzJ4alVCMmhtNmQzaHlwMTB0TzF4aUVDckRvdzdDMXpVRklvdGpScFFONVpjNmZhVEhvNGhiUlZvMjNPdkJrc1bSAa4BQVVfeXFMTXNXaW41TXQ4WFpCeUh2N3ZxLUJvNmhmUkhlX2pnQU5UakdWZ203VHVMTi1OR0tFTXNHeWxrN0ZrdTRHQ3MtWkVHM1pfNDFJMUhZOFNPX1k3cm9JUGVWT2Zqby1ibTN6OTNJRy0yeXZzQlJ6b1hHZXlDY3EzLWFSeC1ieHBwUlZYdEN2OTBOd2gwWTRGdjJWVl82S3NuQXRLbmc3MDc4a2ZNSDFsLURB?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdlUxSzVyRDR0XzBRTk1iWDRRcDRKQU40eG1mc3hKNk5jV0JpSFlKODh3czVtek0xaE9uelpfbzFzNlRrOExPX2l1ZFNTQU85dzUtc19rck1nQXZweFllekpGeHVBQWp2VXN4WkhRLUVaSjR5RGo4MEsyLWdkZmhiaWk1ZGdjQl9j?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2ZIZm96WTJEd0VmOHpDRlh5NXhvNjRwSVhQTHR2U3JIRjJ6QVdqRjgtYkxMaFRvVzRVTkxDMDcxV1FOOXpYeDhaMGU1M3h6NlBUR2p2Y054d1I5enVQR1JwbnRVN3RHSHJRVVFWcjNfcFNqTU9OWmFyajNRWWM3XzJyb1hCNm10dFVTRGdxaUMtd19lZVc3SURLMGZMQVRILUdfbUVXZVRNUQ?oc=5",
+        "bucket": "control"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9mSlhvWFNBVV9EYmNCcXBjVTBJSW5zM29EYmpBVl9QcF91R0hlTnZlQTRQOXBaS3dJSFF4d1VBTVpiX3NubEN2VGNtcnBTXzZBN19zQ0RvSTBraVVvSC03bzJ1TEhScVFVNmttSkZsRV9Rd25vNWFIaWNMU1dQUQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BcXF5bUF4LVdfTzg5MFBLVDBGS3NjT0cwalNiRGlLMWFlRGlmX3VKbjVyN1dkSXNNTVYzb1RQeFJkY2ZlMnI3dEhLdV9ZTVZvM0lsRjNWRzRZSjRTWThJYlR30gFnQVVfeXFMUGtJdWs0UWZvZFRrYVRrelJ3UUdKemZoY2hVeGdMaVhhWlR0U0xYQlJrT0pGU1BUSEFTdmhXUWpwU3pBUFkyZ0RlbkZZd2lFaERpQWJMME0tN3ltTE9pdUdlQXFqTnQycw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPb3Z4S3lUejNoakNEaEViQ3JMMXJhMlJicmJFYWNSb0hVX2xYMFVmQXJnbDV1UlJwX0NlOEVSVUpLc2NteXJobWY0Qm9wV2ZoVHZrc0ZzZ1lHemJVWUxrWmxSQjVwZTZPLWNveG0xNUM1YUhfcWotNWVaY3gwZlJMcXhuS0V3ck1XMGZWOGV2d1EwZG5TZ0FaaXR4a0RYVFlFRHVOZjRRUFI2TWY3LWVySVV2QUFTOWwwSENXaXU3cVJIc1UwSXAwYTZzWkxZNWV60gHWAUFVX3lxTE9lUVo4ZE1uTTh6aHp1eEIyTXFNc3BEVjZJeTVGT1dPSFRMN1F4WXhKSWxFUHVSbEZrcjIwRFRVMTd6Y1JsdmczZU15QzlPWDFxUTZXNDN1VUFoMVpwVG9lQlIwRmk1MmdkZHh0dlhsZ1dmT0tINXpNSTd5UVhyMl8tRVBsc1JPRFRwU2hwZVV4MUFlV05SUk1IYm40cTJfT1ZLYjRMMHVKaGxUemk3cGRTaHFTbTh4M1VrV3dDNWYzTnhPZzFrSW9VUXJHcHVuS0ZVYnN5NXc?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR08yYzN5SDdENWJmT1BXQUZYU3RwdDBydGt1OFdZNE9PaUx3bVg1eGtZbGRlVktRdlQ3bFFFbFc2TmoySW5YQ2tMTzluWnZJeENIWkRYdGQ0MDlxbDdUNG9oWTBkSEhNMFZnUlQtNEVZNjFqbEttMEhQdWtRNE5Kd2pOOGdCbmN4WEdlZTAwaTh6eUw3UXZnWFMwTFA?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1oVnJHU0hFU1p6Rk54WUFyckU5SnlndTJQY0NEcUEtS0lOQW5EUElYUjVuMnpOT2JRVmZ5TFdzNkIzR2xjUlB1NEhtYU1fV0l6WDczQk0xaW1SZHVBXzViS1FxMjNzcDg?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSTJBemVqQnJDbFBYTmh1dkhjaEtOSHU0RUViMzZ5aml3UmxuMmhvbGtaTzktQUkzTDd0TE1ZX0EwbFdfQkZXam43VFUwbEY3OFVGd21ZanI5SWpPTW1hWG1Fa0VwcF84d0ZSVHQzQWpvckZPTThLSUI3ZF9UY004YTViMlNjdF9ZdzJ5VEdPcDF1cERMSW9zbkRvdw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSWZPMlZuOVJIUXh6RWxndUJmdmVUVEhpa0E4NGZ1WWlQWHZ5alkxbmhwWmRRU1VLQjRSZEYzanA3M2Z1MXFoVDJiSFNCWGw4dWNuVXB0UEJFWDBBQ1FWMDhsVUVYWDZfTlRuUE1pYUVlOHpQTFdaX19vV3NpMTZDd2hwQWJubXc2WW83RWZTNDhYLTZDNGgwZGZyVjRIbGwxdnBQZE5Eb9IBrAFBVV95cUxPaUxhcXdfcWc1RUFfQWhiX2JNS0hhbGlMQ0s5VzRYV0NHdjNVRXJOSkVjQ0xYTlpfMndoeVZDdHVWWDNQMTg2YkhmUkNIY3VYV1dDTUFYaU1UU0E4SzU5eVR3UHMzR3Zla0NtUmxLaFo0QWcxeXhLMU1yeTJsbmlsSjBZNGJ5RWZJUVdYQWtMVVpDcDlPVGNwWFdXd0dhVmVWSVhNREcyTEhVR2FN?oc=5",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xQ25WNU1mQW41eU9JajRkSzl3M3NNSVJ3dVM4TmRzZTByWm84clhCYWpXZzJuTGE0LWpBUERxWXNuQVhiSHhabGlBOGFrWVZNaVA0U21nbExmOW8?oc=5",
         "bucket": "control"
       },
@@ -248,46 +212,46 @@
       {
         "key": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNkJoMXpka2RtQ2Y4ZTFGQ1hfellDbDBBSVgxR2ZWMW5xeXF3aU5KellVM09aa0hMTnYyZXhEWkRYTS1uZTdGVGJmbHhaZGJXZk95NWQtdkgyVFBaVmlNUFhDT1g0UmpMdTBYSFJjN0gxdVpkTS1YU0tZckQ3Ni1EeG1fd29RUDNIZzhBb184dDVXRVdpR1hXV2lRSEZHdw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOd2JUVnRBU0lXS2FuZmJqcUVfRXZiUW1ZZkU2QUxTeVBVRWlMWW5jcm1FXzJ4UzV5Q1QtSTVmNzdrekFQS2pNVXhpVmtUZUpqMGdhS1Z5T3pNMkZJVEdOTjBqMUl6V3pLRkZMdHgxMnNMVzhhbnBmWXdoZ1lFSXQ5aXBLaDNYLUN6Rm1CNjY0V0xjSURVcV8zcTA1ZUFNVmlGVTV3MXpvVXljbmRQZUMxYzRiY0xzNmktS2xOUVhoQklZYUdOdjBxcmh6c1hNT254d2Vj?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdkNoYkh1c3Q5M202YVZEV0FvWVRPVGxndFRkR3hNMGpZT2I2N0JUSGlsZWZHVDFUM2R1cXBPRjFxbS1CZkhjS3lrRFN1eTFkWWloT1Q2VHNNOVVWSVVOUHFIbkNjT3g5VXVFQ3dTeEhaTjdXd0dleVhmVHRGcEh0MFdUZ1dTbnhwYjVTNDBqdzZaTm1hSDVhRnlEQdIBoAFBVV95cUxOc1hic1lOWTVoak1NUE1raHJ4QVV5aDlZNmxFVndqV1A4eTVPN19FNWhCNElfMDAycHNWbG12dktoS29WX1RuSGg1RFBqOFE3cENSVXNtZW1sQm9QYzdvRmVKMkRCNjdnT3lpWmY4dmM5TXRUaHFSbTJLcmVkVGZzdC10TXhfTWNFWWMxOHR1c0hua0lYbHhjcll6SlNuZEl2?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/policy/997805/trump-cnn-msnow-politico-ban",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yVXE5YTI5dDR5YjNpVHIzYnhMQ3huclFnajVuczZBaU40U2RqQkFXMFVOVXJJTWo5SzlVN0tQMkhvdm84bDJMa2lkc2NKbDlHWVFlX2c4VzFyVmFqdFdzbkdqMDNBSXE0N3ZHR3BKdVBzcG44emoxcA?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRnFFUE00amhVMG1WMmZZMTQ2Smt4cXFrbDlodUg0cnVNZGhyY2lIZEVNaG1uNUUta1dMd2IxeFVBMS1BLURpUlcxOXliQVQtaGhscFVXTkJmZ040ekdpM1V0djF2WXlZYzJ4alVCMmhtNmQzaHlwMTB0TzF4aUVDckRvdzdDMXpVRklvdGpScFFONVpjNmZhVEhvNGhiUlZvMjNPdkJrc1bSAa4BQVVfeXFMTXNXaW41TXQ4WFpCeUh2N3ZxLUJvNmhmUkhlX2pnQU5UakdWZ203VHVMTi1OR0tFTXNHeWxrN0ZrdTRHQ3MtWkVHM1pfNDFJMUhZOFNPX1k3cm9JUGVWT2Zqby1ibTN6OTNJRy0yeXZzQlJ6b1hHZXlDY3EzLWFSeC1ieHBwUlZYdEN2OTBOd2gwWTRGdjJWVl82S3NuQXRLbmc3MDc4a2ZNSDFsLURB?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdlUxSzVyRDR0XzBRTk1iWDRRcDRKQU40eG1mc3hKNk5jV0JpSFlKODh3czVtek0xaE9uelpfbzFzNlRrOExPX2l1ZFNTQU85dzUtc19rck1nQXZweFllekpGeHVBQWp2VXN4WkhRLUVaSjR5RGo4MEsyLWdkZmhiaWk1ZGdjQl9j?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2ZIZm96WTJEd0VmOHpDRlh5NXhvNjRwSVhQTHR2U3JIRjJ6QVdqRjgtYkxMaFRvVzRVTkxDMDcxV1FOOXpYeDhaMGU1M3h6NlBUR2p2Y054d1I5enVQR1JwbnRVN3RHSHJRVVFWcjNfcFNqTU9OWmFyajNRWWM3XzJyb1hCNm10dFVTRGdxaUMtd19lZVc3SURLMGZMQVRILUdfbUVXZVRNUQ?oc=5",
+        "bucket": "control"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9mSlhvWFNBVV9EYmNCcXBjVTBJSW5zM29EYmpBVl9QcF91R0hlTnZlQTRQOXBaS3dJSFF4d1VBTVpiX3NubEN2VGNtcnBTXzZBN19zQ0RvSTBraVVvSC03bzJ1TEhScVFVNmttSkZsRV9Rd25vNWFIaWNMU1dQUQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1BcXF5bUF4LVdfTzg5MFBLVDBGS3NjT0cwalNiRGlLMWFlRGlmX3VKbjVyN1dkSXNNTVYzb1RQeFJkY2ZlMnI3dEhLdV9ZTVZvM0lsRjNWRzRZSjRTWThJYlR30gFnQVVfeXFMUGtJdWs0UWZvZFRrYVRrelJ3UUdKemZoY2hVeGdMaVhhWlR0U0xYQlJrT0pGU1BUSEFTdmhXUWpwU3pBUFkyZ0RlbkZZd2lFaERpQWJMME0tN3ltTE9pdUdlQXFqTnQycw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPb3Z4S3lUejNoakNEaEViQ3JMMXJhMlJicmJFYWNSb0hVX2xYMFVmQXJnbDV1UlJwX0NlOEVSVUpLc2NteXJobWY0Qm9wV2ZoVHZrc0ZzZ1lHemJVWUxrWmxSQjVwZTZPLWNveG0xNUM1YUhfcWotNWVaY3gwZlJMcXhuS0V3ck1XMGZWOGV2d1EwZG5TZ0FaaXR4a0RYVFlFRHVOZjRRUFI2TWY3LWVySVV2QUFTOWwwSENXaXU3cVJIc1UwSXAwYTZzWkxZNWV60gHWAUFVX3lxTE9lUVo4ZE1uTTh6aHp1eEIyTXFNc3BEVjZJeTVGT1dPSFRMN1F4WXhKSWxFUHVSbEZrcjIwRFRVMTd6Y1JsdmczZU15QzlPWDFxUTZXNDN1VUFoMVpwVG9lQlIwRmk1MmdkZHh0dlhsZ1dmT0tINXpNSTd5UVhyMl8tRVBsc1JPRFRwU2hwZVV4MUFlV05SUk1IYm40cTJfT1ZLYjRMMHVKaGxUemk3cGRTaHFTbTh4M1VrV3dDNWYzTnhPZzFrSW9VUXJHcHVuS0ZVYnN5NXc?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR08yYzN5SDdENWJmT1BXQUZYU3RwdDBydGt1OFdZNE9PaUx3bVg1eGtZbGRlVktRdlQ3bFFFbFc2TmoySW5YQ2tMTzluWnZJeENIWkRYdGQ0MDlxbDdUNG9oWTBkSEhNMFZnUlQtNEVZNjFqbEttMEhQdWtRNE5Kd2pOOGdCbmN4WEdlZTAwaTh6eUw3UXZnWFMwTFA?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1oVnJHU0hFU1p6Rk54WUFyckU5SnlndTJQY0NEcUEtS0lOQW5EUElYUjVuMnpOT2JRVmZ5TFdzNkIzR2xjUlB1NEhtYU1fV0l6WDczQk0xaW1SZHVBXzViS1FxMjNzcDg?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSTJBemVqQnJDbFBYTmh1dkhjaEtOSHU0RUViMzZ5aml3UmxuMmhvbGtaTzktQUkzTDd0TE1ZX0EwbFdfQkZXam43VFUwbEY3OFVGd21ZanI5SWpPTW1hWG1Fa0VwcF84d0ZSVHQzQWpvckZPTThLSUI3ZF9UY004YTViMlNjdF9ZdzJ5VEdPcDF1cERMSW9zbkRvdw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSWZPMlZuOVJIUXh6RWxndUJmdmVUVEhpa0E4NGZ1WWlQWHZ5alkxbmhwWmRRU1VLQjRSZEYzanA3M2Z1MXFoVDJiSFNCWGw4dWNuVXB0UEJFWDBBQ1FWMDhsVUVYWDZfTlRuUE1pYUVlOHpQTFdaX19vV3NpMTZDd2hwQWJubXc2WW83RWZTNDhYLTZDNGgwZGZyVjRIbGwxdnBQZE5Eb9IBrAFBVV95cUxPaUxhcXdfcWc1RUFfQWhiX2JNS0hhbGlMQ0s5VzRYV0NHdjNVRXJOSkVjQ0xYTlpfMndoeVZDdHVWWDNQMTg2YkhmUkNIY3VYV1dDTUFYaU1UU0E4SzU5eVR3UHMzR3Zla0NtUmxLaFo0QWcxeXhLMU1yeTJsbmlsSjBZNGJ5RWZJUVdYQWtMVVpDcDlPVGNwWFdXd0dhVmVWSVhNREcyTEhVR2FN?oc=5",
-        "bucket": "variant"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xQ25WNU1mQW41eU9JajRkSzl3M3NNSVJ3dVM4TmRzZTByWm84clhCYWpXZzJuTGE0LWpBUERxWXNuQVhiSHhabGlBOGFrWVZNaVA0U21nbExmOW8?oc=5",
         "bucket": "control"
       },
@@ -330,6 +294,42 @@
       {
         "key": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxQNkJoMXpka2RtQ2Y4ZTFGQ1hfellDbDBBSVgxR2ZWMW5xeXF3aU5KellVM09aa0hMTnYyZXhEWkRYTS1uZTdGVGJmbHhaZGJXZk95NWQtdkgyVFBaVmlNUFhDT1g0UmpMdTBYSFJjN0gxdVpkTS1YU0tZckQ3Ni1EeG1fd29RUDNIZzhBb184dDVXRVdpR1hXV2lRSEZHdw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOd2JUVnRBU0lXS2FuZmJqcUVfRXZiUW1ZZkU2QUxTeVBVRWlMWW5jcm1FXzJ4UzV5Q1QtSTVmNzdrekFQS2pNVXhpVmtUZUpqMGdhS1Z5T3pNMkZJVEdOTjBqMUl6V3pLRkZMdHgxMnNMVzhhbnBmWXdoZ1lFSXQ5aXBLaDNYLUN6Rm1CNjY0V0xjSURVcV8zcTA1ZUFNVmlGVTV3MXpvVXljbmRQZUMxYzRiY0xzNmktS2xOUVhoQklZYUdOdjBxcmh6c1hNT254d2Vj?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdkNoYkh1c3Q5M202YVZEV0FvWVRPVGxndFRkR3hNMGpZT2I2N0JUSGlsZWZHVDFUM2R1cXBPRjFxbS1CZkhjS3lrRFN1eTFkWWloT1Q2VHNNOVVWSVVOUHFIbkNjT3g5VXVFQ3dTeEhaTjdXd0dleVhmVHRGcEh0MFdUZ1dTbnhwYjVTNDBqdzZaTm1hSDVhRnlEQdIBoAFBVV95cUxOc1hic1lOWTVoak1NUE1raHJ4QVV5aDlZNmxFVndqV1A4eTVPN19FNWhCNElfMDAycHNWbG12dktoS29WX1RuSGg1RFBqOFE3cENSVXNtZW1sQm9QYzdvRmVKMkRCNjdnT3lpWmY4dmM5TXRUaHFSbTJLcmVkVGZzdC10TXhfTWNFWWMxOHR1c0hua0lYbHhjcll6SlNuZEl2?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/policy/997805/trump-cnn-msnow-politico-ban",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yVXE5YTI5dDR5YjNpVHIzYnhMQ3huclFnajVuczZBaU40U2RqQkFXMFVOVXJJTWo5SzlVN0tQMkhvdm84bDJMa2lkc2NKbDlHWVFlX2c4VzFyVmFqdFdzbkdqMDNBSXE0N3ZHR3BKdVBzcG44emoxcA?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRnFFUE00amhVMG1WMmZZMTQ2Smt4cXFrbDlodUg0cnVNZGhyY2lIZEVNaG1uNUUta1dMd2IxeFVBMS1BLURpUlcxOXliQVQtaGhscFVXTkJmZ040ekdpM1V0djF2WXlZYzJ4alVCMmhtNmQzaHlwMTB0TzF4aUVDckRvdzdDMXpVRklvdGpScFFONVpjNmZhVEhvNGhiUlZvMjNPdkJrc1bSAa4BQVVfeXFMTXNXaW41TXQ4WFpCeUh2N3ZxLUJvNmhmUkhlX2pnQU5UakdWZ203VHVMTi1OR0tFTXNHeWxrN0ZrdTRHQ3MtWkVHM1pfNDFJMUhZOFNPX1k3cm9JUGVWT2Zqby1ibTN6OTNJRy0yeXZzQlJ6b1hHZXlDY3EzLWFSeC1ieHBwUlZYdEN2OTBOd2gwWTRGdjJWVl82S3NuQXRLbmc3MDc4a2ZNSDFsLURB?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdlUxSzVyRDR0XzBRTk1iWDRRcDRKQU40eG1mc3hKNk5jV0JpSFlKODh3czVtek0xaE9uelpfbzFzNlRrOExPX2l1ZFNTQU85dzUtc19rck1nQXZweFllekpGeHVBQWp2VXN4WkhRLUVaSjR5RGo4MEsyLWdkZmhiaWk1ZGdjQl9j?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2ZIZm96WTJEd0VmOHpDRlh5NXhvNjRwSVhQTHR2U3JIRjJ6QVdqRjgtYkxMaFRvVzRVTkxDMDcxV1FOOXpYeDhaMGU1M3h6NlBUR2p2Y054d1I5enVQR1JwbnRVN3RHSHJRVVFWcjNfcFNqTU9OWmFyajNRWWM3XzJyb1hCNm10dFVTRGdxaUMtd19lZVc3SURLMGZMQVRILUdfbUVXZVRNUQ?oc=5",
+        "bucket": "control"
       }
     ]
   },
@@ -337,14 +337,14 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 82,
-        "evidencePassRate": 16
+        "evidencePassRate": 17
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -352,14 +352,14 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 82,
-        "evidencePassRate": 16
+        "evidencePassRate": 17
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -367,20 +367,20 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 82,
-        "evidencePassRate": 16
+        "evidencePassRate": 17
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-19T11:28:33.411Z"
+    "previousUpdatedAt": "2026-09-19T16:02:23.238Z"
   }
 }
