@@ -30,6 +30,16 @@ for (const file of files) {
   const generator = field(front, 'imageGeneratedBy');
   const slug = field(front, 'slug') || file.replace(/\.md$/, '');
   const localPath = image.startsWith('/Trendforge/') ? path.join('public', image.slice('/Trendforge/'.length)) : '';
+  const isFlux =
+    imageSource === 'Cloudflare Workers AI — FLUX.1 Schnell' &&
+    imageLicense === 'Model-generated' &&
+    generator === 'Cloudflare FLUX.1 Schnell' &&
+    image.endsWith('.1024x576.png');
+  const isSvgFallback =
+    imageSource === 'TrendForge original editorial visual' &&
+    imageLicense === 'Original' &&
+    generator === 'TrendForge SVG fallback' &&
+    image.endsWith('.svg');
   const candidate: ImageCandidate = { url: image, source: imageSource, license: imageLicense };
   const gate = copyrightSafetyGate({ content: body, sources: [...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map(m => m[1]), images: [candidate] }, { requireImages: true });
 
@@ -51,7 +61,7 @@ for (const file of files) {
     image && imageAlt && (isFlux || isSvgFallback) &&
     localPath && fs.existsSync(localPath) && gate.checks.safeImages && visualOk && !duplicate
   );
-  console.log(`${ok ? 'PASS' : 'FAIL'} FLUX image gate: ${slug}${duplicate ? ' (duplicate visual)' : ''}`);
+  console.log(`${ok ? 'PASS' : 'FAIL'} image gate: ${slug}${isSvgFallback ? ' (SVG fallback)' : ''}${duplicate ? ' (duplicate visual)' : ''}`);
   if (!ok) failed = true;
 }
 if (failed) {
