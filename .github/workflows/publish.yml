@@ -39,6 +39,7 @@ on:
       - 'scripts/trendforge-visual-planner.mjs'
       - 'scripts/validate-article-assets.ts'
       - 'scripts/validate-article-quality.ts'
+      - 'lib/copyright-safety.ts'
   schedule:
     - cron: '17 */6 * * *'
 
