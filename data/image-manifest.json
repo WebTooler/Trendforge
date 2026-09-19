@@ -1,44 +1,12 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-19T14:45:47.886Z",
+  "generatedAt": "2026-09-19T15:55:09.654Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 1,
+  "generated": 0,
   "skipped": 0,
   "failed": 0,
-  "images": {
-    "bitcoin-returns-above-80k-coinbase-stock-jumps-11-5-amid-sec-exemption": {
-      "status": "generated",
-      "image": "/Trendforge/images/articles/bitcoin-returns-above-80k-coinbase-stock-jumps-11-5-amid-sec-exemption.1024x576.png",
-      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
-      "width": 1024,
-      "height": 576,
-      "steps": 4,
-      "elapsedMs": 2106,
-      "bytes": 593318,
-      "visualBrief": {
-        "version": 1,
-        "mode": "editorial-photography",
-        "primarySubject": "the most concrete physical subject, event, organization, or action explicitly described by the story",
-        "scene": "A commissioned technology-publication photograph of that concrete subject or event, not a category-level representation.",
-        "supportingElements": [
-          "only contextual elements that directly explain the story"
-        ],
-        "composition": "One hero subject with one or two supporting elements, natural editorial lighting and strong negative space.",
-        "company": null,
-        "namedPerson": "Yahoo Finance",
-        "category": "Crypto",
-        "avoid": [
-          "generic office imagery",
-          "random tablet or laptop",
-          "generic futuristic technology",
-          "glowing holograms, floating code, HUDs and neon sci-fi effects",
-          "prominent readable text or fake headlines"
-        ]
-      },
-      "promptLength": 1900
-    }
-  }
+  "images": {}
 }
