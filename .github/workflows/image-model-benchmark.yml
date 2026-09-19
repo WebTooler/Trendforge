@@ -127,7 +127,9 @@ jobs:
                     resp = await fetch(url, {
                       method: 'POST',
                       headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
-                      body: JSON.stringify({ prompt, width, height, steps: 4 })
+                      // FLUX.1 Schnell currently accepts prompt + steps; dimensions are not valid input fields.
+                      // Output is normalized to the benchmark canvas after generation.
+                      body: JSON.stringify({ prompt, steps: 4 })
                     });
                   } else {
                     resp = await fetch(url, {
