@@ -44,9 +44,9 @@ const cases=[
   },
   {
     name:'editorial-recommendation-excluded',
-    body:'Teams should review their own infrastructure requirements and IAM permissions carefully before moving.',
+    body:'The migration required no changes to the core agent logic. Teams should review their own infrastructure requirements and IAM permissions carefully before moving.',
     evidence:['The migration required no changes to the core agent logic.'],
-    check:r=>r.code===0&&r.report.claims.length===0&&r.report.editorial.length===1
+    check:r=>r.code===0&&r.report.claims.length===1&&r.report.editorial.length===1
   },
   {
     name:'genuine-unsupported-still-blocks',
