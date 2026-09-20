@@ -83,6 +83,8 @@ async function main(){
     process.exit(0);
   }
   const editorialEvidenceBrief=pack.editorialEvidenceBrief??null;
+  const evidenceMode=String(pack.blueprint?.mode||'bounded');
+  const modeWords=evidenceMode==='rich'?'650-1000':evidenceMode==='narrow'?'300-450':'425-750';
   const evidencePack:EvidencePackItem[]=(pack.sources??[]).map((source:any)=>({
     title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
     passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
@@ -134,7 +136,7 @@ GROUNDING CONTRACT:\
 - Prefer a smaller, fully grounded article over a longer article with unsupported context.\
 - The Editorial Evidence Brief is a derived map, not an additional factual source. If any brief summary conflicts with a supporting passage, follow the passage and preserve uncertainty.\
 \
-OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
+OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Evidence-mode word range: ${modeWords} words. Do not pad with unsupported material. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
   fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:7,strongEvidence,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,primarySourceCount:primarySources.length,sources:evidencePack.map(s=>({title:s.title,url:s.url,role:sourceRole(s),kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
   let output:ProviderResult;try{output=await generateWithProviders(prompt,trend.title);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
   console.log(`Article generation provider: ${output.provider}`);
