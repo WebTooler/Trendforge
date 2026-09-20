@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import { assessArticleDepth } from './article-depth-guard.mjs';
 
 const para='The supplied evidence provides concrete details about the development, including what changed, when it changed, the entities involved, and the directly reported effects. This gives readers enough substance to understand the development without adding unsupported context.';
-const richContent=['## Development',para,'## Evidence',para,'## Implications',para,'## Uncertainty',para,'## Takeaway',para].join('\n\n');
+const richPara=(topic)=>Array(5).fill(para+' The section adds concrete '+topic+' detail for readers and preserves the limits of the supplied evidence.').join('\n\n');
+const richContent=['## Development',richPara('development'),'## Evidence',richPara('evidence'),'## Implications',richPara('implications'),'## Uncertainty',richPara('uncertainty'),'## Takeaway',richPara('takeaway')].join('\n\n');
 const rich=assessArticleDepth({content:richContent,blueprint:{mode:'rich'}});
 assert.equal(rich.passed,true);
 const shallow=assessArticleDepth({content:'## Development\n\nThe report describes the launch.\n\n## Impact\n\nThe report describes an effect.',blueprint:{mode:'bounded'}});
