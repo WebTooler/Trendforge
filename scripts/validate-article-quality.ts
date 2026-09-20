@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { validatePoliticalNeutrality } from './political-neutrality-guard.mjs';
 
 const dir = 'content/articles';
 const evidencePath = 'data/evidence-integrity.json';
