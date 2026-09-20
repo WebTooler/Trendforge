@@ -87,5 +87,6 @@ const result = {
 };
 fs.mkdirSync(path.join(root, 'data'), { recursive: true });
 fs.writeFileSync(path.join(root, 'data/trendforge-security-reliability.json'), JSON.stringify(result, null, 2));
+for (const check of checks) console.log(`[Security Check] ${check.ok ? 'PASS' : 'FAIL'} — ${check.name}: ${check.detail}`);
 console.log(`TrendForge Security + Reliability: ${checks.filter((c) => c.ok).length}/${checks.length} checks PASS`);
 if (!result.passed) process.exit(1);
