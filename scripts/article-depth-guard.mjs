@@ -9,7 +9,7 @@ export function assessArticleDepth({content='',blueprint=null}={}){
   const sectionBodies=sections(content);
   const sectionWords=sectionBodies.map(wordCount);
   const mode=String(blueprint?.mode||'default');
-  const rules={rich:{minWords:650,minH2:0,minSectionWords:70,minSubstantiveParagraphs:5},bounded:{minWords:425,minH2:0,minSectionWords:60,minSubstantiveParagraphs:4},narrow:{minWords:300,minH2:0,minSectionWords:50,minSubstantiveParagraphs:3},default:{minWords:400,minH2:0,minSectionWords:60,minSubstantiveParagraphs:4}}[mode]||{minWords:400,minH2:1,minSectionWords:60,minSubstantiveParagraphs:4};
+  const rules={rich:{minWords:650,minH2:0,minSectionWords:70,minSubstantiveParagraphs:5,minSentences:12},bounded:{minWords:425,minH2:0,minSectionWords:60,minSubstantiveParagraphs:4,minSentences:10},narrow:{minWords:300,minH2:0,minSectionWords:50,minSubstantiveParagraphs:3,minSentences:8},default:{minWords:400,minH2:0,minSectionWords:60,minSubstantiveParagraphs:4,minSentences:10}}[mode]||{minWords:400,minH2:1,minSectionWords:60,minSubstantiveParagraphs:4,minSentences:10};
   const thinSections=sectionWords.filter(n=>n<rules.minSectionWords).length;
   const substantiveParagraphs=paragraphCount(content);
   const sentences=sentenceCount(content);
@@ -18,7 +18,7 @@ export function assessArticleDepth({content='',blueprint=null}={}){
   
   if(sectionBodies.length&&thinSections>0) errors.push('article contains '+thinSections+' underdeveloped H2 section(s) below '+rules.minSectionWords+' words');
   if(substantiveParagraphs<rules.minSubstantiveParagraphs) errors.push('article depth has too few substantive paragraphs ('+substantiveParagraphs+'; minimum '+rules.minSubstantiveParagraphs+')');
-  if(sentences<12&&words>=rules.minWords) errors.push('article depth has too few complete sentences ('+sentences+'; minimum 12)');
+  if(sentences<rules.minSentences&&words>=rules.minWords) errors.push('article depth has too few complete sentences ('+sentences+'; minimum '+rules.minSentences+')');
   const largest=sectionWords.length?Math.max(...sectionWords):0;
   const concentration=words>0?largest/words:0;
   if(sectionWords.length>=3&&concentration>0.72) errors.push('article depth is overly concentrated in one section ('+Math.round(concentration*100)+'%)');
