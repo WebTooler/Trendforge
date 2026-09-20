@@ -2,7 +2,7 @@ const POLITICAL_CONTEXT=/\b(?:president|prime minister|minister|senator|congress
 
 const DIRECT_PERSUASION=[
   /\b(?:vote|voting)\s+(?:for|against)\s+(?:him|her|them|this|that|the)\b/i,
-  /\b(?:you should|you must|you need to|you ought to)\s+(?:vote|support|oppose|elect|reject)\b/i,
+  /\b(?:you should|you must|you need to|you ought to|voters should|voters must|voters need to|voters ought to)\s+(?:vote|support|oppose|elect|reject)\b/i,
   /\b(?:support|oppose|endorse|reject|elect)\s+(?:this|that|the)\s+(?:candidate|party|politician|bill|measure|policy)\b/i,
   /\b(?:best|worst|better|worse|strongest|weakest)\s+(?:candidate|party|politician|choice)\b/i,
   /\b(?:who|which)\s+(?:should|must|ought to)\s+(?:you|voters)\s+(?:vote|elect|support)\b/i
