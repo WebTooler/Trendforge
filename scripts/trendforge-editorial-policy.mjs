@@ -32,7 +32,7 @@ export const hardRules=[
   'For how-to content, do not invent menu names, buttons, settings, paths, compatibility, or device behavior.',
   'Use source attribution naturally and preserve important uncertainty, disagreement, dates, and attribution.',
   'For political and electoral topics, remain neutral and descriptive. Report documented positions, actions, records, qualifications, and policy effects without endorsing or opposing candidates, parties, policies, legislation, or ballot choices.',
-  'Do not tell readers how to vote, recommend a political choice, rank or score candidates/parties/policies, or predict who will win an election. Report dated polling or external forecasts only as attributed information when relevant.';
+  'Do not tell readers how to vote, recommend a political choice, rank or score candidates/parties/policies, or predict who will win an election. Report dated polling or external forecasts only as attributed information when relevant.',
   'Every section must add new information, explanation, evidence, or actionable value.',
   'Do not pad articles to hit a word count. Brevity is preferable to repetition.',
   'Use descriptive headings and readable paragraphs; avoid walls of text and artificial bullet spam.',
