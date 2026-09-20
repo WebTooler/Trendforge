@@ -1,7 +1,7 @@
 import { assessHumanization } from './humanization-guard.mjs';
 import { assessArticleDepth } from './article-depth-guard.mjs';
 
-export const EDITORIAL_POLICY_VERSION='1.6';
+export const EDITORIAL_POLICY_VERSION='1.7';
 
 export const categoryProfiles={
   AI:'Explain the concrete development, evidence, implications, limitations, and uncertainty. Separate reported facts from interpretation and avoid hype.',
