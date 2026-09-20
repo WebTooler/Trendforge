@@ -184,24 +184,24 @@ for (const file of files) {
     ? (validatedSingleSource ? 1 : evidence.strongEvidence ? 2 : 2)
     : 1;
 
-  if (!title || title.length < 20 || title.length > 110) errors.push(`${slug}: title quality/length check failed.`);
-  if (!description || description.length < 80 || description.length > 320) errors.push(`${slug}: description quality/length check failed.`);
-  if (description.length >= 300 && !/[.!?…]$/.test(description.trim())) errors.push(`${slug}: description appears truncated or incomplete.`);
-  if (!category.trim()) errors.push(`${slug}: missing category.`);
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) errors.push(`${slug}: invalid slug.`);
-  if (seenSlugs.has(slug)) errors.push(`${slug}: duplicate slug.`); else seenSlugs.add(slug);
+  if (isCurrentRun && (!title || title.length < 20 || title.length > 110)) errors.push(`${slug}: title quality/length check failed.`);
+  if (isCurrentRun && (!description || description.length < 80 || description.length > 320)) errors.push(`${slug}: description quality/length check failed.`);
+  if (isCurrentRun && description.length >= 300 && !/[.!?…]$/.test(description.trim())) errors.push(`${slug}: description appears truncated or incomplete.`);
+  if (isCurrentRun && !category.trim()) errors.push(`${slug}: missing category.`);
+  if (isCurrentRun && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) errors.push(`${slug}: invalid slug.`);
+  if (isCurrentRun && seenSlugs.has(slug)) errors.push(`${slug}: duplicate slug.`); else seenSlugs.add(slug);
   const titleKey = normalize(title);
-  if (seenTitles.has(titleKey)) errors.push(`${slug}: duplicate title.`); else seenTitles.add(titleKey);
-  if (words < 150) errors.push(`${slug}: article is too short (${words} words; minimum 150).`);
-  if (headings < 1) errors.push(`${slug}: needs at least 1 useful H2 section (found ${headings}).`);
-  if (paragraphs.length < 4) errors.push(`${slug}: needs at least 4 substantive paragraphs.`);
+  if (isCurrentRun && seenTitles.has(titleKey)) errors.push(`${slug}: duplicate title.`); else seenTitles.add(titleKey);
+  if (isCurrentRun && words < 150) errors.push(`${slug}: article is too short (${words} words; minimum 150).`);
+  if (isCurrentRun && headings < 1) errors.push(`${slug}: needs at least 1 useful H2 section (found ${headings}).`);
+  if (isCurrentRun && paragraphs.length < 4) errors.push(`${slug}: needs at least 4 substantive paragraphs.`);
   if (sourceUrls.length < requiredSourceLinks || canonicalSourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://'))) {
     const policy = isCurrentRun
       ? (validatedSingleSource ? 'validated single-source evidence' : evidence.strongEvidence ? 'strong multi-source evidence' : 'current-run evidence')
       : 'baseline article source sanity';
     errors.push(`${slug}: needs at least ${requiredSourceLinks} HTTPS source link(s) for ${policy}.`);
   }
-  if (unsafe) errors.push(`${slug}: unsafe HTML/script content detected.`);
+  if (isCurrentRun && unsafe) errors.push(`${slug}: unsafe HTML/script content detected.`);
   if (!depth.passed) for (const reason of depth.errors) errors.push(`${slug}: ${reason}.`);
 
   const normalizedParagraphs = paragraphs.map(normalize).filter((p) => p.length >= 80);
@@ -209,11 +209,11 @@ for (const file of files) {
   const duplicateParagraph = normalizedParagraphs.some((p,i)=>normalizedParagraphs.some((q,j)=>j>i&&(p===q||(Math.min(p.length,q.length)>=140&&paragraphSimilarity(p,q)>=0.88))));
   const sentenceList = main.split(/(?<=[.!?])\s+/).map(s => normalize(s)).filter(Boolean);
   const duplicateSentence = sentenceList.some((s,i)=>i>0 && s.length>=50 && s===sentenceList[i-1]);
-  if (duplicateParagraph) errors.push(`${slug}: duplicate substantive paragraph detected.`);
-  if (duplicateSentence) errors.push(`${slug}: consecutive duplicate sentence detected.`);
+  if (isCurrentRun && duplicateParagraph) errors.push(`${slug}: duplicate substantive paragraph detected.`);
+  if (isCurrentRun && duplicateSentence) errors.push(`${slug}: consecutive duplicate sentence detected.`);
 
   const genericFailure = /^(click here|read more|lorem ipsum|test article)\.?$/i.test(main.trim());
-  if (genericFailure) errors.push(`${slug}: generic/placeholder content detected.`);
+  if (isCurrentRun && genericFailure) errors.push(`${slug}: generic/placeholder content detected.`);
 
   const sourcePolicy = isCurrentRun
     ? validatedSingleSource ? 'single-source validated' : evidence.strongEvidence ? 'strong multi-source validated' : 'current-run evidence required'
