@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 
 const dir = 'content/articles';
 const evidencePath = 'data/evidence-integrity.json';
+const authoritativePath = 'data/authoritative-evidence-pack.json';
 const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort() : [];
 if (!files.length) {
   console.log('No articles found; content quality validation skipped.');
@@ -66,6 +67,26 @@ function evidenceUrls(item: any): string[] {
   return [...new Set(urls.map(normalizeUrl).filter(Boolean))];
 }
 
+function loadAuthoritativePack() {
+  try {
+    const root = JSON.parse(fs.readFileSync(authoritativePath, 'utf8'));
+    return Array.isArray(root?.candidates) ? root.candidates : [];
+  } catch {
+    return [];
+  }
+}
+const authoritativePacks = loadAuthoritativePack();
+function canonicalEvidenceForBrief(title: string) {
+  const pack = authoritativePacks.find((item: any) => item?.candidate?.title === title);
+  if (!pack || pack.status !== 'authoritative' || pack.version !== 1) return null;
+  const urls = new Set(
+    (Array.isArray(pack.sources) ? pack.sources : [])
+      .map((s: any) => normalizeUrl(typeof s?.url === 'string' ? s.url : ''))
+      .filter(Boolean),
+  );
+  return urls.size ? { pack, urls } : null;
+}
+
 const evidenceItems = loadEvidenceItems();
 const evidenceByUrl = new Map<string, any>();
 for (const item of evidenceItems) {
@@ -117,6 +138,8 @@ function getCurrentRunFiles(): Set<string> {
 // re-qualified against the current run's evidence snapshot. Only files changed
 // by this run receive the current-run evidence policy.
 const currentRunFiles = getCurrentRunFiles();
+let currentBriefTitle = '';
+try { currentBriefTitle = String(JSON.parse(fs.readFileSync('data/article-brief.json', 'utf8'))?.brief?.title || '').trim(); } catch {}
 console.log(`Quality scope: ${currentRunFiles.size} current-run article(s), ${Math.max(0, files.length - currentRunFiles.size)} baseline article(s).`);
 
 for (const file of files) {
@@ -143,12 +166,15 @@ for (const file of files) {
   const unsafe = /<script\b|<iframe\b|javascript\s*:/i.test(raw);
   const evidence = resolveEvidence(sourceUrls);
   const isCurrentRun = currentRunFiles.has(file);
+  const canonical = isCurrentRun ? canonicalEvidenceForBrief(currentBriefTitle) : null;
+  if (isCurrentRun && !canonical) errors.push(`${slug}: authoritative evidence pack missing or invalid for current run.`);
+  const canonicalSourceUrls = canonical ? sourceUrls.filter((url) => canonical.urls.has(url)) : [];
 
   // Current-run articles must be backed by the authoritative evidence snapshot:
   // a validated single source is sufficient, while strong evidence requires two
   // independent publisher families. Historical/baseline articles are not forced
   // to match today's evidence snapshot; they only need at least one HTTPS source.
-  const validatedSingleSource = evidence.validatedSingleSource;
+  const validatedSingleSource = Boolean(canonical && canonicalSourceUrls.length >= 1 && evidence.validatedSingleSource);
   const requiredSourceLinks = isCurrentRun
     ? (validatedSingleSource ? 1 : evidence.strongEvidence ? 2 : 2)
     : 1;
@@ -164,7 +190,7 @@ for (const file of files) {
   if (words < 150) errors.push(`${slug}: article is too short (${words} words; minimum 150).`);
   if (headings < 1) errors.push(`${slug}: needs at least 1 useful H2 section (found ${headings}).`);
   if (paragraphs.length < 4) errors.push(`${slug}: needs at least 4 substantive paragraphs.`);
-  if (sourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://'))) {
+  if (sourceUrls.length < requiredSourceLinks || canonicalSourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://'))) {
     const policy = isCurrentRun
       ? (validatedSingleSource ? 'validated single-source evidence' : evidence.strongEvidence ? 'strong multi-source evidence' : 'current-run evidence')
       : 'baseline article source sanity';
