@@ -112,7 +112,7 @@ for (const file of files) {
   const { buildImagePrompt } = await import('./trendforge-visual-planner.mjs') as unknown as {
     buildImagePrompt: (input: { title: string; description: string; category: string; body: string }) => { brief: any; prompt: string };
   };
-  const { brief, prompt } = buildImagePrompt({ title, description, category, body: raw });
+  const { brief, prompt, relevance } = buildImagePrompt({ title, description, category, body: raw });
   console.log(`Generating FLUX image for ${file}: ${brief.mode}; prompt=${prompt.length} chars`);
 
   try {
@@ -157,7 +157,7 @@ for (const file of files) {
     manifest[slug] = {
       status: 'generated', image: '/Trendforge/images/articles/' + outputFile,
       generatedBy: MODEL, width: WIDTH, height: HEIGHT, steps: STEPS,
-      elapsedMs, bytes: normalized.length, visualBrief: brief, promptLength: prompt.length
+      elapsedMs, bytes: normalized.length, visualBrief: brief, relevance, promptLength: prompt.length
     };
     generated++;
     console.log(`SUCCESS ${file}: ${WIDTH}x${HEIGHT}, ${normalized.length} bytes, ${elapsedMs}ms`);
@@ -178,7 +178,7 @@ for (const file of files) {
       manifest[slug] = {
         status: 'fallback', image: '/Trendforge/images/articles/' + fallbackFile,
         generatedBy: 'TrendForge SVG fallback', fallbackFrom: MODEL,
-        fallbackReason: reason, width: 1200, height: 630, visualBrief: brief
+        fallbackReason: reason, width: 1200, height: 630, visualBrief: brief, relevance
       };
       console.warn(`FLUX unavailable for ${file}; using zero-quota SVG fallback: ${reason}`);
       skipped++;
