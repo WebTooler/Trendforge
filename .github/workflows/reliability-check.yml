@@ -48,6 +48,9 @@ jobs:
       - name: Verify evidence lineage
         run: npm run evidence-lineage:test
 
+      - name: Verify authoritative evidence pack contract
+        run: npm run evidence-pack:test
+
       - name: Generate sitemap
         run: npx tsx scripts/generate-sitemap.ts
 
