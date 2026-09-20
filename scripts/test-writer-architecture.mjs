@@ -9,4 +9,10 @@ const repeatedParagraph='Bitcoin ETFs hold a reported share of bitcoin. The repo
 const repetitive=validateDraft({...base,content:'## Evidence\n\n'+repeatedParagraph+'\n\n## Impact\n\n'+repeatedParagraph,blueprint:{maxH2:2}});
 assert.equal(repetitive.passed,false);
 assert.ok(repetitive.errors.some(x=>x.includes('repeated factual sentence')||x.includes('repetitive paragraph/topic overlap')));
+const generic=validateDraft({...base,content:'## Evidence\n\nThis is a game-changing development in an ever-evolving landscape. It plays a crucial role in the modern world and helps unlock the potential of the technology. More evidence is needed to explain the concrete details for readers.\n\n## Impact\n\nThe report provides specific evidence about the development and its practical effects for users. It also identifies limits and uncertainty around what can be concluded from the available evidence.\n\n## Details\n\nThe supplied evidence describes the change, the timing, and the directly reported consequences. These details give readers a concrete basis for understanding what happened and what remains uncertain.\n\n## Context\n\nThe evidence also provides context about the affected product and the reported response. That context helps explain the development without adding unsupported claims.',blueprint:{maxH2:4}});
+assert.equal(generic.passed,false);
+assert.ok(generic.errors.some(x=>x.includes('generic/filler phrasing')));
+const shallow=validateDraft({...base,content:'## Evidence\n\nThe report confirms the change.\n\n## Impact\n\nThe available evidence explains the practical effect in enough detail for readers and identifies what remains uncertain. This section adds a separate supported point and keeps the explanation concrete.\n\n## Context\n\nThe source provides additional context about the development and its timing. These details clarify the story without adding unsupported claims.',blueprint:{maxH2:3}});
+assert.equal(shallow.passed,false);
+assert.ok(shallow.errors.some(x=>x.includes('shallow H2 explanation')));
 console.log('Phase 4 Writer 3.0 repetition guard passed.');
