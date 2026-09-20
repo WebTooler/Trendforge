@@ -24,8 +24,27 @@ const cases=[
   {name:'temporal paraphrase',sentence:'Use of open models accelerated after Mozilla published its inaugural State of Open Source AI report on July 14.',expect:x=>x.status==='verified'&&x.contradicted===false},
   {name:'editorial tipping point',sentence:'The Mozilla findings suggest that the AI landscape is at a tipping point.',expectArticle:true,articleOnly:true},
   {name:'canonical-pack isolation',sentence:'Acme introduced its Nova AI model in London on Tuesday, and said inference costs were reduced by 20 percent.',briefPassage:'This tampered brief passage claims Acme closed its London office and increased costs.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
+  {name:'model-number-and-percent normalization',sentence:'Moonshot AI’s Kimi K3 scores three points behind Anthropic’s Fable 5 while costing 30 % of the latter.',expect:x=>x.status==='verified'&&x.numericMismatch===false&&x.contradicted===false},
+  {name:'attribution-preserved',sentence:'According to Reuters, Acme said the launch will initially target enterprise customers.',expect:x=>x.status==='verified'},
+  {name:'uncertainty-preserved',sentence:'The launch could initially target enterprise customers, according to the company.',expect:x=>x.status==='verified'},
+  {name:'certainty-escalation',sentence:'The launch will initially target enterprise customers.',expect:x=>x.status==='unsupported'||x.status==='partial'}
+
+  {name:'paraphrase',sentence:'Acme introduced its Nova AI model in London on Tuesday, and said inference costs were reduced by 20 percent.',expect:x=>x.status==='verified'&&x.classification==='supported'},
+  {name:'contextual synthesis',sentence:'Acme launched Nova AI in London on Tuesday while initially targeting enterprise customers, according to the company.',expect:x=>x.status==='verified'&&(x.classification==='supported'||x.classification==='supported_with_context')},
+  {name:'editorial analysis',sentence:'The launch highlights how lower inference costs could change the competitive picture.',expectArticle:true,articleOnly:true},
+  {name:'unsupported addition',sentence:'Acme also signed a $2 billion government contract that day.',expect:x=>x.status==='unsupported'},
+  {name:'numeric mismatch',sentence:'Acme reduced inference costs by 50 percent.',expect:x=>x.status==='unsupported'&&x.numericMismatch===true},
+  {name:'contradiction',sentence:'Acme increased inference costs by 20 percent.',expect:x=>x.status==='unsupported'&&x.contradicted===true},
+  {name:'reverse polarity',sentence:'Acme lowered inference costs by 20 percent.',expect:x=>x.status==='verified'&&x.contradicted===false},
+  {name:'rise-fall contradiction',sentence:'Acme raised inference costs by 20 percent.',expect:x=>x.status==='unsupported'&&x.contradicted===true},
+  {name:'off topic',sentence:'The weather forecast calls for rain across northern India.',expect:x=>x.status==='unsupported'&&x.offTopic===true},
+  {name:'numeric contextual paraphrase',sentence:'Paying for closed frontier models gives roughly a four-month head start at around five times the per-task cost, but only for tasks lasting eight to 12 hours.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
+  {name:'revenue paraphrase',sentence:'Open models continue to trail closed frontier models when it comes to revenue.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
+  {name:'temporal paraphrase',sentence:'Use of open models accelerated after Mozilla published its inaugural State of Open Source AI report on July 14.',expect:x=>x.status==='verified'&&x.contradicted===false},
+  {name:'editorial tipping point',sentence:'The Mozilla findings suggest that the AI landscape is at a tipping point.',expectArticle:true,articleOnly:true},
+  {name:'canonical-pack isolation',sentence:'Acme introduced its Nova AI model in London on Tuesday, and said inference costs were reduced by 20 percent.',briefPassage:'This tampered brief passage claims Acme closed its London office and increased costs.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
   {name:'model-number-and-percent normalization',sentence:'Moonshot AI’s Kimi K3 scores three points behind Anthropic’s Fable 5 while costing 30 % of the latter.',expect:x=>x.status==='verified'&&x.numericMismatch===false&&x.contradicted===false}
-];
+
 
 function runCase(test){
   const article=`${baseFrontmatter}\n\n## Test\n${test.sentence}\n\n## Sources\n- [Reuters](https://example.com/reuters)`;
