@@ -19,5 +19,11 @@ export function buildAuthoritativeEvidencePack({candidate={},sources=[],coverage
 export function validateAuthoritativeEvidencePack(pack){
   if(!pack||pack.version!==1||pack.status!=='authoritative')return false;
   if(!pack.candidate?.link||!Array.isArray(pack.sources)||!pack.coverage||!pack.blueprint)return false;
+  if(pack.evidenceBrief!==null&&pack.evidenceBrief!==undefined){
+    const b=pack.evidenceBrief;
+    if(b.version!==3||!b.metrics||!Array.isArray(b.supportedClaims)||!Array.isArray(b.relevantPassages)||!Array.isArray(b.sourceSupportMapping))return false;
+    if(Number(b.metrics.relevantPassageCount||0)!==b.relevantPassages.length)return false;
+    if(Number(b.metrics.supportedClaimCount||0)!==b.supportedClaims.length)return false;
+  }
   return pack.sources.every(source=>typeof source.id==='string'&&/^S\d+$/.test(source.id)&&typeof source.url==='string'&&source.url.length>0&&typeof source.publisherFamily==='string'&&Array.isArray(source.passages)&&source.passages.length>0&&source.lineage&&typeof source.lineage.id==='string');
 }
