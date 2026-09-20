@@ -7,6 +7,8 @@ const PERSON_PATTERNS = [
 const PRODUCT_TERMS = ['iphone','ipad','macbook','pixel','galaxy','smartphone','phone','laptop','tablet','watch','headset','earbuds','camera','console','device','gpu','cpu','chip','processor','robot','drone','sensor'];
 const INFRA_TERMS = ['data center','data-centre','server rack','factory','laboratory','lab','warehouse','power plant','satellite','network infrastructure','semiconductor fab'];
 const ABSTRACT_TERMS = ['regulation','policy','legislation','governance','antitrust','trade policy','economic shift','industry shift','societal','oversight','slowdown','slow-down','agreement','ban','tariff','competition'];
+const STORY_STOPWORDS = new Set(['the','a','an','and','or','of','to','for','in','on','with','from','by','is','are','was','were','what','why','how','says','said','now','new','after','before','about']);
+function storyAnchors(title='', description='') { return [...new Set(clean(title+' '+description).toLowerCase().replace(/[^a-z0-9\s-]/g,' ').split(/\s+/).filter(w=>w.length>=4&&!STORY_STOPWORDS.has(w)))].slice(0,8); }
 
 function clean(value = '') { return value.replace(/\s+/g, ' ').trim(); }
 
@@ -54,6 +56,7 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
   const product = PRODUCT_TERMS.find(term => new RegExp('\\b' + term + '\\b', 'i').test(storyText));
   const infrastructure = INFRA_TERMS.find(term => new RegExp('\\b' + term + '\\b', 'i').test(lower));
   const abstract = ABSTRACT_TERMS.find(term => lower.includes(term));
+  const anchors = storyAnchors(title, description);
 
   if (personFirst) {
     mode = 'documentary-person';
@@ -101,7 +104,7 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
     supportingElements = ['only contextual elements that directly explain the story'];
     composition = 'One hero subject with one or two supporting elements, natural editorial lighting and strong negative space.';
   }
-  return { version: 1, mode, primarySubject, scene, supportingElements, composition, company: company || null, namedPerson: person || null, category, avoid };
+  return { version: 2, mode, primarySubject, scene, supportingElements, composition, company: company || null, namedPerson: person || null, category, storyAnchors: anchors, avoid };
 }
 
 function buildImagePrompt({ title, description, category, body = '' }) {
@@ -110,6 +113,7 @@ function buildImagePrompt({ title, description, category, body = '' }) {
   const prompt = [
     'Create a premium editorial visual commissioned by a major technology publication, not a generic AI image.',
     'Canvas: exactly 1024x576 pixels, horizontal 16:9 composition.',
+    'STORY ANCHORS: ' + brief.storyAnchors.join(', ') + '.',
     'VISUAL MODE: ' + brief.mode + '.',
     'PRIMARY VISUAL SUBJECT: ' + brief.primarySubject + '.',
     'SCENE: ' + brief.scene,
@@ -132,4 +136,4 @@ function buildImagePrompt({ title, description, category, body = '' }) {
   return { brief, prompt: prompt.length <= maxPromptChars ? prompt : prompt.slice(0, maxPromptChars) };
 }
 
-export { buildVisualBrief, buildImagePrompt };
+export { buildVisualBrief, buildImagePrompt, storyAnchors };
