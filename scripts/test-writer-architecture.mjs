@@ -6,7 +6,7 @@ const result=validateDraft({...base,content,blueprint:{maxH2:5}});
 assert.equal(result.passed,false);
 assert.ok(result.errors.some(x=>x.includes('H2 count 6 exceeds evidence blueprint maximum 5')));
 const repeatedParagraph='Bitcoin ETFs hold a reported share of bitcoin. The report says the holdings increased over time and describes the change in detail. This paragraph adds context about the reported holdings and their increase for readers.';
-const repetitive=validateDraft({...base,content:\`## Evidence\\n\\n${repeatedParagraph}\\n\\n## Impact\\n\\n${repeatedParagraph}\`,blueprint:{maxH2:2}});
+const repetitive=validateDraft({...base,content:'## Evidence\\n\\n'+repeatedParagraph+'\\n\\n## Impact\\n\\n'+repeatedParagraph,blueprint:{maxH2:2}});
 assert.equal(repetitive.passed,false);
 assert.ok(repetitive.errors.some(x=>x.includes('repeated factual sentence')));
 console.log('Phase 4 Writer 3.0 repetition guard passed.');
