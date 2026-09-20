@@ -3,6 +3,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { validatePoliticalNeutrality } from './political-neutrality-guard.mjs';
 import { validateHumanization } from './humanization-guard.mjs';
+import { validateArticleDepth } from './article-depth-guard.mjs';
 
 const dir = 'content/articles';
 const evidencePath = 'data/evidence-integrity.json';
@@ -166,9 +167,11 @@ for (const file of files) {
     .filter((p) => p && !/^\d+\.\s+/.test(p));
   const sourceUrls = [...new Set([...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map((m) => normalizeUrl(m[1])))];
   const unsafe = /<script\b|<iframe\b|javascript\s*:/i.test(raw);
+  const depth = validateArticleDepth({ content: main, blueprint: depthBlueprint });
   const evidence = resolveEvidence(sourceUrls);
   const isCurrentRun = currentRunFiles.has(file);
   const canonical = isCurrentRun ? canonicalEvidenceForBrief(currentBriefTitle) : null;
+  const depthBlueprint = canonical?.pack?.blueprint || null;
   if (isCurrentRun && !canonical) errors.push(`${slug}: authoritative evidence pack missing or invalid for current run.`);
   const canonicalSourceUrls = canonical ? sourceUrls.filter((url) => canonical.urls.has(url)) : [];
 
@@ -199,6 +202,7 @@ for (const file of files) {
     errors.push(`${slug}: needs at least ${requiredSourceLinks} HTTPS source link(s) for ${policy}.`);
   }
   if (unsafe) errors.push(`${slug}: unsafe HTML/script content detected.`);
+  if (!depth.passed) for (const reason of depth.errors) errors.push(`${slug}: ${reason}.`);
 
   const normalizedParagraphs = paragraphs.map(normalize).filter((p) => p.length >= 80);
   const paragraphSimilarity=(a:string,b:string)=>{const A=new Set(a.split(/\s+/).filter(w=>w.length>=4)),B=new Set(b.split(/\s+/).filter(w=>w.length>=4));if(!A.size||!B.size)return 0;return[...A].filter(x=>B.has(x)).length/Math.max(1,Math.min(A.size,B.size));};
