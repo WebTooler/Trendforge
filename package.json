@@ -38,7 +38,8 @@
     "evidence-lineage:test": "node scripts/test-evidence-lineage.mjs",
     "evidence-pack:test": "node scripts/test-authoritative-evidence-pack.mjs",
     "evidence-pack:integration:test": "node scripts/test-authoritative-evidence-pack-integration.mjs",
-    "repair-evidence:test": "node scripts/test-repair-evidence-guard.mjs"
+    "repair-evidence:test": "node scripts/test-repair-evidence-guard.mjs",
+    "claims:deterministic": "node scripts/test-claim-verifier-deterministic.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
