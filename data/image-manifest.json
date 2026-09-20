@@ -1,12 +1,46 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-20T04:57:17.014Z",
+  "generatedAt": "2026-09-20T11:24:41.639Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 0,
+  "generated": 1,
   "skipped": 0,
   "failed": 0,
-  "images": {}
+  "images": {
+    "bitcoin-etfs-hold-6-29-of-supply-what-a-10-threshold-means": {
+      "status": "generated",
+      "image": "/Trendforge/images/articles/bitcoin-etfs-hold-6-29-of-supply-what-a-10-threshold-means.1024x576.png",
+      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
+      "width": 1024,
+      "height": 576,
+      "steps": 4,
+      "elapsedMs": 2152,
+      "bytes": 601864,
+      "visualBrief": {
+        "version": 1,
+        "mode": "editorial-product",
+        "primarySubject": "the specific watch or physical technology named by the story",
+        "scene": "A premium commissioned product/editorial photograph showing the actual named physical product or hardware as the unmistakable hero subject.",
+        "supportingElements": [
+          "one restrained real-world context element only if it explains the story"
+        ],
+        "composition": "Single hero object, clean 16:9 framing, realistic materials and proportions, controlled depth of field, generous negative space.",
+        "company": null,
+        "namedPerson": null,
+        "category": "Crypto",
+        "avoid": [
+          "generic office imagery",
+          "random tablet or laptop",
+          "generic futuristic technology",
+          "glowing holograms, floating code, HUDs and neon sci-fi effects",
+          "prominent readable text or fake headlines",
+          "generic replacement device",
+          "invented ports, camera layouts or controls"
+        ]
+      },
+      "promptLength": 1900
+    }
+  }
 }

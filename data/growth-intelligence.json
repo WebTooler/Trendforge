@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-20T07:01:13.355Z",
+  "generatedAt": "2026-09-20T11:24:42.718Z",
   "policy": {
     "privacyFirst": true,
     "noPersonalTracking": true,
     "noPaidTrafficRequired": true
   },
   "summary": {
-    "totalArticles": 20,
+    "totalArticles": 21,
     "averageEditorialScore": 74,
-    "editorialReviewCount": 15,
+    "editorialReviewCount": 16,
     "refreshCandidates": 0
   },
   "categoryMix": [
     {
       "category": "AI",
       "count": 7,
-      "share": 35
+      "share": 33.3
     },
     {
       "category": "Technology",
       "count": 4,
-      "share": 20
+      "share": 19
     },
     {
       "category": "How-To",
       "count": 3,
-      "share": 15
+      "share": 14.3
     },
     {
       "category": "Innovation",
@@ -41,12 +41,12 @@
     {
       "category": "Digital Life",
       "count": 2,
-      "share": 10
+      "share": 9.5
     },
     {
       "category": "Crypto",
-      "count": 3,
-      "share": 15
+      "count": 4,
+      "share": 19
     }
   ],
   "missingCategories": [
@@ -56,9 +56,14 @@
   "overrepresentedCategories": [],
   "recommendations": [
     "Prioritize missing categories: Innovation, Product Launches.",
-    "15 article(s) are in editorial review; improve them before treating them as growth winners."
+    "16 article(s) are in editorial review; improve them before treating them as growth winners."
   ],
   "recentArticles": [
+    {
+      "title": "Bitcoin ETFs Hold 6.29% of Supply – What a 10% Threshold Means",
+      "category": "Crypto",
+      "publishedAt": "2026-09-20T11:23:34.963Z"
+    },
     {
       "title": "AI doomsday fears: what can ordinary people actually do?",
       "category": "AI",
@@ -103,11 +108,6 @@
       "title": "The Apple Watch Series 12 is the start of a new wearable era",
       "category": "Digital Life",
       "publishedAt": "2026-09-17T17:01:14.943Z"
-    },
-    {
-      "title": "Comp AI raises $34M Series A to build agentic security and compliance platform",
-      "category": "AI",
-      "publishedAt": "2026-09-17T11:43:31.038Z"
     }
   ]
 }

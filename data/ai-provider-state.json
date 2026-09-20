@@ -7,15 +7,15 @@
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
-      "successes": 35,
-      "lastSuccessAt": "2026-09-20T04:57:10.829Z"
+      "successes": 36,
+      "lastSuccessAt": "2026-09-20T11:23:47.274Z"
     },
     "Gemini": {
-      "failures": 29,
-      "quotaBlockedUntil": 1789816473548,
-      "lastStatus": 200,
-      "lastError": "Invalid repair structured output",
-      "lastClass": "error"
+      "failures": 30,
+      "quotaBlockedUntil": 1789903545883,
+      "lastStatus": 503,
+      "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "lastClass": "server"
     },
     "OpenAI": {
       "failures": 3,
@@ -32,11 +32,11 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 40,
-      "quotaBlockedUntil": 1789880137118,
-      "lastStatus": 200,
-      "lastError": "Empty atomic repair response",
-      "lastClass": "error",
+      "failures": 42,
+      "quotaBlockedUntil": 1789903497458,
+      "lastStatus": 0,
+      "lastError": "The operation was aborted due to timeout",
+      "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z"
     },
@@ -44,12 +44,12 @@
       "failures": 51,
       "quotaBlockedUntil": 0,
       "lastStatus": 200,
-      "lastError": "Empty atomic repair response",
-      "lastClass": "error",
-      "successes": 10,
-      "lastSuccessAt": "2026-09-19T14:45:41.823Z"
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 12,
+      "lastSuccessAt": "2026-09-20T11:24:33.823Z"
     }
   },
-  "rotationCursor": 1,
-  "updatedAt": "2026-09-20T04:57:10.829Z"
+  "rotationCursor": 2,
+  "updatedAt": "2026-09-20T11:24:33.823Z"
 }

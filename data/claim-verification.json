@@ -1,19 +1,19 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-20T04:57:10.969Z",
-  "articlePath": "content/articles/spot-bitcoin-etfs-hold-6-29-of-the-digital-asset-what-a-10-threshold-means.md",
-  "articleTitle": "Spot Bitcoin ETFs Hold 6.29% of the Digital Asset—What a 10% Threshold Means",
+  "generatedAt": "2026-09-20T11:24:33.943Z",
+  "articlePath": "content/articles/bitcoin-etfs-hold-6-29-of-supply-what-a-10-threshold-means.md",
+  "articleTitle": "Bitcoin ETFs Hold 6.29% of Supply – What a 10% Threshold Means",
   "verificationMode": "evidence-pack-first-v18-contextual-semantic",
   "sourceCount": 1,
   "usableSourceCount": 1,
-  "claimCount": 19,
-  "editorialCount": 2,
-  "verified": 7,
-  "partial": 2,
-  "unsupported": 10,
+  "claimCount": 10,
+  "editorialCount": 4,
+  "verified": 10,
+  "partial": 0,
+  "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 47,
-  "pass": false,
+  "averageConfidence": 82,
+  "pass": true,
   "policy": {
     "verifiedMin": 62,
     "partialMin": 45,
@@ -36,9 +36,7 @@
     "partialClaimsNonBlocking": true,
     "modifierEvidenceSufficiency": true,
     "markdownAwareSegmentation": true,
-    "citationAwareSegmentation": true,
-    "genericSentenceInitialCompatibility": true,
-    "strictEntitySupportForNamedEntities": true
+    "citationAwareSegmentation": true
   },
   "sources": [
     {
@@ -53,10 +51,10 @@
   "claims": [
     {
       "index": 1,
-      "claim": "As of September 18 2026, spot Bitcoin ETFs in the United States manage $102.532 billion in assets, which equals 6.29% of Bitcoin’s total market capitalization.",
+      "claim": "As of September 18, 2026, U.S. spot Bitcoin ETFs manage $102.532 billion in assets, which represents 6.29% of Bitcoin’s total market capitalization.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 90,
+      "confidence": 95,
       "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
       "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
       "bestDomain": "247wallst.com",
@@ -73,7 +71,6 @@
         "spot",
         "btc",
         "etfs",
-        "the",
         "102",
         "532",
         "billion",
@@ -99,30 +96,32 @@
     },
     {
       "index": 2,
-      "claim": "With Bitcoin’s implied market cap at about $1.630 trillion, roughly one Bitcoin in every sixteen is held within a U.S. spot ETF.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 56,
+      "claim": "The article notes this equates to roughly one Bitcoin in every sixteen being held in an ETF.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 75,
       "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
       "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
       "bestDomain": "247wallst.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P11",
-      "evidence": "What 6.29% of Bitcoin Actually Looks Like Peshkova / Shutterstock.com With $102.532 billion representing 6.29% of Bitcoin, Bitcoin’s implied market capitalization stands at about $1.630 trillion. Reaching 10% Takes $60.5 Billion and Three More Years Ja Crispy / Shutterstock.com If Bitcoin’s market capitalization remains around $1.630 trillion, the ETFs will need an additional $60.5 billion in assets to reach $163.0 billion, or 1.59 times their current holdings.",
-      "bestPassage": "What 6.29% of Bitcoin Actually Looks Like Peshkova / Shutterstock.com With $102.532 billion representing 6.29% of Bitcoin, Bitcoin’s implied market capitalization stands at about $1.630 trillion.",
+      "bestPassageId": "S1-P12",
+      "evidence": "This means roughly one Bitcoin in every sixteen is currently held within a US spot ETF.",
+      "bestPassage": "This means roughly one Bitcoin in every sixteen is currently held within a US spot ETF.",
       "matchedPassages": [
-        "S1-P11",
-        "S1-P15"
+        "S1-P12"
       ],
       "sharedTerms": [
+        "roughly",
+        "one",
         "btc",
-        "impli",
-        "market",
-        "630",
-        "trillion"
+        "every",
+        "sixteen",
+        "held",
+        "etf"
       ],
       "entityShared": [
-        "btc"
+        "btc",
+        "etf"
       ],
       "topicShared": [
         "btc",
@@ -136,10 +135,10 @@
     },
     {
       "index": 3,
-      "claim": "The funds hold the coins in cold storage with custodians.",
-      "status": "partial",
-      "classification": "uncertain",
-      "confidence": 50,
+      "claim": "These holdings are stored in cold‑storage custodians and cannot be spent, staked, or otherwise used beyond backing the traded shares.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 77,
       "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
       "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
       "bestDomain": "247wallst.com",
@@ -151,10 +150,18 @@
         "S1-P13"
       ],
       "sharedTerms": [
-        "coin",
+        "are",
+        "stor",
         "cold",
         "storage",
-        "custodian"
+        "custodian",
+        "cannot",
+        "spent",
+        "stak",
+        "otherwise",
+        "support",
+        "trad",
+        "share"
       ],
       "entityShared": [],
       "topicShared": [],
@@ -166,46 +173,10 @@
     },
     {
       "index": 4,
-      "claim": "Because the coins are stored offline, they cannot be spent, staked, or otherwise used except to back the ETF shares that investors trade.",
+      "claim": "Since launching on January 11, 2024, Bitcoin ETFs have attracted $55.161 billion in net inflows over 32 months, averaging about $1.71 billion per month.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 69,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "These coins are stored in cold storage with custodians, meaning they cannot be spent, staked, or otherwise used, except as backing for shares traded on exchanges.",
-      "bestPassage": "These coins are stored in cold storage with custodians, meaning they cannot be spent, staked, or otherwise used, except as backing for shares traded on exchanges.",
-      "matchedPassages": [
-        "S1-P13"
-      ],
-      "sharedTerms": [
-        "coin",
-        "are",
-        "stor",
-        "cannot",
-        "spent",
-        "stak",
-        "otherwise",
-        "except",
-        "share"
-      ],
-      "entityShared": [],
-      "topicShared": [],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-generic-entity-compatible",
-      "entityGateCompatibility": "generic-sentence-initial-word-not-a-named-entity"
-    },
-    {
-      "index": 5,
-      "claim": "Bitcoin ETFs began trading on January 11 2024.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 97,
+      "confidence": 83,
       "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
       "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
       "bestDomain": "247wallst.com",
@@ -217,20 +188,63 @@
         "S1-P17"
       ],
       "sharedTerms": [
+        "january",
+        "2024",
         "btc",
         "etfs",
-        "began",
-        "trad",
-        "january",
-        "2024"
+        "161",
+        "billion",
+        "month",
+        "averag",
+        "per"
       ],
       "entityShared": [
+        "january",
         "btc",
-        "etfs",
-        "january"
+        "etfs"
       ],
       "topicShared": [
         "btc",
+        "etfs"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 5,
+      "claim": "Including Ethereum ETFs, the combined committed capital across both product lines reaches $68.4 billion.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 78,
+      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
+      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
+      "bestDomain": "247wallst.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P6",
+      "evidence": "Bitcoin and Ethereum ETFs together hold $68.4 billion in committed capital across two product lines that did not exist three years ago. Since their launch, Bitcoin ETFs have attracted $55.161 billion in net inflows, while Ethereum ETFs have garnered an additional $13.250 billion, totaling $68.4 billion across two new product lines.",
+      "bestPassage": "Bitcoin and Ethereum ETFs together hold $68.4 billion in committed capital across two product lines that did not exist three years ago.",
+      "matchedPassages": [
+        "S1-P6",
+        "S1-P14"
+      ],
+      "sharedTerms": [
+        "eth",
+        "etfs",
+        "committ",
+        "capital",
+        "acros",
+        "product",
+        "lin",
+        "billion"
+      ],
+      "entityShared": [
+        "eth",
+        "etfs"
+      ],
+      "topicShared": [
         "etfs"
       ],
       "numericMismatch": false,
@@ -241,32 +255,39 @@
     },
     {
       "index": 6,
-      "claim": "Within just over 32 months, the funds have accumulated $55.161 billion in net inflows.",
-      "status": "unsupported",
-      "classification": "unsupported",
-      "confidence": 84,
+      "claim": "If Bitcoin’s price rises, the dollar target would increase proportionally, meaning the funds would need to acquire even more coins to maintain the same percentage.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 78,
       "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
       "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
       "bestDomain": "247wallst.com",
       "sourceId": "S1",
-      "bestPassageId": "S1-P4",
-      "evidence": "The funds have accumulated $55.161 billion in net inflows over 32 months, averaging roughly $1.71 billion per month.",
-      "bestPassage": "The funds have accumulated $55.161 billion in net inflows over 32 months, averaging roughly $1.71 billion per month.",
+      "bestPassageId": "S1-P16",
+      "evidence": "If Bitcoin’s price rises, the target will rise proportionally, meaning the funds may need to acquire even more.",
+      "bestPassage": "If Bitcoin’s price rises, the target will rise proportionally, meaning the funds may need to acquire even more.",
       "matchedPassages": [
-        "S1-P4"
+        "S1-P16"
       ],
       "sharedTerms": [
-        "month",
+        "btc",
+        "price",
+        "ris",
         "the",
+        "target",
+        "rise",
+        "proportionally",
+        "mean",
         "fund",
-        "accumulat",
-        "161",
-        "billion",
-        "net",
-        "inflow"
+        "need",
+        "acquire"
       ],
-      "entityShared": [],
-      "topicShared": [],
+      "entityShared": [
+        "btc"
+      ],
+      "topicShared": [
+        "btc"
+      ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -275,214 +296,10 @@
     },
     {
       "index": 7,
-      "claim": "Averaging about $1.71 billion per month, that pace of inflows has brought the total assets to the current $102.532 billion.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 0,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "",
-      "bestPassage": "Cryptocurrency Bitcoin ETFs Now Own 6.29% of Every Bitcoin.",
-      "matchedPassages": [],
-      "sharedTerms": [],
-      "entityShared": [],
-      "topicShared": [],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": true,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 8,
-      "claim": "In parallel, Ethereum ETFs have attracted $13.250 billion, bringing the combined committed capital of Bitcoin and Ethereum ETFs to $68.4 billion across two product lines that did not exist three years ago.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 18,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P6",
-      "evidence": "Bitcoin and Ethereum ETFs together hold $68.4 billion in committed capital across two product lines that did not exist three years ago.",
-      "bestPassage": "Bitcoin and Ethereum ETFs together hold $68.4 billion in committed capital across two product lines that did not exist three years ago.",
-      "matchedPassages": [],
-      "sharedTerms": [
-        "eth",
-        "etfs",
-        "billion",
-        "committ",
-        "capital",
-        "btc",
-        "and",
-        "acros",
-        "two",
-        "product",
-        "lin",
-        "did",
-        "not",
-        "exist",
-        "three",
-        "year",
-        "ago"
-      ],
-      "entityShared": [
-        "eth",
-        "etfs",
-        "btc"
-      ],
-      "topicShared": [
-        "etfs",
-        "btc"
-      ],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 9,
-      "claim": "To move from 6.29% to 10% of Bitcoin’s market cap, the ETFs would need to add $60.5 billion in assets.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 7,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P15",
-      "evidence": "Reaching 10% Takes $60.5 Billion and Three More Years Ja Crispy / Shutterstock.com If Bitcoin’s market capitalization remains around $1.630 trillion, the ETFs will need an additional $60.5 billion in assets to reach $163.0 billion, or 1.59 times their current holdings.",
-      "bestPassage": "Reaching 10% Takes $60.5 Billion and Three More Years Ja Crispy / Shutterstock.com If Bitcoin’s market capitalization remains around $1.630 trillion, the ETFs will need an additional $60.5 billion in assets to reach $163.0 billion, or 1.59 times their current holdings.",
-      "matchedPassages": [],
-      "sharedTerms": [
-        "btc",
-        "market",
-        "the",
-        "etfs",
-        "need",
-        "billion",
-        "asset"
-      ],
-      "entityShared": [
-        "btc",
-        "etfs"
-      ],
-      "topicShared": [
-        "btc",
-        "etfs"
-      ],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 10,
-      "claim": "At the current average inflow rate of $1.71 billion per month, adding that amount would take roughly 35 months—about three years—placing the 10% threshold around mid‑2029.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 0,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "",
-      "bestPassage": "Cryptocurrency Bitcoin ETFs Now Own 6.29% of Every Bitcoin.",
-      "matchedPassages": [],
-      "sharedTerms": [],
-      "entityShared": [],
-      "topicShared": [],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": true,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 11,
-      "claim": "If Bitcoin’s market capitalization stays near $1.630 trillion, the $60.5 billion target represents 1.59 times the current holdings.",
+      "claim": "The article notes that as ETFs lock up a growing slice of each coin, the tradable float shrinks.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 79,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P15",
-      "evidence": "Reaching 10% Takes $60.5 Billion and Three More Years Ja Crispy / Shutterstock.com If Bitcoin’s market capitalization remains around $1.630 trillion, the ETFs will need an additional $60.5 billion in assets to reach $163.0 billion, or 1.59 times their current holdings.",
-      "bestPassage": "Reaching 10% Takes $60.5 Billion and Three More Years Ja Crispy / Shutterstock.com If Bitcoin’s market capitalization remains around $1.630 trillion, the ETFs will need an additional $60.5 billion in assets to reach $163.0 billion, or 1.59 times their current holdings.",
-      "matchedPassages": [
-        "S1-P15"
-      ],
-      "sharedTerms": [
-        "btc",
-        "market",
-        "capitalization",
-        "630",
-        "trillion",
-        "the",
-        "billion",
-        "tim",
-        "current",
-        "holding"
-      ],
-      "entityShared": [
-        "btc"
-      ],
-      "topicShared": [
-        "btc"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 12,
-      "claim": "Because these coins are locked away in custodians, they cannot be spent, staked, or otherwise used.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 73,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P13",
-      "evidence": "These coins are stored in cold storage with custodians, meaning they cannot be spent, staked, or otherwise used, except as backing for shares traded on exchanges.",
-      "bestPassage": "These coins are stored in cold storage with custodians, meaning they cannot be spent, staked, or otherwise used, except as backing for shares traded on exchanges.",
-      "matchedPassages": [
-        "S1-P13"
-      ],
-      "sharedTerms": [
-        "coin",
-        "are",
-        "custodian",
-        "cannot",
-        "spent",
-        "stak",
-        "otherwise"
-      ],
-      "entityShared": [],
-      "topicShared": [],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 13,
-      "claim": "A shrinking tradable float may affect price volatility.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 65,
+      "confidence": 82,
       "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
       "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
       "bestDomain": "247wallst.com",
@@ -494,11 +311,56 @@
         "S1-P2"
       ],
       "sharedTerms": [
-        "shrink",
+        "the",
+        "etfs",
+        "lock",
+        "grow",
+        "slice",
+        "coin",
         "tradable",
         "float",
+        "shrink"
+      ],
+      "entityShared": [
+        "etfs"
+      ],
+      "topicShared": [
+        "etfs"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 8,
+      "claim": "This raises serious questions about how a reduced float could affect price volatility and who ultimately controls the market.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 79,
+      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
+      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
+      "bestDomain": "247wallst.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P2",
+      "evidence": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
+      "bestPassage": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
+      "matchedPassages": [
+        "S1-P2"
+      ],
+      "sharedTerms": [
+        "rais",
+        "seriou",
+        "question",
+        "float",
         "price",
-        "volatility"
+        "volatility",
+        "and",
+        "who",
+        "control",
+        "the",
+        "market"
       ],
       "entityShared": [],
       "topicShared": [],
@@ -509,11 +371,59 @@
       "matchingMode": "semantic-context-evidence-pack"
     },
     {
-      "index": 14,
-      "claim": "The concentration of holdings raises questions about who actually controls the market.",
+      "index": 9,
+      "claim": "In the week ending September 18, four Bitcoin ETFs posted losses, with the ARK 21Shares Bitcoin ETF recording the largest decline at $141.9 million.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 71,
+      "confidence": 90,
+      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
+      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
+      "bestDomain": "247wallst.com",
+      "sourceId": "S1",
+      "bestPassageId": "S1-P3",
+      "evidence": "By Sam Daodu Published September 19, 2026, 7:35pm ET · 3 min read 𝕏 f ⧉ Quick Read Four Bitcoin ETFs experienced losses in the week ending September 18, with the ARK 21Shares Bitcoin ETF leading at $141.9 million.",
+      "bestPassage": "By Sam Daodu Published September 19, 2026, 7:35pm ET · 3 min read 𝕏 f ⧉ Quick Read Four Bitcoin ETFs experienced losses in the week ending September 18, with the ARK 21Shares Bitcoin ETF leading at $141.9 million.",
+      "matchedPassages": [
+        "S1-P3"
+      ],
+      "sharedTerms": [
+        "the",
+        "week",
+        "end",
+        "september",
+        "four",
+        "btc",
+        "etfs",
+        "loss",
+        "ark",
+        "21shar",
+        "etf",
+        "141",
+        "million"
+      ],
+      "entityShared": [
+        "september",
+        "btc",
+        "etfs",
+        "ark",
+        "etf"
+      ],
+      "topicShared": [
+        "btc",
+        "etfs"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "matchingMode": "semantic-context-evidence-pack"
+    },
+    {
+      "index": 14,
+      "claim": "The article raises serious questions about the impact of a shrinking tradable float on price volatility and market control.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 86,
       "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
       "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
       "bestDomain": "247wallst.com",
@@ -527,195 +437,49 @@
       "sharedTerms": [
         "the",
         "rais",
+        "seriou",
         "question",
-        "who",
-        "actually",
-        "control",
-        "market"
-      ],
-      "entityShared": [],
-      "topicShared": [],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 15,
-      "claim": "If a small number of funds control a growing share of the supply, decisions made by those entities—such as large purchases or sales—could have amplified effects on Bitcoin’s price.",
-      "status": "unsupported",
-      "classification": "unsupported",
-      "confidence": 37,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
-      "bestPassage": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
-      "matchedPassages": [
-        "S1-P2"
-      ],
-      "sharedTerms": [
-        "control",
-        "grow",
-        "the",
-        "btc",
-        "price"
-      ],
-      "entityShared": [
-        "btc"
-      ],
-      "topicShared": [
-        "btc"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 16,
-      "claim": "The pace of new inflows into spot Bitcoin ETFs: a slowdown could delay the 10% target.",
-      "status": "unsupported",
-      "classification": "unsupported",
-      "confidence": 44,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
-      "bestPassage": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
-      "matchedPassages": [
-        "S1-P2"
-      ],
-      "sharedTerms": [
-        "the",
-        "spot",
-        "btc",
-        "etfs"
-      ],
-      "entityShared": [
-        "btc",
-        "etfs"
-      ],
-      "topicShared": [
-        "btc",
-        "etfs"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 18,
-      "claim": "Regulatory or custody changes that might affect the ability of ETFs to acquire or hold more Bitcoin.",
-      "status": "unsupported",
-      "classification": "unsupported",
-      "confidence": 29,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P2",
-      "evidence": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
-      "bestPassage": "Spot Bitcoin ETFs have quietly locked up a growing slice of every coin in existence, and the path to 10% raises serious questions about what a shrinking tradable float does to price volatility and who actually controls the market.",
-      "matchedPassages": [],
-      "sharedTerms": [
-        "the",
-        "etfs",
-        "btc"
-      ],
-      "entityShared": [
-        "etfs",
-        "btc"
-      ],
-      "topicShared": [
-        "etfs",
-        "btc"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 19,
-      "claim": "Spot Bitcoin ETFs now own a measurable portion of the cryptocurrency—6.29% of its market cap—and are on a clear path toward a 10% stake.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 0,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P1",
-      "evidence": "",
-      "bestPassage": "Cryptocurrency Bitcoin ETFs Now Own 6.29% of Every Bitcoin.",
-      "matchedPassages": [],
-      "sharedTerms": [],
-      "entityShared": [],
-      "topicShared": [
-        "btc",
-        "etfs",
-        "own"
-      ],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 20,
-      "claim": "Reaching that milestone will require significant new inflows and could tighten the available supply for the broader market.",
-      "status": "unsupported",
-      "classification": "off_topic",
-      "confidence": 28,
-      "bestSource": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%?",
-      "bestUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/19/bitcoin-etfs-now-own-6-29-of-every-bitcoin-what-happens-when-they-hit-10/",
-      "bestDomain": "247wallst.com",
-      "sourceId": "S1",
-      "bestPassageId": "S1-P15",
-      "evidence": "Reaching 10% Takes $60.5 Billion and Three More Years Ja Crispy / Shutterstock.com If Bitcoin’s market capitalization remains around $1.630 trillion, the ETFs will need an additional $60.5 billion in assets to reach $163.0 billion, or 1.59 times their current holdings.",
-      "bestPassage": "Reaching 10% Takes $60.5 Billion and Three More Years Ja Crispy / Shutterstock.com If Bitcoin’s market capitalization remains around $1.630 trillion, the ETFs will need an additional $60.5 billion in assets to reach $163.0 billion, or 1.59 times their current holdings.",
-      "matchedPassages": [],
-      "sharedTerms": [
-        "reach",
+        "shrink",
+        "tradable",
+        "float",
+        "price",
+        "volatility",
         "and",
-        "the",
-        "market"
+        "market",
+        "control"
       ],
-      "entityShared": [
-        "reach"
-      ],
+      "entityShared": [],
       "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
-      "offTopic": true,
-      "scopeWarnings": [
-        "significant"
-      ],
+      "offTopic": false,
+      "scopeWarnings": [],
       "matchingMode": "semantic-context-evidence-pack"
     }
   ],
   "editorial": [
     {
-      "index": 17,
-      "claim": "Bitcoin’s overall market capitalization: a rise would proportionally lift the dollar value needed to hit 10%.",
+      "index": 10,
+      "claim": "This short‑term dip illustrates that even as the sector grows, individual funds can experience volatility.",
       "type": "editorial-analysis",
       "status": "editorial-excluded"
     },
     {
-      "index": 21,
-      "claim": "Investors should monitor inflow trends, Bitcoin’s valuation, and any regulatory developments that could influence the pace of ETF growth.",
+      "index": 11,
+      "claim": "Readers should treat the 10% figure as a projection rather than a guarantee.",
       "type": "editorial-recommendation",
+      "status": "editorial-excluded"
+    },
+    {
+      "index": 12,
+      "claim": "Spot Bitcoin ETFs now own a measurable slice of the Bitcoin supply, and the momentum suggests they could soon hold one‑tenth of all coins.",
+      "type": "editorial-analysis",
+      "status": "editorial-excluded"
+    },
+    {
+      "index": 13,
+      "claim": "The evidence highlights a growing concentration of assets in cold storage, a projected three‑year timeline to the next milestone, and important questions about market dynamics.",
+      "type": "editorial-analysis",
       "status": "editorial-excluded"
     }
   ]
