@@ -99,7 +99,7 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
     composition = 'Single hero object or close physical detail, clean 16:9 framing, realistic materials, controlled depth of field, generous negative space.';
     avoid.push('fake app screens','invented interface labels');
   } else {
-    primarySubject = 'the most concrete physical subject, event, organization, or action explicitly described by the story';
+    primarySubject = 'the most concrete physical subject, event, organization, or action explicitly described by the story, centered on ' + anchors.slice(0,4).join(', ');
     scene = 'A commissioned technology-publication photograph of that concrete subject or event, not a category-level representation.';
     supportingElements = ['only contextual elements that directly explain the story'];
     composition = 'One hero subject with one or two supporting elements, natural editorial lighting and strong negative space.';
