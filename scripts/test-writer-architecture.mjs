@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { validateDraft } from './trendforge-editorial-policy.mjs';
 const base={title:'A sufficiently descriptive TrendForge headline',description:'A sufficiently long description that explains the development and gives readers useful context without making unsupported claims.',category:'Technology'};
-const content='## One\n\nSupported detail one. Supported detail two.\n\n## Two\n\nSupported detail three. Supported detail four.\n\n## Three\n\nSupported detail five. Supported detail six.\n\n## Four\n\nSupported detail seven. Supported detail eight.\n\n## Five\n\nSupported detail nine. Supported detail ten.\n\n## Six\n\nSupported detail eleven. Supported detail twelve.';
+const content=['One','Two','Three','Four','Five','Six'].map((h,i)=>'## '+h+'\\n\\n'+"Supported detail one. Supported detail two. This section provides concrete context, timing, evidence, and implications without adding unsupported claims. The supplied evidence gives readers enough detail to understand the development and its limits."+' This is section '+(i+1)+' and it remains distinct from the other sections.').join('\\n\\n');
 const result=validateDraft({...base,content,blueprint:{maxH2:5}});
 assert.equal(result.passed,true);
 assert.ok(!result.errors.some(x=>/H2 count .* exceeds evidence blueprint maximum/i.test(x)));
