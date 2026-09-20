@@ -48,8 +48,10 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
     for(const u of units.sort((a,b)=>b.relevance-a.relevance)){
       const key=u.text.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
       if(!key||seen.has(key))continue;
-      const dedupThreshold=Math.min(4,Math.max(2,Math.floor(Math.min(x.text.length,u.text.length)/80)));
-      if(dedup.some(x=>phraseOverlap(x.text,u.text)>=dedupThreshold))continue;
+      if(dedup.some(x=>{
+        const dedupThreshold=Math.min(4,Math.max(2,Math.floor(Math.min(x.text.length,u.text.length)/80)));
+        return phraseOverlap(x.text,u.text)>=dedupThreshold;
+      }))continue;
       seen.add(key);dedup.push(u);
     }
     const relevant=dedup.slice(0,48);
