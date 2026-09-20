@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-20T11:46:47.031Z",
+  "updatedAt": "2026-09-20T16:27:47.087Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,9 +12,9 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 18,
+    "runCount": 19,
     "topicCount": 250,
-    "articleCount": 21,
+    "articleCount": 20,
     "latestEditorialScore": 74,
     "latestClaimConfidence": 82,
     "latestEvidencePassRate": 28,
@@ -24,14 +24,14 @@
   },
   "changes": {
     "editorialScore": 0,
-    "claimConfidence": 35,
-    "evidencePassRate": -3
+    "claimConfidence": 0,
+    "evidencePassRate": 0
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 126,
+      "failures": 133,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -46,8 +46,8 @@
     },
     "Cohere": {
       "successRate": 15,
-      "successes": 111,
-      "failures": 640,
+      "successes": 123,
+      "failures": 691,
       "cooldownRuns": 0,
       "latestStatus": 200,
       "latestClass": "success"
@@ -55,15 +55,15 @@
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 320,
+      "failures": 350,
       "cooldownRuns": 3,
       "latestStatus": 503,
       "latestClass": "server"
     },
     "Groq": {
-      "successRate": 28,
-      "successes": 275,
-      "failures": 709,
+      "successRate": 29,
+      "successes": 311,
+      "failures": 753,
       "cooldownRuns": 2,
       "latestStatus": 200,
       "latestClass": "success"
@@ -71,15 +71,15 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 54,
+      "failures": 57,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
       "successRate": 5,
-      "successes": 25,
-      "failures": 455,
+      "successes": 27,
+      "failures": 497,
       "cooldownRuns": 0,
       "latestStatus": 0,
       "latestClass": "transient"
@@ -225,13 +225,13 @@
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by +35 points versus the previous run."
+      "detail": "Average claim confidence changed by +0 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by -3 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by +0 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
@@ -246,7 +246,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 18,
+    "memoryRuns": 19,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
