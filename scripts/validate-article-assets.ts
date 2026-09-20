@@ -18,6 +18,9 @@ function pngDimensions(buffer: Buffer) {
 }
 
 let failed = false;
+const manifestPath = 'data/image-manifest.json';
+const imageManifest = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')) : { images: {} };
+const manifestImages = imageManifest?.images && typeof imageManifest.images === 'object' ? imageManifest.images : {};
 const hashes = new Map<string, string>();
 for (const file of files) {
   const raw = fs.readFileSync(path.join(dir, file), 'utf8');
@@ -45,6 +48,14 @@ for (const file of files) {
 
   let visualOk = false;
   let duplicate = false;
+  let relevanceOk = true;
+  const manifestEntry = manifestImages?.[slug];
+  if (manifestEntry) {
+    const brief = manifestEntry.visualBrief;
+    const anchors = Array.isArray(brief?.storyAnchors) ? brief.storyAnchors : [];
+    const relevance = manifestEntry.relevance;
+    relevanceOk = Boolean(brief && anchors.length > 0 && typeof manifestEntry.promptLength === 'number' && manifestEntry.promptLength <= 1900 && (!relevance || relevance.passed === true));
+  }
   if (localPath && fs.existsSync(localPath)) {
     const bytes = fs.readFileSync(localPath);
     const dims = pngDimensions(bytes);
@@ -59,9 +70,9 @@ for (const file of files) {
 
   const ok = Boolean(
     image && imageAlt && (isFlux || isSvgFallback) &&
-    localPath && fs.existsSync(localPath) && gate.checks.safeImages && visualOk && !duplicate
+    localPath && fs.existsSync(localPath) && gate.checks.safeImages && visualOk && relevanceOk && !duplicate
   );
-  console.log(`${ok ? 'PASS' : 'FAIL'} image gate: ${slug}${isSvgFallback ? ' (SVG fallback)' : ''}${duplicate ? ' (duplicate visual)' : ''}`);
+  console.log(`${ok ? 'PASS' : 'FAIL'} image gate: ${slug}${isSvgFallback ? ' (SVG fallback)' : ''}${duplicate ? ' (duplicate visual)' : ''}${!relevanceOk ? ' (visual relevance contract failed)' : ''}`);
   if (!ok) failed = true;
 }
 if (failed) {
