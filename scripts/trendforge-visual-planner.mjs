@@ -107,9 +107,21 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
   return { version: 2, mode, primarySubject, scene, supportingElements, composition, company: company || null, namedPerson: person || null, category, storyAnchors: anchors, avoid };
 }
 
+function assessVisualRelevance({ title = '', description = '', brief = null } = {}) {
+  const anchors = storyAnchors(title, description);
+  const haystack = clean([brief?.primarySubject, brief?.scene, ...(brief?.supportingElements || [])].join(' ')).toLowerCase();
+  const matchedAnchors = anchors.filter(anchor => haystack.includes(anchor));
+  const entityAnchors = [brief?.company, brief?.namedPerson].filter(Boolean).map(x => String(x).toLowerCase());
+  const entityMatches = entityAnchors.filter(x => haystack.includes(x));
+  const passed = anchors.length === 0 ? true : matchedAnchors.length >= Math.min(2, anchors.length);
+  return { passed, anchors, matchedAnchors, entityMatches, score: anchors.length ? matchedAnchors.length / anchors.length : 1 };
+}
+
 function buildImagePrompt({ title, description, category, body = '' }) {
   const brief = buildVisualBrief({ title, description, category, body });
   const storyContext = clean(title + '. ' + description).slice(0, 520);
+  const relevance = assessVisualRelevance({ title, description, brief });
+  if (!relevance.passed) throw new Error('visual relevance planner could not bind the prompt to the story anchors');
   const prompt = [
     'Create a premium editorial visual commissioned by a major technology publication, not a generic AI image.',
     'Canvas: exactly 1024x576 pixels, horizontal 16:9 composition.',
@@ -133,7 +145,7 @@ function buildImagePrompt({ title, description, category, body = '' }) {
 
   // Keep the shared planner prompt safely below strict model prompt limits such as FLUX.1 Schnell.
   const maxPromptChars = 1900;
-  return { brief, prompt: prompt.length <= maxPromptChars ? prompt : prompt.slice(0, maxPromptChars) };
+  return { brief, prompt: prompt.length <= maxPromptChars ? prompt : prompt.slice(0, maxPromptChars), relevance };
 }
 
-export { buildVisualBrief, buildImagePrompt, storyAnchors };
+export { buildVisualBrief, buildImagePrompt, storyAnchors, assessVisualRelevance };
