@@ -84,7 +84,7 @@ async function main(){
     evidencePack=await buildEvidencePack(sources,trend.title);
     console.log('Authoritative Evidence Pack unavailable; using legacy grounding fetch.');
   }
-  const usablePassages=evidencePack.reduce((n,s)=>n+s.passages.length,0);
+  const usablePassages=evidencePack.reduce((n:number,s)=>n+s.passages.length,0);
   const sourceWithEvidence=evidencePack.filter(x=>x.passages.length>=1).length;
   const evidenceDomains=[...new Set(evidencePack.map(s=>domainOf(s.url)).filter(Boolean))];
   const strongEvidence=evidencePack.length>=2&&sourceWithEvidence>=2&&evidenceDomains.length>=2;
