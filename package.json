@@ -41,7 +41,8 @@
     "repair-evidence:test": "node scripts/test-repair-evidence-guard.mjs",
     "claims:deterministic": "node scripts/test-claim-verifier-deterministic.mjs",
     "quality-evidence:test": "node scripts/test-quality-canonical-evidence.mjs",
-    "adaptive-publication:test": "node scripts/test-adaptive-publication-guard.mjs"
+    "adaptive-publication:test": "node scripts/test-adaptive-publication-guard.mjs",
+    "writer-architecture:test": "node scripts/test-writer-architecture.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
