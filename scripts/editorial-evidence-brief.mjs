@@ -31,12 +31,14 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       for(const sentence of sentenceUnits){
         if(isNoise(sentence))continue;
         const rel=relevanceScore(sentence,story);
-        if(rel.topicOverlap<1&&rel.entityShared===0&&rel.numbers===0)continue;
-        // Two or more direct topic tokens are sufficient evidence of relevance;
-        // factual/number/entity signals strengthen single-token matches.
-        const minimumScore=(rel.topicOverlap>=2||rel.entityShared>0||rel.numbers>0)?2:3;
-        if(rel.score<minimumScore)continue;
-        units.push({rawPassageIndex:pi,text:sentence,relevance:rel.score,topicOverlap:rel.topicOverlap,entityShared:rel.entityShared});
+        // Evidence relevance is story-level, not keyword-count-only: a sentence
+        // may carry the key fact while the source paragraph carries the topic context.
+        const fallbackRel=relevanceScore(passage,story);
+        const effectiveRel=rel.score>=fallbackRel.score?rel:fallbackRel;
+        if(effectiveRel.topicOverlap<1&&effectiveRel.entityShared===0&&effectiveRel.numbers===0)continue;
+        const minimumScore=(effectiveRel.topicOverlap>=2||effectiveRel.entityShared>0||effectiveRel.numbers>0)?2:3;
+        if(effectiveRel.score<minimumScore)continue;
+        units.push({rawPassageIndex:pi,text:sentence,relevance:effectiveRel.score,topicOverlap:effectiveRel.topicOverlap,entityShared:effectiveRel.entityShared});
       }
     }
     const dedup=[]; const seen=new Set();
