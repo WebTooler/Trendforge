@@ -66,8 +66,15 @@ async function main(){
     console.log('Authoritative Evidence Pack missing; publication blocked.');
     process.exit(0);
   }
-  try{ authoritative=JSON.parse(fs.readFileSync(authoritativePath,'utf8')); }catch{
-    console.log('Authoritative Evidence Pack unreadable; publication blocked.');
+  try {
+    // GitHub Actions/workflow artifacts can occasionally carry a UTF-8 BOM or
+    // whitespace before the JSON document. Normalize that at the boundary so a
+    // valid canonical pack is not falsely treated as unreadable.
+    const raw=fs.readFileSync(authoritativePath,'utf8').replace(/^\\uFEFF/,'').trim();
+    authoritative=JSON.parse(raw);
+  } catch (error) {
+    const message=error instanceof Error ? error.message : String(error);
+    console.log(`Authoritative Evidence Pack parse failed; publication blocked: ${message}`);
     process.exit(0);
   }
   const pack=(authoritative?.candidates??[]).find((item:any)=>item?.candidate?.link===trend.link);
