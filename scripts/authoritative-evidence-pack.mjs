@@ -19,5 +19,5 @@ export function buildAuthoritativeEvidencePack({candidate={},sources=[],coverage
 export function validateAuthoritativeEvidencePack(pack){
   if(!pack||pack.version!==1||pack.status!=='authoritative')return false;
   if(!pack.candidate?.link||!Array.isArray(pack.sources)||!pack.coverage||!pack.blueprint)return false;
-  return pack.sources.every(source=>typeof source.id==='string'&&/^S\\d+$/.test(source.id)&&typeof source.url==='string'&&source.url.length>0&&typeof source.publisherFamily==='string'&&Array.isArray(source.passages)&&source.passages.length>0&&source.lineage&&typeof source.lineage.id==='string');
+  return pack.sources.every(source=>typeof source.id==='string'&&/^S\d+$/.test(source.id)&&typeof source.url==='string'&&source.url.length>0&&typeof source.publisherFamily==='string'&&Array.isArray(source.passages)&&source.passages.length>0&&source.lineage&&typeof source.lineage.id==='string');
 }
