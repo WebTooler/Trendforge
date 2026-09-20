@@ -27,7 +27,7 @@ assert(brief.metrics.relevantPassageCount>=2);
 assert(brief.metrics.relevantPassageCount<brief.metrics.rawPassageCount);
 assert(brief.metrics.supportedClaimCount>=2);
 assert(brief.metrics.relevantEvidenceDensity<1);
-assert(brief.storyCapacity==='low');
+assert(brief.storyCapacity==='none');
 assert(brief.coreStoryFacts.every(x=>/bitcoin|etf|inflow|6\.29/i.test(x.text)));
 assert(!brief.relevantPassages.some(x=>/president|conference discount|commission/i.test(x.text)));
 
