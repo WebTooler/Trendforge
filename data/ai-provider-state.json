@@ -25,8 +25,8 @@
       ]
     },
     "Gemini": {
-      "failures": 32,
-      "quotaBlockedUntil": 1789928166284,
+      "failures": 33,
+      "quotaBlockedUntil": 1789936209601,
       "lastStatus": 503,
       "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
       "lastClass": "server",
@@ -39,6 +39,12 @@
         },
         {
           "at": 1789928046284,
+          "ok": false,
+          "class": "server",
+          "status": 503
+        },
+        {
+          "at": 1789936089601,
           "ok": false,
           "class": "server",
           "status": 503
@@ -60,8 +66,8 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 43,
-      "quotaBlockedUntil": 1789926454334,
+      "failures": 44,
+      "quotaBlockedUntil": 1789936097907,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -70,6 +76,12 @@
       "history": [
         {
           "at": 1789926424334,
+          "ok": false,
+          "class": "transient",
+          "status": 200
+        },
+        {
+          "at": 1789936067907,
           "ok": false,
           "class": "transient",
           "status": 200
@@ -101,5 +113,5 @@
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-20T18:14:22.673Z"
+  "updatedAt": "2026-09-20T20:28:09.601Z"
 }
