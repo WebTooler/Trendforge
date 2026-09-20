@@ -28,5 +28,6 @@ const cases=[
   {name:'attribution-preserved',sentence:'According to Reuters, Acme said the launch will initially target enterprise customers.',expect:x=>x.status==='verified'},
   {name:'uncertainty-preserved',sentence:'The launch could initially target enterprise customers, according to the company.',expect:x=>x.status==='verified'},
   {name:'certainty-escalation',sentence:'The launch will initially target enterprise customers.',expect:x=>x.status==='unsupported'||x.status==='partial'}
+];
 
   ;
