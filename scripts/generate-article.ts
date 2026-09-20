@@ -60,31 +60,31 @@ async function main(){
   const category=classifyArticleCategory(trend);
   process.env.TRENDFORGE_WRITER_CATEGORY=category;
   console.log(`Editorial category: ${trend.category} -> ${category}`);
-  const candidateEvidence=verifiedEvidence(trend,verification);
-  const sources=candidateEvidence.sources.slice(0,8).map(s=>({title:s.title||`${publisherName(trend)}: ${trend.title}`,url:s.finalUrl||s.url||'',publishedAt:trend.publishedAt,role:sourceRole({title:s.title,url:s.finalUrl||s.url||''})})).filter(s=>s.url);
+  const authoritativePath='data/authoritative-evidence-pack.json';
+  let authoritative=null;
+  if(!fs.existsSync(authoritativePath)){
+    console.log('Authoritative Evidence Pack missing; publication blocked.');
+    process.exit(0);
+  }
+  try{ authoritative=JSON.parse(fs.readFileSync(authoritativePath,'utf8')); }catch{
+    console.log('Authoritative Evidence Pack unreadable; publication blocked.');
+    process.exit(0);
+  }
+  const pack=(authoritative?.candidates??[]).find((item:any)=>item?.candidate?.link===trend.link);
+  if(!pack||!validateAuthoritativeEvidencePack(pack)){
+    console.log('Authoritative Evidence Pack missing or invalid for selected candidate; publication blocked.');
+    process.exit(0);
+  }
+  const evidencePack:EvidencePackItem[]=(pack.sources??[]).map((source:any)=>({
+    title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
+    passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
+    publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage
+  }));
+  const sources=evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt,role:sourceRole(s)}));
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
   const uniqueSourceDomains=[...new Set(sources.map(s=>domainOf(s.url)).filter(Boolean))];
-  if(uniqueSourceDomains.length<1){console.log('Verified evidence did not contain a reachable publisher domain; publication blocked.');process.exit(0);}
-  let evidencePack:EvidencePackItem[];
-  const authoritativePath='data/authoritative-evidence-pack.json';
-  if(fs.existsSync(authoritativePath)){
-    let authoritative=null;
-    try{ authoritative=JSON.parse(fs.readFileSync(authoritativePath,'utf8')); }catch{}
-    const pack=(authoritative?.candidates??[]).find((item:any)=>item?.candidate?.link===trend.link);
-    if(!pack||!validateAuthoritativeEvidencePack(pack)){
-      console.log('Authoritative Evidence Pack missing or invalid for selected candidate; publication blocked.');
-      process.exit(0);
-    }
-    evidencePack=(pack.sources??[]).map((source:any)=>({
-      title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
-      passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
-      publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage
-    }));
-    console.log(`Authoritative Evidence Pack: consumed ${evidencePack.length} canonical source(s); no downstream source expansion.`);
-  }else{
-    evidencePack=await buildEvidencePack(sources,trend.title);
-    console.log('Authoritative Evidence Pack unavailable; using legacy grounding fetch.');
-  }
+  if(uniqueSourceDomains.length<1){console.log('Canonical evidence pack contains no reachable publisher domain; publication blocked.');process.exit(0);}
+  console.log(`Authoritative Evidence Pack: consumed ${evidencePack.length} canonical source(s); no downstream source expansion.`);
   const usablePassages=evidencePack.reduce((n,s)=>n+s.passages.length,0);
   const sourceWithEvidence=evidencePack.filter(x=>x.passages.length>=1).length;
   const evidenceDomains=[...new Set(evidencePack.map(s=>domainOf(s.url)).filter(Boolean))];
