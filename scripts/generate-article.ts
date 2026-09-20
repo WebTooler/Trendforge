@@ -82,6 +82,7 @@ async function main(){
     console.log('Authoritative Evidence Pack missing or invalid for selected candidate; publication blocked.');
     process.exit(0);
   }
+  const editorialEvidenceBrief=pack.editorialEvidenceBrief??null;
   const evidencePack:EvidencePackItem[]=(pack.sources??[]).map((source:any)=>({
     title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
     passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
@@ -99,6 +100,7 @@ async function main(){
   const minimumPassages=strongEvidence?6:3;
   console.log(`Grounding preflight: ${sources.length} verified publisher URL(s) fetched; ${sourceWithEvidence} source(s) yielded evidence across ${evidenceDomains.length} domain(s).`);
   if(evidencePack.length<1||sourceWithEvidence<1||evidenceDomains.length<1||usablePassages<minimumPassages){console.log(`Grounding evidence pack incomplete: ${evidencePack.length} source(s), ${usablePassages} usable evidence passages, ${evidenceDomains.length} independent evidence domain(s); publication blocked before AI generation.`);process.exit(0);}
+  const evidenceBriefText=editorialEvidenceBrief?JSON.stringify({version:editorialEvidenceBrief.version,storyCapacity:editorialEvidenceBrief.storyCapacity,coreStoryFacts:editorialEvidenceBrief.coreStoryFacts,supportedClaims:editorialEvidenceBrief.supportedClaims,sourceSupportMapping:editorialEvidenceBrief.sourceSupportMapping,uncertainty:editorialEvidenceBrief.uncertainty,unknowns:editorialEvidenceBrief.unknowns,contradictions:editorialEvidenceBrief.contradictions,metrics:editorialEvidenceBrief.metrics},null,2):'';
   const evidenceText=evidencePack.map((s,i)=>`SOURCE S${i+1}\
 Publisher/article: ${s.title}\
 URL: ${s.url}\
@@ -115,6 +117,9 @@ ${s.passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\
   const brief:ArticleBrief={title:trend.title,category,angle:'Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.',keyPoints:[trend.description??'Use only retrieved evidence passages.',evidenceInstruction],sources:evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt}))};
   const prompt=buildArticlePrompt(brief)+`\
 \
+EDITORIAL EVIDENCE BRIEF V3 — STRUCTURED MAP OF THE SAME SUPPLIED EVIDENCE:\
+${evidenceBriefText}\
+\
 RETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:\
 ${evidenceText}\
 \
@@ -127,6 +132,7 @@ GROUNDING CONTRACT:\
 - Do not invent quotations or statistics.\
 - The evidence-pack source IDs are internal and must NOT appear in the published prose.\
 - Prefer a smaller, fully grounded article over a longer article with unsupported context.\
+- The Editorial Evidence Brief is a derived map, not an additional factual source. If any brief summary conflicts with a supporting passage, follow the passage and preserve uncertainty.\
 \
 OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Target about 700-1000 words; 450 is the minimum publishable floor, but do not pad. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
   fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,grounding:{version:7,strongEvidence,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,primarySourceCount:primarySources.length,sources:evidencePack.map(s=>({title:s.title,url:s.url,role:sourceRole(s),kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
