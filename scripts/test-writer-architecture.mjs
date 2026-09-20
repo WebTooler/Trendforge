@@ -15,4 +15,7 @@ assert.ok(generic.errors.some(x=>x.includes('generic/filler phrasing')));
 const shallow=validateDraft({...base,content:'## Evidence\n\nThe report confirms the change.\n\n## Impact\n\nThe available evidence explains the practical effect in enough detail for readers and identifies what remains uncertain. This section adds a separate supported point and keeps the explanation concrete.\n\n## Context\n\nThe source provides additional context about the development and its timing. These details clarify the story without adding unsupported claims.',blueprint:{maxH2:3}});
 assert.equal(shallow.passed,false);
 assert.ok(shallow.errors.some(x=>x.includes('shallow H2 explanation')));
+const thin=validateDraft({...base,content:'## One\n\nA concrete paragraph with enough words to be substantive and useful for readers, but the overall article remains structurally thin.\n\n## Two\n\nAnother concrete paragraph with enough words to be substantive and useful for readers, while still lacking the required depth across the full article.',blueprint:{maxH2:2}});
+assert.equal(thin.passed,false);
+assert.ok(thin.errors.some(x=>x.includes('too few substantive paragraphs')));
 console.log('Phase 4 Writer 3.0 repetition guard passed.');
