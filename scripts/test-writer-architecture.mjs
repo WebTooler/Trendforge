@@ -9,7 +9,7 @@ const content=[
   '## Five\n\nThe fifth section isolates another documented detail so the article does not collapse several propositions into one paragraph. Its explanation adds context rather than repeating earlier language or padding the word count. The test can therefore detect structural quality without weakening repetition safeguards.',
   '## Six\n\nFinally, the closing section records a separate supported point and states what the evidence still cannot establish. It ends the fixture with a clear boundary instead of a generic summary. That makes the six-section example long enough for narrow-mode validation while preserving distinct editorial purposes.'
 ].join('\n\n');
-const result=validateDraft({...base,content,blueprint:{mode:'narrow',targetWords:{min:300,max:450,soft:375},maxH2:5}});
+const result=validateDraft({...base,content,blueprint:{mode:'bounded',targetWords:{min:425,max:750,soft:600},maxH2:5}});
 assert.equal(result.passed,true);
 assert.ok(!result.errors.some(x=>/H2 count .* exceeds evidence blueprint maximum/i.test(x)));
 const repeatedParagraph='Bitcoin ETFs hold a reported share of bitcoin. The report says the holdings increased over time and describes the change in detail. This paragraph adds context about the reported holdings and their increase for readers.';
