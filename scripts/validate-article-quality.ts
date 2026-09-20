@@ -167,11 +167,11 @@ for (const file of files) {
     .filter((p) => p && !/^\d+\.\s+/.test(p));
   const sourceUrls = [...new Set([...raw.matchAll(/\]\((https:\/\/[^)]+)\)/g)].map((m) => normalizeUrl(m[1])))];
   const unsafe = /<script\b|<iframe\b|javascript\s*:/i.test(raw);
-  const depth = validateArticleDepth({ content: main, blueprint: depthBlueprint });
   const evidence = resolveEvidence(sourceUrls);
   const isCurrentRun = currentRunFiles.has(file);
   const canonical = isCurrentRun ? canonicalEvidenceForBrief(currentBriefTitle) : null;
   const depthBlueprint = canonical?.pack?.blueprint || null;
+  const depth = validateArticleDepth({ content: main, blueprint: depthBlueprint });
   if (isCurrentRun && !canonical) errors.push(`${slug}: authoritative evidence pack missing or invalid for current run.`);
   const canonicalSourceUrls = canonical ? sourceUrls.filter((url) => canonical.urls.has(url)) : [];
 
