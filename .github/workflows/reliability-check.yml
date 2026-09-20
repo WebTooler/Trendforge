@@ -84,6 +84,9 @@ jobs:
       - name: Verify Phase 8 humanization guard
         run: npm run humanization:test
 
+      - name: Verify Phase 9 article depth guard
+        run: npm run article-depth:test
+
       - name: Verify Phase 4 Writer 3.0 repetition guard
         run: npm run writer-architecture:test
 
