@@ -5,4 +5,7 @@ const content='## One\n\nSupported detail one. Supported detail two.\n\n## Two\n
 const result=validateDraft({...base,content,blueprint:{maxH2:5}});
 assert.equal(result.passed,false);
 assert.ok(result.errors.some(x=>x.includes('H2 count 6 exceeds evidence blueprint maximum 5')));
-console.log('Phase 4 Writer 3.0 H2 architecture guard passed.');
+const repetitive=validateDraft({...base,content:'## Evidence\\n\\nBitcoin ETFs hold a reported share of bitcoin. The report says the holdings increased over time and describes the change in detail. This paragraph adds context about the reported holdings and their increase for readers.\\n\\n## Impact\\n\\nBitcoin ETFs hold a reported share of bitcoin. The report says the holdings increased over time and describes the change in detail. This paragraph adds context about the reported holdings and their increase for readers.',blueprint:{maxH2:2}});
+assert.equal(repetitive.passed,false);
+assert.ok(repetitive.errors.some(x=>x.includes('repetitive paragraph/topic overlap')));
+console.log('Phase 4 Writer 3.0 repetition guard passed.');
