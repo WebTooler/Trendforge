@@ -45,6 +45,9 @@ jobs:
       - name: Generate search index
         run: npx tsx scripts/generate-search-index.ts
 
+      - name: Verify evidence lineage
+        run: npm run evidence-lineage:test
+
       - name: Generate sitemap
         run: npx tsx scripts/generate-sitemap.ts
 
