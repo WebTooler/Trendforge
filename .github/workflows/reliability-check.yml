@@ -63,6 +63,9 @@ jobs:
       - name: Verify Phase 3 canonical claim verifier
         run: npm run claims:deterministic
 
+      - name: Verify Phase 3 quality canonical evidence
+        run: npm run quality-evidence:test
+
       - name: Generate sitemap
         run: npx tsx scripts/generate-sitemap.ts
 
