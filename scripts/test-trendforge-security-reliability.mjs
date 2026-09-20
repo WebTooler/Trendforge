@@ -22,7 +22,7 @@ assert.match(script, /out\/robots\.txt/);
 assert.match(script, /out\/sitemap\.xml/);
 assert.match(script, /out\/search-index\.json/);
 
-execFileSync(process.execPath, ['scripts/trendforge-security-reliability.mjs'], { stdio: 'pipe' });
+execFileSync(process.execPath, ['scripts/trendforge-security-reliability.mjs'], { stdio: 'inherit' });
 const result = JSON.parse(fs.readFileSync('data/trendforge-security-reliability.json', 'utf8'));
 assert.equal(result.passed, true);
 assert.equal(result.policy.changesPublicationGates, false);
