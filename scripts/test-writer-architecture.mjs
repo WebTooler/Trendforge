@@ -12,7 +12,15 @@ const content=['One','Two','Three','Four','Five','Six'].map((h,i)=>{
     'The fifth section closes its own evidence thread instead of repeating language from the earlier sections.',
     'The final section supplies another distinct supported point and leaves the fixture internally coherent.'
   ];
-  return '## '+h+'\n\n'+leads[i]+' a distinct development with concrete context, timing, evidence, and implications without adding unsupported claims. The supplied '+details[i]+' gives readers enough detail to understand the development and its limits. '+endings[i];
+  const checks=[
+    'Readers can identify the opening evidence without needing an extra transition.',
+    'The wording gives the second section its own purpose and avoids structural padding.',
+    'This passage tests independent phrasing rather than a copied sentence template.',
+    'Its details support the fixture without importing facts from outside the supplied record.',
+    'The evidence thread remains separate from earlier sections and stays readable.',
+    'The closing wording confirms that the fixture can end without a generic summary.'
+  ];
+  return '## '+h+'\n\n'+leads[i]+' a distinct development with concrete context, timing, evidence, and implications without adding unsupported claims. The supplied '+details[i]+' gives readers enough detail to understand the development and its limits. '+endings[i]+' '+checks[i];
 }).join('\n\n');
 const result=validateDraft({...base,content,blueprint:{mode:'narrow',targetWords:{min:300,max:450,soft:375},maxH2:5}});
 assert.equal(result.passed,true);
