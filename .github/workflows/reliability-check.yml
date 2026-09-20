@@ -90,6 +90,9 @@ jobs:
       - name: Verify Phase 10 visual relevance planner
         run: npm run visual-planner:test
 
+      - name: Verify Phase 11 adaptive AI provider routing
+        run: npm run ai-router:test
+
       - name: Verify Phase 4 Writer 3.0 repetition guard
         run: npm run writer-architecture:test
 
