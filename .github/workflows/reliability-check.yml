@@ -1,5 +1,8 @@
 name: TrendForge Reliability Check
 
+# Phase 1: deterministic build/static verification.
+# The production AI pipeline remains manually locked in publish.yml.
+
 on:
   push:
     branches: ["main"]
@@ -61,11 +64,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if find out -type f \( -name '.env' -o -name '.env.*' -o -name '*secret*' \) -print -quit | grep -q .; then
+          if find out -type f ( -name '.env' -o -name '.env.*' -o -name '*secret*' ) -print -quit | grep -q .; then
             echo "Potential secret file detected in build output."
             exit 1
           fi
           echo "No secret-named files found in build output."
 
       - name: Reliability check passed
-        run: echo "TrendForge reliability checks passed."
+        run: echo "TrendForge Phase 1 reliability checks passed."
