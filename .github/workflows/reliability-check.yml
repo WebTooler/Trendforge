@@ -72,6 +72,9 @@ jobs:
       - name: Verify Phase 4 Writer 3.0 architecture
         run: npm run writer-architecture:test
 
+      - name: Verify Phase 4 Writer 3.0 repetition guard
+        run: npm run writer-architecture:test
+
       - name: Generate sitemap
         run: npx tsx scripts/generate-sitemap.ts
 
