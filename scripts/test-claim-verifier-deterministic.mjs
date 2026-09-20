@@ -4,6 +4,7 @@ import { spawnSync } from 'node:child_process';
 const articleDir='content/articles';
 const briefPath='data/article-brief.json';
 const claimPath='data/claim-verification.json';
+const evidencePackPath='data/authoritative-evidence-pack.json';
 const backupDir='.trendforge-claim-fixture-backup';
 const source='Reuters reports that Acme launched its Nova AI model in London on Tuesday, with the company saying the model reduced inference costs by 20 percent. The company said the launch will initially target enterprise customers. Mozilla says paying for closed frontier models buys about a four-month head start at about five times the per-task cost, but only when tasks take between eight and 12 hours. However, open models are still lagging behind closed frontier models in revenue. The shift has accelerated the use of open models since Mozilla’s inaugural State of Open Source AI report was published on July 14. The report says organizations still pay for closed frontier models because they work out of the box and come bundled with compliance packaging, support, and accountability, while many organizations lack staff to run open-weight models well. The report highlights how Moonshot AI’s Kimi K3 achieves a composite AI performance score just three points behind Anthropic’s Fable 5 while costing 30 percent of the latter.';
 const baseFrontmatter=`---\ntitle: "Acme Nova AI launch"\ndescription: "A test article for deterministic claim verification."\n---`;
@@ -42,12 +43,15 @@ function main(){
   const hadArticles=fs.existsSync(articleDir);
   const hadBrief=fs.existsSync(briefPath);
   const hadClaim=fs.existsSync(claimPath);
+  const hadEvidencePack=fs.existsSync(evidencePackPath);
   let failed=0;
   try{
     if(hadArticles)fs.renameSync(articleDir,`${backupDir}/articles`);
     fs.mkdirSync(articleDir,{recursive:true});
+    fs.writeFileSync(evidencePackPath,JSON.stringify({version:1,generatedAt:new Date().toISOString(),status:'authoritative',candidates:[{version:1,status:'authoritative',generatedAt:new Date().toISOString(),candidate:{title:'Acme Nova AI launch',link:'https://example.com/story',category:'Technology'},policy:'fixture',sources:[{id:'S1',url:'https://example.com/reuters',finalUrl:'https://example.com/reuters',domain:'example.com',publisherFamily:'example.com',title:'Reuters — Acme Nova AI launch',verified:true,primary:false,credibilityTier:'10',lineage:{id:'fixture-lineage',type:'independent',members:1},passages:[source],body:source,extraction:{kind:'fixture'}}],coverage:{},blueprint:{}}]},null,2));
     if(hadBrief)fs.copyFileSync(briefPath,`${backupDir}/article-brief.json`);
     if(hadClaim)fs.copyFileSync(claimPath,`${backupDir}/claim-verification.json`);
+    if(hadEvidencePack)fs.copyFileSync(evidencePackPath,`${backupDir}/authoritative-evidence-pack.json`);
     for(const test of cases){
       const result=runCase(test);
       if(result.ok)console.log(`CLAIM FIXTURE PASS: ${test.name}`);
@@ -61,6 +65,7 @@ function main(){
     if(hadArticles)fs.renameSync(`${backupDir}/articles`,articleDir);
     if(hadBrief)fs.copyFileSync(`${backupDir}/article-brief.json`,briefPath);else fs.rmSync(briefPath,{force:true});
     if(hadClaim)fs.copyFileSync(`${backupDir}/claim-verification.json`,claimPath);else fs.rmSync(claimPath,{force:true});
+    if(hadEvidencePack)fs.copyFileSync(`${backupDir}/authoritative-evidence-pack.json`,evidencePackPath);else fs.rmSync(evidencePackPath,{force:true});
     fs.rmSync(backupDir,{recursive:true,force:true});
   }
   if(failed)process.exit(1);
