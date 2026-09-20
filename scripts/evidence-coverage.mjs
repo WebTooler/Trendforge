@@ -116,11 +116,11 @@ export function scoreEvidenceCoverage({ sources=[], evidenceBrief=null }={}) {
   const usable = sources.filter(s => s && (Array.isArray(s.passages) ? s.passages.length : 0) > 0);
   const scoredSources = usable.map(scoreEvidenceSource);
   const totalChars = scoredSources.reduce((n,s)=>n+s.chars,0);
+  const totalPassages = scoredSources.reduce((n,s)=>n+s.passages,0);
   const rawPassageCount=Number(evidenceBrief?.metrics?.rawPassageCount||totalPassages);
   const relevantPassageCount=Number(evidenceBrief?.metrics?.relevantPassageCount||totalPassages);
   const supportedClaimCount=Number(evidenceBrief?.metrics?.supportedClaimCount||0);
   const relevantEvidenceDensity=rawPassageCount?Number((relevantPassageCount/rawPassageCount).toFixed(3)):0;
-  const totalPassages = scoredSources.reduce((n,s)=>n+s.passages,0);
   const domainFamilies = unique(usable.map(publisherFamily));
   const provenanceGroups = sourceProvenanceGroups(usable);
 
