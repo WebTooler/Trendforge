@@ -54,6 +54,9 @@ jobs:
       - name: Verify authoritative evidence pack integration
         run: npm run evidence-pack:integration:test
 
+      - name: Run real-data pre-writer integration
+        run: node scripts/pre-writer-pipeline.mjs
+
       - name: Generate sitemap
         run: npx tsx scripts/generate-sitemap.ts
 
