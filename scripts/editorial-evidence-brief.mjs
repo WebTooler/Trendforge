@@ -81,12 +81,12 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
     storyCapacity:evidenceCapacity,
     coreStoryFacts:uniqueClaims.slice(0,24).map(c=>({claimId:c.id,sourceId:c.sourceId,text:c.text})),
     supportedClaims:uniqueClaims.slice(0,48),
-    sourceSupportMapping:uniqueClaims.map(c=>({claimId:c.id,sourceId:c.sourceId,passageIndex:c.passageIndex})),
+    sourceSupportMapping:uniqueClaims.slice(0,48).map(c=>({claimId:c.id,sourceId:c.sourceId,passageIndex:c.passageIndex})),
     relevantPassages:normalizedSources.flatMap((s,si)=>s.passages.map((text,pi)=>({sourceId:'S'+(si+1),passageId:'P'+(pi+1),text}))),
     uncertainty,
     unknowns,
     contradictions,
-    metrics:{rawPassageCount,relevantPassageCount,supportedClaimCount:uniqueClaims.length,independentSourceCount,publisherFamilyCount:publisherFamilies.length,relevantEvidenceDensity:density,rawChars,relevantChars,evidenceCapacity},
+    metrics:{rawPassageCount,relevantPassageCount,supportedClaimCount:Math.min(48,uniqueClaims.length),independentSourceCount,publisherFamilyCount:publisherFamilies.length,relevantEvidenceDensity:density,rawChars,relevantChars,evidenceCapacity},
     sources:normalizedSources
   };
 }
