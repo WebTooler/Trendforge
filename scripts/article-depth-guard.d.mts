@@ -1,0 +1,2 @@
+export declare function assessArticleDepth(input?: {content?: string; blueprint?: any}): {passed:boolean;mode:string;words:number;h2:number;sectionWords:number[];thinSections:number;substantiveParagraphs:number;sentences:number;largestSectionShare:number;rules:any;errors:string[]};
+export declare function validateArticleDepth(input?: {content?: string; blueprint?: any}): ReturnType<typeof assessArticleDepth>;
