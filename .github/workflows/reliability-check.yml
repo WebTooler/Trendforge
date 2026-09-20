@@ -60,6 +60,9 @@ jobs:
       - name: Verify Phase 3 repair evidence guard
         run: npm run repair-evidence:test
 
+      - name: Verify Phase 3 canonical claim verifier
+        run: npm run claims:deterministic
+
       - name: Generate sitemap
         run: npx tsx scripts/generate-sitemap.ts
 
