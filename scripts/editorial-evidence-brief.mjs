@@ -31,8 +31,11 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       for(const sentence of sentenceUnits){
         if(isNoise(sentence))continue;
         const rel=relevanceScore(sentence,story);
-        if(rel.topicOverlap<1&&rel.entityShared===0)continue;
-        if(rel.score<3)continue;
+        if(rel.topicOverlap<1&&rel.entityShared===0&&rel.numbers===0)continue;
+        // Two or more direct topic tokens are sufficient evidence of relevance;
+        // factual/number/entity signals strengthen single-token matches.
+        const minimumScore=(rel.topicOverlap>=2||rel.entityShared>0||rel.numbers>0)?2:3;
+        if(rel.score<minimumScore)continue;
         units.push({rawPassageIndex:pi,text:sentence,relevance:rel.score,topicOverlap:rel.topicOverlap,entityShared:rel.entityShared});
       }
     }
