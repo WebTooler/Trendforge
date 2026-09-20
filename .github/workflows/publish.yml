@@ -51,6 +51,8 @@ jobs:
         run: node scripts/evidence-integrity-preflight.mjs
       - name: Editorial Evidence Brief V3 fixtures
         run: node scripts/test-editorial-evidence-brief.mjs
+      - name: Adaptive writer architecture fixtures
+        run: node scripts/test-writer-architecture.mjs
       - name: Evidence V3 pre-writer gate
         run: node scripts/pre-writer-pipeline.mjs
       - name: AI provider state check
