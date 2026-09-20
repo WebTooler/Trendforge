@@ -3,10 +3,12 @@
 // compatibility pass for generic sentence-initial wording (e.g. "Paying for...").
 import fs from 'node:fs';
 import { spawnSync } from 'node:child_process';
+import { validateAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
 
 const claimPath = 'data/claim-verification.json';
 const articleDir = 'content/articles';
 const briefPath = 'data/article-brief.json';
+const authoritativePath = 'data/authoritative-evidence-pack.json';
 
 const STOP = new Set('about after again also been being could from have into more most over said some than that their there these they this what when which with will would your technology tech digital latest news update updates guide how today artificial intelligence company companies industry development developments according reported reports working works story stories article articles readers users because while where whose through before between under using used uses make makes made less then still already now just even only often usually including another around really very much many somewhat generally'.split(' '));
 const GENERIC_INITIAL = new Set('a an the and but for from however this that these those it its on at by as with since despite additionally paying open use using after before while although because overall paying in of to is are was were be been being says said report reports according latest new how why what when where who which some any many more most other another one first second third'.split(' '));
@@ -36,6 +38,17 @@ function semanticCompatibility(claim,evidence){
   const ANums=nums(claim), BNums=nums(evidence);
   const numericCompatible=!ANums.size||[...ANums].every(n=>BNums.has(n));
   return {shared,coverage,phrase,numericCompatible};
+}
+
+function loadCanonicalEvidenceForBrief(briefTitle){
+  if(!fs.existsSync(authoritativePath)) return null;
+  let root=null;
+  try{root=JSON.parse(fs.readFileSync(authoritativePath,'utf8'));}catch{return null;}
+  const packs=Array.isArray(root?.candidates)?root.candidates:[];
+  const pack=packs.find(item=>item?.candidate?.title===briefTitle);
+  if(!pack||!validateAuthoritativeEvidencePack(pack)) return null;
+  const urls=new Set(pack.sources.map(source=>source.url).filter(Boolean));
+  return urls.size?{pack,urls}:null;
 }
 
 function currentGeneratedArticleMatchesBrief(){
