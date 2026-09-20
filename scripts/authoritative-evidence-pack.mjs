@@ -1,6 +1,6 @@
 const clean=(s='')=>String(s).replace(/\s+/g,' ').trim();
 
-export function buildAuthoritativeEvidencePack({candidate={},sources=[],coverage={},blueprint={},generatedAt=new Date().toISOString()}={}){
+export function buildAuthoritativeEvidencePack({candidate={},sources=[],coverage={},blueprint={},evidenceBrief=null,generatedAt=new Date().toISOString()}={}){
   const normalizedSources=sources.map((source,index)=>({
     id:`S${index+1}`,url:source.url||'',finalUrl:source.url||'',domain:source.domain||'',
     publisherFamily:source.publisherFamily||'',title:clean(source.title||candidate.title||''),
@@ -10,10 +10,10 @@ export function buildAuthoritativeEvidencePack({candidate={},sources=[],coverage
     passages:Array.isArray(source.passages)?source.passages.map(clean).filter(Boolean):[],
     body:clean(source.body||''),extraction:source.extraction||null
   }));
-  return {version:1,status:'authoritative',generatedAt,
+  return {version:1,status:'authoritative',evidenceBriefVersion:evidenceBrief?.version||0,generatedAt,
     candidate:{title:candidate.title||'',link:candidate.link||'',category:candidate.category||''},
     policy:'Single canonical evidence pack for downstream writer, claim-verification and editorial stages. Downstream stages must not silently replace or expand factual evidence outside this pack.',
-    sources:normalizedSources,coverage,blueprint};
+    sources:normalizedSources,coverage,blueprint,evidenceBrief:evidenceBrief||null};
 }
 
 export function validateAuthoritativeEvidencePack(pack){
