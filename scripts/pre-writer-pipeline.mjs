@@ -4,6 +4,7 @@ import { extractEvidenceFromHtml } from './evidence-extraction.mjs';
 import { scoreEvidenceCoverage } from './evidence-coverage.mjs';
 import { deriveEvidenceArticleBlueprint } from './evidence-article-blueprint.mjs';
 import { buildAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
+import { buildEditorialEvidenceBrief } from './editorial-evidence-brief.mjs';
 
 const OUTPUT='data/pre-writer-pipeline.json';
 const MAX_CANDIDATES=8;
@@ -168,27 +169,35 @@ for(const record of candidates){
     if(sources.length>=4)break;
   }
 
+  const evidenceBrief=buildEditorialEvidenceBrief({candidate:record,sources});
+  const filteredSources=evidenceBrief.sources;
+  if(evidenceBrief.metrics.relevantPassageCount<3||evidenceBrief.metrics.supportedClaimCount<2||evidenceBrief.metrics.relevantChars<900){
+    console.log(`Evidence Brief: ${record.title} blocked — raw passages ${evidenceBrief.metrics.rawPassageCount}, relevant passages ${evidenceBrief.metrics.relevantPassageCount}, supported claims ${evidenceBrief.metrics.supportedClaimCount}, relevant chars ${evidenceBrief.metrics.relevantChars}.`);
+  }
+  sources.length=0;
+  sources.push(...filteredSources);
+
   const duplicateHistory=duplicateAgainstHistory(record,sources,publishedHistory);
   if(duplicateHistory.duplicate){
     duplicateHistoryBlocked++;
     const blockedCoverage=scoreEvidenceCoverage({sources});
     const lineageSources=annotateLineage(sources,blockedCoverage);
     const blockedBlueprint=deriveEvidenceArticleBlueprint(blockedCoverage);
-    authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage:blockedCoverage,blueprint:blockedBlueprint}));
-    results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage)},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
+    authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage:blockedCoverage,blueprint:blockedBlueprint,evidenceBrief}));
+    results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage),editorialEvidenceBrief:evidenceBrief},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
     continue;
   }
-  const coverage=scoreEvidenceCoverage({sources});
+  const coverage=scoreEvidenceCoverage({sources,evidenceBrief});
   const lineageSources=annotateLineage(sources,coverage);
-  const blueprint=deriveEvidenceArticleBlueprint(coverage);
-  authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage,blueprint}));
+  const blueprint=deriveEvidenceArticleBlueprint({...coverage,evidenceBrief});
+  authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage,blueprint,evidenceBrief}));
 
   const hasValidatedSource=preflight?.status==='pass';
   const hasIndependentEvidence=coverage.independentPublisherFamilies>=2;
   const singleSourceEligible=coverage.independentPublisherFamilies===1 && coverage.band==='usable' && coverage.totalChars>=1000 && coverage.totalPassages>=3;
   const readyForWriter=hasValidatedSource && blueprint.mode!=='blocked' && (hasIndependentEvidence || singleSourceEligible);
 
-  const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
+  const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint,editorialEvidenceBrief:evidenceBrief},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
   const queueDuplicate=queueAccepted.map(x=>duplicateWithinQueue(resultRow,x)).find(x=>x.duplicate);
   if(queueDuplicate){duplicateQueueBlocked++;resultRow.readyForWriter=false;resultRow.writerGateReason=queueDuplicate.reason;resultRow.duplicateStory=queueDuplicate;}
   else if(resultRow.readyForWriter)queueAccepted.push(resultRow);
@@ -222,7 +231,7 @@ fs.writeFileSync(OUTPUT,JSON.stringify({
   stages:[
     'trend-research','trend-scoring','source-verification','publisher-discovery',
     'evidence-integrity-preflight','article-identity-and-source-page-validation',
-    'evidence-extraction','evidence-lineage','evidence-coverage','evidence-band','article-blueprint','published-story-deduplication','same-run-story-deduplication'
+    'evidence-extraction','relevance-filtering','claim-extraction','editorial-evidence-brief-v3','evidence-lineage','evidence-coverage','evidence-density','evidence-band','article-blueprint','published-story-deduplication','same-run-story-deduplication'
   ],
   candidates:results,
   summary
@@ -243,4 +252,6 @@ for(const r of results){
   }));
 }
 console.log(`Published-story duplicate gate: ${duplicateHistoryBlocked} candidate(s) blocked; same-run story dedupe: ${duplicateQueueBlocked} candidate(s) blocked.`);
+console.log('\nEditorial Evidence Brief V3 summary:');
+for(const r of results){const b=r.evidence?.editorialEvidenceBrief;if(!b)continue;console.log(JSON.stringify({title:r.title,rawPassages:b.metrics.rawPassageCount,relevantPassages:b.metrics.relevantPassageCount,supportedClaims:b.metrics.supportedClaimCount,publisherFamilies:b.metrics.publisherFamilyCount,relevantEvidenceDensity:b.metrics.relevantEvidenceDensity,evidenceCapacity:b.storyCapacity,uncertainties:b.uncertainty?.length||0,unknowns:b.unknowns?.length||0}));}
 console.log('\nPre-Writer pipeline completed. Generate Article was NOT executed by this gate.');
