@@ -78,6 +78,9 @@ jobs:
       - name: Verify Phase 6 attribution and uncertainty lock
         run: npm run attribution-uncertainty:test
 
+      - name: Verify Phase 7 political neutrality guard
+        run: npm run political-neutrality:test
+
       - name: Verify Phase 4 Writer 3.0 repetition guard
         run: npm run writer-architecture:test
 
