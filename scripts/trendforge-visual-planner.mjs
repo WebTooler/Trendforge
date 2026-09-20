@@ -1,4 +1,4 @@
-/* TrendForge Visual Planner v1: story -> subject -> visual type -> scene -> composition -> style. */
+/* TrendForge Visual Planner v2: story -> subject -> visual type -> scene -> composition -> style. */
 
 const PERSON_PATTERNS = [
   /\b(?:ceo|chief executive|founder|president|minister|researcher|scientist|spokesperson|executive|analyst)\b/i,
