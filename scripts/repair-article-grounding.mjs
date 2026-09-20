@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import { generateWithTrendForgeRepair } from './trendforge-writer-engine.mjs';
+import { loadCanonicalRepairEvidence } from './repair-evidence-guard.mjs';
 
 const articleDir='content/articles';
 const briefPath='data/article-brief.json';
@@ -27,7 +28,9 @@ async function main(){
  const claims=Array.isArray(verification?.claims)?verification.claims:Array.isArray(verification?.results)?verification.results:[];
  const failed=claims.filter(x=>x.status==='unsupported'||x.status==='partial'||x.status==='uncertain'||x.classification==='uncertain').slice(0,12);
  if(!failed.length){console.log('Grounding repair: no failed factual claims; article left unchanged.');return;}
- const evidence=failed.map((x,i)=>`FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.evidence||x.bestPassage||'').slice(0,3000)}\nSOURCE: ${x.bestSource||''}\nURL: ${x.bestUrl||''}`).join('\n\n');
+ const canonical=loadCanonicalRepairEvidence({briefTitle:brief?.brief?.title||titleFrom(raw),failedClaims:failed});
+ const canonicalByUrl=new Map(canonical.sources.map(source=>[source.url,source]));
+ const evidence=canonical.claims.map((x,i)=>{const source=canonicalByUrl.get(x.bestUrl);return `FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.bestPassage||'').slice(0,3000)}\nSOURCE: ${x.bestSource||source?.title||''}\nURL: ${x.bestUrl||''}`}).join('\n\n');
  if(evidence.length<200)throw new Error('Current claim evidence is incomplete; grounding repair refused.');
  const oldTitle=titleFrom(raw),oldDescription=descriptionFrom(raw);
  const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'').trim();
