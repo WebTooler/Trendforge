@@ -184,7 +184,7 @@ for(const record of candidates){
   authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage,blueprint}));
 
   const hasValidatedSource=preflight?.status==='pass';
-  const readyForWriter=hasValidatedSource && coverage.readyForRichArticle===true && blueprint.mode!=='blocked';
+  const readyForWriter=hasValidatedSource && coverage.readyForRichArticle===true && coverage.independentPublisherFamilies>=2 && blueprint.mode!=='blocked';
 
   const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
   const queueDuplicate=queueAccepted.map(x=>duplicateWithinQueue(resultRow,x)).find(x=>x.duplicate);
