@@ -1,47 +1,11 @@
 name: TrendForge Pipeline
 
+# DEVELOPMENT LOCK:
+# Production/AI pipeline is intentionally manual-only while TrendForge V2
+# changes are being developed. This prevents pushes and the 6-hour schedule
+# from consuming AI/image-provider quotas before the final controlled test.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/publish.yml'
-      - 'scripts/trend-research.mjs'
-      - 'scripts/score-trends.ts'
-      - 'scripts/trend-decision-engine.mjs'
-      - 'scripts/verify-trend-sources.mjs'
-      - 'scripts/google-news-url-resolver.mjs'
-      - 'scripts/recover-publisher-links.mjs'
-      - 'scripts/evidence-integrity-preflight.mjs'
-      - 'scripts/pre-writer-pipeline.mjs'
-      - 'scripts/evidence-extraction.mjs'
-      - 'scripts/evidence-coverage.mjs'
-      - 'scripts/evidence-article-blueprint.mjs'
-      - 'scripts/evidence-article-prompt.mjs'
-      - 'scripts/verify-article-claims.mjs'
-      - 'scripts/verify-article-claims-v2.mjs'
-      - 'scripts/verify-article-claims-smart.mjs'
-      - 'scripts/test-claim-verifier-deterministic.mjs'
-      - 'scripts/repair-article-grounding.mjs'
-      - 'scripts/editorial-intelligence.mjs'
-      - 'scripts/article-lifecycle.mjs'
-      - 'scripts/growth-intelligence.mjs'
-      - 'scripts/distribution-intelligence.mjs'
-      - 'scripts/monetization-check.mjs'
-      - 'scripts/v2-self-check.mjs'
-      - 'scripts/ai-provider-router.mjs'
-      - 'scripts/trendforge-writer-engine.mjs'
-      - 'scripts/prepare-writer-runtime.mjs'
-      - 'scripts/trendforge-editorial-policy.mjs'
-      - 'scripts/validate-writer-output.mjs'
-      - 'scripts/generate-article.ts'
-      - 'scripts/generate-article-adaptive.mjs'
-      - 'scripts/generate-article-image.ts'
-      - 'scripts/trendforge-visual-planner.mjs'
-      - 'scripts/validate-article-assets.ts'
-      - 'scripts/validate-article-quality.ts'
-      - 'lib/copyright-safety.ts'
-  schedule:
-    - cron: '17 */6 * * *'
 
 concurrency:
   group: trendforge-pipeline-${{ github.ref }}
