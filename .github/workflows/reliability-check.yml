@@ -51,6 +51,9 @@ jobs:
       - name: Verify authoritative evidence pack contract
         run: npm run evidence-pack:test
 
+      - name: Verify authoritative evidence pack integration
+        run: npm run evidence-pack:integration:test
+
       - name: Generate sitemap
         run: npx tsx scripts/generate-sitemap.ts
 
