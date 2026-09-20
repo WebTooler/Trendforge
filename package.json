@@ -35,7 +35,8 @@
     "audit:test": "node scripts/test-trendforge-audit-trail.mjs",
     "control-center:test": "node scripts/test-control-center.mjs",
     "claims:test": "node scripts/test-claim-verifier.mjs",
-    "evidence-lineage:test": "node scripts/test-evidence-lineage.mjs"
+    "evidence-lineage:test": "node scripts/test-evidence-lineage.mjs",
+    "evidence-pack:test": "node scripts/test-authoritative-evidence-pack.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
