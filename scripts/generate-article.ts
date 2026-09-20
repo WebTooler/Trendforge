@@ -7,6 +7,7 @@ import { validateAuthoritativeEvidencePack } from './authoritative-evidence-pack
 
 type Trend = { title:string; link:string; source:string; sourceName?:string; publishedAt?:string; category:string; description?:string; eligible?:boolean; score?:number; sources?:{title?:string;url:string;publishedAt?:string}[] };
 type VerificationRecord = { link:string; sources?:{title?:string;url?:string;domain?:string;ok?:boolean;status?:number;finalUrl?:string;discovered?:boolean;resolvedFrom?:string}[]; independentReachableDomains?:string[]; relevantReachableSourceCount?:number; status?:string };
+type EvidencePackItem = { title:string; url:string; description:string; kind:string; passages:string[]; articleBody:string; articleBodyLength:number; publisherFamily?:string; verified?:boolean; primary?:boolean; lineage?:Record<string, unknown> };
 const stopWords = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies','industry','development','developments','story','stories','article','articles']);
 const topicWords=(text='')=>new Set(text.toLowerCase().split(/[^a-z0-9]+/).filter(w=>w.length>=4&&!stopWords.has(w)));
 const publisherName=(item:Trend)=>{const explicit=(item.sourceName||item.source||'').trim();if(explicit&&explicit.toLowerCase()!=='google news')return explicit;const m=item.description?.match(/<font[^>]*>([^<]+)<\/font>/i);return m?.[1]?.trim()||explicit||'Unknown publisher';};
@@ -64,7 +65,7 @@ async function main(){
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
   const uniqueSourceDomains=[...new Set(sources.map(s=>domainOf(s.url)).filter(Boolean))];
   if(uniqueSourceDomains.length<1){console.log('Verified evidence did not contain a reachable publisher domain; publication blocked.');process.exit(0);}
-  let evidencePack;
+  let evidencePack:EvidencePackItem[];
   const authoritativePath='data/authoritative-evidence-pack.json';
   if(fs.existsSync(authoritativePath)){
     let authoritative=null;
@@ -84,7 +85,7 @@ async function main(){
     evidencePack=await buildEvidencePack(sources,trend.title);
     console.log('Authoritative Evidence Pack unavailable; using legacy grounding fetch.');
   }
-  const usablePassages=evidencePack.reduce((n:number,s)=>n+s.passages.length,0);
+  const usablePassages=evidencePack.reduce((n,s)=>n+s.passages.length,0);
   const sourceWithEvidence=evidencePack.filter(x=>x.passages.length>=1).length;
   const evidenceDomains=[...new Set(evidencePack.map(s=>domainOf(s.url)).filter(Boolean))];
   const strongEvidence=evidencePack.length>=2&&sourceWithEvidence>=2&&evidenceDomains.length>=2;
