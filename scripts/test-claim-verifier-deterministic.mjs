@@ -47,6 +47,9 @@ const cases=[
 
 
 function runCase(test){
+  fs.rmSync(articleDir,{recursive:true,force:true});
+  fs.mkdirSync(articleDir,{recursive:true});
+  fs.rmSync(claimPath,{force:true});
   const article=`${baseFrontmatter}\n\n## Test\n${test.sentence}\n\n## Sources\n- [Reuters](https://example.com/reuters)`;
   fs.writeFileSync(`${articleDir}/fixture.md`,article);
   const briefPassage=test.briefPassage||source;
