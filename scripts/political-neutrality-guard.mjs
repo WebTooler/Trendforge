@@ -16,7 +16,8 @@ const ELECTABILITY_OR_OUTCOME=[
 
 const RANKING_SCORE=[
   /\b(?:rank|ranking|rated|rating|score|scored)\s+(?:the )?(?:candidates|parties|politicians|choices)\b/i,
-  /\b(?:top|number one|#1|best|worst)\s+(?:candidate|party|politician|political choice)\b/i|/\b(?:candidate|party|politician)\s+[A-Z0-9][^.!?]{0,60}\b(?:is|was)\s+(?:the\s+)?(?:best|worst|better|worse)\s+(?:choice|option|candidate)\b/i
+  /\b(?:top|number one|#1|best|worst)\s+(?:candidate|party|politician|political choice)\b/i,
+  /\b(?:candidate|party|politician)\s+[A-Z0-9][^.!?]{0,60}\b(?:is|was)\s+(?:the\s+)?(?:best|worst|better|worse)\s+(?:choice|option|candidate)\b/i
 ];
 
 export function assessPoliticalNeutrality(text=''){
