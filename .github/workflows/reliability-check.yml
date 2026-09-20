@@ -64,7 +64,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if find out -type f ( -name '.env' -o -name '.env.*' -o -name '*secret*' ) -print -quit | grep -q .; then
+          if find out -type f \( -name '.env' -o -name '.env.*' -o -name '*secret*' \) -print -quit | grep -q .; then
             echo "Potential secret file detected in build output."
             exit 1
           fi
