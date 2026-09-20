@@ -1,0 +1,2 @@
+export declare function assessHumanization(text?: string): { genericHits: number; genericPatterns: string[]; firstPersonExperience: boolean; audienceMeta: boolean; repeatedSentenceStarts: Array<[string, number]>; blocked: boolean };
+export declare function validateHumanization(input?: { title?: string; description?: string; content?: string }): { passed: boolean; genericHits: number; genericPatterns: string[]; firstPersonExperience: boolean; audienceMeta: boolean; repeatedSentenceStarts: Array<[string, number]>; blocked: boolean };
