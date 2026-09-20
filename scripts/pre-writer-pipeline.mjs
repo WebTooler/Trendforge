@@ -77,6 +77,19 @@ function duplicateAgainstHistory(record,sources,history){
   }
   return{duplicate:false};
 }
+function annotateLineage(sources,coverage){
+  const groups=coverage?.provenanceGroups||[];
+  const lineageByIndex=new Map();
+  groups.forEach((group,id)=>{
+    for(const index of group.sourceIndexes||[]) lineageByIndex.set(index,{
+      id:'lineage-'+(id+1),
+      type:(group.sourceIndexes||[]).length>1?'syndicated':'independent',
+      members:(group.sourceIndexes||[]).length
+    });
+  });
+  return sources.map((source,index)=>({...source,lineage:lineageByIndex.get(index)||{id:'lineage-unknown-'+(index+1),type:'unknown',members:1}}));
+}
+
 function duplicateWithinQueue(a,b){
   const urlsA=new Set((a.evidence?.sources||[]).map(s=>normalizeUrl(s.url||'')).filter(Boolean));
   const urlsB=new Set((b.evidence?.sources||[]).map(s=>normalizeUrl(s.url||'')).filter(Boolean));
@@ -157,16 +170,18 @@ for(const record of candidates){
   if(duplicateHistory.duplicate){
     duplicateHistoryBlocked++;
     const blockedCoverage=scoreEvidenceCoverage({sources});
-    results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage)},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
+    const lineageSources=annotateLineage(sources,blockedCoverage);
+    results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage)},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
     continue;
   }
   const coverage=scoreEvidenceCoverage({sources});
+  const lineageSources=annotateLineage(sources,coverage);
   const blueprint=deriveEvidenceArticleBlueprint(coverage);
 
   const hasValidatedSource=preflight?.status==='pass';
   const readyForWriter=hasValidatedSource && coverage.readyForRichArticle===true && blueprint.mode!=='blocked';
 
-  const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources,coverage,blueprint},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
+  const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
   const queueDuplicate=queueAccepted.map(x=>duplicateWithinQueue(resultRow,x)).find(x=>x.duplicate);
   if(queueDuplicate){duplicateQueueBlocked++;resultRow.readyForWriter=false;resultRow.writerGateReason=queueDuplicate.reason;resultRow.duplicateStory=queueDuplicate;}
   else if(resultRow.readyForWriter)queueAccepted.push(resultRow);
@@ -185,18 +200,19 @@ const summary={
   usable:results.filter(r=>r.evidence.coverage.band==='usable').length,
   thin:results.filter(r=>r.evidence.coverage.band==='thin').length,
   insufficient:results.filter(r=>r.evidence.coverage.band==='insufficient').length,
+  syndicatedLineages:results.reduce((n,r)=>n+(r.evidence?.coverage?.syndicatedSourceGroups||0),0),
   readyForWriter:results.filter(r=>r.readyForWriter).length
 };
 
 fs.mkdirSync('data',{recursive:true});
 fs.writeFileSync(OUTPUT,JSON.stringify({
-  version:1,
+  version:2,
   generatedAt:new Date().toISOString(),
   policy:'Production pre-writer gate: consumes existing upstream artifacts, performs publisher-page identity/extraction/coverage/blueprint checks, and blocks AI generation when no writer-ready candidate exists.',
   stages:[
     'trend-research','trend-scoring','source-verification','publisher-discovery',
     'evidence-integrity-preflight','article-identity-and-source-page-validation',
-    'evidence-extraction','evidence-coverage','evidence-band','article-blueprint','published-story-deduplication','same-run-story-deduplication'
+    'evidence-extraction','evidence-lineage','evidence-coverage','evidence-band','article-blueprint','published-story-deduplication','same-run-story-deduplication'
   ],
   candidates:results,
   summary
