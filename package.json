@@ -42,7 +42,8 @@
     "claims:deterministic": "node scripts/test-claim-verifier-deterministic.mjs",
     "quality-evidence:test": "node scripts/test-quality-canonical-evidence.mjs",
     "adaptive-publication:test": "node scripts/test-adaptive-publication-guard.mjs",
-    "writer-architecture:test": "node scripts/test-writer-architecture.mjs"
+    "writer-architecture:test": "node scripts/test-writer-architecture.mjs",
+    "article-blueprint:test": "node scripts/test-evidence-article-blueprint.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
