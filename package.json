@@ -47,7 +47,8 @@
     "attribution-uncertainty:test": "node scripts/test-attribution-uncertainty-guard.mjs",
     "political-neutrality:test": "node scripts/test-political-neutrality-guard.mjs",
     "humanization:test": "node scripts/test-humanization-guard.mjs",
-    "article-depth:test": "node scripts/test-article-depth-guard.mjs"
+    "article-depth:test": "node scripts/test-article-depth-guard.mjs",
+    "visual-planner:test": "node scripts/test-visual-planner.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
