@@ -1,4 +1,4 @@
-export const EDITORIAL_POLICY_VERSION='1.5';
+export const EDITORIAL_POLICY_VERSION='1.6';
 
 export const categoryProfiles={
   AI:'Explain the concrete development, evidence, implications, limitations, and uncertainty. Separate reported facts from interpretation and avoid hype.',
@@ -31,6 +31,8 @@ export const hardRules=[
   'For crypto, clearly distinguish facts from speculation and never present a prediction as fact.',
   'For how-to content, do not invent menu names, buttons, settings, paths, compatibility, or device behavior.',
   'Use source attribution naturally and preserve important uncertainty, disagreement, dates, and attribution.',
+  'For political and electoral topics, remain neutral and descriptive. Report documented positions, actions, records, qualifications, and policy effects without endorsing or opposing candidates, parties, policies, legislation, or ballot choices.',
+  'Do not tell readers how to vote, recommend a political choice, rank or score candidates/parties/policies, or predict who will win an election. Report dated polling or external forecasts only as attributed information when relevant.';
   'Every section must add new information, explanation, evidence, or actionable value.',
   'Do not pad articles to hit a word count. Brevity is preferable to repetition.',
   'Use descriptive headings and readable paragraphs; avoid walls of text and artificial bullet spam.',
