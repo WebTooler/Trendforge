@@ -1,50 +1,23 @@
+function clamp(n,min,max){return Math.max(min,Math.min(max,n));}
+
 export function deriveEvidenceArticleBlueprint(coverage={}) {
   const band=coverage.band||'insufficient';
   const sourceCount=Number(coverage.sourceCount||0);
-
+  const passages=Number(coverage.totalPassages||0);
+  const chars=Number(coverage.totalChars||0);
+  const families=Number(coverage.independentPublisherFamilies||0);
+  const capacity=band==='rich' ? 'high' : band==='usable' ? 'medium' : band==='thin' ? 'low' : 'none';
+  const evidenceCapacity={sourceCount,independentFamilies:families,totalPassages:passages,totalChars:chars,level:capacity};
   if (band==='rich' && coverage.readyForRichArticle===true) {
-    return {
-      mode:'rich',
-      targetWords:{min:700,max:1000,soft:850},
-      h2Guidance:{preferredMin:3,preferredMax:5,writerDecides:true,noPadding:true},
-      maxH2:5,
-      requireCrossCheck:sourceCount>=2,
-      allowContextSection:true,
-      instruction:'Build a full evidence-led article. The writer chooses the actual H2 structure from the evidence. Prefer 3–5 distinct sections, but never add a section just to reach the preferred range. Every factual section must remain within the supplied evidence.'
-    };
+    const maxH2=clamp(3+Math.floor(Math.min(sourceCount,4)/2),3,5);
+    return {version:2,mode:'rich',targetWords:{min:700,max:1000,soft:850},h2Guidance:{preferredMin:3,preferredMax:maxH2,writerDecides:true,noPadding:true},maxH2,requireCrossCheck:sourceCount>=2,allowContextSection:true,sectionPlan:['development','evidence/details','implications/context','limitations/uncertainty','supported next step'],evidenceCapacity,instructions:['Use only evidence-supported sections.','Let evidence capacity determine depth; never pad to the word or H2 target.','Cross-check material claims when multiple independent families are available.']};
   }
-
   if (band==='usable' && coverage.readyForRichArticle===true) {
-    return {
-      mode:'bounded',
-      targetWords:{min:450,max:750,soft:600},
-      h2Guidance:{preferredMin:2,preferredMax:4,writerDecides:true,noPadding:true},
-      maxH2:4,
-      requireCrossCheck:sourceCount>=2,
-      allowContextSection:false,
-      instruction:'Write a bounded evidence-led article. The writer chooses the actual H2 structure from the strongest supported evidence. Prefer 2–4 distinct sections, but never add a section merely to increase length or satisfy a count.'
-    };
+    const maxH2=clamp(2+Math.floor(Math.min(sourceCount,4)/2),2,4);
+    return {version:2,mode:'bounded',targetWords:{min:450,max:750,soft:600},h2Guidance:{preferredMin:2,preferredMax:maxH2,writerDecides:true,noPadding:true},maxH2,requireCrossCheck:sourceCount>=2,allowContextSection:false,sectionPlan:['development','evidence/details','implications or limitations'],evidenceCapacity,instructions:['Keep scope bounded by the supplied evidence.','Prefer distinct sections with concrete evidence over generic context.','Do not create a context section unless the evidence supports it.']};
   }
-
   if (band==='thin') {
-    return {
-      mode:'narrow',
-      targetWords:{min:300,max:500,soft:400},
-      h2Guidance:{preferredMin:1,preferredMax:2,writerDecides:true,noPadding:true},
-      maxH2:2,
-      requireCrossCheck:false,
-      allowContextSection:false,
-      instruction:'Keep the article narrow and factual. The writer chooses the actual H2 structure. Prefer 1–2 sections when supported, but use fewer if the evidence does not justify more. Never pad with unsupported sections.'
-    };
+    return {version:2,mode:'narrow',targetWords:{min:300,max:500,soft:400},h2Guidance:{preferredMin:1,preferredMax:2,writerDecides:true,noPadding:true},maxH2:2,requireCrossCheck:false,allowContextSection:false,sectionPlan:['development','supported detail'],evidenceCapacity,instructions:['Stay narrow and factual.','Use only the strongest supported details.','Do not infer missing context.']};
   }
-
-  return {
-    mode:'blocked',
-    targetWords:{min:0,max:0,soft:0},
-    h2Guidance:{preferredMin:0,preferredMax:0,writerDecides:false,noPadding:true},
-    maxH2:0,
-    requireCrossCheck:false,
-    allowContextSection:false,
-    instruction:'Do not generate a publishable article. Evidence is insufficient; obtain more evidence first.'
-  };
+  return {version:2,mode:'blocked',targetWords:{min:0,max:0,soft:0},h2Guidance:{preferredMin:0,preferredMax:0,writerDecides:false,noPadding:true},maxH2:0,requireCrossCheck:false,allowContextSection:false,sectionPlan:[],evidenceCapacity,instructions:['Do not generate a publishable article. Evidence is insufficient; obtain more evidence first.']};
 }
