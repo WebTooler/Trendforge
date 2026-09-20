@@ -45,7 +45,8 @@
     "writer-architecture:test": "node scripts/test-writer-architecture.mjs",
     "article-blueprint:test": "node scripts/test-evidence-article-blueprint.mjs",
     "attribution-uncertainty:test": "node scripts/test-attribution-uncertainty-guard.mjs",
-    "political-neutrality:test": "node scripts/test-political-neutrality-guard.mjs"
+    "political-neutrality:test": "node scripts/test-political-neutrality-guard.mjs",
+    "humanization:test": "node scripts/test-humanization-guard.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
