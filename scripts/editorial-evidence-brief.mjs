@@ -34,12 +34,12 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       for(const sentence of sentenceUnits){
         if(isNoise(sentence))continue;
         const rel=relevanceScore(sentence,story);
-        // Evidence relevance is story-level, not keyword-count-only: a sentence
-        // may carry the key fact while the source paragraph carries the topic context.
         const fallbackRel=relevanceScore(passage,story);
         const effectiveRel=rel.score>=fallbackRel.score?rel:fallbackRel;
-        if(effectiveRel.topicOverlap<1&&effectiveRel.entityShared===0&&effectiveRel.numbers===0)continue;
-        const minimumScore=(effectiveRel.topicOverlap>=2||effectiveRel.entityShared>0||effectiveRel.numbers>0)?2:3;
+        const titleAnchor=overlap(sentence,story.title);
+        const storyAnchored=titleAnchor.count>=2||effectiveRel.numericMatch>0||effectiveRel.entityShared>0;
+        if(!storyAnchored)continue;
+        const minimumScore=(titleAnchor.count>=2||effectiveRel.entityShared>0||effectiveRel.numericMatch>0)?1:3;
         if(effectiveRel.score<minimumScore)continue;
         units.push({rawPassageIndex:pi,text:sentence,relevance:effectiveRel.score,topicOverlap:effectiveRel.topicOverlap,entityShared:effectiveRel.entityShared});
       }
