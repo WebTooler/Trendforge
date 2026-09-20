@@ -9,6 +9,26 @@ const clean = (s='') => String(s).replace(/\s+/g, ' ').trim();
 const domainOf = (url='') => {
   try { return new URL(url).hostname.toLowerCase().replace(/^www\./,''); } catch { return ''; }
 };
+const normalizeUrl = (url='') => {
+  try {
+    const u = new URL(url);
+    u.hash = '';
+    for (const key of [...u.searchParams.keys()]) {
+      if (/^(utm_|fbclid|gclid|mc_cid|mc_eid)$/i.test(key) || /^utm_/i.test(key)) u.searchParams.delete(key);
+    }
+    return u.toString().replace(/\/$/,'');
+  } catch { return clean(url); }
+};
+const publisherFamily = (source={}) => {
+  const explicit = clean(source.publisherFamily || '');
+  if (explicit) return explicit;
+  const host = domainOf(source.url || source.domain || '');
+  const parts = host.split('.');
+  if (parts.length < 2) return host;
+  const suffix = parts.slice(-2).join('.');
+  const compound = new Set(['co.uk','co.in','co.jp','co.nz','co.au','com.br','com.cn']);
+  return compound.has(suffix) && parts.length >= 3 ? parts.slice(-3).join('.') : suffix;
+};
 
 const provenanceText = (source={}) => clean(source.body || (Array.isArray(source.passages) ? source.passages.join(' ') : ''));
 const provenanceTokens = (text='') => new Set(clean(text).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(w => w.length >= 5));
@@ -18,19 +38,32 @@ const provenanceSimilarity = (a='', b='') => {
   let shared=0; for(const token of A)if(B.has(token))shared++;
   return shared/Math.max(1,Math.min(A.size,B.size));
 };
+
 const sourceProvenanceGroups = (sources=[]) => {
   const parent=sources.map((_,i)=>i);
   const find=i=>{while(parent[i]!==i){parent[i]=parent[parent[i]];i=parent[i];}return i;};
   const union=(a,b)=>{a=find(a);b=find(b);if(a!==b)parent[b]=a;};
+
   for(let i=0;i<sources.length;i++)for(let j=i+1;j<sources.length;j++){
     const a=sources[i],b=sources[j];
+    const urlA=normalizeUrl(a.url||a.domain||''), urlB=normalizeUrl(b.url||b.domain||'');
+    const familyA=publisherFamily(a), familyB=publisherFamily(b);
+    const sameUrl=urlA&&urlB&&urlA===urlB;
+    const sameFamily=familyA&&familyB&&familyA===familyB;
     const bodySim=provenanceSimilarity(provenanceText(a),provenanceText(b));
     const titleSim=provenanceSimilarity(a.title||'',b.title||'');
     const da=domainOf(a.url||a.domain||''),db=domainOf(b.url||b.domain||'');
     const ab=provenanceText(a).toLowerCase(),bb=provenanceText(b).toLowerCase();
     const attribution=(da&&bb.includes(da))||(db&&ab.includes(db));
-    if(bodySim>=0.32||(titleSim>=0.55&&bodySim>=0.18)||(attribution&&bodySim>=0.12))union(i,j);
+
+    // Same publisher family is not independent evidence. Cross-domain pages are
+    // treated as one lineage when their article text strongly overlaps or one
+    // page explicitly attributes the other.
+    if(sameUrl || sameFamily || bodySim>=0.32 ||
+      (titleSim>=0.55&&bodySim>=0.18) ||
+      (attribution&&bodySim>=0.12)) union(i,j);
   }
+
   const groups=new Map();
   for(let i=0;i<sources.length;i++){const root=find(i);if(!groups.has(root))groups.set(root,[]);groups.get(root).push(i);}
   return [...groups.values()];
@@ -84,16 +117,25 @@ export function scoreEvidenceCoverage({ sources=[] }={}) {
   const scoredSources = usable.map(scoreEvidenceSource);
   const totalChars = scoredSources.reduce((n,s)=>n+s.chars,0);
   const totalPassages = scoredSources.reduce((n,s)=>n+s.passages,0);
-  const domainFamilies = unique(usable.map(s => s.publisherFamily || domainOf(s.url || s.domain || '')));
+  const domainFamilies = unique(usable.map(publisherFamily));
   const provenanceGroups = sourceProvenanceGroups(usable);
-  const independentFamilies = provenanceGroups.map(group => domainFamilies.filter((_,index) => group.includes(index)).sort().join('|')).filter(Boolean);
+
+  // Count independent evidence by lineage group, not by raw domains. A republisher,
+  // mirror, or second page from the same publisher family must not inflate independence.
+  const independentLineages = provenanceGroups.map(group => {
+    const families = unique(group.map(index => publisherFamily(usable[index])));
+    const domains = unique(group.map(index => domainOf(usable[index].url || usable[index].domain || '')));
+    return { families, domains, sourceIndexes: group };
+  });
+  const independentFamilies = independentLineages.length;
+
   const primaryCount = scoredSources.filter(s=>s.primary).length;
   const verifiedCount = scoredSources.filter(s=>s.verified).length;
   const factualSignalsTotal = scoredSources.reduce((n,s)=>n+s.factualSignals,0);
   const detailSignals = scoredSources.reduce((n,s)=>n+s.numberSignals+s.dateSignals+s.quoteSignals,0);
 
   const sourceDepth = Math.min(15, scoredSources.length * 5);
-  const independence = Math.min(15, independentFamilies.length * 5);
+  const independence = Math.min(15, independentFamilies * 5);
   const evidenceVolume = Math.min(15, totalChars / 1000);
   const passageDepth = Math.min(10, totalPassages / 3);
   const factualDensity = Math.min(15, factualSignalsTotal / 3);
@@ -116,7 +158,7 @@ export function scoreEvidenceCoverage({ sources=[] }={}) {
 
   const blockers = [];
   if (usable.length === 0) blockers.push('no_usable_sources');
-  if (independentFamilies.length < 2) blockers.push('single_publisher_family');
+  if (independentFamilies < 2) blockers.push('single_independent_lineage');
   if (totalChars < 1000) blockers.push('low_evidence_volume');
   if (totalPassages < 6) blockers.push('low_passage_depth');
   if (factualSignalsTotal < 6) blockers.push('low_factual_density');
@@ -128,10 +170,10 @@ export function scoreEvidenceCoverage({ sources=[] }={}) {
     readyForRichArticle: score >= 55 && usable.length >= 1 && totalChars >= 1000,
     blockers,
     sourceCount: usable.length,
-    independentPublisherFamilies: independentFamilies.length,
+    independentPublisherFamilies: independentFamilies,
     domainPublisherFamilies: domainFamilies.length,
-    provenanceGroups: provenanceGroups.map(group => group.map(index => ({domain:domainOf(usable[index].url||usable[index].domain||''),title:usable[index].title||'',index}))),
-    syndicatedSourceGroups: provenanceGroups.filter(group => group.length>1).length,
+    provenanceGroups: independentLineages,
+    syndicatedSourceGroups: independentLineages.filter(x=>x.sourceIndexes.length>1).length,
     totalChars,
     totalPassages,
     factualSignals: factualSignalsTotal,
