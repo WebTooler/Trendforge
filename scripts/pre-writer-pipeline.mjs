@@ -3,6 +3,7 @@ import { spawnSync } from 'node:child_process';
 import { extractEvidenceFromHtml } from './evidence-extraction.mjs';
 import { scoreEvidenceCoverage } from './evidence-coverage.mjs';
 import { deriveEvidenceArticleBlueprint } from './evidence-article-blueprint.mjs';
+import { buildAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
 
 const OUTPUT='data/pre-writer-pipeline.json';
 const MAX_CANDIDATES=8;
@@ -127,6 +128,7 @@ const candidates=(verification.records||[])
 
 const integrityByLink=new Map((integrity.report||[]).map(r=>[r.link,r]));
 const results=[];
+const authoritativePacks=[];
 const publishedHistory=loadPublishedHistory();
 const queueAccepted=[];
 let duplicateHistoryBlocked=0;
@@ -171,12 +173,15 @@ for(const record of candidates){
     duplicateHistoryBlocked++;
     const blockedCoverage=scoreEvidenceCoverage({sources});
     const lineageSources=annotateLineage(sources,blockedCoverage);
+    const blockedBlueprint=deriveEvidenceArticleBlueprint(blockedCoverage);
+    authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage:blockedCoverage,blueprint:blockedBlueprint}));
     results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage)},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
     continue;
   }
   const coverage=scoreEvidenceCoverage({sources});
   const lineageSources=annotateLineage(sources,coverage);
   const blueprint=deriveEvidenceArticleBlueprint(coverage);
+  authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage,blueprint}));
 
   const hasValidatedSource=preflight?.status==='pass';
   const readyForWriter=hasValidatedSource && coverage.readyForRichArticle===true && blueprint.mode!=='blocked';
@@ -206,8 +211,10 @@ const summary={
 
 fs.mkdirSync('data',{recursive:true});
 fs.writeFileSync(OUTPUT,JSON.stringify({
-  version:2,
+  version:3,
   generatedAt:new Date().toISOString(),
+  authoritativeEvidencePackVersion:1,
+  authoritativeEvidencePacks:authoritativePacks,
   policy:'Production pre-writer gate: consumes existing upstream artifacts, performs publisher-page identity/extraction/coverage/blueprint checks, and blocks AI generation when no writer-ready candidate exists.',
   stages:[
     'trend-research','trend-scoring','source-verification','publisher-discovery',
