@@ -3,6 +3,7 @@ import { spawnSync } from 'node:child_process';
 import { articleToMarkdown, buildArticlePrompt, editorialGate, slugify, type ArticleBrief } from '../lib/article-engine';
 import { copyrightSafetyGate } from '../lib/copyright-safety';
 import { generateWithTrendForgeWriter } from './trendforge-writer-engine.mjs';
+import { validateAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
 
 type Trend = { title:string; link:string; source:string; sourceName?:string; publishedAt?:string; category:string; description?:string; eligible?:boolean; score?:number; sources?:{title?:string;url:string;publishedAt?:string}[] };
 type VerificationRecord = { link:string; sources?:{title?:string;url?:string;domain?:string;ok?:boolean;status?:number;finalUrl?:string;discovered?:boolean;resolvedFrom?:string}[]; independentReachableDomains?:string[]; relevantReachableSourceCount?:number; status?:string };
@@ -63,7 +64,26 @@ async function main(){
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
   const uniqueSourceDomains=[...new Set(sources.map(s=>domainOf(s.url)).filter(Boolean))];
   if(uniqueSourceDomains.length<1){console.log('Verified evidence did not contain a reachable publisher domain; publication blocked.');process.exit(0);}
-  const evidencePack=await buildEvidencePack(sources,trend.title);
+  let evidencePack;
+  const authoritativePath='data/authoritative-evidence-pack.json';
+  if(fs.existsSync(authoritativePath)){
+    let authoritative=null;
+    try{ authoritative=JSON.parse(fs.readFileSync(authoritativePath,'utf8')); }catch{}
+    const pack=(authoritative?.candidates??[]).find((item:any)=>item?.candidate?.link===trend.link);
+    if(!pack||!validateAuthoritativeEvidencePack(pack)){
+      console.log('Authoritative Evidence Pack missing or invalid for selected candidate; publication blocked.');
+      process.exit(0);
+    }
+    evidencePack=(pack.sources??[]).map((source:any)=>({
+      title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
+      passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
+      publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage
+    }));
+    console.log(`Authoritative Evidence Pack: consumed ${evidencePack.length} canonical source(s); no downstream source expansion.`);
+  }else{
+    evidencePack=await buildEvidencePack(sources,trend.title);
+    console.log('Authoritative Evidence Pack unavailable; using legacy grounding fetch.');
+  }
   const usablePassages=evidencePack.reduce((n,s)=>n+s.passages.length,0);
   const sourceWithEvidence=evidencePack.filter(x=>x.passages.length>=1).length;
   const evidenceDomains=[...new Set(evidencePack.map(s=>domainOf(s.url)).filter(Boolean))];
