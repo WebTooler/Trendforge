@@ -4,7 +4,15 @@ const base={title:'A sufficiently descriptive TrendForge headline',description:'
 const content=['One','Two','Three','Four','Five','Six'].map((h,i)=>{
   const leads=['One reports','Two explains','Three documents','Four examines','Five outlines','Six summarizes'];
   const details=['the first evidence set','the second evidence set','the third evidence set','the fourth evidence set','the fifth evidence set','the sixth evidence set'];
-  return '## '+h+'\n\n'+leads[i]+' a distinct development with concrete context, timing, evidence, and implications without adding unsupported claims. The supplied '+details[i]+' gives readers enough detail to understand the development and its limits. Section '+(i+1)+' adds a separate supported point so the fixture tests structure rather than repetitive wording. The wording stays specific to this section and avoids relying on a generic conclusion or repeated sentence pattern.';
+  const endings=[
+    'The first section keeps the evidence boundary explicit while giving the fixture a complete opening.',
+    'The second section adds context in a way that remains separate from the wording used elsewhere.',
+    'Here the test checks that another supported point can be stated without copying the earlier pattern.',
+    'This part focuses on a different reporting function so the structure remains useful to a reader.',
+    'The fifth section closes its own evidence thread instead of repeating language from the earlier sections.',
+    'The final section supplies another distinct supported point and leaves the fixture internally coherent.'
+  ];
+  return '## '+h+'\n\n'+leads[i]+' a distinct development with concrete context, timing, evidence, and implications without adding unsupported claims. The supplied '+details[i]+' gives readers enough detail to understand the development and its limits. '+endings[i];
 }).join('\n\n');
 const result=validateDraft({...base,content,blueprint:{mode:'narrow',targetWords:{min:300,max:450,soft:375},maxH2:5}});
 assert.equal(result.passed,true);
