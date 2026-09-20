@@ -23,13 +23,15 @@ const cases=[
   {name:'revenue paraphrase',sentence:'Open models continue to trail closed frontier models when it comes to revenue.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
   {name:'temporal paraphrase',sentence:'Use of open models accelerated after Mozilla published its inaugural State of Open Source AI report on July 14.',expect:x=>x.status==='verified'&&x.contradicted===false},
   {name:'editorial tipping point',sentence:'The Mozilla findings suggest that the AI landscape is at a tipping point.',expectArticle:true,articleOnly:true},
+  {name:'canonical-pack isolation',sentence:'Acme introduced its Nova AI model in London on Tuesday, and said inference costs were reduced by 20 percent.',briefPassage:'This tampered brief passage claims Acme closed its London office and increased costs.',expect:x=>x.status==='verified'&&x.numericMismatch===false},
   {name:'model-number-and-percent normalization',sentence:'Moonshot AI’s Kimi K3 scores three points behind Anthropic’s Fable 5 while costing 30 % of the latter.',expect:x=>x.status==='verified'&&x.numericMismatch===false&&x.contradicted===false}
 ];
 
 function runCase(test){
   const article=`${baseFrontmatter}\n\n## Test\n${test.sentence}\n\n## Sources\n- [Reuters](https://example.com/reuters)`;
   fs.writeFileSync(`${articleDir}/fixture.md`,article);
-  fs.writeFileSync(briefPath,JSON.stringify({brief:{title:'Acme Nova AI launch',summary:'Acme Nova AI launch and inference costs.'},grounding:{sources:[{title:'Reuters — Acme Nova AI launch',url:'https://example.com/reuters',passages:[source]}]}},null,2));
+  const briefPassage=test.briefPassage||source;
+  fs.writeFileSync(briefPath,JSON.stringify({brief:{title:'Acme Nova AI launch',summary:'Acme Nova AI launch and inference costs.'},grounding:{sources:[{title:'Reuters — Acme Nova AI launch',url:'https://example.com/reuters',passages:[briefPassage]}]}},null,2));
   const r=spawnSync(process.execPath,['scripts/verify-article-claims-v2.mjs'],{encoding:'utf8'});
   let report=null;try{report=JSON.parse(fs.readFileSync(claimPath,'utf8'));}catch{}
   if(test.expectArticle)return {ok:report?.editorial?.some(x=>x.type==='editorial-analysis'&&x.status==='editorial-excluded')===true,detail:`editorial records=${JSON.stringify(report?.editorial||[])}`};
