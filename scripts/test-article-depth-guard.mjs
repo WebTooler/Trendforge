@@ -12,6 +12,7 @@ assert.ok(shallow.errors.some(x=>x.includes('underdeveloped H2')||x.includes('to
 const concentrated=assessArticleDepth({content:'## Main\n\n'+Array(110).fill('supported detail').join(' ')+'\n\n## Context\n\nA useful section adds context with concrete detail to explain the evidence clearly for readers.\n\n## Limits\n\nAnother section explains uncertainty and what the evidence does not establish for readers.',blueprint:{mode:'rich'}});
 assert.equal(concentrated.passed,false);
 assert.ok(concentrated.errors.some(x=>x.includes('overly concentrated')));
-const narrow=assessArticleDepth({content:'## Evidence\n\n'+para+'\n\n'+para,blueprint:{mode:'narrow'}});
+const narrowContent='## Evidence\n\n'+Array(5).fill(para).join('\n\n');
+const narrow=assessArticleDepth({content:narrowContent,blueprint:{mode:'narrow'}});
 assert.equal(narrow.passed,true);
 console.log('Phase 9 article depth guard tests passed.');
