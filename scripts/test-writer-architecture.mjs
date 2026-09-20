@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { validateDraft } from './trendforge-editorial-policy.mjs';
 const base={title:'A sufficiently descriptive TrendForge headline',description:'A sufficiently long description that explains the development and gives readers useful context without making unsupported claims.',category:'Technology'};
-const content=['One','Two','Three','Four','Five','Six'].map((h,i)=>'## '+h+'\\n\\n'+"Supported detail one. Supported detail two. This section provides concrete context, timing, evidence, and implications without adding unsupported claims. The supplied evidence gives readers enough detail to understand the development and its limits."+' This is section '+(i+1)+' and it remains distinct from the other sections.').join('\\n\\n');
+const content=['One','Two','Three','Four','Five','Six'].map((h,i)=>{const lead=["One reports","Two explains","Three documents","Four examines","Five outlines","Six summarizes"][i];const detail=["Evidence from the first section","Material in the second section","The third section’s record","Findings in the fourth section","The fifth section’s evidence","Details from the sixth section"][i];return `## ${h}\\n\\n${lead} a distinct development with concrete context, timing, evidence, and implications without adding unsupported claims. ${detail} gives readers enough detail to understand the development and its limits. Section ${i+1} adds a separate supported point so the fixture tests structure rather than repetitive wording.`;}).join('\\n\\n');
 const result=validateDraft({...base,content,blueprint:{maxH2:5}});
 assert.equal(result.passed,true);
 assert.ok(!result.errors.some(x=>/H2 count .* exceeds evidence blueprint maximum/i.test(x)));
