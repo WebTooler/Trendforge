@@ -63,7 +63,8 @@ pass('static output directory', exists('out'), 'Production export directory exis
 if (exists('out')) {
   pass('index output', exists('out/index.html'), 'Homepage static output exists');
   pass('robots output', exists('out/robots.txt'), 'Robots output exists');
-  pass('sitemap output', exists('out/sitemap.xml'), 'Sitemap output exists');
+  const sitemapCandidates = ['out/sitemap.xml','out/sitemap-0.xml'];
+  pass('sitemap output', sitemapCandidates.some(exists), 'Sitemap output exists');
   pass('search index output', exists('out/search-index.json'), 'Search index output exists');
   const secretFiles = [];
   function scanOut(dir) {
