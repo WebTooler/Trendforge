@@ -49,6 +49,8 @@ jobs:
         run: node scripts/recover-publisher-links.mjs
       - name: Evidence integrity preflight
         run: node scripts/evidence-integrity-preflight.mjs
+      - name: Editorial Evidence Brief V3 fixtures
+        run: node scripts/test-editorial-evidence-brief.mjs
       - name: Evidence V3 pre-writer gate
         run: node scripts/pre-writer-pipeline.mjs
       - name: AI provider state check
