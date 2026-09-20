@@ -40,11 +40,11 @@ function xmlEscape(value: string) {
 }
 function fallbackFamily(title: string, description: string, category: string) {
   const t = `${title} ${description} ${category}`.toLowerCase();
-  if (/\\b(bitcoin|ethereum|crypto|blockchain|token|defi)\\b/.test(t)) return 'crypto';
-  if (/\\b(cyber|security|malware|vulnerability|exploit|attack)\\b/.test(t)) return 'cyber';
-  if (/\\b(ai|artificial intelligence|model|robot)\\b/.test(t)) return 'ai';
-  if (/\\b(product|device|phone|laptop|chip|launch|release)\\b/.test(t)) return 'product';
-  if (/\\b(regulation|regulatory|policy|government|lawmakers|oversight)\\b/.test(t)) return 'governance';
+  if (/\b(bitcoin|ethereum|crypto|blockchain|token|defi)\b/.test(t)) return 'crypto';
+  if (/\b(cyber|security|malware|vulnerability|exploit|attack)\b/.test(t)) return 'cyber';
+  if (/\b(ai|artificial intelligence|model|robot)\b/.test(t)) return 'ai';
+  if (/\b(product|device|phone|laptop|chip|launch|release)\b/.test(t)) return 'product';
+  if (/\b(regulation|regulatory|policy|government|lawmakers|oversight)\b/.test(t)) return 'governance';
   return 'technology';
 }
 function makeSvgFallback(title: string, description: string, category: string) {
