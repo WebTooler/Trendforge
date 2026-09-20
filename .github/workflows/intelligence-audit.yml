@@ -1,0 +1,72 @@
+name: TrendForge Intelligence Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trendforge-intelligence-audit
+  cancel-in-progress: true
+
+jobs:
+  intelligence-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Generate search index
+        run: npx tsx scripts/generate-search-index.ts
+      - name: Production build
+        run: npm run build
+
+      - name: Supervisor
+        run: npm run supervisor:test
+      - name: Distribution Intelligence
+        run: npm run distribution:test
+      - name: SEO Intelligence
+        run: npm run seo:test
+      - name: Search Intelligence
+        run: node scripts/test-trendforge-search-intelligence.mjs
+      - name: Monetization Intelligence
+        run: npm run monetization:test
+      - name: Security + Reliability
+        run: npm run security:test
+      - name: Audit Trail
+        run: npm run audit:test
+      - name: Performance
+        run: node scripts/test-performance.mjs
+      - name: Self-Learning
+        run: node scripts/test-self-learning.mjs
+
+      - name: Validate current static outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in out/index.html out/robots.txt out/sitemap.xml out/search-index.json out/feed.xml; do
+            test -f "$file"
+          done
+          test -d out/article
+          echo 'Current static output contract: PASS'
+
+      - name: Intelligence isolation audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in             scripts/trendforge-supervisor.mjs             scripts/trendforge-distribution.mjs             scripts/trendforge-seo-intelligence.mjs             scripts/trendforge-search-intelligence.mjs             scripts/trendforge-monetization.mjs             scripts/trendforge-security-reliability.mjs             scripts/trendforge-audit-trail.mjs             scripts/trendforge-performance.mjs             scripts/trendforge-self-learning.mjs; do
+            test -f "$file"
+          done
+          echo 'All intelligence surfaces present.'
+          echo 'All deterministic intelligence suites passed.'
