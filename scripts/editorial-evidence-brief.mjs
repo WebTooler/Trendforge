@@ -11,9 +11,12 @@ const phraseOverlap=(a,b)=>{const words=x=>String(x).toLowerCase().replace(/[^a-
 const polarityGroups=[['increased','decreased','increase','decrease','rose','fell','rising','falling','gained','lost','gain','loss','grew','declined','reduced','raised','lowered','cut'],['approved','rejected','allowed','banned','approve','reject','allow','ban'],['launched','cancelled','launch','cancel','confirmed','denied','confirm','deny'],['supports','opposes','support','oppose']];
 const contradiction=(a,b)=>{const lower=x=>String(x).toLowerCase();for(const group of polarityGroups){const ca=group.filter(w=>new RegExp('\\b'+w+'\\b').test(lower(a))),cb=group.filter(w=>new RegExp('\\b'+w+'\\b').test(lower(b)));if(!ca.length||!cb.length)continue;const pos=new Set(['increased','increase','rose','rising','gained','gain','grew','raised','approved','approve','allowed','allow','launched','launch','confirmed','confirm','supports','support']);const cPos=ca.some(x=>pos.has(x)),ePos=cb.some(x=>pos.has(x));if(cPos!==ePos)return true;}return false;};
 function relevanceScore(text,story){
-  const o=overlap(text,story.title+' '+(story.description||'')); const e=entities(text),se=entities(story.title+' '+(story.description||'')); const entityShared=[...e].filter(x=>se.has(x)).length;
-  const num=numbers(text).size; const fact=FACTUAL.test(text)?1:0; const quote=/["“][^"”]{12,}["”]/.test(text)?1:0;
-  return {score:o.count*2+Math.min(6,entityShared*3)+Math.min(2,num)+fact+quote,topicOverlap:o.count,entityShared,numbers:num};
+  const storyText=story.title+' '+(story.description||'');
+  const o=overlap(text,storyText); const e=entities(text),se=entities(storyText); const entityShared=[...e].filter(x=>se.has(x)).length;
+  const num=numbers(text); const storyNums=numbers(storyText); const numericMatch=[...num].filter(x=>storyNums.has(x)).length;
+  const anchor=phraseOverlap(text,story.title);
+  const fact=FACTUAL.test(text)?1:0; const quote=/["“][^"”]{12,}["”]/.test(text)?1:0;
+  return {score:o.count*2+Math.min(6,entityShared*3)+Math.min(2,num.size)+Math.min(4,numericMatch*2)+Math.min(4,anchor*2)+fact+quote,topicOverlap:o.count,entityShared,numbers:num.size,numericMatch,anchor};
 }
 function isNoise(text){const x=String(text).replace(/\s+/g,' ').trim();if(x.length<45||x.length>3000)return true;if(JUNK.test(x))return true;if(/https?:\/\//i.test(x))return true;if((x.match(/\b(?:tickets?|subscribe|newsletter|advertisement|sponsored|coupon|discount)\b/gi)||[]).length>=2)return true;return false;}
 
