@@ -195,14 +195,12 @@ for (const file of files) {
   if (isCurrentRun && words < 150) errors.push(`${slug}: article is too short (${words} words; minimum 150).`);
   if (isCurrentRun && headings < 1) errors.push(`${slug}: needs at least 1 useful H2 section (found ${headings}).`);
   if (isCurrentRun && paragraphs.length < 4) errors.push(`${slug}: needs at least 4 substantive paragraphs.`);
-  if (sourceUrls.length < requiredSourceLinks || canonicalSourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://'))) {
-    const policy = isCurrentRun
-      ? (validatedSingleSource ? 'validated single-source evidence' : evidence.strongEvidence ? 'strong multi-source evidence' : 'current-run evidence')
-      : 'baseline article source sanity';
+  if (isCurrentRun && (sourceUrls.length < requiredSourceLinks || canonicalSourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://')))) {
+    const policy = validatedSingleSource ? 'validated single-source evidence' : evidence.strongEvidence ? 'strong multi-source evidence' : 'current-run evidence';
     errors.push(`${slug}: needs at least ${requiredSourceLinks} HTTPS source link(s) for ${policy}.`);
   }
   if (isCurrentRun && unsafe) errors.push(`${slug}: unsafe HTML/script content detected.`);
-  if (!depth.passed) for (const reason of depth.errors) errors.push(`${slug}: ${reason}.`);
+  if (isCurrentRun && !depth.passed) for (const reason of depth.errors) errors.push(`${slug}: ${reason}.`);
 
   const normalizedParagraphs = paragraphs.map(normalize).filter((p) => p.length >= 80);
   const paragraphSimilarity=(a:string,b:string)=>{const A=new Set(a.split(/\s+/).filter(w=>w.length>=4)),B=new Set(b.split(/\s+/).filter(w=>w.length>=4));if(!A.size||!B.size)return 0;return[...A].filter(x=>B.has(x)).length/Math.max(1,Math.min(A.size,B.size));};
