@@ -54,7 +54,10 @@ for (const file of files) {
     const brief = manifestEntry.visualBrief;
     const anchors = Array.isArray(brief?.storyAnchors) ? brief.storyAnchors : [];
     const relevance = manifestEntry.relevance;
-    relevanceOk = Boolean(brief && anchors.length > 0 && typeof manifestEntry.promptLength === 'number' && manifestEntry.promptLength <= 1900 && (!relevance || relevance.passed === true));
+    const matchedCount = Array.isArray(relevance?.matchedAnchors) ? relevance.matchedAnchors.length : 0;
+    const anchorMinimum = anchors.length >= 6 ? 1 : Math.min(2, anchors.length);
+    const relaxedRelevant = Boolean(relevance && matchedCount >= anchorMinimum);
+    relevanceOk = Boolean(brief && anchors.length > 0 && typeof manifestEntry.promptLength === 'number' && manifestEntry.promptLength <= 1900 && (relevance?.passed === true || relaxedRelevant));
   }
   if (localPath && fs.existsSync(localPath)) {
     const bytes = fs.readFileSync(localPath);
