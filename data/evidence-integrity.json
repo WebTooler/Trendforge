@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "generatedAt": "2026-09-21T10:25:38.466Z",
+  "generatedAt": "2026-09-21T10:47:33.221Z",
   "minimumStrongSources": 2,
   "minimumStrongPublisherFamilies": 2,
   "minimumStrongDomains": 2,
@@ -24,64 +24,18 @@
       "sourceVerificationStatus": "unverified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yVXE5YTI5dDR5YjNpVHIzYnhMQ3huclFnajVuczZBaU40U2RqQkFXMFVOVXJJTWo5SzlVN0tQMkhvdm84bDJMa2lkc2NKbDlHWVFlX2c4VzFyVmFqdFdzbkdqMDNBSXE0N3ZHR3BKdVBzcG44emoxcA?oc=5",
-      "title": "Trump to create ‘AI Force’ to monitor technology as fears over out-of-control agents grow - The Guardian",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "theguardian.com",
-        "inkl.com"
-      ],
-      "independentDomains": [
-        "theguardian.com",
-        "inkl.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theguardian.com/us-news/2026/sep/19/donald-trump-ai-force",
-          "domain": "theguardian.com",
-          "publisherFamily": "theguardian.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theguardian.com/us-news/2026/sep/19/donald-trump-ai-force",
-          "pageTitle": "Trump to create ‘AI Force’ to monitor technology as fears over out-of-control agents grow | Donald Trump | The Guardian",
-          "canonical": "https://www.theguardian.com/us-news/2026/sep/19/donald-trump-ai-force",
-          "bodyChars": 5163,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://www.inkl.com/news/trump-vows-to-create-an-ai-force-and-nods-to-justice-system-after-rejecting-calls-to-slow-down-industry-rather-we-will-cherish-it",
-          "domain": "inkl.com",
-          "publisherFamily": "inkl.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.inkl.com/news/trump-vows-to-create-an-ai-force-and-nods-to-justice-system-after-rejecting-calls-to-slow-down-industry-rather-we-will-cherish-it",
-          "pageTitle": "Trump vows to create an 'AI Force' and nods to justice…",
-          "canonical": "https://www.inkl.com/news/trump-vows-to-create-an-ai-force-and-nods-to-justice-system-after-rejecting-calls-to-slow-down-industry-rather-we-will-cherish-it",
-          "bodyChars": 4210,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMipgNBVV95cUxPZ2JJQ25zZlFnOXBERENiYmJiT24xMDg2dmtMUnpuR2dLWmg2bzYxTTBTWUxLTmtITlNySTFoeWRtVTlxLVZfYTVGNElSNGtMNUNwNzVUbHE2OFNFWnczS01NWTQwZHFzVVJCZ1ZlNkEtRGZ5YUpsaTBmSFZXcGg2bkU2QVhGdTZFSkZXM0FzYzZPemg2cXZ3YVBVNFBfdlFiZFUzQXFBYlZiTnRaZDFVeFAxMFE3dV9sanpuR1dZcHJtTm5XekZPTUhmZGZiZ081dHU0cEdNMXh5aXlSdmVfZ1VMSkFEMmR2Zl9YWEhCWUlLSEpXaTVkUHoySnlaaU1va2lSYTJEYUFJeG1WVjRNRUg1WThyOGpKX1lvUDFESFN1WEhUOTRWb1JncG5ObFRGdGNfbUYwRE9RN1BfZUtOVU5NSlROY2FXVy0wU3ZIQjAtMkdCeTRQT2xBdjNtSDVheTdEdHJrYkpqWVc0QzVadEZWdnZuazhodFR5Z0VFSjUwNDNTN0VEdUo2d2xJQ1VhSHF2MUI0czBqZFphRkNwRW1HNTlYZw?oc=5",
-      "title": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled - businesswire.com",
+      "title": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled - Business Wire",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 3,
+      "validSourceCount": 4,
       "independentPublisherCount": 2,
       "independentPublisherFamilies": [
-        "itemonline.com",
+        "eagletribune.com",
         "stocktitan.net"
       ],
       "independentDomains": [
-        "itemonline.com",
+        "eagletribune.com",
         "stocktitan.net"
       ],
       "sources": [
@@ -90,13 +44,21 @@
           "domain": "itemonline.com",
           "publisherFamily": "itemonline.com",
           "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://www.eagletribune.com/region/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_e6066246-3646-5172-b3bc-cbbd68e66e9c.html",
+          "domain": "eagletribune.com",
+          "publisherFamily": "eagletribune.com",
+          "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.itemonline.com/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38641563-8a4d-5d38-a16d-3a50d89b02fc.html",
-          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled | | itemonline.com",
+          "finalUrl": "https://www.eagletribune.com/region/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_e6066246-3646-5172-b3bc-cbbd68e66e9c.html",
+          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled | Region | eagletribune.com",
           "canonical": "https://www.businesswire.com/news/home/20260920309558/en/",
-          "bodyChars": 1668,
-          "topicOverlap": 23
+          "bodyChars": 2022,
+          "topicOverlap": 24
         },
         {
           "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/faraday-future-unveil-nine-ai-005700326.html",
@@ -117,7 +79,7 @@
           "pageTitle": "Faraday Future Launches 9 Robot Devices, Mini at $9,990 | FFAI Stock News",
           "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-launches-four-industry-productivity-solutions-nine-a1oa509ngxy6.html",
           "bodyChars": 14181,
-          "topicOverlap": 22
+          "topicOverlap": 23
         },
         {
           "suppliedUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-a8intlp6hpjh.html",
@@ -130,24 +92,39 @@
           "pageTitle": "Faraday Future Signs Robotics Deal Covering 50 States | FFAI Stock News",
           "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-a8intlp6hpjh.html",
           "bodyChars": 6367,
+          "topicOverlap": 21
+        },
+        {
+          "suppliedUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-global-ceo-yt-jia-shares-weekly-investor-update-sets-78l61vnoyyap.html",
+          "domain": "stocktitan.net",
+          "publisherFamily": "stocktitan.net",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-global-ceo-yt-jia-shares-weekly-investor-update-sets-78l61vnoyyap.html",
+          "pageTitle": "Faraday Future Sets 152-Unit July Robotics Sales Record | FFAI Stock News",
+          "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-global-ceo-yt-jia-shares-weekly-investor-update-sets-78l61vnoyyap.html",
+          "bodyChars": 9975,
           "topicOverlap": 20
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQX3RJYXZCc1JXMkhZeTZmWXM3T3ZaYzRTdTFqWDBWQ0xfdml0UzQ2SXBHbUdiTlpTd2oydkt3cTl1SEhvMjlMLU1xbGNnLThHeU5sZVRuTkw2YUF4d3JTcVBWV1ZuZHE2MnNVRFlIN2pneEZfVlNtcGlQczVZa29aUQ?oc=5",
-      "title": "Crypto Tax Bill Just Changed: What the New US Rules Could Mean for Bitcoin, Stablecoins and Staking - bitcoinfoundation.org",
+      "title": "Crypto Tax Bill Just Changed: What the New US Rules Could Mean for Bitcoin, Stablecoins and Staking - Bitcoin Foundation",
       "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
       "independentPublisherFamilies": [
-        "bitcoinfoundation.org"
+        "bitcoinfoundation.org",
+        "tronweekly.com"
       ],
       "independentDomains": [
-        "bitcoinfoundation.org"
+        "bitcoinfoundation.org",
+        "tronweekly.com"
       ],
       "sources": [
         {
@@ -160,16 +137,29 @@
           "finalUrl": "https://bitcoinfoundation.org/news/regulation/crypto-tax-bill-just-changed/",
           "pageTitle": "Crypto Tax Bill Just Changed: What the New US Rules Could Mean for Bitcoin, Stablecoins and Staking - Bitcoin Foundation",
           "canonical": "https://bitcoinfoundation.org/news/regulation/crypto-tax-bill-just-changed/",
-          "bodyChars": 22421,
+          "bodyChars": 22393,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.tronweekly.com/house-crypto-tax-bill-proposes-10-fee-relief/",
+          "domain": "tronweekly.com",
+          "publisherFamily": "tronweekly.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.tronweekly.com/house-crypto-tax-bill-proposes-10-fee-relief/",
+          "pageTitle": "House Crypto Tax Bill Proposes $10 Fee Relief And New Wash-",
+          "canonical": "https://www.tronweekly.com/house-crypto-tax-bill-proposes-10-fee-relief/",
+          "bodyChars": 8060,
           "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLXd3ZThtR3N0aHpmdFh6QmdXS0ZJSG1ORHJFQXFocFd5bG9uX2dUbmJTQ0ItMExxNThVZHdxa1Etekd0V0hmd1B6LTNVbEVzbTQ5R25oWm5ZeklleGdGeGdpemxLdFBTb2MzRHFQUFAtQmdYZk5CYkgzSG1BSllacnZCN05wc18tbDk1aVZqOFgzWmlPbERGNzZmOWtGanh1alVJel9ZZldxQ0RIV2dtMQ?oc=5",
-      "title": "Bitcoin ETFs Swing Positive as Token Holds Jump Above $81,000 - Bloomberg.com",
+      "title": "Bitcoin ETFs Swing Positive as Token Holds Jump Above $81,000 - bloomberg.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -184,10 +174,18 @@
           "resolvedFrom": "article-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://theedgemalaysia.com/node/818706",
+          "domain": "theedgemalaysia.com",
+          "publisherFamily": "theedgemalaysia.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPOXNKS0VZUG5CUGczbU1Ha2VUOHV0YXpnZVAzWVdQRTVRaFlDUVh5TnYtRktlMnpKS1NDd0ZXejVUXy1Ia0wtTTlLU1ZNUW1adFhIUjlzRlN1RU9EaWZLTVlUbzBWQ1FWVTZ2RWFoVHVpMXZLbkk5ZVBmV0dUa2VfYVFHX081WXVkVnV5d0ZROWxaMko0ZlRRaw?oc=5",
@@ -227,6 +225,37 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVzI1RmdLRFZUV3VvdGhxQTVqZmtxM3FuWWlqc2ZFaDBKUWRXcjhUbmVjeDVMa29mYU84b3NmU0gwVWN5eU9zTjBfSjVzaUdkampwa2ZtYThpNUNGT0Z6UGpWZEZ3dnNMM1JMaEZkMV81aXNYMjhZdFhsbUw0V0hRTk0xLVFoaVp2M0J3a0paN0U5MDNCeDduMEdVMDYtd3VlQmUweFVyb3hhdDE1TVVGMFV2YW1sRDZVVEJR?oc=5",
+      "title": "Editorial: Time to panic about AI? Take a look at what we know about the job market - Chicago Tribune",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "chicagotribune.com"
+      ],
+      "independentDomains": [
+        "chicagotribune.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.chicagotribune.com/2026/09/21/artificial-intelligence-ai-doomerism-dario-amodei-anthropic-open-ai-congress/",
+          "domain": "chicagotribune.com",
+          "publisherFamily": "chicagotribune.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.chicagotribune.com/2026/09/21/artificial-intelligence-ai-doomerism-dario-amodei-anthropic-open-ai-congress/",
+          "pageTitle": "Editorial: Panic time? AI doomsayers get a reality check from the job market",
+          "canonical": "https://www.chicagotribune.com/2026/09/21/artificial-intelligence-ai-doomerism-dario-amodei-anthropic-open-ai-congress/",
+          "bodyChars": 4135,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMy1VZVMyOGtOcnVmUUNNSHYxQ1pJSUJvSWZ6eDlPWUdfSHVmcVRwMWdvV3RFbVVkZXNvbFdrTVZQX202bENNQ2NrQ0xVQTMtQl95blMxRWdHQ1FUcDRtRjVlaWRYTlZJeXhtSm9kTE5oM0k2eXlrOExXb2ZFLVNWRzJuTDRIRjQwdXRxSXM2QlBSZk5DMlJmRVI2QlJUZTktSEVlQWEyLW1fTno1WVFEY1pYSFM4Rm5BVlE?oc=5",
@@ -318,7 +347,20 @@
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPOEVIdE1Ka2JNdURuaTdpQ01SQzFmOHFCcjlHWkNoYmJVdXMyS1ozWTU4ZlBxWjUzODRYUXNOWnVKOWwtTEVBRHhGb3NKRnc1NmlmdUdIMGpZMWdYM2F3RDMxbXNjTzZ0M1BFN05TVkdTWTdNZDkyVThtY3prUDRLdGNxcXJ4NURwX2VtcE1GY1JnUm9jV0JRdXFzc01CMGZHR1cxRHAyb1ZlU1lMQ0xSbGlmbDBBQUVJQy11Y0lGek8ta3M1ZG1RSHhfOTRqWG5CVm9tR1NCNDBFUmx6bHc?oc=5",
+      "title": "Understanding Apple's Position In Technology Hardware, Storage & Peripherals Industry Compared To Com - Benzinga",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVHNHb2stcWdZQzQ0N0tCRlg5UFNLVFNHdGhnY2o5akxLX2JMMWJxWVNGUU4xQV9pRGppYmp1eU5xR3BIUmJEcy15Si1ieE1ZOWkwSDdUN0Q3cWNJVU1JWUdfYk9zVEZ1YWRQTExJVnBrUEUybGltX1lpZEZ5aU9FRHVEZG9KUkhEaU80?oc=5",
@@ -618,40 +660,23 @@
       "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Reuters",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 7,
+      "validSourceCount": 5,
+      "independentPublisherCount": 5,
       "independentPublisherFamilies": [
-        "marketscreener.com",
         "pbs.org",
         "finchannel.com",
         "dw.com",
         "bbc.com",
-        "theprint.in",
-        "lrt.lt"
+        "theprint.in"
       ],
       "independentDomains": [
-        "marketscreener.com",
         "pbs.org",
         "finchannel.com",
         "dw.com",
         "bbc.com",
-        "theprint.in",
-        "lrt.lt"
+        "theprint.in"
       ],
       "sources": [
-        {
-          "suppliedUrl": "https://www.marketscreener.com/news/denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal-ce785adbdb81f624",
-          "domain": "marketscreener.com",
-          "publisherFamily": "marketscreener.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.marketscreener.com/news/denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal-ce785adbdb81f624",
-          "pageTitle": "Denmark says NATO shares responsibility for Arctic security under Greenland deal | MarketScreener",
-          "canonical": "https://www.marketscreener.com/news/denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal-ce785adbdb81f624",
-          "bodyChars": 2971,
-          "topicOverlap": 11
-        },
         {
           "suppliedUrl": "https://www.pbs.org/newshour/world/trump-cancels-tariff-threat-over-greenland-says-nato-agreed-to-framework-of-future-arctic-deal",
           "domain": "pbs.org",
@@ -716,19 +741,6 @@
           "canonical": "https://theprint.in/world/greenland-denmark-say-trump-deal-wont-compromise-sovereignty/3047662/",
           "bodyChars": 5088,
           "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://www.lrt.lt/en/news-in-english/19/2813132/lithuanian-president-urges-shared-arctic-security-role-to-ease-greenland-tensions",
-          "domain": "lrt.lt",
-          "publisherFamily": "lrt.lt",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.lrt.lt/en/news-in-english/19/2813132/lithuanian-president-urges-shared-arctic-security-role-to-ease-greenland-tensions",
-          "pageTitle": "Lithuanian president urges shared Arctic security role to ease Greenland tensions - LRT",
-          "canonical": "",
-          "bodyChars": 1705,
-          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -791,16 +803,14 @@
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbVMwby03eGNTOVlRamdEZVNQQVNHUG9KbkVLYU1CdlplVEhPeDNVTGhtZmN5SGR1QnFKdnphd1ZqSi1qNXFaXzFUOHFrN0xma2tvMHBYaURPY1ZHdjFMcmxGR1ZrMzN6Z1d3LVhxd2tPSXFfYi1qTUtsZ29FWXN3aWdhUWQtanlfUm40?oc=5",
       "title": "What Is Driving Bitcoin Higher Right Now - The Motley Fool",
       "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "fool.com",
-        "theglobeandmail.com"
+        "fool.com"
       ],
       "independentDomains": [
-        "fool.com",
-        "theglobeandmail.com"
+        "fool.com"
       ],
       "sources": [
         {
@@ -817,17 +827,12 @@
           "topicOverlap": 6
         },
         {
-          "suppliedUrl": "https://www.theglobeandmail.com/investing/markets/stocks/NVDA/pressreleases/4706840/what-is-driving-bitcoin-higher-right-now/",
-          "domain": "theglobeandmail.com",
-          "publisherFamily": "theglobeandmail.com",
+          "suppliedUrl": "https://finance.yahoo.com/markets/crypto/articles/driving-bitcoin-higher-now-095300035.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
           "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/NVDA/pressreleases/4706840/what-is-driving-bitcoin-higher-right-now/",
-          "pageTitle": "What Is Driving Bitcoin Higher Right Now - The Globe and Mail",
-          "canonical": "https://www.theglobeandmail.com/investing/markets/stocks/NVDA/pressreleases/4706840/what-is-driving-bitcoin-higher-right-now/",
-          "bodyChars": 9471,
-          "topicOverlap": 6
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         }
       ],
       "recoveryAttempts": 0,
@@ -845,6 +850,28 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQMHZ0MG1Ob3NxRTQ0SXhwVXZVTVRhUGtnenc0Tmw4N2MwckdNZTJoSGRwZjllbWVQWlY2aEFkRV83V1ZXbnh4eDloc1hLLXlLcThmWG05NV9fcmVUY21ZQ0RDSjZFbklzc1Rvcld4U2NGaGExcVQ4SzJCdDVSRWxINzVrQkhWMDRCbnJ2MlFYaGZENl9yc0V2cmdMcUFqVFoxVllONm5wOA?oc=5",
+      "title": "Billionaire Tim Draper Predicts Bitcoin Will Hit $250,000 Within 2 Years. Here's What Needs to Happen. - Yahoo Finance",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://finance.yahoo.com/markets/crypto/articles/billionaire-tim-draper-predicts-bitcoin-062000744.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZkExcUJ3NFMwZWctLWswNWVsWFhfLWJSSlBnYjRSNnpfaG5IVU9LQUNMd011NS14R1dUS05HQ3pLNWxlVjdOZFA4VGxLa3BUR09oMTR6NUhmWjUxU2ZCUkg3WEhLTndfaVJ3Y2RHWXBoNkdTM1BZd0htaFRERm5pR0hpUnp6SWs3SU9pelFXWFg1dFlB?oc=5",
@@ -949,7 +976,7 @@
           "finalUrl": "https://www.cybersecuritydive.com/spons/securitys-30-year-habit-layering-around-the-problem/830105/",
           "pageTitle": "Security’s 30-year habit: layering around the problem | Cybersecurity Dive",
           "canonical": "https://www.cybersecuritydive.com/spons/securitys-30-year-habit-layering-around-the-problem/830105/",
-          "bodyChars": 5358,
+          "bodyChars": 5318,
           "topicOverlap": 8
         }
       ],
@@ -980,12 +1007,58 @@
           "finalUrl": "https://www.ciodive.com/spons/the-45-problem-how-wild-code-is-pushing-it-toward-a-security-event-horizo/830705/",
           "pageTitle": "The 45% problem: How wild code Is pushing IT toward a security event horizon | CIO Dive",
           "canonical": "https://www.ciodive.com/spons/the-45-problem-how-wild-code-is-pushing-it-toward-a-security-event-horizo/830705/",
-          "bodyChars": 5939,
+          "bodyChars": 5945,
           "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQUk4yc2FaWWxGT2Zyc3dGblVkRUIxZHZpN2d2b0pGa0txY2haU2IwYTdXYzZvV0pyaU9qX3dRQTFWWWVfYmlXb0I1cHJsU0pRRVppRUxBcnVOUW1xS3AyRlE3MlFVMEJQc2Yxam5YSk90ZzNnRnNGVXNpX2JBRjZnZDgtZUdNNGhfeTh1S1g2T19ZTVRUOGFfdm1kdXlOenZlWXlFZzVtcl9WYlFTM1Mw?oc=5",
+      "title": "Turkey’s strategic duality. Building a security architecture beyond NATO - New Eastern Europe",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "neweasterneurope.eu",
+        "russiancouncil.ru"
+      ],
+      "independentDomains": [
+        "neweasterneurope.eu",
+        "russiancouncil.ru"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://neweasterneurope.eu/2026/09/21/turkeys-strategic-duality-building-a-security-architecture-beyond-nato/",
+          "domain": "neweasterneurope.eu",
+          "publisherFamily": "neweasterneurope.eu",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://neweasterneurope.eu/2026/09/21/turkeys-strategic-duality-building-a-security-architecture-beyond-nato/",
+          "pageTitle": "Turkey’s strategic duality. Building a security architecture beyond NATO - New Eastern Europe",
+          "canonical": "https://neweasterneurope.eu/2026/09/21/turkeys-strategic-duality-building-a-security-architecture-beyond-nato/",
+          "bodyChars": 15902,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://russiancouncil.ru/en/blogs/merve-suna-ozel-ozcan/the-ankara-nato-summit-turkeys-capacity-to-manage-the-duality-within-t/",
+          "domain": "russiancouncil.ru",
+          "publisherFamily": "russiancouncil.ru",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://russiancouncil.ru/en/blogs/merve-suna-ozel-ozcan/the-ankara-nato-summit-turkeys-capacity-to-manage-the-duality-within-t/",
+          "pageTitle": "RIAC :: The Ankara NATO Summit: Turkey’s Capacity to Manage the Duality within the Western Security Architecture",
+          "canonical": "",
+          "bodyChars": 7696,
+          "topicOverlap": 12
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
@@ -1089,7 +1162,7 @@
           "finalUrl": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o",
           "pageTitle": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar - BBC News",
           "canonical": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o",
-          "bodyChars": 5348,
+          "bodyChars": 5386,
           "topicOverlap": 6
         },
         {
@@ -1155,129 +1228,7 @@
           "pageTitle": "Trump Says He Will Build an AI Force and Name an AI Czar - Startup Fortune",
           "canonical": "https://startupfortune.com/trump-says-he-will-build-an-ai-force-and-name-an-ai-czar/",
           "bodyChars": 6737,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSl9lU0tkbl9ndlFGcDhvUUhHZ3hVcmJUVTc5MWFuRk5uTHFYeDlBeEdpTTRta1c3ODVxVUhTeC00N2NEU1RyTlp6SkNGYkhBRGtuZnh4bW84RTlBTjdlQ3JmZnZpUE5XM094QS1TVS1oREFWc2RCeWhIZmxSVENPaDN0UG93d0VQRGlwdjdXcXZOWkZzU0VuLQ?oc=5",
-      "title": "Starbucks Technology to open new hub in Chennai, India - about.starbucks.com",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 4,
-      "independentPublisherCount": 4,
-      "independentPublisherFamilies": [
-        "tradingpedia.com",
-        "dtnext.in",
-        "indiatimes.com",
-        "asianetnews.com"
-      ],
-      "independentDomains": [
-        "tradingpedia.com",
-        "dtnext.in",
-        "economictimes.indiatimes.com",
-        "newsable.asianetnews.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.tradingpedia.com/2026/09/21/starbucks-to-open-chennai-global-tech-hub-for-operations/",
-          "domain": "tradingpedia.com",
-          "publisherFamily": "tradingpedia.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.tradingpedia.com/2026/09/21/starbucks-to-open-chennai-global-tech-hub-for-operations/",
-          "pageTitle": "Starbucks to Open Chennai Global Tech Hub for Operations",
-          "canonical": "https://www.tradingpedia.com/2026/09/21/starbucks-to-open-chennai-global-tech-hub-for-operations/",
-          "bodyChars": 2059,
-          "topicOverlap": 5
-        },
-        {
-          "suppliedUrl": "https://www.dtnext.in/news/chennai/after-walgreens-starbucks-to-set-up-first-india-gcc-in-chennai-800-tech-jobs",
-          "domain": "dtnext.in",
-          "publisherFamily": "dtnext.in",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.dtnext.in/news/chennai/after-walgreens-starbucks-to-set-up-first-india-gcc-in-chennai-800-tech-jobs",
-          "pageTitle": "After Walgreens, Starbucks to set up first India GCC in Chennai; 800 tech jobs",
-          "canonical": "https://www.dtnext.in/news/chennai/after-walgreens-starbucks-to-set-up-first-india-gcc-in-chennai-800-tech-jobs",
-          "bodyChars": 2125,
-          "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://economictimes.indiatimes.com/industry/cons-products/food/starbucks-to-open-first-corporate-office-in-india-for-tech-jobs/articleshow/131130742.cms?from=mdr",
-          "domain": "economictimes.indiatimes.com",
-          "publisherFamily": "indiatimes.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://economictimes.indiatimes.com/industry/cons-products/food/starbucks-to-open-first-corporate-office-in-india-for-tech-jobs/articleshow/131130742.cms?from=mdr",
-          "pageTitle": "Starbucks to open first corporate office in India for tech jobs - The Economic Times",
-          "canonical": "https://m.economictimes.com/industry/cons-products/food/starbucks-to-open-first-corporate-office-in-india-for-tech-jobs/articleshow/131130742.cms",
-          "bodyChars": 2913,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://newsable.asianetnews.com/business/starbucks-to-set-up-first-india-gcc-in-chennai-creating-800-jobs-articleshow-341y0gc",
-          "domain": "newsable.asianetnews.com",
-          "publisherFamily": "asianetnews.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://newsable.asianetnews.com/business/starbucks-to-set-up-first-india-gcc-in-chennai-creating-800-jobs-articleshow-341y0gc",
-          "pageTitle": "Starbucks to set up first India GCC in Chennai, creating 800 jobs | Asianet Newsable",
-          "canonical": "https://newsable.asianetnews.com/business/starbucks-to-set-up-first-india-gcc-in-chennai-creating-800-jobs-articleshow-341y0gc",
-          "bodyChars": 2760,
           "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPTHVGQ0Y1SnVrRWxQSmdJRm5wTjd3QjNZZVdqdUNFUFVJMjdEbWtlbzRPdFFWOEdsUGtVbE5jMTZ6M3AzaW5qQXVvUFhDTE5oVmlFQU4xRFZyX3hZeVFfWWtYVkFxRDFkVFVoZlMxd1djZEV2TlVwMEpleGxvNGxET2ZaVE5KdW4yS29id1Rld3V4TzhXSXQ3MG9SMHJuaUtNTERCV0NVU3FiVTllWVkzWmQ2WXR4T0tnQlo3SjZhb2JpMW9QMUF4QWF0cENWSU5aXzhMOVh3d1hTLTU4NDRuZGYwS0VXZ2R4c19MaFFXVzNNU0xYS25xUTJEX3pPSm9HSkl2MzZkdnlEMGxVN0xvM0kwV0t5czlJU0E?oc=5",
-      "title": "Solidion Technology Announces Purchase of Shares by Chairman and CEO Jaymes Winters, CFO Vlad Prantsevich, Board Member Karin-Joyce Tjon - PR Newswire",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "prnewswire.com",
-        "stocktitan.net"
-      ],
-      "independentDomains": [
-        "prnewswire.com",
-        "stocktitan.net"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.prnewswire.com/news-releases/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon-302884187.html",
-          "domain": "prnewswire.com",
-          "publisherFamily": "prnewswire.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.prnewswire.com/news-releases/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon-302884187.html",
-          "pageTitle": "Solidion Technology Announces Purchase of Shares by Chairman and CEO Jaymes Winters, CFO Vlad Prantsevich, Board Member Karin-Joyce Tjon",
-          "canonical": "https://www.prnewswire.com/news-releases/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon-302884187.html",
-          "bodyChars": 2988,
-          "topicOverlap": 14
-        },
-        {
-          "suppliedUrl": "https://www.stocktitan.net/news/STI/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-k8y2ehc3yjfa.html",
-          "domain": "stocktitan.net",
-          "publisherFamily": "stocktitan.net",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.stocktitan.net/news/STI/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-k8y2ehc3yjfa.html",
-          "pageTitle": "Solidion Technology Management Buys Shares at $7.11-$7.20 | STI Stock News",
-          "canonical": "https://www.stocktitan.net/news/STI/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-k8y2ehc3yjfa.html",
-          "bodyChars": 4835,
-          "topicOverlap": 14
         }
       ],
       "recoveryAttempts": 0,
@@ -1315,6 +1266,65 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPTHVGQ0Y1SnVrRWxQSmdJRm5wTjd3QjNZZVdqdUNFUFVJMjdEbWtlbzRPdFFWOEdsUGtVbE5jMTZ6M3AzaW5qQXVvUFhDTE5oVmlFQU4xRFZyX3hZeVFfWWtYVkFxRDFkVFVoZlMxd1djZEV2TlVwMEpleGxvNGxET2ZaVE5KdW4yS29id1Rld3V4TzhXSXQ3MG9SMHJuaUtNTERCV0NVU3FiVTllWVkzWmQ2WXR4T0tnQlo3SjZhb2JpMW9QMUF4QWF0cENWSU5aXzhMOVh3d1hTLTU4NDRuZGYwS0VXZ2R4c19MaFFXVzNNU0xYS25xUTJEX3pPSm9HSkl2MzZkdnlEMGxVN0xvM0kwV0t5czlJU0E?oc=5",
+      "title": "Solidion Technology Announces Purchase of Shares by Chairman and CEO Jaymes Winters, CFO Vlad Prantsevich, Board Member Karin-Joyce Tjon - PR Newswire",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "prnewswire.com",
+        "stocktitan.net"
+      ],
+      "independentDomains": [
+        "prnewswire.com",
+        "stocktitan.net"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.prnewswire.com/news-releases/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon-302884187.html",
+          "domain": "prnewswire.com",
+          "publisherFamily": "prnewswire.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.prnewswire.com/news-releases/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon-302884187.html",
+          "pageTitle": "Solidion Technology Announces Purchase of Shares by Chairman and CEO Jaymes Winters, CFO Vlad Prantsevich, Board Member Karin-Joyce Tjon",
+          "canonical": "https://www.prnewswire.com/news-releases/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon-302884187.html",
+          "bodyChars": 2988,
+          "topicOverlap": 14
+        },
+        {
+          "suppliedUrl": "https://www.tradingview.com/news/prnewswire:ccec0d4315f89:0-solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon/",
+          "domain": "tradingview.com",
+          "publisherFamily": "tradingview.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.tradingview.com/news/prnewswire:ccec0d4315f89:0-solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon/",
+          "pageTitle": "Solidion Technology Announces Purchase of Shares by Chairman and CEO Jaymes Winters, CFO Vlad Prantsevich, Board Member Karin-Joyce Tjon — TradingView News",
+          "canonical": "https://www.tradingview.com/news/prnewswire:ccec0d4315f89:0-solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-jaymes-winters-cfo-vlad-prantsevich-board-member-karin-joyce-tjon/",
+          "bodyChars": 344,
+          "topicOverlap": 15
+        },
+        {
+          "suppliedUrl": "https://www.stocktitan.net/news/STI/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-k8y2ehc3yjfa.html",
+          "domain": "stocktitan.net",
+          "publisherFamily": "stocktitan.net",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.stocktitan.net/news/STI/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-k8y2ehc3yjfa.html",
+          "pageTitle": "Solidion Technology Management Buys Shares at $7.11-$7.20 | STI Stock News",
+          "canonical": "https://www.stocktitan.net/news/STI/solidion-technology-announces-purchase-of-shares-by-chairman-and-ceo-k8y2ehc3yjfa.html",
+          "bodyChars": 4835,
+          "topicOverlap": 14
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSmZKOVdSTk1aT1J5dWo1RjZ5cVpHc3Vjbzdsdno1OUVDaTdKcWNoVzFfbjVKZUh1Y21pOFVsRm96ZC1nS2I4N05vZlhuWmxQUk9LYkdoaGZoYUJXbnJwNGFnb3VWX1Y1UVJabzlwbDdsNV9JTkRDUXFVeUF2SkZYd0VnM3gxeE5yQkY5X3d0dl9lbGl0ZWJHR2pBclhXUUJmM3hWVjJB?oc=5",
       "title": "KMS Technology Introduces Troy Cantrell as Field CTO to Advance Enterprise Execution - Yahoo Finance",
       "status": "block",
@@ -1331,52 +1341,6 @@
           "resolvedFrom": "research-story-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQUk4yc2FaWWxGT2Zyc3dGblVkRUIxZHZpN2d2b0pGa0txY2haU2IwYTdXYzZvV0pyaU9qX3dRQTFWWWVfYmlXb0I1cHJsU0pRRVppRUxBcnVOUW1xS3AyRlE3MlFVMEJQc2Yxam5YSk90ZzNnRnNGVXNpX2JBRjZnZDgtZUdNNGhfeTh1S1g2T19ZTVRUOGFfdm1kdXlOenZlWXlFZzVtcl9WYlFTM1Mw?oc=5",
-      "title": "Turkey’s strategic duality. Building a security architecture beyond NATO - New Eastern Europe",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "neweasterneurope.eu",
-        "russiancouncil.ru"
-      ],
-      "independentDomains": [
-        "neweasterneurope.eu",
-        "russiancouncil.ru"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://neweasterneurope.eu/2026/09/21/turkeys-strategic-duality-building-a-security-architecture-beyond-nato/",
-          "domain": "neweasterneurope.eu",
-          "publisherFamily": "neweasterneurope.eu",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://neweasterneurope.eu/2026/09/21/turkeys-strategic-duality-building-a-security-architecture-beyond-nato/",
-          "pageTitle": "Turkey’s strategic duality. Building a security architecture beyond NATO - New Eastern Europe",
-          "canonical": "https://neweasterneurope.eu/2026/09/21/turkeys-strategic-duality-building-a-security-architecture-beyond-nato/",
-          "bodyChars": 15902,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://russiancouncil.ru/en/blogs/merve-suna-ozel-ozcan/the-ankara-nato-summit-turkeys-capacity-to-manage-the-duality-within-t/",
-          "domain": "russiancouncil.ru",
-          "publisherFamily": "russiancouncil.ru",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://russiancouncil.ru/en/blogs/merve-suna-ozel-ozcan/the-ankara-nato-summit-turkeys-capacity-to-manage-the-duality-within-t/",
-          "pageTitle": "RIAC :: The Ankara NATO Summit: Turkey’s Capacity to Manage the Duality within the Western Security Architecture",
-          "canonical": "",
-          "bodyChars": 7696,
-          "topicOverlap": 12
         }
       ],
       "recoveryAttempts": 0,
@@ -1429,32 +1393,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNWctZkNnT1NCdTQ5N0JGUm9ZUmtnenVrSTNySEkwQThoTVppSkRyeEE2RTBrVnRibjc0c0tpR2xmemlYaWItdUJHYk9aemE4LS1jUU1FWHllcEFid1VDU055clBPMUdCbE1IUF85V1RnWVRBVS1ENnpQRm9CSTNhNjRESGZEYXI1VXduc0c1UnpNcFVHRUl2bjVGOTVQTks0X3RTRjNIQQ?oc=5",
-      "title": "Crypto Can't Go Mainstream Without the Clarity Act - Bloomberg.com",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbTVXYTZkUDEtaXhCR0RvMXBjVjBBRFNWMC15UnVMakZSb0ZXQ2xPX3Nvby1HTDFNcF9FZlVzd2o0Z1lVZjVmeEJ5RFVwVG8wQzlaZ2RvWDMyeEtDcFNnM29RZV9VOUpyOFhxbnhLQkpFSkJud1FOSlRlS3d1aVNFZ2NHSjV4cG0wVDViSUh6UThZZkExcVVraEl2bEFWYXJvZzFoZG41anhVcHFfQXFXV3JScXdLdw?oc=5",
-      "title": "South Africa’s Planned Crypto Curbs May Hit Deals Worth Millions - Bloomberg.com",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZllGMU5Zem1qYzRxR1NMSGxxQ2o2Wkt0WWItUm1IUlp1Tk1FM2tuUk9XalJuZWg5dVYtR1pDTENaeGt0NWpWSWgxUFBkQ1UyRWZwVlhILVU4N0pvSFJzLXFMZ3hDWFhVRXdKcWFzTFB6TlJVa29pRHV4aXRHbjNzdllvN290MVVfMnN4NFczVjg5N2RFTjVTTEZiMXpDQQ?oc=5",
       "title": "These Windows apps required an online account, so I switched to offline versions that respect my privacy - How-To Geek",
       "status": "pass",
@@ -1487,7 +1425,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQd2ZmNzhwcGxBcnl2S204VGtGc08yWmhuUkxZdmR4UWl4aUJQNlhuRVk3WGxlX1NkWEJ0ek1RclItM1RQM1NsUjlCSDFQSHNwZnR1WW1oV3JHcEpwWV9SQS00N09QVm5HZ3UwaVhBMjZTSnNOYkZvaUlyQXVKM0NaR1BTNmh6U3ZYRzlMOXlocTcyRlZyRG9WS2MxbXQ2XzhLWmpBSkFyYTlKS0dnYmJ5clY0WjVNSng5ejdUbVJ1TQ?oc=5",
-      "title": "Sony's new portable console and PlayStation 6 will be released simultaneously in late 2027. - GameGPU",
+      "title": "Sony's new portable console and PlayStation 6 will be released simultaneously in late 2027. - en.gamegpu.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -1584,7 +1522,7 @@
           "finalUrl": "https://www.theguardian.com/technology/2026/sep/21/nvidia-boss-jensen-huang-dismisses-warnings-ai-destroys-world-anthropic",
           "pageTitle": "Nvidia boss says there is ‘0% chance’ AI destroys the world by 2030 | AI (artificial intelligence) | The Guardian",
           "canonical": "https://www.theguardian.com/technology/2026/sep/21/nvidia-boss-jensen-huang-dismisses-warnings-ai-destroys-world-anthropic",
-          "bodyChars": 3526,
+          "bodyChars": 4073,
           "topicOverlap": 8
         }
       ],
@@ -1627,7 +1565,21 @@
       "independentPublisherCount": 0,
       "independentPublisherFamilies": [],
       "independentDomains": [],
-      "sources": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
+          "domain": "tradingview.com",
+          "publisherFamily": "tradingview.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
+          "pageTitle": "From laptop bans to new tech courses, US law schools grapple with AI — TradingView News",
+          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
+          "bodyChars": 344,
+          "topicOverlap": 6
+        }
+      ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
     },
@@ -1703,6 +1655,46 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNTVOU09CdlUzSUJKRjI1SEpoYmhGOUJmTlJtVE9QUHgzODRIRmJMWEJYUGVJeHpKbmZYdnFwTW5TcWNQcms3V1QzWjNZbDNDc2t0VXJnaHVWUFNfeUE1WXgxVzZwM1lfeEJuOHl0YXFlV3RrWlM4aXhRaFR1ZUNOMUNKX19HNEQ1U0NibQ?oc=5",
+      "title": "Could the AI panic hurt Nvidia’s influence campaign on the Hill? - Politico",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOaWRXSTgyWnJyd2xzV01rbEFsQ1psWkx0QkFUTnVMYThhYXVtUnZOSDBQYnhzRGVYMTdHOEJvdFFUcFN0RlROYmhacmRRdllucmZILVJFTnFkazlpQzVqQXFmbEVzbTNma1Rvc0NMMkFCOUZnUzdHZFN1M0lidDc3c2t2dG5lYVF4aTdnbzRwS0JxNmNhUjFCQlpQbG1vOUpwQ1E?oc=5",
+      "title": "McCloskey: Let’s pause AI in Dallas schools - Dallas News",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.dallasnews.com/opinion/commentary/article/mccloskey-pause-ai-dallas-schools-22435534.php",
+          "domain": "dallasnews.com",
+          "publisherFamily": "dallasnews.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.dallasnews.com/opinion/commentary/article/mccloskey-pause-ai-dallas-schools-22435534.php",
+          "pageTitle": "Client Challenge",
+          "canonical": "",
+          "bodyChars": 0,
+          "topicOverlap": 0
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQNmk5RVpmNHlkRXpHNjBtbWwzWWk0OVdCdXhtc09rOWJ5YjVvSGZIV0F6NVl4cXlnR0hpd0xyRVJtd1d3QW9Ycm42dFVDZ210dFlQQXE4Q3VEZjhHSVIxOXFjY2I0ckNQcnFwZ1Q3SWctdko4M0hobHlsYzJvWDhaZF9rZHZoMEMxcXBuZHRVNGpaeFU?oc=5",
       "title": "20 approaches to writing better AI prompts - InfoWorld",
       "status": "pass",
@@ -1765,70 +1757,111 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbE94elRTN19pR0UwcHpLbXk1ODBiUWplOTJfZ1RpUzBQWjNYMjhrTW9tV2c4V3ZsV2x3RWktMkwtMjFsVXlVdHZkVE5saml6b09yQ0lWYVB5WEJRcXRaeXIyTUNCa0duRzZWVzhxNXozc0NsWHB3dGNZZWFnRjQ0R3BTNU1uZ05f?oc=5",
-      "title": "Artificial Intelligence: Who Pays the Bill? - lanoticia.com",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSl9lU0tkbl9ndlFGcDhvUUhHZ3hVcmJUVTc5MWFuRk5uTHFYeDlBeEdpTTRta1c3ODVxVUhTeC00N2NEU1RyTlp6SkNGYkhBRGtuZnh4bW84RTlBTjdlQ3JmZnZpUE5XM094QS1TVS1oREFWc2RCeWhIZmxSVENPaDN0UG93d0VQRGlwdjdXcXZOWkZzU0VuLQ?oc=5",
+      "title": "Starbucks Technology to open new hub in Chennai, India - Starbucks",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 4,
+      "independentPublisherCount": 4,
+      "independentPublisherFamilies": [
+        "tradingpedia.com",
+        "dtnext.in",
+        "indiatimes.com",
+        "asianetnews.com"
+      ],
+      "independentDomains": [
+        "tradingpedia.com",
+        "dtnext.in",
+        "economictimes.indiatimes.com",
+        "newsable.asianetnews.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.tradingpedia.com/2026/09/21/starbucks-to-open-chennai-global-tech-hub-for-operations/",
+          "domain": "tradingpedia.com",
+          "publisherFamily": "tradingpedia.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.tradingpedia.com/2026/09/21/starbucks-to-open-chennai-global-tech-hub-for-operations/",
+          "pageTitle": "Starbucks to Open Chennai Global Tech Hub for Operations",
+          "canonical": "https://www.tradingpedia.com/2026/09/21/starbucks-to-open-chennai-global-tech-hub-for-operations/",
+          "bodyChars": 2059,
+          "topicOverlap": 5
+        },
+        {
+          "suppliedUrl": "https://www.dtnext.in/news/chennai/after-walgreens-starbucks-to-set-up-first-india-gcc-in-chennai-800-tech-jobs",
+          "domain": "dtnext.in",
+          "publisherFamily": "dtnext.in",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.dtnext.in/news/chennai/after-walgreens-starbucks-to-set-up-first-india-gcc-in-chennai-800-tech-jobs",
+          "pageTitle": "After Walgreens, Starbucks to set up first India GCC in Chennai; 800 tech jobs",
+          "canonical": "https://www.dtnext.in/news/chennai/after-walgreens-starbucks-to-set-up-first-india-gcc-in-chennai-800-tech-jobs",
+          "bodyChars": 2125,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://economictimes.indiatimes.com/industry/cons-products/food/starbucks-to-open-first-corporate-office-in-india-for-tech-jobs/articleshow/131130742.cms?from=mdr",
+          "domain": "economictimes.indiatimes.com",
+          "publisherFamily": "indiatimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://economictimes.indiatimes.com/industry/cons-products/food/starbucks-to-open-first-corporate-office-in-india-for-tech-jobs/articleshow/131130742.cms?from=mdr",
+          "pageTitle": "Starbucks to open first corporate office in India for tech jobs - The Economic Times",
+          "canonical": "https://m.economictimes.com/industry/cons-products/food/starbucks-to-open-first-corporate-office-in-india-for-tech-jobs/articleshow/131130742.cms",
+          "bodyChars": 2913,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://newsable.asianetnews.com/business/starbucks-to-set-up-first-india-gcc-in-chennai-creating-800-jobs-articleshow-341y0gc",
+          "domain": "newsable.asianetnews.com",
+          "publisherFamily": "asianetnews.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://newsable.asianetnews.com/business/starbucks-to-set-up-first-india-gcc-in-chennai-creating-800-jobs-articleshow-341y0gc",
+          "pageTitle": "Starbucks to set up first India GCC in Chennai, creating 800 jobs | Asianet Newsable",
+          "canonical": "https://newsable.asianetnews.com/business/starbucks-to-set-up-first-india-gcc-in-chennai-creating-800-jobs-articleshow-341y0gc",
+          "bodyChars": 2760,
+          "topicOverlap": 8
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSkJ3MzZmeHF1cVNEblIxV1dtdWt1ZDRabFJHdGRlVklRUUVHMGt0R1pUTkMyNnE4YzBSc3pFU0xjQl9WUEI1YTlTSVRiU3lEZFhNd2RyY1BsZndmdFhZT0ZseDdodEhqc1BoVXB1ZkxhQVVURF9MbjVtQVpwejBsbGdNWk9DdkItNHhqbzVkZG9sODlpcnBESnBOZWZBTUo4RlNzRExVZzl6c2xLSmRoMW8zYW44cWtTcDNfOQ?oc=5",
+      "title": "Software breach affects three Pa. courts and Environmental Hearing Board - penncapital-star.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "lanoticia.com"
+        "mdjonline.com"
       ],
       "independentDomains": [
-        "lanoticia.com"
+        "mdjonline.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://lanoticia.com/storiesinenglish/artificial-intelligence-who-pays-the-bill/",
-          "domain": "lanoticia.com",
-          "publisherFamily": "lanoticia.com",
-          "resolvedFrom": "research-story-link",
+          "suppliedUrl": "https://www.mdjonline.com/extra/news/software-breach-affects-three-pa-courts-and-environmental-hearing-board/article_1faab852-ddcf-5d63-bb62-7d54a5e65d72.html",
+          "domain": "mdjonline.com",
+          "publisherFamily": "mdjonline.com",
+          "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://lanoticia.com/storiesinenglish/artificial-intelligence-who-pays-the-bill/",
-          "pageTitle": "Artificial Intelligence: Who Pays the Bill? - La Noticia",
-          "canonical": "https://lanoticia.com/storiesinenglish/artificial-intelligence-who-pays-the-bill/",
-          "bodyChars": 3877,
-          "topicOverlap": 2
+          "finalUrl": "https://www.mdjonline.com/extra/news/software-breach-affects-three-pa-courts-and-environmental-hearing-board/article_1faab852-ddcf-5d63-bb62-7d54a5e65d72.html",
+          "pageTitle": "Software breach affects three Pa. courts and Environmental Hearing Board | News | mdjonline.com",
+          "canonical": "https://penncapital-star.com/justice-the-courts/software-breach-affects-three-pa-courts-and-environmental-hearing-board/",
+          "bodyChars": 2363,
+          "topicOverlap": 8
         }
       ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNTVOU09CdlUzSUJKRjI1SEpoYmhGOUJmTlJtVE9QUHgzODRIRmJMWEJYUGVJeHpKbmZYdnFwTW5TcWNQcms3V1QzWjNZbDNDc2t0VXJnaHVWUFNfeUE1WXgxVzZwM1lfeEJuOHl0YXFlV3RrWlM4aXhRaFR1ZUNOMUNKX19HNEQ1U0NibQ?oc=5",
-      "title": "Could the AI panic hurt Nvidia’s influence campaign on the Hill? - politico.com",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSkJ3MzZmeHF1cVNEblIxV1dtdWt1ZDRabFJHdGRlVklRUUVHMGt0R1pUTkMyNnE4YzBSc3pFU0xjQl9WUEI1YTlTSVRiU3lEZFhNd2RyY1BsZndmdFhZT0ZseDdodEhqc1BoVXB1ZkxhQVVURF9MbjVtQVpwejBsbGdNWk9DdkItNHhqbzVkZG9sODlpcnBESnBOZWZBTUo4RlNzRExVZzl6c2xLSmRoMW8zYW44cWtTcDNfOQ?oc=5",
-      "title": "Software breach affects three Pa. courts and Environmental Hearing Board - Pennsylvania Capital-Star",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://penncapital-star.com/justice-the-courts/software-breach-affects-three-pa-courts-and-environmental-hearing-board/",
-          "domain": "penncapital-star.com",
-          "publisherFamily": "penncapital-star.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeUhKOHdHLVpGVTV5VEQ0LWVBcFd5UzFleUY5VWdaODNucE1BS25IaElER3d3eVdFWk82MzBqLS1tRDhRVTd5VjZUSzh3cmxtWVhyZXBxTlJDMDZ0TFhaeU1hbjVDcnlfbk00WE12bWhodEtYQ2JqMlJNZTAtY0VONDBQNlhHZnFp?oc=5",
@@ -1915,48 +1948,66 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZFhfM05RbzQ0b2VJTGlXMlc1WERmTGJQaFdOS3FZSFBJM200X1BQcWl4dEVmZzJwcWE0TjRicmIzTURSalhvOVMzZ0dSRGlWb3ZCNTdIWDBLTnAxal9NN05PbjFpN3VBLTMyZDQ0TDMzMGRDWEZDbVZudWhHcE5seFJLYjFqV3ktaFk5VERKMFo4VHFkamdRT0NsVkozeHA2NHJObnhBY0xtVFJtZWhqcQ?oc=5",
-      "title": "Datacenter Academy: Skills, Jobs and Community Impact - Microsoft Source",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNYXRqRm4xS2JhVzBuaWx5WmthRGNKM0xaNS1QaVhKbjFWdDQzSEU5QmtBMm5XaHI3dTE4OGd6RUl5bFM4V0JUdW94ak9rcFpwS2NidmpTU1J3TWRSWm1UQ3BFN1J5MHFZbFlvY01OcVN6N0ZzOTN6ZjZ1Mmc4Vi1mZlo5VklCY0UyMWVGSHhCc3NCR08wMDlvb2E4eVBobUNyci1sNWlvR0pIUDFIOWY5a2thNzcydlZtVVVwYmxRSUs3RVF0YUM2enhVeEs?oc=5",
+      "title": "GLB Technology (Yibin) Monthly Brake Assembly Shipments Exceed 10,000 Sets - Gasgoo",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "microsoft.com"
+        "gasgoo.com"
       ],
       "independentDomains": [
-        "news.microsoft.com"
+        "autonews.gasgoo.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://news.microsoft.com/source/features/company-news/microsoft-datacenter-academy-helps-launch-tech-careers/",
-          "domain": "news.microsoft.com",
-          "publisherFamily": "microsoft.com",
+          "suppliedUrl": "https://autonews.gasgoo.com/articles/icv/glb-technology-yibin-monthly-brake-assembly-shipments-exceed-10000-sets-2101984076650450945",
+          "domain": "autonews.gasgoo.com",
+          "publisherFamily": "gasgoo.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://news.microsoft.com/source/features/company-news/microsoft-datacenter-academy-helps-launch-tech-careers/",
-          "pageTitle": "Microsoft Datacenter Academy helps launch tech careers",
-          "canonical": "https://news.microsoft.com/source/features/company-news/microsoft-datacenter-academy-helps-launch-tech-careers/",
-          "bodyChars": 11606,
-          "topicOverlap": 7
+          "finalUrl": "https://autonews.gasgoo.com/articles/icv/glb-technology-yibin-monthly-brake-assembly-shipments-exceed-10000-sets-2101984076650450945",
+          "pageTitle": "GLB Technology (Yibin) Monthly Brake Assembly Shipments Exceed 10,000 Sets | Gasgoo",
+          "canonical": "https://autonews.gasgoo.com/articles/icv/glb-technology-yibin-monthly-brake-assembly-shipments-exceed-10000-sets-2101984076650450945",
+          "bodyChars": 2862,
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOc3I5eWVVSExfYnprVDk5bW9TY21hMmxwZWd0cEdiY3RPSDBraFFnS2ZZdGFHbGdMaHctOFlmb1p4ZmxGRXVGbGRUU3dBN2Q0N0taNlVYdXdEWHdNQ1EyaVBEelFUZTdTN2pmTmtrdEcyYzViSzF3aFh2Y2dZdUtJb0pwZzAtdw?oc=5",
-      "title": "Gopass: Open-source command-line password manager for teams - Help Net Security",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
+      "title": "Gopass: Open-source command-line password manager for teams - helpnetsecurity.com",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "helpnetsecurity.com"
+      ],
+      "independentDomains": [
+        "helpnetsecurity.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.helpnetsecurity.com/2026/09/21/gopass-open-source-password-manager/",
+          "domain": "helpnetsecurity.com",
+          "publisherFamily": "helpnetsecurity.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.helpnetsecurity.com/2026/09/21/gopass-open-source-password-manager/",
+          "pageTitle": "Gopass: Open-source command-line password manager for teams - Help Net Security",
+          "canonical": "https://www.helpnetsecurity.com/2026/09/21/gopass-open-source-password-manager/",
+          "bodyChars": 1445,
+          "topicOverlap": 8
+        }
+      ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQY0VXcXgxR01JQUM3d0JFYUJ3ellXQl9XZ2xtT2NlTDJzakRYR0xZWFFlbjlhTkc4WnI2QzZRbHl0amVVR2UzbVVYNk9WcjNBVDJjSjBQeGFzMF8zX1RLYTFmaDZKZFRFYUlKbHZMM0ZsbldNTkNiUjBuaVQ1bXJINWxucXFqaFB5VmFwVm9IcWIyR0p6QkE?oc=5",
@@ -1982,7 +2033,7 @@
           "finalUrl": "https://www.malwarebytes.com/blog/news/2026/09/a-week-in-security-september-14-september-20",
           "pageTitle": "A week in security (September 14 - September 20) | Malwarebytes",
           "canonical": "https://www.malwarebytes.com/blog/news/2026/09/a-week-in-security-september-14-september-20",
-          "bodyChars": 1480,
+          "bodyChars": 1467,
           "topicOverlap": 4
         }
       ],
@@ -2034,37 +2085,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcHZPYWg3bGQzd2dRWlA0WlNRMTZZemZOaXo0cUVhbDZvcEFyX0RMWTRaN2szZlgwVXROX01zT2V4YUE3bzNORWp3aU5fQjFObkRQenpnZ1MwNU9teDhleU9lU010Vjh4ZEpoNzdFWXBvdjBHaXhRdEJHTVNYZGtnRVpHOVhZcUt5d3A2T2tFNE5WTjM2WnFRUkdyTVUzS2lsX2N1ZkFzYmtwVGZFdTM3TVZSMGdmSElhUzR3RXZyeXA5aXkta0E?oc=5",
-      "title": "Yom Kippur Brings Heightened Security To Long Island Synagogues - News12 | Long Island",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "news12.com"
-      ],
-      "independentDomains": [
-        "longisland.news12.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://longisland.news12.com/2026/09/21/yom-kippur-brings-heightened-security-to-long-island-synagogues/5gpgWqnZaIU04TBWz2Q1Re",
-          "domain": "longisland.news12.com",
-          "publisherFamily": "news12.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://longisland.news12.com/2026/09/21/yom-kippur-brings-heightened-security-to-long-island-synagogues/5gpgWqnZaIU04TBWz2Q1Re",
-          "pageTitle": "News 12 | Long Island | Yom Kippur Brings Heightened Security To Long Island Synagogues",
-          "canonical": "https://longisland.news12.com/2026/09/21/yom-kippur-brings-heightened-security-to-long-island-synagogues/5gpgWqnZaIU04TBWz2Q1Re",
-          "bodyChars": 1039,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVkFleHVnS0V6aFVSUk9Kd2d4Vmx1ODg2Q1hSdm1IeWVvS0ZIV21PRHpDd283dWtnMnRfb1p5bXFxUmpSV2piNmREMlFYQ1g0QjRLcjR5WmJwREUxV3V1MzE4MGxtYW5UQVZkMVp6ejc3MDR4dG91QWM3b0Q0cTVkRlBoMVNSdmlRTkh0NTZXVjFBcTlZRXUwbjM1TzFBRXg4b2VXWFJ2WHc5bFRFX3k0WC1KWFRwSUt2d2VUa0VoQ0pGM25Dd3pPOVpLWkFkYVdWYXdCcjRnb2tzT2c?oc=5",
       "title": "Department of Homeland Security changes Curricular Practical Training guidelines for international students - dailycampus.com",
       "status": "pass",
@@ -2096,19 +2116,52 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcHZPYWg3bGQzd2dRWlA0WlNRMTZZemZOaXo0cUVhbDZvcEFyX0RMWTRaN2szZlgwVXROX01zT2V4YUE3bzNORWp3aU5fQjFObkRQenpnZ1MwNU9teDhleU9lU010Vjh4ZEpoNzdFWXBvdjBHaXhRdEJHTVNYZGtnRVpHOVhZcUt5d3A2T2tFNE5WTjM2WnFRUkdyTVUzS2lsX2N1ZkFzYmtwVGZFdTM3TVZSMGdmSElhUzR3RXZyeXA5aXkta0E?oc=5",
+      "title": "Yom Kippur Brings Heightened Security To Long Island Synagogues - News12 | Long Island",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "news12.com"
+      ],
+      "independentDomains": [
+        "longisland.news12.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://longisland.news12.com/2026/09/21/yom-kippur-brings-heightened-security-to-long-island-synagogues/5gpgWqnZaIU04TBWz2Q1Re",
+          "domain": "longisland.news12.com",
+          "publisherFamily": "news12.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://longisland.news12.com/2026/09/21/yom-kippur-brings-heightened-security-to-long-island-synagogues/5gpgWqnZaIU04TBWz2Q1Re",
+          "pageTitle": "News 12 | Long Island | Yom Kippur Brings Heightened Security To Long Island Synagogues",
+          "canonical": "https://longisland.news12.com/2026/09/21/yom-kippur-brings-heightened-security-to-long-island-synagogues/5gpgWqnZaIU04TBWz2Q1Re",
+          "bodyChars": 1039,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObTlBMUhCMU1lTUtmLWhWVUNOanZWNWc0bXkxNFVZYmUzb2RlWGFndlhPaDAwZjFoRi00R2lwSVZINExLZ2ROal85T2NIeWxaZFRWUnRLRmFWT2VmZTQtQjloR0o2Vlg3WGJWZ1h2V0d1RnpMQjZRNTRZQmtFamVoS2JSOVE1ZVVXSzg3NE9JcjFNb2ZwY2NXUUJYeGxGLXVxN1dDM3NiYWk3V3V0UDU2S1pTR09jdldEWUxFNURuMmVkS1hpTzdoRg?oc=5",
       "title": "Irish privacy regulator fines Google €403 million over location data processing - Reuters",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
       "independentPublisherFamilies": [
         "channelnewsasia.com",
-        "globalbankingandfinance.com"
+        "globalbankingandfinance.com",
+        "yahoo.com"
       ],
       "independentDomains": [
         "channelnewsasia.com",
-        "globalbankingandfinance.com"
+        "globalbankingandfinance.com",
+        "sg.news.yahoo.com"
       ],
       "sources": [
         {
@@ -2121,7 +2174,7 @@
           "finalUrl": "https://www.channelnewsasia.com/business/irish-privacy-regulator-fines-google-eu403-million-over-location-data-processing-6399301",
           "pageTitle": "Irish privacy regulator fines Google €403 million over location data processing - CNA",
           "canonical": "https://www.channelnewsasia.com/business/irish-privacy-regulator-fines-google-eu403-million-over-location-data-processing-6399301",
-          "bodyChars": 2170,
+          "bodyChars": 2979,
           "topicOverlap": 9
         },
         {
@@ -2132,72 +2185,23 @@
           "ok": true,
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.globalbankingandfinance.com/irish-regulator-fines-google-403-million-over-location-data/",
-          "pageTitle": "Google Fined €403 Million by Irish Regulator Over Location Data Use",
+          "pageTitle": "Ireland Fines Google €403 Million Over EU Location Data Violations",
           "canonical": "https://www.globalbankingandfinance.com/irish-regulator-fines-google-403-million-over-location-data/",
-          "bodyChars": 2780,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE12Z3NtTTlRTC11YUxnbnl0dG5KUVkyNU5INmR1X3E1bUU4cFUzTW5rRVpsNzZ3XzF2T1J5amVxREJJMjFKZ1hkRWJmeF9iZ2hxNXZYcGtiTEI5MEZ5TXZGbUExVmp0WlFJM0ozY3MzbjRrVjR2SG45M254bmlXQQ?oc=5",
-      "title": "Aethon Security Promotes Gabby Ricupero to Vice President of Operations - GovCon Wire",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "govconwire.com"
-      ],
-      "independentDomains": [
-        "govconwire.com"
-      ],
-      "sources": [
+          "bodyChars": 3654,
+          "topicOverlap": 11
+        },
         {
-          "suppliedUrl": "https://www.govconwire.com/articles/aethon-security-gabby-ricupero-vp-ops",
-          "domain": "govconwire.com",
-          "publisherFamily": "govconwire.com",
-          "resolvedFrom": "research-story-link",
+          "suppliedUrl": "https://sg.news.yahoo.com/another-big-tech-fine-google-101517162.html",
+          "domain": "sg.news.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.govconwire.com/articles/aethon-security-gabby-ricupero-vp-ops",
-          "pageTitle": "Aethon Security Promotes Gabby Ricupero to VP of Operations",
-          "canonical": "https://www.govconwire.com/articles/aethon-security-gabby-ricupero-vp-ops",
-          "bodyChars": 4592,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaUZRY2FQNHVKeEVfZzU2YjkzdUJsaEs3bTdwZlFXd0VPYjlxWTdITzNYc2hkS1E4N0U0U0ZOQUx0TGtIN1p2Wi1GbUJKdWdtRVM4QVdleUtIam5xTnVhQ1RoeXNEMDJud0JQMVFyYXhtekJNXy00Y01sX2N4aDFXdEVNd0YyazVOdFBac3d0aDFTTG11MlFjckxPVTUxVzlLd3E0d0FSY2N0bGdUXzIwa0FpNGRsRTRVRXpJ?oc=5",
-      "title": "His art is on display at the same place he works as a security guard: the library - The Baltimore Banner",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "thebanner.com"
-      ],
-      "independentDomains": [
-        "thebanner.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.thebanner.com/culture/arts/nick-liggins-artist-security-guard-oxon-hill-library-SDMVFPYJOBB6LJN5ATQJBIVSMY/",
-          "domain": "thebanner.com",
-          "publisherFamily": "thebanner.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.thebanner.com/culture/arts/nick-liggins-artist-security-guard-oxon-hill-library-SDMVFPYJOBB6LJN5ATQJBIVSMY/",
-          "pageTitle": "Security guard Nick Liggins’ art is on display at Oxon Hill Branch Library - The Banner",
-          "canonical": "https://www.thebanner.com/culture/arts/nick-liggins-artist-security-guard-oxon-hill-library-SDMVFPYJOBB6LJN5ATQJBIVSMY/",
-          "bodyChars": 7617,
-          "topicOverlap": 9
+          "finalUrl": "https://sg.news.yahoo.com/another-big-tech-fine-google-101517162.html",
+          "pageTitle": "Another Big Tech fine: Google penalised €403m by Irish data watchdog - Yahoo News Singapore",
+          "canonical": "https://www.euronews.com/2026/09/21/another-big-tech-fine-google-penalised-403m-by-irish-data-watchdog",
+          "bodyChars": 2457,
+          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -2258,7 +2262,7 @@
           "finalUrl": "https://news.gallup.com/poll/714590/crypto-ownership-falls-2025-high.aspx",
           "pageTitle": "U.S. Crypto Ownership Falls From 2025 High",
           "canonical": "https://news.gallup.com/poll/714590/crypto-ownership-falls-2025-high.aspx",
-          "bodyChars": 7961,
+          "bodyChars": 7952,
           "topicOverlap": 6
         }
       ],
@@ -2280,32 +2284,75 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdU5aUVVUQ1N4N0FYZkVpMFc1TzRiLWNpZjRNRlJ5aFNOYnF2N01oa0lQdUVVZ1VBMFNkMEV4SmR0d2hBdkpCTGQybEhKMDFuTlZZT1FuY0RjNFQ0WG91TUMtOVdPeld2Q21mTHY5amdQYjI2NVBmVUU1c3k3M3ZKZUZROFVNTWFlUW9hNnh0ZFdvY1U?oc=5",
-      "title": "The Crypto Industry Aims to Crush One of Democrats’ Top Senate Candidates - The New York Times",
+      "title": "The Crypto Industry Targets Sherrod Brown of Ohio, a Top Democratic Senate Candidate - The New York Times",
       "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
+      "evidenceLevel": "strong",
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
       "independentPublisherFamilies": [
-        "nymag.com"
+        "cnbc.com",
+        "spectrumnews1.com",
+        "washingtonpost.com"
       ],
       "independentDomains": [
-        "nymag.com"
+        "cnbc.com",
+        "spectrumnews1.com",
+        "washingtonpost.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://nymag.com/intelligencer/article/california-senate-polls-schiff-garvey.html",
-          "domain": "nymag.com",
-          "publisherFamily": "nymag.com",
+          "suppliedUrl": "https://www.cnbc.com/2024/11/05/bitcoiners-celebrate-as-bernie-moreno-ousts-sherrod-brown-ohio-upset.html",
+          "domain": "cnbc.com",
+          "publisherFamily": "cnbc.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://nymag.com/intelligencer/article/california-senate-polls-schiff-garvey.html",
-          "pageTitle": "California Senate Polls: Schiff Helps Garvey Top Democrats",
-          "canonical": "https://nymag.com/intelligencer/article/california-senate-polls-schiff-garvey.html",
-          "bodyChars": 7887,
+          "finalUrl": "https://www.cnbc.com/2024/11/05/bitcoiners-celebrate-as-bernie-moreno-ousts-sherrod-brown-ohio-upset.html",
+          "pageTitle": "Bitcoiners celebrate as Bernie Moreno ousts Sherrod Brown, Ohio upset",
+          "canonical": "https://www.cnbc.com/2024/11/05/bitcoiners-celebrate-as-bernie-moreno-ousts-sherrod-brown-ohio-upset.html",
+          "bodyChars": 4828,
           "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://spectrumnews1.com/oh/columbus/news/2025/10/11/crypto-sherrod-brown-2026-repeat",
+          "domain": "spectrumnews1.com",
+          "publisherFamily": "spectrumnews1.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://spectrumnews1.com/oh/columbus/news/2025/10/11/crypto-sherrod-brown-2026-repeat",
+          "pageTitle": "Crypto spent millions to defeat Sherrod Brown",
+          "canonical": "https://spectrumnews1.com/oh/columbus/news/2025/10/11/crypto-sherrod-brown-2026-repeat",
+          "bodyChars": 7130,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://www.washingtonpost.com/business/2024/09/20/ohio-senate-race-crypto-cash/",
+          "domain": "washingtonpost.com",
+          "publisherFamily": "washingtonpost.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.washingtonpost.com/business/2024/09/20/ohio-senate-race-crypto-cash/",
+          "pageTitle": "In critical Ohio Senate race, crypto cash looks to tip the scales - The Washington Post",
+          "canonical": "https://www.washingtonpost.com/business/2024/09/20/ohio-senate-race-crypto-cash/",
+          "bodyChars": 720,
+          "topicOverlap": 10
         }
       ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNWctZkNnT1NCdTQ5N0JGUm9ZUmtnenVrSTNySEkwQThoTVppSkRyeEE2RTBrVnRibjc0c0tpR2xmemlYaWItdUJHYk9aemE4LS1jUU1FWHllcEFid1VDU055clBPMUdCbE1IUF85V1RnWVRBVS1ENnpQRm9CSTNhNjRESGZEYXI1VXduc0c1UnpNcFVHRUl2bjVGOTVQTks0X3RTRjNIQQ?oc=5",
+      "title": "Crypto Can't Go Mainstream Without the Clarity Act - bloomberg.com",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
     },
@@ -2348,7 +2395,7 @@
           "finalUrl": "https://www.altcoinbuzz.io/near-jumps-23-as-zec-swap-volume-through-near-intents-climbs-sixfold",
           "pageTitle": "NEAR jumps 23% as ZEC swap volume on NEAR Intents climbs sixfold | Altcoin Buzz",
           "canonical": "https://www.altcoinbuzz.io/near-jumps-23-as-zec-swap-volume-through-near-intents-climbs-sixfold",
-          "bodyChars": 3603,
+          "bodyChars": 3637,
           "topicOverlap": 9
         }
       ],
@@ -2482,30 +2529,30 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTndlRldiZXU2U2FpQnltMXJkM1RMM2poeU80UWxqTWlLY2Ita0VuX0gwVEQ2Q0M5ak05TG5SRjNtMS1oZUJib2xKRU55eXdWYl9tR2Q3NlZPTXhFR3V4ZFdFaWtGUlVkYU9UZVpGdnB2Wm5faG83YUhWQmx3VHFSYTRxdkpjbkdYMmpIZ1RZM01HWW5tWnVKTmh6SmpGbmowdWp2YzQ2Wk00UDNQMW9uYTl30gHGAUFVX3lxTFBYUHZMams2WWhVaUJ3Qjd4NzU5ZXduUUlPbE5kc3NtalBXQW1hcVN1R0ZpMUhmQ090Rmw5aU1pX0p1RzdHellVWDU1MjNOSWRXcUl1SVlweGxNVFp1VFpHWGVvaHN5LWRzTUxZVUY5UlZra1dqdnBDcjhQQ3ZqR2FrbWVGWldfWEZTSHZMT09odE02dDZ4WHNnTzA4LUhoMmZvcnVpY0JJWlR0Sl9MOWppSmY2LU41RERRNTdYZUtfZXVOczRtdw?oc=5",
-      "title": "Shelby County Old Threshers teaching children about appreciating new technology - WGEM",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbmE5bXdxc3JxbUZBVjVSd0FvYUJENDlnQVMwLUMtVEhRRVpQTWdrNnFNMll6MzR0Ynk3Tkc4cG5kRm1EeTRwYnBDaDJsbU1HYldsd2cyMmtIZVB1NWNKeUVtS2wwbUlTNGJUZWFaOVZ6WHZ3bUFaSDd6Q0NCTUlOb3Z0V2lBMzZUMmtLRFpWVTNWY3ozZldCS1psSy0?oc=5",
+      "title": "PowerSC: Your One-Stop Shop For Security On IBM i – And Beyond - IT Jungle",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "wgem.com"
+        "itjungle.com"
       ],
       "independentDomains": [
-        "wgem.com"
+        "itjungle.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.wgem.com/2026/09/21/shelby-county-old-threshers-teaching-children-about-appreciating-new-technology/",
-          "domain": "wgem.com",
-          "publisherFamily": "wgem.com",
+          "suppliedUrl": "https://www.itjungle.com/2026/09/21/powersc-your-one-stop-shop-for-security-on-ibm-i-and-beyond/",
+          "domain": "itjungle.com",
+          "publisherFamily": "itjungle.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.wgem.com/2026/09/21/shelby-county-old-threshers-teaching-children-about-appreciating-new-technology/",
-          "pageTitle": "Shelby County Old Threshers teaching children about appreciating new technology",
-          "canonical": "https://www.wgem.com/2026/09/21/shelby-county-old-threshers-teaching-children-about-appreciating-new-technology/",
-          "bodyChars": 1302,
+          "finalUrl": "https://www.itjungle.com/2026/09/21/powersc-your-one-stop-shop-for-security-on-ibm-i-and-beyond/",
+          "pageTitle": "PowerSC: Your One-Stop Shop For Security On IBM i – And Beyond - IT Jungle",
+          "canonical": "https://www.itjungle.com/2026/09/21/powersc-your-one-stop-shop-for-security-on-ibm-i-and-beyond/",
+          "bodyChars": 10947,
           "topicOverlap": 6
         }
       ],
@@ -2655,7 +2702,7 @@
           "finalUrl": "https://www.thenation.com/article/society/hrw-harvard-israel-kennedy-school/",
           "pageTitle": "Why the Godfather of Human Rights Is Not Welcome at Harvard | The Nation",
           "canonical": "https://www.thenation.com/article/society/hrw-harvard-israel-kennedy-school/",
-          "bodyChars": 15778,
+          "bodyChars": 15704,
           "topicOverlap": 5
         }
       ],
@@ -2736,6 +2783,68 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTndlRldiZXU2U2FpQnltMXJkM1RMM2poeU80UWxqTWlLY2Ita0VuX0gwVEQ2Q0M5ak05TG5SRjNtMS1oZUJib2xKRU55eXdWYl9tR2Q3NlZPTXhFR3V4ZFdFaWtGUlVkYU9UZVpGdnB2Wm5faG83YUhWQmx3VHFSYTRxdkpjbkdYMmpIZ1RZM01HWW5tWnVKTmh6SmpGbmowdWp2YzQ2Wk00UDNQMW9uYTl30gHGAUFVX3lxTFBYUHZMams2WWhVaUJ3Qjd4NzU5ZXduUUlPbE5kc3NtalBXQW1hcVN1R0ZpMUhmQ090Rmw5aU1pX0p1RzdHellVWDU1MjNOSWRXcUl1SVlweGxNVFp1VFpHWGVvaHN5LWRzTUxZVUY5UlZra1dqdnBDcjhQQ3ZqR2FrbWVGWldfWEZTSHZMT09odE02dDZ4WHNnTzA4LUhoMmZvcnVpY0JJWlR0Sl9MOWppSmY2LU41RERRNTdYZUtfZXVOczRtdw?oc=5",
+      "title": "Shelby County Old Threshers teaching children about appreciating new technology - WGEM",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "wgem.com"
+      ],
+      "independentDomains": [
+        "wgem.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.wgem.com/2026/09/21/shelby-county-old-threshers-teaching-children-about-appreciating-new-technology/",
+          "domain": "wgem.com",
+          "publisherFamily": "wgem.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.wgem.com/2026/09/21/shelby-county-old-threshers-teaching-children-about-appreciating-new-technology/",
+          "pageTitle": "Shelby County Old Threshers teaching children about appreciating new technology",
+          "canonical": "https://www.wgem.com/2026/09/21/shelby-county-old-threshers-teaching-children-about-appreciating-new-technology/",
+          "bodyChars": 1302,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBBNVlpeEZnOGJmbnUzSllBQ3lrLXczS1JPN3BMejBxVjZ5MTYwODEyblR5bmMwbnFsS3QxeFFkTFhnX0ZnblZWOG9wbjV0VHd2VzlfSVZ3T245aHVQNEprT2gwaFdJSzJ5XzR3dW5sVXdkcTVZNWlqODBB?oc=5",
+      "title": "Which Major Chatbot Apps Work With CarPlay? - engadget.com",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "engadget.com"
+      ],
+      "independentDomains": [
+        "engadget.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.engadget.com/2260401/major-chatbot-apps-work-with-carplay/",
+          "domain": "engadget.com",
+          "publisherFamily": "engadget.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.engadget.com/2260401/major-chatbot-apps-work-with-carplay/",
+          "pageTitle": "Which Major Chatbot Apps Work With CarPlay?",
+          "canonical": "https://www.engadget.com/2260401/major-chatbot-apps-work-with-carplay/",
+          "bodyChars": 3869,
+          "topicOverlap": 5
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijANBVV95cUxOUXlqQUVRc0dBeTRQTmZ5aHJzT1JVUlVybmVzWDZSOFU4ZzUyaWpKQlRSREhLSXU1aWVtY0E0eHRXRUE4RTJ6M2tkZXQyNEZsWlM1Yy1qRVhyV1M0YVRQNG1mWVRKaWlMSE1URk1qMlp4Z0gtMXJmQ0FuaGtkUWdkeWRiUmZ4ZjhGb21ESG5WTzFNTTU5a3VNeTZxN2VuU3BGcGtoM0dKY1NEYlN4NTdkM3pRRWdWM1RocXpaZTN0VFpkR0l2UWVQSzFnYWlzcGNwZ01qaEY2UDJCMFZZRl9FU2NBQTBYUVFXa010M1E0MnduVHUtc19tQTVOUWNsNGdHdHFSZHQ2OHVzNEtMR1JPQTEycjdnaDVHbzFkTjhyb0hISGhxYWZ2MVNQbW5pMjJ0WmM0dU5TYnhieTJRcG5ZbFdERFdtUlBkeHNCd2ZVZHBoZGRIdTZVRUg2ZzZPVWs5UUVpdExtVk9rOURvdklvYlBVYlFVLU9WNUFnTk1qeHZvamtZYXo5LTVDeC0?oc=5",
@@ -2901,7 +3010,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbXI3bUFRb2YtOE8xcUxZV1BaOTBldkJON0VVVDdaS3k1bXV0UVFIZ1psdjFrdm9SZjNRSzFhNVFyVVM4MHZma1k4bHduUjZvYXFBRGNSTXRPOW5KTFhtdnhtdmwwS3RXZTNPeV81Umc3YjBEMG5WMzM5LUdJUGgzaFhNNGgyLXBNbXNnc29SMVEtU3BRNWZuS1BGZHVUdDY1OXhPVUlkUUg3OUhGdjdXbVJuUlo3T2tYZC14RlNaRW45TDBzZDZoMDdB?oc=5",
-      "title": "Las Cruces adds privacy rules to Flock camera contract - lcsun-news.com",
+      "title": "Las Cruces adds privacy rules to Flock camera contract - Las Cruces Sun-News",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -2932,7 +3041,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNTVOU09CdlUzSUJKRjI1SEpoYmhGOUJmTlJtVE9QUHgzODRIRmJMWEJYUGVJeHpKbmZYdnFwTW5TcWNQcms3V1QzWjNZbDNDc2t0VXJnaHVWUFNfeUE1WXgxVzZwM1lfeEJuOHl0YXFlV3RrWlM4aXhRaFR1ZUNOMUNKX19HNEQ1U0NibQ?oc=5",
-      "title": "Could the AI panic hurt Nvidia’s influence campaign on the Hill? - politico.com",
+      "title": "Could the AI panic hurt Nvidia’s influence campaign on the Hill? - Politico",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -2942,6 +3051,37 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQNTRpcmVkVGVqSThpTkM1aUxDUGZMZGoxZWItS3VHWmFURzg3MU50bTJuN1FnQ205TWtUWXh6dUtOSDl2dEFiblluQ3hNaC1NZG54ZVNwbkhRQUZPS3BUcHMtX3h0NXFvdF9VYVpnTDRpR1BrTmxoRF9HX3JJbDhQaVNWajNNUU1jaFFDRGVWOGdJRzdiZFpIX2dqSzl3ZFJpUFZ1THluX1JtMUl1ZFJBYVJEMEwyS0FnQ0tTWkRn0gHDAUFVX3lxTE9ZZjlON2ZCRm1JR3VQXzc1NUpIcnprX3Jaa0cxTzVFdVlTdmdZSVc1WlhwQlZxN2diM0JQMTEzZ2xfRXZOZVYyS1FzcjVkekNRYVpFX3ZTMTNTNkpsQkRHY3BBSmVBeDFMMC1VNjNhY0wzUy02OTNySzc1T2hGOHd3ZEtCa3AxRFVmeWtaUG1yV2FrNTU3MG11aUZoVnF2MkFFczZWM2FENy1ZUnlyNFZZY3lDNHh1MUFEQmdPRWxuUFBudw?oc=5",
+      "title": "Seven Ethiopian armed groups announce anti-government alliance - Devdiscourse",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "devdiscourse.com"
+      ],
+      "independentDomains": [
+        "devdiscourse.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.devdiscourse.com/article/international/3979901-seven-ethiopian-armed-groups-announce-anti-government-alliance",
+          "domain": "devdiscourse.com",
+          "publisherFamily": "devdiscourse.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.devdiscourse.com/article/international/3979901-seven-ethiopian-armed-groups-announce-anti-government-alliance",
+          "pageTitle": "Seven Ethiopian armed groups announce anti-government alliance | International",
+          "canonical": "https://www.devdiscourse.com/article/international/3979901-seven-ethiopian-armed-groups-announce-anti-government-alliance",
+          "bodyChars": 3002,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbUY2cXNhN2RoVU5JYzI2bXdTOEswOXZ5V1Q4M3dJNHNVR29TUUpaSFlYN19vQlFlcnNYb2YyYUpEd25EU3ZtaVFEdzNYeldPeXVXa3NTekRNanVkY2Zkd2dNdnlyRFdzWDROWEI1YTZtMk5KaF9JcEJNSXN3dzhwQktjZjBqUDFhN3cyT0t2ZFV6YUhTTkZORDVqSVctQzYtN0FDV0d6VXlnYmh1SUt3ajJTSHBzTnRwUUFoYnlTRFJ3aTFCdTgyUFFnY3VnXzlOeHRTNEZB0gHbAUFVX3lxTE52LTdBZm4zcUdUcHlsS3J0Z01wRm03WFdxcGVvekRMckNCbnFGdXJSTG5rX0trR3pUdC1aeVh2SkNBZVdiZjZJSzY4ZDUzYmk3TVhZNlpHdG1Nei1QYTVtZF9Ba1RQS0NLMkNHZWtGOXNEODJSMWFzUFFKamctWFFOeUxmN2wyZFd2Sk1DbXg4cFVXVENLRkFKVFg3TzdXMHVtRGdsb2g4UkdaalVhXzBrdlF6Z2k2Q3JsQkFVX2w2eWJCNHFwVUJHb2lnNC1Bdmo0c1ZYMTJWWW5faw?oc=5",
@@ -2973,20 +3113,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcHUtWkQyci1oRGhEUjlBY3BadEo5THZacm1ZbnpUOTJLRlMyUGp0VG5OcWZOTUtLVWRKeDZVcHcwUXgxM1pxNHR1VGxQZ3kyejA1U2pDTnZJTl9vaFdjRTVjY1VENXg3QUJLekYxeWhIQm9yMXhmMF9aNmNFMjNfNXBURWVZeVYwei00WEhGa3NDS0g4Q0ROc0VRWmtsNDRMdVAxRW1JX0hzZlkzR1pvZVZLM244N19vUHNFTG1YSno?oc=5",
-      "title": "ABC’s Pacific news coverage recognised by Lowy Institute - ABC News & Headlines – Australian Broadcasting Corporation",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQSkRyNG1CbnQ1UVZfb3hQRVlfWkhnSWRMVVpSMzdxV2VCZkhhV3RCUWNkWk8zUUh6bmFwN09ib0wxaTlSZndJclVBZC1Pa1VMZU1xZlQ4TlJ6c1lWRTlnbmpyNW9RNS16YmJNa1o2clZLZHZfOC1uOGQ3ZHpqZUloUEVOQmxpZUtROWJCMmlOSmp4ekJET01JTnVreEFGcEIwejRiOXpOdkNESFBUeWp3VFo5Rm81VndrVUV0aHJCSVZFazZKSDFlamRrWVRLZ2F4bkF5WlREQnBpY3FhdUVkM3FGaXpjZHRPWWxrbUZRWDZrTGViYU0wOG1Sc2nSAYICQVVfeXFMT3JzM0ZuNXI3X0ZFQk1IY051VWJIOEd1eFJsOFYzOGQ3cnlNNWlKRHJWektpMk92aDZLWFp4RmwyS0hqeHNJbXVZM1JQMXBOX0N2NXU5cmNzb1FVOC1TWGJLdW81LUMyR2lyQjcyeGdEMWI4a0FUQlY2U19fbmhwSUlWY2hRSUZmZEItcXlLZnB4V2J6MThrQjJPOUh6S29LRnIxVVMwbVI1N19ZMU5kdjNWLWx4VDhXaWFfRjdIWEpqM1p0ZUVrRExEYlBxUjRrVVpKb3EtbVZCUHJoSGRWQlZMQWJFYVJQZW1Pc0tWamNGMlY0TjJOZ1R2eHRoYlBMUDVB?oc=5",
-      "title": "Government to test Digi Yatra at major airports for international departures between October and December | India News - Hindustan Times",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
     },
     {
       "link": "https://www.theverge.com/ai-artificial-intelligence/998090/un-ai-panel-hugging-face-hack-precautionary-principle",
@@ -3051,6 +3177,13 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcHUtWkQyci1oRGhEUjlBY3BadEo5THZacm1ZbnpUOTJLRlMyUGp0VG5OcWZOTUtLVWRKeDZVcHcwUXgxM1pxNHR1VGxQZ3kyejA1U2pDTnZJTl9vaFdjRTVjY1VENXg3QUJLekYxeWhIQm9yMXhmMF9aNmNFMjNfNXBURWVZeVYwei00WEhGa3NDS0g4Q0ROc0VRWmtsNDRMdVAxRW1JX0hzZlkzR1pvZVZLM244N19vUHNFTG1YSno?oc=5",
+      "title": "ABC’s Pacific news coverage recognised by Lowy Institute - ABC News & Headlines – Australian Broadcasting Corporation",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5",
       "title": "Energy Technology Innovation Partnership Project - Department of Energy (.gov)",
       "status": "not-eligible",
@@ -3101,7 +3234,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOV0JZNUw5NlBJdE1MY2F0QmpJdEhacy1EdHB6YTIwenZtVmlHa2pzeUdTYm9pV0dIYkcwQnpXMENKLVcwaGtuaXZyLW9jVGIyeEFtRVZQR2ZZS2ZaY1hwVW83Z3RURURZZXNwRmxFbjlmclVEZzdNWWVqb09aYUZqWnNB?oc=5",
-      "title": "Trump opens poll to rename AI. Options include 'Extreme' and 'Supreme' Intelligence. - Mashable",
+      "title": "Trump opens poll to rename AI. Options include 'Extreme' and 'Supreme' Intelligence. - mashable.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3177,13 +3310,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBMZUVscTltc3BSMGJoVVhPeWlDQ2JiendDa3ZsRmF4VGwzVXAtYlNfUE5vVE13OXBsT1N3MXFYdFdRd25jYkhGaFp4QXEwb0g5cXNQdFhicVl0SWlySk1JTXhoc05qd08tcmhBR2VxQU5DLTVq0gF6QVVfeXFMTXo3S3oxZXdkNml4VG1yM09rSUh4cWp4Tlh2SXdSSGZ1Q0Z4NHBPclhJdmdmbUtWTWVUQnd4YUY0N25IV204WWY1QnZISUJ6bl9ZaXVEQ0dnMU1QdHdva0dSdmVOZWctZnBQaHE0WUdBSkFDYWItM2tQTXc?oc=5",
-      "title": "Jensen Huang says Nvidia will sell twice as many chips next year - CNBC",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOS2Fya2hHWGRsSHVFZWtsbXZBUXh2cjlYeDNidjRaZzRIR3h4YmtMb1RYN21DU052RkNQTjk3djVoVm5UTGFEVFF4TlFSdGpVYjRnOGNUbVJkaDNoR01IN3lXSFQ2MUZKb1RQRmF6OVFBVGFEbkxjZlg5RWQtX1NrOEVZdmswZkZDZ3ZpYnpIaXJTU25qMm1pWHZlWWpfYkdE?oc=5",
       "title": "How Bitcoin Became an Emotional Tether for a Specific Type of Lost Boy - Slate Magazine",
       "status": "not-eligible",
@@ -3227,7 +3353,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ISGg2bkJ2TlpUZG5JRWJDR256ZlhEckxpRlpHY2JHbFQ0d3dfTXliS2JiUWlCUXNVbnhndUJyUWdHYzhzemlQSThHWWZfUEs2S0g4UlhUZw?oc=5",
-      "title": "How To Vibe Code: Your 2026 Guide to Building Apps Without Writing Code - All About Cookies",
+      "title": "How To Vibe Code: Your 2026 Guide to Building Apps Without Writing Code - allaboutcookies.org",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3242,6 +3368,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5",
       "title": "From Edison’s Invention Factory to the new architecture of innovation - Science | AAAS",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5",
+      "title": "A History of Invention and Innovation - Boston University",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3268,22 +3401,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjlFdlN6cXhuRFUybHJiWS1XY1A4Rk9KaUhIMjcyRXY2bDFkYWtIUjRWM3ZUY29xNWlseFZpUEJwcXRwTm93cWQ4VUxEclJNa29iclBWc2Z3Z1hyejJVOWhZLWRiMER0dXg0aEZQa1BjVzFLaEw3SlIxUDJUaW1xVWhIdGJWbm5IbXpJakhTQjMwUk1EQmszdThqS0N0b1FTRTEtM0J5Ujk?oc=5",
-      "title": "Malaysian Brothers Win Highest Invention Award at WYIE 2026 for AI Education Innovation - SME & Entrepreneurship Magazine",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTnFtQzhYUEdEY3lJeUp2WHFkTktKX2dWYUFReU1GaFdaMncweWtySDd5bFhCT3lWRkhxTU45d2xzenpqbUx5QVA3WmRIaTNzak43NU1iWkhfTElGWlYtb2UyRlRKWTlURDc2MUZnaHVETUR2Znd6YTFldzRudkQ3eGc3c0ttRXZGdVFrNTZ0b1hkVE9zMzhxXzVUNE5vRkQzQW5sT2NnTkVNODQ1T2M3dzI5RUpQTTlQU3ZtOXRlRQ?oc=5",
-      "title": "From Invention to Impact: How India’s Deep Tech Startups Are Building an Innovation Economy Rooted in IP - CII Blog",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5",
-      "title": "A History of Invention and Innovation - Boston University",
+      "link": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNZzFQYW1lME1SMUdLMnZWZWtQR3ZmcGRiLXpScW4zLURFQ2U1RElkUkFoWjZfamlHTklHMlRlVFFHZkJRc3hvdUl6WmV5NlZSbWMzWGxVekg1SDVkcEE3Mm5seEtrY3JnSDFDWTJQV05CVUFNU3RvZlZZQ0tKSDJQcFJzQ3FZY24wUW9PbWE5S2ZPOGl0X3dtNHRHb09zYXdHbzVuSkVUcUhUUzczblBtWEl2TEt3dTd0OGdCV29rUmZmY19JRWRXUlpGSzRFYTlNNmRPcjhHZFQ0OXVVdHg3eS1POW1xNkhjck4wLWloZkdiZTJaczBNSGJxQlFGRHduY3E0aE1DYXV0SzRYTzFibVRCZzFadHp0YUl2c09GS00zdw?oc=5",
+      "title": "iQIYI Reaches New Heights: 880 Invention Patents Filed in 2025, Over Half Driven by AI Innovation, Further Building Up Its AIGC Leadership - PR Newswire",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3317,20 +3436,6 @@
       "sources": []
     },
     {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "thescore bet promo code",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "fanduel promo code",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVWk0bGVJdm9YYWxjbzlnV3dqQjdTSlc4VUFlVldob20zSzMyVi1MUUNzUll6Q2t6MjN2M2Z4Wk9nVkpvUkVaYzlkaUFqdkxyRjA0WEtydzk3ckF2aTFOLXZEekJtVFlLS3BWcnpFZDF0amowajNFNXA5THhnczZqN3hVVzdITG95cXZBVFJZVGJMcUN2Vk1zbV9PNEV6djhLWlpGeUZHY1ZjdjZIYVN2WEZZWGV5N211ZDZMZzdtN1QxUFBSdWtj?oc=5",
       "title": "Coast Guard debuts new collaboration and research hub on artificial intelligence - United States Coast Guard (.mil)",
       "status": "not-eligible",
@@ -3339,7 +3444,49 @@
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "sports",
+      "title": "strands hint",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "btc",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "doordash",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "wendy&apos;s",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "xrp",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "nfl scores yesterday",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "thescore bet promo code",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3366,34 +3513,6 @@
       "sources": []
     },
     {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "stock market today",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "sports scores today",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "technology news",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "mortgages",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://arstechnica.com/science/2026/09/finding-the-cells-that-put-our-brain-to-sleep/",
       "title": "Finding the cells that put our brain to sleep",
       "status": "not-eligible",
@@ -3415,20 +3534,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5",
-      "title": "Yemen government condemns Houthi attacks on Riyadh, blames Iran - Iran International",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbm0wNGllTzllbjY3WEdaTmJITnlYOEtudWJmQlhZSkJaTDlOY0dCMXgteVFPNlBkd0ZRN1pJWjFOanlZSVZLMGZMaFB3YThtdWRCSzF4ZWNPOHN5RTNMQ2tEaUVva0E1UWRFcWZqbzRkSm5YS0c2SnVvMEYyazFoemNJb29FZ0FrU2N4c19MUQ?oc=5",
-      "title": "US Cannot Escape Responsibility by Leaving UN Human Rights Council - WANA News Agency",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
       "title": "Prices go up in 7 days. Get your Disrupt ticket now.",
       "status": "not-eligible",
@@ -3438,6 +3543,13 @@
     {
       "link": "https://www.technologyreview.com/2026/09/18/1144435/could-ai-really-kill-us-all-your-questions-answered/",
       "title": "Could AI really kill us all? Your questions, answered.",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5",
+      "title": "Yemen government condemns Houthi attacks on Riyadh, blames Iran - Iran International",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3563,7 +3675,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5",
-      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - Bloomberg.com",
+      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - bloomberg.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3585,27 +3697,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
       "title": "America's true innovation advantage: we don't just invent technologies — we reinvent how innovation works - Fortune",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
-      "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - South China Morning Post",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMW9tNXJZd0JQaVM1d0lCTHFNUHBkZFlKRE8wRFYzQjFfdElLLUFUS0ZicmtPRE4xQTNyLVdldkotY2lRWWp2cUxvTFRZcWg2czVnSEQteTRBNzZaLUM0bVRXNV9oenB0TW9nZVdaZHh4dFFyU2thcXBYQjZyMUtvMzBhbm83VU5maURqcndFaU5QYlRZbVN5enFKSGVVXy1LUmpQRjlvQkVwZnNyQTV5Q9IBtwFBVV95cUxOVkczaVBUTW52WEZDdUZQTkdnMmFUSzE1OVJTYWVQbmpvVXRCNXo2SW5QWmxYRFpWSVN3ZTRkOXBmU0tZOUlhbGVJR0F3ei15Ty02ZEEzUTlrcnJhTWtmSlBJRTZWRnltdVdGZnpWTWFQZDNISjRHaWFLUFNvTEp4WU9EMVo1SUpGQktzQjQwdXg2WmtsbFBIaXZxdlpwMzlpcDRzajRfc3lzMS1ucFB5VWVnWm42bVU?oc=5",
-      "title": "India’s next challenge — from invention to global scale - The Hindu",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZVUxTW01MHAtYk5NU3BqRU92OVRBUTAwenV3elJGaEVvSU44V1FpVFE3ZzBNQnp2NWJSQ1ZKTVBleFNGcmJ3MU1mZ2U4N3BNc0E0RkU1elpYSGNxTzZfZHBUUElrWkhCZnFwNElPNEVKN0NyRFBEWEo3dzlFV3pnbGoyTVBJeUM1VjhaTGdWTUZ6Qkt4cXpRQXdn?oc=5",
-      "title": "China is the real winner from Europe’s war on food innovation - euractiv.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3640,7 +3731,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13VjlTZXl2bXpKMlVfYm9pcDBFa2RfQnJHa2JKRlQzMS1BVzduTm13MlVrTmc0UGdNQmNwdGNlSnRvS3pXVGgwTm5NQzFoMFdjOGl5UEZZZjFhZFppZTkwR051dnRvQTdQSFE5Ui1IZlgweTdpdWQyc0JZZTdSYlk?oc=5",
-      "title": "The Best Work Management Software for 2026 - PCMag Australia",
+      "title": "The Best Work Management Software for 2026 - au.pcmag.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3653,8 +3744,29 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
+      "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - SCMP",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
+      "title": "Information Session: Around the World with Disney Imagineering - The Ohio State University",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTVhjTFJYNTJReXVHb093aVRkNmw0YzFZWGpUSTMwWFp0TU1xT3ZMRGdReUwzZEJscmlFWDJvUG5WUmtIMGdOZXI2Y1I2WmlnYVZsc1NCSVRHTmF3RElTR0NnbFhtQm9TLU55S203YXdmOFpyYkt6RzUya21mSXdHTWxfLWw3Z0YxVm14S09UeTRfcFZySkg2WUpHZXhWTm1ieURYeUxseDJrQ28?oc=5",
       "title": "Canada’s Economic Diversification: The India Reset - Australian Institute of International Affairs",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
+      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - The Ohio State University",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3674,6 +3786,13 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMENfMjlBQ2RaRzZ2anFzZmtuZzdHLVViN2dlanlyMzFyYjYwNU9hU3BmdkxtZ09LYWlJd3g1eWZsNEtWQVg3V2w4VWVESVpCUFk2dlVPVFlFUG1xUjhyTGJScXZfY2hEYjZxbnFpVHdnLXcyeDMtQUNJSFRzLVMxZUdNMzdjUFZteGlWMzhxeVVDczJENEtGd1hZQXJwNWJP?oc=5",
+      "title": "Challenges of protecting innovation in an artificial (intelligence) world - McAfee & Taft",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNX2ZIZm96WTJEd0VmOHpDRlh5NXhvNjRwSVhQTHR2U3JIRjJ6QVdqRjgtYkxMaFRvVzRVTkxDMDcxV1FOOXpYeDhaMGU1M3h6NlBUR2p2Y054d1I5enVQR1JwbnRVN3RHSHJRVVFWcjNfcFNqTU9OWmFyajNRWWM3XzJyb1hCNm10dFVTRGdxaUMtd19lZVc3SURLMGZMQVRILUdfbUVXZVRNUQ?oc=5",
       "title": "Army invention identifies bio-materials for future military technology - army.mil",
       "status": "not-eligible",
@@ -3681,22 +3800,22 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5",
-      "title": "China surpasses 5 million valid invention patents - The Straits Times",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBfMl9KTXo5T3llMWZDUU5NMUlLdmd4dHBERWt5eElhdnlaR0ZRQUh5TUJGYWwtZnVZaTFzbjc1b2lDVUMwQjAwQlpPVmFsS3hKN2pYOGlEUEp4VHNzdFlWaQ?oc=5",
+      "title": "A hub of invention - UC Irvine News",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBkSzF3UlMxcWo0MVFPSDM0WHJwSGkzdkgyWmdJOE91Wks1cjNQNFZMS2JEUUNYYmUwcDR5cW5xdVlvMjVhcTM4YWhQNTJqOVhzR3ZOaA?oc=5",
-      "title": "Now everyone can put data to work - OpenAI",
+      "title": "Now everyone can put data to work - openai.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
-      "title": "Information Session: Around the World with Disney Imagineering - oia.osu.edu",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbm0wNGllTzllbjY3WEdaTmJITnlYOEtudWJmQlhZSkJaTDlOY0dCMXgteVFPNlBkd0ZRN1pJWjFOanlZSVZLMGZMaFB3YThtdWRCSzF4ZWNPOHN5RTNMQ2tEaUVva0E1UWRFcWZqbzRkSm5YS0c2SnVvMEYyazFoemNJb29FZ0FrU2N4c19MUQ?oc=5",
+      "title": "US Cannot Escape Responsibility by Leaving UN Human Rights Council - WANA News Agency",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3730,15 +3849,15 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQT0Q2OWJjRkhxV1MtVkNZXzc0eVpVTlpHSF9ady1TWmdkRjJ5RGZPNkw0TTI5NTlwTUNlU1FCRGh6Qy1tcEl1QjJ4LTJ0SGFGZmg2R3F2dGpCNHRnbGVCZi1nZktqeUhqZ3ViUUwyc1NXQ2xwZzdUNUFXbXBzV2tVLVhMTlQ?oc=5",
-      "title": "6 recent scientific breakthroughs and discoveries - The Week",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1aTkhGdkFRcFlGa1BzZU9NbnV1aFVYT0FoVU5LREVTanViY2swbWRmWXEyeGZ6amR4OTBSUGJBcGRDUnZtY2RwbW9xaW1Wc3BDMW05LW9pTWJNNnBXbG5sQzZTRGxaZ3NHTl90OWVORHNwdw?oc=5",
+      "title": "China has invented a whole new way to do innovation - Noahpinion",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
-      "title": "100K-winning invention could help better understand N.B. bridge integrity - CBC",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9OTENGRkVmRTlJdFdVVnJrWTVmWXNfOGhxXzc2cW9OSFJMWHhYQ0hLdkFLaTVaMFRfS2I0S2F2UDhxemFmUUF6dEtiRi1hMlJ6WmI0QW1xMUhjc0RNRlJVdw?oc=5",
+      "title": "The 50 greatest innovations of 2025 - Popular Science",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3752,7 +3871,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB2NXl1LWRfMzJIT0szLXg2R3RSRl9fekxZRUl2d0lHNUhPdFJ2a0txYTVQMnIzSGhJYnozSFFRTTM4R3RoRW9NZ0Y1U0NXdXBCS0R0OGJVSElMSU56UmJIQUppMGtybE9n?oc=5",
-      "title": "Reimagining advertising with AI - OpenAI",
+      "title": "Reimagining advertising with AI - openai.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3779,8 +3898,36 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
-      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - oia.osu.edu",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
+      "title": "Autumn 2026 International Student Experience Workshop Series - The Ohio State University",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
+      "title": "Your America in 250 Words: Seyhmus Tunc - The Ohio State University",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5",
+      "title": "Imagineering a creative learning experience - The Ohio State University",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRUtsa3ZrZUlyTTJGLVhDWFN1cU1VRVlwMEVTMHlCRHJiZFpKVHpyeExqQlVNck9DX2sybHNOUXNGWHhpWVo3UnhPamRNYWNHMWx3QWczV1lyMHJDSWt5V3dMT0RTY0hIN095UGhWN25pbkZibFphM2NBOU80Wm5iVUtxTQ?oc=5",
+      "title": "Information Session: Buckeyes Network Abroad: London - The Ohio State University",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5YYWVBNkdBT0xJYUhYSnVpWklIdG5MWFdSLUxySzhFckNWUy1tSlcwZ3BtblpTTHBLR0RfNjBPWHZFUmRrTEE0Z1RxQlExQlBNampHaDBieXJkWlFLVEVwVDhzd3RqNUdJU3F2anRlWnBnWWdtWnJ4UUNJVV8xZw?oc=5",
+      "title": "Your America in 250 Words: Lucas Gonzalez - The Ohio State University",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3828,29 +3975,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9iLXhFNFlHbUg5eV9vZUs1RzhpUnVOTW95VVpCLVk1YTVIZFdRTUdBR3JMOXFBS1NuTnlMTmI2Tmh0OGducVpUWklxZXM0WnNGVXZxLWFYbE85THZLQU5EbmtMY1hPWnliWEliYUhPNzNqMnhIUUdPODBn?oc=5",
-      "title": "CISA lays out new guidance for using open-source software - Help Net Security",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
       "title": "News | The University of Alabama in Huntsville - The University of Alabama in Huntsville",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9vSjlkMkxya2ZHX2hnSE9NNDNiOHpmcGZpSW9MWGVpVy0yTzBzYXZ1Ty1pMmJZR2p5UGR2bDhOeVE4NXhUSzljUG4xbkc5N3M3WnRiV1lVSnBEbjFEeHN3?oc=5",
-      "title": "An AI system to help scientists write expert-level empirical software - Nature",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOU0VDTldRWFg0R1lULXVOenlOZXJ6WE1LYnVTSS1qVXVHTlNQQk9ia2RiM0dDNWdfR2tWdnJyWUVUQ05sR3BKeVJ2S2tzM3ZNd0s5QmFaU1JaaEtjNkx5bk5yUTFVME1BejRyMlloMFV2dENaakw0SjZDUXBqTGNZX0p1eUxfdlJJ?oc=5",
-      "title": "Novee brings continuous AI pentesting to mobile apps - Help Net Security",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3864,49 +3990,21 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE55RjB3U1pjRUtMSUlGaGhvX0ptWFVkYlg5Rk1Fd3AtYVBEZm5UQmpVQmc1Yi1WRkFqbEVrOVFrQ2FpMVNCTDRDZDNsY1k5VHhBS1FQSjhaM2Y1aVliOC1XSW1HLW8wY1RfZWJFMDE3N3Zmdw?oc=5",
-      "title": "Introducing ChatGPT for Financial Services - OpenAI",
+      "title": "Introducing ChatGPT for Financial Services - openai.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1oVnJHU0hFU1p6Rk54WUFyckU5SnlndTJQY0NEcUEtS0lOQW5EUElYUjVuMnpOT2JRVmZ5TFdzNkIzR2xjUlB1NEhtYU1fV0l6WDczQk0xaW1SZHVBXzViS1FxMjNzcDg?oc=5",
-      "title": "Introducing ChatGPT Images 2.5 - OpenAI",
+      "title": "Introducing ChatGPT Images 2.5 - openai.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTTVzcXVJRG1sNUtyUUMxLWhXWEdhQlBQbGRzb2Q2T0pLMGV6RjVIZURXRXc1UWZHTTdSekhxYUVkT3ZYaWR0UnVDQ09CZDdCNDRoN1gtQ1hOVEd6TVZTNGp6akc0bzB4LUlEdE5uTUFRTHo5X2c2ZTItMm1SaE5hNTZLdTZWZFJ3ODZYcC1JQUhQQ1RhUUhHMWRpQm5IekNWYVM5SFpLRWZMVjZLeGl5SEdYYU9ndw?oc=5",
-      "title": "Mayor Castor Announces Host Committee for Tampa International Diplomacy and Exchange Summit - City of Tampa (.gov)",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
-      "title": "Autumn 2026 International Student Experience Workshop Series - oia.osu.edu",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
-      "title": "Your America in 250 Words: Seyhmus Tunc - oia.osu.edu",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRUtsa3ZrZUlyTTJGLVhDWFN1cU1VRVlwMEVTMHlCRHJiZFpKVHpyeExqQlVNck9DX2sybHNOUXNGWHhpWVo3UnhPamRNYWNHMWx3QWczV1lyMHJDSWt5V3dMT0RTY0hIN095UGhWN25pbkZibFphM2NBOU80Wm5iVUtxTQ?oc=5",
-      "title": "Information Session: Buckeyes Network Abroad: London - oia.osu.edu",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5YYWVBNkdBT0xJYUhYSnVpWklIdG5MWFdSLUxySzhFckNWUy1tSlcwZ3BtblpTTHBLR0RfNjBPWHZFUmRrTEE0Z1RxQlExQlBNampHaDBieXJkWlFLVEVwVDhzd3RqNUdJU3F2anRlWnBnWWdtWnJ4UUNJVV8xZw?oc=5",
-      "title": "Your America in 250 Words: Lucas Gonzalez - oia.osu.edu",
+      "title": "Mayor Castor Announces Host Committee for Tampa International Diplomacy and Exchange Summit - tampa.gov",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3961,8 +4059,43 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9iLXhFNFlHbUg5eV9vZUs1RzhpUnVOTW95VVpCLVk1YTVIZFdRTUdBR3JMOXFBS1NuTnlMTmI2Tmh0OGducVpUWklxZXM0WnNGVXZxLWFYbE85THZLQU5EbmtMY1hPWnliWEliYUhPNzNqMnhIUUdPODBn?oc=5",
+      "title": "CISA lays out new guidance for using open-source software - helpnetsecurity.com",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9vSjlkMkxya2ZHX2hnSE9NNDNiOHpmcGZpSW9MWGVpVy0yTzBzYXZ1Ty1pMmJZR2p5UGR2bDhOeVE4NXhUSzljUG4xbkc5N3M3WnRiV1lVSnBEbjFEeHN3?oc=5",
+      "title": "An AI system to help scientists write expert-level empirical software - Nature",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9OZUpPSzdBVFd6OUpkT3hzMGxXdFpRanJYTGkyeGRyRHdzeTZIb2I5RmYyejV6ZkVpNUFtM3ZaczEzMWE0TTZzMkUyMTFQVmVzbVBNamRRWGhheTllbFF5M1dsdm1pUXNvRnZFVzN2VXZUWVNhVkE?oc=5",
-      "title": "Developers can now submit apps to ChatGPT - OpenAI",
+      "title": "Developers can now submit apps to ChatGPT - openai.com",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOU0VDTldRWFg0R1lULXVOenlOZXJ6WE1LYnVTSS1qVXVHTlNQQk9ia2RiM0dDNWdfR2tWdnJyWUVUQ05sR3BKeVJ2S2tzM3ZNd0s5QmFaU1JaaEtjNkx5bk5yUTFVME1BejRyMlloMFV2dENaakw0SjZDUXBqTGNZX0p1eUxfdlJJ?oc=5",
+      "title": "Novee brings continuous AI pentesting to mobile apps - helpnetsecurity.com",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPR08yYzN5SDdENWJmT1BXQUZYU3RwdDBydGt1OFdZNE9PaUx3bVg1eGtZbGRlVktRdlQ3bFFFbFc2TmoySW5YQ2tMTzluWnZJeENIWkRYdGQ0MDlxbDdUNG9oWTBkSEhNMFZnUlQtNEVZNjFqbEttMEhQdWtRNE5Kd2pOOGdCbmN4WEdlZTAwaTh6eUw3UXZnWFMwTFA?oc=5",
+      "title": "The Netherlands take a step towards establishing a Dutch Darpa - Science|Business",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTkNRT05yUV9hTHdob2EzUzNfZEVjb1dnWWdHcjJVdGc2VzhYSkQ2eXZsTGFuTzhKQzlMZ0gybEJZaHFoYVBMOWZ0UlNxZGRkRHBpWHRNaVBBZHhLR2gteExEbjVvSjFsWDJlaERGcDJkc251NVduZjFIM3E4bVZTMl90MUx6ZlZHem92RTR3WU52OVRIaTRjZExIY19DeU1zY05aaUtCbTEzb1dlTjdKaV9CV18xeXFFY3I2aURXSjA1VWc?oc=5",
+      "title": "Innovative nurses, sisters invent new device for heart patients - Sanford Health News",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3977,13 +4110,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ZLXBYMW5rT3dzaGo3bGJNa194S25HdXdWS0pnU3VYLVZWUTNGZlEyWFdfTEhGOWplTWhWWlRWY1gtdngwaUQzaU9OYlc4a0JWNTVlczl4YXBaQQ?oc=5",
       "title": "Tommy Joyce - Department of Energy (.gov)",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5",
-      "title": "Imagineering a creative learning experience - oia.osu.edu",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
