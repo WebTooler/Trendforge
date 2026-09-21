@@ -8,6 +8,8 @@ fs.writeFileSync(path,JSON.stringify({version:1,status:'authoritative',candidate
 try{
  const ok=loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',bestPassage:'Supported fact passage.'}],path});
  assert.equal(ok.claims.length,1);
+ const byId=loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',sourceId:'S1',bestPassageId:'S1-P1',bestPassage:'Different whitespace text.'}],path});
+ assert.equal(byId.claims[0].bestPassage,'Supported fact passage.');
  assert.throws(()=>loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://evil.example/source',bestPassage:'Supported fact passage.'}],path}),/non-canonical evidence URL/);
  assert.throws(()=>loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',bestPassage:'Unverified passage.'}],path}),/outside the canonical passage set/);
  console.log('Phase 3 repair evidence guard tests passed.');
