@@ -4,6 +4,12 @@ import { validateDraft } from './trendforge-editorial-policy.mjs';
 
 const writerEngine=fs.readFileSync(new URL('./trendforge-writer-engine.mjs',import.meta.url),'utf8');
 assert.ok(writerEngine.includes('const maxFactualClaims=claimBudget>0?claimBudget:0;'),'Writer must use the exact evidence claim budget.');
+const synthesisBlueprint={mode:'narrow',targetWords:{min:220,max:450,soft:300},maxH2:2,synthesis:{allowed:true,maxStatements:1,maxWords:60,allowedFactIds:['F1','F2']}};
+const conclusionSynthesis='## Evidence\\n\\nThe available evidence establishes the reported development and its immediate details. The supplied record gives enough concrete information to describe what happened without importing outside facts.\\n\\n## Conclusion\\n\\nIn conclusion, taken together, the evidence points to the same documented development without adding a new factual premise. This closing statement only combines the established points and does not introduce a new number, date, entity, cause, outcome, or stronger certainty.';
+const conclusionResult=validateDraft({...base,content:conclusionSynthesis,blueprint:synthesisBlueprint,maxFactualClaims:2});
+assert.ok(!conclusionResult.errors.some(e=>e.includes('material factual sentence count')),'Evidence-backed conclusion synthesis must not consume the ordinary factual claim budget.');
+assert.equal(conclusionResult.metrics.claimBudgetSynthesisAllowance,1);
+
 assert.doesNotMatch(writerEngine,/Math\\.max\\(3,claimBudget\\)/,'Writer must not inflate a small evidence budget to three claims.');
 const base={title:'A sufficiently descriptive TrendForge headline',description:'A sufficiently long description that explains the development and gives readers useful context without making unsupported claims.',category:'Technology'};
 const content=[
