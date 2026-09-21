@@ -27,6 +27,8 @@ if(!verifierSmartSource.includes("synthesisRequiresTwoCoreFacts:true")) throw ne
 if(!verifierV2Source.includes("scripts/verify-article-claims-smart.mjs")) throw new Error('Canonical claim verifier must invoke the smart verifier.');
 const generatorSource=fs.readFileSync(new URL('./generate-article.ts',import.meta.url),'utf8');
 if(!generatorSource.includes("pack.evidenceBrief??pack.editorialEvidenceBrief??null")) throw new Error('Article generator must consume the canonical pack.evidenceBrief Fact Map.');
+if(!generatorSource.includes("articleContract={version:1")) throw new Error('Article generator must persist the canonical article contract.');
+if(!generatorSource.includes("data/article-contract.json")) throw new Error('Article contract must be persisted for downstream gates.');
 if(!adaptiveSource.includes("data/current-run-article.json")) throw new Error('Adaptive generator must initialize the current-run article manifest.');
 if(!adaptiveSource.includes("generated:false")) throw new Error('Adaptive generator must mark no-article state explicitly.');
 if(!adaptiveSource.includes("generated:true")) throw new Error('Adaptive generator must mark successful current-run publication.');
