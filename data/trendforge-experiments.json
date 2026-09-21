@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-21T05:24:16.627Z",
+  "updatedAt": "2026-09-21T22:10:38.416Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,9 +14,9 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 21,
-    "topics": 280,
-    "articles": 20
+    "runs": 23,
+    "topics": 331,
+    "articles": 21
   },
   "learningInput": {
     "version": 2,
@@ -88,248 +88,248 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE55RjB3U1pjRUtMSUlGaGhvX0ptWFVkYlg5Rk1Fd3AtYVBEZm5UQmpVQmc1Yi1WRkFqbEVrOVFrQ2FpMVNCTDRDZDNsY1k5VHhBS1FQSjhaM2Y1aVliOC1XSW1HLW8wY1RfZWJFMDE3N3Zmdw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE1TbzJlOHUxSDZGSDkwWmJDR05ITm41QmI4TUJaWnNOQjZvLU1VYTk3ZDQ5NGNRYzJFZmtBNjZnN0R6RW5zYTROMHRuaHZvY2o1T0pNZW92QkpBUkhKSFU0bmg4X0Fsaloya2QtTnc0V1FtUQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiakFVX3lxTE55d2I2bjFTaGdkZWlTYUFmYXdKNXgwM0t2bThOQW9iQ3d1ZVplYkFEYURYd2tVS1ozV0lYZFc3c0luX2c3ckhndEllSHRHemhLWEJ0NjRKOGRNN01zc2x0LW5PblJ1cmFlZlE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcXJiTFJMQmJfSVZubUthWjNZVkd1WVdqLU9Ba21UalhTNGFyNEhjZG92S2ZfY2pIdmhqVmRJYjdDUTNzX1luWExVV3liV3Z0Mk5sVFRyNU9INktQbnN1U2g0Z3l1MENMYXdaRWw2OFNWQkRqdGxqZ0g0aFh1R3VuYjRmUXI2NFBrclFGTTFZMHBPVFg5STA3YzIxemRiWjdCeEMwZjQ1UEctdTRwOTFDSnBmbUxiWnNBcWtfTm1pZ3BkSFU4anc?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVlRZkt4Mnd4SjlwSzIzRGNlSE9sZVEyZmtWeVM4ekV5YUlMZF8yRk84UW9TbkpMcDJaenRwY2hhQ1U1cW9yUXk5T0dGTV93dmFRNGh1UGg0ZXdZcElCUDkxU1VLS0piTm56enBGTzdkRFhMbVVjRjE5MzRJOGkwRl9zS1NmQzBZeTJ3S2hwUnpzWFhXanUxLXdn?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQZFpuTGNfb002OXlmRUVZMWRsc1lsQUtIYXh6Y3lNTllvX3BHcGNab1FnTk52ZXc3dEZDNmphWHBSYmtNSUZNd3h2ZEJLaXJBNU9lWXNVVkdTZllaSFExZm1fOERURnJZamdIOVQyWEczaU51OHZuNFdHZ29hQVd5TXhUYlo0NFcwcFM0ZGxEQU1IeFpuNWtSeGRTdjh3ZDVXQUZlQTNQWW1ITG5rXzEzb2FUMzdER2I1MW9iaHg4dVF1N2NpTFdMTU01RDVuMW5VQ0RILXdxSGxaV0VhbnB6aEJpeVIzYnVjNDdScHJqWVdNQ0Y0?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNQVVFbnV1TjFYcGsyM3hGN2o3Z2htMERMS1Q4T1BfeWxhQ1lXT0tQT2FWTTYtUUh4S3d5ZGk1Q0hWanJuNGRLc3pTeTRHWEtWRW1hUFBKMGc5enpiYjVRczJNVGdxdFR2dHZxWUZVYms1TW5RVWVZUjNZd0NSc0Rxa1E0YWQ3SS1wN2ZKY0lqRzN5Zw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipgNBVV95cUxPZ2JJQ25zZlFnOXBERENiYmJiT24xMDg2dmtMUnpuR2dLWmg2bzYxTTBTWUxLTmtITlNySTFoeWRtVTlxLVZfYTVGNElSNGtMNUNwNzVUbHE2OFNFWnczS01NWTQwZHFzVVJCZ1ZlNkEtRGZ5YUpsaTBmSFZXcGg2bkU2QVhGdTZFSkZXM0FzYzZPemg2cXZ3YVBVNFBfdlFiZFUzQXFBYlZiTnRaZDFVeFAxMFE3dV9sanpuR1dZcHJtTm5XekZPTUhmZGZiZ081dHU0cEdNMXh5aXlSdmVfZ1VMSkFEMmR2Zl9YWEhCWUlLSEpXaTVkUHoySnlaaU1va2lSYTJEYUFJeG1WVjRNRUg1WThyOGpKX1lvUDFESFN1WEhUOTRWb1JncG5ObFRGdGNfbUYwRE9RN1BfZUtOVU5NSlROY2FXVy0wU3ZIQjAtMkdCeTRQT2xBdjNtSDVheTdEdHJrYkpqWVc0QzVadEZWdnZuazhodFR5Z0VFSjUwNDNTN0VEdUo2d2xJQ1VhSHF2MUI0czBqZFphRkNwRW1HNTlYZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQLUtZbGZRcm5rTjVMOG93MHFQVzNiek5PbDNsQmZHYk9IZExxYmJRSnY2UlhCWUc2Z3dKTXl6c2RBR3RWTHRQYkJ0TnR4ZXNvVWNuYzZHdlpjRDlaVDdabWluYnZ4eERVUmx5bDlHMnVzODNsR0V6Y25FdXpGQV9rUldMT05wRjlsTDhoQmJLdUhFUdIBlwFBVV95cUxQZjU0akhzR2x6RUNOQ1BZSFUtWE9vMWJoU0xUanVqNS1ZeGNSYjZKQjItMmZodUV5b1B1NTE4YzdpRExGWWpIRGJId1pMSURGOHp0VU5HeE5ZeWNULVR1SHJOMm5VRFoxMmhaR3JSZ2RpMlE1TkZhSkpIQzdyQzBEMkpaM2FaNldsR1VhTF9XOHViWWZBU19R?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMGN6ajhVZ0NKTk1iMzYtNU5waUtFRU43RlEwQzF3akFIT2xJelFLcFprY1dtekpHUmlxRUo0TkRMT29ETGJmZmg3Y0RiZndQbzI2djlLbkI2cURxb2RYQnNQT0w0NXY3bUVWNzZrc3JOanFvX05vdWttMy01Q2FZamlCQXVEVzZDa25POGRnS1o4aHp6eXo0TXZHLU16N1JrUkFudmdnUTlOZw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYmNrQ0xmTWVMenAxNEg2S2lSQnVmVlZTWkloRmJocUtLSm9tY1hmRWcxODlNdkw0ekxkLU1ZRDlCQWxIcEJNNEtFNjZLTERXQVk1RlVUS0lRX2dBOXg2STc5X2dKOU44a2diR3NKM1IxTlFQRkpldk1hN2ZUdi1KcUhBV2UwY1dyOXhVOFVhRi03cTVzblZsSFZiZFBHcmlWQ0I0U29wc2xiSDhYVG4tczBsZEY?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVHNHb2stcWdZQzQ0N0tCRlg5UFNLVFNHdGhnY2o5akxLX2JMMWJxWVNGUU4xQV9pRGppYmp1eU5xR3BIUmJEcy15Si1ieE1ZOWkwSDdUN0Q3cWNJVU1JWUdfYk9zVEZ1YWRQTExJVnBrUEUybGltX1lpZEZ5aU9FRHVEZG9KUkhEaU80?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNR0xOOWg1MU03QTM5b0UtWE1BcjVldEJXUGFKVUNTSXA4dEdsY0tMYWtLRkJLWUdDR3MzaG85WjIxV1haNmhZY1ExcDB4M0hnSC1xNmNDSzdXZ0JjNzh0VGpHenlPem1SQlptQmhJNmNmczJPMmNrMk84YTBDZ3JadmJLZTdKU1B2blBEY28zb1NuVC03MUJyOGdfQW5CbEozczlQUVNNUGtkQUhYUkdqVHYyWGdkYURtaVljYjNGRHZlcUE?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOHZ5WkRpdklodUFpbkxPa2w0Q1g1MUZVNHJfQWRZV3I4Q180cWUwT29mMXlNLU1qUl9LUFRjTjg5MUtFel9qd1lDcWpFbHdiUzNSQlZYTm9FWjBmaEczZ1k0eVNFV3c1QXp0MUhHQ0NXSkZQa3hYdTRpQWVWYW1hRTRzQzhfd1RnT09xVmc2Mkg3YzlVdmNvYnN30gGfAUFVX3lxTE4yajYyVXRUZDFObHV0UGJOZHBZYUdiR0RKZGpnbEpwSE9MTDNhVFVZMHduZWVpMGxiV3F1WHBScTlEQ2RUMUdTZ3ZSZ3h3MVJvek8zTUIwRHkzczRFMUlZWWV0MmVUSm1sX09qNkFIamxKdngtV09tdDE2ZENMTFEtNlhqbGhYcmtqQjI1MW5wdUhqTGpfd1drS0JIeU83SQ?oc=5",
+        "key": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRU83UGZPeWFKTk91S2xlUU5xeVhTVDcyVVZZaW5jem5sZXQ5WGFyV3NkNUN6SGhTV3hMV0JXdWFpN3R2RndfaWx0OFhRRVFBQ0Y2UFlhdHp4TlREeURodjJkX1RUQjNBQnFxS3EwSlNELUpXc3Z0bnpPdWtLUTkzdDdXdjJ4X0lKWlY2T2Y4Y0tUczh6MjEwdVY1RQ?oc=5",
+        "key": "https://www.theverge.com/gadgets/998207/xbox-controller-chromebook-usbc-charger-deal-sale",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZzF1U1p0TVN5LWRKZlJGc29FSlJsNERlZWdtVmJLMUZsVktQc2I5TVRjdk14aTBJYzZRaUpGWlR1d0hBTlZIclhSSVJhRUNENERxRjFEQ3YwbjdXZFl4Y1Q0bkJpdVo2QUlQdHFmUHRNc0puWEVQQURTSUQ0SUVkUm9GdlplZmhPaFdaVHdXNVhhRTBXRGdoZA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYWJ6LW0wekhLOHdheTMtbUxLUU52a3h1cXY0UG9vY3YtUlU5LXFTbHY3ckI3dGlZMHdRRWEtNjBUSlZhYjhhVkRwUzZvS2FaV20zVFcwYktiZlZ3UklZRzZKMTJaOTlwSXE3NWpobmt1MU1vdHkxc1RCNkJCUXFxYndSRnd3UQ?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOelgxcDBsZGVNSmRsOXZMbENUZWthNFNvSnhHanpFWVJ3LVNsVjlodERLaHBreGp5dldlTGlFb0FYZWhrdk51eExCUlFXWE0yX2w1bGNIOFQ3WXJzMWdpcGNpOS1DQ29LX0xBaDRJMTJnSE1UOVFwR19LTGdMOTRkM1JxTEVHOVluRzlBY2phMlp4akF0VTVWOWZPc0djZUFYcGtrQmNHUkNDTnYwaGVJR080TVNQZlBaakJUTjhNRFlSejJlMHdKa0I0VHZJckhJREd5a0g1bTVBOGdpR2FZLVlrRFExU1AtblM3TVRYWXRIVjl5c0M2bktB?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRXlES1VKRk5RS01HdFpoTFRBR2VjcVVPZlNKTGE5OWFMdTJMNGYwWUh0cmJfUUxHcWRpQU5IcS1iZlhUdkltWWhkd0RHVGk2bmNvQzl5U0g3Yk1WQXVWM0ZWQ3RPbHFhRllfVVdmRnZ4ellmRGVpVk40VHhuWm1waFBwYl90V2R5Yk5MRC10NGhzVkx0djBMTmVheW43djB1U1JUaVdqU2tFUERmQmZwdm9QODBvOVU5Yzg3UFVBT2l5cldlZGdBMjQ4VmsteGs?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWTlVZTVyUU5EWm1NNjhId29yaHF2bGRRN2N2VElBVmd0Y1B1RXlxazJqYnV0WXpVVk1yTWZFMUJVUXoyM1o5RnR0SWpMT24zSzVyLVh5ZWhlMWVwTnZZdmVrQlF2NENPQXN2YVRTQzlUVXVYZEk5UzhtOEFtVEJRd3FVYUVMMFdYbVFVbnFsYlhYdHpGcTh0Qk45TkhHbG9yU2lsQUxvS3g1TUJYS0c1TXZwN29DQzVNOXdv0gHPAUFVX3lxTFBoal84TkFLY09YcjIzLTlHaUp0c0RLX3dvVGMycVFycUtXalZLbDRkZ0FJVjFwMU5rX3dCckd3WDFjZy1rU1lqc0xFeUtKQzJ1TkdwdWtDeVpGRVNDRkpLdXpnZ2JhbEdWWVJBakI0THdHM0pKZ3dmY21JLUlZSF9QMGNPWFAtbGplLU5LT1RWWVVWZ2duVFZIVEpFZ0U3Y1NOdUk0aUY4WUJLRGswV0VQTzJYNGdlX29XVG9wcU52VGdvTXRBUXBzdk5lQm1IQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdlI0TVpXSjdHMTh3NWg4emRvM2drMlFEM0dUX21JV3VTT285OElPUFkyT1ZXSGpCcFZ3MzVfUkp6ZFZ4cGpoTGRlTVpLVGJBdXhSRHRZb2VPUHI0dmwycFJhLTVOUnJHWV9FLUdpM2VBazRUeFhXY3RXN1pZcHI4azA0TUUtUm9oRFNxYzhaR01ZOTEzLU9rRmFzZXJCVXU2UmNuei1Ca0YxWFh1VGw2ZnRhRFllYjQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBBNVlpeEZnOGJmbnUzSllBQ3lrLXczS1JPN3BMejBxVjZ5MTYwODEyblR5bmMwbnFsS3QxeFFkTFhnX0ZnblZWOG9wbjV0VHd2VzlfSVZ3T245aHVQNEprT2gwaFdJSzJ5XzR3dW5sVXdkcTVZNWlqODBB?oc=5",
+        "key": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUnpmWW4wRlF2N2RsNmw3WmVWM3lvSnBkdkRjbDJEVlRzc1d5VEdoeDFmZGJMVXhKVXpib0lnNy1fR3FyQTFKaGwwemwzXzFhQXFjNjE3SWVQRHIzVm1vQ1Nka0pkOUxXeDlYTjdEMmxsZjFuZkJ1YklEdWh1dG5ja3MzRU5BcEVOUlBvNzdtMGJOb1hoVWJ1TEU0Y0l1aWhUUlQ4VTk0MjV3cC1jS245S3R0eGxaNE40cHZQbmtBV1QtT1dCYnV4TmdLNDMzWTVsTndFYQ?oc=5",
+        "key": "https://www.theverge.com/tech/998191/apple-siri-ai-iphone-16-class-action-lawsuit-settlement",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWUFXTF9qRTVlMzNEV05QaTd6VDJtY0VwazR1UXlLN3VRQlVfdnVISFF4dTFPblh3MzhHSmFLYmVKNVJMTGcwMWFaOW9jX3dFVDdMNnBVSGo5dWZvVEE4MXI2MW9KcElsd0hyMEc2eGF4eU1WM1hlMWQ1VEpmZDdkTGZ3anc3VzcyZS15VnZKaEpKeXh1R0cwWUJYa1pFNnMxR2E2bG4tTFpHMXFxVVlzQVhFMGRDQUk1aVF2cEo2aVR3RVdyV3Y5NV8zcGd5MkFJdnhIcU5ycw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMHRiblFIOEk1LTlUV0FRSHdDMndOQU83NlZYZ3k4ZFhXcXNFNlNBRkJfVjV1YVNQWW04Yk9DcUN1QnVVSWFjd1FFbXlmN2RqazRndDJvaVdGcnZxS3FFNHhCcUwtc1lBbHVBUnBnQmZqVlRmLXgtcHdGdWM1ck1ZWWhrYnl3R2dwOHlZYkh4OWNyZTZNTUE?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOEtVd0gtRUNiQ1dtank3eDRKNjlia3U1cjdIdENRXzFSMkh0ODdka05PeWdfNlFFM2xoVDdQQnpxME90cUdMQ0ZoX0piWTRNdW9qYTF6UFg0bFBhWklXdW8xbmRyeGJVckw3a1RxVG5Rc1NjdVdaelRSZ1dvYWs5YmU0UUtMd2tSajJaNnd6RHE0S0NPNXpieFRfQjNnOFU?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MaHBackRrai1JVGFuM0NlSjNGTXJaaFBtbGtsTktwdDhWRkdTVkVwTjdPOTFRQ0JkT2xvZXdMZmNqM3A2UjFiNmxEU3Nqc2lmSGJVNnpLM3V3QUxJZC03TnFZa1p2MjNGOFBtRjhzVGYwelE?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUnRiMVNWNGhJLXJ4cEdSNVdZU1RueG1zME9XN1BleU5yeUNKUmplQUFQSEdPQ09pUzJTOVpEX3VwSGl5VXc5LVJUSzlWUThWMVVTbHdfMGYtYmVib3FXNndCZkpIdms2bjRBOF9xVVdOSW1Hd0NxLU5wTThOaVU1MTZ5M3pOZEJpQ3dyRlRPYjNIcjBhZG0zZmR3eDVTeHRtMkFqd1ZoN0VMMmdJTnd4X0hpVVFwbEo4?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUndTUWs2S1BiM3dTOUhPclo5bWktUzVNczJxRV93NWNva2xkTUZHRXgtb1pJM3JqQTFUc0FYTnFxMTBXV2N4dUNMcWFDOGRWMGM0WGo2c1JKMVlQRGh6MGpwaXY3NmFkNWlfT3dyNWpWR3YyUzdFZld2LUdhYjJQc190Z1ZjSUlFbzd5TU5LdTFSVktG?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR0c1aFRBQlFORVFuaXpwbkhpRE1jUWVXdGhNU1VXREJadUczOGtSZk9sTGxaekszcFAyeWZRQll1RWhWX3AtTGdCN3hfcV9uaHc3SzlCWlIxX1F0TmtlOXpTVWptYjVyVGF0RE8zdENTR3VqWlB3ckt3c2lJbWhtc0ZCZFQ0dW8wZXlLRHZoOUNEbTZMVWI4WHlKMWFhX1o3WkxiOXdtU1Y?oc=5",
         "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs",
+        "bucket": "variant"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE55RjB3U1pjRUtMSUlGaGhvX0ptWFVkYlg5Rk1Fd3AtYVBEZm5UQmpVQmc1Yi1WRkFqbEVrOVFrQ2FpMVNCTDRDZDNsY1k5VHhBS1FQSjhaM2Y1aVliOC1XSW1HLW8wY1RfZWJFMDE3N3Zmdw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE1TbzJlOHUxSDZGSDkwWmJDR05ITm41QmI4TUJaWnNOQjZvLU1VYTk3ZDQ5NGNRYzJFZmtBNjZnN0R6RW5zYTROMHRuaHZvY2o1T0pNZW92QkpBUkhKSFU0bmg4X0Fsaloya2QtTnc0V1FtUQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiakFVX3lxTE55d2I2bjFTaGdkZWlTYUFmYXdKNXgwM0t2bThOQW9iQ3d1ZVplYkFEYURYd2tVS1ozV0lYZFc3c0luX2c3ckhndEllSHRHemhLWEJ0NjRKOGRNN01zc2x0LW5PblJ1cmFlZlE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcXJiTFJMQmJfSVZubUthWjNZVkd1WVdqLU9Ba21UalhTNGFyNEhjZG92S2ZfY2pIdmhqVmRJYjdDUTNzX1luWExVV3liV3Z0Mk5sVFRyNU9INktQbnN1U2g0Z3l1MENMYXdaRWw2OFNWQkRqdGxqZ0g0aFh1R3VuYjRmUXI2NFBrclFGTTFZMHBPVFg5STA3YzIxemRiWjdCeEMwZjQ1UEctdTRwOTFDSnBmbUxiWnNBcWtfTm1pZ3BkSFU4anc?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVlRZkt4Mnd4SjlwSzIzRGNlSE9sZVEyZmtWeVM4ekV5YUlMZF8yRk84UW9TbkpMcDJaenRwY2hhQ1U1cW9yUXk5T0dGTV93dmFRNGh1UGg0ZXdZcElCUDkxU1VLS0piTm56enBGTzdkRFhMbVVjRjE5MzRJOGkwRl9zS1NmQzBZeTJ3S2hwUnpzWFhXanUxLXdn?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQZFpuTGNfb002OXlmRUVZMWRsc1lsQUtIYXh6Y3lNTllvX3BHcGNab1FnTk52ZXc3dEZDNmphWHBSYmtNSUZNd3h2ZEJLaXJBNU9lWXNVVkdTZllaSFExZm1fOERURnJZamdIOVQyWEczaU51OHZuNFdHZ29hQVd5TXhUYlo0NFcwcFM0ZGxEQU1IeFpuNWtSeGRTdjh3ZDVXQUZlQTNQWW1ITG5rXzEzb2FUMzdER2I1MW9iaHg4dVF1N2NpTFdMTU01RDVuMW5VQ0RILXdxSGxaV0VhbnB6aEJpeVIzYnVjNDdScHJqWVdNQ0Y0?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNQVVFbnV1TjFYcGsyM3hGN2o3Z2htMERMS1Q4T1BfeWxhQ1lXT0tQT2FWTTYtUUh4S3d5ZGk1Q0hWanJuNGRLc3pTeTRHWEtWRW1hUFBKMGc5enpiYjVRczJNVGdxdFR2dHZxWUZVYms1TW5RVWVZUjNZd0NSc0Rxa1E0YWQ3SS1wN2ZKY0lqRzN5Zw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipgNBVV95cUxPZ2JJQ25zZlFnOXBERENiYmJiT24xMDg2dmtMUnpuR2dLWmg2bzYxTTBTWUxLTmtITlNySTFoeWRtVTlxLVZfYTVGNElSNGtMNUNwNzVUbHE2OFNFWnczS01NWTQwZHFzVVJCZ1ZlNkEtRGZ5YUpsaTBmSFZXcGg2bkU2QVhGdTZFSkZXM0FzYzZPemg2cXZ3YVBVNFBfdlFiZFUzQXFBYlZiTnRaZDFVeFAxMFE3dV9sanpuR1dZcHJtTm5XekZPTUhmZGZiZ081dHU0cEdNMXh5aXlSdmVfZ1VMSkFEMmR2Zl9YWEhCWUlLSEpXaTVkUHoySnlaaU1va2lSYTJEYUFJeG1WVjRNRUg1WThyOGpKX1lvUDFESFN1WEhUOTRWb1JncG5ObFRGdGNfbUYwRE9RN1BfZUtOVU5NSlROY2FXVy0wU3ZIQjAtMkdCeTRQT2xBdjNtSDVheTdEdHJrYkpqWVc0QzVadEZWdnZuazhodFR5Z0VFSjUwNDNTN0VEdUo2d2xJQ1VhSHF2MUI0czBqZFphRkNwRW1HNTlYZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQLUtZbGZRcm5rTjVMOG93MHFQVzNiek5PbDNsQmZHYk9IZExxYmJRSnY2UlhCWUc2Z3dKTXl6c2RBR3RWTHRQYkJ0TnR4ZXNvVWNuYzZHdlpjRDlaVDdabWluYnZ4eERVUmx5bDlHMnVzODNsR0V6Y25FdXpGQV9rUldMT05wRjlsTDhoQmJLdUhFUdIBlwFBVV95cUxQZjU0akhzR2x6RUNOQ1BZSFUtWE9vMWJoU0xUanVqNS1ZeGNSYjZKQjItMmZodUV5b1B1NTE4YzdpRExGWWpIRGJId1pMSURGOHp0VU5HeE5ZeWNULVR1SHJOMm5VRFoxMmhaR3JSZ2RpMlE1TkZhSkpIQzdyQzBEMkpaM2FaNldsR1VhTF9XOHViWWZBU19R?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMGN6ajhVZ0NKTk1iMzYtNU5waUtFRU43RlEwQzF3akFIT2xJelFLcFprY1dtekpHUmlxRUo0TkRMT29ETGJmZmg3Y0RiZndQbzI2djlLbkI2cURxb2RYQnNQT0w0NXY3bUVWNzZrc3JOanFvX05vdWttMy01Q2FZamlCQXVEVzZDa25POGRnS1o4aHp6eXo0TXZHLU16N1JrUkFudmdnUTlOZw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYmNrQ0xmTWVMenAxNEg2S2lSQnVmVlZTWkloRmJocUtLSm9tY1hmRWcxODlNdkw0ekxkLU1ZRDlCQWxIcEJNNEtFNjZLTERXQVk1RlVUS0lRX2dBOXg2STc5X2dKOU44a2diR3NKM1IxTlFQRkpldk1hN2ZUdi1KcUhBV2UwY1dyOXhVOFVhRi03cTVzblZsSFZiZFBHcmlWQ0I0U29wc2xiSDhYVG4tczBsZEY?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVHNHb2stcWdZQzQ0N0tCRlg5UFNLVFNHdGhnY2o5akxLX2JMMWJxWVNGUU4xQV9pRGppYmp1eU5xR3BIUmJEcy15Si1ieE1ZOWkwSDdUN0Q3cWNJVU1JWUdfYk9zVEZ1YWRQTExJVnBrUEUybGltX1lpZEZ5aU9FRHVEZG9KUkhEaU80?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNR0xOOWg1MU03QTM5b0UtWE1BcjVldEJXUGFKVUNTSXA4dEdsY0tMYWtLRkJLWUdDR3MzaG85WjIxV1haNmhZY1ExcDB4M0hnSC1xNmNDSzdXZ0JjNzh0VGpHenlPem1SQlptQmhJNmNmczJPMmNrMk84YTBDZ3JadmJLZTdKU1B2blBEY28zb1NuVC03MUJyOGdfQW5CbEozczlQUVNNUGtkQUhYUkdqVHYyWGdkYURtaVljYjNGRHZlcUE?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOHZ5WkRpdklodUFpbkxPa2w0Q1g1MUZVNHJfQWRZV3I4Q180cWUwT29mMXlNLU1qUl9LUFRjTjg5MUtFel9qd1lDcWpFbHdiUzNSQlZYTm9FWjBmaEczZ1k0eVNFV3c1QXp0MUhHQ0NXSkZQa3hYdTRpQWVWYW1hRTRzQzhfd1RnT09xVmc2Mkg3YzlVdmNvYnN30gGfAUFVX3lxTE4yajYyVXRUZDFObHV0UGJOZHBZYUdiR0RKZGpnbEpwSE9MTDNhVFVZMHduZWVpMGxiV3F1WHBScTlEQ2RUMUdTZ3ZSZ3h3MVJvek8zTUIwRHkzczRFMUlZWWV0MmVUSm1sX09qNkFIamxKdngtV09tdDE2ZENMTFEtNlhqbGhYcmtqQjI1MW5wdUhqTGpfd1drS0JIeU83SQ?oc=5",
+        "key": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRU83UGZPeWFKTk91S2xlUU5xeVhTVDcyVVZZaW5jem5sZXQ5WGFyV3NkNUN6SGhTV3hMV0JXdWFpN3R2RndfaWx0OFhRRVFBQ0Y2UFlhdHp4TlREeURodjJkX1RUQjNBQnFxS3EwSlNELUpXc3Z0bnpPdWtLUTkzdDdXdjJ4X0lKWlY2T2Y4Y0tUczh6MjEwdVY1RQ?oc=5",
+        "key": "https://www.theverge.com/gadgets/998207/xbox-controller-chromebook-usbc-charger-deal-sale",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZzF1U1p0TVN5LWRKZlJGc29FSlJsNERlZWdtVmJLMUZsVktQc2I5TVRjdk14aTBJYzZRaUpGWlR1d0hBTlZIclhSSVJhRUNENERxRjFEQ3YwbjdXZFl4Y1Q0bkJpdVo2QUlQdHFmUHRNc0puWEVQQURTSUQ0SUVkUm9GdlplZmhPaFdaVHdXNVhhRTBXRGdoZA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYWJ6LW0wekhLOHdheTMtbUxLUU52a3h1cXY0UG9vY3YtUlU5LXFTbHY3ckI3dGlZMHdRRWEtNjBUSlZhYjhhVkRwUzZvS2FaV20zVFcwYktiZlZ3UklZRzZKMTJaOTlwSXE3NWpobmt1MU1vdHkxc1RCNkJCUXFxYndSRnd3UQ?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOelgxcDBsZGVNSmRsOXZMbENUZWthNFNvSnhHanpFWVJ3LVNsVjlodERLaHBreGp5dldlTGlFb0FYZWhrdk51eExCUlFXWE0yX2w1bGNIOFQ3WXJzMWdpcGNpOS1DQ29LX0xBaDRJMTJnSE1UOVFwR19LTGdMOTRkM1JxTEVHOVluRzlBY2phMlp4akF0VTVWOWZPc0djZUFYcGtrQmNHUkNDTnYwaGVJR080TVNQZlBaakJUTjhNRFlSejJlMHdKa0I0VHZJckhJREd5a0g1bTVBOGdpR2FZLVlrRFExU1AtblM3TVRYWXRIVjl5c0M2bktB?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRXlES1VKRk5RS01HdFpoTFRBR2VjcVVPZlNKTGE5OWFMdTJMNGYwWUh0cmJfUUxHcWRpQU5IcS1iZlhUdkltWWhkd0RHVGk2bmNvQzl5U0g3Yk1WQXVWM0ZWQ3RPbHFhRllfVVdmRnZ4ellmRGVpVk40VHhuWm1waFBwYl90V2R5Yk5MRC10NGhzVkx0djBMTmVheW43djB1U1JUaVdqU2tFUERmQmZwdm9QODBvOVU5Yzg3UFVBT2l5cldlZGdBMjQ4VmsteGs?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWTlVZTVyUU5EWm1NNjhId29yaHF2bGRRN2N2VElBVmd0Y1B1RXlxazJqYnV0WXpVVk1yTWZFMUJVUXoyM1o5RnR0SWpMT24zSzVyLVh5ZWhlMWVwTnZZdmVrQlF2NENPQXN2YVRTQzlUVXVYZEk5UzhtOEFtVEJRd3FVYUVMMFdYbVFVbnFsYlhYdHpGcTh0Qk45TkhHbG9yU2lsQUxvS3g1TUJYS0c1TXZwN29DQzVNOXdv0gHPAUFVX3lxTFBoal84TkFLY09YcjIzLTlHaUp0c0RLX3dvVGMycVFycUtXalZLbDRkZ0FJVjFwMU5rX3dCckd3WDFjZy1rU1lqc0xFeUtKQzJ1TkdwdWtDeVpGRVNDRkpLdXpnZ2JhbEdWWVJBakI0THdHM0pKZ3dmY21JLUlZSF9QMGNPWFAtbGplLU5LT1RWWVVWZ2duVFZIVEpFZ0U3Y1NOdUk0aUY4WUJLRGswV0VQTzJYNGdlX29XVG9wcU52VGdvTXRBUXBzdk5lQm1IQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdlI0TVpXSjdHMTh3NWg4emRvM2drMlFEM0dUX21JV3VTT285OElPUFkyT1ZXSGpCcFZ3MzVfUkp6ZFZ4cGpoTGRlTVpLVGJBdXhSRHRZb2VPUHI0dmwycFJhLTVOUnJHWV9FLUdpM2VBazRUeFhXY3RXN1pZcHI4azA0TUUtUm9oRFNxYzhaR01ZOTEzLU9rRmFzZXJCVXU2UmNuei1Ca0YxWFh1VGw2ZnRhRFllYjQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBBNVlpeEZnOGJmbnUzSllBQ3lrLXczS1JPN3BMejBxVjZ5MTYwODEyblR5bmMwbnFsS3QxeFFkTFhnX0ZnblZWOG9wbjV0VHd2VzlfSVZ3T245aHVQNEprT2gwaFdJSzJ5XzR3dW5sVXdkcTVZNWlqODBB?oc=5",
+        "key": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUnpmWW4wRlF2N2RsNmw3WmVWM3lvSnBkdkRjbDJEVlRzc1d5VEdoeDFmZGJMVXhKVXpib0lnNy1fR3FyQTFKaGwwemwzXzFhQXFjNjE3SWVQRHIzVm1vQ1Nka0pkOUxXeDlYTjdEMmxsZjFuZkJ1YklEdWh1dG5ja3MzRU5BcEVOUlBvNzdtMGJOb1hoVWJ1TEU0Y0l1aWhUUlQ4VTk0MjV3cC1jS245S3R0eGxaNE40cHZQbmtBV1QtT1dCYnV4TmdLNDMzWTVsTndFYQ?oc=5",
+        "key": "https://www.theverge.com/tech/998191/apple-siri-ai-iphone-16-class-action-lawsuit-settlement",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWUFXTF9qRTVlMzNEV05QaTd6VDJtY0VwazR1UXlLN3VRQlVfdnVISFF4dTFPblh3MzhHSmFLYmVKNVJMTGcwMWFaOW9jX3dFVDdMNnBVSGo5dWZvVEE4MXI2MW9KcElsd0hyMEc2eGF4eU1WM1hlMWQ1VEpmZDdkTGZ3anc3VzcyZS15VnZKaEpKeXh1R0cwWUJYa1pFNnMxR2E2bG4tTFpHMXFxVVlzQVhFMGRDQUk1aVF2cEo2aVR3RVdyV3Y5NV8zcGd5MkFJdnhIcU5ycw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMHRiblFIOEk1LTlUV0FRSHdDMndOQU83NlZYZ3k4ZFhXcXNFNlNBRkJfVjV1YVNQWW04Yk9DcUN1QnVVSWFjd1FFbXlmN2RqazRndDJvaVdGcnZxS3FFNHhCcUwtc1lBbHVBUnBnQmZqVlRmLXgtcHdGdWM1ck1ZWWhrYnl3R2dwOHlZYkh4OWNyZTZNTUE?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOEtVd0gtRUNiQ1dtank3eDRKNjlia3U1cjdIdENRXzFSMkh0ODdka05PeWdfNlFFM2xoVDdQQnpxME90cUdMQ0ZoX0piWTRNdW9qYTF6UFg0bFBhWklXdW8xbmRyeGJVckw3a1RxVG5Rc1NjdVdaelRSZ1dvYWs5YmU0UUtMd2tSajJaNnd6RHE0S0NPNXpieFRfQjNnOFU?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MaHBackRrai1JVGFuM0NlSjNGTXJaaFBtbGtsTktwdDhWRkdTVkVwTjdPOTFRQ0JkT2xvZXdMZmNqM3A2UjFiNmxEU3Nqc2lmSGJVNnpLM3V3QUxJZC03TnFZa1p2MjNGOFBtRjhzVGYwelE?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUnRiMVNWNGhJLXJ4cEdSNVdZU1RueG1zME9XN1BleU5yeUNKUmplQUFQSEdPQ09pUzJTOVpEX3VwSGl5VXc5LVJUSzlWUThWMVVTbHdfMGYtYmVib3FXNndCZkpIdms2bjRBOF9xVVdOSW1Hd0NxLU5wTThOaVU1MTZ5M3pOZEJpQ3dyRlRPYjNIcjBhZG0zZmR3eDVTeHRtMkFqd1ZoN0VMMmdJTnd4X0hpVVFwbEo4?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUndTUWs2S1BiM3dTOUhPclo5bWktUzVNczJxRV93NWNva2xkTUZHRXgtb1pJM3JqQTFUc0FYTnFxMTBXV2N4dUNMcWFDOGRWMGM0WGo2c1JKMVlQRGh6MGpwaXY3NmFkNWlfT3dyNWpWR3YyUzdFZld2LUdhYjJQc190Z1ZjSUlFbzd5TU5LdTFSVktG?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR0c1aFRBQlFORVFuaXpwbkhpRE1jUWVXdGhNU1VXREJadUczOGtSZk9sTGxaekszcFAyeWZRQll1RWhWX3AtTGdCN3hfcV9uaHc3SzlCWlIxX1F0TmtlOXpTVWptYjVyVGF0RE8zdENTR3VqWlB3ckt3c2lJbWhtc0ZCZFQ0dW8wZXlLRHZoOUNEbTZMVWI4WHlKMWFhX1o3WkxiOXdtU1Y?oc=5",
         "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs",
+        "bucket": "variant"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE55RjB3U1pjRUtMSUlGaGhvX0ptWFVkYlg5Rk1Fd3AtYVBEZm5UQmpVQmc1Yi1WRkFqbEVrOVFrQ2FpMVNCTDRDZDNsY1k5VHhBS1FQSjhaM2Y1aVliOC1XSW1HLW8wY1RfZWJFMDE3N3Zmdw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE1TbzJlOHUxSDZGSDkwWmJDR05ITm41QmI4TUJaWnNOQjZvLU1VYTk3ZDQ5NGNRYzJFZmtBNjZnN0R6RW5zYTROMHRuaHZvY2o1T0pNZW92QkpBUkhKSFU0bmg4X0Fsaloya2QtTnc0V1FtUQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiakFVX3lxTE55d2I2bjFTaGdkZWlTYUFmYXdKNXgwM0t2bThOQW9iQ3d1ZVplYkFEYURYd2tVS1ozV0lYZFc3c0luX2c3ckhndEllSHRHemhLWEJ0NjRKOGRNN01zc2x0LW5PblJ1cmFlZlE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcXJiTFJMQmJfSVZubUthWjNZVkd1WVdqLU9Ba21UalhTNGFyNEhjZG92S2ZfY2pIdmhqVmRJYjdDUTNzX1luWExVV3liV3Z0Mk5sVFRyNU9INktQbnN1U2g0Z3l1MENMYXdaRWw2OFNWQkRqdGxqZ0g0aFh1R3VuYjRmUXI2NFBrclFGTTFZMHBPVFg5STA3YzIxemRiWjdCeEMwZjQ1UEctdTRwOTFDSnBmbUxiWnNBcWtfTm1pZ3BkSFU4anc?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVlRZkt4Mnd4SjlwSzIzRGNlSE9sZVEyZmtWeVM4ekV5YUlMZF8yRk84UW9TbkpMcDJaenRwY2hhQ1U1cW9yUXk5T0dGTV93dmFRNGh1UGg0ZXdZcElCUDkxU1VLS0piTm56enBGTzdkRFhMbVVjRjE5MzRJOGkwRl9zS1NmQzBZeTJ3S2hwUnpzWFhXanUxLXdn?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQZFpuTGNfb002OXlmRUVZMWRsc1lsQUtIYXh6Y3lNTllvX3BHcGNab1FnTk52ZXc3dEZDNmphWHBSYmtNSUZNd3h2ZEJLaXJBNU9lWXNVVkdTZllaSFExZm1fOERURnJZamdIOVQyWEczaU51OHZuNFdHZ29hQVd5TXhUYlo0NFcwcFM0ZGxEQU1IeFpuNWtSeGRTdjh3ZDVXQUZlQTNQWW1ITG5rXzEzb2FUMzdER2I1MW9iaHg4dVF1N2NpTFdMTU01RDVuMW5VQ0RILXdxSGxaV0VhbnB6aEJpeVIzYnVjNDdScHJqWVdNQ0Y0?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNQVVFbnV1TjFYcGsyM3hGN2o3Z2htMERMS1Q4T1BfeWxhQ1lXT0tQT2FWTTYtUUh4S3d5ZGk1Q0hWanJuNGRLc3pTeTRHWEtWRW1hUFBKMGc5enpiYjVRczJNVGdxdFR2dHZxWUZVYms1TW5RVWVZUjNZd0NSc0Rxa1E0YWQ3SS1wN2ZKY0lqRzN5Zw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipgNBVV95cUxPZ2JJQ25zZlFnOXBERENiYmJiT24xMDg2dmtMUnpuR2dLWmg2bzYxTTBTWUxLTmtITlNySTFoeWRtVTlxLVZfYTVGNElSNGtMNUNwNzVUbHE2OFNFWnczS01NWTQwZHFzVVJCZ1ZlNkEtRGZ5YUpsaTBmSFZXcGg2bkU2QVhGdTZFSkZXM0FzYzZPemg2cXZ3YVBVNFBfdlFiZFUzQXFBYlZiTnRaZDFVeFAxMFE3dV9sanpuR1dZcHJtTm5XekZPTUhmZGZiZ081dHU0cEdNMXh5aXlSdmVfZ1VMSkFEMmR2Zl9YWEhCWUlLSEpXaTVkUHoySnlaaU1va2lSYTJEYUFJeG1WVjRNRUg1WThyOGpKX1lvUDFESFN1WEhUOTRWb1JncG5ObFRGdGNfbUYwRE9RN1BfZUtOVU5NSlROY2FXVy0wU3ZIQjAtMkdCeTRQT2xBdjNtSDVheTdEdHJrYkpqWVc0QzVadEZWdnZuazhodFR5Z0VFSjUwNDNTN0VEdUo2d2xJQ1VhSHF2MUI0czBqZFphRkNwRW1HNTlYZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQLUtZbGZRcm5rTjVMOG93MHFQVzNiek5PbDNsQmZHYk9IZExxYmJRSnY2UlhCWUc2Z3dKTXl6c2RBR3RWTHRQYkJ0TnR4ZXNvVWNuYzZHdlpjRDlaVDdabWluYnZ4eERVUmx5bDlHMnVzODNsR0V6Y25FdXpGQV9rUldMT05wRjlsTDhoQmJLdUhFUdIBlwFBVV95cUxQZjU0akhzR2x6RUNOQ1BZSFUtWE9vMWJoU0xUanVqNS1ZeGNSYjZKQjItMmZodUV5b1B1NTE4YzdpRExGWWpIRGJId1pMSURGOHp0VU5HeE5ZeWNULVR1SHJOMm5VRFoxMmhaR3JSZ2RpMlE1TkZhSkpIQzdyQzBEMkpaM2FaNldsR1VhTF9XOHViWWZBU19R?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMGN6ajhVZ0NKTk1iMzYtNU5waUtFRU43RlEwQzF3akFIT2xJelFLcFprY1dtekpHUmlxRUo0TkRMT29ETGJmZmg3Y0RiZndQbzI2djlLbkI2cURxb2RYQnNQT0w0NXY3bUVWNzZrc3JOanFvX05vdWttMy01Q2FZamlCQXVEVzZDa25POGRnS1o4aHp6eXo0TXZHLU16N1JrUkFudmdnUTlOZw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYmNrQ0xmTWVMenAxNEg2S2lSQnVmVlZTWkloRmJocUtLSm9tY1hmRWcxODlNdkw0ekxkLU1ZRDlCQWxIcEJNNEtFNjZLTERXQVk1RlVUS0lRX2dBOXg2STc5X2dKOU44a2diR3NKM1IxTlFQRkpldk1hN2ZUdi1KcUhBV2UwY1dyOXhVOFVhRi03cTVzblZsSFZiZFBHcmlWQ0I0U29wc2xiSDhYVG4tczBsZEY?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVHNHb2stcWdZQzQ0N0tCRlg5UFNLVFNHdGhnY2o5akxLX2JMMWJxWVNGUU4xQV9pRGppYmp1eU5xR3BIUmJEcy15Si1ieE1ZOWkwSDdUN0Q3cWNJVU1JWUdfYk9zVEZ1YWRQTExJVnBrUEUybGltX1lpZEZ5aU9FRHVEZG9KUkhEaU80?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNR0xOOWg1MU03QTM5b0UtWE1BcjVldEJXUGFKVUNTSXA4dEdsY0tMYWtLRkJLWUdDR3MzaG85WjIxV1haNmhZY1ExcDB4M0hnSC1xNmNDSzdXZ0JjNzh0VGpHenlPem1SQlptQmhJNmNmczJPMmNrMk84YTBDZ3JadmJLZTdKU1B2blBEY28zb1NuVC03MUJyOGdfQW5CbEozczlQUVNNUGtkQUhYUkdqVHYyWGdkYURtaVljYjNGRHZlcUE?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOHZ5WkRpdklodUFpbkxPa2w0Q1g1MUZVNHJfQWRZV3I4Q180cWUwT29mMXlNLU1qUl9LUFRjTjg5MUtFel9qd1lDcWpFbHdiUzNSQlZYTm9FWjBmaEczZ1k0eVNFV3c1QXp0MUhHQ0NXSkZQa3hYdTRpQWVWYW1hRTRzQzhfd1RnT09xVmc2Mkg3YzlVdmNvYnN30gGfAUFVX3lxTE4yajYyVXRUZDFObHV0UGJOZHBZYUdiR0RKZGpnbEpwSE9MTDNhVFVZMHduZWVpMGxiV3F1WHBScTlEQ2RUMUdTZ3ZSZ3h3MVJvek8zTUIwRHkzczRFMUlZWWV0MmVUSm1sX09qNkFIamxKdngtV09tdDE2ZENMTFEtNlhqbGhYcmtqQjI1MW5wdUhqTGpfd1drS0JIeU83SQ?oc=5",
+        "key": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRU83UGZPeWFKTk91S2xlUU5xeVhTVDcyVVZZaW5jem5sZXQ5WGFyV3NkNUN6SGhTV3hMV0JXdWFpN3R2RndfaWx0OFhRRVFBQ0Y2UFlhdHp4TlREeURodjJkX1RUQjNBQnFxS3EwSlNELUpXc3Z0bnpPdWtLUTkzdDdXdjJ4X0lKWlY2T2Y4Y0tUczh6MjEwdVY1RQ?oc=5",
+        "key": "https://www.theverge.com/gadgets/998207/xbox-controller-chromebook-usbc-charger-deal-sale",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZzF1U1p0TVN5LWRKZlJGc29FSlJsNERlZWdtVmJLMUZsVktQc2I5TVRjdk14aTBJYzZRaUpGWlR1d0hBTlZIclhSSVJhRUNENERxRjFEQ3YwbjdXZFl4Y1Q0bkJpdVo2QUlQdHFmUHRNc0puWEVQQURTSUQ0SUVkUm9GdlplZmhPaFdaVHdXNVhhRTBXRGdoZA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYWJ6LW0wekhLOHdheTMtbUxLUU52a3h1cXY0UG9vY3YtUlU5LXFTbHY3ckI3dGlZMHdRRWEtNjBUSlZhYjhhVkRwUzZvS2FaV20zVFcwYktiZlZ3UklZRzZKMTJaOTlwSXE3NWpobmt1MU1vdHkxc1RCNkJCUXFxYndSRnd3UQ?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOelgxcDBsZGVNSmRsOXZMbENUZWthNFNvSnhHanpFWVJ3LVNsVjlodERLaHBreGp5dldlTGlFb0FYZWhrdk51eExCUlFXWE0yX2w1bGNIOFQ3WXJzMWdpcGNpOS1DQ29LX0xBaDRJMTJnSE1UOVFwR19LTGdMOTRkM1JxTEVHOVluRzlBY2phMlp4akF0VTVWOWZPc0djZUFYcGtrQmNHUkNDTnYwaGVJR080TVNQZlBaakJUTjhNRFlSejJlMHdKa0I0VHZJckhJREd5a0g1bTVBOGdpR2FZLVlrRFExU1AtblM3TVRYWXRIVjl5c0M2bktB?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQRXlES1VKRk5RS01HdFpoTFRBR2VjcVVPZlNKTGE5OWFMdTJMNGYwWUh0cmJfUUxHcWRpQU5IcS1iZlhUdkltWWhkd0RHVGk2bmNvQzl5U0g3Yk1WQXVWM0ZWQ3RPbHFhRllfVVdmRnZ4ellmRGVpVk40VHhuWm1waFBwYl90V2R5Yk5MRC10NGhzVkx0djBMTmVheW43djB1U1JUaVdqU2tFUERmQmZwdm9QODBvOVU5Yzg3UFVBT2l5cldlZGdBMjQ4VmsteGs?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWTlVZTVyUU5EWm1NNjhId29yaHF2bGRRN2N2VElBVmd0Y1B1RXlxazJqYnV0WXpVVk1yTWZFMUJVUXoyM1o5RnR0SWpMT24zSzVyLVh5ZWhlMWVwTnZZdmVrQlF2NENPQXN2YVRTQzlUVXVYZEk5UzhtOEFtVEJRd3FVYUVMMFdYbVFVbnFsYlhYdHpGcTh0Qk45TkhHbG9yU2lsQUxvS3g1TUJYS0c1TXZwN29DQzVNOXdv0gHPAUFVX3lxTFBoal84TkFLY09YcjIzLTlHaUp0c0RLX3dvVGMycVFycUtXalZLbDRkZ0FJVjFwMU5rX3dCckd3WDFjZy1rU1lqc0xFeUtKQzJ1TkdwdWtDeVpGRVNDRkpLdXpnZ2JhbEdWWVJBakI0THdHM0pKZ3dmY21JLUlZSF9QMGNPWFAtbGplLU5LT1RWWVVWZ2duVFZIVEpFZ0U3Y1NOdUk0aUY4WUJLRGswV0VQTzJYNGdlX29XVG9wcU52VGdvTXRBUXBzdk5lQm1IQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdlI0TVpXSjdHMTh3NWg4emRvM2drMlFEM0dUX21JV3VTT285OElPUFkyT1ZXSGpCcFZ3MzVfUkp6ZFZ4cGpoTGRlTVpLVGJBdXhSRHRZb2VPUHI0dmwycFJhLTVOUnJHWV9FLUdpM2VBazRUeFhXY3RXN1pZcHI4azA0TUUtUm9oRFNxYzhaR01ZOTEzLU9rRmFzZXJCVXU2UmNuei1Ca0YxWFh1VGw2ZnRhRFllYjQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBBNVlpeEZnOGJmbnUzSllBQ3lrLXczS1JPN3BMejBxVjZ5MTYwODEyblR5bmMwbnFsS3QxeFFkTFhnX0ZnblZWOG9wbjV0VHd2VzlfSVZ3T245aHVQNEprT2gwaFdJSzJ5XzR3dW5sVXdkcTVZNWlqODBB?oc=5",
+        "key": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUnpmWW4wRlF2N2RsNmw3WmVWM3lvSnBkdkRjbDJEVlRzc1d5VEdoeDFmZGJMVXhKVXpib0lnNy1fR3FyQTFKaGwwemwzXzFhQXFjNjE3SWVQRHIzVm1vQ1Nka0pkOUxXeDlYTjdEMmxsZjFuZkJ1YklEdWh1dG5ja3MzRU5BcEVOUlBvNzdtMGJOb1hoVWJ1TEU0Y0l1aWhUUlQ4VTk0MjV3cC1jS245S3R0eGxaNE40cHZQbmtBV1QtT1dCYnV4TmdLNDMzWTVsTndFYQ?oc=5",
+        "key": "https://www.theverge.com/tech/998191/apple-siri-ai-iphone-16-class-action-lawsuit-settlement",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWUFXTF9qRTVlMzNEV05QaTd6VDJtY0VwazR1UXlLN3VRQlVfdnVISFF4dTFPblh3MzhHSmFLYmVKNVJMTGcwMWFaOW9jX3dFVDdMNnBVSGo5dWZvVEE4MXI2MW9KcElsd0hyMEc2eGF4eU1WM1hlMWQ1VEpmZDdkTGZ3anc3VzcyZS15VnZKaEpKeXh1R0cwWUJYa1pFNnMxR2E2bG4tTFpHMXFxVVlzQVhFMGRDQUk1aVF2cEo2aVR3RVdyV3Y5NV8zcGd5MkFJdnhIcU5ycw?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMHRiblFIOEk1LTlUV0FRSHdDMndOQU83NlZYZ3k4ZFhXcXNFNlNBRkJfVjV1YVNQWW04Yk9DcUN1QnVVSWFjd1FFbXlmN2RqazRndDJvaVdGcnZxS3FFNHhCcUwtc1lBbHVBUnBnQmZqVlRmLXgtcHdGdWM1ck1ZWWhrYnl3R2dwOHlZYkh4OWNyZTZNTUE?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOEtVd0gtRUNiQ1dtank3eDRKNjlia3U1cjdIdENRXzFSMkh0ODdka05PeWdfNlFFM2xoVDdQQnpxME90cUdMQ0ZoX0piWTRNdW9qYTF6UFg0bFBhWklXdW8xbmRyeGJVckw3a1RxVG5Rc1NjdVdaelRSZ1dvYWs5YmU0UUtMd2tSajJaNnd6RHE0S0NPNXpieFRfQjNnOFU?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MaHBackRrai1JVGFuM0NlSjNGTXJaaFBtbGtsTktwdDhWRkdTVkVwTjdPOTFRQ0JkT2xvZXdMZmNqM3A2UjFiNmxEU3Nqc2lmSGJVNnpLM3V3QUxJZC03TnFZa1p2MjNGOFBtRjhzVGYwelE?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUnRiMVNWNGhJLXJ4cEdSNVdZU1RueG1zME9XN1BleU5yeUNKUmplQUFQSEdPQ09pUzJTOVpEX3VwSGl5VXc5LVJUSzlWUThWMVVTbHdfMGYtYmVib3FXNndCZkpIdms2bjRBOF9xVVdOSW1Hd0NxLU5wTThOaVU1MTZ5M3pOZEJpQ3dyRlRPYjNIcjBhZG0zZmR3eDVTeHRtMkFqd1ZoN0VMMmdJTnd4X0hpVVFwbEo4?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUndTUWs2S1BiM3dTOUhPclo5bWktUzVNczJxRV93NWNva2xkTUZHRXgtb1pJM3JqQTFUc0FYTnFxMTBXV2N4dUNMcWFDOGRWMGM0WGo2c1JKMVlQRGh6MGpwaXY3NmFkNWlfT3dyNWpWR3YyUzdFZld2LUdhYjJQc190Z1ZjSUlFbzd5TU5LdTFSVktG?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR0c1aFRBQlFORVFuaXpwbkhpRE1jUWVXdGhNU1VXREJadUczOGtSZk9sTGxaekszcFAyeWZRQll1RWhWX3AtTGdCN3hfcV9uaHc3SzlCWlIxX1F0TmtlOXpTVWptYjVyVGF0RE8zdENTR3VqWlB3ckt3c2lJbWhtc0ZCZFQ0dW8wZXlLRHZoOUNEbTZMVWI4WHlKMWFhX1o3WkxiOXdtU1Y?oc=5",
         "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs",
+        "bucket": "variant"
       }
     ]
   },
@@ -337,14 +337,14 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 80,
-        "evidencePassRate": 20
+        "claimConfidence": 75,
+        "evidencePassRate": 21
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -352,14 +352,14 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 80,
-        "evidencePassRate": 20
+        "claimConfidence": 75,
+        "evidencePassRate": 21
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -367,20 +367,20 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 80,
-        "evidencePassRate": 20
+        "claimConfidence": 75,
+        "evidencePassRate": 21
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-20T21:02:32.837Z"
+    "previousUpdatedAt": "2026-09-21T05:24:16.627Z"
   }
 }
