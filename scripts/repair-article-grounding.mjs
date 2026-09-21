@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { generateWithTrendForgeRepair } from './trendforge-writer-engine.mjs';
 import { loadCanonicalRepairEvidence } from './repair-evidence-guard.mjs';
+import { assessArticleDepth } from './article-depth-guard.mjs';
 
 const articleDir='content/articles';
 const briefPath='data/article-brief.json';
@@ -9,6 +10,7 @@ const aiBudgetPath='data/ai-run-budget.json';
 const repairProviderBudgetPath='data/ai-repair-run-budget.json';
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
 const MAX_REPAIR_RECOVERY_PASSES=1;
+const MAX_DEPTH_RECOVERY_PASSES=2;
 const REPAIR_RECOVERY_WAIT_MS=15000;
 const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
 const titleFrom=r=>(r.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
@@ -20,6 +22,7 @@ const beginRepairBudget=()=>{let original=null;try{const raw=JSON.parse(fs.readF
 const resetRepairProviderBudget=()=>{fs.mkdirSync('data',{recursive:true});fs.writeFileSync(repairProviderBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-recovery-pass'},null,2)+'\n');};
 const restoreWriterBudget=original=>{if(original){fs.writeFileSync(aiBudgetPath,JSON.stringify(original,null,2)+'\n');console.log(`Grounding repair v11: restored writer AI budget (${original.attempts} attempt(s)).`);}else{fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString()},null,2)+'\n');}};
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const loadBlueprint=briefTitle=>{try{const root=JSON.parse(fs.readFileSync('data/pre-writer-pipeline.json','utf8'));const row=(root?.candidates||[]).find(x=>String(x?.title||'').trim()===String(briefTitle||'').trim());return row?.evidence?.blueprint||null;}catch{return null;}};
 
 async function main(){
  const articlePath=latestArticle(),raw=fs.readFileSync(articlePath,'utf8');
@@ -33,6 +36,9 @@ async function main(){
  const evidence=canonical.claims.map((x,i)=>{const source=canonicalByUrl.get(x.bestUrl);return `FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.bestPassage||'').slice(0,3000)}\nSOURCE: ${x.bestSource||source?.title||''}\nURL: ${x.bestUrl||''}`}).join('\n\n');
  if(evidence.length<200)throw new Error('Current claim evidence is incomplete; grounding repair refused.');
  const oldTitle=titleFrom(raw),oldDescription=descriptionFrom(raw);
+ const blueprint=loadBlueprint(brief?.brief?.title||oldTitle);
+ const originalDepth=assessArticleDepth({content:body,blueprint});
+ const minimumWords=Number(originalDepth?.rules?.minWords||blueprint?.targetWords?.min||300);
  const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'').trim();
  const basePrompt=[
   'You are TrendForge Atomic Grounding Repair v11.',
@@ -63,33 +69,43 @@ async function main(){
  ].join('\n\n');
  const originalBudget=beginRepairBudget();
  try{
-  let out=null,lastError=null;
-  for(let pass=0;pass<=MAX_REPAIR_RECOVERY_PASSES;pass++){
-   if(pass>0){
-    console.log(`Grounding repair v11: recovery pass ${pass}/${MAX_REPAIR_RECOVERY_PASSES}; waiting ${Math.ceil(REPAIR_RECOVERY_WAIT_MS/1000)}s before re-checking providers.`);
-    await sleep(REPAIR_RECOVERY_WAIT_MS);
-    resetRepairProviderBudget();
+  let out=null,lastError=null,parsed=null,updatedBody=body,applied=0,deleted=0,narrowedOrRewritten=0,finalDepth=originalDepth;
+  for(let depthPass=0;depthPass<=MAX_DEPTH_RECOVERY_PASSES && !out;depthPass++){
+   for(let providerPass=0;providerPass<=MAX_REPAIR_RECOVERY_PASSES && !out;providerPass++){
+    if(providerPass>0 || depthPass>0){
+     console.log(`Grounding repair v11: recovery pass depth=${depthPass}/${MAX_DEPTH_RECOVERY_PASSES}, provider=${providerPass}/${MAX_REPAIR_RECOVERY_PASSES}.`);
+     if(providerPass>0){await sleep(REPAIR_RECOVERY_WAIT_MS);resetRepairProviderBudget();}
+    }
+    let prompt=basePrompt;
+    if(providerPass>0) prompt+=`\n\nRECOVERY PASS: Re-evaluate the same evidence and return the complete repairs array again. Prefer the smallest safe rewrite/narrowing; do not invent or delete merely to make the response shorter.`;
+    if(depthPass>0) prompt+=`\n\nDEPTH-PRESERVATION PASS: The previous repair proposal would leave the article below the mandatory ${minimumWords}-word evidence-mode floor. Preserve enough supported material to keep the repaired article at or above ${minimumWords} words. Prefer faithful rewrites/narrowings over deletion. Do not add unsupported facts.`;
+    try{
+      out=await generateWithTrendForgeRepair({prompt});
+      parsed=parseJson(out.text);
+      if(!Array.isArray(parsed.repairs)) throw new Error('Atomic repair response missing repairs array.');
+      updatedBody=body; applied=0; deleted=0; narrowedOrRewritten=0;
+      for(const r of parsed.repairs.slice(0,12)){
+       if(!r||typeof r.original!=='string'||typeof r.replacement!=='string')continue;
+       const result=replaceSentence(updatedBody,r.original,r.replacement);
+       if(!result.changed)continue;
+       updatedBody=result.body;applied++;
+       if(result.deleted)deleted++; else narrowedOrRewritten++;
+      }
+      if(!applied) throw new Error('Atomic repair produced no matching sentence replacements.');
+      finalDepth=assessArticleDepth({content:updatedBody,blueprint});
+      if(finalDepth.words<minimumWords){
+       lastError=new Error(`Repair proposal would violate article depth floor: ${finalDepth.words} words; minimum ${minimumWords}.`);
+       console.log(`Grounding repair v11: rejected provider proposal before write — ${lastError.message}`);
+       out=null;
+      }
+    }catch(e){lastError=e;out=null;console.log(`Grounding repair v11: provider pass failed — ${e?.message||String(e)}.`);}
    }
-   const prompt=pass===0?basePrompt:`${basePrompt}\n\nRECOVERY PASS: A previous provider pass was unavailable or exhausted. Re-evaluate the same evidence and return the complete repairs array again. Prefer the smallest safe rewrite/narrowing; do not invent or delete merely to make the response shorter.`;
-   try{out=await generateWithTrendForgeRepair({prompt});lastError=null;break;}
-   catch(e){lastError=e;console.log(`Grounding repair v11: provider pass ${pass+1} failed — ${e?.message||String(e)}.`);}
   }
-  if(!out)throw new Error(`Grounding repair provider failed after bounded recovery: ${lastError?.message||String(lastError)}`);
-  const parsed=parseJson(out.text);
-  if(!Array.isArray(parsed.repairs))throw new Error('Atomic repair response missing repairs array.');
-  let updatedBody=body,applied=0,deleted=0,narrowedOrRewritten=0;
-  for(const r of parsed.repairs.slice(0,12)){
-    if(!r||typeof r.original!=='string'||typeof r.replacement!=='string')continue;
-    const result=replaceSentence(updatedBody,r.original,r.replacement);
-    if(!result.changed)continue;
-    updatedBody=result.body;applied++;
-    if(result.deleted)deleted++; else narrowedOrRewritten++;
-  }
-  if(!applied)throw new Error('Atomic repair produced no matching sentence replacements.');
+  if(!out)throw new Error(`Grounding repair provider failed after bounded depth-preserving recovery: ${lastError?.message||String(lastError)}`);
   const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
   const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
   fs.writeFileSync(articlePath,`${frontmatter}\n\n${updatedBody.trim()}\n${sources||''}\n`);
-  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery',repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:'not_applicable'},null,2)+'\n');
+  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery',repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:{before:originalDepth.words,after:finalDepth.words,minimum:minimumWords,depthMode:finalDepth.mode,preservedFloor:true}},null,2)+'\n');
   console.log(`Grounding repair v11: applied ${applied} repair(s) — ${narrowedOrRewritten} rewritten/narrowed, ${deleted} deleted. Strategy: rewrite -> narrow -> delete. Recovery pass enabled; unrelated article content preserved using dedicated repair provider ${out.provider}.`);
  }finally{restoreWriterBudget(originalBudget);}
 }
