@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { buildEditorialEvidenceBrief } from './editorial-evidence-brief.mjs';
 import { deriveEvidenceArticleBlueprint } from './evidence-article-blueprint.mjs';
 import { scoreEvidenceCoverage } from './evidence-coverage.mjs';
+import { buildAuthoritativeEvidencePack, validateAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
 
 const candidate={
   title:'Acme launches Nova AI model with lower inference costs',
@@ -72,6 +73,20 @@ const weak=buildEditorialEvidenceBrief({
 const weakCoverage=scoreEvidenceCoverage({sources:weak.sources,evidenceBrief:weak});
 const weakBlueprint=deriveEvidenceArticleBlueprint({...weakCoverage,evidenceBrief:weak});
 assert.equal(weakBlueprint.mode,'blocked');
+
+const canonical=buildAuthoritativeEvidencePack({
+  candidate:{title:candidate.title,link:'https://acme.example/story',category:'AI'},
+  sources:[{url:'https://acme.example/press/nova-ai',domain:'acme.example',publisherFamily:'acme.example',title:'Acme launches Nova AI',sourceRole:'PRIMARY',verified:true,passages:['Acme launched Nova AI in London.'],body:'Acme launched Nova AI in London.'}],
+  coverage:{},
+  blueprint:{mode:'narrow'},
+  evidenceBrief:brief
+});
+assert.equal(canonical.evidenceBrief.storyFactMap.version,1,'canonical pack must carry fact map');
+assert.equal(canonical.sources[0].sourceRole,'PRIMARY','canonical pack must carry source role');
+assert.equal(validateAuthoritativeEvidencePack(canonical),true,'canonical pack with fact map must validate');
+const brokenCanonical=structuredClone(canonical);
+delete brokenCanonical.evidenceBrief.storyFactMap;
+assert.equal(validateAuthoritativeEvidencePack(brokenCanonical),false,'missing canonical fact map must fail closed');
 
 console.log('Story Fact Map V1 fixtures: PASS');
 console.log(JSON.stringify({
