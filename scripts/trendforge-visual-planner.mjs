@@ -107,10 +107,24 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
   return { version: 2, mode, primarySubject, scene, supportingElements, composition, company: company || null, namedPerson: person || null, category, storyAnchors: anchors, avoid };
 }
 
+const anchorStem = value => {
+  const token = String(value || '').toLowerCase().trim();
+  if (!token) return '';
+  if (token.length > 6 && token.endsWith('ies')) return token.slice(0, -3) + 'y';
+  if (token.length > 6 && token.endsWith('ing')) return token.slice(0, -3);
+  if (token.length > 5 && token.endsWith('ed')) return token.slice(0, -2);
+  if (token.length > 4 && token.endsWith('s')) return token.slice(0, -1);
+  return token;
+};
 function assessVisualRelevance({ title = '', description = '', brief = null } = {}) {
   const anchors = storyAnchors(title, description);
   const haystack = clean([brief?.primarySubject, brief?.scene, ...(brief?.supportingElements || [])].join(' ')).toLowerCase();
-  const matchedAnchors = anchors.filter(anchor => haystack.includes(anchor));
+  const hayTokens = new Set(haystack.replace(/[^a-z0-9\s-]/g, ' ').split(/\s+/).filter(Boolean));
+  const matchedAnchors = anchors.filter(anchor => {
+    if (haystack.includes(anchor)) return true;
+    const stem = anchorStem(anchor);
+    return stem.length >= 4 && [...hayTokens].some(token => anchorStem(token) === stem);
+  });
   const entityAnchors = [brief?.company, brief?.namedPerson].filter(Boolean).map(x => String(x).toLowerCase());
   const entityMatches = entityAnchors.filter(x => haystack.includes(x));
   const passed = anchors.length === 0 ? true : matchedAnchors.length >= Math.min(2, anchors.length);
