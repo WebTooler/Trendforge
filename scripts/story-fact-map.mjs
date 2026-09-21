@@ -48,29 +48,32 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     dedup.push(fact);
   }
   const coreFacts=dedup.filter(x=>x.core);
+  const directSourceIds=new Set((sources||[]).map((s,i)=>({id:s.id||'S'+(i+1),role:s.sourceRole||sourceRole({candidate,source:s})})).filter(x=>x.role==='PRIMARY'||x.role==='DIRECT_REPORTING').map(x=>x.id));
+  for(const fact of dedup){ if(!fact.core && directSourceIds.has(fact.sourceId) && (fact.titleOverlap>=1 || fact.descriptionOverlap>=1)) fact.core=true; }
+  const finalCoreFacts=dedup.filter(x=>x.core);
   const contextFacts=dedup.filter(x=>!x.core);
-  const coreSourceIds=[...new Set(coreFacts.map(x=>x.sourceId))];
-  const coreRoles=[...new Set(coreFacts.map(x=>x.sourceRole))];
-  const coreChars=coreFacts.reduce((n,x)=>n+x.text.length,0);
-  const directCoreFacts=coreFacts.filter(x=>x.sourceRole==='PRIMARY'||x.sourceRole==='DIRECT_REPORTING');
+  const coreSourceIds=[...new Set(finalCoreFacts.map(x=>x.sourceId))];
+  const coreRoles=[...new Set(finalCoreFacts.map(x=>x.sourceRole))];
+  const coreChars=finalCoreFacts.reduce((n,x)=>n+x.text.length,0);
+  const directCoreFacts=finalCoreFacts.filter(x=>x.sourceRole==='PRIMARY'||x.sourceRole==='DIRECT_REPORTING');
   const gaps=[];
-  if(coreFacts.length<4)gaps.push('fewer-than-four-core-facts');
+  if(finalCoreFacts.length<4)gaps.push('fewer-than-four-core-facts');
   if(directCoreFacts.length<3)gaps.push('insufficient-direct-story-facts');
   if(coreChars<700)gaps.push('low-core-fact-character-capacity');
   if(coreSourceIds.length===0)gaps.push('no-core-source');
-  if(coreFacts.length&&coreRoles.every(r=>r==='CONTEXT'))gaps.push('core-facts-are-context-only');
-  const claimCapacity=Math.max(0,Math.min(18,coreFacts.length));
+  if(finalCoreFacts.length&&coreRoles.every(r=>r==='CONTEXT'))gaps.push('core-facts-are-context-only');
+  const claimCapacity=Math.max(0,Math.min(18,finalCoreFacts.length));
   const wordCapacity=Math.floor(coreChars/4.2);
   let level='none';
-  if(coreFacts.length>=10&&coreChars>=3500)level='high';
-  else if(coreFacts.length>=6&&coreChars>=2200)level='medium';
-  else if(coreFacts.length>=4&&coreChars>=1000)level='low';
+  if(finalCoreFacts.length>=10&&coreChars>=3500)level='high';
+  else if(finalCoreFacts.length>=6&&coreChars>=2200)level='medium';
+  else if(finalCoreFacts.length>=4&&coreChars>=1000)level='low';
   return {
     version:1,
     story:{title:clean(candidate.title),description:clean(candidate.description)},
     sourceRoles:[...new Set((sources||[]).map((s,i)=>({id:s.id||'S'+(i+1),role:s.sourceRole||sourceRole({candidate,source:s})})))],
     facts:dedup,
-    coreFacts,
+    coreFacts:finalCoreFacts,
     contextFacts,
     gaps,
     capacity:{level,coreFactCount:coreFacts.length,coreFactChars:coreChars,directCoreFactCount:directCoreFacts.length,coreSourceCount:coreSourceIds.length,maxFactualClaims:claimCapacity,maxSupportedWords:Math.max(0,Math.min(900,wordCapacity))},
