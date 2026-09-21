@@ -74,7 +74,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
   const hardWordMin=Math.max(MIN_WRITER_WORDS,Number(wordGuide.min||WRITER_TARGET_MIN_WORDS));
   const hardWordMax=Math.min(1100,Math.max(hardWordMin,Number(wordGuide.max||WRITER_TARGET_MAX_WORDS)));
   const claimBudget=Number(factMap?.capacity?.maxFactualClaims||blueprint?.evidenceCapacity?.maxFactualClaims||0);
-  const maxFactualClaims=claimBudget>0?Math.max(3,claimBudget):0;
+  const maxFactualClaims=claimBudget>0?claimBudget:0;
   const factGuide=Array.isArray(factMap?.coreFacts)?factMap.coreFacts.slice(0,14).map(f=>`[${f.factId}] ${f.text} (source=${f.sourceId}, role=${f.sourceRole})`).join('\\n'):'';
   const claimBudgetGuide=blueprint&&maxFactualClaims?[
     'EVIDENCE FACT MAP — HARD BOUNDARY:',
