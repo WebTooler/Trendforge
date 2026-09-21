@@ -14,11 +14,11 @@ const sources=[
     title:'Acme launches Nova AI model in London',
     passages:[
       'Acme launched its Nova AI model in London on Tuesday and said inference costs fell by 20 percent.',
-      'The company said the launch will initially target enterprise customers.',
-      'Acme said the model is available to enterprise customers through its initial launch program.',
-      'The company reported that the model was introduced in London on Tuesday.',
-      'Acme said inference costs fell by 20 percent during its initial deployment.',
-      'The company described the enterprise launch as the first phase of the rollout.'
+      'Acme will initially offer Nova to enterprise customers in the United Kingdom.',
+      'The Nova model supports three deployment sizes for the initial enterprise program.',
+      'Acme opened its first Nova customer program during the London launch event.',
+      'Acme reported a 20 percent reduction in inference costs compared with its previous deployment baseline.',
+      'The first rollout phase covers enterprise customers and will precede broader availability.'
     ]
   },
   {
@@ -28,10 +28,10 @@ const sources=[
     passages:[
       'Reuters reported that Acme launched the Nova AI model in London on Tuesday.',
       'The company said inference costs fell by 20 percent.',
-      'Reuters said the launch initially targets enterprise customers.',
-      'The report identified the Nova model as the company\'s latest launch.',
-      'The report said the London event marked the initial rollout.',
-      'The company described the first phase as focused on enterprise customers.'
+      'Reuters said the initial customer program is focused on enterprise deployments in the United Kingdom.',
+      'Reuters identified Nova as Acme\'s newest model announced at the London event.',
+      'The London event marked the start of Acme\'s first Nova customer program.',
+      'Acme said broader availability will follow the initial enterprise phase.'
     ]
   },
   {
