@@ -38,7 +38,7 @@ export const hardRules=[
   'Do not tell readers how to vote, recommend a political choice, rank or score candidates/parties/policies, or predict who will win an election. Report dated polling or external forecasts only as attributed information when relevant.',
   'Every section must add new information, explanation, evidence, or actionable value.',
   'Do not pad articles to hit a word count. Brevity is preferable to repetition.',
-  'Use descriptive headings when they improve readability; never force or reject structure based on H2 count.',
+  'Use descriptive headings when they improve readability; never add headings just to increase length. The evidence blueprint may impose a maximum H2 ceiling to prevent thin-section fragmentation.',
   'Return exactly the requested structured output and nothing else.',
   'A failed provider, quota exhaustion, or missing source is never a reason to lower editorial standards.',
   'If evidence is insufficient, refuse or defer publication rather than filling gaps with plausible text.'
