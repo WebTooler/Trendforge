@@ -193,7 +193,8 @@ for (const file of files) {
   const titleKey = normalize(title);
   if (isCurrentRun && seenTitles.has(titleKey)) errors.push(`${slug}: duplicate title.`); else seenTitles.add(titleKey);
   if (isCurrentRun && words < 150) errors.push(`${slug}: article is too short (${words} words; minimum 150).`);
-    if (isCurrentRun && paragraphs.length < 4) errors.push(`${slug}: needs at least 4 substantive paragraphs.`);
+    const requiredSubstantiveParagraphs = Math.max(3, Number(depth?.rules?.minSubstantiveParagraphs || 0));
+  if (isCurrentRun && paragraphs.length < requiredSubstantiveParagraphs) errors.push(`${slug}: needs at least ${requiredSubstantiveParagraphs} substantive paragraphs for ${depth.mode} evidence.`);
   if (isCurrentRun && (sourceUrls.length < requiredSourceLinks || canonicalSourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://')))) {
     const policy = validatedSingleSource ? 'validated single-source evidence' : evidence.strongEvidence ? 'strong multi-source evidence' : 'current-run evidence';
     errors.push(`${slug}: needs at least ${requiredSourceLinks} HTTPS source link(s) for ${policy}.`);
