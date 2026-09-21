@@ -86,7 +86,8 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
     composition = 'Architectural or documentary framing with one dominant physical structure and clear visual hierarchy.';
   } else if (abstract) {
     mode = 'conceptual-editorial';
-    primarySubject = (abstract === 'slowdown' || abstract === 'slow-down') ? 'the concrete idea of slowing or pausing AI development' : 'the specific policy, governance, market, or industry action described by the story';
+    const anchorContext = anchors.slice(0, 4).join(', ');
+    primarySubject = (abstract === 'slowdown' || abstract === 'slow-down') ? `the concrete idea of slowing or pausing AI development, specifically tied to ${anchorContext}` : `the specific policy, governance, market, or industry action described by the story, specifically tied to ${anchorContext}`;
     scene = 'A sophisticated editorial photo-illustration or carefully staged metaphor that makes the specific central idea immediately understandable without relying on generic AI symbols.';
     supportingElements = ['at most one concrete metaphorical object or environmental cue tied directly to the story'];
     composition = 'One strong metaphor or visual action, restrained editorial treatment, clear hierarchy, no collage of unrelated symbols.';
