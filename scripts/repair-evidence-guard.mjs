@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import { validateAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
 
+const normalizeEvidence=value=>String(value||'').normalize('NFKC').replace(/[\u200B-\u200D\uFEFF]/g,'').replace(/\s+/g,' ').trim();
+
 export function loadCanonicalRepairEvidence({briefTitle, failedClaims, path='data/authoritative-evidence-pack.json'}={}){
   if(!briefTitle) throw new Error('Canonical repair evidence requires the current brief title.');
   if(!fs.existsSync(path)) throw new Error('Authoritative Evidence Pack missing; grounding repair blocked.');
@@ -22,13 +24,28 @@ export function loadCanonicalRepairEvidence({briefTitle, failedClaims, path='dat
     let canonicalMatch='';
     if(/^S\d+-P\d+$/i.test(passageId)){
       const idMatch=passageId.match(/^S(\d+)-P(\d+)$/i);
-      const claimSourceId=String(claim?.sourceId||'').trim().toUpperCase();
       const expectedSourceId=`S${Number(idMatch?.[1]||0)}`;
       const passageIndex=Number(idMatch?.[2]||0)-1;
-      if(claimSourceId&&claimSourceId===expectedSourceId&&Number.isInteger(passageIndex)&&passageIndex>=0) canonicalMatch=canonicalPassages[passageIndex]||'';
+      const claimSourceId=String(claim?.sourceId||'').trim().toUpperCase();
+      // The URL has already resolved to this canonical source. Therefore a valid
+      // passage ID is authoritative even when the verifier omitted sourceId.
+      if(expectedSourceId===String(source.id||'').toUpperCase() &&
+         (!claimSourceId||claimSourceId===expectedSourceId) &&
+         Number.isInteger(passageIndex)&&passageIndex>=0){
+        canonicalMatch=canonicalPassages[passageIndex]||'';
+      }
+    }else if(/^S\d+-BODY$/i.test(passageId)){
+      const idMatch=passageId.match(/^S(\d+)-BODY$/i);
+      const expectedSourceId=`S${Number(idMatch?.[1]||0)}`;
+      const claimSourceId=String(claim?.sourceId||'').trim().toUpperCase();
+      if(expectedSourceId===String(source.id||'').toUpperCase() &&
+         (!claimSourceId||claimSourceId===expectedSourceId)){
+        // The strict verifier can select the canonical publisher article body
+        // when it is more semantically relevant than an extracted passage.
+        canonicalMatch=String(source.body||'').trim();
+      }
     }
     if(!canonicalMatch){
-      const normalizeEvidence=value=>String(value||'').normalize('NFKC').replace(/[\u200B-\u200D\uFEFF]/g,'').replace(/\s+/g,' ').trim();
       canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizeEvidence(passage))||'';
     }
     if(!passage||!canonicalMatch) throw new Error(`Failed claim ${index+1} uses evidence outside the canonical passage set.`);
