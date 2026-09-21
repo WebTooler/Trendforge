@@ -53,6 +53,9 @@ assert.ok(brief.storyFactMap.capacity.directCoreFactCount>=3,'direct story facts
 assert.ok(brief.sources.some(s=>s.sourceRole==='PRIMARY'));
 assert.ok(brief.sources.some(s=>s.sourceRole==='DIRECT_REPORTING'||s.sourceRole==='CORROBORATION'));
 assert.equal(brief.storyFactMap.policy.contextCannotCompensateForCore,true);
+assert.equal(brief.storyFactMap.policy.synthesisMustReuseVerifiedFacts,true);
+assert.ok(brief.storyFactMap.capacity.synthesisCapacity);
+assert.ok(Array.isArray(brief.storyFactMap.capacity.synthesisCapacity.allowedFactIds));
 
 const coverage=scoreEvidenceCoverage({sources:brief.sources,evidenceBrief:brief});
 const blueprint=deriveEvidenceArticleBlueprint({...coverage,evidenceBrief:brief});
