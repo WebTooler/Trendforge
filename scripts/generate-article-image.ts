@@ -112,10 +112,12 @@ for (const file of files) {
   const { buildImagePrompt } = await import('./trendforge-visual-planner.mjs') as unknown as {
     buildImagePrompt: (input: { title: string; description: string; category: string; body: string }) => { brief: any; prompt: string; relevance: any };
   };
-  const { brief, prompt, relevance } = buildImagePrompt({ title, description, category, body: raw });
-  console.log(`Generating FLUX image for ${file}: ${brief.mode}; prompt=${prompt.length} chars`);
-
+  let brief: any;
+  let prompt = '';
+  let relevance: any = null;
   try {
+    ({ brief, prompt, relevance } = buildImagePrompt({ title, description, category, body: raw }));
+    console.log(`Generating FLUX image for ${file}: ${brief.mode}; prompt=${prompt.length} chars`);
     if (!cloudflareAvailable) throw new Error('Cloudflare AI credentials unavailable');
     const url = 'https://api.cloudflare.com/client/v4/accounts/' + account + '/ai/run/' + MODEL;
     const started = Date.now();
