@@ -133,9 +133,6 @@ async function main(){
   const articleContract={version:1,title:trend.title,mode:evidenceMode,wordBudget:pack.blueprint?.targetWords||null,h2Budget:{preferredMin:Number(pack.blueprint?.h2Guidance?.preferredMin||0),preferredMax:Number(pack.blueprint?.maxH2||0)},atomicClaimBudget:Number(storyFactMap?.capacity?.maxFactualClaims||0),allowedFactIds:(storyFactMap?.coreFacts||[]).map((f:any)=>f.factId),synthesis:storyFactMap?.capacity?.synthesisCapacity||{allowed:false,maxWords:0,maxStatements:0,allowedFactIds:[]},rules:{newFactsInSynthesis:false,newNumbersInSynthesis:false,newEntitiesInSynthesis:false,newCausalityInSynthesis:false}};
   const prompt=buildArticlePrompt(brief)+`\
 \
-EDITORIAL EVIDENCE BRIEF V3 — STRUCTURED MAP OF THE SAME SUPPLIED EVIDENCE:\
-${evidenceBriefText}\
-\
 RETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:\
 ${evidenceText}\
 \
