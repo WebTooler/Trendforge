@@ -124,7 +124,6 @@ async function main(){
   const MAX_WRITER_EVIDENCE_CHARS=9000;
   let evidenceText='';
   for(const chunk of evidenceChunks){const next=evidenceText?evidenceText+'\\n\\n'+chunk:chunk;if(next.length>MAX_WRITER_EVIDENCE_CHARS)break;evidenceText=next;}
-  const evidenceBriefText='';
   const primarySources=evidencePack.filter(s=>sourceRole(s)==='primary');
   evidencePack.sort((a,b)=>Number(sourceRole(b)==='primary')-Number(sourceRole(a)==='primary'));
   const evidenceInstruction=strongEvidence
