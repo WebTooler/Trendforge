@@ -18,8 +18,19 @@ export function loadCanonicalRepairEvidence({briefTitle, failedClaims, path='dat
     if(!source) throw new Error(`Failed claim ${index+1} references non-canonical evidence URL: ${url}`);
     const passage=String(claim?.bestPassage||claim?.evidence||'').trim();
     const canonicalPassages=Array.isArray(source.passages)?source.passages:[];
-    const normalizeEvidence=value=>String(value||'').replace(/\\s+/g,' ').trim();
-    const canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizeEvidence(passage));
+    const passageId=String(claim?.bestPassageId||'').trim();
+    let canonicalMatch='';
+    if(/^S\d+-P\d+$/i.test(passageId)){
+      const idMatch=passageId.match(/^S(\d+)-P(\d+)$/i);
+      const claimSourceId=String(claim?.sourceId||'').trim().toUpperCase();
+      const expectedSourceId=`S${Number(idMatch?.[1]||0)}`;
+      const passageIndex=Number(idMatch?.[2]||0)-1;
+      if(claimSourceId&&claimSourceId===expectedSourceId&&Number.isInteger(passageIndex)&&passageIndex>=0) canonicalMatch=canonicalPassages[passageIndex]||'';
+    }
+    if(!canonicalMatch){
+      const normalizeEvidence=value=>String(value||'').normalize('NFKC').replace(/[\u200B-\u200D\uFEFF]/g,'').replace(/\s+/g,' ').trim();
+      canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizeEvidence(passage))||'';
+    }
     if(!passage||!canonicalMatch) throw new Error(`Failed claim ${index+1} uses evidence outside the canonical passage set.`);
     return {...claim,bestUrl:source.url,bestSource:source.title||source.domain||source.url,bestPassage:canonicalMatch};
   });
