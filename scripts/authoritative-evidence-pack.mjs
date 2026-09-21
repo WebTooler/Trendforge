@@ -24,6 +24,7 @@ export function validateAuthoritativeEvidencePack(pack){
     if(b.version!==3||!b.metrics||!Array.isArray(b.supportedClaims)||!Array.isArray(b.relevantPassages)||!Array.isArray(b.sourceSupportMapping))return false;
     if(Number(b.metrics.relevantPassageCount||0)!==b.relevantPassages.length)return false;
     if(Number(b.metrics.supportedClaimCount||0)!==b.supportedClaims.length)return false;
+    if(!b.storyFactMap||b.storyFactMap.version!==1||!Array.isArray(b.storyFactMap.coreFacts)||!b.storyFactMap.capacity)return false;
   }
   return pack.sources.every(source=>typeof source.id==='string'&&/^S\d+$/.test(source.id)&&typeof source.url==='string'&&source.url.length>0&&typeof source.publisherFamily==='string'&&Array.isArray(source.passages)&&source.passages.length>0&&source.lineage&&typeof source.lineage.id==='string');
 }
