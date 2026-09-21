@@ -51,19 +51,19 @@ function loadCanonicalEvidenceForBrief(briefTitle){
   return urls.size?{pack,urls}:null;
 }
 
-function currentGeneratedArticleMatchesBrief(){
-  if(!fs.existsSync(articleDir)||!fs.existsSync(briefPath)) return false;
-  const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(`${articleDir}/${b}`).mtimeMs-fs.statSync(`${articleDir}/${a}`).mtimeMs);
-  if(!files.length) return false;
+function currentGeneratedArticleMatchState(){
+  if(!fs.existsSync(articleDir)||!fs.existsSync(briefPath)) return 'none';
+  const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(articleDir+'/'+b).mtimeMs-fs.statSync(articleDir+'/'+a).mtimeMs);
+  if(!files.length) return 'none';
   let brief=null;
-  try{brief=JSON.parse(fs.readFileSync(briefPath,'utf8'));}catch{return false;}
+  try{brief=JSON.parse(fs.readFileSync(briefPath,'utf8'));}catch{return 'invalid';}
   const briefTitle=String(brief?.brief?.title||'');
-  if(!briefTitle) return false;
-  const raw=fs.readFileSync(`${articleDir}/${files[0]}`,'utf8');
+  if(!briefTitle) return 'invalid';
+  const raw=fs.readFileSync(articleDir+'/'+files[0],'utf8');
   const articleTitle=(raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
-  if(!articleTitle) return false;
+  if(!articleTitle) return 'invalid';
   const shared=[...tokens(articleTitle)].filter(x=>tokens(briefTitle).has(x));
-  return shared.length>=2;
+  return shared.length>=2?'match':'mismatch';
 }
 
 function applyNarrowEntityCompatibility(report){
@@ -112,12 +112,15 @@ function applyNarrowEntityCompatibility(report){
   return true;
 }
 
-// No generated article is a legitimate pipeline outcome when the adaptive writer
-// exhausts its provider candidates. It must not turn the downstream claim-verification
-// stage into a false P0 failure or block the rest of the safe no-publication pipeline.
-if(!currentGeneratedArticleMatchesBrief()){
-  console.log('No matching generated article for current brief; claim verification skipped safely with exit 0.');
+const articleMatchState=currentGeneratedArticleMatchState();
+if(articleMatchState==='none'){
+  console.log('No generated article for current brief; claim verification skipped safely with exit 0.');
   process.exit(0);
+}
+if(articleMatchState!=='match'){
+  write({version:18,generatedAt:new Date().toISOString(),articlePath:'',articleTitle:'',claimCount:0,editorialCount:0,verified:0,partial:0,unsupported:1,sourceUnavailable:0,averageConfidence:0,pass:false,reason:'Generated article does not match the current brief (state='+articleMatchState+').',claims:[],editorial:[]});
+  console.error('Claim verification blocked: generated article does not match the current brief (state='+articleMatchState+').');
+  process.exit(1);
 }
 
 const child=spawnSync(process.execPath,['scripts/verify-article-claims-smart.mjs'],{stdio:'inherit',encoding:'utf8'});
