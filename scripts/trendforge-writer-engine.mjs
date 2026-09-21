@@ -7,7 +7,7 @@ const MAX_TRANSIENT_RETRIES=1;
 const MAX_PROVIDER_ATTEMPTS_PER_RUN=6;
 const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=2;
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
-const MIN_WRITER_WORDS=300;
+const MIN_WRITER_WORDS=180;
 const WRITER_TARGET_MIN_WORDS=500;
 const WRITER_TARGET_MAX_WORDS=700;
 const writerBudgetPath='data/ai-run-budget.json';
@@ -37,7 +37,7 @@ const loadEvidenceBlueprint=expectedTitle=>{
   try{
     const raw=JSON.parse(fs.readFileSync('data/pre-writer-pipeline.json','utf8'));
     const row=(raw.candidates||[]).find(x=>String(x.title||'').trim()===String(expectedTitle||'').trim());
-    return row?.readyForWriter ? row.evidence?.blueprint||null : null;
+    return row?.readyForWriter ? {blueprint:row.evidence?.blueprint||null,factMap:row.evidence?.storyFactMap||row.evidence?.editorialEvidenceBrief?.storyFactMap||null} : null;
   }catch{return null;}
 };
 const normalizeGeneratedDraft=draft=>{
@@ -66,20 +66,28 @@ const topicAlignment=(requested,draft)=>{const source=String(requested||'');cons
 export async function generateWithTrendForgeWriter({prompt,category='Technology',expectedTitle=''}){
   const inferred=category&&category!=='Technology'?category:prompt.match(/(?:category|section)\s*[:=]\s*(AI|Technology|How-To|Innovation|Product Launches|Digital Life|Crypto)/i)?.[1]||category;
   const contract=buildWriterContract(inferred);
-  const blueprint=loadEvidenceBlueprint(expectedTitle);
+  const evidenceModel=loadEvidenceBlueprint(expectedTitle);
+  const blueprint=evidenceModel?.blueprint||null;
+  const factMap=evidenceModel?.factMap||null;
   const wordGuide=blueprint?.targetWords||{min:WRITER_TARGET_MIN_WORDS,max:WRITER_TARGET_MAX_WORDS,soft:600};
   const h2Guide=blueprint?.h2Guidance||{preferredMin:2,preferredMax:3};
   const hardWordMin=Math.max(MIN_WRITER_WORDS,Number(wordGuide.min||WRITER_TARGET_MIN_WORDS));
   const hardWordMax=Math.min(1100,Math.max(hardWordMin,Number(wordGuide.max||WRITER_TARGET_MAX_WORDS)));
-  const claimBudget=Number(blueprint?.evidenceCapacity?.supportedClaimCount||blueprint?.claimBudget?.maxFactualClaims||0);
+  const claimBudget=Number(factMap?.capacity?.maxFactualClaims||blueprint?.evidenceCapacity?.maxFactualClaims||0);
   const maxFactualClaims=claimBudget>0?Math.max(3,claimBudget):0;
+  const factGuide=Array.isArray(factMap?.coreFacts)?factMap.coreFacts.slice(0,14).map(f=>`[${f.factId}] ${f.text} (source=${f.sourceId}, role=${f.sourceRole})`).join('\\n'):'';
   const claimBudgetGuide=blueprint&&maxFactualClaims?[
-    'EVIDENCE CLAIM BUDGET — HARD:',
-    '- The evidence pack directly supports approximately '+maxFactualClaims+' distinct factual claims.',
-    '- Do not introduce more than '+maxFactualClaims+' distinct material factual claims in the article.',
-    '- Rephrase or combine supported facts when useful; do not manufacture additional factual detail to reach the word target.',
-    '- If the evidence cannot support the requested depth, return a shorter article rather than adding context from memory.'
-  ].join('\n') : '';
+    'EVIDENCE FACT MAP — HARD BOUNDARY:',
+    '- Core story facts are the only allowed factual building blocks for the main narrative.',
+    '- Context facts may be used only when explicitly framed as context and must never substitute for missing core facts.',
+    '- Every material factual sentence must map to one or more Fact IDs from the fact map.',
+    '- Do not create a new factual proposition by combining unrelated facts.',
+    '- Maximum material factual claims: '+maxFactualClaims+'.',
+    '- If the fact map cannot support the requested depth, write the shortest complete article allowed by the evidence capacity; never add facts from memory.',
+    '',
+    'CORE FACTS:',
+    factGuide
+  ].join('\\n') : '';
   const architectureGuide=blueprint ? [
     'ARTICLE ARCHITECTURE — derive the structure from evidence before drafting:',
     `- Evidence mode: ${blueprint?.mode||'standard'}.`,
@@ -92,7 +100,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
     '- Final section must add a distinct takeaway, limitation, uncertainty, or supported next step; never use a generic conclusion.',
     '- Prefer fewer strong sections over many thin sections.'
   ].join('\\n') : '';
-  const enginePrompt=`${contract}\n\n${architectureGuide}\n\n${claimBudgetGuide}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nSTRICT EVIDENCE WRITING CONTRACT:\n1. The retrieved evidence pack is the ONLY factual knowledge you may use. Generic background knowledge is also forbidden, even when it is commonly true.\n2. Before writing each factual sentence, silently map it to one or more exact evidence passages. If no passage supports the full sentence, DELETE the sentence. Every checkable fact needs direct passage support.\n2a. Do not state what a product, company, technology, regulation, market, or person normally does unless that fact is explicitly in the evidence. Do not turn an implication, context clue, headline, URL, source metadata, or your own reasoning into a factual statement.\n2b. Cross-source synthesis may combine supported facts, but it must not create a new causal relationship, comparison, motive, outcome, capability, chronology, or generalization.\n2c. Treat syndicated or republished sources as one underlying story for corroboration; repeated wording across publishers is not independent confirmation.\n3. Never infer a product specification, comparison, motive, effect, user reaction, future outcome, price, date, rating, compatibility detail, competitor comparison, or market implication that is not explicit in the evidence.\n4. Do not combine passages into a stronger claim than either passage supports. Preserve attribution.\n5. POLARITY LOCK: preserve the exact direction of every factual relationship. Never turn increased into decreased, reduced into increased, rose into fell, gain into loss, approved into rejected, allowed into banned, launched into cancelled, confirmed into denied, or supports into opposes. Do not strengthen or weaken a factual relationship while paraphrasing.\n6. Preserve every material number, date, named entity, causal relationship and attribution. If the evidence does not support an exact value or relationship, omit the claim rather than guess.\n7. Avoid speculative future language unless the evidence explicitly states that possibility.\n8. Recommendations may be opinion only and must add no new factual premise.\n9. Evidence capacity mode: ${blueprint?.mode||'standard'}. HARD WORD RANGE: ${hardWordMin}-${hardWordMax} words. Aim for ${Math.min(hardWordMax,Math.max(hardWordMin,Number(wordGuide.soft||600)))} words. Never return a sub-${hardWordMin}-word article. Never pad with unsupported facts.\n10. H2 count is ADVISORY ONLY. Never reject an article solely because it has more or fewer H2 headings. Prefer useful, distinct sections and avoid trivial or repetitive headings.\n11. The requested story title is the hard topic boundary. Do not switch stories.\n12. Return only JSON with exactly title, description and content.\nFINAL SELF-CHECK: For every factual sentence, verify source support, polarity/direction, numbers, dates, entities, causal relationship and attribution. Delete any sentence that fails any check.`;
+  const enginePrompt=`${contract}\n\n${architectureGuide}\n\n${claimBudgetGuide}\n\nRESEARCH / ARTICLE BRIEF:\n${prompt}\n\nSTRICT EVIDENCE WRITING CONTRACT:\n1. The retrieved evidence pack is the ONLY factual knowledge you may use. Generic background knowledge is also forbidden, even when it is commonly true.\n2. Before writing each factual sentence, silently map it to one or more exact evidence passages. If no passage supports the full sentence, DELETE the sentence. Every checkable fact needs direct passage support.\n2a. Do not state what a product, company, technology, regulation, market, or person normally does unless that fact is explicitly in the evidence. Do not turn an implication, context clue, headline, URL, source metadata, or your own reasoning into a factual statement.\n2b. Cross-source synthesis may combine supported facts, but it must not create a new causal relationship, comparison, motive, outcome, capability, chronology, or generalization.\n2c. Treat syndicated or republished sources as one underlying story for corroboration; repeated wording across publishers is not independent confirmation.\n3. Never infer a product specification, comparison, motive, effect, user reaction, future outcome, price, date, rating, compatibility detail, competitor comparison, or market implication that is not explicit in the evidence.\n4. Do not combine passages into a stronger claim than either passage supports. Preserve attribution.\n5. POLARITY LOCK: preserve the exact direction of every factual relationship. Never turn increased into decreased, reduced into increased, rose into fell, gain into loss, approved into rejected, allowed into banned, launched into cancelled, confirmed into denied, or supports into opposes. Do not strengthen or weaken a factual relationship while paraphrasing.\n6. Preserve every material number, date, named entity, causal relationship and attribution. If the evidence does not support an exact value or relationship, omit the claim rather than guess.\n7. Avoid speculative future language unless the evidence explicitly states that possibility.\n8. Recommendations may be opinion only and must add no new factual premise.\n9. Evidence capacity mode: ${blueprint?.mode||'standard'}. HARD WORD RANGE: ${hardWordMin}-${hardWordMax} words. Aim for ${Math.min(hardWordMax,Math.max(hardWordMin,Number(wordGuide.soft||600)))} words. The evidence-relative minimum is a capacity target, not a license to invent facts; if a complete article must be shorter, prefer a truthful shorter article and let downstream depth rules decide. Never pad with unsupported facts.\n10. H2 count is ADVISORY ONLY. Never reject an article solely because it has more or fewer H2 headings. Prefer useful, distinct sections and avoid trivial or repetitive headings.\n11. The requested story title is the hard topic boundary. Do not switch stories.\n12. Return only JSON with exactly title, description and content.\nFINAL SELF-CHECK: For every factual sentence, verify source support, polarity/direction, numbers, dates, entities, causal relationship and attribution. Delete any sentence that fails any check.`;
   const requested=expectedTitle||requestedTitle(prompt);let candidateAttempts=0;let lastFailure='';
   if(loadBudget('writer').attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)throw new Error('TrendForge Writer Engine: run-level AI provider budget exhausted.');
   for(const provider of available){
