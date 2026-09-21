@@ -210,9 +210,14 @@ for(const record of candidates){
   const hasValidatedSource=preflight?.status==='pass';
   const substantiveSourceCount=Number(evidenceBrief.metrics.substantiveSourceCount||0);
   const hasIndependentEvidence=coverage.independentPublisherFamilies>=2 && substantiveSourceCount>=2;
-  const evidenceBriefReady=evidenceBrief.storyCapacity!=='none' && evidenceBrief.metrics.relevantPassageCount>=3 && evidenceBrief.metrics.supportedClaimCount>=3 && evidenceBrief.metrics.relevantChars>=900 && substantiveSourceCount>=1;
-  const singleSourceEligible=coverage.independentPublisherFamilies===1 && substantiveSourceCount>=1 && coverage.band!=='insufficient' && coverage.totalChars>=900 && coverage.relevantPassageCount>=3 && coverage.supportedClaimCount>=3;
-  const readyForWriter=hasValidatedSource && evidenceBriefReady && blueprint.mode!=='blocked' && (hasIndependentEvidence || singleSourceEligible);
+  const targetMinWords=Number(blueprint?.targetWords?.min||300);
+  const requiredClaims=Math.max(5,Math.ceil(targetMinWords/60));
+  const minimumRelevantChars=Math.max(1200,Math.ceil(targetMinWords*4.5));
+  const evidenceBriefReady=evidenceBrief.storyCapacity!=='none' && evidenceBrief.metrics.relevantPassageCount>=3 && evidenceBrief.metrics.supportedClaimCount>=requiredClaims && evidenceBrief.metrics.relevantChars>=minimumRelevantChars && substantiveSourceCount>=1;
+  const thinEvidenceReady=coverage.band==='thin' && evidenceBrief.metrics.supportedClaimCount>=requiredClaims && evidenceBrief.metrics.relevantChars>=minimumRelevantChars && substantiveSourceCount>=1;
+  const singleSourceEligible=coverage.independentPublisherFamilies===1 && substantiveSourceCount>=1 && coverage.band!=='insufficient' && coverage.totalChars>=minimumRelevantChars && coverage.relevantPassageCount>=3 && coverage.supportedClaimCount>=requiredClaims && (coverage.band!=='thin'||thinEvidenceReady);
+  const multiSourceEligible=hasIndependentEvidence && coverage.supportedClaimCount>=requiredClaims && coverage.totalChars>=minimumRelevantChars;
+  const readyForWriter=hasValidatedSource && evidenceBriefReady && blueprint.mode!=='blocked' && (multiSourceEligible || singleSourceEligible);
 
   const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint,editorialEvidenceBrief:evidenceBrief},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':substantiveSourceCount<1?'no-substantive-source-support':coverage.independentPublisherFamilies>=2&&substantiveSourceCount<2?'insufficient-substantive-cross-source-support':!evidenceBriefReady?'editorial-evidence-brief-insufficient':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
   const queueDuplicate=queueAccepted.map(x=>duplicateWithinQueue(resultRow,x)).find(x=>x.duplicate);
