@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T07:49:33.879Z",
+  "generatedAt": "2026-09-21T10:26:33.579Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2683,
-      "sentenceCount": 17,
+      "normalizedLength": 2639,
+      "sentenceCount": 19,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,13 +31,12 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "catf.us",
-    "energypolicy.columbia.edu"
+    "arstechnica.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 2,
-    "usablePassages": 13,
+    "sourceCount": 1,
+    "usablePassages": 18,
     "primarySourceCount": 0
   }
 }
