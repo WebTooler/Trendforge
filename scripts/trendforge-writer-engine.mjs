@@ -4,8 +4,9 @@ import { buildWriterContract, validateDraft } from './trendforge-editorial-polic
 import { validatePoliticalNeutrality } from './political-neutrality-guard.mjs';
 
 const MAX_TRANSIENT_RETRIES=1;
-const MAX_PROVIDER_ATTEMPTS_PER_RUN=6;
+const MAX_PROVIDER_ATTEMPTS_PER_RUN=12;
 const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=2;
+const candidateAttemptCap=()=>{const index=Number(process.env.TRENDFORGE_WRITER_CANDIDATE_INDEX||1);const queueSize=Number(process.env.TRENDFORGE_WRITER_QUEUE_SIZE||1);return index<=2||queueSize<=2?2:1;};
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
 const MIN_WRITER_WORDS=180;
 const WRITER_TARGET_MIN_WORDS=500;
@@ -93,7 +94,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
     'ARTICLE ARCHITECTURE — derive the structure from evidence before drafting:',
     `- Evidence mode: ${blueprint?.mode||'standard'}.`,
     `- Evidence-supported word range: ${wordGuide.min}-${wordGuide.max} (soft ${wordGuide.soft}).`,
-    `- H2 STRUCTURE: use at most ${Number(blueprint?.maxH2||h2Guide.preferredMax||3)} H2 headings. Fewer is always acceptable; never create a heading merely to increase word count.`,
+    `- H2 STRUCTURE: recommended range is ${Number(h2Guide.preferredMin||2)}-${Number(h2Guide.preferredMax||blueprint?.maxH2||3)} H2 headings. This is advisory, not a hard ceiling; add an extra H2 only when it has a distinct substantive job. Never create a heading merely to increase word count.`,
     '- Give each H2 one distinct job: development, evidence/details, implications/context, limitations/uncertainty, or supported next steps.',
     '- Do not repeat the same fact in multiple sections merely to increase length.',
     '- Do not create an H2 for a single trivial sentence or unsupported context.',
@@ -107,7 +108,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
   if(loadBudget('writer').attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)throw new Error('TrendForge Writer Engine: run-level AI provider budget exhausted.');
   for(const provider of available){
     if(!process.env[keyFor(provider)])continue;
-    if(candidateAttempts>=MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE)break;
+    if(candidateAttempts>=Math.min(MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE,candidateAttemptCap()))break;
     const budget=loadBudget('writer');if(budget.attempts>=MAX_PROVIDER_ATTEMPTS_PER_RUN)break;budget.attempts+=1;candidateAttempts+=1;saveBudget(budget,'writer');console.log(`TrendForge Writer Engine: provider attempt ${budget.attempts}/${MAX_PROVIDER_ATTEMPTS_PER_RUN} (candidate ${candidateAttempts}/${MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE}) — ${provider}.`);const started=Date.now();
     try{const recoveryPrompt=lastFailure?`\n\nQUALITY RECOVERY — A previous provider failed these deterministic checks: ${lastFailure}. Correct every listed issue in your output. Do not repeat the failed structure. Ensure the final article is within the HARD WORD RANGE and satisfies the evidence-mode paragraph depth. Do not pad. H2 count follows the evidence-derived maximum; fewer strong sections are preferred.\n`:'';
       const completionBudget=Math.max(650,Math.min(1600,Math.ceil((hardWordMax+Number(blueprint?.synthesis?.maxWords||0))*1.45)+220));
