@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "generatedAt": "2026-09-21T17:52:17.164Z",
+  "generatedAt": "2026-09-21T18:04:40.089Z",
   "minimumStrongSources": 2,
   "minimumStrongPublisherFamilies": 2,
   "minimumStrongDomains": 2,
@@ -10,37 +10,6 @@
   ],
   "policy": "Source-page integrity is required for generation. Two independent publisher families is strong evidence, but a single verified publisher article may enter the generation path and remains subject to writer grounding, claim verification, editorial quality, safety and SEO gates.",
   "report": [
-    {
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5",
-      "title": "Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows - 41NBC News",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "41nbc.com"
-      ],
-      "independentDomains": [
-        "41nbc.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.41nbc.com/trump-ai-force-artificial-intelligence-regulation-congress/",
-          "domain": "41nbc.com",
-          "publisherFamily": "41nbc.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.41nbc.com/trump-ai-force-artificial-intelligence-regulation-congress/",
-          "pageTitle": "Trump proposes &#039;AI Force&#039; as debate over artificial intelligence regulation grows",
-          "canonical": "https://www.41nbc.com/trump-ai-force-artificial-intelligence-regulation-congress/",
-          "bodyChars": 2228,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
     {
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE90ZU5jR1RvX0NsRDU5TFg3ZjNCblBNVGhLQnA5RlFqX1VCLUZOMTZHcnBhQ1NNZjFVNTZKN01VWGhlbk41WDlaSU51bVBXYlFMM1hFaVVkTGgxbVRtVmJr?oc=5",
       "title": "Google says Gemini breached three companies during security test - The Record from Recorded Future News",
@@ -133,6 +102,37 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5",
+      "title": "Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows - 41NBC News",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "41nbc.com"
+      ],
+      "independentDomains": [
+        "41nbc.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.41nbc.com/trump-ai-force-artificial-intelligence-regulation-congress/",
+          "domain": "41nbc.com",
+          "publisherFamily": "41nbc.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.41nbc.com/trump-ai-force-artificial-intelligence-regulation-congress/",
+          "pageTitle": "Trump proposes &#039;AI Force&#039; as debate over artificial intelligence regulation grows",
+          "canonical": "https://www.41nbc.com/trump-ai-force-artificial-intelligence-regulation-congress/",
+          "bodyChars": 2228,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://techcrunch.com/2026/09/21/googles-899-googlebook-is-a-bet-that-youll-buy-a-new-laptop-for-gemini/",
       "title": "Google&#8217;s $899 Googlebook is a bet that you&#8217;ll buy a new laptop for Gemini",
       "status": "pass",
@@ -169,15 +169,13 @@
       "status": "pass",
       "evidenceLevel": "strong",
       "validSourceCount": 3,
-      "independentPublisherCount": 3,
+      "independentPublisherCount": 2,
       "independentPublisherFamilies": [
-        "joplinglobe.com",
-        "financialcontent.com",
+        "itemonline.com",
         "stocktitan.net"
       ],
       "independentDomains": [
-        "joplinglobe.com",
-        "financialcontent.com",
+        "itemonline.com",
         "stocktitan.net"
       ],
       "sources": [
@@ -186,26 +184,21 @@
           "domain": "joplinglobe.com",
           "publisherFamily": "joplinglobe.com",
           "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.joplinglobe.com/region/national_business/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38fedcee-d304-55dc-8269-0d7e8bb8d3fb.html",
-          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled | National Business | joplinglobe.com",
-          "canonical": "https://www.businesswire.com/news/home/20260920309558/en/",
-          "bodyChars": 1602,
-          "topicOverlap": 24
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         },
         {
-          "suppliedUrl": "https://www.financialcontent.com/article/bizwire-2026-9-13-faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-update-previews-the-upcoming-919-event-highlights-ffs-eai-robotics-autonomous-perception-and-3d-scanning-technology-adds-a-new-senior-advisor-focused-on-govt-procurement",
-          "domain": "financialcontent.com",
-          "publisherFamily": "financialcontent.com",
+          "suppliedUrl": "https://www.itemonline.com/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38641563-8a4d-5d38-a16d-3a50d89b02fc.html",
+          "domain": "itemonline.com",
+          "publisherFamily": "itemonline.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.financialcontent.com/article/bizwire-2026-9-13-faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-update-previews-the-upcoming-919-event-highlights-ffs-eai-robotics-autonomous-perception-and-3d-scanning-technology-adds-a-new-senior-advisor-focused-on-govt-procurement",
-          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Shares Weekly Investor Update: Previews the Upcoming 9/19 Event; Highlights FF’s EAI Robotics' Autonomous Perception and 3D Scanning Technology; Adds a New Senior Advisor Focused on Govt. Procurement | FinancialContent",
-          "canonical": "",
-          "bodyChars": 6488,
-          "topicOverlap": 22
+          "finalUrl": "https://www.itemonline.com/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38641563-8a4d-5d38-a16d-3a50d89b02fc.html",
+          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled | | itemonline.com",
+          "canonical": "https://www.businesswire.com/news/home/20260920309558/en/",
+          "bodyChars": 1723,
+          "topicOverlap": 24
         },
         {
           "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/faraday-future-unveil-nine-ai-005700326.html",
@@ -227,10 +220,23 @@
           "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-launches-four-industry-productivity-solutions-nine-a1oa509ngxy6.html",
           "bodyChars": 14181,
           "topicOverlap": 23
+        },
+        {
+          "suppliedUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-z6tek26rvjv9.html",
+          "domain": "stocktitan.net",
+          "publisherFamily": "stocktitan.net",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-z6tek26rvjv9.html",
+          "pageTitle": "Faraday Future cancels 5.36M warrants, advances AI plan | FFAI Stock News",
+          "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-shares-weekly-investor-z6tek26rvjv9.html",
+          "bodyChars": 9097,
+          "topicOverlap": 22
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs",
@@ -301,19 +307,6 @@
           "topicOverlap": 8
         },
         {
-          "suppliedUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
-          "domain": "247wallst.com",
-          "publisherFamily": "247wallst.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
-          "pageTitle": "Crypto Prices Today: Why Bitcoin, XRP and Solana Are All Down Before the CLARITY Act Vote - 24/7 Wall St.",
-          "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
-          "bodyChars": 7534,
-          "topicOverlap": 11
-        },
-        {
           "suppliedUrl": "https://247wallst.com/investing/2026/06/04/crypto-crash-today-why-bitcoin-ethereum-xrp-and-solana-are-all-down-double-digits/",
           "domain": "247wallst.com",
           "publisherFamily": "247wallst.com",
@@ -338,6 +331,19 @@
           "canonical": "https://247wallst.com/investing/2026/04/14/bitcoin-hits-75000-as-xrp-ethereum-and-solana-all-surge-is-the-crypto-bull-run-starting/",
           "bodyChars": 8646,
           "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
+          "domain": "247wallst.com",
+          "publisherFamily": "247wallst.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
+          "pageTitle": "Crypto Prices Today: Why Bitcoin, XRP and Solana Are All Down Before the CLARITY Act Vote - 24/7 Wall St.",
+          "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/15/crypto-prices-today-why-bitcoin-xrp-and-solana-are-all-down-before-the-clarity-act-vote/",
+          "bodyChars": 7534,
+          "topicOverlap": 11
         }
       ],
       "recoveryAttempts": 0,
@@ -373,6 +379,142 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://arstechnica.com/google/2026/09/google-confirms-gemini-models-hacked-three-companies-in-may-2026/",
+      "title": "Google confirms Gemini models hacked three companies in May 2026",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 8,
+      "independentPublisherCount": 8,
+      "independentPublisherFamilies": [
+        "arstechnica.com",
+        "9to5google.com",
+        "theweek.in",
+        "etvbharat.com",
+        "hindustantimes.com",
+        "sundayguardianlive.com",
+        "techstory.in",
+        "co.ke"
+      ],
+      "independentDomains": [
+        "arstechnica.com",
+        "9to5google.com",
+        "theweek.in",
+        "etvbharat.com",
+        "hindustantimes.com",
+        "sundayguardianlive.com",
+        "techstory.in",
+        "eastleighvoice.co.ke"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://arstechnica.com/google/2026/09/google-confirms-gemini-models-hacked-three-companies-in-may-2026/",
+          "domain": "arstechnica.com",
+          "publisherFamily": "arstechnica.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://arstechnica.com/google/2026/09/google-confirms-gemini-models-hacked-three-companies-in-may-2026/",
+          "pageTitle": "Google confirms Gemini models hacked three companies in May 2026 - Ars Technica",
+          "canonical": "https://arstechnica.com/google/2026/09/google-confirms-gemini-models-hacked-three-companies-in-may-2026/",
+          "bodyChars": 3706,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://9to5google.com/2026/09/19/google-confirms-gemini-hacked-into-three-companies-during-cybersecurity-test-months-ago/",
+          "domain": "9to5google.com",
+          "publisherFamily": "9to5google.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://9to5google.com/2026/09/19/google-confirms-gemini-hacked-into-three-companies-during-cybersecurity-test-months-ago/",
+          "pageTitle": "Google confirms Gemini hacked into three companies during cybersecurity test months ago",
+          "canonical": "https://9to5google.com/2026/09/19/google-confirms-gemini-hacked-into-three-companies-during-cybersecurity-test-months-ago/",
+          "bodyChars": 3076,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://www.theweek.in/news/sci-tech/2026/09/19/how-gemini-hacked-into-three-companies-google-confirms-its-ai-model-went-rogue-during-cybersecurity-test.html",
+          "domain": "theweek.in",
+          "publisherFamily": "theweek.in",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theweek.in/news/sci-tech/2026/09/19/how-gemini-hacked-into-three-companies-google-confirms-its-ai-model-went-rogue-during-cybersecurity-test.html",
+          "pageTitle": "How Gemini hacked into three companies. Google confirms its AI model went rogue during cybersecurity test - The Week",
+          "canonical": "https://www.theweek.in/news/sci-tech/2026/09/19/how-gemini-hacked-into-three-companies-google-confirms-its-ai-model-went-rogue-during-cybersecurity-test.html",
+          "bodyChars": 3231,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://www.etvbharat.com/en/technology/google-confirms-gemini-ai-hacked-three-companies-during-cybersecurity-test-but-stopped-before-doing-any-harm-enn26091902280",
+          "domain": "etvbharat.com",
+          "publisherFamily": "etvbharat.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.etvbharat.com/en/technology/google-confirms-gemini-ai-hacked-three-companies-during-cybersecurity-test-but-stopped-before-doing-any-harm-enn26091902280",
+          "pageTitle": "Google Confirms Gemini AI Hacked Three Companies During Cybersecurity Test But Stopped Before Doing Any Harm",
+          "canonical": "https://www.etvbharat.com/en/technology/google-confirms-gemini-ai-hacked-three-companies-during-cybersecurity-test-but-stopped-before-doing-any-harm-enn26091902280",
+          "bodyChars": 2919,
+          "topicOverlap": 12
+        },
+        {
+          "suppliedUrl": "https://www.hindustantimes.com/world-news/gemini-hacked-3-ai-companies-during-testing-by-cybersecurity-firm-google-confirms-after-report-101789774576431.html",
+          "domain": "hindustantimes.com",
+          "publisherFamily": "hindustantimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.hindustantimes.com/world-news/gemini-hacked-3-ai-companies-during-testing-by-cybersecurity-firm-google-confirms-after-report-101789774576431.html",
+          "pageTitle": "Gemini hacked 3 AI companies during testing by cybersecurity firm, Google confirms after report | World News",
+          "canonical": "https://www.hindustantimes.com/world-news/gemini-hacked-3-ai-companies-during-testing-by-cybersecurity-firm-google-confirms-after-report-101789774576431.html",
+          "bodyChars": 1938,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://sundayguardianlive.com/world/google-hacked-companies-ai-model-gemini-hacked-3-real-firms-during-cybersecurity-test-after-unexpected-internet-access-check-which-companies-were-breached-287973/",
+          "domain": "sundayguardianlive.com",
+          "publisherFamily": "sundayguardianlive.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://sundayguardianlive.com/world/google-hacked-companies-ai-model-gemini-hacked-3-real-firms-during-cybersecurity-test-after-unexpected-internet-access-check-which-companies-were-breached-287973/",
+          "pageTitle": "Google Hacked Companies: AI Model Gemini Hacked 3 Real Firms During Cybersecurity Test After Unexpected Internet Access - Check Which Companies Were Breached?",
+          "canonical": "https://sundayguardianlive.com/world/google-hacked-companies-ai-model-gemini-hacked-3-real-firms-during-cybersecurity-test-after-unexpected-internet-access-check-which-companies-were-breached-287973/",
+          "bodyChars": 7253,
+          "topicOverlap": 15
+        },
+        {
+          "suppliedUrl": "https://techstory.in/google-gemini-hacked-three-companies-during-cybersecurity-test-google-confirms/",
+          "domain": "techstory.in",
+          "publisherFamily": "techstory.in",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://techstory.in/google-gemini-hacked-three-companies-during-cybersecurity-test-google-confirms/",
+          "pageTitle": "Google Gemini Hacked Three Companies During Cybersecurity Test, Google Confirms - TechStory",
+          "canonical": "https://techstory.in/google-gemini-hacked-three-companies-during-cybersecurity-test-google-confirms/",
+          "bodyChars": 6584,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://eastleighvoice.co.ke/news/402398/google-says-gemini-ai-hacked-three-real-companies-during-cybersecurity-test?amp=1",
+          "domain": "eastleighvoice.co.ke",
+          "publisherFamily": "co.ke",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://eastleighvoice.co.ke/news/402398/google-says-gemini-ai-hacked-three-real-companies-during-cybersecurity-test?amp=1",
+          "pageTitle": "Google says Gemini AI hacked three real companies during cybersecurity test | The Eastleigh Voice",
+          "canonical": "https://eastleighvoice.co.ke/news/402398/google-says-gemini-ai-hacked-three-real-companies-during-cybersecurity-test",
+          "bodyChars": 4787,
+          "topicOverlap": 11
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTUl0Vk9neUJINmxBdjFicGNic1VPTGpvdWhEbDFtZW95dUppUmpjcGFoX3dobFFFTnRnWk9mZlZPUXY0OUZQcFItdnQ4c3h5Z05aSTlObDByOFBUOTFWU1Q1X0hJZnVLNC1Hd0ZSZWF6dFZLc0haQ21ZRmFsdTBuMjY3Ql9xQ3hJVElFLTZ6eFdIU3VaZ1VxWGg5RFRNbWc3SG1uNHFiVk9vZEtPSkhsUVprMzFOdTN1azBnbmE5LVFBRkpmZHdTRWRpQ1QyTDRDTjZ0aXZGTkV0NXBpRUFidnJZSVphTUljWHJoOW1UYksxaEFoVnc?oc=5",
@@ -452,6 +594,19 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50TVpFbHFkWkJyVkNRV1l3T0VTb3V4YmFhOWZsd19nNEYwV0ZsVURHeElOMG8zYVNRc0NEYUxMYkNua3ozeXBGTTdoRlY5amo1b3dIU3o3TkxUQ0VHRnZ1STYta0FkM3NxZ0dob2Npdw?oc=5",
+      "title": "Advisory Group on Mathematics and Artificial Intelligence - OpenAI",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQd0NTWTRVU2ZtSjRmc19mU2VtNnhGRFRGTkVxT2YzejRrNlMwZHNJWm94OXBtZjNNelVta0ZESnZ4cmE5czNQV0Q3bkFLVFoyTFd3cU9NZ3ZMSHY2NVRyM1Z3NzZFeDlsRlZZSHNqTkZvTWFOamFsWXpJMVliU1VPR0JWSS1QY3p0U21wQTI1SHVZWHBP?oc=5",
       "title": "Bitcoin Hits $85,000 and Nears 8-Month High. Is the Crypto Bull Market Finally Here? - Yahoo Finance",
       "status": "block",
@@ -505,6 +660,37 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc09zelFIejc0eEhDZXU0T1FKSmdySGgxT21OaG9BcTIwOFh2c2kyQTVzTjFZc2tFNHh2RTFNZW5HLUFMd2VvSjhFT21iTzRWdXlQb2Mxb0Fyd1J0ZzQ2eHlKYkdmbGloa1daM01hZzRtalBQblV5bnloak9TNU1zaUktVGo3c1p1ekVYRjI2dDRIb0hOcF9zeE04YTVZcHFNdXFoa3d4a3ZzWmpmN1E?oc=5",
+      "title": "Run Positron on Amazon SageMaker AI for data science workflows - Amazon Web Services (AWS)",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "amazon.com"
+      ],
+      "independentDomains": [
+        "aws.amazon.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://aws.amazon.com/blogs/machine-learning/run-positron-on-amazon-sagemaker-ai-for-data-science-workflows/",
+          "domain": "aws.amazon.com",
+          "publisherFamily": "amazon.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://aws.amazon.com/blogs/machine-learning/run-positron-on-amazon-sagemaker-ai-for-data-science-workflows/",
+          "pageTitle": "Run Positron on Amazon SageMaker AI for data science workflows | Artificial Intelligence",
+          "canonical": "https://aws.amazon.com/blogs/machine-learning/run-positron-on-amazon-sagemaker-ai-for-data-science-workflows/",
+          "bodyChars": 11137,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcVJvSXpMT05lX2pZaEI3bjl2M2lWM3pudDZPM0VNa3BzM0E2TjVGNlExN29wVnVBMDktODdXbTh5WHFOYWVCMjlnUndiWkVvYm8zb0c4X1BDVURvSGhJNEFBd3RjQXVUSFJlLVJKTVFIbzFCRlZnRlRfeUxoWUdVZjhoUTBtVy1fbXVUOU10dC1HaE83THBnb2NkSWxiV1Q5X0xKdg?oc=5",
       "title": "8 tips and tools for language learning: from apps to real life - Peace Corps (.gov)",
       "status": "block",
@@ -541,7 +727,7 @@
           "finalUrl": "https://www.cnn.com/2026/09/21/health/kids-are-using-ai-wellness",
           "pageTitle": "AI programs can interfere with childhood. Here’s what parents can do | CNN",
           "canonical": "https://www.cnn.com/2026/09/21/health/kids-are-using-ai-wellness",
-          "bodyChars": 11028,
+          "bodyChars": 10734,
           "topicOverlap": 5
         }
       ],
@@ -762,33 +948,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPc3ltX05ZbWFrSDlYLVJmREhNcUZuTXlpMzVKdy1SNUlfbnQtSGd6UUNkLUpYQV9LRURFc0o2MEp4X1N5NXVRM0ZPaFE0TFBBaFVwVkxIbWUxMUtyNmNFZ0Jjam5NaVprcEpzT2xTcHh1QkxiaW9oVWpLeFNoaFdLTTJTd0FFRjZCc1V5XzFSZ3UzZ2lsT2Z1ZjZXak5FZHVQeXlPeTFxeHdrS3BMelR1ZzdlNlhBamhIVXFldVM2elY0Y3M?oc=5",
-      "title": "Belgium's Aikido launches cybersecurity AI model as demand for local tools grows - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45D0NZ:0-belgium-s-aikido-launches-cybersecurity-ai-model-as-demand-for-local-tools-grows/",
-          "domain": "tradingview.com",
-          "publisherFamily": "tradingview.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45D0NZ:0-belgium-s-aikido-launches-cybersecurity-ai-model-as-demand-for-local-tools-grows/",
-          "pageTitle": "Belgium's Aikido launches cybersecurity AI model as demand for local tools grows — TradingView News",
-          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45D0NZ:0-belgium-s-aikido-launches-cybersecurity-ai-model-as-demand-for-local-tools-grows/",
-          "bodyChars": 344,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMikwNBVV95cUxNYUVHTk5vVGhZdTRhMEhYY192SE80NFB2dk55ZTBxUV9kUkJleEVPeVFCU25LRVhUN3A0Mjk4MkNpT0RYbTVmNzJtX25kblNMOTdUMVk3dWU4QWdvLTU2S21tZjlCX0I1QjdySF8tT25KRTV6UmtIb0tSdmtrdWFTbnRQaG1DS0hNb0JZWjRob3FDQ1UzQ1ZoNGVOZG03TV9KNEl1QTFxU1M4RURMbkkxVkFqVEZONXR6MFI1RmE0U1ZEcHFPT1pzSnVYZVlhYWdPU3k4RU0ycko3RmN1eGY5cndnRV9rRHdTWVJkRzl0anNkTDEzNU5iUFozRHNITUFod0l2cmlaeFJqVmFzWXIzbXI4ajN1SFQzdERnU0FMN2Njbjc3b2lvc25yeWVlS0piclhaLTlWaGd0Z3hhTU05SEJZVEpxVjZBaHdHblFCS1hKcDNvbE9PVG9RbnNOMWdYRzgyMEZpcGJIZ3NHYjJTUGRnTXNjMHdNcm9ub0lCOEs1c3dSVnhsbDVlRkVGa0VHeC1n?oc=5",
       "title": "Samsung and LG promise to remove malicious 'botnet' apps from their TVs' app stores — but the problem was even more widespread than I feared, according to security researchers - TechRadar",
       "status": "pass",
@@ -839,17 +998,15 @@
       "title": "Bitcoin hits highest level since January at $85,000, as the market debates whether the 'crypto winter' is over - CNBC",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 4,
-      "independentPublisherCount": 4,
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
       "independentPublisherFamilies": [
         "cnbc.com",
-        "blockchain.news",
         "sedaily.com",
         "tippinsights.com"
       ],
       "independentDomains": [
         "cnbc.com",
-        "blockchain.news",
         "en.sedaily.com",
         "tippinsights.com"
       ],
@@ -872,13 +1029,8 @@
           "domain": "blockchain.news",
           "publisherFamily": "blockchain.news",
           "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://blockchain.news/flashnews/bitcoin-hits-85-000-highest-since-january",
-          "pageTitle": "Bitcoin: Hits $85,000 Highest Since January | Flash News Detail | Blockchain.News",
-          "canonical": "https://blockchain.news/flashnews/bitcoin-hits-85-000-highest-since-january",
-          "bodyChars": 1825,
-          "topicOverlap": 10
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         },
         {
           "suppliedUrl": "https://en.sedaily.com/international/2026/09/21/bitcoin-tops-85000-highest-since-january",
@@ -903,7 +1055,7 @@
           "finalUrl": "https://tippinsights.com/crypto-market-rebounds-as-bitcoin-reclaims-85-000/",
           "pageTitle": "Crypto Market Rebounds As Bitcoin Reclaims $85,000",
           "canonical": "https://tippinsights.com/crypto-market-rebounds-as-bitcoin-reclaims-85-000/",
-          "bodyChars": 2233,
+          "bodyChars": 2395,
           "topicOverlap": 11
         }
       ],
@@ -944,6 +1096,37 @@
           "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/21/why-is-crypto-up-today-oil-prices-drop-short-sellers-squeezed-and-bitcoin-reclaims-key-level-after-45-weeks/",
           "bodyChars": 8885,
           "topicOverlap": 11
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
+      "title": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
+      "independentDomains": [
+        "techcrunch.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
+          "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
+          "pageTitle": "Google’s VP of product Robby Stein joins Disrupt 2026 | TechCrunch",
+          "canonical": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
+          "bodyChars": 5862,
+          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -1038,21 +1221,65 @@
           "topicOverlap": 5
         },
         {
-          "suppliedUrl": "https://www.marketscreener.com/news/priority-technology-shares-surge-on-1-6-billion-all-cash-go-private-deal-ce785adbdf8df123",
+          "suppliedUrl": "https://www.marketscreener.com/news/priority-technology-to-go-private-in-1-6-billion-deal-ce785adbdd81f622",
           "domain": "marketscreener.com",
           "publisherFamily": "marketscreener.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.marketscreener.com/news/priority-technology-shares-surge-on-1-6-billion-all-cash-go-private-deal-ce785adbdf8df123",
-          "pageTitle": "Priority Technology Shares Surge on $1.6 Billion All-Cash Go-Private Deal | MarketScreener",
-          "canonical": "https://www.marketscreener.com/news/priority-technology-shares-surge-on-1-6-billion-all-cash-go-private-deal-ce785adbdf8df123",
+          "finalUrl": "https://www.marketscreener.com/news/priority-technology-to-go-private-in-1-6-billion-deal-ce785adbdd81f622",
+          "pageTitle": "Priority Technology to Go Private in $1.6 Billion Deal | MarketScreener",
+          "canonical": "https://www.marketscreener.com/news/priority-technology-to-go-private-in-1-6-billion-deal-ce785adbdd81f622",
           "bodyChars": 1676,
-          "topicOverlap": 8
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5",
+      "title": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - University of Miami",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "miami.edu"
+      ],
+      "independentDomains": [
+        "news.med.miami.edu"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://news.med.miami.edu/minimally-invasive-aortic-procedures-uhealth/",
+          "domain": "news.med.miami.edu",
+          "publisherFamily": "miami.edu",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://news.med.miami.edu/minimally-invasive-aortic-procedures-uhealth/",
+          "pageTitle": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - InventUM",
+          "canonical": "https://news.med.miami.edu/minimally-invasive-aortic-procedures-uhealth/",
+          "bodyChars": 6951,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZnQzUl9QYkFjZHg1ZzluY3VGdEszb1F4XzJzWldFeS1NdmxGLTFIV3FGZllia3U5UWRpTEpsRm1lU2lPVThvNFBRb1djMFJDWVFNQmdwZkVORlg1Vm85b1I3VVJBbWlfc1I3NjlvMEtYWFp5aWdNZ1ZoWWl4NU44a195dGRpNHRMS1JvOXZUcFVUMHgxam1adWsyb2Z5MWxCeHJScGpIeEVzOVdZMnBKQkhVaU9IWU5LeUFiU29iX0NtUFE?oc=5",
+      "title": "Study Shows Virtual Reality IOL Education Associated with Higher Advanced-Technology Lens Selection - Eyewire+",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSmdYaE5rRDRFQjJjU2c1NGxxUk55cE9zc25GRDVxQzNBYW5iNmt6Ml82NHo2ZUIxZF9xY1VEZ1I4eTlQTmp1VUtObTFtbjhSY1hJS2JnblRtZWFLYk9fOUNMaTY0OWQ2OFFQR2dNZGRKT01LU3ZLVVl4R0lMZWRDNw?oc=5",
@@ -1215,7 +1442,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5",
-      "title": "Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act? - Bitcoin Foundation",
+      "title": "Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act? - bitcoinfoundation.org",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -1237,8 +1464,8 @@
           "finalUrl": "https://bitcoinfoundation.org/news/bitcoin/bitcoin-is-back-above-85000-why-is-btc-rallying-despite-the-fed-and-clarity-act/",
           "pageTitle": "Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act? - Bitcoin Foundation",
           "canonical": "https://bitcoinfoundation.org/news/bitcoin/bitcoin-is-back-above-85000-why-is-btc-rallying-despite-the-fed-and-clarity-act/",
-          "bodyChars": 13203,
-          "topicOverlap": 7
+          "bodyChars": 13223,
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
@@ -1409,37 +1636,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5",
-      "title": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs - Colorado Mesa University",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "coloradomesa.edu"
-      ],
-      "independentDomains": [
-        "coloradomesa.edu"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.coloradomesa.edu/now/2026/september/cmu-political-science-students-meet-global-leaders-at-conference-on-world-affairs.html",
-          "domain": "coloradomesa.edu",
-          "publisherFamily": "coloradomesa.edu",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.coloradomesa.edu/now/2026/september/cmu-political-science-students-meet-global-leaders-at-conference-on-world-affairs.html",
-          "pageTitle": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs | CMUnow",
-          "canonical": "",
-          "bodyChars": 4050,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOYkxGUEpaV1QtM1FZaUNZVm01TjBuaEl1Q0NmY3dLZG1GdUhHNHpQVlpybkpxOWgzMGM4TXp1OUJDLXBWeFd2Mk93dWhvMnE0cE1FMnprVkJqS29KRkZjLXBaNDFTVjVBeTY5MUJ1LThtMDJtbUNBS0JpaWlXSWxKTGlaTHJZX0xCS0V3REc4WXdYdkEtZDZIYV9kekZJY2s5Y3JMSTd3cnBnaGhJZVZsbzQtWTZtV3pfTEE0bGN1Q1lCUWVaQVN2RFdydXNiVEdOaXlrNWxwdDQ0bXI0alRXS1o5NDNEY0haYkVZ?oc=5",
       "title": "Michael Luca Named Director of Carnegie Mellon University’s Block Center for Technology and Society - Carnegie Mellon University",
       "status": "pass",
@@ -1471,37 +1667,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5",
-      "title": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - University of Miami",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "miami.edu"
-      ],
-      "independentDomains": [
-        "news.med.miami.edu"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://news.med.miami.edu/minimally-invasive-aortic-procedures-uhealth/",
-          "domain": "news.med.miami.edu",
-          "publisherFamily": "miami.edu",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://news.med.miami.edu/minimally-invasive-aortic-procedures-uhealth/",
-          "pageTitle": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - InventUM",
-          "canonical": "https://news.med.miami.edu/minimally-invasive-aortic-procedures-uhealth/",
-          "bodyChars": 6951,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR3B2X0hTRmlsNkhMcVZYRF8zOEZWMFpQLUtPMkExQzJ1UUEwdS16S2h0bklnNDIzcm9NTC1Ja0thVllkTmJad21EM3ZjQjUzVGtUZ2p4VDBZRHd0QmNWMWhmRTQwR2N4QnhYaUpsVXVBd2E2bEZQeXN2Z0pzYWc2cVY2dE1ZNGFyUUJfMFdGTHRYRzdPMElNOS02SFhwU0w3djlaOGhDUlEwRUFEVHFkN0xXdGNHZFBha0dmTmhLc01ic00?oc=5",
       "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Reuters",
       "status": "pass",
@@ -1510,15 +1675,15 @@
       "independentPublisherCount": 4,
       "independentPublisherFamilies": [
         "defensenews.com",
+        "pbs.org",
         "dw.com",
-        "bbc.com",
-        "lrt.lt"
+        "bbc.com"
       ],
       "independentDomains": [
         "defensenews.com",
+        "pbs.org",
         "dw.com",
-        "bbc.com",
-        "lrt.lt"
+        "bbc.com"
       ],
       "sources": [
         {
@@ -1533,6 +1698,19 @@
           "canonical": "https://www.defensenews.com/global/europe/2026/09/21/denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal/",
           "bodyChars": 2636,
           "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.pbs.org/newshour/world/trump-cancels-tariff-threat-over-greenland-says-nato-agreed-to-framework-of-future-arctic-deal",
+          "domain": "pbs.org",
+          "publisherFamily": "pbs.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.pbs.org/newshour/world/trump-cancels-tariff-threat-over-greenland-says-nato-agreed-to-framework-of-future-arctic-deal",
+          "pageTitle": "Trump cancels tariff threat over Greenland, says NATO agreed to 'framework' of future Arctic deal | PBS News",
+          "canonical": "https://www.pbs.org/newshour/world/trump-cancels-tariff-threat-over-greenland-says-nato-agreed-to-framework-of-future-arctic-deal",
+          "bodyChars": 9235,
+          "topicOverlap": 12
         },
         {
           "suppliedUrl": "https://www.dw.com/en/greenland-updates-denmark-floats-nato-mission-on-island/live-75558976",
@@ -1559,19 +1737,6 @@
           "canonical": "https://www.bbc.com/news/articles/c4g3kw5ezepo",
           "bodyChars": 4664,
           "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.lrt.lt/en/news-in-english/19/2813132/lithuanian-president-urges-shared-arctic-security-role-to-ease-greenland-tensions",
-          "domain": "lrt.lt",
-          "publisherFamily": "lrt.lt",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.lrt.lt/en/news-in-english/19/2813132/lithuanian-president-urges-shared-arctic-security-role-to-ease-greenland-tensions",
-          "pageTitle": "Lithuanian president urges shared Arctic security role to ease Greenland tensions - LRT",
-          "canonical": "",
-          "bodyChars": 1705,
-          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -1579,7 +1744,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5",
-      "title": "Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces - news.uscg.mil",
+      "title": "Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces - United States Coast Guard News (.mil)",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -1602,7 +1767,7 @@
           "pageTitle": "Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces East River restrictions > United States Coast Guard News > Press Releases",
           "canonical": "",
           "bodyChars": 2423,
-          "topicOverlap": 11
+          "topicOverlap": 12
         }
       ],
       "recoveryAttempts": 0,
@@ -1697,7 +1862,7 @@
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5",
@@ -1822,12 +1987,12 @@
           "finalUrl": "https://www.stocktitan.net/news/GFS/global-foundries-launches-quantum-technology-solutions-to-scale-u-s-qr2ge8raydzc.html",
           "pageTitle": "GlobalFoundries launches quantum unit, targets $375M aid | GFS Stock News",
           "canonical": "https://www.stocktitan.net/news/GFS/global-foundries-launches-quantum-technology-solutions-to-scale-u-s-qr2ge8raydzc.html",
-          "bodyChars": 13474,
+          "bodyChars": 13465,
           "topicOverlap": 7
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQLUtZbGZRcm5rTjVMOG93MHFQVzNiek5PbDNsQmZHYk9IZExxYmJRSnY2UlhCWUc2Z3dKTXl6c2RBR3RWTHRQYkJ0TnR4ZXNvVWNuYzZHdlpjRDlaVDdabWluYnZ4eERVUmx5bDlHMnVzODNsR0V6Y25FdXpGQV9rUldMT05wRjlsTDhoQmJLdUhFUdIBlwFBVV95cUxQZjU0akhzR2x6RUNOQ1BZSFUtWE9vMWJoU0xUanVqNS1ZeGNSYjZKQjItMmZodUV5b1B1NTE4YzdpRExGWWpIRGJId1pMSURGOHp0VU5HeE5ZeWNULVR1SHJOMm5VRFoxMmhaR3JSZ2RpMlE1TkZhSkpIQzdyQzBEMkpaM2FaNldsR1VhTF9XOHViWWZBU19R?oc=5",
@@ -1855,6 +2020,37 @@
           "canonical": "https://www.huaweicentral.com/huawei-announces-a-new-launch-conference-for-september-28/",
           "bodyChars": 2571,
           "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5",
+      "title": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs - Colorado Mesa University",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "coloradomesa.edu"
+      ],
+      "independentDomains": [
+        "coloradomesa.edu"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.coloradomesa.edu/now/2026/september/cmu-political-science-students-meet-global-leaders-at-conference-on-world-affairs.html",
+          "domain": "coloradomesa.edu",
+          "publisherFamily": "coloradomesa.edu",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.coloradomesa.edu/now/2026/september/cmu-political-science-students-meet-global-leaders-at-conference-on-world-affairs.html",
+          "pageTitle": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs | CMUnow",
+          "canonical": "",
+          "bodyChars": 4050,
+          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -1899,25 +2095,25 @@
       "validSourceCount": 2,
       "independentPublisherCount": 2,
       "independentPublisherFamilies": [
-        "montereyherald.com",
+        "mercurynews.com",
         "com.bd"
       ],
       "independentDomains": [
-        "montereyherald.com",
+        "mercurynews.com",
         "unb.com.bd"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.montereyherald.com/2026/09/21/china-us-ai-dominance-safety-concerns/",
-          "domain": "montereyherald.com",
-          "publisherFamily": "montereyherald.com",
+          "suppliedUrl": "https://www.mercurynews.com/2026/09/21/china-us-ai-dominance-safety-concerns/",
+          "domain": "mercurynews.com",
+          "publisherFamily": "mercurynews.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.montereyherald.com/2026/09/21/china-us-ai-dominance-safety-concerns/",
+          "finalUrl": "https://www.mercurynews.com/2026/09/21/china-us-ai-dominance-safety-concerns/",
           "pageTitle": "China, US compete for AI dominance but have concerns over safety",
           "canonical": "https://www.twincities.com/2026/09/21/china-us-ai-dominance-safety-concerns/",
-          "bodyChars": 6922,
+          "bodyChars": 7017,
           "topicOverlap": 6
         },
         {
@@ -2031,6 +2227,127 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
+      "title": "GM can’t ‘bring back’ Apple CarPlay because it never left",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 7,
+      "independentPublisherCount": 7,
+      "independentPublisherFamilies": [
+        "theverge.com",
+        "jalopnik.com",
+        "corvetteblogger.com",
+        "carbuzz.com",
+        "macdailynews.com",
+        "theautopian.com",
+        "motortrend.com"
+      ],
+      "independentDomains": [
+        "theverge.com",
+        "jalopnik.com",
+        "corvetteblogger.com",
+        "carbuzz.com",
+        "macdailynews.com",
+        "theautopian.com",
+        "motortrend.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
+          "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
+          "pageTitle": "GM can’t ‘bring back’ Apple CarPlay because it never left | The Verge",
+          "canonical": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
+          "bodyChars": 6890,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://www.jalopnik.com/2259206/gm-bringing-back-apple-carplay-android-auto-2027-chevrolet-silverado-gmc-sierra/",
+          "domain": "jalopnik.com",
+          "publisherFamily": "jalopnik.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.jalopnik.com/2259206/gm-bringing-back-apple-carplay-android-auto-2027-chevrolet-silverado-gmc-sierra/",
+          "pageTitle": "GM Is Bringing Back Apple CarPlay And Android Auto After Saying It Wouldn't",
+          "canonical": "https://www.jalopnik.com/2259206/gm-bringing-back-apple-carplay-android-auto-2027-chevrolet-silverado-gmc-sierra/",
+          "bodyChars": 3121,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.corvetteblogger.com/2025/10/31/gm-will-be-dropping-apple-carplay-android-auto-from-all-its-vehicles/",
+          "domain": "corvetteblogger.com",
+          "publisherFamily": "corvetteblogger.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.corvetteblogger.com/2025/10/31/gm-will-be-dropping-apple-carplay-android-auto-from-all-its-vehicles/",
+          "pageTitle": "GM Will Be Dropping Apple CarPlay & Android Auto from All its Vehicles - Corvette: Sales, News & Lifestyle",
+          "canonical": "https://www.corvetteblogger.com/2025/10/31/gm-will-be-dropping-apple-carplay-android-auto-from-all-its-vehicles/",
+          "bodyChars": 11422,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://carbuzz.com/gm-not-completely-killing-carplay-android-auto/",
+          "domain": "carbuzz.com",
+          "publisherFamily": "carbuzz.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://carbuzz.com/gm-not-completely-killing-carplay-android-auto/",
+          "pageTitle": "GM May Not Completely Kill Apple CarPlay And Android Auto After All",
+          "canonical": "https://carbuzz.com/gm-not-completely-killing-carplay-android-auto/",
+          "bodyChars": 4771,
+          "topicOverlap": 6
+        },
+        {
+          "suppliedUrl": "https://macdailynews.com/2026/09/15/gm-capitulates-on-apple-carplay-ban-brings-back-system-later-this-year/",
+          "domain": "macdailynews.com",
+          "publisherFamily": "macdailynews.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://macdailynews.com/2026/09/15/gm-capitulates-on-apple-carplay-ban-brings-back-system-later-this-year/",
+          "pageTitle": "GM capitulates on Apple CarPlay ban; brings back system later this year",
+          "canonical": "https://macdailynews.com/2026/09/15/gm-capitulates-on-apple-carplay-ban-brings-back-system-later-this-year/",
+          "bodyChars": 4802,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.theautopian.com/the-new-2027-chevy-silverado-brings-back-the-350-v8-engine-after-almost-30-years/",
+          "domain": "theautopian.com",
+          "publisherFamily": "theautopian.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theautopian.com/the-new-2027-chevy-silverado-brings-back-the-350-v8-engine-after-almost-30-years/",
+          "pageTitle": "The New 2027 Chevy Silverado Brings Back The 350 V8 Engine After Almost 30 Years - The Autopian",
+          "canonical": "https://www.theautopian.com/the-new-2027-chevy-silverado-brings-back-the-350-v8-engine-after-almost-30-years/",
+          "bodyChars": 16285,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://www.motortrend.com/news/apple-carplay-ultra-phone-mirroring-first-look-review",
+          "domain": "motortrend.com",
+          "publisherFamily": "motortrend.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.motortrend.com/news/apple-carplay-ultra-phone-mirroring-first-look-review",
+          "pageTitle": "Apple CarPlay Ultra First Look: Taking Over the Entire Dashboard",
+          "canonical": "https://www.motortrend.com/news/apple-carplay-ultra-phone-mirroring-first-look-review",
+          "bodyChars": 10798,
+          "topicOverlap": 8
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9CNWdDTkRQZUpVM3duLXp2V0ZLMzVSeFdmQ00yV2R3Qk1CemNfNWM4MnFmaEIzc3Zhdk1qa05YbGdSTkVxQTU2SVlOLXBTR3VqbkZUcE9zbw?oc=5",
       "title": "UN panel calls for stronger safeguards as AI agents advance - UN News",
       "status": "pass",
@@ -2093,6 +2410,133 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://www.theverge.com/entertainment/998302/paramount-warner-bros-discovery-merger-settlement",
+      "title": "Paramount settles lawsuit blocking $110 billion Warner Bros. merger",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 6,
+      "independentPublisherCount": 6,
+      "independentPublisherFamilies": [
+        "theverge.com",
+        "deadline.com",
+        "livemint.com",
+        "newscord.org",
+        "foxbusiness.com",
+        "cosmicbook.news"
+      ],
+      "independentDomains": [
+        "theverge.com",
+        "deadline.com",
+        "livemint.com",
+        "newscord.org",
+        "foxbusiness.com",
+        "cosmicbook.news"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.theverge.com/entertainment/998302/paramount-warner-bros-discovery-merger-settlement",
+          "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theverge.com/entertainment/998302/paramount-warner-bros-discovery-merger-settlement",
+          "pageTitle": "Paramount settles lawsuit blocking $110 billion Warner Bros. merger | The Verge",
+          "canonical": "https://www.theverge.com/entertainment/998302/paramount-warner-bros-discovery-merger-settlement",
+          "bodyChars": 4373,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://deadline.com/2026/07/state-antitrust-lawsuit-paramount-warner-bros-1236980723/",
+          "domain": "deadline.com",
+          "publisherFamily": "deadline.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://deadline.com/2026/07/state-antitrust-lawsuit-paramount-warner-bros-1236980723/",
+          "pageTitle": "California, Other States Sue To Block Paramount-Warner Bros. Merger",
+          "canonical": "https://deadline.com/2026/07/state-antitrust-lawsuit-paramount-warner-bros-1236980723/",
+          "bodyChars": 12739,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.livemint.com/companies/news/paramountwarner-merger-california-and-11-states-could-settle-lawsuit-blocking-110-billion-acquisition-report-11789828816137.html",
+          "domain": "livemint.com",
+          "publisherFamily": "livemint.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.livemint.com/companies/news/paramountwarner-merger-california-and-11-states-could-settle-lawsuit-blocking-110-billion-acquisition-report-11789828816137.html",
+          "pageTitle": "Paramount-Warner merger: California and 11 states could settle lawsuit blocking $110 billion acquisition this weekend | Company Business News",
+          "canonical": "https://www.livemint.com/companies/news/paramountwarner-merger-california-and-11-states-could-settle-lawsuit-blocking-110-billion-acquisition-report-11789828816137.html",
+          "bodyChars": 5517,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://newscord.org/article/paramount-skydance-settles-with-california-and-11-states-clearing-warner-bros-di--Story_20260921_Californiasettleslaw69a0df28",
+          "domain": "newscord.org",
+          "publisherFamily": "newscord.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://newscord.org/article/paramount-skydance-settles-with-california-and-11-states-clearing-warner-bros-di--Story_20260921_Californiasettleslaw69a0df28",
+          "pageTitle": "Paramount Skydance Settles With California And 11 States, Clearing Warner Bros Discovery Merger: 15 outlets compared | NewsCord",
+          "canonical": "https://newscord.org/article/paramount-skydance-settles-with-california-and-11-states-clearing-warner-bros-di--Story_20260921_Californiasettleslaw69a0df28",
+          "bodyChars": 3327,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://www.foxbusiness.com/media/paramount-california-ag-meet-possible-settlement-110b-warner-bros-discovery-merger-lawsuit",
+          "domain": "foxbusiness.com",
+          "publisherFamily": "foxbusiness.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.foxbusiness.com/media/paramount-california-ag-meet-possible-settlement-110b-warner-bros-discovery-merger-lawsuit",
+          "pageTitle": "Paramount, California AG to meet over possible settlement in $110B Warner Bros. Discovery merger | Fox Business",
+          "canonical": "https://www.foxbusiness.com/media/paramount-california-ag-meet-possible-settlement-110b-warner-bros-discovery-merger-lawsuit",
+          "bodyChars": 4441,
+          "topicOverlap": 12
+        },
+        {
+          "suppliedUrl": "https://cosmicbook.news/paramount-warner-bros-merger-lawsuit-california",
+          "domain": "cosmicbook.news",
+          "publisherFamily": "cosmicbook.news",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://cosmicbook.news/paramount-warner-bros-merger-lawsuit-california",
+          "pageTitle": "12 States Sue To Block $110 Billion Paramount–Warner Bros. Merger One Day After Ellison&#039;s California Exit Threat - Cosmic Book News",
+          "canonical": "https://cosmicbook.news/paramount-warner-bros-merger-lawsuit-california",
+          "bodyChars": 11787,
+          "topicOverlap": 13
+        },
+        {
+          "suppliedUrl": "https://finance.yahoo.com/media-advertising/articles/paramount-settles-california-other-states-143030254.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://www.nbcnews.com/business/media/12-states-file-lawsuit-block-110-billion-paramount-warner-bros-merger-rcna587286",
+          "domain": "nbcnews.com",
+          "publisherFamily": "nbcnews.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.nbcnews.com/business/media/12-states-file-lawsuit-block-110-billion-paramount-warner-bros-merger-rcna587286",
+          "pageTitle": "12 states file lawsuit to block $110 billion Paramount-Warner Bros. merger",
+          "canonical": "https://www.nbcnews.com/business/media/12-states-file-lawsuit-block-110-billion-paramount-warner-bros-merger-rcna587286",
+          "bodyChars": 364,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5",
       "title": "The turbulent AI era is here. The choices we make now are critical. - Gates Notes",
       "status": "pass",
@@ -2129,39 +2573,12 @@
           "finalUrl": "https://www.cnn.com/2026/08/26/us/video/ac360gatesai",
           "pageTitle": "Bill Gates warns ‘the turbulent AI era is here’ | CNN",
           "canonical": "https://www.cnn.com/2026/08/26/us/video/ac360gatesai",
-          "bodyChars": 3677,
+          "bodyChars": 3383,
           "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5",
-      "title": "From laptop bans to new tech courses, US law schools grapple with AI - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
-          "domain": "tradingview.com",
-          "publisherFamily": "tradingview.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
-          "pageTitle": "From laptop bans to new tech courses, US law schools grapple with AI — TradingView News",
-          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
-          "bodyChars": 344,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5",
@@ -2193,6 +2610,33 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5",
+      "title": "From laptop bans to new tech courses, US law schools grapple with AI - Reuters",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
+          "domain": "tradingview.com",
+          "publisherFamily": "tradingview.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
+          "pageTitle": "From laptop bans to new tech courses, US law schools grapple with AI — TradingView News",
+          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N44S10V:0-from-laptop-bans-to-new-tech-courses-us-law-schools-grapple-with-ai/",
+          "bodyChars": 344,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPa3REZ0lvRlVVc3ZIWGVYTTByR0FYcWdsYUdua2YtNFRjZG5HdG9ISDBLa0YwRFVmNlF4dGVyRzE3dEpFekFOUXdFdFZ2TEItZmhvam90MjgxRFFndUp2YklZYnhVTG9HX3VibElTSFl0UmxWWWdfM3NyNjFJTHdTaEc1cw?oc=5",
@@ -2251,37 +2695,6 @@
           "canonical": "https://iapp.org/news/a/thought-for-the-week-why-runaway-ai-development-does-not-serve-chinas-interests",
           "bodyChars": 6326,
           "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSWNucXpfdzE2ZENwVW9OemRaTmJ4eUk0WHBfZGVMYkV3bGdjQjB1aXRXX243MmNzc09ZLWk3OEljOTFLSnFBalVhaF84VTFKRnNEWWhub09WRFhQWjVfYnlnRkw5UjF5VThyeE1MaERVMWJESmdHdnhmMmxlZ2taOWhUSEkwaTJMVDhYMW04anNGUmhqcjR0aE1INNIBoAFBVV95cUxOZnBySmU4X1hNVDR4R3NROHZkN0RmVXFVV0o1WWFCSlZYeWNOT0pHQm1fVDRUUWRLX0xwYVNEODcwdlo4aURHNXRmcEVvN01Yb2doN1FUMWpCaFRVSjNKRXZqajdoMzlmTHc0R3F3Wk1weHE5TUs2bGFXdDVZa0lJcnhZYXJjUUJhZmFKeHFZRTltR0VldFdZWDJIWTJzNnVx?oc=5",
-      "title": "Inside Kazakhstan’s push to become a regional AI centre - Al Jazeera",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "aljazeera.com"
-      ],
-      "independentDomains": [
-        "aljazeera.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.aljazeera.com/news/2026/9/21/inside-kazakhstans-push-to-become-a-regional-ai-centre",
-          "domain": "aljazeera.com",
-          "publisherFamily": "aljazeera.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.aljazeera.com/news/2026/9/21/inside-kazakhstans-push-to-become-a-regional-ai-centre",
-          "pageTitle": "Inside Kazakhstan’s push to become a regional AI centre | Technology News | Al Jazeera",
-          "canonical": "https://www.aljazeera.com/news/2026/9/21/inside-kazakhstans-push-to-become-a-regional-ai-centre",
-          "bodyChars": 6606,
-          "topicOverlap": 7
         }
       ],
       "recoveryAttempts": 0,
@@ -2512,6 +2925,32 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5",
+      "title": "Executive Security Extends Beyond CEOs to Continue Year-Over-Year Growth - ASIS International",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdUFLaTZzNXVNSXZwTGZ2d2JMdVJXa3BpTlVTLWt4ZVgxc1VtVnJHTGp5dEs5Q2RNeXBvcHNhRXZpOVFUbVRHRGYwblRRelV1bzYtRHVPeDUtdHF3bG43MW53WjFOa2RINVFqS2RWdWo2QjRVQTdkUHF6alB3LUFUc1ljck9OaV9JLW5fVdIBkgFBVV95cUxNUEt3R25kaHR4THJLdkFsa2dxTVI4RWRSWDFHZFJBSktGVU9Tb0E5SS1zN0xCYlQySGJWUkg5RElmc2ZqVTMzWFN0SHAtZjMwRVo5WW1ucDhxNW1MQTBmWVpDa0IydHY1OVlSVlRpREViZXNSaWVnMWdwdHlZZXJXZXh3eVlHYXZIRjBkRkpYeWdwQQ?oc=5",
+      "title": "We needed the Driver’s Privacy Protection Act. Technology found a way around it. - The Hill",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOERQc3JwUVVYTXVDYVl0WmZ5UVBCdjZVU1NHRS12eTVwcGJjNnlkejIwX1dUR0VXRUdkNVBkQUpGMlE1VXNFUU9DS3RtQzJpd1BTOV9EekJlYkFIdGRJRTlUVGx0QW12LWFpRXpDa1hyX2xIODRna0pjZEM5YnNtY1VDeFlwZ9IBiwFBVV95cUxPNzY0RnE2U2diODVvOVh3ZTg4RWR2Umtib1gwcGN1T1V6WFIwX0JRMGJBeVlGMnVkUXZ4TnNKOXBzcERoNUJzT0xyUHhtbmdPT1hlTWhqR2p0UWtkM1prQ19YRmN6NWFHaE8yYVpxZ09JeG5iSGVLQV9wcy1oNG1SRzB6blNIQWI2dVo4?oc=5",
       "title": "U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark - CNBC",
       "status": "pass",
@@ -2601,19 +3040,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdUFLaTZzNXVNSXZwTGZ2d2JMdVJXa3BpTlVTLWt4ZVgxc1VtVnJHTGp5dEs5Q2RNeXBvcHNhRXZpOVFUbVRHRGYwblRRelV1bzYtRHVPeDUtdHF3bG43MW53WjFOa2RINVFqS2RWdWo2QjRVQTdkUHF6alB3LUFUc1ljck9OaV9JLW5fVdIBkgFBVV95cUxNUEt3R25kaHR4THJLdkFsa2dxTVI4RWRSWDFHZFJBSktGVU9Tb0E5SS1zN0xCYlQySGJWUkg5RElmc2ZqVTMzWFN0SHAtZjMwRVo5WW1ucDhxNW1MQTBmWVpDa0IydHY1OVlSVlRpREViZXNSaWVnMWdwdHlZZXJXZXh3eVlHYXZIRjBkRkpYeWdwQQ?oc=5",
-      "title": "We needed the Driver’s Privacy Protection Act. Technology found a way around it. - The Hill",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObTlBMUhCMU1lTUtmLWhWVUNOanZWNWc0bXkxNFVZYmUzb2RlWGFndlhPaDAwZjFoRi00R2lwSVZINExLZ2ROal85T2NIeWxaZFRWUnRLRmFWT2VmZTQtQjloR0o2Vlg3WGJWZ1h2V0d1RnpMQjZRNTRZQmtFamVoS2JSOVE1ZVVXSzg3NE9JcjFNb2ZwY2NXUUJYeGxGLXVxN1dDM3NiYWk3V3V0UDU2S1pTR09jdldEWUxFNURuMmVkS1hpTzdoRg?oc=5",
       "title": "Irish privacy regulator fines Google €403 million over location data processing - Reuters",
       "status": "pass",
@@ -2659,7 +3085,7 @@
           "pageTitle": "Google privacy fine: Irish privacy regulator fines Google &euro;403 million over location data processing - The Economic Times",
           "canonical": "https://m.economictimes.com/tech/technology/irish-privacy-regulator-fines-google-403-million-over-location-data-processing/articleshow/134389000.cms",
           "bodyChars": 2352,
-          "topicOverlap": 9
+          "topicOverlap": 11
         },
         {
           "suppliedUrl": "https://en.vijesti.me/amp/827745/Irish-privacy-regulator-fines-Google-403-million-euros-for-processing-location-data",
@@ -2685,7 +3111,7 @@
           "pageTitle": "Google privacy fine: Irish privacy regulator fines Google €403 million over location data processing - The Economic Times",
           "canonical": "https://m.economictimes.com/tech/technology/irish-privacy-regulator-fines-google-403-million-over-location-data-processing/articleshow/134389000.cms",
           "bodyChars": 86,
-          "topicOverlap": 9
+          "topicOverlap": 11
         },
         {
           "suppliedUrl": "https://ppc.land/irish-regulator-fines-google-eur403-million-over-location-data-processing/",
@@ -2892,142 +3318,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-      "title": "Google’s Gemini is the latest AI model to hack other companies",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 8,
-      "independentPublisherCount": 8,
-      "independentPublisherFamilies": [
-        "techcrunch.com",
-        "cnbc.com",
-        "theguardian.com",
-        "kmbc.com",
-        "bhaskarenglish.in",
-        "moneycontrol.com",
-        "businesstoday.in",
-        "the-independent.com"
-      ],
-      "independentDomains": [
-        "techcrunch.com",
-        "cnbc.com",
-        "theguardian.com",
-        "kmbc.com",
-        "bhaskarenglish.in",
-        "moneycontrol.com",
-        "businesstoday.in",
-        "the-independent.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-          "pageTitle": "Google’s Gemini is the latest AI model to hack other companies | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-          "bodyChars": 1910,
-          "topicOverlap": 5
-        },
-        {
-          "suppliedUrl": "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html",
-          "domain": "cnbc.com",
-          "publisherFamily": "cnbc.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html",
-          "pageTitle": "Google's Gemini becomes latest AI model to break out and hack computer systems",
-          "canonical": "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html",
-          "bodyChars": 3222,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.theguardian.com/technology/2026/sep/18/google-gemini-ai-hack",
-          "domain": "theguardian.com",
-          "publisherFamily": "theguardian.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theguardian.com/technology/2026/sep/18/google-gemini-ai-hack",
-          "pageTitle": "Google says its Gemini AI model hacked three other companies | Google | The Guardian",
-          "canonical": "https://www.theguardian.com/technology/2026/sep/18/google-gemini-ai-hack",
-          "bodyChars": 3295,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.kmbc.com/article/google-gemini-ai-hacks-companies/73797054",
-          "domain": "kmbc.com",
-          "publisherFamily": "kmbc.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.kmbc.com/article/google-gemini-ai-hacks-companies/73797054",
-          "pageTitle": "Google Gemini AI model hacks three other companies - KMBC",
-          "canonical": "https://www.kmbc.com/article/google-gemini-ai-hacks-companies/73797054",
-          "bodyChars": 2249,
-          "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://www.bhaskarenglish.in/tech-science/news/google-gemini-ai-hacks-companies-security-test-incident-139079076.html",
-          "domain": "bhaskarenglish.in",
-          "publisherFamily": "bhaskarenglish.in",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.bhaskarenglish.in/tech-science/news/google-gemini-ai-hacks-companies-security-test-incident-139079076.html",
-          "pageTitle": "Google Gemini AI Hacks Companies During Security Test | Cyber Incident",
-          "canonical": "https://www.bhaskarenglish.in/tech-science/news/google-gemini-ai-hacks-companies-security-test-incident-139079076.html",
-          "bodyChars": 4433,
-          "topicOverlap": 16
-        },
-        {
-          "suppliedUrl": "https://www.moneycontrol.com/technology/google-gemini-hack-ai-model-accessed-three-companies-during-cybersecurity-test-article-14033384.html",
-          "domain": "moneycontrol.com",
-          "publisherFamily": "moneycontrol.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.moneycontrol.com/technology/google-gemini-hack-ai-model-accessed-three-companies-during-cybersecurity-test-article-14033384.html",
-          "pageTitle": "Google Gemini hack: AI model accessed three companies during cybersecurity test",
-          "canonical": "https://www.moneycontrol.com/technology/google-gemini-hack-ai-model-accessed-three-companies-during-cybersecurity-test-article-14033384.html",
-          "bodyChars": 4437,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://www.businesstoday.in/technology/artificial-intelligence/story/google-gemini-ai-hacked-three-real-companies-during-cyber-security-tests-556592-2026-09-19",
-          "domain": "businesstoday.in",
-          "publisherFamily": "businesstoday.in",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.businesstoday.in/technology/artificial-intelligence/story/google-gemini-ai-hacked-three-real-companies-during-cyber-security-tests-556592-2026-09-19",
-          "pageTitle": "Now, Google Gemini becomes latest AI model to break out & hack real companies - BusinessToday",
-          "canonical": "https://www.businesstoday.in/technology/artificial-intelligence/story/google-gemini-ai-hacked-three-real-companies-during-cyber-security-tests-556592-2026-09-19",
-          "bodyChars": 3669,
-          "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://www.the-independent.com/tech/google-gemini-ai-hacked-three-other-companies-b3052890.html",
-          "domain": "the-independent.com",
-          "publisherFamily": "the-independent.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.the-independent.com/tech/google-gemini-ai-hacked-three-other-companies-b3052890.html",
-          "pageTitle": "Google says its Gemini AI hacked 3 other companies | The Independent",
-          "canonical": "https://www.independent.co.uk/tech/google-gemini-ai-hacked-three-other-companies-b3052890.html",
-          "bodyChars": 6542,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
       "title": "Can John Ternus find Apple’s next big thing?",
       "status": "pass",
@@ -3040,8 +3330,8 @@
         "convergence-now.com",
         "stuff.tv",
         "elpais.com",
-        "usatoday.com",
-        "macdailynews.com"
+        "macdailynews.com",
+        "gadgetmatch.com"
       ],
       "independentDomains": [
         "theverge.com",
@@ -3049,8 +3339,8 @@
         "convergence-now.com",
         "stuff.tv",
         "english.elpais.com",
-        "usatoday.com",
-        "macdailynews.com"
+        "macdailynews.com",
+        "gadgetmatch.com"
       ],
       "sources": [
         {
@@ -3102,7 +3392,7 @@
           "finalUrl": "https://www.stuff.tv/features/what-to-expect-from-apples-next-big-event-iphone-siri/",
           "pageTitle": "What to expect from Apple’s next big event - including new iPhone software and (finally) a revamped Siri | Stuff",
           "canonical": "https://www.stuff.tv/features/what-to-expect-from-apples-next-big-event-iphone-siri/",
-          "bodyChars": 6719,
+          "bodyChars": 6696,
           "topicOverlap": 11
         },
         {
@@ -3117,19 +3407,6 @@
           "canonical": "https://english.elpais.com/technology/2026-09-12/john-ternus-the-hardware-man-who-will-steer-apple-in-the-ai-era.html",
           "bodyChars": 6429,
           "topicOverlap": 6
-        },
-        {
-          "suppliedUrl": "https://www.usatoday.com/story/money/2026/04/20/future-new-apple-ceo-john-ternus/89707188007/",
-          "domain": "usatoday.com",
-          "publisherFamily": "usatoday.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.usatoday.com/story/money/2026/04/20/future-new-apple-ceo-john-ternus/89707188007/",
-          "pageTitle": "What's the future with new Apple CEO John Ternus?",
-          "canonical": "",
-          "bodyChars": 4448,
-          "topicOverlap": 5
         },
         {
           "suppliedUrl": "https://businessday.ng/technology/article/john-ternus-the-engineer-taking-apple-to-its-next-era/",
@@ -3154,12 +3431,47 @@
           "finalUrl": "https://macdailynews.com/2026/04/21/can-apple-hardware-engineering-veteran-john-ternus-restore-jobs-era-decisiveness/",
           "pageTitle": "Can Apple hardware engineering veteran John Ternus restore Jobs-era decisiveness?",
           "canonical": "https://macdailynews.com/2026/04/21/can-apple-hardware-engineering-veteran-john-ternus-restore-jobs-era-decisiveness/",
-          "bodyChars": 8870,
+          "bodyChars": 8872,
           "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://www.gadgetmatch.com/apple-ceo-john-ternus-first-apple-event-iphone-duo/",
+          "domain": "gadgetmatch.com",
+          "publisherFamily": "gadgetmatch.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.gadgetmatch.com/apple-ceo-john-ternus-first-apple-event-iphone-duo/",
+          "pageTitle": "How did new CEO John Ternus do for his first Apple event? - GadgetMatch",
+          "canonical": "https://www.gadgetmatch.com/apple-ceo-john-ternus-first-apple-event-iphone-duo/",
+          "bodyChars": 15497,
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSktoX0JiaF9WNFpaMDFzdy05SEYyQVhmZUJyVGpmUUViaFU3UXVETmQ1Qk9NWFU1LUdESzJ1SDJxcG8tS1BKTGd1UW1aeW4wTkJvcW04anBMV1RrV0ZsSVUxOGpEdnRZUjdnSDFob2ZuMUtQdTlZbFFFWWVSRlpCSTlBWE5TMm05QkdqODZKMk1jX1dOc09TZ1ptNDRTdw?oc=5",
+      "title": "Forum reveals widespread unease with AI technology race - Minnesota Reformer",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://minnesotareformer.com/2026/09/21/forum-reveals-widespread-unease-with-ai-technology-race/",
+          "domain": "minnesotareformer.com",
+          "publisherFamily": "minnesotareformer.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZzF1U1p0TVN5LWRKZlJGc29FSlJsNERlZWdtVmJLMUZsVktQc2I5TVRjdk14aTBJYzZRaUpGWlR1d0hBTlZIclhSSVJhRUNENERxRjFEQ3YwbjdXZFl4Y1Q0bkJpdVo2QUlQdHFmUHRNc0puWEVQQURTSUQ0SUVkUm9GdlplZmhPaFdaVHdXNVhhRTBXRGdoZA?oc=5",
@@ -3246,6 +3558,37 @@
           "canonical": "https://www.coindesk.com/markets/2026/09/21/bitcoin-s-price-has-cleared-a-key-hurdle-that-has-historically-preceded-major-bull-runs",
           "bodyChars": 4075,
           "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSWdoWU9hc3plZTZFeWEtQmgwOVJBOWU4WTJQWVFza2E1b3E1Z0lmdEs2d09ZaTJPTlNDVTdoVGcwaGFCMGd3UjdYbUp1TzdHcVVCT1M3UHJTWlpaT0dWVmRLd2drcDBnX3d6cDB0N1FwMFFNZnNrSHdwVkd5U0NWdm9ST2xxdWF4S0lZV3I4ZFlUYkhnT2RhY3NOUktSYThfcVB6UV92akxMcVpVejJtM3JfeHBzMlg3cVVmbWpEcWRMQmhjanlYR1gzY3VvT01XVEdZYTczM19VX3dWdzlOUGFWOWplNkc0ZWxSczZiblA2RG9C?oc=5",
+      "title": "Around 100 Former Heads of State and Government Call on Current Leaders to Renew International Cooperation - PR Newswire",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "prnewswire.com"
+      ],
+      "independentDomains": [
+        "prnewswire.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.prnewswire.com/news-releases/around-100-former-heads-of-state-and-government-call-on-current-leaders-to-renew-international-cooperation-302885032.html",
+          "domain": "prnewswire.com",
+          "publisherFamily": "prnewswire.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.prnewswire.com/news-releases/around-100-former-heads-of-state-and-government-call-on-current-leaders-to-renew-international-cooperation-302885032.html",
+          "pageTitle": "Around 100 Former Heads of State and Government Call on Current Leaders to Renew International Cooperation",
+          "canonical": "https://www.prnewswire.com/news-releases/around-100-former-heads-of-state-and-government-call-on-current-leaders-to-renew-international-cooperation-302885032.html",
+          "bodyChars": 17495,
+          "topicOverlap": 11
         }
       ],
       "recoveryAttempts": 0,
@@ -3339,37 +3682,6 @@
           "canonical": "https://techcrunch.com/2026/09/21/where-will-the-next-breakout-startup-come-from-benchmarks-full-partnership-weighs-in-at-techcrunch-disrupt-2026/",
           "bodyChars": 8609,
           "topicOverlap": 12
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
-      "title": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "techcrunch.com"
-      ],
-      "independentDomains": [
-        "techcrunch.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
-          "pageTitle": "Google’s VP of product Robby Stein joins Disrupt 2026 | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
-          "bodyChars": 5862,
-          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -3500,83 +3812,8 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
-      "title": "How we made the first comprehensive map of deaths along the US border’s “virtual wall”",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "technologyreview.com"
-      ],
-      "independentDomains": [
-        "technologyreview.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
-          "domain": "technologyreview.com",
-          "publisherFamily": "technologyreview.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
-          "pageTitle": "How we made the first comprehensive map of deaths along the US border’s “virtual wall” | MIT Technology Review",
-          "canonical": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
-          "bodyChars": 23131,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/",
-      "title": "4 ways to address the failures we found along the US border’s “virtual wall”",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "technologyreview.com"
-      ],
-      "independentDomains": [
-        "technologyreview.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/",
-          "domain": "technologyreview.com",
-          "publisherFamily": "technologyreview.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/",
-          "pageTitle": "4 ways to address the failures we found along the US border’s “virtual wall” | MIT Technology Review",
-          "canonical": "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/",
-          "bodyChars": 9348,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSktoX0JiaF9WNFpaMDFzdy05SEYyQVhmZUJyVGpmUUViaFU3UXVETmQ1Qk9NWFU1LUdESzJ1SDJxcG8tS1BKTGd1UW1aeW4wTkJvcW04anBMV1RrV0ZsSVUxOGpEdnRZUjdnSDFob2ZuMUtQdTlZbFFFWWVSRlpCSTlBWE5TMm05QkdqODZKMk1jX1dOc09TZ1ptNDRTdw?oc=5",
-      "title": "Forum reveals widespread unease with AI technology race - Minnesota Reformer",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYlZUbFVaMUs5YlU1NDk5NkVXZVdkdGFSUUFLN3BaZE15NzVqT0ZCTDR2b09BbE5SSGYzSlpaRVJrb3NwM3RFQUVaNEJmZFJZZ29md1NsNG9RN2NzQ1pGWVlqN0ttYVg4enlRSzlXbnQxX3VGUGlJWDA1VVBxYjBIUTg0XzB5OUZZQm9DYkJQUjUtNHFSdUJyWTBCWDhyX0ZfakZob0RDWHJuUzYtM0NZMU9IRERacmQtODd4Ykx1MXNTcnNQMXliSFREbE5CSThKeG5fNVltX0E?oc=5",
-      "title": "Pease officials defend airport security after teen crashes into plane - Seacoastonline.com",
+      "title": "Pease officials defend airport security after teen crashes into plane - seacoastonline.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -3617,37 +3854,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
-      "title": "World model companies are keeping a lot of secrets",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "techcrunch.com"
-      ],
-      "independentDomains": [
-        "techcrunch.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
-          "pageTitle": "World model companies are keeping a lot of secrets | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
-          "bodyChars": 4931,
-          "topicOverlap": 4
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://arstechnica.com/gadgets/2026/09/apple-m6-mac-mini-review-300-price-hike-spoils-a-nice-upgrade/",
@@ -3725,62 +3931,62 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
-      "title": "The US spent billions on border surveillance. Why can’t it catch people before they die?",
+      "link": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+      "title": "Meta&#8217;s AI agent has been blocked from using Amazon.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "technologyreview.com"
+        "techcrunch.com"
       ],
       "independentDomains": [
-        "technologyreview.com"
+        "techcrunch.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
-          "domain": "technologyreview.com",
-          "publisherFamily": "technologyreview.com",
+          "suppliedUrl": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+          "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
-          "pageTitle": "The US spent billions on border surveillance. Why can’t it catch people before they die? | MIT Technology Review",
-          "canonical": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
-          "bodyChars": 52018,
-          "topicOverlap": 7
+          "finalUrl": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+          "pageTitle": "Meta&#039;s AI agent has been blocked from using Amazon.com | TechCrunch",
+          "canonical": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+          "bodyChars": 1980,
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
-      "title": "She died at the San Diego border. A surveillance camera was in plain sight",
+      "link": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+      "title": "Bungie says it’s ‘not done with Destiny’ and will bring back vaulted content",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "technologyreview.com"
+        "theverge.com"
       ],
       "independentDomains": [
-        "technologyreview.com"
+        "theverge.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
-          "domain": "technologyreview.com",
-          "publisherFamily": "technologyreview.com",
+          "suppliedUrl": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+          "domain": "theverge.com",
+          "publisherFamily": "theverge.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
-          "pageTitle": "She died at the San Diego border. A surveillance camera was in plain sight | MIT Technology Review",
-          "canonical": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
-          "bodyChars": 28875,
-          "topicOverlap": 7
+          "finalUrl": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+          "pageTitle": "Bungie says it’s ‘not done with Destiny’ and will bring back vaulted content | The Verge",
+          "canonical": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+          "bodyChars": 3505,
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
@@ -3893,37 +4099,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPUWNvUUlzWVVsZThXZUx2ZzN0NHpIeFROU2g4dHFzbVFBWDB4U0dBTjVsMGxPYkVQaEdyc3Nob05Pc0JhWnBydklzMmxadWZzaHlhaHN6ekhLZjh0ZllhQmhUeHZfSVhiQWdZTEJJbmhqYnUxb0lBdk13eXdoeUVxbGZSaTZCVzRmM0ExZVVjeFRLNTNWYllqZXkxa3pKa2hUaDBIQ19hQXlZZFdmUHhIYW1B?oc=5",
-      "title": "Comments Sought for Administrative Review of Vice President, Information Technology & Chief Information Officer Tracy Futhey - Duke Today",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "duke.edu"
-      ],
-      "independentDomains": [
-        "today.duke.edu"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://today.duke.edu/2026/09/comments-sought-administrative-review-vice-president-information-technology-chief",
-          "domain": "today.duke.edu",
-          "publisherFamily": "duke.edu",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://today.duke.edu/2026/09/comments-sought-administrative-review-vice-president-information-technology-chief",
-          "pageTitle": "Comments Sought for Administrative Review of Vice President, Information Technology & Chief Information Officer Tracy Futhey | Duke Today",
-          "canonical": "https://today.duke.edu/2026/09/comments-sought-administrative-review-vice-president-information-technology-chief",
-          "bodyChars": 1633,
-          "topicOverlap": 12
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMijANBVV95cUxOUXlqQUVRc0dBeTRQTmZ5aHJzT1JVUlVybmVzWDZSOFU4ZzUyaWpKQlRSREhLSXU1aWVtY0E0eHRXRUE4RTJ6M2tkZXQyNEZsWlM1Yy1qRVhyV1M0YVRQNG1mWVRKaWlMSE1URk1qMlp4Z0gtMXJmQ0FuaGtkUWdkeWRiUmZ4ZjhGb21ESG5WTzFNTTU5a3VNeTZxN2VuU3BGcGtoM0dKY1NEYlN4NTdkM3pRRWdWM1RocXpaZTN0VFpkR0l2UWVQSzFnYWlzcGNwZ01qaEY2UDJCMFZZRl9FU2NBQTBYUVFXa010M1E0MnduVHUtc19tQTVOUWNsNGdHdHFSZHQ2OHVzNEtMR1JPQTEycjdnaDVHbzFkTjhyb0hISGhxYWZ2MVNQbW5pMjJ0WmM0dU5TYnhieTJRcG5ZbFdERFdtUlBkeHNCd2ZVZHBoZGRIdTZVRUg2ZzZPVWs5UUVpdExtVk9rOURvdklvYlBVYlFVLU9WNUFnTk1qeHZvamtZYXo5LTVDeC0?oc=5",
       "title": "Faraday Future Launches Four Industry Productivity Solutions, Nine New EAI Devices at Its 919 Event, Building Its “One-Brain Multi-Form Multi-Capability” FF EAI Robot World 2.0; All-New Futurist N - StreetInsider",
       "status": "not-eligible",
@@ -3970,6 +4145,37 @@
       "sourceVerificationStatus": "unverified"
     },
     {
+      "link": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
+      "title": "World model companies are keeping a lot of secrets",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
+      "independentDomains": [
+        "techcrunch.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
+          "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
+          "pageTitle": "World model companies are keeping a lot of secrets | TechCrunch",
+          "canonical": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
+          "bodyChars": 4931,
+          "topicOverlap": 4
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down/",
       "title": "Is the AI industry really ready to slow down?",
       "status": "pass",
@@ -4003,15 +4209,33 @@
     {
       "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWjJyRzgyWUM4d0JvTDFHWkxCbTdPY0NSQ0h1NDhubU9CMF9TQXdSRGZZRWNlajJEUFZvVTBPTHd0WWZreGdSZFdPNWpRU1Z5UzVMaGZ1UWJtSUFmczVIRVotT0NnNGx2dUZWajk2X1ZOWlJMdzMzRjU0LVVGZmh4VTdQNm8?oc=5",
       "title": "A.I. Ethics Conference Returning to Scranton in 2027 - University of Scranton",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "scranton.edu"
+      ],
+      "independentDomains": [
+        "news.scranton.edu"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://news.scranton.edu/articles/2026/09/news-ai-conference-2027-promo.shtml",
+          "domain": "news.scranton.edu",
+          "publisherFamily": "scranton.edu",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://news.scranton.edu/articles/2026/09/news-ai-conference-2027-promo.shtml",
+          "pageTitle": "A.I. Ethics Conference Returning to Scranton in 2027 | Royal News: September 21 2026",
+          "canonical": "",
+          "bodyChars": 2506,
+          "topicOverlap": 5
+        }
+      ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBwYzYtMFh4WENiZlZlZzRKTGN6blJNUEsyTmhFRjNxVktWU0Y1bEZTd2syT3U3WTNYTVRxT0lLQUVWREZScmhHTnRjOHVnVmpZSGxsUVR6RmpidjdqRmlWNDNoTlRuNGYyTXRyb1lpYnN4bHMwTi1j?oc=5",
@@ -4045,38 +4269,7 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBoZGxiZHdmNmM5NjVyZlBxeDBSRE9oMzdaM0NVUDlmbUFfbWtzT1Z2d3FmQnItd0kwQnNTaDRodXhyVEVjS1k3NnZTVGxZVzNsY01XSEViTHJocDJwV1A0bWR6ajJySFNi?oc=5",
-      "title": "Googlebook OS hands-on: It’s Android, stupid - 9to5Google",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "9to5google.com"
-      ],
-      "independentDomains": [
-        "9to5google.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://9to5google.com/2026/09/21/googlebook-os-hands-on/",
-          "domain": "9to5google.com",
-          "publisherFamily": "9to5google.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://9to5google.com/2026/09/21/googlebook-os-hands-on/",
-          "pageTitle": "Googlebook OS hands-on: It’s Android, stupid",
-          "canonical": "https://9to5google.com/2026/09/21/googlebook-os-hands-on/",
-          "bodyChars": 6765,
-          "topicOverlap": 4
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQazZsQ2FrQjBSdHVTRHlyQ1oxTHh3VWVNQXF5R3lCR3ZjVXlueFdVbzJXYjlJWDhDa2Zqek5ramhkdW5NZ0J6TlFnLWVzcjFQMEh5SlQtZEhuWlVQZkRNUW9FX3BadGtsbGE0eTdiemRvR3gyalFEaUNPQUNocGttQkpBc3JtRXB6bGl5SnFUSVJyYm5NSjhwVFBVUWZkTmh1WmtfNnpZaWZuQ2FRN1hhZ2NXS0hLcjEybTR6dG9ZUXFxSU5zSHNhWnhXQmRLUks2UmhCX2lB0gHbAUFVX3lxTE5FUi1FYzNpUGdFNWlGckZfZnFOUnJ2SEVRWXZiVmlKUkx6M01PNXliMmdnWDFqLXZVN1hXTXR4OGlqWXdYUHRfa3MtRkM4VnM4eHFQa0Rsb0F4bm40UkZHai1hQmtDcDMzaEhNNmNUQWZSRE04ZnlrZUhCRHFvSGhfYXVkQ3hSUDRrOTIzRE5hSy1LS1ZwMjNBVVd2OXhUV0MzenpXaW93cVlGOU9MS2d4WW5sSUl0QkMyNGFWY3ExaW0xMVBiaHlid0dkZGc3UkJIdWwwbjVVWE9UWQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTdYSXpkeklRS2VHUERNN0pQVEo0LUw0dlJMSnFFdUlDRER5RTVvQzFzTUwtZmx1V0ZlOTA5d0hUMHNGalR1Y1NtTlYtUUloaE9mQ04xZ3Z2T2JicW96amJGVHRpNjZnbmU4Mm43eWFBV0dhTG8wV1hzZlhjY3FCeDFJeE1XQmV5M1ktR01vdGR4NUdmUFhYY3NFUUhGRVprVTU3SVVkem9NQ1dQTEZTWFUwOWVMbTVqdlIxYUNXSGNJNkU4YWdCZjZVUENFRE9ERm5sbnJR0gHbAUFVX3lxTE5wMjE4Q1hGbjdyeVNSVlZfeU1sVkhGVk8zd21QS2MwYTVvek5HcEVfaFRYLXU3WGxnSGhLNWVtX29NVnlTZ1E0d3hrbXpXZXlqTU9idk1ESlZzb0ctTUdZS3A2dnBmZmU4dkFoYkdwaWVfU25kaFpWbko0bWRRNWk1SEotdGxaWG1VMmNGT3MwSXJUSm1kdDIzMmtVc0xJQzVWMEd5cGdGcFV6eU95cllKQzl1aU5pMzZiQzlnLTgwVDhNN3pyOWdwYlduRU5mTThiQmo3a2drY3k4VQ?oc=5",
       "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Devdiscourse",
       "status": "pass",
       "evidenceLevel": "single-source",
@@ -4090,16 +4283,16 @@
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.devdiscourse.com/article/international/3980027-denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal",
+          "suppliedUrl": "https://www.devdiscourse.com/article/international/3980107-denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal",
           "domain": "devdiscourse.com",
           "publisherFamily": "devdiscourse.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.devdiscourse.com/article/international/3980027-denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal",
+          "finalUrl": "https://www.devdiscourse.com/article/international/3980107-denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal",
           "pageTitle": "Denmark says NATO shares responsibility for Arctic security under Greenland deal | International",
-          "canonical": "https://www.devdiscourse.com/article/international/3980027-denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal",
-          "bodyChars": 4258,
+          "canonical": "https://www.devdiscourse.com/article/international/3980107-denmark-says-nato-shares-responsibility-for-arctic-security-under-greenland-deal",
+          "bodyChars": 4582,
           "topicOverlap": 11
         }
       ],
@@ -4269,37 +4462,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
-      "title": "Bungie says it’s ‘not done with Destiny’ and will bring back vaulted content",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "theverge.com"
-      ],
-      "independentDomains": [
-        "theverge.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
-          "domain": "theverge.com",
-          "publisherFamily": "theverge.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
-          "pageTitle": "Bungie says it’s ‘not done with Destiny’ and will bring back vaulted content | The Verge",
-          "canonical": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
-          "bodyChars": 3505,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://www.theverge.com/gadgets/998207/xbox-controller-chromebook-usbc-charger-deal-sale",
       "title": "Grab an Xbox controller and a $50 Xbox gift card together for just $80",
       "status": "pass",
@@ -4424,68 +4586,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://www.theverge.com/tech/998006/apple-mac-mini-m6-m5-pro-review",
-      "title": "The Mac Mini is still mighty, just not as cheap",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "theverge.com"
-      ],
-      "independentDomains": [
-        "theverge.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theverge.com/tech/998006/apple-mac-mini-m6-m5-pro-review",
-          "domain": "theverge.com",
-          "publisherFamily": "theverge.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/tech/998006/apple-mac-mini-m6-m5-pro-review",
-          "pageTitle": "Apple M6 / M5 Pro Mac Mini review: Still mighty, just not as cheap | The Verge",
-          "canonical": "https://www.theverge.com/tech/998006/apple-mac-mini-m6-m5-pro-review",
-          "bodyChars": 10926,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://www.theverge.com/tech/998040/apple-mac-studio-m5-ultra-initial-impressions-testing-review",
-      "title": "The M5 Ultra Mac Studio tears through our benchmark tests",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "theverge.com"
-      ],
-      "independentDomains": [
-        "theverge.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theverge.com/tech/998040/apple-mac-studio-m5-ultra-initial-impressions-testing-review",
-          "domain": "theverge.com",
-          "publisherFamily": "theverge.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/tech/998040/apple-mac-studio-m5-ultra-initial-impressions-testing-review",
-          "pageTitle": "The M5 Ultra Mac Studio tears through our benchmark tests | The Verge",
-          "canonical": "https://www.theverge.com/tech/998040/apple-mac-studio-m5-ultra-initial-impressions-testing-review",
-          "bodyChars": 5464,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5",
       "title": "Apple is about to launch five new products that I’m very excited for - 9to5Mac",
       "status": "not-eligible",
@@ -4500,6 +4600,20 @@
       "sources": []
     },
     {
+      "link": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
+      "title": "How we made the first comprehensive map of deaths along the US border’s “virtual wall”",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/",
+      "title": "4 ways to address the failures we found along the US border’s “virtual wall”",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
       "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
       "status": "not-eligible",
@@ -4509,6 +4623,27 @@
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZzF1U1p0TVN5LWRKZlJGc29FSlJsNERlZWdtVmJLMUZsVktQc2I5TVRjdk14aTBJYzZRaUpGWlR1d0hBTlZIclhSSVJhRUNENERxRjFEQ3YwbjdXZFl4Y1Q0bkJpdVo2QUlQdHFmUHRNc0puWEVQQURTSUQ0SUVkUm9GdlplZmhPaFdaVHdXNVhhRTBXRGdoZA?oc=5",
       "title": "U.S. and China Discuss System to Warn of A.I. National Security Issues - The New York Times",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://arstechnica.com/tech-policy/2026/09/california-settles-lawsuit-against-paramount-warner-merger-angering-advocates/",
+      "title": "California settles lawsuit against Paramount/Warner merger, angering advocates",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+      "title": "The US spent billions on border surveillance. Why can’t it catch people before they die?",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
+      "title": "She died at the San Diego border. A surveillance camera was in plain sight",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4530,20 +4665,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdEljbFotbFNVU2Nyb1oyaElIUXJJc1ltUmF5a1FrMl9xbEwyNG9LOWwyZ3F2dUZIUl9QYnd6OXU1cU10UGx0QzkxaVp6QkoxY3ZYSm1qc3FvbFprT29VcldJZ3V1Y1YtZ1A3MjEtTUo2dk9laHFBaWZBMFNOMmZDVC16aDBhYUdmdmZFdUJ4d0hoMW5hZTgxRk1ETQ?oc=5",
       "title": "Oil price dips briefly below $100 on Saudi exports, hopes of US-Iran diplomacy - Reuters",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://techcrunch.com/2026/09/20/scrolled-wants-to-turn-textbooks-into-tiktok/",
-      "title": "ScrollEd wants to turn textbooks into TikTok",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5",
-      "title": "Energy Technology Innovation Partnership Project - Department of Energy (.gov)",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4606,7 +4727,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5",
-      "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - uwaterloo.ca",
+      "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - University of Waterloo",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4627,7 +4748,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5",
-      "title": "A History of Invention and Innovation - Boston University",
+      "title": "A History of Invention and Innovation - bu.edu",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4656,6 +4777,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPeGJNQlJ6ZDN2b0dIMkI1YWh3YlZuMUVQV1ZnYkhaNWo4VFNzZkJYeVItVmJlbXp2eW9QSklkRmhfSkdGNFoxOG5sRXV2dWxRLVpqQnpabWJPeWp1SXdJMGlIU2hETlV3UG14WVRpdDdWb01Wak1SS2M4b19XQUlzeHJmWjB5MUQ5UEhKd1VWel9GaTZSbGRCaUliZ1ZRbVZWMG5qR1FIYVF4R3lkdmE1VFJfV2R6Q2RHTkNzRnpWU1lQX1JPTjFrRDVqNmtUVVpjUjFOZw?oc=5",
       "title": "What Future for the Arctic Council? Facilitating International Cooperation in Troubled Times - Georgetown Journal of International Affairs",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5",
+      "title": "Yemen government condemns Houthi attacks on Riyadh, blames Iran - Iran International",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4724,15 +4852,8 @@
       "sources": []
     },
     {
-      "link": "https://arstechnica.com/tech-policy/2026/09/california-settles-lawsuit-against-paramount-warner-merger-angering-advocates/",
-      "title": "California settles lawsuit against Paramount/Warner merger, angering advocates",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5",
-      "title": "Yemen government condemns Houthi attacks on Riyadh, blames Iran - Iran International",
+      "link": "https://arstechnica.com/science/2026/09/trump-planning-to-hand-veto-power-over-nih-grants-to-political-appointee/",
+      "title": "Russel Vought will reportedly be given veto power over all NIH grants",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4747,6 +4868,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTV83eGI1OGlFLXl5blNETm5JaTNuVURfUm9WZklvZFdSVW5CSFBaOVBNRWJHT1hYWS1CUzlYemk0aW5aUUljZ214SGFXQ0otLTlEdTdSbmxzWXBTS2tRcmRtc3pQb3JmV21xRmNxelh2d2ZTcDFNUUZLMERxZFZYYzFFSjRmUG5vdVE?oc=5",
       "title": "Vladimir Putin prepares Russian draft surge, European hybrid attacks after Duma election - The Jerusalem Post",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://techcrunch.com/2026/09/20/scrolled-wants-to-turn-textbooks-into-tiktok/",
+      "title": "ScrollEd wants to turn textbooks into TikTok",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4794,15 +4922,15 @@
       "sources": []
     },
     {
-      "link": "https://arstechnica.com/tech-policy/2026/09/fcc-lets-paramount-sell-49-5-equity-stake-to-saudi-arabia-uae-and-qatar/",
-      "title": "FCC lets Paramount sell 49.5% equity stake to Saudi Arabia, UAE, and Qatar",
+      "link": "https://arstechnica.com/science/2026/09/meet-the-winner-of-nikons-small-world-in-motion-video-contest/",
+      "title": "Meet the winner of Nikon's Small World in Motion video contest",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
-      "link": "https://arstechnica.com/science/2026/09/meet-the-winner-of-nikons-small-world-in-motion-video-contest/",
-      "title": "Meet the winner of Nikon's Small World in Motion video contest",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5",
+      "title": "Energy Technology Innovation Partnership Project - Department of Energy (.gov)",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4906,20 +5034,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
-      "title": "Information Session: Around the World with Disney Imagineering - The Ohio State University",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
-      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - The Ohio State University",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://techcrunch.com/2026/09/20/elon-musks-latest-boring-company-pitch-involves-a-hyperloop-between-austin-and-san-antonio/",
       "title": "Elon Musk’s latest Boring Company pitch involves a Hyperloop between Austin and San Antonio",
       "status": "not-eligible",
@@ -4949,7 +5063,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5",
-      "title": "China surpasses 5 million valid invention patents - straitstimes.com",
+      "title": "China surpasses 5 million valid invention patents - The Straits Times",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5005,7 +5119,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
-      "title": "100K-winning invention could help better understand N.B. bridge integrity - cbc.ca",
+      "title": "100K-winning invention could help better understand N.B. bridge integrity - CBC",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5018,29 +5132,22 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
-      "title": "Autumn 2026 International Student Experience Workshop Series - The Ohio State University",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
+      "title": "Information Session: Around the World with Disney Imagineering - oia.osu.edu",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
-      "title": "Your America in 250 Words: Seyhmus Tunc - The Ohio State University",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
+      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - oia.osu.edu",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5",
-      "title": "Imagineering a creative learning experience - The Ohio State University",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRUtsa3ZrZUlyTTJGLVhDWFN1cU1VRVlwMEVTMHlCRHJiZFpKVHpyeExqQlVNck9DX2sybHNOUXNGWHhpWVo3UnhPamRNYWNHMWx3QWczV1lyMHJDSWt5V3dMT0RTY0hIN095UGhWN25pbkZibFphM2NBOU80Wm5iVUtxTQ?oc=5",
-      "title": "Information Session: Buckeyes Network Abroad: London - The Ohio State University",
+      "link": "https://arstechnica.com/tech-policy/2026/09/fcc-lets-paramount-sell-49-5-equity-stake-to-saudi-arabia-uae-and-qatar/",
+      "title": "FCC lets Paramount sell 49.5% equity stake to Saudi Arabia, UAE, and Qatar",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5158,13 +5265,6 @@
       "sources": []
     },
     {
-      "link": "https://arstechnica.com/science/2026/09/finding-the-cells-that-put-our-brain-to-sleep/",
-      "title": "Finding the cells that put our brain to sleep",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE81cUUzUmlVLUUxWjhHb1NPTHJGSmlxYlNBUU1UZk1rcGF6aVNWWDZUNmdJbVhPS19LS2JNaVIzazhhZzlLWm5Ea2hEQ0RuQnIyWEMyd1dHOHR2V2hRQVFuTzFHaUNieHZTYjZqS3c1OERxSDNnT283UkNQZHVfdw?oc=5",
       "title": "10 Skills Every Software Engineer Needs - Intuit",
       "status": "not-eligible",
@@ -5193,22 +5293,36 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
+      "title": "Autumn 2026 International Student Experience Workshop Series - oia.osu.edu",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
+      "title": "Your America in 250 Words: Seyhmus Tunc - oia.osu.edu",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5",
+      "title": "Imagineering a creative learning experience - oia.osu.edu",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://arstechnica.com/science/2026/09/finding-the-cells-that-put-our-brain-to-sleep/",
+      "title": "Finding the cells that put our brain to sleep",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://arstechnica.com/space/2026/09/rocket-report-ula-flies-into-uncertain-future-falcon-9-family-hits-700-launches/",
       "title": "Rocket Report: China wants a Raptor 3 engine; SpaceX set for big Starship test",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://arstechnica.com/health/2026/09/rfk-jr-stacks-another-influential-federal-panel-with-questionable-picks/",
-      "title": "RFK Jr. names 8 new members to influential preventive medicine task force",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://arstechnica.com/ai/2026/09/nato-backed-startup-adapts-ai-for-autonomous-drone-recon-and-attack-missions/",
-      "title": "Small AI models let drones autonomously identify and attack battlefield targets",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []

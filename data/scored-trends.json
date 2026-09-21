@@ -1,44 +1,11 @@
 {
-  "generatedAt": "2026-09-21T17:47:41.426Z",
+  "generatedAt": "2026-09-21T18:00:59.439Z",
   "scoringPolicy": {
     "version": 2,
     "discoverySignalsInfluenceScore": true,
     "discoverySignalsAreNotEvidence": true
   },
   "trends": [
-    {
-      "title": "Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows - 41NBC News",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T10:51:12.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5\" target=\"_blank\">Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows</a>  <font color=\"#6f6f6f\">41NBC News</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 2,
-        "signalTypeCount": 2,
-        "networks": [
-          "Google News",
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "news",
-          "publisher"
-        ],
-        "corroboratingCandidates": 7
-      },
-      "score": 79,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 13
-    },
     {
       "title": "Google says Gemini breached three companies during security test - The Record from Recorded Future News",
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE90ZU5jR1RvX0NsRDU5TFg3ZjNCblBNVGhLQnA5RlFqX1VCLUZOMTZHcnBhQ1NNZjFVNTZKN01VWGhlbk41WDlaSU51bVBXYlFMM1hFaVVkTGgxbVRtVmJr?oc=5",
@@ -62,7 +29,40 @@
         ],
         "corroboratingCandidates": 4
       },
-      "score": 78,
+      "score": 84,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 13
+    },
+    {
+      "title": "Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows - 41NBC News",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T10:51:12.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5\" target=\"_blank\">Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows</a>  <font color=\"#6f6f6f\">41NBC News</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 2,
+        "signalTypeCount": 2,
+        "networks": [
+          "Google News",
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "news",
+          "publisher"
+        ],
+        "corroboratingCandidates": 8
+      },
+      "score": 79,
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
@@ -93,7 +93,7 @@
         ],
         "corroboratingCandidates": 5
       },
-      "score": 70,
+      "score": 76,
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
@@ -226,6 +226,37 @@
       "researchSignalScore": 2
     },
     {
+      "title": "Google confirms Gemini models hacked three companies in May 2026",
+      "link": "https://arstechnica.com/google/2026/09/google-confirms-gemini-models-hacked-three-companies-in-may-2026/",
+      "source": "Ars Technica",
+      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
+      "publishedAt": "2026-09-21T16:57:26.000Z",
+      "category": "Technology",
+      "description": "A third-party cybersecurity firm accidentally gave experimental Gemini models access to the Internet.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Ars Technica"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 65,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
       "title": "Emergency department triaging decisions supported by artificial intelligence (AI) led to improved triaging accuracy and patient flow - 2 Minute Medicine",
       "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTUl0Vk9neUJINmxBdjFicGNic1VPTGpvdWhEbDFtZW95dUppUmpjcGFoX3dobFFFTnRnWk9mZlZPUXY0OUZQcFItdnQ4c3h5Z05aSTlObDByOFBUOTFWU1Q1X0hJZnVLNC1Hd0ZSZWF6dFZLc0haQ21ZRmFsdTBuMjY3Ql9xQ3hJVElFLTZ6eFdIU3VaZ1VxWGg5RFRNbWc3SG1uNHFiVk9vZEtPSkhsUVprMzFOdTN1azBnbmE5LVFBRkpmZHdTRWRpQ1QyTDRDTjZ0aXZGTkV0NXBpRUFidnJZSVphTUljWHJoOW1UYksxaEFoVnc?oc=5",
       "source": "Google News",
@@ -244,7 +275,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 5
       },
       "score": 62,
       "reasons": [
@@ -274,7 +305,37 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 5
+      },
+      "score": 62,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Advisory Group on Mathematics and Artificial Intelligence - OpenAI",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50TVpFbHFkWkJyVkNRV1l3T0VTb3V4YmFhOWZsd19nNEYwV0ZsVURHeElOMG8zYVNRc0NEYUxMYkNua3ozeXBGTTdoRlY5amo1b3dIU3o3TkxUQ0VHRnZ1STYta0FkM3NxZ0dob2Npdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T17:32:19.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE50TVpFbHFkWkJyVkNRV1l3T0VTb3V4YmFhOWZsd19nNEYwV0ZsVURHeElOMG8zYVNRc0NEYUxMYkNua3ozeXBGTTdoRlY5amo1b3dIU3o3TkxUQ0VHRnZ1STYta0FkM3NxZ0dob2Npdw?oc=5\" target=\"_blank\">Advisory Group on Mathematics and Artificial Intelligence</a>  <font color=\"#6f6f6f\">OpenAI</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 5
       },
       "score": 62,
       "reasons": [
@@ -344,6 +405,38 @@
       ],
       "eligible": true,
       "researchSignalScore": 5
+    },
+    {
+      "title": "Run Positron on Amazon SageMaker AI for data science workflows - Amazon Web Services (AWS)",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc09zelFIejc0eEhDZXU0T1FKSmdySGgxT21OaG9BcTIwOFh2c2kyQTVzTjFZc2tFNHh2RTFNZW5HLUFMd2VvSjhFT21iTzRWdXlQb2Mxb0Fyd1J0ZzQ2eHlKYkdmbGloa1daM01hZzRtalBQblV5bnloak9TNU1zaUktVGo3c1p1ekVYRjI2dDRIb0hOcF9zeE04YTVZcHFNdXFoa3d4a3ZzWmpmN1E?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:34:21.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQc09zelFIejc0eEhDZXU0T1FKSmdySGgxT21OaG9BcTIwOFh2c2kyQTVzTjFZc2tFNHh2RTFNZW5HLUFMd2VvSjhFT21iTzRWdXlQb2Mxb0Fyd1J0ZzQ2eHlKYkdmbGloa1daM01hZzRtalBQblV5bnloak9TNU1zaUktVGo3c1p1ekVYRjI2dDRIb0hOcF9zeE04YTVZcHFNdXFoa3d4a3ZzWmpmN1E?oc=5\" target=\"_blank\">Run Positron on Amazon SageMaker AI for data science workflows</a>  <font color=\"#6f6f6f\">Amazon Web Services (AWS)</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 2,
+        "signalTypeCount": 2,
+        "networks": [
+          "Google News",
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "news",
+          "publisher"
+        ],
+        "corroboratingCandidates": 1
+      },
+      "score": 61,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 10
     },
     {
       "title": "8 tips and tools for language learning: from apps to real life - Peace Corps (.gov)",
@@ -489,7 +582,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 5
       },
       "score": 57,
       "reasons": [
@@ -499,36 +592,6 @@
       ],
       "eligible": true,
       "researchSignalScore": 5
-    },
-    {
-      "title": "Belgium's Aikido launches cybersecurity AI model as demand for local tools grows - Reuters",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPc3ltX05ZbWFrSDlYLVJmREhNcUZuTXlpMzVKdy1SNUlfbnQtSGd6UUNkLUpYQV9LRURFc0o2MEp4X1N5NXVRM0ZPaFE0TFBBaFVwVkxIbWUxMUtyNmNFZ0Jjam5NaVprcEpzT2xTcHh1QkxiaW9oVWpLeFNoaFdLTTJTd0FFRjZCc1V5XzFSZ3UzZ2lsT2Z1ZjZXak5FZHVQeXlPeTFxeHdrS3BMelR1ZzdlNlhBamhIVXFldVM2elY0Y3M?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T14:21:35.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPc3ltX05ZbWFrSDlYLVJmREhNcUZuTXlpMzVKdy1SNUlfbnQtSGd6UUNkLUpYQV9LRURFc0o2MEp4X1N5NXVRM0ZPaFE0TFBBaFVwVkxIbWUxMUtyNmNFZ0Jjam5NaVprcEpzT2xTcHh1QkxiaW9oVWpLeFNoaFdLTTJTd0FFRjZCc1V5XzFSZ3UzZ2lsT2Z1ZjZXak5FZHVQeXlPeTFxeHdrS3BMelR1ZzdlNlhBamhIVXFldVM2elY0Y3M?oc=5\" target=\"_blank\">Belgium's Aikido launches cybersecurity AI model as demand for local tools grows</a>  <font color=\"#6f6f6f\">Reuters</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 57,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
     },
     {
       "title": "Samsung and LG promise to remove malicious 'botnet' apps from their TVs' app stores — but the problem was even more widespread than I feared, according to security researchers - TechRadar",
@@ -621,6 +684,36 @@
       "researchSignalScore": 5
     },
     {
+      "title": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026",
+      "link": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-21T14:30:00.000Z",
+      "category": "AI",
+      "description": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026. Lean in on this Builders Stage session. Save up to $200 before September 25.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 57,
+      "reasons": [
+        "Fresh topic",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
       "title": "New learning space opening to deepen understanding, problem-solving and reflection in artificial intelligence - Marquette Today",
       "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTjU2ZnczR0JQRlU5ZklqYnd5ZDJkaHNGb3V5ei0zTTBZYWdPMG1NZk9makYtbERFTUNnckI2Q3RTbWFDT19PLUNhajdYN0d0Vi1VcFNmbjBGdW4xSVl0R1VBaGw4ZlMzZVRvbUZncFJ4bUtta2ZFcElZXzhZeFB5OTI5bUdGeWh2TDZWQlROR0gtbDBlUUVXdWp3a3hpX0xBdjU4M0dJUUl5QkZHb0hPYUNpeUlyMjlYS2ZHNkx4SVNQQ2lQOXd2WkpUQWVoQXJsaGxFWnBDdHk0cnpCOHc?oc=5",
       "source": "Google News",
@@ -639,7 +732,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 5
       },
       "score": 56,
       "reasons": [
@@ -688,6 +781,66 @@
       "publishedAt": "2026-09-21T16:55:55.000Z",
       "category": "Technology",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEs2VnQ4bjhtNHRpdkZxOHA0Tl96czE2cEFqbEx1REtOX0daNi0xMl8xdEUtOWtyMkExemExQjAtN0dyd09lLU5SZHNuQ2JlV3lPZHR5RzZKRUh1dUZsVi1NR1lzbVo2UEpacENtNUl2V0pJV2NQYzJYUVlBTkZFaXZJRjBRR2FfME5fZGZOSzhIUlk0UVlIaHphM0kzUV9VeTJRcFQwQXhwV2RGaU1j?oc=5\" target=\"_blank\">Priority Technology to go private in $1.6 billion CEO-led deal</a>  <font color=\"#6f6f6f\">Reuters</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 56,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - University of Miami",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:44:21.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5\" target=\"_blank\">Advanced Expertise and Technology vs. Deadly Aortic Conditions</a>  <font color=\"#6f6f6f\">University of Miami</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 56,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Study Shows Virtual Reality IOL Education Associated with Higher Advanced-Technology Lens Selection - Eyewire+",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZnQzUl9QYkFjZHg1ZzluY3VGdEszb1F4XzJzWldFeS1NdmxGLTFIV3FGZllia3U5UWRpTEpsRm1lU2lPVThvNFBRb1djMFJDWVFNQmdwZkVORlg1Vm85b1I3VVJBbWlfc1I3NjlvMEtYWFp5aWdNZ1ZoWWl4NU44a195dGRpNHRMS1JvOXZUcFVUMHgxam1adWsyb2Z5MWxCeHJScGpIeEVzOVdZMnBKQkhVaU9IWU5LeUFiU29iX0NtUFE?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T13:20:54.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZnQzUl9QYkFjZHg1ZzluY3VGdEszb1F4XzJzWldFeS1NdmxGLTFIV3FGZllia3U5UWRpTEpsRm1lU2lPVThvNFBRb1djMFJDWVFNQmdwZkVORlg1Vm85b1I3VVJBbWlfc1I3NjlvMEtYWFp5aWdNZ1ZoWWl4NU44a195dGRpNHRMS1JvOXZUcFVUMHgxam1adWsyb2Z5MWxCeHJScGpIeEVzOVdZMnBKQkhVaU9IWU5LeUFiU29iX0NtUFE?oc=5\" target=\"_blank\">Study Shows Virtual Reality IOL Education Associated with Higher Advanced-Technology Lens Selection</a>  <font color=\"#6f6f6f\">Eyewire+</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -891,13 +1044,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act? - Bitcoin Foundation",
+      "title": "Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act? - bitcoinfoundation.org",
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-21T13:35:04.000Z",
       "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5\" target=\"_blank\">Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act?</a>  <font color=\"#6f6f6f\">Bitcoin Foundation</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5\" target=\"_blank\">Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act?</a>  <font color=\"#6f6f6f\">bitcoinfoundation.org</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -909,7 +1062,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 12
+        "corroboratingCandidates": 4
       },
       "score": 56,
       "reasons": [
@@ -1071,36 +1224,6 @@
       "researchSignalScore": 5
     },
     {
-      "title": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs - Colorado Mesa University",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T15:13:57.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5\" target=\"_blank\">CMU Political Science Students Meet Global Leaders at Conference on World Affairs</a>  <font color=\"#6f6f6f\">Colorado Mesa University</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
       "title": "Michael Luca Named Director of Carnegie Mellon University’s Block Center for Technology and Society - Carnegie Mellon University",
       "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOYkxGUEpaV1QtM1FZaUNZVm01TjBuaEl1Q0NmY3dLZG1GdUhHNHpQVlpybkpxOWgzMGM4TXp1OUJDLXBWeFd2Mk93dWhvMnE0cE1FMnprVkJqS29KRkZjLXBaNDFTVjVBeTY5MUJ1LThtMDJtbUNBS0JpaWlXSWxKTGlaTHJZX0xCS0V3REc4WXdYdkEtZDZIYV9kekZJY2s5Y3JMSTd3cnBnaGhJZVZsbzQtWTZtV3pfTEE0bGN1Q1lCUWVaQVN2RFdydXNiVEdOaXlrNWxwdDQ0bXI0alRXS1o5NDNEY0haYkVZ?oc=5",
       "source": "Google News",
@@ -1108,36 +1231,6 @@
       "publishedAt": "2026-09-21T14:30:25.000Z",
       "category": "Technology",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMi6wFBVV95cUxOYkxGUEpaV1QtM1FZaUNZVm01TjBuaEl1Q0NmY3dLZG1GdUhHNHpQVlpybkpxOWgzMGM4TXp1OUJDLXBWeFd2Mk93dWhvMnE0cE1FMnprVkJqS29KRkZjLXBaNDFTVjVBeTY5MUJ1LThtMDJtbUNBS0JpaWlXSWxKTGlaTHJZX0xCS0V3REc4WXdYdkEtZDZIYV9kekZJY2s5Y3JMSTd3cnBnaGhJZVZsbzQtWTZtV3pfTEE0bGN1Q1lCUWVaQVN2RFdydXNiVEdOaXlrNWxwdDQ0bXI0alRXS1o5NDNEY0haYkVZ?oc=5\" target=\"_blank\">Michael Luca Named Director of Carnegie Mellon University’s Block Center for Technology and Society</a>  <font color=\"#6f6f6f\">Carnegie Mellon University</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 55,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
-      "title": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - University of Miami",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:44:21.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5\" target=\"_blank\">Advanced Expertise and Technology vs. Deadly Aortic Conditions</a>  <font color=\"#6f6f6f\">University of Miami</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1191,13 +1284,13 @@
       "researchSignalScore": 4
     },
     {
-      "title": "Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces - news.uscg.mil",
+      "title": "Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces - United States Coast Guard News (.mil)",
       "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-21T13:54:17.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5\" target=\"_blank\">Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces</a>  <font color=\"#6f6f6f\">news.uscg.mil</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5\" target=\"_blank\">Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces</a>  <font color=\"#6f6f6f\">United States Coast Guard News (.mil)</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1331,7 +1424,7 @@
           "publisher",
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 6
       },
       "score": 55,
       "reasons": [
@@ -1396,6 +1489,36 @@
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 2
+    },
+    {
+      "title": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs - Colorado Mesa University",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T15:13:57.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5\" target=\"_blank\">CMU Political Science Students Meet Global Leaders at Conference on World Affairs</a>  <font color=\"#6f6f6f\">Colorado Mesa University</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 1
+      },
+      "score": 54,
+      "reasons": [
+        "Fresh topic",
+        "Covered by multiple sources",
         "Enough context for original synthesis"
       ],
       "eligible": true,
@@ -1552,6 +1675,36 @@
       "researchSignalScore": 2
     },
     {
+      "title": "GM can’t ‘bring back’ Apple CarPlay because it never left",
+      "link": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/rss/index.xml",
+      "publishedAt": "2026-09-21T17:47:54.000Z",
+      "category": "Digital Life",
+      "description": "Last week, GM announced a new software experience for its upcoming Chevy Silverado and GMC Sierra trucks, including a new look for Apple CarPlay and Android Auto, the popular phone mirroring systems that the automaker made a big deal about removing from its electric vehicles in 2023. Naturally, this led to some confusion about whether [&#8230;]",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "The Verge"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 1
+      },
+      "score": 53,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 2
+    },
+    {
       "title": "UN panel calls for stronger safeguards as AI agents advance - UN News",
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9CNWdDTkRQZUpVM3duLXp2V0ZLMzVSeFdmQ00yV2R3Qk1CemNfNWM4MnFmaEIzc3Zhdk1qa05YbGdSTkVxQTU2SVlOLXBTR3VqbkZUcE9zbw?oc=5",
       "source": "Google News",
@@ -1612,6 +1765,36 @@
       "researchSignalScore": 0
     },
     {
+      "title": "Paramount settles lawsuit blocking $110 billion Warner Bros. merger",
+      "link": "https://www.theverge.com/entertainment/998302/paramount-warner-bros-discovery-merger-settlement",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/rss/index.xml",
+      "publishedAt": "2026-09-21T17:42:15.000Z",
+      "category": "Digital Life",
+      "description": "Paramount has reached a settlement with California and the 11 other states that sued to block its planned $110 billion acquisition of Warner Bros. Discovery. The settlement removes a major roadblock standing in the way of the massive media merger. According to the proposed consent decree filed with the court, it includes requirements like minimum [&#8230;]",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "The Verge"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 52,
+      "reasons": [
+        "Fresh topic",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
       "title": "The turbulent AI era is here. The choices we make now are critical. - Gates Notes",
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5",
       "source": "Google News",
@@ -1642,13 +1825,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "From laptop bans to new tech courses, US law schools grapple with AI - Reuters",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5",
+      "title": "Minnesota forum reveals widespread unease with AI technology race - Route Fifty",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T14:56:53.000Z",
+      "publishedAt": "2026-09-21T16:00:00.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5\" target=\"_blank\">From laptop bans to new tech courses, US law schools grapple with AI</a>  <font color=\"#6f6f6f\">Reuters</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5\" target=\"_blank\">Minnesota forum reveals widespread unease with AI technology race</a>  <font color=\"#6f6f6f\">Route Fifty</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1672,13 +1855,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Minnesota forum reveals widespread unease with AI technology race - Route Fifty",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5",
+      "title": "From laptop bans to new tech courses, US law schools grapple with AI - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:00:00.000Z",
+      "publishedAt": "2026-09-21T14:56:53.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5\" target=\"_blank\">Minnesota forum reveals widespread unease with AI technology race</a>  <font color=\"#6f6f6f\">Route Fifty</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPVUVsY3liZG1hTE9XeGZFaDBDcE80WDlObFFLWVJqeHk0WEJhcjVnS2R4akhJelZMcVZ3M0pSSkFEMFRyYnJBWVVWaDZNR3I5c1h1ODFYOUNCS1p5aVVjRnJiYXhRUjA5eTVseTQ1V1BYYU11ZVlUWnh4VDRJdEJJVjRYbWg0Ni1OaWg1Zld0OFJ5cVNHY3VMaXJka19mMkl4SUhLblNuV2dJTFJ2UnV2OTNR?oc=5\" target=\"_blank\">From laptop bans to new tech courses, US law schools grapple with AI</a>  <font color=\"#6f6f6f\">Reuters</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1762,36 +1945,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Inside Kazakhstan’s push to become a regional AI centre - Al Jazeera",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOSWNucXpfdzE2ZENwVW9OemRaTmJ4eUk0WHBfZGVMYkV3bGdjQjB1aXRXX243MmNzc09ZLWk3OEljOTFLSnFBalVhaF84VTFKRnNEWWhub09WRFhQWjVfYnlnRkw5UjF5VThyeE1MaERVMWJESmdHdnhmMmxlZ2taOWhUSEkwaTJMVDhYMW04anNGUmhqcjR0aE1INNIBoAFBVV95cUxOZnBySmU4X1hNVDR4R3NROHZkN0RmVXFVV0o1WWFCSlZYeWNOT0pHQm1fVDRUUWRLX0xwYVNEODcwdlo4aURHNXRmcEVvN01Yb2doN1FUMWpCaFRVSjNKRXZqajdoMzlmTHc0R3F3Wk1weHE5TUs2bGFXdDVZa0lJcnhZYXJjUUJhZmFKeHFZRTltR0VldFdZWDJIWTJzNnVx?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:27:55.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOSWNucXpfdzE2ZENwVW9OemRaTmJ4eUk0WHBfZGVMYkV3bGdjQjB1aXRXX243MmNzc09ZLWk3OEljOTFLSnFBalVhaF84VTFKRnNEWWhub09WRFhQWjVfYnlnRkw5UjF5VThyeE1MaERVMWJESmdHdnhmMmxlZ2taOWhUSEkwaTJMVDhYMW04anNGUmhqcjR0aE1INNIBoAFBVV95cUxOZnBySmU4X1hNVDR4R3NROHZkN0RmVXFVV0o1WWFCSlZYeWNOT0pHQm1fVDRUUWRLX0xwYVNEODcwdlo4aURHNXRmcEVvN01Yb2doN1FUMWpCaFRVSjNKRXZqajdoMzlmTHc0R3F3Wk1weHE5TUs2bGFXdDVZa0lJcnhZYXJjUUJhZmFKeHFZRTltR0VldFdZWDJIWTJzNnVx?oc=5\" target=\"_blank\">Inside Kazakhstan’s push to become a regional AI centre</a>  <font color=\"#6f6f6f\">Al Jazeera</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 51,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
       "title": "Priority Technology Holdings, Inc. Announces Definitive Agreement with Investor Group Led by Chairman and CEO Thomas Priore to Take Company Private - Business Wire",
       "link": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOV0Ixekk0bmhRcXVaampCQzJZX1JHdzFuWU1mblJxc21xMldnR05tX3pQS2lYaVpOWC1hWFRoRFc3dDVDbnoxbm85U1Z3V253dmMyT0JrTkNrRVJWaDVsNHRmS2U3WjZtTU9iX2NrSHd6R3F1VXZRLWRaOGVvMW9TeHB6eEFOLVJaMDlXNENHbnNteGRGTU81UEN6VndsM1FYaUJqZGEzMHhaeG5DWlJKU0hJb0dIQ3pRaWppdy16Wkg0V0pNUzJyeE5jYzA4NUZsR0x4SnBsVEladWd0aWE3THV5RGY1ODAxVERYcWY3anhfOHgxY3F6S0w4WWVFS0U2dFlKWFhha2YySUItTGptcXA0Z0syVTVuUTN2c3czZEZqbkVjMjhJaWR1MA?oc=5",
       "source": "Google News",
@@ -1810,7 +1963,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 5
       },
       "score": 51,
       "reasons": [
@@ -2032,13 +2185,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark - CNBC",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOERQc3JwUVVYTXVDYVl0WmZ5UVBCdjZVU1NHRS12eTVwcGJjNnlkejIwX1dUR0VXRUdkNVBkQUpGMlE1VXNFUU9DS3RtQzJpd1BTOV9EekJlYkFIdGRJRTlUVGx0QW12LWFpRXpDa1hyX2xIODRna0pjZEM5YnNtY1VDeFlwZ9IBiwFBVV95cUxPNzY0RnE2U2diODVvOVh3ZTg4RWR2Umtib1gwcGN1T1V6WFIwX0JRMGJBeVlGMnVkUXZ4TnNKOXBzcERoNUJzT0xyUHhtbmdPT1hlTWhqR2p0UWtkM1prQ19YRmN6NWFHaE8yYVpxZ09JeG5iSGVLQV9wcy1oNG1SRzB6blNIQWI2dVo4?oc=5",
+      "title": "Executive Security Extends Beyond CEOs to Continue Year-Over-Year Growth - ASIS International",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T08:47:21.000Z",
+      "publishedAt": "2026-09-21T17:51:52.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQOERQc3JwUVVYTXVDYVl0WmZ5UVBCdjZVU1NHRS12eTVwcGJjNnlkejIwX1dUR0VXRUdkNVBkQUpGMlE1VXNFUU9DS3RtQzJpd1BTOV9EekJlYkFIdGRJRTlUVGx0QW12LWFpRXpDa1hyX2xIODRna0pjZEM5YnNtY1VDeFlwZ9IBiwFBVV95cUxPNzY0RnE2U2diODVvOVh3ZTg4RWR2Umtib1gwcGN1T1V6WFIwX0JRMGJBeVlGMnVkUXZ4TnNKOXBzcERoNUJzT0xyUHhtbmdPT1hlTWhqR2p0UWtkM1prQ19YRmN6NWFHaE8yYVpxZ09JeG5iSGVLQV9wcy1oNG1SRzB6blNIQWI2dVo4?oc=5\" target=\"_blank\">U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark</a>  <font color=\"#6f6f6f\">CNBC</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5\" target=\"_blank\">Executive Security Extends Beyond CEOs to Continue Year-Over-Year Growth</a>  <font color=\"#6f6f6f\">ASIS International</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2050,7 +2203,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 3
+        "corroboratingCandidates": 0
       },
       "score": 51,
       "reasons": [
@@ -2059,7 +2212,7 @@
         "Enough context for original synthesis"
       ],
       "eligible": true,
-      "researchSignalScore": 5
+      "researchSignalScore": 0
     },
     {
       "title": "We needed the Driver’s Privacy Protection Act. Technology found a way around it. - The Hill",
@@ -2090,6 +2243,36 @@
       ],
       "eligible": true,
       "researchSignalScore": 0
+    },
+    {
+      "title": "U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark - CNBC",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOERQc3JwUVVYTXVDYVl0WmZ5UVBCdjZVU1NHRS12eTVwcGJjNnlkejIwX1dUR0VXRUdkNVBkQUpGMlE1VXNFUU9DS3RtQzJpd1BTOV9EekJlYkFIdGRJRTlUVGx0QW12LWFpRXpDa1hyX2xIODRna0pjZEM5YnNtY1VDeFlwZ9IBiwFBVV95cUxPNzY0RnE2U2diODVvOVh3ZTg4RWR2Umtib1gwcGN1T1V6WFIwX0JRMGJBeVlGMnVkUXZ4TnNKOXBzcERoNUJzT0xyUHhtbmdPT1hlTWhqR2p0UWtkM1prQ19YRmN6NWFHaE8yYVpxZ09JeG5iSGVLQV9wcy1oNG1SRzB6blNIQWI2dVo4?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T08:47:21.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQOERQc3JwUVVYTXVDYVl0WmZ5UVBCdjZVU1NHRS12eTVwcGJjNnlkejIwX1dUR0VXRUdkNVBkQUpGMlE1VXNFUU9DS3RtQzJpd1BTOV9EekJlYkFIdGRJRTlUVGx0QW12LWFpRXpDa1hyX2xIODRna0pjZEM5YnNtY1VDeFlwZ9IBiwFBVV95cUxPNzY0RnE2U2diODVvOVh3ZTg4RWR2Umtib1gwcGN1T1V6WFIwX0JRMGJBeVlGMnVkUXZ4TnNKOXBzcERoNUJzT0xyUHhtbmdPT1hlTWhqR2p0UWtkM1prQ19YRmN6NWFHaE8yYVpxZ09JeG5iSGVLQV9wcy1oNG1SRzB6blNIQWI2dVo4?oc=5\" target=\"_blank\">U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark</a>  <font color=\"#6f6f6f\">CNBC</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
     },
     {
       "title": "Irish privacy regulator fines Google €403 million over location data processing - Reuters",
@@ -2272,35 +2455,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Google’s Gemini is the latest AI model to hack other companies",
-      "link": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-19T17:30:00.000Z",
-      "category": "AI",
-      "description": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 51,
-      "reasons": [
-        "Strong category relevance",
-        "Covered by multiple sources"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
       "title": "Can John Ternus find Apple’s next big thing?",
       "link": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
       "source": "The Verge",
@@ -2329,6 +2483,36 @@
       ],
       "eligible": true,
       "researchSignalScore": 0
+    },
+    {
+      "title": "Forum reveals widespread unease with AI technology race - Minnesota Reformer",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSktoX0JiaF9WNFpaMDFzdy05SEYyQVhmZUJyVGpmUUViaFU3UXVETmQ1Qk9NWFU1LUdESzJ1SDJxcG8tS1BKTGd1UW1aeW4wTkJvcW04anBMV1RrV0ZsSVUxOGpEdnRZUjdnSDFob2ZuMUtQdTlZbFFFWWVSRlpCSTlBWE5TMm05QkdqODZKMk1jX1dOc09TZ1ptNDRTdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T11:04:42.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPSktoX0JiaF9WNFpaMDFzdy05SEYyQVhmZUJyVGpmUUViaFU3UXVETmQ1Qk9NWFU1LUdESzJ1SDJxcG8tS1BKTGd1UW1aeW4wTkJvcW04anBMV1RrV0ZsSVUxOGpEdnRZUjdnSDFob2ZuMUtQdTlZbFFFWWVSRlpCSTlBWE5TMm05QkdqODZKMk1jX1dOc09TZ1ptNDRTdw?oc=5\" target=\"_blank\">Forum reveals widespread unease with AI technology race</a>  <font color=\"#6f6f6f\">Minnesota Reformer</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 50,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 4
     },
     {
       "title": "U.S. and China Discuss System to Warn of A.I. National Security Issues - The New York Times",
@@ -2421,6 +2605,35 @@
       "researchSignalScore": 4
     },
     {
+      "title": "Around 100 Former Heads of State and Government Call on Current Leaders to Renew International Cooperation - PR Newswire",
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSWdoWU9hc3plZTZFeWEtQmgwOVJBOWU4WTJQWVFza2E1b3E1Z0lmdEs2d09ZaTJPTlNDVTdoVGcwaGFCMGd3UjdYbUp1TzdHcVVCT1M3UHJTWlpaT0dWVmRLd2drcDBnX3d6cDB0N1FwMFFNZnNrSHdwVkd5U0NWdm9ST2xxdWF4S0lZV3I4ZFlUYkhnT2RhY3NOUktSYThfcVB6UV92akxMcVpVejJtM3JfeHBzMlg3cVVmbWpEcWRMQmhjanlYR1gzY3VvT01XVEdZYTczM19VX3dWdzlOUGFWOWplNkc0ZWxSczZiblA2RG9C?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T17:40:00.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSWdoWU9hc3plZTZFeWEtQmgwOVJBOWU4WTJQWVFza2E1b3E1Z0lmdEs2d09ZaTJPTlNDVTdoVGcwaGFCMGd3UjdYbUp1TzdHcVVCT1M3UHJTWlpaT0dWVmRLd2drcDBnX3d6cDB0N1FwMFFNZnNrSHdwVkd5U0NWdm9ST2xxdWF4S0lZV3I4ZFlUYkhnT2RhY3NOUktSYThfcVB6UV92akxMcVpVejJtM3JfeHBzMlg3cVVmbWpEcWRMQmhjanlYR1gzY3VvT01XVEdZYTczM19VX3dWdzlOUGFWOWplNkc0ZWxSczZiblA2RG9C?oc=5\" target=\"_blank\">Around 100 Former Heads of State and Government Call on Current Leaders to Renew International Cooperation</a>  <font color=\"#6f6f6f\">PR Newswire</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 50,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
       "title": "Humanitarian Diplomacy that Safeguards International Humanitarian Law event - Australian Minister for Foreign Affairs",
       "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeGlTZ0V0NXlIWmprbW9EZlZkMDZvSTVtaFQybTJNOWZxMWZxcUcxVjMyak1fakhVLTNXLWtranQ2WjJudXVZMjk5WFB3cUxHbmdqQ1pkUTNWRkFlM1lFZ2lXUjlqWkJnVVAxQnNvbWtaSkRjN0t5dlZtTzB4elpQWFJlZmRNN3ZpM3RlaVNmOVE3MG1JNXlQbENxVzFrbm5YY05nVWg4YzFhdEZrRzVUc2c3clgxWnJ3YU5oYXJzSWJIckNENnctZm14TDA?oc=5",
       "source": "Google News",
@@ -2468,7 +2681,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 5
       },
       "score": 50,
       "reasons": [
@@ -2508,42 +2721,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026",
-      "link": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-21T14:30:00.000Z",
-      "category": "AI",
-      "description": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026. Lean in on this Builders Stage session. Save up to $200 before September 25.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 3
-      },
-      "score": 50,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
       "title": "Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026",
       "link": "https://techcrunch.com/2026/09/21/meet-the-next-wave-of-vcs-judging-startup-battlefield-200-at-techcrunch-disrupt-2026/",
       "source": "TechCrunch",
       "sourceUrl": "https://techcrunch.com/feed/",
       "publishedAt": "2026-09-21T14:15:00.000Z",
       "category": "AI",
-      "description": "Meet the next wave of VCs judging the Startup Battlefield 200 contenders on the main stage at TechCrunch Disrupt 2026. Register by Sept 25, 11:59 p.m. PT, to save up to $200 and to get a front-row seat to one of the most intense startup pitch competition.",
+      "description": "Meet the next wave of VCs judging the Startup Battlefield 200 contenders on the main stage at TechCrunch Disrupt 2026. Register by September 25 at 11:59 p.m. PT, to save up to $200 and to get a front-row seat to one of the most intense startup pitch competitions.",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2653,101 +2837,13 @@
       "researchSignalScore": 4
     },
     {
-      "title": "How we made the first comprehensive map of deaths along the US border’s “virtual wall”",
-      "link": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
-      "source": "MIT Technology Review",
-      "sourceUrl": "https://www.technologyreview.com/feed/",
-      "publishedAt": "2026-09-21T12:00:00.000Z",
-      "category": "Technology",
-      "description": "Our 15-month investigation into death and surveillance along the US-Mexico border began with a simple question: Why did so many people die near government surveillance towers meant to help track and apprehend them? This story is part of&#160;Dying on Camera, a collaboration between&#160;MIT Technology Review&#160;and&#160;Times of San Diego. Journalists in both newsrooms spent the past&#8230;",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "MIT Technology Review"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 49,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
-      "title": "4 ways to address the failures we found along the US border’s “virtual wall”",
-      "link": "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/",
-      "source": "MIT Technology Review",
-      "sourceUrl": "https://www.technologyreview.com/feed/",
-      "publishedAt": "2026-09-21T12:00:00.000Z",
-      "category": "Technology",
-      "description": "MIT Technology Review today published our investigation into how many people have died near the “virtual wall” of surveillance towers that the US government has installed along the US-Mexico border. We found cases of people who walked undetected through areas surveilled by advanced, AI-enabled towers and later died nearby, where their bodies remained unnoticed for&#8230;",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "MIT Technology Review"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 49,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
-      "title": "Forum reveals widespread unease with AI technology race - Minnesota Reformer",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSktoX0JiaF9WNFpaMDFzdy05SEYyQVhmZUJyVGpmUUViaFU3UXVETmQ1Qk9NWFU1LUdESzJ1SDJxcG8tS1BKTGd1UW1aeW4wTkJvcW04anBMV1RrV0ZsSVUxOGpEdnRZUjdnSDFob2ZuMUtQdTlZbFFFWWVSRlpCSTlBWE5TMm05QkdqODZKMk1jX1dOc09TZ1ptNDRTdw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T11:04:42.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPSktoX0JiaF9WNFpaMDFzdy05SEYyQVhmZUJyVGpmUUViaFU3UXVETmQ1Qk9NWFU1LUdESzJ1SDJxcG8tS1BKTGd1UW1aeW4wTkJvcW04anBMV1RrV0ZsSVUxOGpEdnRZUjdnSDFob2ZuMUtQdTlZbFFFWWVSRlpCSTlBWE5TMm05QkdqODZKMk1jX1dOc09TZ1ptNDRTdw?oc=5\" target=\"_blank\">Forum reveals widespread unease with AI technology race</a>  <font color=\"#6f6f6f\">Minnesota Reformer</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 48,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Pease officials defend airport security after teen crashes into plane - Seacoastonline.com",
+      "title": "Pease officials defend airport security after teen crashes into plane - seacoastonline.com",
       "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYlZUbFVaMUs5YlU1NDk5NkVXZVdkdGFSUUFLN3BaZE15NzVqT0ZCTDR2b09BbE5SSGYzSlpaRVJrb3NwM3RFQUVaNEJmZFJZZ29md1NsNG9RN2NzQ1pGWVlqN0ttYVg4enlRSzlXbnQxX3VGUGlJWDA1VVBxYjBIUTg0XzB5OUZZQm9DYkJQUjUtNHFSdUJyWTBCWDhyX0ZfakZob0RDWHJuUzYtM0NZMU9IRERacmQtODd4Ykx1MXNTcnNQMXliSFREbE5CSThKeG5fNVltX0E?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-21T09:04:00.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYlZUbFVaMUs5YlU1NDk5NkVXZVdkdGFSUUFLN3BaZE15NzVqT0ZCTDR2b09BbE5SSGYzSlpaRVJrb3NwM3RFQUVaNEJmZFJZZ29md1NsNG9RN2NzQ1pGWVlqN0ttYVg4enlRSzlXbnQxX3VGUGlJWDA1VVBxYjBIUTg0XzB5OUZZQm9DYkJQUjUtNHFSdUJyWTBCWDhyX0ZfakZob0RDWHJuUzYtM0NZMU9IRERacmQtODd4Ykx1MXNTcnNQMXliSFREbE5CSThKeG5fNVltX0E?oc=5\" target=\"_blank\">Pease officials defend airport security after teen crashes into plane</a>  <font color=\"#6f6f6f\">Seacoastonline.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYlZUbFVaMUs5YlU1NDk5NkVXZVdkdGFSUUFLN3BaZE15NzVqT0ZCTDR2b09BbE5SSGYzSlpaRVJrb3NwM3RFQUVaNEJmZFJZZ29md1NsNG9RN2NzQ1pGWVlqN0ttYVg4enlRSzlXbnQxX3VGUGlJWDA1VVBxYjBIUTg0XzB5OUZZQm9DYkJQUjUtNHFSdUJyWTBCWDhyX0ZfakZob0RDWHJuUzYtM0NZMU9IRERacmQtODd4Ykx1MXNTcnNQMXliSFREbE5CSThKeG5fNVltX0E?oc=5\" target=\"_blank\">Pease officials defend airport security after teen crashes into plane</a>  <font color=\"#6f6f6f\">seacoastonline.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2788,36 +2884,6 @@
         ],
         "signalTypes": [
           "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 48,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "World model companies are keeping a lot of secrets",
-      "link": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-20T20:29:07.000Z",
-      "category": "AI",
-      "description": "Everyone in the world-models space is sitting on a pile of cash and a ton of buzz, but good luck getting anyone — from the founders to their own data suppliers — to tell you what they're actually building.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "publisher"
         ],
         "corroboratingCandidates": 1
       },
@@ -2919,49 +2985,49 @@
       "researchSignalScore": 2
     },
     {
-      "title": "The US spent billions on border surveillance. Why can’t it catch people before they die?",
-      "link": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
-      "source": "MIT Technology Review",
-      "sourceUrl": "https://www.technologyreview.com/feed/",
-      "publishedAt": "2026-09-21T12:00:00.000Z",
-      "category": "Technology",
-      "description": "When José Morales Bernal crossed the border into the United States on April 8, 2024, the day before his 32nd birthday, it should have triggered a chain of technological alerts and human responses.&#160; As he walked through the desert in southern New Mexico that morning, he was within range of three surveillance towers. Newly installed&#8230;",
+      "title": "Meta&#8217;s AI agent has been blocked from using Amazon.com",
+      "link": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-21T17:55:18.000Z",
+      "category": "AI",
+      "description": "Muse isn't welcome as a shopper anymore.",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
         "networkCount": 1,
         "signalTypeCount": 1,
         "networks": [
-          "MIT Technology Review"
+          "TechCrunch"
         ],
         "signalTypes": [
           "publisher"
         ],
-        "corroboratingCandidates": 1
+        "corroboratingCandidates": 0
       },
       "score": 47,
       "reasons": [
         "Fresh topic",
-        "Enough context for original synthesis"
+        "Strong category relevance"
       ],
       "eligible": true,
-      "researchSignalScore": 2
+      "researchSignalScore": 0
     },
     {
-      "title": "She died at the San Diego border. A surveillance camera was in plain sight",
-      "link": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
-      "source": "MIT Technology Review",
-      "sourceUrl": "https://www.technologyreview.com/feed/",
-      "publishedAt": "2026-09-21T12:00:00.000Z",
-      "category": "Technology",
-      "description": "She had only walked for a couple of hours, and already she was lost.&#160; It was early afternoon on Sept. 14, 2025, when 30-year-old Graciela Gómez Hernández crossed the border from the eastern edge of Tijuana into Southern California, sending voice messages to her mother and sister as she walked.&#160; This story is part of&#160;Dying&#8230;",
+      "title": "Bungie says it’s ‘not done with Destiny’ and will bring back vaulted content",
+      "link": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/rss/index.xml",
+      "publishedAt": "2026-09-21T16:35:59.000Z",
+      "category": "Digital Life",
+      "description": "Months after seemingly giving up on Destiny 2, Bungie now says it's planning to restore vaulted content in the game like campaigns, destinations, and raids. The decision reverses the Destiny Content Vault that Bungie created six years ago, controversially removing older content from Destiny 2 that players had paid to access. \"We understand that removing [&#8230;]",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
         "networkCount": 1,
         "signalTypeCount": 1,
         "networks": [
-          "MIT Technology Review"
+          "The Verge"
         ],
         "signalTypes": [
           "publisher"
@@ -3074,36 +3140,6 @@
       "publishedAt": "2026-09-21T10:00:47.000Z",
       "category": "Technology",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeUhKOHdHLVpGVTV5VEQ0LWVBcFd5UzFleUY5VWdaODNucE1BS25IaElER3d3eVdFWk82MzBqLS1tRDhRVTd5VjZUSzh3cmxtWVhyZXBxTlJDMDZ0TFhaeU1hbjVDcnlfbk00WE12bWhodEtYQ2JqMlJNZTAtY0VONDBQNlhHZnFp?oc=5\" target=\"_blank\">Technology Certificates and Certifications</a>  <font color=\"#6f6f6f\">The CPA Journal</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 46,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Comments Sought for Administrative Review of Vice President, Information Technology & Chief Information Officer Tracy Futhey - Duke Today",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPUWNvUUlzWVVsZThXZUx2ZzN0NHpIeFROU2g4dHFzbVFBWDB4U0dBTjVsMGxPYkVQaEdyc3Nob05Pc0JhWnBydklzMmxadWZzaHlhaHN6ekhLZjh0ZllhQmhUeHZfSVhiQWdZTEJJbmhqYnUxb0lBdk13eXdoeUVxbGZSaTZCVzRmM0ExZVVjeFRLNTNWYllqZXkxa3pKa2hUaDBIQ19hQXlZZFdmUHhIYW1B?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T11:35:49.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPUWNvUUlzWVVsZThXZUx2ZzN0NHpIeFROU2g4dHFzbVFBWDB4U0dBTjVsMGxPYkVQaEdyc3Nob05Pc0JhWnBydklzMmxadWZzaHlhaHN6ekhLZjh0ZllhQmhUeHZfSVhiQWdZTEJJbmhqYnUxb0lBdk13eXdoeUVxbGZSaTZCVzRmM0ExZVVjeFRLNTNWYllqZXkxa3pKa2hUaDBIQ19hQXlZZFdmUHhIYW1B?oc=5\" target=\"_blank\">Comments Sought for Administrative Review of Vice President, Information Technology & Chief Information Officer Tracy Futhey</a>  <font color=\"#6f6f6f\">Duke Today</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3246,6 +3282,36 @@
       "researchSignalScore": 0
     },
     {
+      "title": "World model companies are keeping a lot of secrets",
+      "link": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-20T20:29:07.000Z",
+      "category": "AI",
+      "description": "Everyone in the world-models space is sitting on a pile of cash and a ton of buzz, but good luck getting anyone — from the founders to their own data suppliers — to tell you what they're actually building.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 46,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
       "title": "Is the AI industry really ready to slow down?",
       "link": "https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down/",
       "source": "TechCrunch",
@@ -3334,42 +3400,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Googlebook OS hands-on: It’s Android, stupid - 9to5Google",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBoZGxiZHdmNmM5NjVyZlBxeDBSRE9oMzdaM0NVUDlmbUFfbWtzT1Z2d3FmQnItd0kwQnNTaDRodXhyVEVjS1k3NnZTVGxZVzNsY01XSEViTHJocDJwV1A0bWR6ajJySFNi?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:01:00.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTFBoZGxiZHdmNmM5NjVyZlBxeDBSRE9oMzdaM0NVUDlmbUFfbWtzT1Z2d3FmQnItd0kwQnNTaDRodXhyVEVjS1k3NnZTVGxZVzNsY01XSEViTHJocDJwV1A0bWR6ajJySFNi?oc=5\" target=\"_blank\">Googlebook OS hands-on: It’s Android, stupid</a>  <font color=\"#6f6f6f\">9to5Google</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 45,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
       "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Devdiscourse",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQazZsQ2FrQjBSdHVTRHlyQ1oxTHh3VWVNQXF5R3lCR3ZjVXlueFdVbzJXYjlJWDhDa2Zqek5ramhkdW5NZ0J6TlFnLWVzcjFQMEh5SlQtZEhuWlVQZkRNUW9FX3BadGtsbGE0eTdiemRvR3gyalFEaUNPQUNocGttQkpBc3JtRXB6bGl5SnFUSVJyYm5NSjhwVFBVUWZkTmh1WmtfNnpZaWZuQ2FRN1hhZ2NXS0hLcjEybTR6dG9ZUXFxSU5zSHNhWnhXQmRLUks2UmhCX2lB0gHbAUFVX3lxTE5FUi1FYzNpUGdFNWlGckZfZnFOUnJ2SEVRWXZiVmlKUkx6M01PNXliMmdnWDFqLXZVN1hXTXR4OGlqWXdYUHRfa3MtRkM4VnM4eHFQa0Rsb0F4bm40UkZHai1hQmtDcDMzaEhNNmNUQWZSRE04ZnlrZUhCRHFvSGhfYXVkQ3hSUDRrOTIzRE5hSy1LS1ZwMjNBVVd2OXhUV0MzenpXaW93cVlGOU9MS2d4WW5sSUl0QkMyNGFWY3ExaW0xMVBiaHlid0dkZGc3UkJIdWwwbjVVWE9UWQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTdYSXpkeklRS2VHUERNN0pQVEo0LUw0dlJMSnFFdUlDRER5RTVvQzFzTUwtZmx1V0ZlOTA5d0hUMHNGalR1Y1NtTlYtUUloaE9mQ04xZ3Z2T2JicW96amJGVHRpNjZnbmU4Mm43eWFBV0dhTG8wV1hzZlhjY3FCeDFJeE1XQmV5M1ktR01vdGR4NUdmUFhYY3NFUUhGRVprVTU3SVVkem9NQ1dQTEZTWFUwOWVMbTVqdlIxYUNXSGNJNkU4YWdCZjZVUENFRE9ERm5sbnJR0gHbAUFVX3lxTE5wMjE4Q1hGbjdyeVNSVlZfeU1sVkhGVk8zd21QS2MwYTVvek5HcEVfaFRYLXU3WGxnSGhLNWVtX29NVnlTZ1E0d3hrbXpXZXlqTU9idk1ESlZzb0ctTUdZS3A2dnBmZmU4dkFoYkdwaWVfU25kaFpWbko0bWRRNWk1SEotdGxaWG1VMmNGT3MwSXJUSm1kdDIzMmtVc0xJQzVWMEd5cGdGcFV6eU95cllKQzl1aU5pMzZiQzlnLTgwVDhNN3pyOWdwYlduRU5mTThiQmo3a2drY3k4VQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:59:13.000Z",
+      "publishedAt": "2026-09-21T17:00:38.000Z",
       "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQazZsQ2FrQjBSdHVTRHlyQ1oxTHh3VWVNQXF5R3lCR3ZjVXlueFdVbzJXYjlJWDhDa2Zqek5ramhkdW5NZ0J6TlFnLWVzcjFQMEh5SlQtZEhuWlVQZkRNUW9FX3BadGtsbGE0eTdiemRvR3gyalFEaUNPQUNocGttQkpBc3JtRXB6bGl5SnFUSVJyYm5NSjhwVFBVUWZkTmh1WmtfNnpZaWZuQ2FRN1hhZ2NXS0hLcjEybTR6dG9ZUXFxSU5zSHNhWnhXQmRLUks2UmhCX2lB0gHbAUFVX3lxTE5FUi1FYzNpUGdFNWlGckZfZnFOUnJ2SEVRWXZiVmlKUkx6M01PNXliMmdnWDFqLXZVN1hXTXR4OGlqWXdYUHRfa3MtRkM4VnM4eHFQa0Rsb0F4bm40UkZHai1hQmtDcDMzaEhNNmNUQWZSRE04ZnlrZUhCRHFvSGhfYXVkQ3hSUDRrOTIzRE5hSy1LS1ZwMjNBVVd2OXhUV0MzenpXaW93cVlGOU9MS2d4WW5sSUl0QkMyNGFWY3ExaW0xMVBiaHlid0dkZGc3UkJIdWwwbjVVWE9UWQ?oc=5\" target=\"_blank\">Denmark says NATO shares responsibility for Arctic security under Greenland deal</a>  <font color=\"#6f6f6f\">Devdiscourse</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTdYSXpkeklRS2VHUERNN0pQVEo0LUw0dlJMSnFFdUlDRER5RTVvQzFzTUwtZmx1V0ZlOTA5d0hUMHNGalR1Y1NtTlYtUUloaE9mQ04xZ3Z2T2JicW96amJGVHRpNjZnbmU4Mm43eWFBV0dhTG8wV1hzZlhjY3FCeDFJeE1XQmV5M1ktR01vdGR4NUdmUFhYY3NFUUhGRVprVTU3SVVkem9NQ1dQTEZTWFUwOWVMbTVqdlIxYUNXSGNJNkU4YWdCZjZVUENFRE9ERm5sbnJR0gHbAUFVX3lxTE5wMjE4Q1hGbjdyeVNSVlZfeU1sVkhGVk8zd21QS2MwYTVvek5HcEVfaFRYLXU3WGxnSGhLNWVtX29NVnlTZ1E0d3hrbXpXZXlqTU9idk1ESlZzb0ctTUdZS3A2dnBmZmU4dkFoYkdwaWVfU25kaFpWbko0bWRRNWk1SEotdGxaWG1VMmNGT3MwSXJUSm1kdDIzMmtVc0xJQzVWMEd5cGdGcFV6eU95cllKQzl1aU5pMzZiQzlnLTgwVDhNN3pyOWdwYlduRU5mTThiQmo3a2drY3k4VQ?oc=5\" target=\"_blank\">Denmark says NATO shares responsibility for Arctic security under Greenland deal</a>  <font color=\"#6f6f6f\">Devdiscourse</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3566,35 +3603,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Bungie says it’s ‘not done with Destiny’ and will bring back vaulted content",
-      "link": "https://www.theverge.com/news/998317/bungie-destiny-2-unvaulted-raids-campaigns-destinations",
-      "source": "The Verge",
-      "sourceUrl": "https://www.theverge.com/rss/index.xml",
-      "publishedAt": "2026-09-21T16:35:59.000Z",
-      "category": "Digital Life",
-      "description": "Months after seemingly giving up on Destiny 2, Bungie now says it's planning to restore vaulted content in the game like campaigns, destinations, and raids. The decision reverses the Destiny Content Vault that Bungie created six years ago, controversially removing older content from Destiny 2 that players had paid to access. \"We understand that removing [&#8230;]",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "The Verge"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 45,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
       "title": "Grab an Xbox controller and a $50 Xbox gift card together for just $80",
       "link": "https://www.theverge.com/gadgets/998207/xbox-controller-chromebook-usbc-charger-deal-sale",
       "source": "The Verge",
@@ -3711,64 +3719,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "The Mac Mini is still mighty, just not as cheap",
-      "link": "https://www.theverge.com/tech/998006/apple-mac-mini-m6-m5-pro-review",
-      "source": "The Verge",
-      "sourceUrl": "https://www.theverge.com/rss/index.xml",
-      "publishedAt": "2026-09-21T13:00:00.000Z",
-      "category": "Digital Life",
-      "description": "There are lots of compact desktop computers out there, but none match the Mac Mini's small size and big power. 2024's redesign reduced the Mini to 0.82L, a chassis so minimal you can easily mount it behind a monitor or under a desk. I've used gaming laptop charging bricks that are nearly as large and [&#8230;]",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "The Verge"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 45,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "The M5 Ultra Mac Studio tears through our benchmark tests",
-      "link": "https://www.theverge.com/tech/998040/apple-mac-studio-m5-ultra-initial-impressions-testing-review",
-      "source": "The Verge",
-      "sourceUrl": "https://www.theverge.com/rss/index.xml",
-      "publishedAt": "2026-09-21T13:00:00.000Z",
-      "category": "Digital Life",
-      "description": "The Mac Studio review unit that Apple sent us to test this year is, put simply, kind of outrageous. It has an M5 Ultra chip with a 36-core CPU and 80-core GPU, 256GB of RAM, and 4TB of storage and costs $12,299. This thing is not for your typical content creation workloads. It's for AI [&#8230;]",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "The Verge"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 45,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
       "title": "Apple is about to launch five new products that I’m very excited for - 9to5Mac",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMzgtN1o2WmRLbDBHVkRRclFqdExUT2kyQ3pUUGpOYnFITTBHbWNsYVExRG93TmtuTXhEa25sS3RoV291dEJUM0Q0bHNkUnpuMEhWWkVwMFFRbVhmZFRiWVpuVGlYZjk5NWdCSWpKZXpEdDlVMFcxRV94d3Vvd3VMS01UMzE2YWY2U0NHR1hSeTh4SzMwTG5ybWxBVU5WR0dk?oc=5",
       "source": "Google News",
@@ -3829,6 +3779,64 @@
       "researchSignalScore": 5
     },
     {
+      "title": "How we made the first comprehensive map of deaths along the US border’s “virtual wall”",
+      "link": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
+      "source": "MIT Technology Review",
+      "sourceUrl": "https://www.technologyreview.com/feed/",
+      "publishedAt": "2026-09-21T12:00:00.000Z",
+      "category": "Technology",
+      "description": "Our 15-month investigation into death and surveillance along the US-Mexico border began with a simple question: Why did so many people die near government surveillance towers meant to help track and apprehend them? This story is part of&#160;Dying on Camera, a collaboration between&#160;MIT Technology Review&#160;and&#160;Times of San Diego. Journalists in both newsrooms spent the past&#8230;",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "MIT Technology Review"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 44,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 4
+    },
+    {
+      "title": "4 ways to address the failures we found along the US border’s “virtual wall”",
+      "link": "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/",
+      "source": "MIT Technology Review",
+      "sourceUrl": "https://www.technologyreview.com/feed/",
+      "publishedAt": "2026-09-21T12:00:00.000Z",
+      "category": "Technology",
+      "description": "MIT Technology Review today published our investigation into how many people have died near the “virtual wall” of surveillance towers that the US government has installed along the US-Mexico border. We found cases of people who walked undetected through areas surveilled by advanced, AI-enabled towers and later died nearby, where their bodies remained unnoticed for&#8230;",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "MIT Technology Review"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 44,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 4
+    },
+    {
       "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
       "source": "Google News",
@@ -3875,6 +3883,93 @@
         ],
         "signalTypes": [
           "news"
+        ],
+        "corroboratingCandidates": 1
+      },
+      "score": 42,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 2
+    },
+    {
+      "title": "California settles lawsuit against Paramount/Warner merger, angering advocates",
+      "link": "https://arstechnica.com/tech-policy/2026/09/california-settles-lawsuit-against-paramount-warner-merger-angering-advocates/",
+      "source": "Ars Technica",
+      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
+      "publishedAt": "2026-09-21T16:15:26.000Z",
+      "category": "Technology",
+      "description": "State AGs had \"very strong\" case that merger is illegal, Lina Khan says.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Ars Technica"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 42,
+      "reasons": [
+        "Fresh topic",
+        "Covered by multiple sources"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "The US spent billions on border surveillance. Why can’t it catch people before they die?",
+      "link": "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/",
+      "source": "MIT Technology Review",
+      "sourceUrl": "https://www.technologyreview.com/feed/",
+      "publishedAt": "2026-09-21T12:00:00.000Z",
+      "category": "Technology",
+      "description": "When José Morales Bernal crossed the border into the United States on April 8, 2024, the day before his 32nd birthday, it should have triggered a chain of technological alerts and human responses.&#160; As he walked through the desert in southern New Mexico that morning, he was within range of three surveillance towers. Newly installed&#8230;",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "MIT Technology Review"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 1
+      },
+      "score": 42,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 2
+    },
+    {
+      "title": "She died at the San Diego border. A surveillance camera was in plain sight",
+      "link": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
+      "source": "MIT Technology Review",
+      "sourceUrl": "https://www.technologyreview.com/feed/",
+      "publishedAt": "2026-09-21T12:00:00.000Z",
+      "category": "Technology",
+      "description": "She had only walked for a couple of hours, and already she was lost.&#160; It was early afternoon on Sept. 14, 2025, when 30-year-old Graciela Gómez Hernández crossed the border from the eastern edge of Tijuana into Southern California, sending voice messages to her mother and sister as she walked.&#160; This story is part of&#160;Dying&#8230;",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "MIT Technology Review"
+        ],
+        "signalTypes": [
+          "publisher"
         ],
         "corroboratingCandidates": 1
       },
@@ -3968,64 +4063,6 @@
       "score": 40,
       "reasons": [
         "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "ScrollEd wants to turn textbooks into TikTok",
-      "link": "https://techcrunch.com/2026/09/20/scrolled-wants-to-turn-textbooks-into-tiktok/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-20T18:00:00.000Z",
-      "category": "AI",
-      "description": "ScrollEd turns textbooks into a scrollable, Instagram-like feed with video, audio, and quizzes. The Palo Alto startup, founded by student co-founders (and spouses) Utsav Gupta and Rebecca Neff, pitches at TechCrunch Disrupt.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 40,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Energy Technology Innovation Partnership Project - Department of Energy (.gov)",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T18:00:00.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5\" target=\"_blank\">Energy Technology Innovation Partnership Project</a>  <font color=\"#6f6f6f\">Department of Energy (.gov)</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 38,
-      "reasons": [
-        "Strong category relevance",
         "Enough context for original synthesis"
       ],
       "eligible": false,
@@ -4266,13 +4303,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - uwaterloo.ca",
+      "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - University of Waterloo",
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-04-22T15:41:24.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5\" target=\"_blank\">Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention</a>  <font color=\"#6f6f6f\">uwaterloo.ca</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5\" target=\"_blank\">Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention</a>  <font color=\"#6f6f6f\">University of Waterloo</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4353,13 +4390,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "A History of Invention and Innovation - Boston University",
+      "title": "A History of Invention and Innovation - bu.edu",
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-03-25T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5\" target=\"_blank\">A History of Invention and Innovation</a>  <font color=\"#6f6f6f\">Boston University</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5\" target=\"_blank\">A History of Invention and Innovation</a>  <font color=\"#6f6f6f\">bu.edu</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4487,7 +4524,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 6
       },
       "score": 37,
       "reasons": [
@@ -4495,6 +4532,34 @@
       ],
       "eligible": false,
       "researchSignalScore": 5
+    },
+    {
+      "title": "Yemen government condemns Houthi attacks on Riyadh, blames Iran - Iran International",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-20T03:52:00.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5\" target=\"_blank\">Yemen government condemns Houthi attacks on Riyadh, blames Iran</a>  <font color=\"#6f6f6f\">Iran International</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 36,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 4
     },
     {
       "title": "bryson dechambeau",
@@ -4749,13 +4814,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "California settles lawsuit against Paramount/Warner merger, angering advocates",
-      "link": "https://arstechnica.com/tech-policy/2026/09/california-settles-lawsuit-against-paramount-warner-merger-angering-advocates/",
+      "title": "Russel Vought will reportedly be given veto power over all NIH grants",
+      "link": "https://arstechnica.com/science/2026/09/trump-planning-to-hand-veto-power-over-nih-grants-to-political-appointee/",
       "source": "Ars Technica",
       "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
-      "publishedAt": "2026-09-21T16:15:26.000Z",
+      "publishedAt": "2026-09-21T16:40:26.000Z",
       "category": "Technology",
-      "description": "State AGs had \"very strong\" case that merger is illegal, Lina Khan says.",
+      "description": "Pending move comes over the objections of the NIH director.",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4775,34 +4840,6 @@
       ],
       "eligible": false,
       "researchSignalScore": 0
-    },
-    {
-      "title": "Yemen government condemns Houthi attacks on Riyadh, blames Iran - Iran International",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-20T03:52:00.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBFemJNMHRfMEh5VFZoUm90TzhYY1pBNEc4TlpwQXJHWVlwWlJYRWdMb2hZVGp6SFZrSmlzcVlkZzdjeHlIcDRDWXZ6ZmN4SDdWYmc?oc=5\" target=\"_blank\">Yemen government condemns Houthi attacks on Riyadh, blames Iran</a>  <font color=\"#6f6f6f\">Iran International</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 34,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 2
     },
     {
       "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - Apple",
@@ -4851,6 +4888,34 @@
         ],
         "signalTypes": [
           "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 32,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "ScrollEd wants to turn textbooks into TikTok",
+      "link": "https://techcrunch.com/2026/09/20/scrolled-wants-to-turn-textbooks-into-tiktok/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-20T18:00:00.000Z",
+      "category": "AI",
+      "description": "ScrollEd turns textbooks into a scrollable, Instagram-like feed with video, audio, and quizzes. The Palo Alto startup, founded by student co-founders (and spouses) Utsav Gupta and Rebecca Neff, pitches at TechCrunch Disrupt.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "publisher"
         ],
         "corroboratingCandidates": 0
       },
@@ -5030,34 +5095,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "FCC lets Paramount sell 49.5% equity stake to Saudi Arabia, UAE, and Qatar",
-      "link": "https://arstechnica.com/tech-policy/2026/09/fcc-lets-paramount-sell-49-5-equity-stake-to-saudi-arabia-uae-and-qatar/",
-      "source": "Ars Technica",
-      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
-      "publishedAt": "2026-09-18T17:57:41.000Z",
-      "category": "Technology",
-      "description": "FCC rejects concerns about repressive governments buying influence over CBS owner.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Ars Technica"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 32,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
       "title": "Meet the winner of Nikon's Small World in Motion video contest",
       "link": "https://arstechnica.com/science/2026/09/meet-the-winner-of-nikons-small-world-in-motion-video-contest/",
       "source": "Ars Technica",
@@ -5081,6 +5118,35 @@
       "score": 32,
       "reasons": [
         "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Energy Technology Innovation Partnership Project - Department of Energy (.gov)",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-18T18:00:00.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5\" target=\"_blank\">Energy Technology Innovation Partnership Project</a>  <font color=\"#6f6f6f\">Department of Energy (.gov)</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 31,
+      "reasons": [
+        "Strong category relevance",
         "Enough context for original synthesis"
       ],
       "eligible": false,
@@ -5492,62 +5558,6 @@
       "researchSignalScore": 4
     },
     {
-      "title": "Information Session: Around the World with Disney Imagineering - The Ohio State University",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-16T16:58:21.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5\" target=\"_blank\">Information Session: Around the World with Disney Imagineering</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 6
-      },
-      "score": 30,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - The Ohio State University",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T20:52:15.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5\" target=\"_blank\">Klein awarded Fulbright U.S. Specialist award to Brazil</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 5
-      },
-      "score": 30,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 5
-    },
-    {
       "title": "Elon Musk’s latest Boring Company pitch involves a Hyperloop between Austin and San Antonio",
       "link": "https://techcrunch.com/2026/09/20/elon-musks-latest-boring-company-pitch-involves-a-hyperloop-between-austin-and-san-antonio/",
       "source": "TechCrunch",
@@ -5661,13 +5671,13 @@
       "researchSignalScore": 2
     },
     {
-      "title": "China surpasses 5 million valid invention patents - straitstimes.com",
+      "title": "China surpasses 5 million valid invention patents - The Straits Times",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-04-24T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5\" target=\"_blank\">China surpasses 5 million valid invention patents</a>  <font color=\"#6f6f6f\">straitstimes.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5\" target=\"_blank\">China surpasses 5 million valid invention patents</a>  <font color=\"#6f6f6f\">The Straits Times</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5890,13 +5900,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "100K-winning invention could help better understand N.B. bridge integrity - cbc.ca",
+      "title": "100K-winning invention could help better understand N.B. bridge integrity - CBC",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-03-29T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5\" target=\"_blank\">100K-winning invention could help better understand N.B. bridge integrity</a>  <font color=\"#6f6f6f\">cbc.ca</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5\" target=\"_blank\">100K-winning invention could help better understand N.B. bridge integrity</a>  <font color=\"#6f6f6f\">CBC</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5948,13 +5958,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Autumn 2026 International Student Experience Workshop Series - The Ohio State University",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
+      "title": "Information Session: Around the World with Disney Imagineering - oia.osu.edu",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-04T07:00:00.000Z",
+      "publishedAt": "2026-09-16T16:58:21.000Z",
       "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5\" target=\"_blank\">Autumn 2026 International Student Experience Workshop Series</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5\" target=\"_blank\">Information Session: Around the World with Disney Imagineering</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5966,23 +5976,23 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 0
       },
       "score": 25,
       "reasons": [
         "Enough context for original synthesis"
       ],
       "eligible": false,
-      "researchSignalScore": 5
+      "researchSignalScore": 0
     },
     {
-      "title": "Your America in 250 Words: Seyhmus Tunc - The Ohio State University",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
+      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - oia.osu.edu",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-09T18:38:16.000Z",
+      "publishedAt": "2026-09-14T20:52:15.000Z",
       "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5\" target=\"_blank\">Your America in 250 Words: Seyhmus Tunc</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5\" target=\"_blank\">Klein awarded Fulbright U.S. Specialist award to Brazil</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5994,70 +6004,42 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 0
       },
       "score": 25,
       "reasons": [
         "Enough context for original synthesis"
       ],
       "eligible": false,
-      "researchSignalScore": 5
+      "researchSignalScore": 0
     },
     {
-      "title": "Imagineering a creative learning experience - The Ohio State University",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-03T07:00:00.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5\" target=\"_blank\">Imagineering a creative learning experience</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
-      "signalType": "news",
+      "title": "FCC lets Paramount sell 49.5% equity stake to Saudi Arabia, UAE, and Qatar",
+      "link": "https://arstechnica.com/tech-policy/2026/09/fcc-lets-paramount-sell-49-5-equity-stake-to-saudi-arabia-uae-and-qatar/",
+      "source": "Ars Technica",
+      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
+      "publishedAt": "2026-09-18T17:57:41.000Z",
+      "category": "Technology",
+      "description": "FCC rejects concerns about repressive governments buying influence over CBS owner.",
+      "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
         "networkCount": 1,
         "signalTypeCount": 1,
         "networks": [
-          "Google News"
+          "Ars Technica"
         ],
         "signalTypes": [
-          "news"
+          "publisher"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 0
       },
       "score": 25,
       "reasons": [
         "Enough context for original synthesis"
       ],
       "eligible": false,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Information Session: Buckeyes Network Abroad: London - The Ohio State University",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRUtsa3ZrZUlyTTJGLVhDWFN1cU1VRVlwMEVTMHlCRHJiZFpKVHpyeExqQlVNck9DX2sybHNOUXNGWHhpWVo3UnhPamRNYWNHMWx3QWczV1lyMHJDSWt5V3dMT0RTY0hIN095UGhWN25pbkZibFphM2NBOU80Wm5iVUtxTQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-03T04:46:20.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNRUtsa3ZrZUlyTTJGLVhDWFN1cU1VRVlwMEVTMHlCRHJiZFpKVHpyeExqQlVNck9DX2sybHNOUXNGWHhpWVo3UnhPamRNYWNHMWx3QWczV1lyMHJDSWt5V3dMT0RTY0hIN095UGhWN25pbkZibFphM2NBOU80Wm5iVUtxTQ?oc=5\" target=\"_blank\">Information Session: Buckeyes Network Abroad: London</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 5
-      },
-      "score": 25,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 5
+      "researchSignalScore": 0
     },
     {
       "title": "US government website used Chinese model the FBI called \"malicious\"",
@@ -6502,32 +6484,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Finding the cells that put our brain to sleep",
-      "link": "https://arstechnica.com/science/2026/09/finding-the-cells-that-put-our-brain-to-sleep/",
-      "source": "Ars Technica",
-      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
-      "publishedAt": "2026-09-18T17:49:50.000Z",
-      "category": "Technology",
-      "description": "Rare cells with widespread connectivity seem to be able to trigger sleep.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Ars Technica"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 22,
-      "reasons": [],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
       "title": "10 Skills Every Software Engineer Needs - Intuit",
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE81cUUzUmlVLUUxWjhHb1NPTHJGSmlxYlNBUU1UZk1rcGF6aVNWWDZUNmdJbVhPS19LS2JNaVIzazhhZzlLWm5Ea2hEQ0RuQnIyWEMyd1dHOHR2V2hRQVFuTzFHaUNieHZTYjZqS3c1OERxSDNnT283UkNQZHVfdw?oc=5",
       "source": "Google News",
@@ -6640,6 +6596,116 @@
       "researchSignalScore": 0
     },
     {
+      "title": "Autumn 2026 International Student Experience Workshop Series - oia.osu.edu",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-04T07:00:00.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5\" target=\"_blank\">Autumn 2026 International Student Experience Workshop Series</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 20,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Your America in 250 Words: Seyhmus Tunc - oia.osu.edu",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-09T18:38:16.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5\" target=\"_blank\">Your America in 250 Words: Seyhmus Tunc</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 20,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Imagineering a creative learning experience - oia.osu.edu",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-03T07:00:00.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5\" target=\"_blank\">Imagineering a creative learning experience</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 20,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Finding the cells that put our brain to sleep",
+      "link": "https://arstechnica.com/science/2026/09/finding-the-cells-that-put-our-brain-to-sleep/",
+      "source": "Ars Technica",
+      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
+      "publishedAt": "2026-09-18T17:49:50.000Z",
+      "category": "Technology",
+      "description": "Rare cells with widespread connectivity seem to be able to trigger sleep.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Ars Technica"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 15,
+      "reasons": [],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
       "title": "Rocket Report: China wants a Raptor 3 engine; SpaceX set for big Starship test",
       "link": "https://arstechnica.com/space/2026/09/rocket-report-ula-flies-into-uncertain-future-falcon-9-family-hits-700-launches/",
       "source": "Ars Technica",
@@ -6647,58 +6713,6 @@
       "publishedAt": "2026-09-18T11:00:11.000Z",
       "category": "Technology",
       "description": "“I can tell you SpaceX has already gone captive.\"",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Ars Technica"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 15,
-      "reasons": [],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "RFK Jr. names 8 new members to influential preventive medicine task force",
-      "link": "https://arstechnica.com/health/2026/09/rfk-jr-stacks-another-influential-federal-panel-with-questionable-picks/",
-      "source": "Ars Technica",
-      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
-      "publishedAt": "2026-09-17T22:31:28.000Z",
-      "category": "Technology",
-      "description": "The USPSTF sets insurance coverage for preventive services, like colonoscopies.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Ars Technica"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 15,
-      "reasons": [],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Small AI models let drones autonomously identify and attack battlefield targets",
-      "link": "https://arstechnica.com/ai/2026/09/nato-backed-startup-adapts-ai-for-autonomous-drone-recon-and-attack-missions/",
-      "source": "Ars Technica",
-      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
-      "publishedAt": "2026-09-17T22:12:58.000Z",
-      "category": "Technology",
-      "description": "Scaleout deploys decentralized AI-driven learning to military bases and drones.",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
