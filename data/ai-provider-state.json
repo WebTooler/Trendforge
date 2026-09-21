@@ -3,12 +3,12 @@
   "providers": {
     "Groq": {
       "failures": 46,
-      "quotaBlockedUntil": 1789928057877,
-      "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 1470, Requested 7193. Please try again in 4.9725s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
-      "lastClass": "rate_limit",
-      "successes": 36,
-      "lastSuccessAt": "2026-09-20T11:23:47.274Z",
+      "quotaBlockedUntil": 0,
+      "lastStatus": 200,
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 41,
+      "lastSuccessAt": "2026-09-21T07:50:37.794Z",
       "history": [
         {
           "at": 1789926380114,
@@ -21,8 +21,119 @@
           "ok": false,
           "class": "rate_limit",
           "status": 429
+        },
+        {
+          "at": 1789976973870,
+          "ok": true,
+          "class": "success",
+          "status": 200,
+          "latencyMs": 1307,
+          "usage": {
+            "queue_time": 0.063368952,
+            "prompt_tokens": 3656,
+            "prompt_time": 0.234275306,
+            "completion_tokens": 592,
+            "completion_time": 0.76648877,
+            "total_tokens": 4248,
+            "total_time": 1.000764076,
+            "completion_tokens_details": {
+              "reasoning_tokens": 19
+            }
+          }
+        },
+        {
+          "at": 1789976975463,
+          "ok": true,
+          "class": "success",
+          "status": 200,
+          "latencyMs": 1130,
+          "usage": {
+            "queue_time": 0.037657927,
+            "prompt_tokens": 2538,
+            "prompt_time": 0.129514455,
+            "completion_tokens": 433,
+            "completion_time": 0.52930569,
+            "total_tokens": 2971,
+            "total_time": 0.658820145,
+            "completion_tokens_details": {
+              "reasoning_tokens": 242
+            }
+          }
+        },
+        {
+          "at": 1789976991864,
+          "ok": true,
+          "class": "success",
+          "status": 200,
+          "latencyMs": 1393,
+          "usage": {
+            "queue_time": 0.319702975,
+            "prompt_tokens": 2577,
+            "prompt_time": 0.24311106,
+            "completion_tokens": 690,
+            "completion_time": 0.742746216,
+            "total_tokens": 3267,
+            "total_time": 0.985857276,
+            "completion_tokens_details": {
+              "reasoning_tokens": 499
+            }
+          }
+        },
+        {
+          "at": 1789977016140,
+          "ok": true,
+          "class": "success",
+          "status": 200,
+          "latencyMs": 24275,
+          "usage": {
+            "queue_time": 0.241545809,
+            "prompt_tokens": 2596,
+            "prompt_time": 0.132173336,
+            "completion_tokens": 922,
+            "completion_time": 1.210423275,
+            "total_tokens": 3518,
+            "total_time": 1.342596611,
+            "prompt_tokens_details": {
+              "cached_tokens": 512
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 731
+            }
+          }
+        },
+        {
+          "at": 1789977037794,
+          "ok": true,
+          "class": "success",
+          "status": 200,
+          "latencyMs": 6652,
+          "usage": {
+            "queue_time": 0.003553307,
+            "prompt_tokens": 2635,
+            "prompt_time": 0.133442161,
+            "completion_tokens": 731,
+            "completion_time": 0.833200806,
+            "total_tokens": 3366,
+            "total_time": 0.966642967,
+            "completion_tokens_details": {
+              "reasoning_tokens": 468
+            }
+          }
         }
-      ]
+      ],
+      "lastLatencyMs": 6652,
+      "lastUsage": {
+        "queue_time": 0.003553307,
+        "prompt_tokens": 2635,
+        "prompt_time": 0.133442161,
+        "completion_tokens": 731,
+        "completion_time": 0.833200806,
+        "total_tokens": 3366,
+        "total_time": 0.966642967,
+        "completion_tokens_details": {
+          "reasoning_tokens": 468
+        }
+      }
     },
     "Gemini": {
       "failures": 33,
@@ -119,5 +230,5 @@
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-21T05:28:04.917Z"
+  "updatedAt": "2026-09-21T07:50:37.794Z"
 }

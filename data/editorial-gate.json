@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-20T11:23:34.963Z",
-  "provider": "Cohere",
+  "generatedAt": "2026-09-21T07:49:33.879Z",
+  "provider": "Groq",
   "editorial": {
     "passed": true,
     "checks": {
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 3359,
-      "sentenceCount": 25,
+      "normalizedLength": 2683,
+      "sentenceCount": 17,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,12 +31,13 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "247wallst.com"
+    "catf.us",
+    "energypolicy.columbia.edu"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 1,
-    "usablePassages": 18,
+    "sourceCount": 2,
+    "usablePassages": 13,
     "primarySourceCount": 0
   }
 }

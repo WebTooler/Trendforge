@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-20T11:24:33.824Z",
-  "articlePath": "content/articles/bitcoin-etfs-hold-6-29-of-supply-what-a-10-threshold-means.md",
-  "provider": "Cohere",
-  "previousTitle": "Bitcoin ETFs Hold 6.29% of Supply – What a 10% Threshold Means",
-  "newTitle": "Bitcoin ETFs Hold 6.29% of Supply – What a 10% Threshold Means",
-  "briefTitle": "Bitcoin ETFs Now Own 6.29% of Every Bitcoin. What Happens When They Hit 10%? - Yahoo Finance",
-  "evidenceClaims": 11,
-  "failedClaims": 2,
-  "evidenceChars": 1231,
+  "generatedAt": "2026-09-21T07:50:37.795Z",
+  "articlePath": "content/articles/aligning-public-finance-with-technology-readiness-in-clean-energy.md",
+  "provider": "Groq",
+  "previousTitle": "Aligning Public Finance With Technology Readiness in Clean Energy",
+  "newTitle": "Aligning Public Finance With Technology Readiness in Clean Energy",
+  "briefTitle": "Aligning Public Finance Policies with Technology Readiness Levels in Clean Energy Technologies: Task Force Report - CGEP",
+  "evidenceClaims": 15,
+  "failedClaims": 7,
+  "evidenceChars": 6750,
   "mode": "atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery",
   "repairOrder": [
     "rewrite",
@@ -18,8 +18,14 @@
   "maxRecoveryPasses": 1,
   "recoveryWaitMs": 15000,
   "providerAttempts": 4,
-  "appliedRepairs": 2,
+  "appliedRepairs": 7,
   "rewriteOrNarrowRepairs": 1,
-  "deletedSentences": 1,
-  "wordCountValidation": "not_applicable"
+  "deletedSentences": 6,
+  "wordCountValidation": {
+    "before": 394,
+    "after": 301,
+    "minimum": 300,
+    "depthMode": "narrow",
+    "preservedFloor": true
+  }
 }

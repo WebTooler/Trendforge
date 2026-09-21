@@ -1,12 +1,79 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-21T05:28:10.144Z",
+  "generatedAt": "2026-09-21T07:50:45.663Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 0,
+  "generated": 1,
   "skipped": 0,
   "failed": 0,
-  "images": {}
+  "images": {
+    "aligning-public-finance-with-technology-readiness-in-clean-energy": {
+      "status": "generated",
+      "image": "/Trendforge/images/articles/aligning-public-finance-with-technology-readiness-in-clean-energy.1024x576.png",
+      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
+      "width": 1024,
+      "height": 576,
+      "steps": 4,
+      "elapsedMs": 2923,
+      "bytes": 710576,
+      "visualBrief": {
+        "version": 2,
+        "mode": "conceptual-editorial",
+        "primarySubject": "the specific policy, governance, market, or industry action described by the story, specifically tied to aligning, public, finance, technology",
+        "scene": "A sophisticated editorial photo-illustration or carefully staged metaphor that makes the specific central idea immediately understandable without relying on generic AI symbols.",
+        "supportingElements": [
+          "at most one concrete metaphorical object or environmental cue tied directly to the story"
+        ],
+        "composition": "One strong metaphor or visual action, restrained editorial treatment, clear hierarchy, no collage of unrelated symbols.",
+        "company": null,
+        "namedPerson": null,
+        "category": "Technology",
+        "storyAnchors": [
+          "aligning",
+          "public",
+          "finance",
+          "technology",
+          "readiness",
+          "clean",
+          "energy",
+          "columbia"
+        ],
+        "avoid": [
+          "generic office imagery",
+          "random tablet or laptop",
+          "generic futuristic technology",
+          "glowing holograms, floating code, HUDs and neon sci-fi effects",
+          "prominent readable text or fake headlines",
+          "generic AI brain",
+          "random server rack",
+          "generic circuit board",
+          "stock-looking technology montage"
+        ]
+      },
+      "relevance": {
+        "passed": true,
+        "anchors": [
+          "aligning",
+          "public",
+          "finance",
+          "technology",
+          "readiness",
+          "clean",
+          "energy",
+          "columbia"
+        ],
+        "matchedAnchors": [
+          "aligning",
+          "public",
+          "finance",
+          "technology"
+        ],
+        "entityMatches": [],
+        "score": 0.5
+      },
+      "promptLength": 1900
+    }
+  }
 }
