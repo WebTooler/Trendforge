@@ -54,6 +54,9 @@ jobs:
       - name: Verify authoritative evidence pack integration
         run: npm run evidence-pack:integration:test
 
+      - name: Verify Story Fact Map V1
+        run: node scripts/test-story-fact-map.mjs
+
       - name: Run real-data pre-writer integration
         run: node scripts/pre-writer-pipeline.mjs
 
