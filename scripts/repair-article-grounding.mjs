@@ -29,11 +29,11 @@ async function main(){
  const brief=fs.existsSync(briefPath)?JSON.parse(fs.readFileSync(briefPath,'utf8')):null;
  const verification=fs.existsSync(claimPath)?JSON.parse(fs.readFileSync(claimPath,'utf8')):null;
  const claims=Array.isArray(verification?.claims)?verification.claims:Array.isArray(verification?.results)?verification.results:[];
- const failed=claims.filter(x=>x.status==='unsupported'||x.status==='partial'||x.status==='uncertain'||x.classification==='uncertain').slice(0,12);
+ const failed=claims.filter(x=>x.status==='unsupported'||x.status==='partial'||x.status==='uncertain'||x.classification==='uncertain').slice(0,10);
  if(!failed.length){console.log('Grounding repair: no failed factual claims; article left unchanged.');return;}
  const canonical=loadCanonicalRepairEvidence({briefTitle:brief?.brief?.title||titleFrom(raw),failedClaims:failed});
  const canonicalByUrl=new Map(canonical.sources.map(source=>[source.url,source]));
- const evidence=canonical.claims.map((x,i)=>{const source=canonicalByUrl.get(x.bestUrl);return `FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.bestPassage||'').slice(0,3000)}\nSOURCE: ${x.bestSource||source?.title||''}\nURL: ${x.bestUrl||''}`}).join('\n\n');
+ const evidence=canonical.claims.map((x,i)=>{const source=canonicalByUrl.get(x.bestUrl);return `FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.bestPassage||'').slice(0,700)}\nSOURCE: ${x.bestSource||source?.title||''}\nURL: ${x.bestUrl||''}`}).join('\n\n');
  if(evidence.length<200)throw new Error('Current claim evidence is incomplete; grounding repair refused.');
  const oldTitle=titleFrom(raw),oldDescription=descriptionFrom(raw);
  const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'').trim();
@@ -63,7 +63,7 @@ async function main(){
   '- Do not rewrite paragraphs, headings, title, description, source list or unrelated material.',
   '- If a failed claim is an editorial/context statement rather than a factual premise, preserve it only if it introduces no unsupported factual assertion.',
   '',
-  `CURRENT ARTICLE:\n${body.slice(0,16000)}`,
+  `CURRENT ARTICLE:\n${body.slice(0,6000)}`,
   `FAILED CLAIMS AND THEIR EVIDENCE:\n${evidence}`,
   'Return JSON only: {"repairs":[{"original":"...","replacement":"..."}]}.'
  ].join('\n\n');
