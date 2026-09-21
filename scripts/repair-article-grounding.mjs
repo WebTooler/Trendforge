@@ -10,7 +10,7 @@ const aiBudgetPath='data/ai-run-budget.json';
 const repairProviderBudgetPath='data/ai-repair-run-budget.json';
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
 const MAX_REPAIR_RECOVERY_PASSES=1;
-const MAX_DEPTH_RECOVERY_PASSES=1;
+const MAX_DEPTH_RECOVERY_PASSES=0;
 const REPAIR_RECOVERY_WAIT_MS=15000;
 const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
 const titleFrom=r=>(r.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
@@ -78,7 +78,7 @@ async function main(){
     }
     let prompt=basePrompt;
     if(providerPass>0) prompt+=`\n\nRECOVERY PASS: Re-evaluate the same evidence and return the complete repairs array again. Prefer the smallest safe rewrite/narrowing; do not invent or delete merely to make the response shorter.`;
-    if(depthPass>0) prompt+=`\n\nDEPTH-PRESERVATION PASS: The previous repair proposal would leave the article below the mandatory ${minimumWords}-word evidence-mode floor. Preserve enough supported material to keep the repaired article at or above ${minimumWords} words. Prefer faithful rewrites/narrowings over deletion. Do not add unsupported facts.`;
+    if(depthPass>0) prompt+='\n\nEVIDENCE-FIRST RECOVERY: Prefer removing unsupported material even if the article becomes shorter. Do not add facts to satisfy a length target.';
     try{
       out=await generateWithTrendForgeRepair({prompt});
       parsed=parseJson(out.text);
@@ -94,9 +94,7 @@ async function main(){
       if(!applied) throw new Error('Atomic repair produced no matching sentence replacements.');
       finalDepth=assessArticleDepth({content:updatedBody,blueprint});
       if(finalDepth.words<minimumWords){
-       lastError=new Error(`Repair proposal would violate article depth floor: ${finalDepth.words} words; minimum ${minimumWords}.`);
-       console.log(`Grounding repair v11: rejected provider proposal before write — ${lastError.message}`);
-       out=null;
+       console.log(`Grounding repair v11: evidence-first repair accepted below target depth (${finalDepth.words} words; target floor ${minimumWords}) because unsupported material must not be retained for length.`);
       }
     }catch(e){lastError=e;out=null;console.log(`Grounding repair v11: provider pass failed — ${e?.message||String(e)}.`);}
    }
@@ -105,7 +103,7 @@ async function main(){
   const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
   const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
   fs.writeFileSync(articlePath,`${frontmatter}\n\n${updatedBody.trim()}\n${sources||''}\n`);
-  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery',repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:{before:originalDepth.words,after:finalDepth.words,minimum:minimumWords,depthMode:finalDepth.mode,preservedFloor:true}},null,2)+'\n');
+  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery',repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:{before:originalDepth.words,after:finalDepth.words,minimum:minimumWords,depthMode:finalDepth.mode,preservedFloor:finalDepth.words>=minimumWords}},null,2)+'\n');
   console.log(`Grounding repair v11: applied ${applied} repair(s) — ${narrowedOrRewritten} rewritten/narrowed, ${deleted} deleted. Strategy: rewrite -> narrow -> delete. Recovery pass enabled; unrelated article content preserved using dedicated repair provider ${out.provider}.`);
  }finally{restoreWriterBudget(originalBudget);}
 }
