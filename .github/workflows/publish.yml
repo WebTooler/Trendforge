@@ -139,7 +139,7 @@ jobs:
             [ -f data/article-brief.json ] && cp data/article-brief.json "$quarantine/article-brief.json"
             [ -f data/claim-verification.json ] && cp data/claim-verification.json "$quarantine/claim-verification.json"
             if [ -f data/grounding-repair.json ]; then
-              if grep -q '"articlePath":"'"$article"'"' data/grounding-repair.json && grep -q '"runId":"'"${GITHUB_RUN_ID:-unknown}"'"' data/grounding-repair.json; then
+              if grep -Fq "\"articlePath\":\"$article\"" data/grounding-repair.json && grep -Fq "\"runId\":\"${GITHUB_RUN_ID:-unknown}\"" data/grounding-repair.json; then
                 cp data/grounding-repair.json "$quarantine/grounding-repair.json"
               else
                 echo 'Grounding repair diagnostic does not match the quarantined article/run; not copied.'
