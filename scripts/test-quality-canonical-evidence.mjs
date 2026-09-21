@@ -1,5 +1,9 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
+const qualitySource=fs.readFileSync(new URL('./validate-article-quality.ts',import.meta.url),'utf8');
+assert.ok(qualitySource.includes('evidenceMinWords'),'Quality gate must use evidence-derived minimum words.');
+assert.ok(qualitySource.includes('evidenceMaxH2'),'Quality gate must use evidence-derived H2 ceiling.');
+assert.ok(qualitySource.includes('requiredSubstantiveParagraphs = Math.max(1'),'Quality gate must not impose a universal three-paragraph floor on narrow evidence.');
 
 const path='data/authoritative-evidence-pack.json';
 const original=fs.existsSync(path)?fs.readFileSync(path,'utf8'):null;
