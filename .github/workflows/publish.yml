@@ -228,7 +228,7 @@ jobs:
           output_commit="$(git rev-parse HEAD)"
           git fetch origin main
           git reset --hard origin/main
-          generated_files="$(git diff-tree --no-commit-id --name-only -r "$output_commit" -- data lib/articles.ts public/images/articles content/articles 2>/dev/null || true)"
+          generated_files="$(git diff-tree --no-commit-id --diff-filter=ACMRT --name-only -r "$output_commit" -- data lib/articles.ts public/images/articles content/articles 2>/dev/null || true)"
           if [ -z "$generated_files" ]; then echo 'No generated output paths found in pipeline commit.'; exit 0; fi
           while IFS= read -r path; do [ -z "$path" ] && continue; git checkout "$output_commit" -- "$path"; done <<< "$generated_files"
           git add $generated_files
