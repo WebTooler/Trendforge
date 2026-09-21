@@ -69,6 +69,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
   const evidenceModel=loadEvidenceBlueprint(expectedTitle);
   const blueprint=evidenceModel?.blueprint||null;
   const factMap=evidenceModel?.factMap||null;
+  if(!factMap||factMap.version!==1||!factMap.capacity||!Array.isArray(factMap.coreFacts)) throw new Error('Canonical Story Fact Map missing or invalid; writer generation blocked.');
   const wordGuide=blueprint?.targetWords||{min:WRITER_TARGET_MIN_WORDS,max:WRITER_TARGET_MAX_WORDS,soft:600};
   const h2Guide=blueprint?.h2Guidance||{preferredMin:2,preferredMax:3};
   const hardWordMin=Math.max(MIN_WRITER_WORDS,Number(wordGuide.min||WRITER_TARGET_MIN_WORDS));
