@@ -36,10 +36,10 @@ async function main(){
  const evidence=canonical.claims.map((x,i)=>{const source=canonicalByUrl.get(x.bestUrl);return `FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.bestPassage||'').slice(0,3000)}\nSOURCE: ${x.bestSource||source?.title||''}\nURL: ${x.bestUrl||''}`}).join('\n\n');
  if(evidence.length<200)throw new Error('Current claim evidence is incomplete; grounding repair refused.');
  const oldTitle=titleFrom(raw),oldDescription=descriptionFrom(raw);
+ const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'').trim();
  const blueprint=loadBlueprint(brief?.brief?.title||oldTitle);
  const originalDepth=assessArticleDepth({content:body,blueprint});
  const minimumWords=Number(originalDepth?.rules?.minWords||blueprint?.targetWords?.min||300);
- const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'').trim();
  const basePrompt=[
   'You are TrendForge Atomic Grounding Repair v11.',
   'DO NOT rewrite the article. Return ONLY JSON containing an array named repairs.',
