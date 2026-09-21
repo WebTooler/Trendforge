@@ -1,5 +1,10 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { validateDraft } from './trendforge-editorial-policy.mjs';
+
+const writerEngine=fs.readFileSync(new URL('./trendforge-writer-engine.mjs',import.meta.url),'utf8');
+assert.match(writerEngine,/const maxFactualClaims=claimBudget>0\\?claimBudget:0;/,'Writer must use the exact evidence claim budget.');
+assert.doesNotMatch(writerEngine,/Math\\.max\\(3,claimBudget\\)/,'Writer must not inflate a small evidence budget to three claims.');
 const base={title:'A sufficiently descriptive TrendForge headline',description:'A sufficiently long description that explains the development and gives readers useful context without making unsupported claims.',category:'Technology'};
 const content=[
   '## One\n\nThe opening record identifies a distinct development with concrete timing and evidence. Its details give readers a useful factual starting point without importing background from outside the supplied record. The section also keeps the evidence boundary explicit so the fixture tests substance rather than filler. This opening therefore has enough room to exercise the narrow-mode length gate. The example deliberately keeps the point self-contained and gives the validator enough substantive detail to distinguish reporting from filler.',
