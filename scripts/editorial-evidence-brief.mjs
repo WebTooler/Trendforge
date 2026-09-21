@@ -57,7 +57,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       seen.add(key);dedup.push(u);
     }
     const relevant=dedup.slice(0,48);
-    const claims=relevant.filter(x=>FACTUAL.test(x.text)||numbers(x.text).size>0||/["“]/.test(x.text)).map((x,idx)=>({
+    const claims=relevant.filter(x=>FACTUAL.test(x.text)||numbers(x.text).size>0||/["“]/.test(x.text)||x.relevance>=4&&((x.entityShared||0)>0||(x.topicOverlap||0)>=2)).map((x,idx)=>({
       id:'C'+(allClaims.length+idx+1),
       sourceId:'S'+(si+1),
       passageIndex:x.rawPassageIndex+1,
