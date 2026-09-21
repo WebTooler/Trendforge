@@ -62,12 +62,26 @@ if(fs.existsSync(preWriterPath)){
   }catch{preWriterByLink=new Map();hasPreWriterGate=false;}
 }
 const preWriterReady=item=>!hasPreWriterGate||preWriterByLink.get(item.link)?.readyForWriter===true;
-const queue=[...readyPrimary,...readyFallback].filter(preWriterReady).slice(0,8);
+const evidencePriority=item=>{
+  const row=preWriterByLink.get(item.link);
+  const fact=row?.evidence?.storyFactMap||row?.evidence?.editorialEvidenceBrief?.storyFactMap;
+  const cap=fact?.capacity||{};
+  const core=Number(cap.coreFactCount||0);
+  const direct=Number(cap.directCoreFactCount||0);
+  const chars=Number(cap.coreFactChars||0);
+  const sources=Number(cap.coreSourceCount||0);
+  const level={high:3,medium:2,low:1,none:0}[fact?.capacity?.level]??0;
+  return level*100000+core*5000+direct*3000+sources*1000+Math.min(chars,999);
+};
+const queue=[...readyPrimary,...readyFallback]
+  .filter(preWriterReady)
+  .sort((a,b)=>evidencePriority(b)-evidencePriority(a) || Number(b.decisionScore||0)-Number(a.decisionScore||0))
+  .slice(0,8);
 
 const rawEligibleCount=ranked.filter(item=>item.eligible&&item.decision!=='reject').length;
 const integrityPassCount=ranked.filter(integrityPassed).length;
 console.log(`Evidence Integrity queue gate: ${integrityPassCount}/${rawEligibleCount} decision candidates passed source-page integrity.`);
-console.log(`Adaptive publishing queue: ${queue.length} candidate(s) after pre-writer gate (${readyPrimary.length+readyFallback.length} integrity/evidence-ready before pre-writer filter).`);
+console.log(`Adaptive publishing queue: ${queue.length} candidate(s) after pre-writer gate (${readyPrimary.length+readyFallback.length} integrity/evidence-ready before pre-writer filter). Evidence priority uses core facts/direct story facts before decision score.`);
 if(hasPreWriterGate && queue.length===0){
   console.log('Pre-Writer Gate: BLOCK — no candidate reached readyForWriter. Generate Article and all AI generation paths are skipped.');
   process.exit(0);
