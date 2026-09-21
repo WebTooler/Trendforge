@@ -18,6 +18,9 @@ if(!verifierV2Source.includes("manifest?.generated!==true")) throw new Error('Cl
 if(!verifierV2Source.includes("String(manifest.runId||'')!==runId")) throw new Error('Claim verifier must reject stale-run article manifests.');
 if(!verifierV2Source.includes("manifest.articlePath")) throw new Error('Claim verifier must verify the manifest article path.');
 if(!verifierV2Source.includes("status:'skipped'")) throw new Error('Claim verifier must record a safe no-article skip.');
+if(!verifierV2Source.includes("function write(report){fs.writeFileSync(claimPath")) throw new Error('Claim verifier no-article path must define its report writer.');
+const generatorSource=fs.readFileSync(new URL('./generate-article.ts',import.meta.url),'utf8');
+if(!generatorSource.includes("pack.evidenceBrief??pack.editorialEvidenceBrief??null")) throw new Error('Article generator must consume the canonical pack.evidenceBrief Fact Map.');
 if(!adaptiveSource.includes("data/current-run-article.json")) throw new Error('Adaptive generator must initialize the current-run article manifest.');
 if(!adaptiveSource.includes("generated:false")) throw new Error('Adaptive generator must mark no-article state explicitly.');
 if(!adaptiveSource.includes("generated:true")) throw new Error('Adaptive generator must mark successful current-run publication.');
