@@ -80,7 +80,7 @@ const evidencePriority=item=>{
 };
 const queue=[...readyPrimary,...readyFallback]
   .filter(preWriterReady)
-  .sort((a,b)=>evidencePriority(b)-evidencePriority(a) || Number(b.decisionScore||0)-Number(a.decisionScore||0))
+  .sort((a,b)=>Number(b.decisionScore||0)-Number(a.decisionScore||0) || (a.decision==='publish_candidate'? -1:0) - (b.decision==='publish_candidate'? -1:0) || evidencePriority(b)-evidencePriority(a))
   .slice(0,8);
 
 const rawEligibleCount=ranked.filter(item=>item.eligible&&item.decision!=='reject').length;
