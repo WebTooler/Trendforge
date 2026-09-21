@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import { validateDraft } from './trendforge-editorial-policy.mjs';
 
 const writerEngine=fs.readFileSync(new URL('./trendforge-writer-engine.mjs',import.meta.url),'utf8');
-assert.match(writerEngine,/const maxFactualClaims=claimBudget>0\\?claimBudget:0;/,'Writer must use the exact evidence claim budget.');
+assert.ok(writerEngine.includes('const maxFactualClaims=claimBudget>0?claimBudget:0;'),'Writer must use the exact evidence claim budget.');
 assert.doesNotMatch(writerEngine,/Math\\.max\\(3,claimBudget\\)/,'Writer must not inflate a small evidence budget to three claims.');
 const base={title:'A sufficiently descriptive TrendForge headline',description:'A sufficiently long description that explains the development and gives readers useful context without making unsupported claims.',category:'Technology'};
 const content=[
