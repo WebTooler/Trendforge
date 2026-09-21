@@ -2,33 +2,14 @@
   "version": 10,
   "providers": {
     "Groq": {
-      "failures": 54,
-      "quotaBlockedUntil": 1789994782884,
+      "failures": 55,
+      "quotaBlockedUntil": 1790007328077,
       "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 3576, Requested 4686. Please try again in 1.965s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 4636, Requested 4574. Please try again in 9.075s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
       "lastClass": "rate_limit",
       "successes": 49,
       "lastSuccessAt": "2026-09-21T12:12:50.532Z",
       "history": [
-        {
-          "at": 1789976975463,
-          "ok": true,
-          "class": "success",
-          "status": 200,
-          "latencyMs": 1130,
-          "usage": {
-            "queue_time": 0.037657927,
-            "prompt_tokens": 2538,
-            "prompt_time": 0.129514455,
-            "completion_tokens": 433,
-            "completion_time": 0.52930569,
-            "total_tokens": 2971,
-            "total_time": 0.658820145,
-            "completion_tokens_details": {
-              "reasoning_tokens": 242
-            }
-          }
-        },
         {
           "at": 1789976991864,
           "ok": true,
@@ -291,6 +272,12 @@
           "ok": false,
           "class": "rate_limit",
           "status": 429
+        },
+        {
+          "at": 1790007320077,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
         }
       ],
       "lastLatencyMs": 718,
@@ -308,8 +295,8 @@
       }
     },
     "Gemini": {
-      "failures": 38,
-      "quotaBlockedUntil": 1789994873911,
+      "failures": 39,
+      "quotaBlockedUntil": 1790007439404,
       "lastStatus": 503,
       "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
       "lastClass": "server",
@@ -361,6 +348,12 @@
           "ok": false,
           "class": "server",
           "status": 503
+        },
+        {
+          "at": 1790007319404,
+          "ok": false,
+          "class": "server",
+          "status": 503
         }
       ]
     },
@@ -379,8 +372,8 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 50,
-      "quotaBlockedUntil": 1789994825857,
+      "failures": 51,
+      "quotaBlockedUntil": 1790007372166,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -434,12 +427,18 @@
           "ok": false,
           "class": "transient",
           "status": 200
+        },
+        {
+          "at": 1790007342166,
+          "ok": false,
+          "class": "transient",
+          "status": 200
         }
       ]
     },
     "Cohere": {
-      "failures": 59,
-      "quotaBlockedUntil": 1789994795794,
+      "failures": 60,
+      "quotaBlockedUntil": 1790007355690,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -493,10 +492,16 @@
           "ok": false,
           "class": "transient",
           "status": 200
+        },
+        {
+          "at": 1790007325690,
+          "ok": false,
+          "class": "transient",
+          "status": 200
         }
       ]
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-21T12:46:37.658Z"
+  "updatedAt": "2026-09-21T16:15:46.065Z"
 }
