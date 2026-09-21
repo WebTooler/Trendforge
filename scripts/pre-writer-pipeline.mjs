@@ -7,7 +7,8 @@ import { buildAuthoritativeEvidencePack } from './authoritative-evidence-pack.mj
 import { buildEditorialEvidenceBrief } from './editorial-evidence-brief.mjs';
 
 const OUTPUT='data/pre-writer-pipeline.json';
-const MAX_CANDIDATES=8;
+const MAX_CANDIDATES=24;
+const MAX_WRITER_QUEUE=8;
 const TIMEOUT=9000;
 
 function runStep(name, command, args){
@@ -122,12 +123,26 @@ if(!fs.existsSync('data/evidence-integrity.json')){
 const verification=JSON.parse(fs.readFileSync('data/source-verification.json','utf8'));
 const integrity=JSON.parse(fs.readFileSync('data/evidence-integrity.json','utf8'));
 
+const integrityByLink=new Map((integrity.report||[]).map(r=>[r.link,r]));
 const candidates=(verification.records||[])
   .filter(r=>r.status==='verified')
-  .sort((a,b)=>(b.confidence||0)-(a.confidence||0))
+  .map(r=>{
+    const preflight=integrityByLink.get(r.link)||null;
+    const sourceCount=Number(r.credibleSourceCount||0);
+    const independentDomains=Number(r.independentDomainCount??r.uniqueDomainCount??0);
+    const integrityPass=preflight?.status==='pass';
+    const strongEvidence=preflight?.evidenceLevel==='strong';
+    const score=
+      (integrityPass?1000:0)+
+      (strongEvidence?500:0)+
+      Math.min(250,independentDomains*60)+
+      Math.min(180,sourceCount*30)+
+      Number(r.confidence||0);
+    return {...r,__preWriterPriority:score};
+  })
+  .sort((a,b)=>(b.__preWriterPriority-a.__preWriterPriority)||(b.confidence||0)-(a.confidence||0))
   .slice(0,MAX_CANDIDATES);
 
-const integrityByLink=new Map((integrity.report||[]).map(r=>[r.link,r]));
 const results=[];
 const authoritativePacks=[];
 const publishedHistory=loadPublishedHistory();
@@ -201,7 +216,7 @@ for(const record of candidates){
   const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint,editorialEvidenceBrief:evidenceBrief},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':!evidenceBriefReady?'editorial-evidence-brief-insufficient':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
   const queueDuplicate=queueAccepted.map(x=>duplicateWithinQueue(resultRow,x)).find(x=>x.duplicate);
   if(queueDuplicate){duplicateQueueBlocked++;resultRow.readyForWriter=false;resultRow.writerGateReason=queueDuplicate.reason;resultRow.duplicateStory=queueDuplicate;}
-  else if(resultRow.readyForWriter)queueAccepted.push(resultRow);
+  else if(resultRow.readyForWriter && queueAccepted.length<MAX_WRITER_QUEUE)queueAccepted.push(resultRow);
   results.push(resultRow);
 }
 
@@ -218,7 +233,9 @@ const summary={
   thin:results.filter(r=>r.evidence.coverage.band==='thin').length,
   insufficient:results.filter(r=>r.evidence.coverage.band==='insufficient').length,
   syndicatedLineages:results.reduce((n,r)=>n+(r.evidence?.coverage?.syndicatedSourceGroups||0),0),
-  readyForWriter:results.filter(r=>r.readyForWriter).length
+  readyForWriter:results.filter(r=>r.readyForWriter).length,
+  writerQueueCapacity:MAX_WRITER_QUEUE,
+  candidateSelection:{policy:'bounded-evidence-aware',inspected:MAX_CANDIDATES,writerQueue:MAX_WRITER_QUEUE}
 };
 
 fs.mkdirSync('data',{recursive:true});
