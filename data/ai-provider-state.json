@@ -89,8 +89,8 @@
       ]
     },
     "Cohere": {
-      "failures": 53,
-      "quotaBlockedUntil": 1789928092363,
+      "failures": 54,
+      "quotaBlockedUntil": 1789962122719,
       "lastStatus": 200,
       "lastError": "Empty model response",
       "lastClass": "transient",
@@ -108,10 +108,16 @@
           "ok": false,
           "class": "transient",
           "status": 200
+        },
+        {
+          "at": 1789962092719,
+          "ok": false,
+          "class": "transient",
+          "status": 200
         }
       ]
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-20T20:28:09.601Z"
+  "updatedAt": "2026-09-21T03:41:32.719Z"
 }
