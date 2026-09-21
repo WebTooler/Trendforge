@@ -7,6 +7,7 @@ const claimPath='data/claim-verification.json';
 const evidencePackPath='data/authoritative-evidence-pack.json';
 const backupDir='.trendforge-claim-fixture-backup';
 const verifierV2Source=fs.readFileSync(new URL('./verify-article-claims-v2.mjs',import.meta.url),'utf8');
+const verifierSmartSource=fs.readFileSync(new URL('./verify-article-claims-smart.mjs',import.meta.url),'utf8');
 const adaptiveSource=fs.readFileSync(new URL('./generate-article-adaptive.mjs',import.meta.url),'utf8');
 const repairSource=fs.readFileSync(new URL('./repair-article-grounding.mjs',import.meta.url),'utf8');
 
@@ -19,8 +20,9 @@ if(!verifierV2Source.includes("String(manifest.runId||'')!==runId")) throw new E
 if(!verifierV2Source.includes("manifest.articlePath")) throw new Error('Claim verifier must verify the manifest article path.');
 if(!verifierV2Source.includes("status:'skipped'")) throw new Error('Claim verifier must record a safe no-article skip.');
 if(!verifierV2Source.includes("function write(report){fs.writeFileSync(claimPath")) throw new Error('Claim verifier no-article path must define its report writer.');
-if(!verifierV2Source.includes("const anchoredPassage=coreFactMatch&&Number.isInteger(coreFactMatch.passageIndex)&&")) throw new Error('Claim verifier must anchor matched core facts to their exact source passage.');
-if(!verifierV2Source.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Claim verifier must record fact-map anchored provenance.');
+if(!verifierSmartSource.includes("const anchoredPassage=coreFactMatch&&Number.isInteger(coreFactMatch.passageIndex)&&")) throw new Error('Smart claim verifier must anchor matched core facts to their exact source passage.');
+if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
+if(!verifierV2Source.includes("scripts/verify-article-claims-smart.mjs")) throw new Error('Canonical claim verifier must invoke the smart verifier.');
 const generatorSource=fs.readFileSync(new URL('./generate-article.ts',import.meta.url),'utf8');
 if(!generatorSource.includes("pack.evidenceBrief??pack.editorialEvidenceBrief??null")) throw new Error('Article generator must consume the canonical pack.evidenceBrief Fact Map.');
 if(!adaptiveSource.includes("data/current-run-article.json")) throw new Error('Adaptive generator must initialize the current-run article manifest.');
