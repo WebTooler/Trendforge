@@ -192,8 +192,13 @@ for (const file of files) {
   if (isCurrentRun && seenSlugs.has(slug)) errors.push(`${slug}: duplicate slug.`); else seenSlugs.add(slug);
   const titleKey = normalize(title);
   if (isCurrentRun && seenTitles.has(titleKey)) errors.push(`${slug}: duplicate title.`); else seenTitles.add(titleKey);
-  if (isCurrentRun && words < 150) errors.push(`${slug}: article is too short (${words} words; minimum 150).`);
-    const requiredSubstantiveParagraphs = Math.max(3, Number(depth?.rules?.minSubstantiveParagraphs || 0));
+  const evidenceMinWords = Number(depthBlueprint?.targetWords?.min || 150);
+  const evidenceMaxWords = Number(depthBlueprint?.targetWords?.max || 1500);
+  const evidenceMaxH2 = Number(depthBlueprint?.maxH2 || 0);
+  if (isCurrentRun && words < evidenceMinWords) errors.push(`${slug}: article is too short (${words} words; evidence-derived minimum ${evidenceMinWords}).`);
+  if (isCurrentRun && words > evidenceMaxWords) errors.push(`${slug}: article exceeds evidence-derived maximum (${words} > ${evidenceMaxWords}).`);
+  if (isCurrentRun && evidenceMaxH2 > 0 && headings > evidenceMaxH2) errors.push(`${slug}: H2 count ${headings} exceeds evidence-derived maximum ${evidenceMaxH2}.`);
+    const requiredSubstantiveParagraphs = Math.max(1, Number(depth?.rules?.minSubstantiveParagraphs || 1));
   if (isCurrentRun && paragraphs.length < requiredSubstantiveParagraphs) errors.push(`${slug}: needs at least ${requiredSubstantiveParagraphs} substantive paragraphs for ${depth.mode} evidence.`);
   if (isCurrentRun && (sourceUrls.length < requiredSourceLinks || canonicalSourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://')))) {
     const policy = validatedSingleSource ? 'validated single-source evidence' : evidence.strongEvidence ? 'strong multi-source evidence' : 'current-run evidence';
