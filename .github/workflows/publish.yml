@@ -61,6 +61,12 @@ jobs:
         run: node scripts/ai-provider-router.mjs
       - name: Deterministic Claim Verifier fixtures
         run: node scripts/test-claim-verifier-deterministic.mjs
+      - name: Reset current-run generation diagnostics
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f data/article-brief.json data/article-contract.json data/claim-verification.json data/grounding-repair.json data/current-article-rejected.json
+          rm -f data/current-run-article.json data/native-writer-published.json
       - name: Generate article
         run: node scripts/generate-article-adaptive.mjs
       - name: Archive generated article attempts
@@ -82,9 +88,10 @@ jobs:
             mkdir -p "$dir"
             cp "$article" "$dir/article.md"
             if [ -f data/article-brief.json ]; then cp data/article-brief.json "$dir/article-brief.json"; fi
+            if [ -f data/authoritative-evidence-pack.json ]; then cp data/authoritative-evidence-pack.json "$dir/authoritative-evidence-pack.json"; fi
             if [ -f data/decision-queue.json ]; then cp data/decision-queue.json "$dir/decision-queue.json"; fi
             cat > "$dir/metadata.json" <<EOF
-          {"archivedAt":"$(date -u +%Y-%m-%dT%H:%M:%SZ)","status":"generated-pending-verification","articleFile":"$(basename "$article")","articlePath":"$article","workflowRun":"${GITHUB_RUN_ID:-unknown}","workflowSha":"${GITHUB_SHA:-unknown}"}
+          {"archivedAt":"$(date -u +%Y-%m-%dT%H:%M:%SZ)","status":"generated-pending-verification","articleFile":"$(basename "$article")","articlePath":"$article","workflowRun":"${GITHUB_RUN_ID:-unknown}","workflowSha":"${GITHUB_SHA:-unknown}","evidenceArtifact":"authoritative-evidence-pack.json"}
           EOF
             echo "Archived generated article attempt: $dir"
           done < <(git status --porcelain --untracked-files=all -- content/articles | sed -n 's/^?? //p')
@@ -131,7 +138,13 @@ jobs:
             cp "$article" "$quarantine/article.md"
             [ -f data/article-brief.json ] && cp data/article-brief.json "$quarantine/article-brief.json"
             [ -f data/claim-verification.json ] && cp data/claim-verification.json "$quarantine/claim-verification.json"
-            [ -f data/grounding-repair.json ] && cp data/grounding-repair.json "$quarantine/grounding-repair.json"
+            if [ -f data/grounding-repair.json ]; then
+              if grep -q '"articlePath":"'"$article"'"' data/grounding-repair.json && grep -q '"runId":"'"${GITHUB_RUN_ID:-unknown}"'"' data/grounding-repair.json; then
+                cp data/grounding-repair.json "$quarantine/grounding-repair.json"
+              else
+                echo 'Grounding repair diagnostic does not match the quarantined article/run; not copied.'
+              fi
+            fi
             cat > "$quarantine/metadata.json" <<EOF
           {"status":"claim-verification-blocked","workflowRun":"${GITHUB_RUN_ID:-unknown}","workflowSha":"${GITHUB_SHA:-unknown}","reason":"Bounded claim verification did not reach PASS; generated article quarantined and will not be published."}
           EOF
