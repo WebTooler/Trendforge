@@ -10,7 +10,7 @@ const aiBudgetPath='data/ai-run-budget.json';
 const repairProviderBudgetPath='data/ai-repair-run-budget.json';
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
 const MAX_REPAIR_RECOVERY_PASSES=1;
-const MAX_DEPTH_RECOVERY_PASSES=2;
+const MAX_DEPTH_RECOVERY_PASSES=1;
 const REPAIR_RECOVERY_WAIT_MS=15000;
 const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
 const titleFrom=r=>(r.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
