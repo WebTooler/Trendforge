@@ -83,12 +83,17 @@ async function main(){
     process.exit(0);
   }
   const editorialEvidenceBrief=pack.editorialEvidenceBrief??null;
+  const storyFactMap=editorialEvidenceBrief?.storyFactMap??null;
+  if(!storyFactMap||storyFactMap.version!==1||!storyFactMap.capacity||!Array.isArray(storyFactMap.coreFacts)){
+    console.log('Canonical Story Fact Map missing or invalid for selected candidate; publication blocked before AI generation.');
+    process.exit(0);
+  }
   const evidenceMode=String(pack.blueprint?.mode||'bounded');
   const modeWords=pack.blueprint?.targetWords?`${pack.blueprint.targetWords.min}-${pack.blueprint.targetWords.max}`:(evidenceMode==='rich'?'650-1000':evidenceMode==='narrow'?'220-420':'425-750');
   const evidencePack:EvidencePackItem[]=(pack.sources??[]).map((source:any)=>({
     title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
     passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
-    publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage,sourceRole:source.sourceRole
+    publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage,sourceRole:source.sourceRole||'CONTEXT'
   }));
   const sources=evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt,role:s.sourceRole||sourceRole(s)}));
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
@@ -137,7 +142,7 @@ GROUNDING CONTRACT:\
 - The Editorial Evidence Brief is a derived map, not an additional factual source. If any brief summary conflicts with a supporting passage, follow the passage and preserve uncertainty.\
 \
 OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Evidence-mode word range: ${modeWords} words. Do not pad with unsupported material. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.`;
-  fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,storyFactMap:editorialEvidenceBrief?.storyFactMap||null,grounding:{version:8,strongEvidence,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,primarySourceCount:primarySources.length,sources:evidencePack.map(s=>({title:s.title,url:s.url,role:s.sourceRole||sourceRole(s),kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
+  fs.mkdirSync('data',{recursive:true});fs.writeFileSync('data/article-brief.json',JSON.stringify({generatedAt:new Date().toISOString(),brief,prompt,sourceRelationship,verifiedEvidenceDomains:evidenceDomains,storyFactMap,grounding:{version:8,strongEvidence,sourceCount:evidencePack.length,usablePassages,minimumUsablePassages:minimumPassages,primarySourceCount:primarySources.length,sources:evidencePack.map(s=>({title:s.title,url:s.url,role:s.sourceRole||sourceRole(s),kind:s.kind,articleBodyLength:s.articleBodyLength,passages:s.passages}))}},null,2));
   let output:ProviderResult;try{output=await generateWithProviders(prompt,trend.title);}catch(e){console.log(`${e instanceof Error?e.message:String(e)} Publishing blocked.`);process.exit(0);}
   console.log(`Article generation provider: ${output.provider}`);
   let generated:{title:string;description:string;content:string};try{generated=parseModelJson(output.text);}catch(e){console.log(`${e instanceof Error?e.message:String(e)}; publishing blocked.`);process.exit(0);}
