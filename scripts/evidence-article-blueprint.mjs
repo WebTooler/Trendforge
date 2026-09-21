@@ -15,15 +15,16 @@ export function deriveEvidenceArticleBlueprint(coverage={}) {
   const capacity=band==='rich' ? 'high' : band==='usable' ? 'medium' : band==='thin' ? 'low' : 'none';
   const evidenceCapacity={sourceCount,independentFamilies:families,totalPassages:passages,totalChars:chars,level:capacity,rawPassageCount:Number(coverage.rawPassageCount||passages),relevantPassageCount:Number(coverage.relevantPassageCount||passages),supportedClaimCount:Number(coverage.supportedClaimCount||brief?.metrics?.supportedClaimCount||0),relevantEvidenceDensity:Number(coverage.relevantEvidenceDensity||brief?.metrics?.relevantEvidenceDensity||0),coreFactCount:coreFacts,coreFactChars:coreChars,maxSupportedWords,maxFactualClaims:claimCapacity};
   const boundedMax=Math.max(0,Math.min(1100,maxSupportedWords||0));
+  if(maxSupportedWords>0&&maxSupportedWords<220) return {version:3,mode:'blocked',targetWords:{min:0,max:0,soft:0},h2Guidance:{preferredMin:0,preferredMax:0,writerDecides:false,noPadding:true},maxH2:0,requireCrossCheck:false,allowContextSection:false,sectionPlan:[],evidenceCapacity,instructions:['Do not generate a publishable article. Core story fact capacity is below the safe minimum.']};
   if (band==='rich' && coverage.readyForRichArticle===true) {
     const maxH2=clamp(3+Math.floor(Math.min(sourceCount,4)/2),3,5);
-    const minWords=Math.min(650,Math.max(400,Math.floor(boundedMax*0.65)));
+    const minWords=Math.min(650,Math.max(300,Math.floor(boundedMax*0.65)));
     const maxWords=Math.max(minWords,Math.min(1000,boundedMax||1000));
     return {version:3,mode:'rich',targetWords:{min:minWords,max:maxWords,soft:Math.round((minWords+maxWords)/2)},h2Guidance:{preferredMin:3,preferredMax:maxH2,writerDecides:true,noPadding:true},maxH2,requireCrossCheck:sourceCount>=2,allowContextSection:true,sectionPlan:['development','evidence/details','implications/context','limitations/uncertainty','supported next step'],evidenceCapacity,instructions:['Use only evidence-supported sections.','Let core fact capacity determine depth; never pad to the word or H2 target.','Cross-check material claims when multiple independent families are available.']};
   }
   if (band==='usable' && coverage.readyForRichArticle===true) {
     const maxH2=clamp(2+Math.floor(Math.min(sourceCount,4)/2),2,4);
-    const minWords=Math.min(425,Math.max(320,Math.floor(boundedMax*0.68)));
+    const minWords=Math.min(425,Math.max(260,Math.floor(boundedMax*0.68)));
     const maxWords=Math.max(minWords,Math.min(750,boundedMax||750));
     return {version:3,mode:'bounded',targetWords:{min:minWords,max:maxWords,soft:Math.round((minWords+maxWords)/2)},h2Guidance:{preferredMin:2,preferredMax:maxH2,writerDecides:true,noPadding:true},maxH2,requireCrossCheck:sourceCount>=2,allowContextSection:false,sectionPlan:['development','evidence/details','implications or limitations'],evidenceCapacity,instructions:['Keep scope bounded by the supplied core facts.','Prefer distinct sections with concrete evidence over generic context.','Do not create a context section unless the evidence supports it.']};
   }
