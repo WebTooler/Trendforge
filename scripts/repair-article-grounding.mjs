@@ -108,7 +108,7 @@ async function main(){
       if(!applied) throw new Error('Atomic repair produced no matching sentence replacements.');
       finalDepth=assessArticleDepth({content:updatedBody,blueprint});
       if(finalDepth.words<minimumWords){
-       console.log(`Grounding repair v11: evidence-first repair accepted below target depth (${finalDepth.words} words; target floor ${minimumWords}) because unsupported material must not be retained for length.`);
+       throw new Error(`Evidence-first repair would leave article below the evidence-derived minimum (${finalDepth.words} words; target floor ${minimumWords}); article must be rejected rather than preserved below depth.`);
       }
     }catch(e){lastError=e;out=null;console.log(`Grounding repair v11: provider pass failed — ${e?.message||String(e)}.`);}
    }
