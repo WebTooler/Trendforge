@@ -70,6 +70,7 @@ function applyNarrowEntityCompatibility(report){
   if(!report?.claims?.length) return false;
   let changed=false;
   for(const c of report.claims){
+    c.initialStatus=c.initialStatus||c.status;
     if(c.status!=='unsupported'||c.classification!=='unsupported') continue;
     if(c.numericMismatch||c.contradicted||c.offTopic) continue;
     if(!genericSentenceStart(c.claim)) continue;
@@ -79,11 +80,14 @@ function applyNarrowEntityCompatibility(report){
     // Only rescue a claim when the strict verifier already found very high confidence,
     // strong lexical/phrase agreement, and no hard safety mismatch. This is NOT a threshold
     // reduction: the existing >=62 confidence floor remains mandatory.
+    const core=c.coreFactMatch;
+    if(!core||core.sourceId!==c.sourceId||core.sourceRole==='CONTEXT') continue;
     if(c.confidence<62||s.shared.length<8||s.coverage<0.55||s.phrase<0.25||!s.numericCompatible) continue;
     c.status='verified';
     c.classification='supported';
     c.matchingMode='semantic-context-generic-entity-compatible';
     c.entityGateCompatibility='generic-sentence-initial-word-not-a-named-entity';
+    c.compatibilityRescue={method:'core-fact-map-semantic-compatibility',initialStatus:c.initialStatus,sourceRole:core.sourceRole,factId:core.factId,reason:'strict lexical evidence matched a mapped core fact and passed all hard mismatch checks'};
     changed=true;
   }
   if(!changed) return false;
@@ -102,6 +106,8 @@ function applyNarrowEntityCompatibility(report){
   report.policy.contradictionDetection=true;
   report.policy.topicDriftDetection=true;
   report.policy.strictEntitySupportForNamedEntities=true;
+  report.policy.factMapProvenanceRequired=true;
+  report.policy.compatibilityRescueRequiresCoreFact=true;
   fs.writeFileSync(claimPath,JSON.stringify(report,null,2)+'\n');
   return true;
 }
