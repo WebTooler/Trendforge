@@ -6,6 +6,10 @@ const briefPath='data/article-brief.json';
 const claimPath='data/claim-verification.json';
 const evidencePackPath='data/authoritative-evidence-pack.json';
 const backupDir='.trendforge-claim-fixture-backup';
+const verifierV2Source=fs.readFileSync(new URL('./verify-article-claims-v2.mjs',import.meta.url),'utf8');
+if(!verifierV2Source.includes("return shared.length>=2?'match':'mismatch';")) throw new Error('Claim verifier must distinguish brief mismatch from no-article state.');
+if(!verifierV2Source.includes("if(articleMatchState!=='match')")) throw new Error('Claim verifier must block when generated article does not match current brief.');
+if(!verifierV2Source.includes("process.exit(1);")) throw new Error('Claim verifier mismatch path must fail closed.');
 const source='Reuters reports that Acme launched its Nova AI model in London on Tuesday, with the company saying the model reduced inference costs by 20 percent. The company said the launch will initially target enterprise customers. Mozilla says paying for closed frontier models buys about a four-month head start at about five times the per-task cost, but only when tasks take between eight and 12 hours. However, open models are still lagging behind closed frontier models in revenue. The shift has accelerated the use of open models since Mozilla’s inaugural State of Open Source AI report was published on July 14. The report says organizations still pay for closed frontier models because they work out of the box and come bundled with compliance packaging, support, and accountability, while many organizations lack staff to run open-weight models well. The report highlights how Moonshot AI’s Kimi K3 achieves a composite AI performance score just three points behind Anthropic’s Fable 5 while costing 30 percent of the latter.';
 const baseFrontmatter=`---\ntitle: "Acme Nova AI launch"\ndescription: "A test article for deterministic claim verification."\n---`;
 
