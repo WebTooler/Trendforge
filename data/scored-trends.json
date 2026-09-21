@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T18:00:59.439Z",
+  "generatedAt": "2026-09-21T18:49:09.245Z",
   "scoringPolicy": {
     "version": 2,
     "discoverySignalsInfluenceScore": true,
@@ -11,7 +11,7 @@
       "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE90ZU5jR1RvX0NsRDU5TFg3ZjNCblBNVGhLQnA5RlFqX1VCLUZOMTZHcnBhQ1NNZjFVNTZKN01VWGhlbk41WDlaSU51bVBXYlFMM1hFaVVkTGgxbVRtVmJr?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:41:15.000Z",
+      "publishedAt": "2026-09-21T16:50:45.000Z",
       "category": "Digital Life",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE90ZU5jR1RvX0NsRDU5TFg3ZjNCblBNVGhLQnA5RlFqX1VCLUZOMTZHcnBhQ1NNZjFVNTZKN01VWGhlbk41WDlaSU51bVBXYlFMM1hFaVVkTGgxbVRtVmJr?oc=5\" target=\"_blank\">Google says Gemini breached three companies during security test</a>  <font color=\"#6f6f6f\">The Record from Recorded Future News</font>",
       "signalType": "news",
@@ -27,42 +27,9 @@
           "news",
           "publisher"
         ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 5
       },
       "score": 84,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 13
-    },
-    {
-      "title": "Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows - 41NBC News",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T10:51:12.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFNVbnBHNEVSazVSeW81RzBXU1hWN0lwbDZqLTBMYndwVmZGUkMxZGszNWpvWUdkV1ZMeEJVTXpBMGpBSmpvUGlPRVlOaXBKSngzRUkxLTMwNENoUlFNVUE0d1hDY0pWSnVEWm1lZjVaY1NjZEZUVldBejRyMlA1RXRXWTZETzZa?oc=5\" target=\"_blank\">Trump proposes ‘AI Force’ as debate over artificial intelligence regulation grows</a>  <font color=\"#6f6f6f\">41NBC News</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 2,
-        "signalTypeCount": 2,
-        "networks": [
-          "Google News",
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "news",
-          "publisher"
-        ],
-        "corroboratingCandidates": 8
-      },
-      "score": 79,
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
@@ -79,7 +46,7 @@
       "sourceUrl": "https://techcrunch.com/feed/",
       "publishedAt": "2026-09-21T14:39:22.000Z",
       "category": "AI",
-      "description": "Google’s AI-native Googlebook ties Gemini to the cursor, dictation, widgets and other parts of the desktop experience.",
+      "description": "Google’s AI-native Googlebook ties Gemini to the cursor, dictation, widgets, and other parts of the desktop experience.",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
@@ -91,7 +58,7 @@
         "signalTypes": [
           "publisher"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 4
       },
       "score": 76,
       "reasons": [
@@ -184,7 +151,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 11
+        "corroboratingCandidates": 12
       },
       "score": 68,
       "reasons": [
@@ -194,36 +161,6 @@
       ],
       "eligible": true,
       "researchSignalScore": 5
-    },
-    {
-      "title": "Google and Apple seek crypto talent as Big Tech eyes stablecoin and tokenization rails - CoinDesk",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQcmd3dFV6cm5DSFpQRXVLa0pCT2JpamNzUHBQSHFMbUREbzBXbmFqYVRVMVpQaER2UldhQnlsSElKcFZXZTFwbUVGU09TUTZXSU02bFhpUU1SQ05nc1dSR1FRT05YekhVUWZ0am9BaWl1V281YXhBV3p6TDhaWGVqZzFrdGQtMXZDS2llX0lHSVRGMjB4M2FZSGJtNC1NQnZsRUhjSndUODJ5dHYwSU5Fc1Y4RllGZjQxejVVZXlvZkdNUmFKOU01VXd2bw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:17:48.000Z",
-      "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQcmd3dFV6cm5DSFpQRXVLa0pCT2JpamNzUHBQSHFMbUREbzBXbmFqYVRVMVpQaER2UldhQnlsSElKcFZXZTFwbUVGU09TUTZXSU02bFhpUU1SQ05nc1dSR1FRT05YekhVUWZ0am9BaWl1V281YXhBV3p6TDhaWGVqZzFrdGQtMXZDS2llX0lHSVRGMjB4M2FZSGJtNC1NQnZsRUhjSndUODJ5dHYwSU5Fc1Y4RllGZjQxejVVZXlvZkdNUmFKOU01VXd2bw?oc=5\" target=\"_blank\">Google and Apple seek crypto talent as Big Tech eyes stablecoin and tokenization rails</a>  <font color=\"#6f6f6f\">CoinDesk</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 65,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
     },
     {
       "title": "Google confirms Gemini models hacked three companies in May 2026",
@@ -257,6 +194,36 @@
       "researchSignalScore": 0
     },
     {
+      "title": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026",
+      "link": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-21T14:30:00.000Z",
+      "category": "AI",
+      "description": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026. Lean in on this Builders Stage session. Save up to $200 before September 25.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 4
+      },
+      "score": 64,
+      "reasons": [
+        "Fresh topic",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
       "title": "Emergency department triaging decisions supported by artificial intelligence (AI) led to improved triaging accuracy and patient flow - 2 Minute Medicine",
       "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTUl0Vk9neUJINmxBdjFicGNic1VPTGpvdWhEbDFtZW95dUppUmpjcGFoX3dobFFFTnRnWk9mZlZPUXY0OUZQcFItdnQ4c3h5Z05aSTlObDByOFBUOTFWU1Q1X0hJZnVLNC1Hd0ZSZWF6dFZLc0haQ21ZRmFsdTBuMjY3Ql9xQ3hJVElFLTZ6eFdIU3VaZ1VxWGg5RFRNbWc3SG1uNHFiVk9vZEtPSkhsUVprMzFOdTN1azBnbmE5LVFBRkpmZHdTRWRpQ1QyTDRDTjZ0aXZGTkV0NXBpRUFidnJZSVphTUljWHJoOW1UYksxaEFoVnc?oc=5",
       "source": "Google News",
@@ -275,37 +242,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
-      },
-      "score": 62,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "This Artificial Intelligence (AI) Stock Has Raised Its Dividend by Over 150% in 10 Years - The Motley Fool",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRURvYmRuNWZzeGJPcDR5Mi1LcHV4eFpzcFdBc2ZsVWF4bjVRNWpGem1MMWNtaHoyMVRWYmxCUlBCQVVIaHNmbEhDWlRyS2lCbHU1NV9DUENxM2N4Y0FmNTdlaFpIMTJ5YjZDaElPN2xLRVpJN0RHM3ZTdWRRbWM2aWd6ZVRTMVNLTlY3MzJMVk43THMteU5ELWVmY0ZBS0hlWXFMRmdMaFFpeEVINjdvTlNGdm91V2IxX3ZxVXgxUVp2SjhiX3JB?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:12:00.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQRURvYmRuNWZzeGJPcDR5Mi1LcHV4eFpzcFdBc2ZsVWF4bjVRNWpGem1MMWNtaHoyMVRWYmxCUlBCQVVIaHNmbEhDWlRyS2lCbHU1NV9DUENxM2N4Y0FmNTdlaFpIMTJ5YjZDaElPN2xLRVpJN0RHM3ZTdWRRbWM2aWd6ZVRTMVNLTlY3MzJMVk43THMteU5ELWVmY0ZBS0hlWXFMRmdMaFFpeEVINjdvTlNGdm91V2IxX3ZxVXgxUVp2SjhiX3JB?oc=5\" target=\"_blank\">This Artificial Intelligence (AI) Stock Has Raised Its Dividend by Over 150% in 10 Years</a>  <font color=\"#6f6f6f\">The Motley Fool</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 4
       },
       "score": 62,
       "reasons": [
@@ -335,7 +272,37 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 4
+      },
+      "score": 62,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Microchip Technology Completes Acquisition of Hailo - Microchip Technology",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPV183NnJTTFZncXliZkN1VTRQdnlxYko1R0dZTmRYR1V6SlBQbzZvemYtZ0QzYnhLSGhheUJJQWpHM3JqWVJnUkZia3NfblgxVThtaFo0WHM3elM3VGV2Vmc0SFZQSXA4WDV4R2c0TUItMDd0YVMtVkRVckp5YkxLdjIzd001ellQMG5hSXBfUVh4ekNiWmxIMUdydlNmNHJjcERHUHV4OF8zUEMwcnVxVDdlOG5QQQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T13:03:35.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPV183NnJTTFZncXliZkN1VTRQdnlxYko1R0dZTmRYR1V6SlBQbzZvemYtZ0QzYnhLSGhheUJJQWpHM3JqWVJnUkZia3NfblgxVThtaFo0WHM3elM3VGV2Vmc0SFZQSXA4WDV4R2c0TUItMDd0YVMtVkRVckp5YkxLdjIzd001ellQMG5hSXBfUVh4ekNiWmxIMUdydlNmNHJjcERHUHV4OF8zUEMwcnVxVDdlOG5QQQ?oc=5\" target=\"_blank\">Microchip Technology Completes Acquisition of Hailo</a>  <font color=\"#6f6f6f\">Microchip Technology</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 13
       },
       "score": 62,
       "reasons": [
@@ -365,7 +332,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 11
+        "corroboratingCandidates": 12
       },
       "score": 62,
       "reasons": [
@@ -407,13 +374,43 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Run Positron on Amazon SageMaker AI for data science workflows - Amazon Web Services (AWS)",
+      "title": "Crypto-linked stocks surge as bitcoin breaks through May highs - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNFVEbF9TV1lLX0pxZnBBMy1rRVFNWHlNdWxhTlJiQjlMWndxWm42QTBJLV9qemZ0a2NyNWhjX3VyQUdOTkJWajh3S2tnb0NYa2pXUDZmTWQ3OG5ac0tPa3cyWll2X1Rnbm5zaTB6QTA1d2xmOFdJcWViakU4QS1KSWIwLUpkVVdXM3BkTHlzTFZGQjhxTDk3UkowUVdVcnp4?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:51:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPNFVEbF9TV1lLX0pxZnBBMy1rRVFNWHlNdWxhTlJiQjlMWndxWm42QTBJLV9qemZ0a2NyNWhjX3VyQUdOTkJWajh3S2tnb0NYa2pXUDZmTWQ3OG5ac0tPa3cyWll2X1Rnbm5zaTB6QTA1d2xmOFdJcWViakU4QS1KSWIwLUpkVVdXM3BkTHlzTFZGQjhxTDk3UkowUVdVcnp4?oc=5\" target=\"_blank\">Crypto-linked stocks surge as bitcoin breaks through May highs</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 10
+      },
+      "score": 62,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Run Positron on Amazon SageMaker AI for data science workflows - aws.amazon.com",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc09zelFIejc0eEhDZXU0T1FKSmdySGgxT21OaG9BcTIwOFh2c2kyQTVzTjFZc2tFNHh2RTFNZW5HLUFMd2VvSjhFT21iTzRWdXlQb2Mxb0Fyd1J0ZzQ2eHlKYkdmbGloa1daM01hZzRtalBQblV5bnloak9TNU1zaUktVGo3c1p1ekVYRjI2dDRIb0hOcF9zeE04YTVZcHFNdXFoa3d4a3ZzWmpmN1E?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-21T16:34:21.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQc09zelFIejc0eEhDZXU0T1FKSmdySGgxT21OaG9BcTIwOFh2c2kyQTVzTjFZc2tFNHh2RTFNZW5HLUFMd2VvSjhFT21iTzRWdXlQb2Mxb0Fyd1J0ZzQ2eHlKYkdmbGloa1daM01hZzRtalBQblV5bnloak9TNU1zaUktVGo3c1p1ekVYRjI2dDRIb0hOcF9zeE04YTVZcHFNdXFoa3d4a3ZzWmpmN1E?oc=5\" target=\"_blank\">Run Positron on Amazon SageMaker AI for data science workflows</a>  <font color=\"#6f6f6f\">Amazon Web Services (AWS)</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQc09zelFIejc0eEhDZXU0T1FKSmdySGgxT21OaG9BcTIwOFh2c2kyQTVzTjFZc2tFNHh2RTFNZW5HLUFMd2VvSjhFT21iTzRWdXlQb2Mxb0Fyd1J0ZzQ2eHlKYkdmbGloa1daM01hZzRtalBQblV5bnloak9TNU1zaUktVGo3c1p1ekVYRjI2dDRIb0hOcF9zeE04YTVZcHFNdXFoa3d4a3ZzWmpmN1E?oc=5\" target=\"_blank\">Run Positron on Amazon SageMaker AI for data science workflows</a>  <font color=\"#6f6f6f\">aws.amazon.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -439,44 +436,13 @@
       "researchSignalScore": 10
     },
     {
-      "title": "8 tips and tools for language learning: from apps to real life - Peace Corps (.gov)",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcVJvSXpMT05lX2pZaEI3bjl2M2lWM3pudDZPM0VNa3BzM0E2TjVGNlExN29wVnVBMDktODdXbTh5WHFOYWVCMjlnUndiWkVvYm8zb0c4X1BDVURvSGhJNEFBd3RjQXVUSFJlLVJKTVFIbzFCRlZnRlRfeUxoWUdVZjhoUTBtVy1fbXVUOU10dC1HaE83THBnb2NkSWxiV1Q5X0xKdg?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:31:59.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOcVJvSXpMT05lX2pZaEI3bjl2M2lWM3pudDZPM0VNa3BzM0E2TjVGNlExN29wVnVBMDktODdXbTh5WHFOYWVCMjlnUndiWkVvYm8zb0c4X1BDVURvSGhJNEFBd3RjQXVUSFJlLVJKTVFIbzFCRlZnRlRfeUxoWUdVZjhoUTBtVy1fbXVUOU10dC1HaE83THBnb2NkSWxiV1Q5X0xKdg?oc=5\" target=\"_blank\">8 tips and tools for language learning: from apps to real life</a>  <font color=\"#6f6f6f\">Peace Corps (.gov)</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 60,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Why parents need to show kids when AI is useful and when it isn’t - cnn.com",
+      "title": "Why parents need to show kids when AI is useful and when it isn’t - CNN",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5QdkpZS1VOaElOOXpETnpseUxSZEhSRkJrcjZnQlpfaDlRSm9mOFV3c0lMVGpldURFb2dNU21BZHFRMWNIYzA3VlAxbWNIZTNNQ0NGSXpjODZ3Z0kzU1hkVDlqdDEwT1kwUnlVd2RJSjBaQQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-21T11:00:29.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE5QdkpZS1VOaElOOXpETnpseUxSZEhSRkJrcjZnQlpfaDlRSm9mOFV3c0lMVGpldURFb2dNU21BZHFRMWNIYzA3VlAxbWNIZTNNQ0NGSXpjODZ3Z0kzU1hkVDlqdDEwT1kwUnlVd2RJSjBaQQ?oc=5\" target=\"_blank\">Why parents need to show kids when AI is useful and when it isn’t</a>  <font color=\"#6f6f6f\">cnn.com</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE5QdkpZS1VOaElOOXpETnpseUxSZEhSRkJrcjZnQlpfaDlRSm9mOFV3c0lMVGpldURFb2dNU21BZHFRMWNIYzA3VlAxbWNIZTNNQ0NGSXpjODZ3Z0kzU1hkVDlqdDEwT1kwUnlVd2RJSjBaQQ?oc=5\" target=\"_blank\">Why parents need to show kids when AI is useful and when it isn’t</a>  <font color=\"#6f6f6f\">CNN</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -500,6 +466,37 @@
       ],
       "eligible": true,
       "researchSignalScore": 12
+    },
+    {
+      "title": "Marvell to Showcase Industry-First 2nm Optical Technology Demos for AI Data Center Infrastructure at ECOC 2026 - Marvell Technology",
+      "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQMmNPRlc3QVVnS25XNGYyT29IS0ZwbkNIX3p1d3JOSEt1RDA2Um0zRlo3cTViYkR1OEtienJvOGswZGd4amNVUkFaSFFHWTk4OEdiOVZtTjdPS3ZRdlBpbWlxZEFDTmNzZXBiVF9WZjdWV1RsVElwTjd0eWJPM3MtM29UZWU5U1lGb2YzLWFYYmpMV2hQNTVGMnZjSnlSZ0lnUmpMNjdTU04xZVN4aWlpTGROckgtSFpQVFpiSkFkMnBMVmgzaW9jWmkwX3NmV05sTUt6Q1E1cDAwcDRma1FHMkY1T3VLRGVsT1pqN2drVWhkaHNVQXpxZ0NaYmRxZUF4aFV3RmQ3NmxjZw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T05:04:45.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigJBVV95cUxQMmNPRlc3QVVnS25XNGYyT29IS0ZwbkNIX3p1d3JOSEt1RDA2Um0zRlo3cTViYkR1OEtienJvOGswZGd4amNVUkFaSFFHWTk4OEdiOVZtTjdPS3ZRdlBpbWlxZEFDTmNzZXBiVF9WZjdWV1RsVElwTjd0eWJPM3MtM29UZWU5U1lGb2YzLWFYYmpMV2hQNTVGMnZjSnlSZ0lnUmpMNjdTU04xZVN4aWlpTGROckgtSFpQVFpiSkFkMnBMVmgzaW9jWmkwX3NmV05sTUt6Q1E1cDAwcDRma1FHMkY1T3VLRGVsT1pqN2drVWhkaHNVQXpxZ0NaYmRxZUF4aFV3RmQ3NmxjZw?oc=5\" target=\"_blank\">Marvell to Showcase Industry-First 2nm Optical Technology Demos for AI Data Center Infrastructure at ECOC 2026</a>  <font color=\"#6f6f6f\">Marvell Technology</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 13
+      },
+      "score": 58,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
     },
     {
       "title": "Googlebooks launch October 4 starting at $899—here are the five models you can preorder today",
@@ -582,7 +579,37 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 4
+      },
+      "score": 57,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "This Artificial Intelligence (AI) Stock Has Raised Its Dividend by Over 150% in 10 Years - The Motley Fool",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRURvYmRuNWZzeGJPcDR5Mi1LcHV4eFpzcFdBc2ZsVWF4bjVRNWpGem1MMWNtaHoyMVRWYmxCUlBCQVVIaHNmbEhDWlRyS2lCbHU1NV9DUENxM2N4Y0FmNTdlaFpIMTJ5YjZDaElPN2xLRVpJN0RHM3ZTdWRRbWM2aWd6ZVRTMVNLTlY3MzJMVk43THMteU5ELWVmY0ZBS0hlWXFMRmdMaFFpeEVINjdvTlNGdm91V2IxX3ZxVXgxUVp2SjhiX3JB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T12:12:00.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQRURvYmRuNWZzeGJPcDR5Mi1LcHV4eFpzcFdBc2ZsVWF4bjVRNWpGem1MMWNtaHoyMVRWYmxCUlBCQVVIaHNmbEhDWlRyS2lCbHU1NV9DUENxM2N4Y0FmNTdlaFpIMTJ5YjZDaElPN2xLRVpJN0RHM3ZTdWRRbWM2aWd6ZVRTMVNLTlY3MzJMVk43THMteU5ELWVmY0ZBS0hlWXFMRmdMaFFpeEVINjdvTlNGdm91V2IxX3ZxVXgxUVp2SjhiX3JB?oc=5\" target=\"_blank\">This Artificial Intelligence (AI) Stock Has Raised Its Dividend by Over 150% in 10 Years</a>  <font color=\"#6f6f6f\">The Motley Fool</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 4
       },
       "score": 57,
       "reasons": [
@@ -642,7 +669,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 7
       },
       "score": 57,
       "reasons": [
@@ -672,42 +699,12 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 9
+        "corroboratingCandidates": 10
       },
       "score": 57,
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026",
-      "link": "https://techcrunch.com/2026/09/21/from-first-users-to-billions-googles-robby-stein-joins-techcrunch-disrupt-2026/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-21T14:30:00.000Z",
-      "category": "AI",
-      "description": "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026. Lean in on this Builders Stage session. Save up to $200 before September 25.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 3
-      },
-      "score": 57,
-      "reasons": [
-        "Fresh topic",
-        "Covered by multiple sources",
         "Enough context for original synthesis"
       ],
       "eligible": true,
@@ -732,97 +729,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Priority Technology CEO to Take Firm Private in $1.6 Billion Deal - WSJ",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRDlxVTlnLWZMQTJkSllBRTVsLVZOeFFNYWVPdC1MMzVHdkJ5UXcxN2QtSnZ1QzRLdVdNLUFIeG5hTDJwWU5uSGJxWXE3UWRnM1ptMl9SaVN5VExQZGl1WkRfQjNlWnpHWVNmenFVdndCWGRqVVVkYUoyWlBOZEJWODVxVy13Nzg2VlljTV9UR2o3X19fNDRUYUtWTVBaT20zUDZiTndSZHBhQnJP?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:11:00.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNRDlxVTlnLWZMQTJkSllBRTVsLVZOeFFNYWVPdC1MMzVHdkJ5UXcxN2QtSnZ1QzRLdVdNLUFIeG5hTDJwWU5uSGJxWXE3UWRnM1ptMl9SaVN5VExQZGl1WkRfQjNlWnpHWVNmenFVdndCWGRqVVVkYUoyWlBOZEJWODVxVy13Nzg2VlljTV9UR2o3X19fNDRUYUtWTVBaT20zUDZiTndSZHBhQnJP?oc=5\" target=\"_blank\">Priority Technology CEO to Take Firm Private in $1.6 Billion Deal</a>  <font color=\"#6f6f6f\">WSJ</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 3
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Priority Technology to go private in $1.6 billion CEO-led deal - Reuters",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEs2VnQ4bjhtNHRpdkZxOHA0Tl96czE2cEFqbEx1REtOX0daNi0xMl8xdEUtOWtyMkExemExQjAtN0dyd09lLU5SZHNuQ2JlV3lPZHR5RzZKRUh1dUZsVi1NR1lzbVo2UEpacENtNUl2V0pJV2NQYzJYUVlBTkZFaXZJRjBRR2FfME5fZGZOSzhIUlk0UVlIaHphM0kzUV9VeTJRcFQwQXhwV2RGaU1j?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:55:55.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEs2VnQ4bjhtNHRpdkZxOHA0Tl96czE2cEFqbEx1REtOX0daNi0xMl8xdEUtOWtyMkExemExQjAtN0dyd09lLU5SZHNuQ2JlV3lPZHR5RzZKRUh1dUZsVi1NR1lzbVo2UEpacENtNUl2V0pJV2NQYzJYUVlBTkZFaXZJRjBRR2FfME5fZGZOSzhIUlk0UVlIaHphM0kzUV9VeTJRcFQwQXhwV2RGaU1j?oc=5\" target=\"_blank\">Priority Technology to go private in $1.6 billion CEO-led deal</a>  <font color=\"#6f6f6f\">Reuters</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 3
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - University of Miami",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:44:21.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5\" target=\"_blank\">Advanced Expertise and Technology vs. Deadly Aortic Conditions</a>  <font color=\"#6f6f6f\">University of Miami</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 3
+        "corroboratingCandidates": 4
       },
       "score": 56,
       "reasons": [
@@ -864,73 +771,43 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Priority Technology Holdings going private in $1.6 billion deal - qz.com",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSmdYaE5rRDRFQjJjU2c1NGxxUk55cE9zc25GRDVxQzNBYW5iNmt6Ml82NHo2ZUIxZF9xY1VEZ1I4eTlQTmp1VUtObTFtbjhSY1hJS2JnblRtZWFLYk9fOUNMaTY0OWQ2OFFQR2dNZGRKT01LU3ZLVVl4R0lMZWRDNw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:57:05.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQSmdYaE5rRDRFQjJjU2c1NGxxUk55cE9zc25GRDVxQzNBYW5iNmt6Ml82NHo2ZUIxZF9xY1VEZ1I4eTlQTmp1VUtObTFtbjhSY1hJS2JnblRtZWFLYk9fOUNMaTY0OWQ2OFFQR2dNZGRKT01LU3ZLVVl4R0lMZWRDNw?oc=5\" target=\"_blank\">Priority Technology Holdings going private in $1.6 billion deal</a>  <font color=\"#6f6f6f\">qz.com</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 3
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Chulalongkorn University and AIST Sign MoU on Quantum Technology - The Quantum Insider",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbFQxeXJiVmRlYlQ2dUtlSkh2Zl8yOVN4N3I2WW1Tc29yU3lLMHJCbFQtaGFWY1ViU0hkcHVPU0ZnTmZkM2t5dU9rU2hkTl9pWUZsS2oyWXpUaHZ6My1vOXNZaDBkRjQwd2FtZEowRm1vcmdRdGRTTTZzWVRaMl9LdnhIQjNidHBPVmxJ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:45:14.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbFQxeXJiVmRlYlQ2dUtlSkh2Zl8yOVN4N3I2WW1Tc29yU3lLMHJCbFQtaGFWY1ViU0hkcHVPU0ZnTmZkM2t5dU9rU2hkTl9pWUZsS2oyWXpUaHZ6My1vOXNZaDBkRjQwd2FtZEowRm1vcmdRdGRTTTZzWVRaMl9LdnhIQjNidHBPVmxJ?oc=5\" target=\"_blank\">Chulalongkorn University and AIST Sign MoU on Quantum Technology</a>  <font color=\"#6f6f6f\">The Quantum Insider</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 3
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "SEI Defines Framework for National Security Cyber Research - PR Newswire",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYmNrQ0xmTWVMenAxNEg2S2lSQnVmVlZTWkloRmJocUtLSm9tY1hmRWcxODlNdkw0ekxkLU1ZRDlCQWxIcEJNNEtFNjZLTERXQVk1RlVUS0lRX2dBOXg2STc5X2dKOU44a2diR3NKM1IxTlFQRkpldk1hN2ZUdi1KcUhBV2UwY1dyOXhVOFVhRi03cTVzblZsSFZiZFBHcmlWQ0I0U29wc2xiSDhYVG4tczBsZEY?oc=5",
+      "title": "\"National security\" becomes Trump's executive sledgehammer - Axios",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYWJ6LW0wekhLOHdheTMtbUxLUU52a3h1cXY0UG9vY3YtUlU5LXFTbHY3ckI3dGlZMHdRRWEtNjBUSlZhYjhhVkRwUzZvS2FaV20zVFcwYktiZlZ3UklZRzZKMTJaOTlwSXE3NWpobmt1MU1vdHkxc1RCNkJCUXFxYndSRnd3UQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T17:08:00.000Z",
+      "publishedAt": "2026-09-21T18:25:34.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQYmNrQ0xmTWVMenAxNEg2S2lSQnVmVlZTWkloRmJocUtLSm9tY1hmRWcxODlNdkw0ekxkLU1ZRDlCQWxIcEJNNEtFNjZLTERXQVk1RlVUS0lRX2dBOXg2STc5X2dKOU44a2diR3NKM1IxTlFQRkpldk1hN2ZUdi1KcUhBV2UwY1dyOXhVOFVhRi03cTVzblZsSFZiZFBHcmlWQ0I0U29wc2xiSDhYVG4tczBsZEY?oc=5\" target=\"_blank\">SEI Defines Framework for National Security Cyber Research</a>  <font color=\"#6f6f6f\">PR Newswire</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQYWJ6LW0wekhLOHdheTMtbUxLUU52a3h1cXY0UG9vY3YtUlU5LXFTbHY3ckI3dGlZMHdRRWEtNjBUSlZhYjhhVkRwUzZvS2FaV20zVFcwYktiZlZ3UklZRzZKMTJaOTlwSXE3NWpobmt1MU1vdHkxc1RCNkJCUXFxYndSRnd3UQ?oc=5\" target=\"_blank\">\"National security\" becomes Trump's executive sledgehammer</a>  <font color=\"#6f6f6f\">Axios</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 56,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Russia is ‘Greatest Threat’ to U.K. Security, Says First Sea Lord - USNI News",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVlRZkt4Mnd4SjlwSzIzRGNlSE9sZVEyZmtWeVM4ekV5YUlMZF8yRk84UW9TbkpMcDJaenRwY2hhQ1U1cW9yUXk5T0dGTV93dmFRNGh1UGg0ZXdZcElCUDkxU1VLS0piTm56enBGTzdkRFhMbVVjRjE5MzRJOGkwRl9zS1NmQzBZeTJ3S2hwUnpzWFhXanUxLXdn?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T18:16:00.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVlRZkt4Mnd4SjlwSzIzRGNlSE9sZVEyZmtWeVM4ekV5YUlMZF8yRk84UW9TbkpMcDJaenRwY2hhQ1U1cW9yUXk5T0dGTV93dmFRNGh1UGg0ZXdZcElCUDkxU1VLS0piTm56enBGTzdkRFhMbVVjRjE5MzRJOGkwRl9zS1NmQzBZeTJ3S2hwUnpzWFhXanUxLXdn?oc=5\" target=\"_blank\">Russia is ‘Greatest Threat’ to U.K. Security, Says First Sea Lord</a>  <font color=\"#6f6f6f\">USNI News</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1032,37 +909,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 4
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act? - bitcoinfoundation.org",
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:35:04.000Z",
-      "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5\" target=\"_blank\">Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act?</a>  <font color=\"#6f6f6f\">bitcoinfoundation.org</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 4
+        "corroboratingCandidates": 3
       },
       "score": 56,
       "reasons": [
@@ -1104,13 +951,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Bitcoin prices rip despite the Clarity Act failure - Yahoo Finance",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbW1ONC1nbmlJbi1POE0tWElxdER3WW1IM1Rua1NhN21jcnFHdXJYMFE3M1ZzZXF4SzNET2xsWHZjQ3M1a0pvV1puRGRuNzluXzdST3pWZlFfNmZKaGd6X0puSjdSanlqbXl0aG40Q3BEVEl3em5IeEs3eXFKLUswNTJQM3NndjZLNjdpZjRXZDNNb1RucUtiRG80WG12bVpKb2ROVkFrSkV0d0tCaVo4MmFPb1U?oc=5",
+      "title": "Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act? - Bitcoin Foundation",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:14:32.000Z",
+      "publishedAt": "2026-09-21T13:35:04.000Z",
       "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQbW1ONC1nbmlJbi1POE0tWElxdER3WW1IM1Rua1NhN21jcnFHdXJYMFE3M1ZzZXF4SzNET2xsWHZjQ3M1a0pvV1puRGRuNzluXzdST3pWZlFfNmZKaGd6X0puSjdSanlqbXl0aG40Q3BEVEl3em5IeEs3eXFKLUswNTJQM3NndjZLNjdpZjRXZDNNb1RucUtiRG80WG12bVpKb2ROVkFrSkV0d0tCaVo4MmFPb1U?oc=5\" target=\"_blank\">Bitcoin prices rip despite the Clarity Act failure</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOcDk2YmpHOFhYTjBsekV5cElZcU1KMUZ3S1ppcnRoeV9pWEJTOVZ0NHdfMFJ1blgzTGdwZE9pSF82YmdNLUdVX1U4UEFfT1BITnNkY3ZVVS1jd1hDaktYZFJJRXRINVpBTURtamQ4NWlnMVFEUU5OX0xnSUp2aHJ1QWFLYVZpZjBMTDI4UU5CVF9DTWJwQXVQcWtJZWptbVYyUEFERWtEMjBiMW8yTVB0Uzhza2dlckRTUlU2TExndFA?oc=5\" target=\"_blank\">Bitcoin Is Back Above $85,000. Why Is BTC Rallying Despite the Fed and CLARITY Act?</a>  <font color=\"#6f6f6f\">Bitcoin Foundation</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1122,7 +969,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 8
+        "corroboratingCandidates": 13
       },
       "score": 56,
       "reasons": [
@@ -1152,37 +999,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 7
-      },
-      "score": 56,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Why Is Bitcoin Up Today? It Closed Above Its 50-Week Average for the First Time in 45 Weeks. - Yahoo Finance",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZFNlWDROT0dISlQ1NFBlTW5zeW53SEFfSnpDQnFnVGZmeEl0OVFyRk4wRWVxbnpQVEdZcmVJY0Z5Z0VZekVIU3RVWng0Rmhpc3pJaVQ4LUZnWmFpbEhMQktQZUhvZEdPcnl0NG4yRlEySWFBc0FzOVliYzQ5NDYzNVNUT21KdHVRNGU4X2FwSkhMTmduc2ZtZjhlMA?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:57:55.000Z",
-      "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPZFNlWDROT0dISlQ1NFBlTW5zeW53SEFfSnpDQnFnVGZmeEl0OVFyRk4wRWVxbnpQVEdZcmVJY0Z5Z0VZekVIU3RVWng0Rmhpc3pJaVQ4LUZnWmFpbEhMQktQZUhvZEdPcnl0NG4yRlEySWFBc0FzOVliYzQ5NDYzNVNUT21KdHVRNGU4X2FwSkhMTmduc2ZtZjhlMA?oc=5\" target=\"_blank\">Why Is Bitcoin Up Today? It Closed Above Its 50-Week Average for the First Time in 45 Weeks.</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 10
+        "corroboratingCandidates": 8
       },
       "score": 56,
       "reasons": [
@@ -1224,6 +1041,96 @@
       "researchSignalScore": 5
     },
     {
+      "title": "Bitcoin Clears 50-Week Hurdle as Traders Eye New Bull Market: Analyst - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNN2NiX0JSVS1sWmp5d0twODM0azNVU3RiaUdLX0RrMVRHbHd6cDU1U3NpM3dxZDhkNy1DM25Cc0dDcEY2V2VsWkg1WlV0VGppQ0k2cEpfRmk2dTROZ0dVOHRra1dkSGVuYjZPQUpkbW5VNFJJZ2k0azV2OEh6eTZ4dW53S0JDYmJIbVRqVU5XVmxXaGxnZGViWHVB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:44:00.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNN2NiX0JSVS1sWmp5d0twODM0azNVU3RiaUdLX0RrMVRHbHd6cDU1U3NpM3dxZDhkNy1DM25Cc0dDcEY2V2VsWkg1WlV0VGppQ0k2cEpfRmk2dTROZ0dVOHRra1dkSGVuYjZPQUpkbW5VNFJJZ2k0azV2OEh6eTZ4dW53S0JDYmJIbVRqVU5XVmxXaGxnZGViWHVB?oc=5\" target=\"_blank\">Bitcoin Clears 50-Week Hurdle as Traders Eye New Bull Market: Analyst</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 10
+      },
+      "score": 56,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs - Colorado Mesa University",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T15:13:57.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5\" target=\"_blank\">CMU Political Science Students Meet Global Leaders at Conference on World Affairs</a>  <font color=\"#6f6f6f\">Colorado Mesa University</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 56,
+      "reasons": [
+        "Fresh topic",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 4
+    },
+    {
+      "title": "With AI becoming more capable, here's why people must too - The World Economic Forum",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbWRNQVNSczJQUDR2YkZ0Ym04WUxGVzl0OUtCVm9JMFZEYkh1bmY5UkVUa1JoRVp1UU5rNkdWdkRxZXhxMlFmVFN1NGFJdXZKUmFjSmdISUc0Y2pkZzZmNm0tTHBwaDByLWNuWTl2LVZyeVJZWTBhWG5KNU9GYXJYLThMUUJTMlZtQTBr?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:08:08.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxQbWRNQVNSczJQUDR2YkZ0Ym04WUxGVzl0OUtCVm9JMFZEYkh1bmY5UkVUa1JoRVp1UU5rNkdWdkRxZXhxMlFmVFN1NGFJdXZKUmFjSmdISUc0Y2pkZzZmNm0tTHBwaDByLWNuWTl2LVZyeVJZWTBhWG5KNU9GYXJYLThMUUJTMlZtQTBr?oc=5\" target=\"_blank\">With AI becoming more capable, here's why people must too</a>  <font color=\"#6f6f6f\">The World Economic Forum</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 55,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 4
+    },
+    {
       "title": "Michael Luca Named Director of Carnegie Mellon University’s Block Center for Technology and Society - Carnegie Mellon University",
       "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOYkxGUEpaV1QtM1FZaUNZVm01TjBuaEl1Q0NmY3dLZG1GdUhHNHpQVlpybkpxOWgzMGM4TXp1OUJDLXBWeFd2Mk93dWhvMnE0cE1FMnprVkJqS29KRkZjLXBaNDFTVjVBeTY5MUJ1LThtMDJtbUNBS0JpaWlXSWxKTGlaTHJZX0xCS0V3REc4WXdYdkEtZDZIYV9kekZJY2s5Y3JMSTd3cnBnaGhJZVZsbzQtWTZtV3pfTEE0bGN1Q1lCUWVaQVN2RFdydXNiVEdOaXlrNWxwdDQ0bXI0alRXS1o5NDNEY0haYkVZ?oc=5",
       "source": "Google News",
@@ -1254,13 +1161,13 @@
       "researchSignalScore": 4
     },
     {
-      "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Reuters",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR3B2X0hTRmlsNkhMcVZYRF8zOEZWMFpQLUtPMkExQzJ1UUEwdS16S2h0bklnNDIzcm9NTC1Ja0thVllkTmJad21EM3ZjQjUzVGtUZ2p4VDBZRHd0QmNWMWhmRTQwR2N4QnhYaUpsVXVBd2E2bEZQeXN2Z0pzYWc2cVY2dE1ZNGFyUUJfMFdGTHRYRzdPMElNOS02SFhwU0w3djlaOGhDUlEwRUFEVHFkN0xXdGNHZFBha0dmTmhLc01ic00?oc=5",
+      "title": "Priority Technology to go private in $1.6 billion CEO-led deal - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEs2VnQ4bjhtNHRpdkZxOHA0Tl96czE2cEFqbEx1REtOX0daNi0xMl8xdEUtOWtyMkExemExQjAtN0dyd09lLU5SZHNuQ2JlV3lPZHR5RzZKRUh1dUZsVi1NR1lzbVo2UEpacENtNUl2V0pJV2NQYzJYUVlBTkZFaXZJRjBRR2FfME5fZGZOSzhIUlk0UVlIaHphM0kzUV9VeTJRcFQwQXhwV2RGaU1j?oc=5",
       "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T17:00:43.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR3B2X0hTRmlsNkhMcVZYRF8zOEZWMFpQLUtPMkExQzJ1UUEwdS16S2h0bklnNDIzcm9NTC1Ja0thVllkTmJad21EM3ZjQjUzVGtUZ2p4VDBZRHd0QmNWMWhmRTQwR2N4QnhYaUpsVXVBd2E2bEZQeXN2Z0pzYWc2cVY2dE1ZNGFyUUJfMFdGTHRYRzdPMElNOS02SFhwU0w3djlaOGhDUlEwRUFEVHFkN0xXdGNHZFBha0dmTmhLc01ic00?oc=5\" target=\"_blank\">Denmark says NATO shares responsibility for Arctic security under Greenland deal</a>  <font color=\"#6f6f6f\">Reuters</font>",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:55:55.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQdEs2VnQ4bjhtNHRpdkZxOHA0Tl96czE2cEFqbEx1REtOX0daNi0xMl8xdEUtOWtyMkExemExQjAtN0dyd09lLU5SZHNuQ2JlV3lPZHR5RzZKRUh1dUZsVi1NR1lzbVo2UEpacENtNUl2V0pJV2NQYzJYUVlBTkZFaXZJRjBRR2FfME5fZGZOSzhIUlk0UVlIaHphM0kzUV9VeTJRcFQwQXhwV2RGaU1j?oc=5\" target=\"_blank\">Priority Technology to go private in $1.6 billion CEO-led deal</a>  <font color=\"#6f6f6f\">Reuters</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1284,13 +1191,43 @@
       "researchSignalScore": 4
     },
     {
-      "title": "Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces - United States Coast Guard News (.mil)",
+      "title": "Advanced Expertise and Technology vs. Deadly Aortic Conditions - University of Miami",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:44:21.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFB5ZzBhX3I2VGhYODUtem1FMTVOeEd5RFdHLWFQTTVSR0dSUG5fc1B0a0FidldvamxPRHMyY254eDhyeEMyNnZycXkyRFQ1N2QteHFkTzBUX0NsbElTWlNxZjQtY1poNTYta0JGd1FvQnpEM2dwdVp5d0xNQ2U?oc=5\" target=\"_blank\">Advanced Expertise and Technology vs. Deadly Aortic Conditions</a>  <font color=\"#6f6f6f\">University of Miami</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 55,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 4
+    },
+    {
+      "title": "Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces East River restrictions - United States Coast Guard News (.mil)",
       "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-21T13:54:17.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5\" target=\"_blank\">Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces</a>  <font color=\"#6f6f6f\">United States Coast Guard News (.mil)</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN0dQR2lJMGQ3N2pZbGFRbW9mNFNKNEhnRllFbEhkMG5BRldvbWVlY1dYd1ExN1FDdEhjRUdBN2FSMlRvdWUwMVVOY0piT3lZQVVYWGNrQ2l0YzNkMkpDRG1TN0RhdGd0LWEtdlZ5WHFpbHlHMmx1Q0hRU3dfOEhJbGZabXEzVkgyQnA2UDF1U1ZWNTJSeXVxMnp6NWRtREZCSWhHODJkVjVqcVpBekc4d0p0RTlrcFhhQWlzLUZ0aGNGZkpkeTVGSWdsSW9rcVh3aUE?oc=5\" target=\"_blank\">Coast Guard ramps up security efforts for 2026 United Nations General Assembly, announces East River restrictions</a>  <font color=\"#6f6f6f\">United States Coast Guard News (.mil)</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1344,13 +1281,13 @@
       "researchSignalScore": 4
     },
     {
-      "title": "AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack - NVIDIA Blog",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5",
+      "title": "SEI Defines Framework for National Security Cyber Research - PR Newswire",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQYmNrQ0xmTWVMenAxNEg2S2lSQnVmVlZTWkloRmJocUtLSm9tY1hmRWcxODlNdkw0ekxkLU1ZRDlCQWxIcEJNNEtFNjZLTERXQVk1RlVUS0lRX2dBOXg2STc5X2dKOU44a2diR3NKM1IxTlFQRkpldk1hN2ZUdi1KcUhBV2UwY1dyOXhVOFVhRi03cTVzblZsSFZiZFBHcmlWQ0I0U29wc2xiSDhYVG4tczBsZEY?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T14:55:21.000Z",
+      "publishedAt": "2026-09-21T17:08:00.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5\" target=\"_blank\">AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack</a>  <font color=\"#6f6f6f\">NVIDIA Blog</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQYmNrQ0xmTWVMenAxNEg2S2lSQnVmVlZTWkloRmJocUtLSm9tY1hmRWcxODlNdkw0ekxkLU1ZRDlCQWxIcEJNNEtFNjZLTERXQVk1RlVUS0lRX2dBOXg2STc5X2dKOU44a2diR3NKM1IxTlFQRkpldk1hN2ZUdi1KcUhBV2UwY1dyOXhVOFVhRi03cTVzblZsSFZiZFBHcmlWQ0I0U29wc2xiSDhYVG4tczBsZEY?oc=5\" target=\"_blank\">SEI Defines Framework for National Security Cyber Research</a>  <font color=\"#6f6f6f\">PR Newswire</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1374,74 +1311,13 @@
       "researchSignalScore": 4
     },
     {
-      "title": "BigID Launches AgentIQ: The Agentic Automation Layer for Data & AI Security and Compliance - PR Newswire",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOaTJjUXA4RElyTHpKY1I3aHpqcWVBdDR5endPTm04ZVlvVjhjZXBsN0dhNUEzZXdCUldBSG0tbUc3MzFCVTAtdWIzTF9IandkemswMkVDNHNZMGF3N1E2RVBDcVU3MEZ3OUF1S2R1bzR1VVFyUXRWME5wQkdkUURvNy1BZHJHQm81YWFvVFFOYzNsaWszQU5XR0UwXzFfRDRWZHM1SWRkcXFWaEZVVmd1Qm5YQVRSU05UTG1INDFmM3hua2MyZDY5RGFiYWx3TEpkOFFHZXprTGJiN0R5?oc=5",
+      "title": "8 tips and tools for language learning: from apps to real life - Peace Corps (.gov)",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcVJvSXpMT05lX2pZaEI3bjl2M2lWM3pudDZPM0VNa3BzM0E2TjVGNlExN29wVnVBMDktODdXbTh5WHFOYWVCMjlnUndiWkVvYm8zb0c4X1BDVURvSGhJNEFBd3RjQXVUSFJlLVJKTVFIbzFCRlZnRlRfeUxoWUdVZjhoUTBtVy1fbXVUOU10dC1HaE83THBnb2NkSWxiV1Q5X0xKdg?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:01:00.000Z",
+      "publishedAt": "2026-09-21T12:31:59.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxOaTJjUXA4RElyTHpKY1I3aHpqcWVBdDR5endPTm04ZVlvVjhjZXBsN0dhNUEzZXdCUldBSG0tbUc3MzFCVTAtdWIzTF9IandkemswMkVDNHNZMGF3N1E2RVBDcVU3MEZ3OUF1S2R1bzR1VVFyUXRWME5wQkdkUURvNy1BZHJHQm81YWFvVFFOYzNsaWszQU5XR0UwXzFfRDRWZHM1SWRkcXFWaEZVVmd1Qm5YQVRSU05UTG1INDFmM3hua2MyZDY5RGFiYWx3TEpkOFFHZXprTGJiN0R5?oc=5\" target=\"_blank\">BigID Launches AgentIQ: The Agentic Automation Layer for Data & AI Security and Compliance</a>  <font color=\"#6f6f6f\">PR Newswire</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 55,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
-      "title": "Trump says it&#8217;s time to rebrand AI with a new name — and he&#8217;s also creating an AI Force",
-      "link": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-19T19:57:47.000Z",
-      "category": "AI",
-      "description": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 2,
-        "signalTypeCount": 2,
-        "networks": [
-          "TechCrunch",
-          "Google News"
-        ],
-        "signalTypes": [
-          "publisher",
-          "news"
-        ],
-        "corroboratingCandidates": 6
-      },
-      "score": 55,
-      "reasons": [
-        "Strong category relevance",
-        "Covered by multiple sources"
-      ],
-      "eligible": false,
-      "researchSignalScore": 13
-    },
-    {
-      "title": "GlobalFoundries Finalizes $375M CHIPS Award for Quantum Technology R&D - The Quantum Insider",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbWYwdUxRYTFrYXRwX3RJZUhSaGhKcEI2VVZERTZReWIyT2JtZEdaQlhtRDQ1UkVRcUEzVmhLVG53VURKVlZneGRXd2hjTG1PNWQ3VHYxS2pHbGpCdGhna0dNeTI5b0Y4LUNDRjVvQk9MeGVsNW5fUzRJMGdENnFINWtvRWpXZXpaak5BZ3lB?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T08:56:26.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNbWYwdUxRYTFrYXRwX3RJZUhSaGhKcEI2VVZERTZReWIyT2JtZEdaQlhtRDQ1UkVRcUEzVmhLVG53VURKVlZneGRXd2hjTG1PNWQ3VHYxS2pHbGpCdGhna0dNeTI5b0Y4LUNDRjVvQk9MeGVsNW5fUzRJMGdENnFINWtvRWpXZXpaak5BZ3lB?oc=5\" target=\"_blank\">GlobalFoundries Finalizes $375M CHIPS Award for Quantum Technology R&D</a>  <font color=\"#6f6f6f\">The Quantum Insider</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOcVJvSXpMT05lX2pZaEI3bjl2M2lWM3pudDZPM0VNa3BzM0E2TjVGNlExN29wVnVBMDktODdXbTh5WHFOYWVCMjlnUndiWkVvYm8zb0c4X1BDVURvSGhJNEFBd3RjQXVUSFJlLVJKTVFIbzFCRlZnRlRfeUxoWUdVZjhoUTBtVy1fbXVUOU10dC1HaE83THBnb2NkSWxiV1Q5X0xKdg?oc=5\" target=\"_blank\">8 tips and tools for language learning: from apps to real life</a>  <font color=\"#6f6f6f\">Peace Corps (.gov)</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1455,14 +1331,45 @@
         ],
         "corroboratingCandidates": 1
       },
-      "score": 54,
+      "score": 55,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Covered by multiple sources",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 2
+    },
+    {
+      "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR3B2X0hTRmlsNkhMcVZYRF8zOEZWMFpQLUtPMkExQzJ1UUEwdS16S2h0bklnNDIzcm9NTC1Ja0thVllkTmJad21EM3ZjQjUzVGtUZ2p4VDBZRHd0QmNWMWhmRTQwR2N4QnhYaUpsVXVBd2E2bEZQeXN2Z0pzYWc2cVY2dE1ZNGFyUUJfMFdGTHRYRzdPMElNOS02SFhwU0w3djlaOGhDUlEwRUFEVHFkN0xXdGNHZFBha0dmTmhLc01ic00?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T17:41:44.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR3B2X0hTRmlsNkhMcVZYRF8zOEZWMFpQLUtPMkExQzJ1UUEwdS16S2h0bklnNDIzcm9NTC1Ja0thVllkTmJad21EM3ZjQjUzVGtUZ2p4VDBZRHd0QmNWMWhmRTQwR2N4QnhYaUpsVXVBd2E2bEZQeXN2Z0pzYWc2cVY2dE1ZNGFyUUJfMFdGTHRYRzdPMElNOS02SFhwU0w3djlaOGhDUlEwRUFEVHFkN0xXdGNHZFBha0dmTmhLc01ic00?oc=5\" target=\"_blank\">Denmark says NATO shares responsibility for Arctic security under Greenland deal</a>  <font color=\"#6f6f6f\">Reuters</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 55,
       "reasons": [
         "Fresh topic",
         "Strong category relevance",
         "Enough context for original synthesis"
       ],
       "eligible": true,
-      "researchSignalScore": 2
+      "researchSignalScore": 4
     },
     {
       "title": "Huawei announces a new launch conference for September 28 - Huawei Central",
@@ -1495,43 +1402,13 @@
       "researchSignalScore": 2
     },
     {
-      "title": "CMU Political Science Students Meet Global Leaders at Conference on World Affairs - Colorado Mesa University",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T15:13:57.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQaGdlWk9rNC04YnlmUm9WWXhnNzBOZEZEalVnd2ZuUEItMUZJSkNPMnNGanBmYnY2VkFrSGY3clQ2N3R2MzluUGdoVklZOW42cDVMaDMzOEtOUFU3ZE1xdmRGdUQwbFQ3Uk1WZzhPbFNpaS1VOE1SbGJoazN3ZlVrU2hjQ210blFsX0NsX2dYSFlicms3NXpfWlVEcUkwdVpvZkZGeW1NUEctQWhsMXhHdHlXUW90ck1nc0M1Yi1aamdseFpWTW90RzdwU3E1bG8?oc=5\" target=\"_blank\">CMU Political Science Students Meet Global Leaders at Conference on World Affairs</a>  <font color=\"#6f6f6f\">Colorado Mesa University</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 54,
-      "reasons": [
-        "Fresh topic",
-        "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Cal Thomas: AI: A substitute for real intelligence - News-Herald",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVF9HbTlUcWQ2YkRReVBJWDVYbXJfMzA0ZTJkNllwUGtpdkpsbEdSQV82N3BrVDFMVmVwY3RiR2hOOV9iaXEyNGN0QkJha2ZvZkk0ckJTSklhY2pwRGxVTWVBR2FoLUIzMXNFa3UwODdIOEdfZGpDSE9IUmxhbkFiT1lyRmYzUFVYTW9NWkJ1RE9hQQ?oc=5",
+      "title": "Minnesota forum reveals widespread unease with AI technology race - Route Fifty",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T14:34:30.000Z",
+      "publishedAt": "2026-09-21T16:00:00.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPVF9HbTlUcWQ2YkRReVBJWDVYbXJfMzA0ZTJkNllwUGtpdkpsbEdSQV82N3BrVDFMVmVwY3RiR2hOOV9iaXEyNGN0QkJha2ZvZkk0ckJTSklhY2pwRGxVTWVBR2FoLUIzMXNFa3UwODdIOEdfZGpDSE9IUmxhbkFiT1lyRmYzUFVYTW9NWkJ1RE9hQQ?oc=5\" target=\"_blank\">Cal Thomas: AI: A substitute for real intelligence</a>  <font color=\"#6f6f6f\">News-Herald</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5\" target=\"_blank\">Minnesota forum reveals widespread unease with AI technology race</a>  <font color=\"#6f6f6f\">Route Fifty</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1555,13 +1432,13 @@
       "researchSignalScore": 2
     },
     {
-      "title": "The U.S. and China Are Competing for AI Dominance But Have Shared Concerns Over Safety - Industrial Equipment News",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPY3dWYkkzTXpYR0RVajdxeHhUTllMSEx6MTF1aTVvVU01NGFFUXZmM0hSYU1kT3lhSU5OcklQMHJZRVFqYlREakhqbF9XMnJaTVJVWElsdERxMkx0SXRFYVJaa0pqVV9weW9QUEJjbDF2S2htMWpiNlpLME1uODJsd3hmLTRBSGlnbFo0R1RhNFVKTVdVMEFJQkFqcHlvUVZmZll3NjFIYnRrUkhnMEMtU0p3M1ZzbzJLajFpLW5sbmRVN2RmX05fajJVVkN4OFZzNTc4V0hibExGdw?oc=5",
+      "title": "Police hold first community listening session on technology Thursday - The Alexandria Brief",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQWWtWbFk0Q21MZHZwQVhkLTF3T2RzTTI1Mkxic095V0NBUmRGSGROM1AxWUJUVUZUdUhid0VDWVB5X2xKVHpTNzJTRFQ4c0dHeVh3b2hvcjU4NEFKQnptc0FQUEV1N0NwUDlSQ0pTdXo5cExoUkRjRUNiZFkyeTBaTGxwT0poSzNsYjMxLXNXNEdBVmE5Vl91d184a2ozZ0xweE9B?oc=5",
       "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T15:42:35.000Z",
-      "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPY3dWYkkzTXpYR0RVajdxeHhUTllMSEx6MTF1aTVvVU01NGFFUXZmM0hSYU1kT3lhSU5OcklQMHJZRVFqYlREakhqbF9XMnJaTVJVWElsdERxMkx0SXRFYVJaa0pqVV9weW9QUEJjbDF2S2htMWpiNlpLME1uODJsd3hmLTRBSGlnbFo0R1RhNFVKTVdVMEFJQkFqcHlvUVZmZll3NjFIYnRrUkhnMEMtU0p3M1ZzbzJLajFpLW5sbmRVN2RmX05fajJVVkN4OFZzNTc4V0hibExGdw?oc=5\" target=\"_blank\">The U.S. and China Are Competing for AI Dominance But Have Shared Concerns Over Safety</a>  <font color=\"#6f6f6f\">Industrial Equipment News</font>",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T16:29:02.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQWWtWbFk0Q21MZHZwQVhkLTF3T2RzTTI1Mkxic095V0NBUmRGSGROM1AxWUJUVUZUdUhid0VDWVB5X2xKVHpTNzJTRFQ4c0dHeVh3b2hvcjU4NEFKQnptc0FQUEV1N0NwUDlSQ0pTdXo5cExoUkRjRUNiZFkyeTBaTGxwT0poSzNsYjMxLXNXNEdBVmE5Vl91d184a2ozZ0xweE9B?oc=5\" target=\"_blank\">Police hold first community listening session on technology Thursday</a>  <font color=\"#6f6f6f\">The Alexandria Brief</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1585,13 +1462,13 @@
       "researchSignalScore": 2
     },
     {
-      "title": "State of world getting worse as UN Security Council paralysed: Guterres - Al Jazeera",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
+      "title": "AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack - NVIDIA Blog",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:50:11.000Z",
+      "publishedAt": "2026-09-21T14:55:21.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5\" target=\"_blank\">State of world getting worse as UN Security Council paralysed: Guterres</a>  <font color=\"#6f6f6f\">Al Jazeera</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sWGpqd2l6TTE0WDhOeFFVdFQzYzk5dlA0cGdVWUIwVHBscUlMQ0lubW44SHRMYkVweldUMFdXYlFuWmpCVFRrTmFndmZCWU5Oalo5UnduRDRJdERUakRJankxWFA?oc=5\" target=\"_blank\">AI Security Is an Engineering Problem — How to Solve It at Every Layer of the Agent Stack</a>  <font color=\"#6f6f6f\">NVIDIA Blog</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1615,13 +1492,13 @@
       "researchSignalScore": 2
     },
     {
-      "title": "Washington state names private sector tech leader as new chief information security officer - StateScoop",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbFg4NW13WXRWWTNZdllLcjJud1ZKNnJjbWVJb3kzTTVDR3hXLTFfYnpEQ1RKMEdRdFFINzVqekFPMUFjMWxtY0N0VTU4N212elZEZE9NXzA2U2djNDZxS2h5akZQb2xSa0FWMDZkZ252TU5XYmZwTnVxTWF3Vi1aejlzMXRrOFBfdXRyc3pMTXFFbW5oM3R1V2hPZDhiOGttS0tmRUpsZXpEbXdqSFRWbzdWSnl0UQ?oc=5",
+      "title": "Executive Security Extends Beyond CEOs to Continue Year-Over-Year Growth - ASIS International",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:05:25.000Z",
+      "publishedAt": "2026-09-21T17:51:52.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNbFg4NW13WXRWWTNZdllLcjJud1ZKNnJjbWVJb3kzTTVDR3hXLTFfYnpEQ1RKMEdRdFFINzVqekFPMUFjMWxtY0N0VTU4N212elZEZE9NXzA2U2djNDZxS2h5akZQb2xSa0FWMDZkZ252TU5XYmZwTnVxTWF3Vi1aejlzMXRrOFBfdXRyc3pMTXFFbW5oM3R1V2hPZDhiOGttS0tmRUpsZXpEbXdqSFRWbzdWSnl0UQ?oc=5\" target=\"_blank\">Washington state names private sector tech leader as new chief information security officer</a>  <font color=\"#6f6f6f\">StateScoop</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5\" target=\"_blank\">Executive Security Extends Beyond CEOs to Continue Year-Over-Year Growth</a>  <font color=\"#6f6f6f\">ASIS International</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1675,6 +1552,36 @@
       "researchSignalScore": 2
     },
     {
+      "title": "Kairos Power gets up to $100M from Samsung group to build nuclear reactor for Google",
+      "link": "https://techcrunch.com/2026/09/21/kairos-power-gets-up-to-100m-from-samsung-group-to-build-nuclear-reactor-for-google/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-21T18:23:05.000Z",
+      "category": "AI",
+      "description": "Future Google supplier Kairos Power inked a deal with Samsung C&#038;T to help build its first 50 megawatt nuclear power plant.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 1
+      },
+      "score": 53,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 2
+    },
+    {
       "title": "GM can’t ‘bring back’ Apple CarPlay because it never left",
       "link": "https://www.theverge.com/transportation/998259/gm-apple-carplay-android-auto-phone-mirror-google",
       "source": "The Verge",
@@ -1712,6 +1619,36 @@
       "publishedAt": "2026-09-21T10:39:28.000Z",
       "category": "AI",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE9CNWdDTkRQZUpVM3duLXp2V0ZLMzVSeFdmQ00yV2R3Qk1CemNfNWM4MnFmaEIzc3Zhdk1qa05YbGdSTkVxQTU2SVlOLXBTR3VqbkZUcE9zbw?oc=5\" target=\"_blank\">UN panel calls for stronger safeguards as AI agents advance</a>  <font color=\"#6f6f6f\">UN News</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 52,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "GlobalFoundries Finalizes $375M CHIPS Award for Quantum Technology R&D - The Quantum Insider",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNbWYwdUxRYTFrYXRwX3RJZUhSaGhKcEI2VVZERTZReWIyT2JtZEdaQlhtRDQ1UkVRcUEzVmhLVG53VURKVlZneGRXd2hjTG1PNWQ3VHYxS2pHbGpCdGhna0dNeTI5b0Y4LUNDRjVvQk9MeGVsNW5fUzRJMGdENnFINWtvRWpXZXpaak5BZ3lB?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T08:56:26.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNbWYwdUxRYTFrYXRwX3RJZUhSaGhKcEI2VVZERTZReWIyT2JtZEdaQlhtRDQ1UkVRcUEzVmhLVG53VURKVlZneGRXd2hjTG1PNWQ3VHYxS2pHbGpCdGhna0dNeTI5b0Y4LUNDRjVvQk9MeGVsNW5fUzRJMGdENnFINWtvRWpXZXpaak5BZ3lB?oc=5\" target=\"_blank\">GlobalFoundries Finalizes $375M CHIPS Award for Quantum Technology R&D</a>  <font color=\"#6f6f6f\">The Quantum Insider</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1825,13 +1762,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Minnesota forum reveals widespread unease with AI technology race - Route Fifty",
-      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5",
+      "title": "As China and U.S. compete for AI dominance, both have shared concerns over safety - pbs.org",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMHJWN0NoQUotUzVkZEVlMW9ydGhMYWh0QTgyVThkei1oWkdyX29leTQ5OXFydXlRekdlS2RObFh0bHpfUThpQlZ5T3hXcGM1X0t0UGppc25jdFJZTGtjY2RNTmNWX05tNjdVbzRyYi1DRFd3M2dJQWJwSEtBTU15VUJHbzdaUzV2a0Y1cnJiMFlpTWdDOXRoM0F6c1g0TXdBcE5KdGEwNHY3YjlQcFZhbVQ4aWdOVDg?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:00:00.000Z",
+      "publishedAt": "2026-09-21T18:03:59.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb2NFOVl4SHdfTEdVQnlMWkcxQ0F1Sy1wZEdCQkhBZV9WNXE5ZzBZdHc2Y3Bmd1QtbnNZbzNTZUo4T0pfZUtyTG9hM045Qm50MWx1eUtyS1pzUmVMYVltTnhPYUVVd0JSdEVhSS1zWmdoUEdlYVR2Sl9ORy02TnJTaFl5S0kxQ3dfNWxDd04tTnhzS0N6SDVDcWNLaEp6T3R0MnhMbWJ4ekwwMzFyRXVFdVRuVnpDT2drVmszOVVUd3dNUFpDeWJyeHRaVk5TTVhHa3NtQ2p1VXpVcjUzVy1EN21UdVVLZw?oc=5\" target=\"_blank\">Minnesota forum reveals widespread unease with AI technology race</a>  <font color=\"#6f6f6f\">Route Fifty</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQMHJWN0NoQUotUzVkZEVlMW9ydGhMYWh0QTgyVThkei1oWkdyX29leTQ5OXFydXlRekdlS2RObFh0bHpfUThpQlZ5T3hXcGM1X0t0UGppc25jdFJZTGtjY2RNTmNWX05tNjdVbzRyYi1DRFd3M2dJQWJwSEtBTU15VUJHbzdaUzV2a0Y1cnJiMFlpTWdDOXRoM0F6c1g0TXdBcE5KdGEwNHY3YjlQcFZhbVQ4aWdOVDg?oc=5\" target=\"_blank\">As China and U.S. compete for AI dominance, both have shared concerns over safety</a>  <font color=\"#6f6f6f\">pbs.org</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1885,13 +1822,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Why bridging AI and agriculture is key for the future of food - The World Economic Forum",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPa3REZ0lvRlVVc3ZIWGVYTTByR0FYcWdsYUdua2YtNFRjZG5HdG9ISDBLa0YwRFVmNlF4dGVyRzE3dEpFekFOUXdFdFZ2TEItZmhvam90MjgxRFFndUp2YklZYnhVTG9HX3VibElTSFl0UmxWWWdfM3NyNjFJTHdTaEc1cw?oc=5",
+      "title": "Intel on-the-ground at the AI Infra Summit - Intel",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcHY5QzNoWUdvRlpnVU5Xcm9ramcyMkJ1Y3E0OUNOanFMdk5CSlpIbVVlLVludkRYUEM4WWVJM0pKUTcyOE14QWNJdVhUMFlLQURTVExjN010QmVwUmhxbV9jUmZFQVpycEdLQ3UxMFh6Um1acE8zN1NtOTRRbjVOT0Z1VmtrblI0NzBmM21uV1dkNWI3N1g3T0NVaGlOWWg0NDBmNDc0T3p4eFhvMmhyTjdYWGRMUE9lelBNRW1INFVQQXc?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:18:05.000Z",
+      "publishedAt": "2026-09-21T16:39:45.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPa3REZ0lvRlVVc3ZIWGVYTTByR0FYcWdsYUdua2YtNFRjZG5HdG9ISDBLa0YwRFVmNlF4dGVyRzE3dEpFekFOUXdFdFZ2TEItZmhvam90MjgxRFFndUp2YklZYnhVTG9HX3VibElTSFl0UmxWWWdfM3NyNjFJTHdTaEc1cw?oc=5\" target=\"_blank\">Why bridging AI and agriculture is key for the future of food</a>  <font color=\"#6f6f6f\">The World Economic Forum</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcHY5QzNoWUdvRlpnVU5Xcm9ramcyMkJ1Y3E0OUNOanFMdk5CSlpIbVVlLVludkRYUEM4WWVJM0pKUTcyOE14QWNJdVhUMFlLQURTVExjN010QmVwUmhxbV9jUmZFQVpycEdLQ3UxMFh6Um1acE8zN1NtOTRRbjVOT0Z1VmtrblI0NzBmM21uV1dkNWI3N1g3T0NVaGlOWWg0NDBmNDc0T3p4eFhvMmhyTjdYWGRMUE9lelBNRW1INFVQQXc?oc=5\" target=\"_blank\">Intel on-the-ground at the AI Infra Summit</a>  <font color=\"#6f6f6f\">Intel</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1915,13 +1852,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Thought for the week: Why runaway AI development does not serve China's interests - IAPP",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbmpZQ29Kem50YlpxY0JRX1lzc3BCNGhZU25VbFFfMlRqSnpnWWRWTWlZRTN1X1lPa2F2bE9xc1JUMVZMcTMxM1NmbmpvdnFsSDFMUUVHalRObXJmNzcxbFlPaEhadVlqRlFHV21QaDJBQm5DNl9hemJ6SzZ1Y3NCM0dpYm1malIzaWFWTXhsb1hrcUQ3Q19MVk1udkZDQlBIY25uYmhR?oc=5",
+      "title": "Cal Thomas: AI: A substitute for real intelligence - News-Herald",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVF9HbTlUcWQ2YkRReVBJWDVYbXJfMzA0ZTJkNllwUGtpdkpsbEdSQV82N3BrVDFMVmVwY3RiR2hOOV9iaXEyNGN0QkJha2ZvZkk0ckJTSklhY2pwRGxVTWVBR2FoLUIzMXNFa3UwODdIOEdfZGpDSE9IUmxhbkFiT1lyRmYzUFVYTW9NWkJ1RE9hQQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:57:38.000Z",
+      "publishedAt": "2026-09-21T14:34:30.000Z",
       "category": "AI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPbmpZQ29Kem50YlpxY0JRX1lzc3BCNGhZU25VbFFfMlRqSnpnWWRWTWlZRTN1X1lPa2F2bE9xc1JUMVZMcTMxM1NmbmpvdnFsSDFMUUVHalRObXJmNzcxbFlPaEhadVlqRlFHV21QaDJBQm5DNl9hemJ6SzZ1Y3NCM0dpYm1malIzaWFWTXhsb1hrcUQ3Q19MVk1udkZDQlBIY25uYmhR?oc=5\" target=\"_blank\">Thought for the week: Why runaway AI development does not serve China's interests</a>  <font color=\"#6f6f6f\">IAPP</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPVF9HbTlUcWQ2YkRReVBJWDVYbXJfMzA0ZTJkNllwUGtpdkpsbEdSQV82N3BrVDFMVmVwY3RiR2hOOV9iaXEyNGN0QkJha2ZvZkk0ckJTSklhY2pwRGxVTWVBR2FoLUIzMXNFa3UwODdIOEdfZGpDSE9IUmxhbkFiT1lyRmYzUFVYTW9NWkJ1RE9hQQ?oc=5\" target=\"_blank\">Cal Thomas: AI: A substitute for real intelligence</a>  <font color=\"#6f6f6f\">News-Herald</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -1963,7 +1900,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 5
+        "corroboratingCandidates": 4
       },
       "score": 51,
       "reasons": [
@@ -1973,6 +1910,66 @@
       ],
       "eligible": true,
       "researchSignalScore": 5
+    },
+    {
+      "title": "Signal Says This Software Stock Could Soon Break Out - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxORHlxUnpaN2dNc3Y1dmY4bzhkVDV1VGY2MElEZlBPN1N3R2kyNC1OWWpycGVjU2RuVndqMktmU3ZDMEx6cmY4X1N5d19UblpkMENXSURXQkMxVnItdzROZzVCc3RiNGF6a192RUtNSmxCeWJSaE1NcWVpTjMyQURlMjFoZFdwZmNnTVlsM1YwQzNDN05NR1h6d3p6c2JPUQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T17:35:05.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxORHlxUnpaN2dNc3Y1dmY4bzhkVDV1VGY2MElEZlBPN1N3R2kyNC1OWWpycGVjU2RuVndqMktmU3ZDMEx6cmY4X1N5d19UblpkMENXSURXQkMxVnItdzROZzVCc3RiNGF6a192RUtNSmxCeWJSaE1NcWVpTjMyQURlMjFoZFdwZmNnTVlsM1YwQzNDN05NR1h6d3p6c2JPUQ?oc=5\" target=\"_blank\">Signal Says This Software Stock Could Soon Break Out</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Three Tigers land Liberty League weekly accolades - Rochester Institute of Technology Athletics",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObDhxMm5IMGFWMmsweVM4ME04UF9VZXV3WnZYNU9jVFhXekpnYVRSenV1R0hxMmczWjZUbnp3NW8zcmZ3dVBETlhOWEJPNjZEdnZjLUNWOG1Ucl9OeEJzZ2QxTm9sX1NGMVN0ek4xaFZfM1ExLW9teGRmMVN3NTNKbU53N0RtS200SmRHWFFBd1N0Y2xxT3pCSTBtdjlLb1dBcE9Md2RlWVY0aXJMYXNBeVNLaHJwQQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T18:23:58.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxObDhxMm5IMGFWMmsweVM4ME04UF9VZXV3WnZYNU9jVFhXekpnYVRSenV1R0hxMmczWjZUbnp3NW8zcmZ3dVBETlhOWEJPNjZEdnZjLUNWOG1Ucl9OeEJzZ2QxTm9sX1NGMVN0ek4xaFZfM1ExLW9teGRmMVN3NTNKbU53N0RtS200SmRHWFFBd1N0Y2xxT3pCSTBtdjlLb1dBcE9Md2RlWVY0aXJMYXNBeVNLaHJwQQ?oc=5\" target=\"_blank\">Three Tigers land Liberty League weekly accolades</a>  <font color=\"#6f6f6f\">Rochester Institute of Technology Athletics</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
     },
     {
       "title": "Verdantix Green Quadrant: EHS Software (2026) - Wolters Kluwer",
@@ -2035,13 +2032,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Police hold first community listening session on technology Thursday - The Alexandria Brief",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQWWtWbFk0Q21MZHZwQVhkLTF3T2RzTTI1Mkxic095V0NBUmRGSGROM1AxWUJUVUZUdUhid0VDWVB5X2xKVHpTNzJTRFQ4c0dHeVh3b2hvcjU4NEFKQnptc0FQUEV1N0NwUDlSQ0pTdXo5cExoUkRjRUNiZFkyeTBaTGxwT0poSzNsYjMxLXNXNEdBVmE5Vl91d184a2ozZ0xweE9B?oc=5",
+      "title": "Software for New F-35 Logistics System Starts Going Live - Air & Space Forces Magazine",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRTVZMThJZWtpR3R2ZmNuZ1N3NUVTQmF3TUhCUFdFazFMRERDUW9XRWNzQjFFNEZqSFVob3oyU0dnbmM1UDdnVnp2czJENmFSUkcxQ1k4bzVYem16ckJwM2ZNMHBOc2R4ajRCSVlfYWZ6RE5PaENSTENwUDdOOWhZSmthTl9iWUE?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T16:29:02.000Z",
+      "publishedAt": "2026-09-21T18:12:06.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQWWtWbFk0Q21MZHZwQVhkLTF3T2RzTTI1Mkxic095V0NBUmRGSGROM1AxWUJUVUZUdUhid0VDWVB5X2xKVHpTNzJTRFQ4c0dHeVh3b2hvcjU4NEFKQnptc0FQUEV1N0NwUDlSQ0pTdXo5cExoUkRjRUNiZFkyeTBaTGxwT0poSzNsYjMxLXNXNEdBVmE5Vl91d184a2ozZ0xweE9B?oc=5\" target=\"_blank\">Police hold first community listening session on technology Thursday</a>  <font color=\"#6f6f6f\">The Alexandria Brief</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPRTVZMThJZWtpR3R2ZmNuZ1N3NUVTQmF3TUhCUFdFazFMRERDUW9XRWNzQjFFNEZqSFVob3oyU0dnbmM1UDdnVnp2czJENmFSUkcxQ1k4bzVYem16ckJwM2ZNMHBOc2R4ajRCSVlfYWZ6RE5PaENSTENwUDdOOWhZSmthTl9iWUE?oc=5\" target=\"_blank\">Software for New F-35 Logistics System Starts Going Live</a>  <font color=\"#6f6f6f\">Air & Space Forces Magazine</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2065,43 +2062,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Technology and value added ag guide ISU priorities - Iowa Agribusiness Radio Network",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPUFlSNU1zT29EN0tuQmFxalkxSGc3cUVpRXI0XzdHQU9NQm1aT1hwS1h0M2RqZ3c2WkN3UFdvOEVHek1zQlhHWXRvZktfcXEzUlI4OXlTTEtELWNYdHJEZDhpellFdlJmLTE5ajRUNlV3aGdJSV9TMHhwZFZ2UXVfeUJxeWhsT2F0Mmx4WTNfMVgzbENTNEFB?oc=5",
+      "title": "Irish privacy regulator fines Google €403 million over location data processing - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObTlBMUhCMU1lTUtmLWhWVUNOanZWNWc0bXkxNFVZYmUzb2RlWGFndlhPaDAwZjFoRi00R2lwSVZINExLZ2ROal85T2NIeWxaZFRWUnRLRmFWT2VmZTQtQjloR0o2Vlg3WGJWZ1h2V0d1RnpMQjZRNTRZQmtFamVoS2JSOVE1ZVVXSzg3NE9JcjFNb2ZwY2NXUUJYeGxGLXVxN1dDM3NiYWk3V3V0UDU2S1pTR09jdldEWUxFNURuMmVkS1hpTzdoRg?oc=5",
       "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T15:04:57.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPUFlSNU1zT29EN0tuQmFxalkxSGc3cUVpRXI0XzdHQU9NQm1aT1hwS1h0M2RqZ3c2WkN3UFdvOEVHek1zQlhHWXRvZktfcXEzUlI4OXlTTEtELWNYdHJEZDhpellFdlJmLTE5ajRUNlV3aGdJSV9TMHhwZFZ2UXVfeUJxeWhsT2F0Mmx4WTNfMVgzbENTNEFB?oc=5\" target=\"_blank\">Technology and value added ag guide ISU priorities</a>  <font color=\"#6f6f6f\">Iowa Agribusiness Radio Network</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 51,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "California bar exam software provider to pay $1.3 million in class action over test failures - Reuters",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYlRkbFBsZjBOMHloYVJCRUZGRDdKRi1WV1hpeTVUdW9XNmQxdE95MGdLdFlmS2Rfd29KWTJ2QXNpOUpwQ3RTanpuQk45b045b3U3M1FYOWxIbXQtcGIzZTJLb2lld3lUUWhQUXZmUkNUSUgzVmtUanBkVktFRFRHcURldlpsT2ZqTjF1M1hOMFRwT04wOC1tZTZSNEotZk42OXp5LTVUenJaY1hlTjNuWFZ1Z25xdjJPVnZtN3pqZ05MUENUUGhN?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T15:56:09.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQYlRkbFBsZjBOMHloYVJCRUZGRDdKRi1WV1hpeTVUdW9XNmQxdE95MGdLdFlmS2Rfd29KWTJ2QXNpOUpwQ3RTanpuQk45b045b3U3M1FYOWxIbXQtcGIzZTJLb2lld3lUUWhQUXZmUkNUSUgzVmtUanBkVktFRFRHcURldlpsT2ZqTjF1M1hOMFRwT04wOC1tZTZSNEotZk42OXp5LTVUenJaY1hlTjNuWFZ1Z25xdjJPVnZtN3pqZ05MUENUUGhN?oc=5\" target=\"_blank\">California bar exam software provider to pay $1.3 million in class action over test failures</a>  <font color=\"#6f6f6f\">Reuters</font>",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T13:55:06.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxObTlBMUhCMU1lTUtmLWhWVUNOanZWNWc0bXkxNFVZYmUzb2RlWGFndlhPaDAwZjFoRi00R2lwSVZINExLZ2ROal85T2NIeWxaZFRWUnRLRmFWT2VmZTQtQjloR0o2Vlg3WGJWZ1h2V0d1RnpMQjZRNTRZQmtFamVoS2JSOVE1ZVVXSzg3NE9JcjFNb2ZwY2NXUUJYeGxGLXVxN1dDM3NiYWk3V3V0UDU2S1pTR09jdldEWUxFNURuMmVkS1hpTzdoRg?oc=5\" target=\"_blank\">Irish privacy regulator fines Google €403 million over location data processing</a>  <font color=\"#6f6f6f\">Reuters</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2185,13 +2152,73 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Executive Security Extends Beyond CEOs to Continue Year-Over-Year Growth - ASIS International",
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5",
+      "title": "How to Force Quit Apple Watch Apps in watchOS 27 - MacRumors",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1SNGtmM2RBMDhuamNwczNGOUtISVJabHpXcC1FclpoaG1XbjlXUFY3ekJqQ21WVEUyOVBkZDFQN2xiZ1ZVakI0cmNoVDNUdDNjT1ZEZmNBTi11eWlDbTE0ZXlLXzNxWXBrOFRQR0xBRkx6TFZQS3VzaHFaa2g?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T17:51:52.000Z",
+      "publishedAt": "2026-09-21T13:33:56.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxPRlhkd2pZdjRVbnFfY2VfY0sxbVVfRlA3SVczZ05BZG1MLUdaSXFvS3JGVUh4WG1GcVIwVV9uclNva3lGMC12MXJTZTJZZTNaV3Rma0xBekhkbm1kRzZTOU11U01YSnotZjdNWDBKbEFZWmNWNUIydm42dHZ0S2t3SFV6UlMxaGZlYnNXQjc1NmE4U1Y3TWo0VEdJMEM0NThhTUJOT0ZNNlJhQUJVelRhWVgzVlJRWnUxcWM5MmRWSmlrc2hTWE05cFpXSjdoSXZM?oc=5\" target=\"_blank\">Executive Security Extends Beyond CEOs to Continue Year-Over-Year Growth</a>  <font color=\"#6f6f6f\">ASIS International</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE1SNGtmM2RBMDhuamNwczNGOUtISVJabHpXcC1FclpoaG1XbjlXUFY3ekJqQ21WVEUyOVBkZDFQN2xiZ1ZVakI0cmNoVDNUdDNjT1ZEZmNBTi11eWlDbTE0ZXlLXzNxWXBrOFRQR0xBRkx6TFZQS3VzaHFaa2g?oc=5\" target=\"_blank\">How to Force Quit Apple Watch Apps in watchOS 27</a>  <font color=\"#6f6f6f\">MacRumors</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Critical Infrastructure Security | OT, 5G & IoT - paloaltonetworks.com",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9MaHBackRrai1JVGFuM0NlSjNGTXJaaFBtbGtsTktwdDhWRkdTVkVwTjdPOTFRQ0JkT2xvZXdMZmNqM3A2UjFiNmxEU3Nqc2lmSGJVNnpLM3V3QUxJZC03TnFZa1p2MjNGOFBtRjhzVGYwelE?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T18:41:03.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE9MaHBackRrai1JVGFuM0NlSjNGTXJaaFBtbGtsTktwdDhWRkdTVkVwTjdPOTFRQ0JkT2xvZXdMZmNqM3A2UjFiNmxEU3Nqc2lmSGJVNnpLM3V3QUxJZC03TnFZa1p2MjNGOFBtRjhzVGYwelE?oc=5\" target=\"_blank\">Critical Infrastructure Security | OT, 5G & IoT</a>  <font color=\"#6f6f6f\">paloaltonetworks.com</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "HIPAA settlement reminds organizations to focus on security - nixonpeabody.com",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUnRiMVNWNGhJLXJ4cEdSNVdZU1RueG1zME9XN1BleU5yeUNKUmplQUFQSEdPQ09pUzJTOVpEX3VwSGl5VXc5LVJUSzlWUThWMVVTbHdfMGYtYmVib3FXNndCZkpIdms2bjRBOF9xVVdOSW1Hd0NxLU5wTThOaVU1MTZ5M3pOZEJpQ3dyRlRPYjNIcjBhZG0zZmR3eDVTeHRtMkFqd1ZoN0VMMmdJTnd4X0hpVVFwbEo4?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T18:41:40.000Z",
+      "category": "Digital Life",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUnRiMVNWNGhJLXJ4cEdSNVdZU1RueG1zME9XN1BleU5yeUNKUmplQUFQSEdPQ09pUzJTOVpEX3VwSGl5VXc5LVJUSzlWUThWMVVTbHdfMGYtYmVib3FXNndCZkpIdms2bjRBOF9xVVdOSW1Hd0NxLU5wTThOaVU1MTZ5M3pOZEJpQ3dyRlRPYjNIcjBhZG0zZmR3eDVTeHRtMkFqd1ZoN0VMMmdJTnd4X0hpVVFwbEo4?oc=5\" target=\"_blank\">HIPAA settlement reminds organizations to focus on security</a>  <font color=\"#6f6f6f\">nixonpeabody.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2245,43 +2272,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark - CNBC",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOERQc3JwUVVYTXVDYVl0WmZ5UVBCdjZVU1NHRS12eTVwcGJjNnlkejIwX1dUR0VXRUdkNVBkQUpGMlE1VXNFUU9DS3RtQzJpd1BTOV9EekJlYkFIdGRJRTlUVGx0QW12LWFpRXpDa1hyX2xIODRna0pjZEM5YnNtY1VDeFlwZ9IBiwFBVV95cUxPNzY0RnE2U2diODVvOVh3ZTg4RWR2Umtib1gwcGN1T1V6WFIwX0JRMGJBeVlGMnVkUXZ4TnNKOXBzcERoNUJzT0xyUHhtbmdPT1hlTWhqR2p0UWtkM1prQ19YRmN6NWFHaE8yYVpxZ09JeG5iSGVLQV9wcy1oNG1SRzB6blNIQWI2dVo4?oc=5",
+      "title": "State of world getting worse as UN Security Council paralysed: Guterres - Al Jazeera",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T08:47:21.000Z",
+      "publishedAt": "2026-09-21T16:50:11.000Z",
       "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQOERQc3JwUVVYTXVDYVl0WmZ5UVBCdjZVU1NHRS12eTVwcGJjNnlkejIwX1dUR0VXRUdkNVBkQUpGMlE1VXNFUU9DS3RtQzJpd1BTOV9EekJlYkFIdGRJRTlUVGx0QW12LWFpRXpDa1hyX2xIODRna0pjZEM5YnNtY1VDeFlwZ9IBiwFBVV95cUxPNzY0RnE2U2diODVvOVh3ZTg4RWR2Umtib1gwcGN1T1V6WFIwX0JRMGJBeVlGMnVkUXZ4TnNKOXBzcERoNUJzT0xyUHhtbmdPT1hlTWhqR2p0UWtkM1prQ19YRmN6NWFHaE8yYVpxZ09JeG5iSGVLQV9wcy1oNG1SRzB6blNIQWI2dVo4?oc=5\" target=\"_blank\">U.S.-listed Greenland stocks surge after Trump announces security deal with Denmark</a>  <font color=\"#6f6f6f\">CNBC</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 3
-      },
-      "score": 51,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "Irish privacy regulator fines Google €403 million over location data processing - Reuters",
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObTlBMUhCMU1lTUtmLWhWVUNOanZWNWc0bXkxNFVZYmUzb2RlWGFndlhPaDAwZjFoRi00R2lwSVZINExLZ2ROal85T2NIeWxaZFRWUnRLRmFWT2VmZTQtQjloR0o2Vlg3WGJWZ1h2V0d1RnpMQjZRNTRZQmtFamVoS2JSOVE1ZVVXSzg3NE9JcjFNb2ZwY2NXUUJYeGxGLXVxN1dDM3NiYWk3V3V0UDU2S1pTR09jdldEWUxFNURuMmVkS1hpTzdoRg?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:55:06.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxObTlBMUhCMU1lTUtmLWhWVUNOanZWNWc0bXkxNFVZYmUzb2RlWGFndlhPaDAwZjFoRi00R2lwSVZINExLZ2ROal85T2NIeWxaZFRWUnRLRmFWT2VmZTQtQjloR0o2Vlg3WGJWZ1h2V0d1RnpMQjZRNTRZQmtFamVoS2JSOVE1ZVVXSzg3NE9JcjFNb2ZwY2NXUUJYeGxGLXVxN1dDM3NiYWk3V3V0UDU2S1pTR09jdldEWUxFNURuMmVkS1hpTzdoRg?oc=5\" target=\"_blank\">Irish privacy regulator fines Google €403 million over location data processing</a>  <font color=\"#6f6f6f\">Reuters</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5\" target=\"_blank\">State of world getting worse as UN Security Council paralysed: Guterres</a>  <font color=\"#6f6f6f\">Al Jazeera</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2365,6 +2362,66 @@
       "researchSignalScore": 5
     },
     {
+      "title": "Bitcoin prices rip despite the Clarity Act failure - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbW1ONC1nbmlJbi1POE0tWElxdER3WW1IM1Rua1NhN21jcnFHdXJYMFE3M1ZzZXF4SzNET2xsWHZjQ3M1a0pvV1puRGRuNzluXzdST3pWZlFfNmZKaGd6X0puSjdSanlqbXl0aG40Q3BEVEl3em5IeEs3eXFKLUswNTJQM3NndjZLNjdpZjRXZDNNb1RucUtiRG80WG12bVpKb2ROVkFrSkV0d0tCaVo4MmFPb1U?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T12:14:32.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQbW1ONC1nbmlJbi1POE0tWElxdER3WW1IM1Rua1NhN21jcnFHdXJYMFE3M1ZzZXF4SzNET2xsWHZjQ3M1a0pvV1puRGRuNzluXzdST3pWZlFfNmZKaGd6X0puSjdSanlqbXl0aG40Q3BEVEl3em5IeEs3eXFKLUswNTJQM3NndjZLNjdpZjRXZDNNb1RucUtiRG80WG12bVpKb2ROVkFrSkV0d0tCaVo4MmFPb1U?oc=5\" target=\"_blank\">Bitcoin prices rip despite the Clarity Act failure</a>  <font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 9
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Bitcoin’s price has cleared a key hurdle that has historically preceded major bull runs - CoinDesk",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVk1maUhFU3FjNDkxTV96QjNTdU1nZ1ZfUXZISWs5NEVHTDRqSzJtNmUwV3pjS20zM0lhTVpNdG5iUDU0S2FmTXRqeDhyRnF4elZnRDVoZjlfRUZUeDBZT0N2MklZU2VDRE42Tk9teFp4MG1kbHd3bTdiODRQV3BBUFBBckROcVBaTVRsX2sxaS1wR1ZZRFlnX1hCSExjcWZBb194WEdqaG5ZX3NUMFQ3Z09tLWRHaDN3TkRMWEN3ZWdZQnllTktvWGRUYw?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T03:56:23.000Z",
+      "category": "Crypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQVk1maUhFU3FjNDkxTV96QjNTdU1nZ1ZfUXZISWs5NEVHTDRqSzJtNmUwV3pjS20zM0lhTVpNdG5iUDU0S2FmTXRqeDhyRnF4elZnRDVoZjlfRUZUeDBZT0N2MklZU2VDRE42Tk9teFp4MG1kbHd3bTdiODRQV3BBUFBBckROcVBaTVRsX2sxaS1wR1ZZRFlnX1hCSExjcWZBb194WEdqaG5ZX3NUMFQ3Z09tLWRHaDN3TkRMWEN3ZWdZQnllTktvWGRUYw?oc=5\" target=\"_blank\">Bitcoin’s price has cleared a key hurdle that has historically preceded major bull runs</a>  <font color=\"#6f6f6f\">CoinDesk</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 51,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 5
+    },
+    {
       "title": "What Is Driving Bitcoin Higher Right Now - Yahoo Finance",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPQWJDZEdKaXNiUjUwdGppbGVXWDB3TVJ5OTdhUlNheHVaSTdSYWRScFZ2NmxrSTNUM0VYdHk2cjQxUEhncTY1MEZWMFloLUxzY1M2ZmltWjRJVEp5OTdDc29DdHpBSUNFQVNvTHhxUnVTOWpzN1ZTdGthaF9UZDZMWFo1ZVRLcmh0ekZ6X3prZVRGbGc4TkE?oc=5",
       "source": "Google News",
@@ -2383,7 +2440,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 8
+        "corroboratingCandidates": 9
       },
       "score": 51,
       "reasons": [
@@ -2485,6 +2542,36 @@
       "researchSignalScore": 0
     },
     {
+      "title": "Priority Technology CEO to Take Firm Private in $1.6 Billion Deal - WSJ",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRDlxVTlnLWZMQTJkSllBRTVsLVZOeFFNYWVPdC1MMzVHdkJ5UXcxN2QtSnZ1QzRLdVdNLUFIeG5hTDJwWU5uSGJxWXE3UWRnM1ptMl9SaVN5VExQZGl1WkRfQjNlWnpHWVNmenFVdndCWGRqVVVkYUoyWlBOZEJWODVxVy13Nzg2VlljTV9UR2o3X19fNDRUYUtWTVBaT20zUDZiTndSZHBhQnJP?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T12:11:00.000Z",
+      "category": "Technology",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNRDlxVTlnLWZMQTJkSllBRTVsLVZOeFFNYWVPdC1MMzVHdkJ5UXcxN2QtSnZ1QzRLdVdNLUFIeG5hTDJwWU5uSGJxWXE3UWRnM1ptMl9SaVN5VExQZGl1WkRfQjNlWnpHWVNmenFVdndCWGRqVVVkYUoyWlBOZEJWODVxVy13Nzg2VlljTV9UR2o3X19fNDRUYUtWTVBaT20zUDZiTndSZHBhQnJP?oc=5\" target=\"_blank\">Priority Technology CEO to Take Firm Private in $1.6 Billion Deal</a>  <font color=\"#6f6f6f\">WSJ</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 50,
+      "reasons": [
+        "Fresh topic",
+        "Strong category relevance",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 4
+    },
+    {
       "title": "Forum reveals widespread unease with AI technology race - Minnesota Reformer",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSktoX0JiaF9WNFpaMDFzdy05SEYyQVhmZUJyVGpmUUViaFU3UXVETmQ1Qk9NWFU1LUdESzJ1SDJxcG8tS1BKTGd1UW1aeW4wTkJvcW04anBMV1RrV0ZsSVUxOGpEdnRZUjdnSDFob2ZuMUtQdTlZbFFFWWVSRlpCSTlBWE5TMm05QkdqODZKMk1jX1dOc09TZ1ptNDRTdw?oc=5",
       "source": "Google News",
@@ -2545,66 +2632,6 @@
       "researchSignalScore": 4
     },
     {
-      "title": "US and China Discuss Alerting Each Other to AI National Security Threats - WIRED",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSGdOMm5uLUo5eWpnUlJjV1pKcDFBdWxuZ1NRcDJWZ2ZxdDdJS3Rwd2tvNWxxc0xYZG1KelRpZ0FtenRQdlpKRjdRcUwzUWsycVl0NVNOZ29tU3FId2RBQXN2MVVQMHZwV3RGMHNYelN5R2JnX0RYd0FlSjFscml6MXBIRXN5VWdfOHM5RnotNjR3dklRVGhvbnI1LWZMY0N2Mlgw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T10:34:00.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNSGdOMm5uLUo5eWpnUlJjV1pKcDFBdWxuZ1NRcDJWZ2ZxdDdJS3Rwd2tvNWxxc0xYZG1KelRpZ0FtenRQdlpKRjdRcUwzUWsycVl0NVNOZ29tU3FId2RBQXN2MVVQMHZwV3RGMHNYelN5R2JnX0RYd0FlSjFscml6MXBIRXN5VWdfOHM5RnotNjR3dklRVGhvbnI1LWZMY0N2Mlgw?oc=5\" target=\"_blank\">US and China Discuss Alerting Each Other to AI National Security Threats</a>  <font color=\"#6f6f6f\">WIRED</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 50,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
-      "title": "Bitcoin’s price has cleared a key hurdle that has historically preceded major bull runs - CoinDesk",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVk1maUhFU3FjNDkxTV96QjNTdU1nZ1ZfUXZISWs5NEVHTDRqSzJtNmUwV3pjS20zM0lhTVpNdG5iUDU0S2FmTXRqeDhyRnF4elZnRDVoZjlfRUZUeDBZT0N2MklZU2VDRE42Tk9teFp4MG1kbHd3bTdiODRQV3BBUFBBckROcVBaTVRsX2sxaS1wR1ZZRFlnX1hCSExjcWZBb194WEdqaG5ZX3NUMFQ3Z09tLWRHaDN3TkRMWEN3ZWdZQnllTktvWGRUYw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=crypto%20OR%20bitcoin%20OR%20ethereum%20OR%20blockchain&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T03:56:23.000Z",
-      "category": "Crypto",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQVk1maUhFU3FjNDkxTV96QjNTdU1nZ1ZfUXZISWs5NEVHTDRqSzJtNmUwV3pjS20zM0lhTVpNdG5iUDU0S2FmTXRqeDhyRnF4elZnRDVoZjlfRUZUeDBZT0N2MklZU2VDRE42Tk9teFp4MG1kbHd3bTdiODRQV3BBUFBBckROcVBaTVRsX2sxaS1wR1ZZRFlnX1hCSExjcWZBb194WEdqaG5ZX3NUMFQ3Z09tLWRHaDN3TkRMWEN3ZWdZQnllTktvWGRUYw?oc=5\" target=\"_blank\">Bitcoin’s price has cleared a key hurdle that has historically preceded major bull runs</a>  <font color=\"#6f6f6f\">CoinDesk</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 50,
-      "reasons": [
-        "Fresh topic",
-        "Strong category relevance",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
       "title": "Around 100 Former Heads of State and Government Call on Current Leaders to Renew International Cooperation - PR Newswire",
       "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSWdoWU9hc3plZTZFeWEtQmgwOVJBOWU4WTJQWVFza2E1b3E1Z0lmdEs2d09ZaTJPTlNDVTdoVGcwaGFCMGd3UjdYbUp1TzdHcVVCT1M3UHJTWlpaT0dWVmRLd2drcDBnX3d6cDB0N1FwMFFNZnNrSHdwVkd5U0NWdm9ST2xxdWF4S0lZV3I4ZFlUYkhnT2RhY3NOUktSYThfcVB6UV92akxMcVpVejJtM3JfeHBzMlg3cVVmbWpEcWRMQmhjanlYR1gzY3VvT01XVEdZYTczM19VX3dWdzlOUGFWOWplNkc0ZWxSczZiblA2RG9C?oc=5",
       "source": "Google News",
@@ -2623,7 +2650,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 3
+        "corroboratingCandidates": 5
       },
       "score": 50,
       "reasons": [
@@ -2653,35 +2680,6 @@
           "news"
         ],
         "corroboratingCandidates": 3
-      },
-      "score": 50,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 5
-    },
-    {
-      "title": "The International Cultural Diplomacy Network Launches as a Canadian Organization Specifically Built to Treat Culture as the Trust-Building Foundation of Trade and Diplomacy - PR Newswire Canada",
-      "link": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxOTkFuM1pQejljZWl4ckJXbm5vN0w4dmg0S2c1M2tyX3FXOW5KZi1TX2Zjc3dUUXl4ZFk5V09aaHlVZi1oMm5lZWNZLUQ5QkRuM2UzY0tFQkE3aF9WMVZNV3U0TDkwN1J0eUV5TTl5QUs0eVh5OWRRUDQ2bzU1Z0twd0d3QmR3YTlXRjFqUkZjVzk4R1VxUkFNWDl3MXhoZXA2dGdMNnNUMGVTZUZnVzZtREw1U0o0V3lQMkxxNW1kWVNmblpTeERfcFlzZTBMQm1rY1gzNnJWV2daSHZYVkZEdVBWLWlFTU1VM2dKYldlQjFRR0lfTUhYOTlldDNad0R0aHg2TE1pSHZpUGJudUhjbUdkVzlVcE5aYXZLVDV2VDc4X2tZWTN3dWhrX3pJaVkzN2RkVHhtLVB0QjllSXYxNGV1VlZJeHh5?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:25:00.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAJBVV95cUxOTkFuM1pQejljZWl4ckJXbm5vN0w4dmg0S2c1M2tyX3FXOW5KZi1TX2Zjc3dUUXl4ZFk5V09aaHlVZi1oMm5lZWNZLUQ5QkRuM2UzY0tFQkE3aF9WMVZNV3U0TDkwN1J0eUV5TTl5QUs0eVh5OWRRUDQ2bzU1Z0twd0d3QmR3YTlXRjFqUkZjVzk4R1VxUkFNWDl3MXhoZXA2dGdMNnNUMGVTZUZnVzZtREw1U0o0V3lQMkxxNW1kWVNmblpTeERfcFlzZTBMQm1rY1gzNnJWV2daSHZYVkZEdVBWLWlFTU1VM2dKYldlQjFRR0lfTUhYOTlldDNad0R0aHg2TE1pSHZpUGJudUhjbUdkVzlVcE5aYXZLVDV2VDc4X2tZWTN3dWhrX3pJaVkzN2RkVHhtLVB0QjllSXYxNGV1VlZJeHh5?oc=5\" target=\"_blank\">The International Cultural Diplomacy Network Launches as a Canadian Organization Specifically Built to Treat Culture as the Trust-Building Foundation of Trade and Diplomacy</a>  <font color=\"#6f6f6f\">PR Newswire Canada</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 5
       },
       "score": 50,
       "reasons": [
@@ -2750,13 +2748,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "US Sanctions Threaten to Undermine the International Criminal Court - Modern Diplomacy",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZW9qNzZpeU1zekhZNk1fRU0xT3Q4eGlVTTlqczJ6OVZZYUxQY2VxaDlXanhfVjlYVFlCR0t6bmZpckRIVjRKcEVydlkyZmxIb1pTVTBsYVBNeWplY0ZBWVR1RWtsS215MkpqUWItY0VfRE1jbTZBbkE1RW5uM3ZrV2VuT0c2N21xd1hsTENXVmFjM2RQOTlmRGtYTWV2dTl4eWx2OTQ1ZDRxZw?oc=5",
+      "title": "UN relief chief urges stronger humanitarian diplomacy to defend international humanitarian law - OCHA",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcTR1LUlyMm52bkI5U19xOTlVeHpDbDlFTGM2WTh4TGNGUUQycW13VDY3bi13aVFyMFBNVEZqeGNZaGdMSm91Z1ZOeVRDODFCQXBQN2JGYW8zWG4zXzBBVVl4QlpQcnR1UzNSSWFHSWUyZ1AyNTJZQ19vc081bnBfa0RWMUMzNlQ2Z0lzXzlnd3FMQTExQkQ1bE9tU1p5UFlWemRZWWxLeFNsVWVPS2I2ZWJkNjU0NHVMRlFR?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T13:43:18.000Z",
+      "publishedAt": "2026-09-21T18:36:50.000Z",
       "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZW9qNzZpeU1zekhZNk1fRU0xT3Q4eGlVTTlqczJ6OVZZYUxQY2VxaDlXanhfVjlYVFlCR0t6bmZpckRIVjRKcEVydlkyZmxIb1pTVTBsYVBNeWplY0ZBWVR1RWtsS215MkpqUWItY0VfRE1jbTZBbkE1RW5uM3ZrV2VuT0c2N21xd1hsTENXVmFjM2RQOTlmRGtYTWV2dTl4eWx2OTQ1ZDRxZw?oc=5\" target=\"_blank\">US Sanctions Threaten to Undermine the International Criminal Court</a>  <font color=\"#6f6f6f\">Modern Diplomacy</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcTR1LUlyMm52bkI5U19xOTlVeHpDbDlFTGM2WTh4TGNGUUQycW13VDY3bi13aVFyMFBNVEZqeGNZaGdMSm91Z1ZOeVRDODFCQXBQN2JGYW8zWG4zXzBBVVl4QlpQcnR1UzNSSWFHSWUyZ1AyNTJZQ19vc081bnBfa0RWMUMzNlQ2Z0lzXzlnd3FMQTExQkQ1bE9tU1p5UFlWemRZWWxLeFNsVWVPS2I2ZWJkNjU0NHVMRlFR?oc=5\" target=\"_blank\">UN relief chief urges stronger humanitarian diplomacy to defend international humanitarian law</a>  <font color=\"#6f6f6f\">OCHA</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2779,71 +2777,13 @@
       "researchSignalScore": 4
     },
     {
-      "title": "Trump rejects AI slowdown calls, launches \"AI Force\" instead",
-      "link": "https://arstechnica.com/ai/2026/09/trump-rejects-ai-slowdown-calls-launches-ai-force-instead/",
-      "source": "Ars Technica",
-      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
-      "publishedAt": "2026-09-21T15:37:56.000Z",
-      "category": "Technology",
-      "description": "The president offered few details on what his proposed new AI Force would do.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Ars Technica"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 49,
-      "reasons": [
-        "Fresh topic",
-        "Covered by multiple sources"
-      ],
-      "eligible": true,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "The Download: investigating deaths at the US border&#8217;s “virtual wall”",
-      "link": "https://www.technologyreview.com/2026/09/21/1144834/the-download-investigating-deaths-at-the-us-borders-virtual-wall/",
-      "source": "MIT Technology Review",
-      "sourceUrl": "https://www.technologyreview.com/feed/",
-      "publishedAt": "2026-09-21T12:20:00.000Z",
-      "category": "Technology",
-      "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The US spent billions on border surveillance. Why can’t it catch people before they die? When José Morales Bernal crossed the border into the US in April 2024, the day before&#8230;",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "MIT Technology Review"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 2
-      },
-      "score": 49,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 4
-    },
-    {
-      "title": "Pease officials defend airport security after teen crashes into plane - seacoastonline.com",
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYlZUbFVaMUs5YlU1NDk5NkVXZVdkdGFSUUFLN3BaZE15NzVqT0ZCTDR2b09BbE5SSGYzSlpaRVJrb3NwM3RFQUVaNEJmZFJZZ29md1NsNG9RN2NzQ1pGWVlqN0ttYVg4enlRSzlXbnQxX3VGUGlJWDA1VVBxYjBIUTg0XzB5OUZZQm9DYkJQUjUtNHFSdUJyWTBCWDhyX0ZfakZob0RDWHJuUzYtM0NZMU9IRERacmQtODd4Ykx1MXNTcnNQMXliSFREbE5CSThKeG5fNVltX0E?oc=5",
+      "title": "Why bridging AI and agriculture is key for the future of food - The World Economic Forum",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPa3REZ0lvRlVVc3ZIWGVYTTByR0FYcWdsYUdua2YtNFRjZG5HdG9ISDBLa0YwRFVmNlF4dGVyRzE3dEpFekFOUXdFdFZ2TEItZmhvam90MjgxRFFndUp2YklZYnhVTG9HX3VibElTSFl0UmxWWWdfM3NyNjFJTHdTaEc1cw?oc=5",
       "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=privacy%20OR%20security%20OR%20apps%20OR%20smartphones&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T09:04:00.000Z",
-      "category": "Digital Life",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYlZUbFVaMUs5YlU1NDk5NkVXZVdkdGFSUUFLN3BaZE15NzVqT0ZCTDR2b09BbE5SSGYzSlpaRVJrb3NwM3RFQUVaNEJmZFJZZ29md1NsNG9RN2NzQ1pGWVlqN0ttYVg4enlRSzlXbnQxX3VGUGlJWDA1VVBxYjBIUTg0XzB5OUZZQm9DYkJQUjUtNHFSdUJyWTBCWDhyX0ZfakZob0RDWHJuUzYtM0NZMU9IRERacmQtODd4Ykx1MXNTcnNQMXliSFREbE5CSThKeG5fNVltX0E?oc=5\" target=\"_blank\">Pease officials defend airport security after teen crashes into plane</a>  <font color=\"#6f6f6f\">seacoastonline.com</font>",
+      "sourceUrl": "https://news.google.com/rss/search?q=AI%20technology%20OR%20artificial%20intelligence&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T12:18:05.000Z",
+      "category": "AI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPa3REZ0lvRlVVc3ZIWGVYTTByR0FYcWdsYUdua2YtNFRjZG5HdG9ISDBLa0YwRFVmNlF4dGVyRzE3dEpFekFOUXdFdFZ2TEItZmhvam90MjgxRFFndUp2YklZYnhVTG9HX3VibElTSFl0UmxWWWdfM3NyNjFJTHdTaEc1cw?oc=5\" target=\"_blank\">Why bridging AI and agriculture is key for the future of food</a>  <font color=\"#6f6f6f\">The World Economic Forum</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -2934,35 +2874,6 @@
       "publishedAt": "2026-09-21T16:55:39.000Z",
       "category": "AI",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPWnYwQWVnNS1PejZ6VXFCRjRzcVZrcnh6S3hzZldtUGR3TWdSTmRsbVVvdWFUaHdwSHZqX2lpaV9pWlNRYmVjUk45czNacGlJR29BcGdjUnB5MzRfOXhkcDlfNE00ZEx5SjRZNlpEOXliSzZVRDZYeUlFdGlZUG1BbzNkWnVvV1dWNmJJUmEtM3ZPNTdmNTE5N1o1NVlUS3A1?oc=5\" target=\"_blank\">U.N. Seeks Relevance on A.I. as the U.S. and China Race Ahead</a>  <font color=\"#6f6f6f\">The New York Times</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 1
-      },
-      "score": 47,
-      "reasons": [
-        "Fresh topic",
-        "Enough context for original synthesis"
-      ],
-      "eligible": true,
-      "researchSignalScore": 2
-    },
-    {
-      "title": "Canada’s unions look to government to keep its commitment on the right to strike - Canadian Labour Congress",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOclQ3TXk1clVPcFl4RG1OTUU0SlA2SDdhVk5QQXQzT2hocW1RVldJR0p1Q2JYaTc0S3F5QnZHREM0QURTWFdsUzBlWFJuNjZ1U0tpQ2RHbmlUYVQtRnYwTjlUa1BZZkx6QWtWbXpwMXF3SHQ4ZzE5S0MxQzRtWms2UXN3LURMYnFjeG1iaHM2TGdsWno1NG1nTm9kQzVad2pGeVRnTTBUZGRPUQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T12:35:40.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOclQ3TXk1clVPcFl4RG1OTUU0SlA2SDdhVk5QQXQzT2hocW1RVldJR0p1Q2JYaTc0S3F5QnZHREM0QURTWFdsUzBlWFJuNjZ1U0tpQ2RHbmlUYVQtRnYwTjlUa1BZZkx6QWtWbXpwMXF3SHQ4ZzE5S0MxQzRtWms2UXN3LURMYnFjeG1iaHM2TGdsWno1NG1nTm9kQzVad2pGeVRnTTBUZGRPUQ?oc=5\" target=\"_blank\">Canada’s unions look to government to keep its commitment on the right to strike</a>  <font color=\"#6f6f6f\">Canadian Labour Congress</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3103,13 +3014,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Precigen Receives FDA Platform Technology Designation for AdenoVerse Platform - PR Newswire",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObW5SajdwcFNtdjlHWEVhazA2MTk1cXZMZXdXYnpNa0FtdlBPdG9lSVNQZzdwaFNBQkRYbDJfeGd2RkJKYXN3VDQ5Vm40aWxaSF9MWDJBTER2emEtOHJUNGltbkJmOEQzU0ozRmIzWGllTHBHazNLTXdsbFNPcXM4eDNXdlljU0w4V2FCWVpYelpESmJlZWFNSXk4c1lOVDh6QWdzZWM5YnFhMDBDQklvUW44SEtMXy1kTGhPaTQ4WTFSLU9acGtQYmJnaFBtdw?oc=5",
+      "title": "DeepSeek Bets Big on Huawei Chips to Bypass U.S. Export Controls - The Information",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdQTkhtZGdCYl90YWNhLUMtbXJPUjBvd3piRlI1NU5Rdkw0SjFPQ3Y2N1lFd2d2LVBCNzVERXEzQUczZmg5aGJnQXhoX1MzNFFCMGZGaXUxYVUtQmFka0dQTzgzM2o0ai1tamxOc2ZOVVI0QWVzeDIxUUxUQVZjWFM5aEJDUVBETHF1OThwQmVNZmtvNU4yLXoyeTRtUQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T11:00:00.000Z",
+      "publishedAt": "2026-09-21T10:28:53.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxObW5SajdwcFNtdjlHWEVhazA2MTk1cXZMZXdXYnpNa0FtdlBPdG9lSVNQZzdwaFNBQkRYbDJfeGd2RkJKYXN3VDQ5Vm40aWxaSF9MWDJBTER2emEtOHJUNGltbkJmOEQzU0ozRmIzWGllTHBHazNLTXdsbFNPcXM4eDNXdlljU0w4V2FCWVpYelpESmJlZWFNSXk4c1lOVDh6QWdzZWM5YnFhMDBDQklvUW44SEtMXy1kTGhPaTQ4WTFSLU9acGtQYmJnaFBtdw?oc=5\" target=\"_blank\">Precigen Receives FDA Platform Technology Designation for AdenoVerse Platform</a>  <font color=\"#6f6f6f\">PR Newswire</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNNGdQTkhtZGdCYl90YWNhLUMtbXJPUjBvd3piRlI1NU5Rdkw0SjFPQ3Y2N1lFd2d2LVBCNzVERXEzQUczZmg5aGJnQXhoX1MzNFFCMGZGaXUxYVUtQmFka0dQTzgzM2o0ai1tamxOc2ZOVVI0QWVzeDIxUUxUQVZjWFM5aEJDUVBETHF1OThwQmVNZmtvNU4yLXoyeTRtUQ?oc=5\" target=\"_blank\">DeepSeek Bets Big on Huawei Chips to Bypass U.S. Export Controls</a>  <font color=\"#6f6f6f\">The Information</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3133,13 +3044,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Technology Certificates and Certifications - The CPA Journal",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeUhKOHdHLVpGVTV5VEQ0LWVBcFd5UzFleUY5VWdaODNucE1BS25IaElER3d3eVdFWk82MzBqLS1tRDhRVTd5VjZUSzh3cmxtWVhyZXBxTlJDMDZ0TFhaeU1hbjVDcnlfbk00WE12bWhodEtYQ2JqMlJNZTAtY0VONDBQNlhHZnFp?oc=5",
+      "title": "Precigen Receives FDA Platform Technology Designation for AdenoVerse Platform - PR Newswire",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObW5SajdwcFNtdjlHWEVhazA2MTk1cXZMZXdXYnpNa0FtdlBPdG9lSVNQZzdwaFNBQkRYbDJfeGd2RkJKYXN3VDQ5Vm40aWxaSF9MWDJBTER2emEtOHJUNGltbkJmOEQzU0ozRmIzWGllTHBHazNLTXdsbFNPcXM4eDNXdlljU0w4V2FCWVpYelpESmJlZWFNSXk4c1lOVDh6QWdzZWM5YnFhMDBDQklvUW44SEtMXy1kTGhPaTQ4WTFSLU9acGtQYmJnaFBtdw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T10:00:47.000Z",
+      "publishedAt": "2026-09-21T11:00:00.000Z",
       "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeUhKOHdHLVpGVTV5VEQ0LWVBcFd5UzFleUY5VWdaODNucE1BS25IaElER3d3eVdFWk82MzBqLS1tRDhRVTd5VjZUSzh3cmxtWVhyZXBxTlJDMDZ0TFhaeU1hbjVDcnlfbk00WE12bWhodEtYQ2JqMlJNZTAtY0VONDBQNlhHZnFp?oc=5\" target=\"_blank\">Technology Certificates and Certifications</a>  <font color=\"#6f6f6f\">The CPA Journal</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxObW5SajdwcFNtdjlHWEVhazA2MTk1cXZMZXdXYnpNa0FtdlBPdG9lSVNQZzdwaFNBQkRYbDJfeGd2RkJKYXN3VDQ5Vm40aWxaSF9MWDJBTER2emEtOHJUNGltbkJmOEQzU0ozRmIzWGllTHBHazNLTXdsbFNPcXM4eDNXdlljU0w4V2FCWVpYelpESmJlZWFNSXk4c1lOVDh6QWdzZWM5YnFhMDBDQklvUW44SEtMXy1kTGhPaTQ4WTFSLU9acGtQYmJnaFBtdw?oc=5\" target=\"_blank\">Precigen Receives FDA Platform Technology Designation for AdenoVerse Platform</a>  <font color=\"#6f6f6f\">PR Newswire</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3400,13 +3311,71 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Devdiscourse",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTdYSXpkeklRS2VHUERNN0pQVEo0LUw0dlJMSnFFdUlDRER5RTVvQzFzTUwtZmx1V0ZlOTA5d0hUMHNGalR1Y1NtTlYtUUloaE9mQ04xZ3Z2T2JicW96amJGVHRpNjZnbmU4Mm43eWFBV0dhTG8wV1hzZlhjY3FCeDFJeE1XQmV5M1ktR01vdGR4NUdmUFhYY3NFUUhGRVprVTU3SVVkem9NQ1dQTEZTWFUwOWVMbTVqdlIxYUNXSGNJNkU4YWdCZjZVUENFRE9ERm5sbnJR0gHbAUFVX3lxTE5wMjE4Q1hGbjdyeVNSVlZfeU1sVkhGVk8zd21QS2MwYTVvek5HcEVfaFRYLXU3WGxnSGhLNWVtX29NVnlTZ1E0d3hrbXpXZXlqTU9idk1ESlZzb0ctTUdZS3A2dnBmZmU4dkFoYkdwaWVfU25kaFpWbko0bWRRNWk1SEotdGxaWG1VMmNGT3MwSXJUSm1kdDIzMmtVc0xJQzVWMEd5cGdGcFV6eU95cllKQzl1aU5pMzZiQzlnLTgwVDhNN3pyOWdwYlduRU5mTThiQmo3a2drY3k4VQ?oc=5",
+      "title": "US Sanctions Threaten to Undermine the International Criminal Court - moderndiplomacy.eu",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZW9qNzZpeU1zekhZNk1fRU0xT3Q4eGlVTTlqczJ6OVZZYUxQY2VxaDlXanhfVjlYVFlCR0t6bmZpckRIVjRKcEVydlkyZmxIb1pTVTBsYVBNeWplY0ZBWVR1RWtsS215MkpqUWItY0VfRE1jbTZBbkE1RW5uM3ZrV2VuT0c2N21xd1hsTENXVmFjM2RQOTlmRGtYTWV2dTl4eWx2OTQ1ZDRxZw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-21T17:00:38.000Z",
+      "publishedAt": "2026-09-21T13:43:18.000Z",
       "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWTdYSXpkeklRS2VHUERNN0pQVEo0LUw0dlJMSnFFdUlDRER5RTVvQzFzTUwtZmx1V0ZlOTA5d0hUMHNGalR1Y1NtTlYtUUloaE9mQ04xZ3Z2T2JicW96amJGVHRpNjZnbmU4Mm43eWFBV0dhTG8wV1hzZlhjY3FCeDFJeE1XQmV5M1ktR01vdGR4NUdmUFhYY3NFUUhGRVprVTU3SVVkem9NQ1dQTEZTWFUwOWVMbTVqdlIxYUNXSGNJNkU4YWdCZjZVUENFRE9ERm5sbnJR0gHbAUFVX3lxTE5wMjE4Q1hGbjdyeVNSVlZfeU1sVkhGVk8zd21QS2MwYTVvek5HcEVfaFRYLXU3WGxnSGhLNWVtX29NVnlTZ1E0d3hrbXpXZXlqTU9idk1ESlZzb0ctTUdZS3A2dnBmZmU4dkFoYkdwaWVfU25kaFpWbko0bWRRNWk1SEotdGxaWG1VMmNGT3MwSXJUSm1kdDIzMmtVc0xJQzVWMEd5cGdGcFV6eU95cllKQzl1aU5pMzZiQzlnLTgwVDhNN3pyOWdwYlduRU5mTThiQmo3a2drY3k4VQ?oc=5\" target=\"_blank\">Denmark says NATO shares responsibility for Arctic security under Greenland deal</a>  <font color=\"#6f6f6f\">Devdiscourse</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZW9qNzZpeU1zekhZNk1fRU0xT3Q4eGlVTTlqczJ6OVZZYUxQY2VxaDlXanhfVjlYVFlCR0t6bmZpckRIVjRKcEVydlkyZmxIb1pTVTBsYVBNeWplY0ZBWVR1RWtsS215MkpqUWItY0VfRE1jbTZBbkE1RW5uM3ZrV2VuT0c2N21xd1hsTENXVmFjM2RQOTlmRGtYTWV2dTl4eWx2OTQ1ZDRxZw?oc=5\" target=\"_blank\">US Sanctions Threaten to Undermine the International Criminal Court</a>  <font color=\"#6f6f6f\">moderndiplomacy.eu</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 45,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": true,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "The International Cultural Diplomacy Network Launches as a Canadian Organization Specifically Built to Treat Culture as the Trust-Building Foundation of Trade and Diplomacy - PR Newswire Canada",
+      "link": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxOTkFuM1pQejljZWl4ckJXbm5vN0w4dmg0S2c1M2tyX3FXOW5KZi1TX2Zjc3dUUXl4ZFk5V09aaHlVZi1oMm5lZWNZLUQ5QkRuM2UzY0tFQkE3aF9WMVZNV3U0TDkwN1J0eUV5TTl5QUs0eVh5OWRRUDQ2bzU1Z0twd0d3QmR3YTlXRjFqUkZjVzk4R1VxUkFNWDl3MXhoZXA2dGdMNnNUMGVTZUZnVzZtREw1U0o0V3lQMkxxNW1kWVNmblpTeERfcFlzZTBMQm1rY1gzNnJWV2daSHZYVkZEdVBWLWlFTU1VM2dKYldlQjFRR0lfTUhYOTlldDNad0R0aHg2TE1pSHZpUGJudUhjbUdkVzlVcE5aYXZLVDV2VDc4X2tZWTN3dWhrX3pJaVkzN2RkVHhtLVB0QjllSXYxNGV1VlZJeHh5?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T12:25:00.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAJBVV95cUxOTkFuM1pQejljZWl4ckJXbm5vN0w4dmg0S2c1M2tyX3FXOW5KZi1TX2Zjc3dUUXl4ZFk5V09aaHlVZi1oMm5lZWNZLUQ5QkRuM2UzY0tFQkE3aF9WMVZNV3U0TDkwN1J0eUV5TTl5QUs0eVh5OWRRUDQ2bzU1Z0twd0d3QmR3YTlXRjFqUkZjVzk4R1VxUkFNWDl3MXhoZXA2dGdMNnNUMGVTZUZnVzZtREw1U0o0V3lQMkxxNW1kWVNmblpTeERfcFlzZTBMQm1rY1gzNnJWV2daSHZYVkZEdVBWLWlFTU1VM2dKYldlQjFRR0lfTUhYOTlldDNad0R0aHg2TE1pSHZpUGJudUhjbUdkVzlVcE5aYXZLVDV2VDc4X2tZWTN3dWhrX3pJaVkzN2RkVHhtLVB0QjllSXYxNGV1VlZJeHh5?oc=5\" target=\"_blank\">The International Cultural Diplomacy Network Launches as a Canadian Organization Specifically Built to Treat Culture as the Trust-Building Foundation of Trade and Diplomacy</a>  <font color=\"#6f6f6f\">PR Newswire Canada</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 5
+      },
+      "score": 45,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Denmark says NATO shares responsibility for Arctic security under Greenland deal - Devdiscourse",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOOWRzam5nTURiRW1jTjVFaTlJbFl0Wksxb2ZpNkdHTWRHaGpNQ0RGUHZTSWIwU1VNZ0k2OEM5WFJJa2FXaWNnUzQ3SGNxMjVUWmZBNkRmbnlFcmJhMDVyTjhHZFZzeVBvMUozUHA3SEU1a3pLUWJqclFWLUEweHplYkJxdjVrWG9pbms2di13RWVLTEtsci1JT1dYcDRTeXF2T2RkX2xtSFRCbVEzck9KTGpvZ2lDN0ZKbVhFRHNDRkotRnJqOEpjaDdyUlUzNHJCYnRQTFRn0gHbAUFVX3lxTE5pU2ViRlhoZldORFB6dVkyUlg0dzk5ZWtuOXFvX194a0tLN212UGwxV3pETnNpTzlJRTluUUw0RW9SRldGbWIyN1hSQlZrSldXMXVac3ZFOTBpSUg3NWpQaUI2Yzd0QWp6cjRleUN4aUJYcWV6ckM3OHhMb0NaTkROVEo4UVlyRm13bVdhY3hra1AzbGd4TVJpRXpkSV9jQXNhT1BLZkI0Qkk5aDZzTVFOcGt0VGI3VlozQ3RUV3l3RGthZ2NKLU1CLTJlQlpBeGthS0ZtcExtNUs4SQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T17:41:38.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxOOWRzam5nTURiRW1jTjVFaTlJbFl0Wksxb2ZpNkdHTWRHaGpNQ0RGUHZTSWIwU1VNZ0k2OEM5WFJJa2FXaWNnUzQ3SGNxMjVUWmZBNkRmbnlFcmJhMDVyTjhHZFZzeVBvMUozUHA3SEU1a3pLUWJqclFWLUEweHplYkJxdjVrWG9pbms2di13RWVLTEtsci1JT1dYcDRTeXF2T2RkX2xtSFRCbVEzck9KTGpvZ2lDN0ZKbVhFRHNDRkotRnJqOEpjaDdyUlUzNHJCYnRQTFRn0gHbAUFVX3lxTE5pU2ViRlhoZldORFB6dVkyUlg0dzk5ZWtuOXFvX194a0tLN212UGwxV3pETnNpTzlJRTluUUw0RW9SRldGbWIyN1hSQlZrSldXMXVac3ZFOTBpSUg3NWpQaUI2Yzd0QWp6cjRleUN4aUJYcWV6ckM3OHhMb0NaTkROVEo4UVlyRm13bVdhY3hra1AzbGd4TVJpRXpkSV9jQXNhT1BLZkI0Qkk5aDZzTVFOcGt0VGI3VlozQ3RUV3l3RGthZ2NKLU1CLTJlQlpBeGthS0ZtcExtNUs4SQ?oc=5\" target=\"_blank\">Denmark says NATO shares responsibility for Arctic security under Greenland deal</a>  <font color=\"#6f6f6f\">Devdiscourse</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3551,7 +3520,7 @@
       "sourceUrl": "https://techcrunch.com/feed/",
       "publishedAt": "2026-09-20T21:41:08.000Z",
       "category": "AI",
-      "description": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+      "description": "Current ticket pricing ends in 6 days on September 25 at 11:59 p.m. PT. Join 10,000+ founders, investors, and tech leaders at Disrupt and save up to $200 on your ticket.",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
@@ -3779,6 +3748,35 @@
       "researchSignalScore": 5
     },
     {
+      "title": "The Download: investigating deaths at the US border&#8217;s “virtual wall”",
+      "link": "https://www.technologyreview.com/2026/09/21/1144834/the-download-investigating-deaths-at-the-us-borders-virtual-wall/",
+      "source": "MIT Technology Review",
+      "sourceUrl": "https://www.technologyreview.com/feed/",
+      "publishedAt": "2026-09-21T12:20:00.000Z",
+      "category": "Technology",
+      "description": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. The US spent billions on border surveillance. Why can’t it catch people before they die? When José Morales Bernal crossed the border into the US in April 2024, the day before&#8230;",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "MIT Technology Review"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 2
+      },
+      "score": 44,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 4
+    },
+    {
       "title": "How we made the first comprehensive map of deaths along the US border’s “virtual wall”",
       "link": "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/",
       "source": "MIT Technology Review",
@@ -3873,6 +3871,35 @@
       "publishedAt": "2026-09-21T10:53:00.000Z",
       "category": "AI",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNZzF1U1p0TVN5LWRKZlJGc29FSlJsNERlZWdtVmJLMUZsVktQc2I5TVRjdk14aTBJYzZRaUpGWlR1d0hBTlZIclhSSVJhRUNENERxRjFEQ3YwbjdXZFl4Y1Q0bkJpdVo2QUlQdHFmUHRNc0puWEVQQURTSUQ0SUVkUm9GdlplZmhPaFdaVHdXNVhhRTBXRGdoZA?oc=5\" target=\"_blank\">U.S. and China Discuss System to Warn of A.I. National Security Issues</a>  <font color=\"#6f6f6f\">The New York Times</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 1
+      },
+      "score": 42,
+      "reasons": [
+        "Fresh topic",
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 2
+    },
+    {
+      "title": "Canada’s unions look to government to keep its commitment on the right to strike - Canadian Labour Congress",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOclQ3TXk1clVPcFl4RG1OTUU0SlA2SDdhVk5QQXQzT2hocW1RVldJR0p1Q2JYaTc0S3F5QnZHREM0QURTWFdsUzBlWFJuNjZ1U0tpQ2RHbmlUYVQtRnYwTjlUa1BZZkx6QWtWbXpwMXF3SHQ4ZzE5S0MxQzRtWms2UXN3LURMYnFjeG1iaHM2TGdsWno1NG1nTm9kQzVad2pGeVRnTTBUZGRPUQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-21T12:35:40.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOclQ3TXk1clVPcFl4RG1OTUU0SlA2SDdhVk5QQXQzT2hocW1RVldJR0p1Q2JYaTc0S3F5QnZHREM0QURTWFdsUzBlWFJuNjZ1U0tpQ2RHbmlUYVQtRnYwTjlUa1BZZkx6QWtWbXpwMXF3SHQ4ZzE5S0MxQzRtWms2UXN3LURMYnFjeG1iaHM2TGdsWno1NG1nTm9kQzVad2pGeVRnTTBUZGRPUQ?oc=5\" target=\"_blank\">Canada’s unions look to government to keep its commitment on the right to strike</a>  <font color=\"#6f6f6f\">Canadian Labour Congress</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4069,13 +4096,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Apple unveils iPhone Duo - Apple",
+      "title": "Apple unveils iPhone Duo - apple.com",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-09T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5\" target=\"_blank\">Apple unveils iPhone Duo</a>  <font color=\"#6f6f6f\">Apple</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5\" target=\"_blank\">Apple unveils iPhone Duo</a>  <font color=\"#6f6f6f\">apple.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4099,13 +4126,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - Apple",
+      "title": "Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro - apple.com",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-08-25T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5\" target=\"_blank\">Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro</a>  <font color=\"#6f6f6f\">Apple</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnV5OXRDNXRyNUp1bUltLXBkSC1kMHFSWUJkem0tbjZ3YVhaOTQ5eWpBbWlBR0gwZkFTUnViU1pzOExTZjlhRS1kTmt5cjdXUGROT0ZXdnB2TzJVRGNIYTE4X1dBdG5LdXB4RjladGFOdlpheXBodGo3SmVTSXVnVC1xSXZ6ejJIVEROOW1OQ3l2VVN6cWIzbWxWNWp0MW9MdUVCV2t0NGI3czh5UjFXMHhTTkY?oc=5\" target=\"_blank\">Apple unveils a more powerful Mac mini featuring the all-new M6 and M5 Pro</a>  <font color=\"#6f6f6f\">apple.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4187,13 +4214,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "From Edison’s Invention Factory to the new architecture of innovation - science.org",
+      "title": "From Edison’s Invention Factory to the new architecture of innovation - Science | AAAS",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-07-02T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5\" target=\"_blank\">From Edison’s Invention Factory to the new architecture of innovation</a>  <font color=\"#6f6f6f\">science.org</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FbS1YRWluaTQ3NDY0VlZCazcxZ2RVOWRYdUt3S1JkQndoQ1U3blFHQVotcW8wNWk5TEZlSDQ4V3lua2huckVPM0FINzd3M2UxMEVFQUI3ejc3ZEk4WkFfeA?oc=5\" target=\"_blank\">From Edison’s Invention Factory to the new architecture of innovation</a>  <font color=\"#6f6f6f\">Science | AAAS</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4390,13 +4417,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "A History of Invention and Innovation - bu.edu",
+      "title": "A History of Invention and Innovation - Boston University",
       "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-03-25T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5\" target=\"_blank\">A History of Invention and Innovation</a>  <font color=\"#6f6f6f\">bu.edu</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNZ2RFUmVmRTktYzJ2U1JfSDZkbUlrWGZINklMTFFreWRBeGRXcndDRjlIeUg1QmE0RTFlRWpEVnp4ZlgtN0gtLVNxUjU3aFc5Ung1d19XcHB6dUJ5SlRBcEt2UTgzWGo1bkpYRmFKV1VvTzlKS0ItQTVCMUhabkpYOXlQa2xydkEzWnBQS2ZpajA?oc=5\" target=\"_blank\">A History of Invention and Innovation</a>  <font color=\"#6f6f6f\">Boston University</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4448,13 +4475,13 @@
       "researchSignalScore": 5
     },
     {
-      "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - Cummins",
+      "title": "Cummins Announces Phased Model Year 2027 Product Launch Plan - investor.cummins.com",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-07-23T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5\" target=\"_blank\">Cummins Announces Phased Model Year 2027 Product Launch Plan</a>  <font color=\"#6f6f6f\">Cummins</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNR1FkQWpyUVp6TklzN1JjdWV5UW8xQXJPTXFpbmk2UWhFUlVmbmt0dlhHeERsWkJVeUo5UUdTa1Q1aUt1Q0c3aHQyNWNsNG1OaF90bzdKTzAteTFQMkl5UUQ5Wlh1RktSUmg2QTFpZlpFcUxFaGdWNFQ2VW9WSjNhcUF4S0FGd1hUUGVTdzZGVnVWSXhsTzN6QUZzUzVyam9OUDBaY3UwMDY?oc=5\" target=\"_blank\">Cummins Announces Phased Model Year 2027 Product Launch Plan</a>  <font color=\"#6f6f6f\">investor.cummins.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -4524,7 +4551,7 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 6
+        "corroboratingCandidates": 7
       },
       "score": 37,
       "reasons": [
@@ -4560,6 +4587,34 @@
       ],
       "eligible": false,
       "researchSignalScore": 4
+    },
+    {
+      "title": "argentina",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "source": "Google Trends",
+      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
+      "publishedAt": "2026-09-21T18:30:00.000Z",
+      "category": "AI",
+      "description": "",
+      "signalType": "search-trend",
+      "discoveryOnly": true,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google Trends"
+        ],
+        "signalTypes": [
+          "search-trend"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
     },
     {
       "title": "bryson dechambeau",
@@ -4674,6 +4729,34 @@
       "researchSignalScore": 0
     },
     {
+      "title": "destiny 2",
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "source": "Google Trends",
+      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
+      "publishedAt": "2026-09-21T16:50:00.000Z",
+      "category": "AI",
+      "description": "",
+      "signalType": "search-trend",
+      "discoveryOnly": true,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google Trends"
+        ],
+        "signalTypes": [
+          "search-trend"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
       "title": "pictures",
       "link": "https://trends.google.com/trending/rss?geo=US",
       "source": "Google Trends",
@@ -4758,62 +4841,6 @@
       "researchSignalScore": 0
     },
     {
-      "title": "oura",
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "source": "Google Trends",
-      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
-      "publishedAt": "2026-09-21T15:10:00.000Z",
-      "category": "AI",
-      "description": "",
-      "signalType": "search-trend",
-      "discoveryOnly": true,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google Trends"
-        ],
-        "signalTypes": [
-          "search-trend"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 35,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "xbox cloud gaming",
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "source": "Google Trends",
-      "sourceUrl": "https://trends.google.com/trending/rss?geo=US",
-      "publishedAt": "2026-09-21T15:10:00.000Z",
-      "category": "AI",
-      "description": "",
-      "signalType": "search-trend",
-      "discoveryOnly": true,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google Trends"
-        ],
-        "signalTypes": [
-          "search-trend"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 35,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
       "title": "Russel Vought will reportedly be given veto power over all NIH grants",
       "link": "https://arstechnica.com/science/2026/09/trump-planning-to-hand-veto-power-over-nih-grants-to-political-appointee/",
       "source": "Ars Technica",
@@ -4842,13 +4869,41 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - Apple",
+      "title": "Trump rejects AI slowdown calls, launches \"AI Force\" instead",
+      "link": "https://arstechnica.com/ai/2026/09/trump-rejects-ai-slowdown-calls-launches-ai-force-instead/",
+      "source": "Ars Technica",
+      "sourceUrl": "https://feeds.arstechnica.com/arstechnica/index",
+      "publishedAt": "2026-09-21T15:37:56.000Z",
+      "category": "Technology",
+      "description": "The president offered few details on what his proposed new AI Force would do.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Ars Technica"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 35,
+      "reasons": [
+        "Fresh topic"
+      ],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
+      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - apple.com",
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=new%20product%20launch%20OR%20product%20announcement%20OR%20device%20launch&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-09-09T07:00:00.000Z",
       "category": "Product Launches",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5\" target=\"_blank\">Apple debuts iPhone 18 Pro and iPhone 18 Pro Max</a>  <font color=\"#6f6f6f\">Apple</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5\" target=\"_blank\">Apple debuts iPhone 18 Pro and iPhone 18 Pro Max</a>  <font color=\"#6f6f6f\">apple.com</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5118,35 +5173,6 @@
       "score": 32,
       "reasons": [
         "Covered by multiple sources",
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Energy Technology Innovation Partnership Project - Department of Energy (.gov)",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=technology%20OR%20software%20OR%20chips&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-18T18:00:00.000Z",
-      "category": "Technology",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2pIaDFOb19IREtLOHJBTGtMQUlCSDMyV2JxWnlQeFplbklRZXczTUtWamFPTklzRmJMZWdxSGxSTzBCaTcyazY3SzlMXzdLQ1dHbXJWNS14aUNVX3NhUC1UTW9PZUVrR3lHOTNaeVo4VlBaSEVsZ25vR0J6d0R2YzZB?oc=5\" target=\"_blank\">Energy Technology Innovation Partnership Project</a>  <font color=\"#6f6f6f\">Department of Energy (.gov)</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 31,
-      "reasons": [
-        "Strong category relevance",
         "Enough context for original synthesis"
       ],
       "eligible": false,
@@ -5558,6 +5584,62 @@
       "researchSignalScore": 4
     },
     {
+      "title": "Information Session: Around the World with Disney Imagineering - The Ohio State University",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-16T16:58:21.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5\" target=\"_blank\">Information Session: Around the World with Disney Imagineering</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 5
+      },
+      "score": 30,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 5
+    },
+    {
+      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - The Ohio State University",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
+      "source": "Google News",
+      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
+      "publishedAt": "2026-09-14T20:52:15.000Z",
+      "category": "World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5\" target=\"_blank\">Klein awarded Fulbright U.S. Specialist award to Brazil</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
+      "signalType": "news",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "Google News"
+        ],
+        "signalTypes": [
+          "news"
+        ],
+        "corroboratingCandidates": 3
+      },
+      "score": 30,
+      "reasons": [
+        "Enough context for original synthesis"
+      ],
+      "eligible": false,
+      "researchSignalScore": 5
+    },
+    {
       "title": "Elon Musk’s latest Boring Company pitch involves a Hyperloop between Austin and San Antonio",
       "link": "https://techcrunch.com/2026/09/20/elon-musks-latest-boring-company-pitch-involves-a-hyperloop-between-austin-and-san-antonio/",
       "source": "TechCrunch",
@@ -5565,34 +5647,6 @@
       "publishedAt": "2026-09-20T19:38:48.000Z",
       "category": "AI",
       "description": "Many of The Boring Company's announced projects have not materialized.",
-      "signalType": "publisher",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "TechCrunch"
-        ],
-        "signalTypes": [
-          "publisher"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 30,
-      "reasons": [
-        "Fresh topic"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Vocci&#8217;s ring adds a new form factor to meeting note-taking",
-      "link": "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/",
-      "source": "TechCrunch",
-      "sourceUrl": "https://techcrunch.com/feed/",
-      "publishedAt": "2026-09-20T18:32:52.000Z",
-      "category": "AI",
-      "description": "Vocci's lightweight ring costs $249, and might pose some privacy questions.",
       "signalType": "publisher",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5900,13 +5954,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "100K-winning invention could help better understand N.B. bridge integrity - CBC",
+      "title": "100K-winning invention could help better understand N.B. bridge integrity - cbc.ca",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=innovation%20OR%20breakthrough%20technology%20OR%20new%20invention&hl=en-US&gl=US&ceid=US:en",
       "publishedAt": "2026-03-29T07:00:00.000Z",
       "category": "Innovation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5\" target=\"_blank\">100K-winning invention could help better understand N.B. bridge integrity</a>  <font color=\"#6f6f6f\">CBC</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNNDI2b1ZpcVlLNVEyUnFBeU4wUWlVTTY5VU8zZmVUcmNVdmxwN1JvcHpMWWJyTWJTd1U0MnVqS0tMN3dHeHk3STRqalNzU1J3QmZRZGhmeE44bm1ueUJoaGVIOUJuVnY3UnpZVFVmV1VuTWtnQThfZEZGXzBYZENVanl4emp1blMtLWNDdGVsNUM1bGNm?oc=5\" target=\"_blank\">100K-winning invention could help better understand N.B. bridge integrity</a>  <font color=\"#6f6f6f\">cbc.ca</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5958,13 +6012,13 @@
       "researchSignalScore": 0
     },
     {
-      "title": "Information Session: Around the World with Disney Imagineering - oia.osu.edu",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5",
+      "title": "Autumn 2026 International Student Experience Workshop Series - The Ohio State University",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-16T16:58:21.000Z",
+      "publishedAt": "2026-09-04T07:00:00.000Z",
       "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWtTUFJaekdFMWs4Mm0yWnZaVm11LWFDQnhkYkZ1ZnNjWndOa244bUNyQmZuQjRZeTIxb2pNamZqRi1RM2NnMHlyQWhPdFhFUmhMU1dTZ0h6d1k1VUs2RFppNjJaeWctWE44U3BNZmNnSWZJc2xNaWZSYWZ5QTExTGVYTENEWmVn?oc=5\" target=\"_blank\">Information Session: Around the World with Disney Imagineering</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5\" target=\"_blank\">Autumn 2026 International Student Experience Workshop Series</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -5976,23 +6030,23 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 0
+        "corroboratingCandidates": 4
       },
       "score": 25,
       "reasons": [
         "Enough context for original synthesis"
       ],
       "eligible": false,
-      "researchSignalScore": 0
+      "researchSignalScore": 5
     },
     {
-      "title": "Klein awarded Fulbright U.S. Specialist award to Brazil - oia.osu.edu",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5",
+      "title": "Your America in 250 Words: Seyhmus Tunc - The Ohio State University",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
       "source": "Google News",
       "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-14T20:52:15.000Z",
+      "publishedAt": "2026-09-09T18:38:16.000Z",
       "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNWjJRZVhwN2RMX0QzUzloLTdqSlB6M3pVemhXQ2stQmVWNGh0akpBTkhLWV9NQk1BN1B6azFNQ183NEJwTEI1SVpza3lrazNGeUY5aF9oSElfZWdtSTVCMkRQR0c0UnA4WEN1a3QtaU1OWW5ULUNNVmhzMjJKSXVHeTNUNEx3clF2ZTdiTnZmQQ?oc=5\" target=\"_blank\">Klein awarded Fulbright U.S. Specialist award to Brazil</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5\" target=\"_blank\">Your America in 250 Words: Seyhmus Tunc</a>  <font color=\"#6f6f6f\">The Ohio State University</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
@@ -6004,14 +6058,14 @@
         "signalTypes": [
           "news"
         ],
-        "corroboratingCandidates": 0
+        "corroboratingCandidates": 3
       },
       "score": 25,
       "reasons": [
         "Enough context for original synthesis"
       ],
       "eligible": false,
-      "researchSignalScore": 0
+      "researchSignalScore": 5
     },
     {
       "title": "FCC lets Paramount sell 49.5% equity stake to Saudi Arabia, UAE, and Qatar",
@@ -6406,6 +6460,32 @@
       "researchSignalScore": 2
     },
     {
+      "title": "Vocci&#8217;s ring adds a new form factor to meeting note-taking",
+      "link": "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/",
+      "source": "TechCrunch",
+      "sourceUrl": "https://techcrunch.com/feed/",
+      "publishedAt": "2026-09-20T18:32:52.000Z",
+      "category": "AI",
+      "description": "Vocci's lightweight ring costs $249, and might pose some privacy questions.",
+      "signalType": "publisher",
+      "discoveryOnly": false,
+      "researchSignals": {
+        "networkCount": 1,
+        "signalTypeCount": 1,
+        "networks": [
+          "TechCrunch"
+        ],
+        "signalTypes": [
+          "publisher"
+        ],
+        "corroboratingCandidates": 0
+      },
+      "score": 22,
+      "reasons": [],
+      "eligible": false,
+      "researchSignalScore": 0
+    },
+    {
       "title": "Flock reportedly tries to shrink workforce with employee buyouts",
       "link": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
       "source": "TechCrunch",
@@ -6575,90 +6655,6 @@
       "publishedAt": "2026-09-08T07:00:00.000Z",
       "category": "Product Launches",
       "description": "<a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVGdrMUpNdE5PVXdkMFQtaXBlRUxHbzd5aE04T3JIYk4tcUQ5Vi1Fc0sybFZJUDFSVzFrNDJQbnowalR3LXprM0xWSWt6OXUxamlmS0tEVllSdXZUMU1lRW1BUE85U0xkOEd2NkwtQ1lkRHlwS0IwdDRlbWN5NzJMYUpuaXhxZ2V4V2RjendTRTVySTgtTHJMNm1OOWNkcURNdEVKQ3YxYnNNOXZWeE54dF9TdmdVLTN5Nl9QZmpKSGtHbGZkT29SeC1pVHo5WjdkXy01MVpqTnlwa1pJUFd3b09Na3pUVlYyZWhHTlpHUFNQeUliOGVxUg?oc=5\" target=\"_blank\">IonQ Debuts Superion 256 Quantum Computing Platform</a>  <font color=\"#6f6f6f\">IonQ</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 20,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Autumn 2026 International Student Experience Workshop Series - oia.osu.edu",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-04T07:00:00.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5\" target=\"_blank\">Autumn 2026 International Student Experience Workshop Series</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 20,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Your America in 250 Words: Seyhmus Tunc - oia.osu.edu",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-09T18:38:16.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBvdWk2djNESjh5RTByV3NRdnltak9BVFk3V2hseTVadFdMb05JUEtWV3BZUUk1YzhwMjdvbTNyWHZoN3RBYmRPWUZqYzMxOWxTN3BxNU5oWlY4Ym16aEFMY0VLbzNCbndlZlVHZ2lkRTdycEFCQkYtellRdw?oc=5\" target=\"_blank\">Your America in 250 Words: Seyhmus Tunc</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
-      "signalType": "news",
-      "discoveryOnly": false,
-      "researchSignals": {
-        "networkCount": 1,
-        "signalTypeCount": 1,
-        "networks": [
-          "Google News"
-        ],
-        "signalTypes": [
-          "news"
-        ],
-        "corroboratingCandidates": 0
-      },
-      "score": 20,
-      "reasons": [
-        "Enough context for original synthesis"
-      ],
-      "eligible": false,
-      "researchSignalScore": 0
-    },
-    {
-      "title": "Imagineering a creative learning experience - oia.osu.edu",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5",
-      "source": "Google News",
-      "sourceUrl": "https://news.google.com/rss/search?q=geopolitics%20OR%20international%20affairs%20OR%20government%20OR%20diplomacy%20OR%20NATO&hl=en-US&gl=US&ceid=US:en",
-      "publishedAt": "2026-09-03T07:00:00.000Z",
-      "category": "World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPZDFiUzI1djZHalNpX08ycW5SdVNtcElqUDJNREt2NDRaWml5WlF1ZmxUOHdPQU5XWFNsaHFEcGJleUlwUHdkeUo4b01EUXg0SjJPOFNOd1FRb2Q0NFRKVjZsbVNwN3RYV19EeHd3bUxsY0NMSkUxRGJDbFJVanBMaExVWQ?oc=5\" target=\"_blank\">Imagineering a creative learning experience</a>  <font color=\"#6f6f6f\">oia.osu.edu</font>",
       "signalType": "news",
       "discoveryOnly": false,
       "researchSignals": {
