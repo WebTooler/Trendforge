@@ -18,8 +18,10 @@ export function loadCanonicalRepairEvidence({briefTitle, failedClaims, path='dat
     if(!source) throw new Error(`Failed claim ${index+1} references non-canonical evidence URL: ${url}`);
     const passage=String(claim?.bestPassage||claim?.evidence||'').trim();
     const canonicalPassages=Array.isArray(source.passages)?source.passages:[];
-    if(!passage||!canonicalPassages.some(p=>p===passage)) throw new Error(`Failed claim ${index+1} uses evidence outside the canonical passage set.`);
-    return {...claim,bestUrl:source.url,bestSource:source.title||source.domain||source.url,bestPassage:passage};
+    const normalizeEvidence=value=>String(value||'').replace(/\\s+/g,' ').trim();
+    const canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizeEvidence(passage));
+    if(!passage||!canonicalMatch) throw new Error(`Failed claim ${index+1} uses evidence outside the canonical passage set.`);
+    return {...claim,bestUrl:source.url,bestSource:source.title||source.domain||source.url,bestPassage:canonicalMatch};
   });
   return {pack,claims:canonicalClaims,sources:[...byUrl.values()]};
 }
