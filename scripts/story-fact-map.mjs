@@ -21,7 +21,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     const descRel=overlap(claim.text,candidate.description||'');
     const specificity=Number(claim.relevanceScore||0)+Math.min(4,Number(claim.entityShared||0)*2)+Math.min(3,Number(claim.numbers?.length||0));
     const core=(role==='PRIMARY'||role==='DIRECT_REPORTING')
-      ? (titleRel.count>=1||descRel.count>=2||Number(claim.relevanceScore||0)>=6)
+      ? (titleRel.count>=1||descRel.count>=1||Number(claim.relevanceScore||0)>=6)
       : (role==='CORROBORATION'&&(titleRel.count>=2||Number(claim.relevanceScore||0)>=8));
     return {
       factId:'F'+(index+1),
@@ -76,7 +76,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     coreFacts:finalCoreFacts,
     contextFacts,
     gaps,
-    capacity:{level,coreFactCount:coreFacts.length,coreFactChars:coreChars,directCoreFactCount:directCoreFacts.length,coreSourceCount:coreSourceIds.length,maxFactualClaims:claimCapacity,maxSupportedWords:Math.max(0,Math.min(900,wordCapacity))},
+    capacity:{level,coreFactCount:finalCoreFacts.length,coreFactChars:coreChars,directCoreFactCount:directCoreFacts.length,coreSourceCount:coreSourceIds.length,maxFactualClaims:claimCapacity,maxSupportedWords:Math.max(0,Math.min(900,wordCapacity))},
     policy:{coreFactsOnlyForCoreNarrative:true,contextCannotCompensateForCore:true,sourceRoleRequired:true,claimToFactMappingRequired:true}
   };
 }
