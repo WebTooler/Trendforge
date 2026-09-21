@@ -18,7 +18,11 @@ export function deriveEvidenceArticleBlueprint(coverage={}) {
     return {version:2,mode:'bounded',targetWords:{min:425,max:750,soft:600},h2Guidance:{preferredMin:2,preferredMax:maxH2,writerDecides:true,noPadding:true},maxH2,requireCrossCheck:sourceCount>=2,allowContextSection:false,sectionPlan:['development','evidence/details','implications or limitations'],evidenceCapacity,instructions:['Keep scope bounded by the supplied evidence.','Prefer distinct sections with concrete evidence over generic context.','Do not create a context section unless the evidence supports it.']};
   }
   if (band==='thin') {
-    return {version:2,mode:'narrow',targetWords:{min:300,max:450,soft:375},h2Guidance:{preferredMin:1,preferredMax:2,writerDecides:true,noPadding:true},maxH2:2,requireCrossCheck:false,allowContextSection:false,sectionPlan:['development','supported detail'],evidenceCapacity,instructions:['Stay narrow and factual.','Use only the strongest supported details.','Do not infer missing context.']};
+    const evidenceWords=Math.floor(chars/4.5);
+    const claimCapacity=Number(coverage.supportedClaimCount||0);
+    const minimumWords=Math.max(220,Math.min(300,evidenceWords));
+    const maximumWords=Math.max(minimumWords,Math.min(420,evidenceWords+80));
+    return {version:2,mode:'narrow',targetWords:{min:minimumWords,max:maximumWords,soft:Math.round((minimumWords+maximumWords)/2)},h2Guidance:{preferredMin:1,preferredMax:2,writerDecides:true,noPadding:true},maxH2:2,requireCrossCheck:false,allowContextSection:false,sectionPlan:['development','supported detail'],evidenceCapacity,instructions:['Stay narrow and factual.','Use only the strongest supported details.','Do not infer missing context.','Do not exceed the supported factual claim budget.'],claimBudget:{maxFactualClaims:Math.max(3,claimCapacity)}};
   }
   return {version:2,mode:'blocked',targetWords:{min:0,max:0,soft:0},h2Guidance:{preferredMin:0,preferredMax:0,writerDecides:false,noPadding:true},maxH2:0,requireCrossCheck:false,allowContextSection:false,sectionPlan:[],evidenceCapacity,instructions:['Do not generate a publishable article. Evidence is insufficient; obtain more evidence first.']};
 }
