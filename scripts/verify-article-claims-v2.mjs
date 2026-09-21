@@ -52,14 +52,21 @@ function loadCanonicalEvidenceForBrief(briefTitle){
 }
 
 function currentGeneratedArticleMatchState(){
-  if(!fs.existsSync(articleDir)||!fs.existsSync(briefPath)) return 'none';
-  const files=fs.readdirSync(articleDir).filter(f=>f.endsWith('.md')).sort((a,b)=>fs.statSync(articleDir+'/'+b).mtimeMs-fs.statSync(articleDir+'/'+a).mtimeMs);
-  if(!files.length) return 'none';
+  const manifestPath='data/current-run-article.json';
+  if(!fs.existsSync(manifestPath)) return 'none';
+  let manifest=null;
+  try{manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));}catch{return 'invalid';}
+  if(manifest?.generated!==true) return 'none';
+  const runId=String(process.env.GITHUB_RUN_ID||'local');
+  if(String(manifest.runId||'')!==runId) return 'invalid';
+  const articlePath=String(manifest.articlePath||'');
+  if(!articlePath||!articlePath.startsWith(articleDir+'/')||!fs.existsSync(articlePath)) return 'invalid';
+  if(!fs.existsSync(briefPath)) return 'invalid';
   let brief=null;
   try{brief=JSON.parse(fs.readFileSync(briefPath,'utf8'));}catch{return 'invalid';}
   const briefTitle=String(brief?.brief?.title||'');
   if(!briefTitle) return 'invalid';
-  const raw=fs.readFileSync(articleDir+'/'+files[0],'utf8');
+  const raw=fs.readFileSync(articlePath,'utf8');
   const articleTitle=(raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
   if(!articleTitle) return 'invalid';
   const shared=[...tokens(articleTitle)].filter(x=>tokens(briefTitle).has(x));
