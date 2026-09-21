@@ -9,7 +9,7 @@ export function assessArticleDepth({content='',blueprint=null}={}){
   const sectionBodies=sections(content);
   const sectionWords=sectionBodies.map(wordCount);
   const mode=String(blueprint?.mode||'default');
-  const rules={rich:{minWords:650,minH2:0,minSectionWords:70,minSubstantiveParagraphs:5,minSentences:12},bounded:{minWords:425,minH2:0,minSectionWords:60,minSubstantiveParagraphs:4,minSentences:10},narrow:{minWords:300,minH2:0,minSectionWords:0,minSubstantiveParagraphs:0,minSentences:0},default:{minWords:300,minH2:0,minSectionWords:0,minSubstantiveParagraphs:0,minSentences:0}}[mode]||{minWords:300,minH2:0,minSectionWords:50,minSubstantiveParagraphs:3,minSentences:8};
+  const rules={rich:{minWords:650,minH2:0,minSectionWords:70,minSubstantiveParagraphs:5,minSentences:12},bounded:{minWords:425,minH2:0,minSectionWords:60,minSubstantiveParagraphs:4,minSentences:10},narrow:{minWords:300,minH2:0,minSectionWords:0,minSubstantiveParagraphs:3,minSentences:0},default:{minWords:300,minH2:0,minSectionWords:0,minSubstantiveParagraphs:0,minSentences:0}}[mode]||{minWords:300,minH2:0,minSectionWords:50,minSubstantiveParagraphs:3,minSentences:8};
   const thinSections=sectionWords.filter(n=>n<rules.minSectionWords).length;
   const substantiveParagraphs=paragraphCount(content);
   const sentences=sentenceCount(content);
