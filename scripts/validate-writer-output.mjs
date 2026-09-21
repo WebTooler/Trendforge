@@ -14,6 +14,8 @@ const parseFrontmatter=(raw)=>{
 };
 
 const proseOnly=(body='')=>body.replace(/\n##\s+Sources[\s\S]*$/i,'').trim();
+let canonicalBlueprint=null;
+try{canonicalBlueprint=JSON.parse(fs.readFileSync('data/article-brief.json','utf8'))?.blueprint||null;}catch{}
 
 let status='';
 try{status=execFileSync('git',['status','--short','content/articles'],{encoding:'utf8'});}catch(error){console.error(`Writer output gate could not inspect git status: ${error.message}`);process.exit(1);}
@@ -28,7 +30,7 @@ for(const file of files){
   const description=meta.description||'';
   const category=meta.category||'Technology';
   const content=proseOnly(body);
-  const report=validateDraft({title,description,content,category});
+  const report=validateDraft({title,description,content,category,blueprint:canonicalBlueprint});
   console.log(`Writer output gate: ${file} — ${report.passed?'PASS':'BLOCK'} — ${report.metrics.words} prose words, ${report.metrics.h2} prose H2, ${report.metrics.fillerHits} filler hits.`);
   if(!report.passed){failed=true;console.error(`Writer output gate reasons: ${report.errors.join('; ')}`);}
 }
