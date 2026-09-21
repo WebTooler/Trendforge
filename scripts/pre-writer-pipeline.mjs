@@ -199,17 +199,19 @@ for(const record of candidates){
     const blockedCoverage=scoreEvidenceCoverage({sources});
     const lineageSources=annotateLineage(sources,blockedCoverage);
     const blockedBlueprint=deriveEvidenceArticleBlueprint(blockedCoverage);
-    authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage:blockedCoverage,blueprint:blockedBlueprint,evidenceBrief}));
+    const blockedFactMap=evidenceBrief.storyFactMap||buildStoryFactMap({candidate:record,sources:lineageSources,evidenceBrief});
+    const blockedEvidenceBrief={...evidenceBrief,storyFactMap:blockedFactMap};
+    authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage:blockedCoverage,blueprint:blockedBlueprint,evidenceBrief:blockedEvidenceBrief}));
     results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage),editorialEvidenceBrief:evidenceBrief},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
     continue;
   }
   const coverage=scoreEvidenceCoverage({sources,evidenceBrief});
   const lineageSources=annotateLineage(sources,coverage);
   const blueprint=deriveEvidenceArticleBlueprint({...coverage,evidenceBrief});
-  authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage,blueprint,evidenceBrief}));
-
   const hasValidatedSource=preflight?.status==='pass';
   const factMap=evidenceBrief.storyFactMap||buildStoryFactMap({candidate:record,sources:lineageSources,evidenceBrief});
+  const canonicalEvidenceBrief={...evidenceBrief,storyFactMap:factMap};
+  authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage,blueprint,evidenceBrief:canonicalEvidenceBrief}));
   const coreFactCount=Number(factMap.capacity?.coreFactCount||0);
   const coreFactChars=Number(factMap.capacity?.coreFactChars||0);
   const directCoreFactCount=Number(factMap.capacity?.directCoreFactCount||0);
@@ -221,9 +223,9 @@ for(const record of candidates){
   const evidenceBriefReady=evidenceBrief.storyCapacity!=='none' && evidenceBrief.metrics.relevantPassageCount>=3 && evidenceBrief.metrics.supportedClaimCount>=Math.max(3,requiredCoreFacts) && coreCapacityReady;
   const singleSourceEligible=coreSourceCount===1 && coreCapacityReady && blueprint.mode!=='blocked';
   const multiSourceEligible=coreSourceCount>=2 && coreCapacityReady && blueprint.mode!=='blocked';
-  const readyForWriter=hasValidatedSource && evidenceBriefReady && (multiSourceEligible || singleSourceEligible);
+  const readyForWriter=hasValidatedSource && Boolean(factMap?.version===1&&factMap?.capacity&&Array.isArray(factMap.coreFacts)) && evidenceBriefReady && (multiSourceEligible || singleSourceEligible);
 
-  const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint,editorialEvidenceBrief:evidenceBrief,storyFactMap:factMap},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':!coreCapacityReady?'core-story-fact-capacity-insufficient':!evidenceBriefReady?'editorial-evidence-brief-insufficient':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
+  const resultRow={title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage,blueprint,editorialEvidenceBrief:canonicalEvidenceBrief,storyFactMap:factMap},readyForWriter,writerGateReason:readyForWriter?'PASS':(!hasValidatedSource?'integrity-preflight-failed':!coreCapacityReady?'core-story-fact-capacity-insufficient':!evidenceBriefReady?'editorial-evidence-brief-insufficient':blueprint.mode==='blocked'?'insufficient-evidence':'evidence-capacity-not-ready')};
   const queueDuplicate=queueAccepted.map(x=>duplicateWithinQueue(resultRow,x)).find(x=>x.duplicate);
   if(queueDuplicate){duplicateQueueBlocked++;resultRow.readyForWriter=false;resultRow.writerGateReason=queueDuplicate.reason;resultRow.duplicateStory=queueDuplicate;}
   else if(resultRow.readyForWriter)queueAccepted.push(resultRow);
