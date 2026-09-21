@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T18:55:32.552Z",
+  "generatedAt": "2026-09-21T19:57:56.311Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2206,
-      "sentenceCount": 15,
+      "normalizedLength": 2489,
+      "sentenceCount": 16,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,12 +31,13 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "techcrunch.com"
+    "finance.yahoo.com",
+    "247wallst.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 1,
-    "usablePassages": 24,
+    "sourceCount": 2,
+    "usablePassages": 27,
     "primarySourceCount": 0
   }
 }
