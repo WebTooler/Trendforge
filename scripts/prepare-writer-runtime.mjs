@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const path='scripts/trendforge-writer-engine.mjs';
 const text=fs.readFileSync(path,'utf8');
 const required=[
-  "const MAX_PROVIDER_ATTEMPTS_PER_RUN=6;",
+  "const MAX_PROVIDER_ATTEMPTS_PER_RUN=12;",
   "const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=2;",
   "const MAX_REPAIR_PROVIDER_ATTEMPTS=4;",
   "generateWithTrendForgeRepair"
