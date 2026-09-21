@@ -1,6 +1,6 @@
 const STOP=new Set('about after again also been being could from have into more most over said some than that their there these they this what when which with will would your technology tech digital latest news article articles story stories report reports reported according development developments company companies industry stock stocks shares market markets price prices product products service services system systems model models models model technology tech ai intelligence digital data today yesterday tomorrow while where whose through before between under using used uses make makes made less then still already now just even only often usually including another around really very much many somewhat generally'.split(' '));
 const FACTUAL=/\b(?:announced|launch(?:ed|es)?|released|reported|said|found|study|research|survey|percent|million|billion|approved|blocked|investigation|according|official|ceo|company|companies|product|model|models|agent|agents|incident|policy|regulator|funding|investment|acquisition|partnership|shares|stock|price|revenue|profit|loss|deal|agreement|vote|election|court|lawsuit|security|breach|hack(?:ed|ing)?|update|introduced|unveiled|confirmed|denied|allowed|banned|cut|raised|fell|rose|increased|decreased)\b/i;
-const JUNK=/^(?:advertisement|advertising|sponsored|promoted|partner content|follow us|read more|related|most popular|trending|watch now|listen now|subscribe|sign up|newsletter|when you purchase|last day to book|buy tickets|tickets? now|save up to|click here|learn more|shop now|download now)\b/i;
+const JUNK=/^(?:advertisement|advertising|sponsored|promoted|partner content|follow us|read more|related|most popular|trending|watch now|listen now|subscribe|sign up|newsletter|when you purchase|last day to book|buy tickets|tickets? now|save up to|click here|learn more|shop now|download now)\b/i;\nconst BOILERPLATE=/^(?:task force report by .+?\s*[•·]\s*\w+\s+\d{1,2},\s*\d{4}|\w+\s+\d{1,2}-\d{1,2},\s*\d{4}\s*\|.*|we are the premier hub and policy institution|premier hub and policy institution|critical minerals energy policy innovation|technology innovation|.*get the latest news and research on .*|.*scholars reflect on some of the standout issues.*)$/i;
 const normalizeWord=w=>{w=String(w).toLowerCase();if(w.length>6&&w.endsWith('ies'))return w.slice(0,-3)+'y';if(w.length>6&&w.endsWith('ing'))return w.slice(0,-3);if(w.length>5&&w.endsWith('ed'))return w.slice(0,-2);if(w.length>5&&w.endsWith('s'))return w.slice(0,-1);return w;};
 const tokens=t=>new Set(String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).map(normalizeWord).filter(w=>w.length>=4&&!STOP.has(w)));
 const sentenceSplit=t=>String(t).replace(/\s+/g,' ').trim().split(/(?<=[.!?])\s+(?=[A-Z0-9"“$])/).map(x=>x.trim()).filter(x=>x.length>=45&&x.length<=900);
@@ -18,7 +18,7 @@ function relevanceScore(text,story){
   const fact=FACTUAL.test(text)?1:0; const quote=/["“][^"”]{12,}["”]/.test(text)?1:0;
   return {score:o.count*2+Math.min(6,entityShared*3)+Math.min(2,num.size)+Math.min(4,numericMatch*2)+Math.min(4,anchor*2)+fact+quote,topicOverlap:o.count,entityShared,numbers:num.size,numericMatch,anchor};
 }
-function isNoise(text){const x=String(text).replace(/\s+/g,' ').trim();if(x.length<45||x.length>3000)return true;if(JUNK.test(x))return true;if(/https?:\/\//i.test(x))return true;if((x.match(/\b(?:tickets?|subscribe|newsletter|advertisement|sponsored|coupon|discount)\b/gi)||[]).length>=2)return true;return false;}
+function isNoise(text){const x=String(text).replace(/\s+/g,' ').trim();if(x.length<45||x.length>3000)return true;if(JUNK.test(x)||BOILERPLATE.test(x))return true;if(/https?:\/\//i.test(x))return true;if((x.match(/\b(?:tickets?|subscribe|newsletter|advertisement|sponsored|coupon|discount)\b/gi)||[]).length>=2)return true;return false;}
 
 export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
   const story={title:String(candidate.title||''),description:String(candidate.description||'')};
@@ -76,7 +76,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
   const independentSourceCount=normalizedSources.length;
   const publisherFamilies=[...new Set(normalizedSources.map(s=>s.publisherFamily).filter(Boolean))];
   const density=rawPassageCount?Number((relevantPassageCount/rawPassageCount).toFixed(3)):0;
-  const evidenceCapacity=uniqueClaims.length>=18&&relevantChars>=7000&&publisherFamilies.length>=2?'high':uniqueClaims.length>=9&&relevantChars>=3500?'medium':uniqueClaims.length>=3&&relevantChars>=1200?'low':'none';
+  const evidenceCapacity=uniqueClaims.length>=18&&relevantChars>=7000&&substantiveSourceCount>=2?'high':uniqueClaims.length>=9&&relevantChars>=3500&&substantiveSourceCount>=2?'medium':uniqueClaims.length>=3&&relevantChars>=1200&&substantiveSourceCount>=1?'low':'none';
   const contradictions=[];
   for(let i=0;i<uniqueClaims.length;i++)for(let j=i+1;j<uniqueClaims.length;j++)if(uniqueClaims[i].sourceId!==uniqueClaims[j].sourceId&&contradiction(uniqueClaims[i].text,uniqueClaims[j].text))contradictions.push({claims:[uniqueClaims[i].id,uniqueClaims[j].id],texts:[uniqueClaims[i].text,uniqueClaims[j].text]});
   const uncertainty=[];
@@ -97,7 +97,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
     uncertainty,
     unknowns,
     contradictions,
-    metrics:{rawPassageCount,relevantPassageCount,supportedClaimCount:Math.min(48,uniqueClaims.length),independentSourceCount,publisherFamilyCount:publisherFamilies.length,relevantEvidenceDensity:density,rawChars,relevantChars,evidenceCapacity},
+    metrics:{rawPassageCount,relevantPassageCount,supportedClaimCount:Math.min(48,uniqueClaims.length),independentSourceCount,publisherFamilyCount:publisherFamilies.length,substantiveSourceCount,sourceEvidenceMetrics,relevantEvidenceDensity:density,rawChars,relevantChars,evidenceCapacity},
     sources:normalizedSources
   };
 }
