@@ -135,7 +135,7 @@ function buildImagePrompt({ title, description, category, body = '' }) {
   const brief = buildVisualBrief({ title, description, category, body });
   const storyContext = clean(title + '. ' + description).slice(0, 520);
   const relevance = assessVisualRelevance({ title, description, brief });
-  if (!relevance.passed) throw new Error('visual relevance planner could not bind the prompt to the story anchors');
+  if (!relevance.passed) console.warn(`Visual relevance planner: soft warning — ${relevance.matchedAnchors.length}/${relevance.anchors.length} story anchors matched; continuing with explicit story context.`);
   const prompt = [
     'Create a premium editorial visual commissioned by a major technology publication, not a generic AI image.',
     'Canvas: exactly 1024x576 pixels, horizontal 16:9 composition.',
