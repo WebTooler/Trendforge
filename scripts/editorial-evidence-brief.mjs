@@ -20,7 +20,7 @@ function relevanceScore(text,story){
   const fact=FACTUAL.test(text)?1:0; const quote=/["“][^"”]{12,}["”]/.test(text)?1:0;
   return {score:o.count*2+Math.min(6,entityShared*3)+Math.min(2,num.size)+Math.min(4,numericMatch*2)+Math.min(4,anchor*2)+fact+quote,topicOverlap:o.count,entityShared,numbers:num.size,numericMatch,anchor};
 }
-function isNoise(text){const x=String(text).replace(/\s+/g,' ').trim();if(x.length<45||x.length>3000)return true;if(JUNK.test(x)||BOILERPLATE.test(x))return true;if(/https?:\/\//i.test(x))return true;if((x.match(/\b(?:tickets?|subscribe|newsletter|advertisement|sponsored|coupon|discount)\b/gi)||[]).length>=2)return true;return false;}
+const RELATED_HEADLINE=/\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2}$/;\nfunction isNoise(text){const x=String(text).replace(/\s+/g,' ').trim();if(x.length<45||x.length>3000)return true;if(JUNK.test(x)||BOILERPLATE.test(x))return true;if(/https?:\/\//i.test(x))return true;if((x.match(/\b(?:tickets?|subscribe|newsletter|advertisement|sponsored|coupon|discount)\b/gi)||[]).length>=2)return true;const looksLikeRelatedHeadline=!/[.!?\u201d\u2019\"]$/.test(x)&&RELATED_HEADLINE.test(x)&&x.split(/\s+/).length>=9;if(looksLikeRelatedHeadline)return true;return false;}
 
 export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
   const story={title:String(candidate.title||''),description:String(candidate.description||'')};
