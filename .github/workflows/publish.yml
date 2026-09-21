@@ -53,6 +53,8 @@ jobs:
         run: node scripts/test-editorial-evidence-brief.mjs
       - name: Adaptive writer architecture fixtures
         run: node scripts/test-writer-architecture.mjs
+      - name: Story Fact Map V1 fixtures
+        run: node scripts/test-story-fact-map.mjs
       - name: Evidence V3 pre-writer gate
         run: node scripts/pre-writer-pipeline.mjs
       - name: AI provider state check
