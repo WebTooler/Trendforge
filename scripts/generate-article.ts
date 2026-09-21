@@ -107,20 +107,23 @@ async function main(){
   const minimumPassages=strongEvidence?6:3;
   console.log(`Grounding preflight: ${sources.length} verified publisher URL(s) fetched; ${sourceWithEvidence} source(s) yielded evidence across ${evidenceDomains.length} domain(s).`);
   if(evidencePack.length<1||sourceWithEvidence<1||evidenceDomains.length<1||usablePassages<minimumPassages){console.log(`Grounding evidence pack incomplete: ${evidencePack.length} source(s), ${usablePassages} usable evidence passages, ${evidenceDomains.length} independent evidence domain(s); publication blocked before AI generation.`);process.exit(0);}
-  const evidenceBriefText=editorialEvidenceBrief?JSON.stringify({version:editorialEvidenceBrief.version,storyCapacity:editorialEvidenceBrief.storyCapacity,storyFactMap:editorialEvidenceBrief.storyFactMap,uncertainty:editorialEvidenceBrief.uncertainty,unknowns:editorialEvidenceBrief.unknowns,contradictions:editorialEvidenceBrief.contradictions},null,2):'';
-  // Bound the writer request to provider TPM limits. The Fact Map identifies the
-  // factual atoms; send only passages that can support those atoms, with hard caps.
+  // Provider-safe writer context: the Fact Map is loaded again by the writer engine,
+  // so do not duplicate the full Editorial Evidence Brief here. Only send passages
+  // directly referenced by core facts, with a hard total character budget.
   const coreFacts=Array.isArray(storyFactMap?.coreFacts)?storyFactMap.coreFacts:[];
   const sourceIdFor=(s:any)=>s.publisherFamily||domainOf(s.url)||s.url;
   const corePassageRefs=new Map<string,Set<number>>();
   for(const fact of coreFacts){const id=String(fact.sourceId||'');if(!id)continue;if(!corePassageRefs.has(id))corePassageRefs.set(id,new Set());const idx=Number(fact.passageIndex);if(Number.isInteger(idx)&&idx>=0)corePassageRefs.get(id)!.add(idx);}
-  const evidenceText=evidencePack.map((s,i)=>{
+  const evidenceChunks=evidencePack.map((s,i)=>{
     const refs=corePassageRefs.get(String(sourceIdFor(s)))||new Set<number>();
     const selected=[...refs].sort((a,b)=>a-b).map(n=>s.passages[n]).filter(Boolean);
-    const fallback=s.passages.slice(0,2);
-    const passages=[...new Set((selected.length?selected:fallback).map(x=>String(x).trim()).filter(Boolean))].slice(0,4).map(x=>x.slice(0,1400));
-    return `SOURCE S${i+1}\nPublisher/article: ${s.title}\nURL: ${s.url}\nRole: ${s.sourceRole||sourceRole(s)}\nEvidence passages:\n${passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\\n')}`;
-  }).join('\\n\\n');
+    const fallback=s.passages.slice(0,1);
+    const passages=[...new Set((selected.length?selected:fallback).map(x=>String(x).trim()).filter(Boolean))].slice(0,2).map(x=>x.slice(0,900));
+    return `SOURCE S${i+1}\nPublisher/article: ${s.title}\nURL: ${s.url}\nRole: ${s.sourceRole||sourceRole(s)}\n${passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\\n')}`;
+  });
+  const MAX_WRITER_EVIDENCE_CHARS=9000;
+  let evidenceText='';
+  for(const chunk of evidenceChunks){const next=evidenceText?evidenceText+'\\n\\n'+chunk:chunk;if(next.length>MAX_WRITER_EVIDENCE_CHARS)break;evidenceText=next;}
   const primarySources=evidencePack.filter(s=>sourceRole(s)==='primary');
   evidencePack.sort((a,b)=>Number(sourceRole(b)==='primary')-Number(sourceRole(a)==='primary'));
   const evidenceInstruction=strongEvidence
