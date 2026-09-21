@@ -22,6 +22,8 @@ if(!verifierV2Source.includes("status:'skipped'")) throw new Error('Claim verifi
 if(!verifierV2Source.includes("function write(report){fs.writeFileSync(claimPath")) throw new Error('Claim verifier no-article path must define its report writer.');
 if(!verifierSmartSource.includes("const anchoredPassage=coreFactMatch&&Number.isInteger(coreFactMatch.passageIndex)&&")) throw new Error('Smart claim verifier must anchor matched core facts to their exact source passage.');
 if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
+if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-synthesis'")) throw new Error('Smart claim verifier must support explicit multi-fact synthesis provenance.');
+if(!verifierSmartSource.includes("synthesisRequiresTwoCoreFacts:true")) throw new Error('Smart claim verifier must require two or more core facts for synthesis.');
 if(!verifierV2Source.includes("scripts/verify-article-claims-smart.mjs")) throw new Error('Canonical claim verifier must invoke the smart verifier.');
 const generatorSource=fs.readFileSync(new URL('./generate-article.ts',import.meta.url),'utf8');
 if(!generatorSource.includes("pack.evidenceBrief??pack.editorialEvidenceBrief??null")) throw new Error('Article generator must consume the canonical pack.evidenceBrief Fact Map.');
