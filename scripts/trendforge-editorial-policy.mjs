@@ -51,7 +51,7 @@ const h2Count=(text='')=>(text.match(/^##\s+.+$/gm)||[]).length;
 const completeSentence=(s='')=>/[^.!?…]$/.test(s.trim())===false;
 const normalizedSentence=(s='')=>s.toLowerCase().replace(/[^a-z0-9\s]/g,'').replace(/\s+/g,' ').trim();
 const sentenceTokens=(s='')=>new Set(normalizedSentence(s).split(/\s+/).filter(w=>w.length>=4));
-const paragraphBlocks=(text='')=>text.split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean);
+const paragraphBlocks=(text='')=>String(text).replace(/^##\s+.+$/gm,'\n\n').split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean);
 const h2Sections=(text='')=>text.split(/^##\s+.+$/m).slice(1).map(s=>s.trim()).filter(Boolean);
 const sectionWordCount=(text='')=>wordCount(text);
 const sectionSentenceCount=(text='')=>sentenceCount(text);
