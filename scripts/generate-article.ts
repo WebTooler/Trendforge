@@ -82,7 +82,7 @@ async function main(){
     console.log('Authoritative Evidence Pack missing or invalid for selected candidate; publication blocked.');
     process.exit(0);
   }
-  const editorialEvidenceBrief=pack.editorialEvidenceBrief??null;
+  const editorialEvidenceBrief=pack.evidenceBrief??pack.editorialEvidenceBrief??null;
   const storyFactMap=editorialEvidenceBrief?.storyFactMap??null;
   if(!storyFactMap||storyFactMap.version!==1||!storyFactMap.capacity||!Array.isArray(storyFactMap.coreFacts)){
     console.log('Canonical Story Fact Map missing or invalid for selected candidate; publication blocked before AI generation.');
