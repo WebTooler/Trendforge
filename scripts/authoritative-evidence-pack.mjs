@@ -4,7 +4,7 @@ export function buildAuthoritativeEvidencePack({candidate={},sources=[],coverage
   const normalizedSources=sources.map((source,index)=>({
     id:`S${index+1}`,url:source.url||'',finalUrl:source.url||'',domain:source.domain||'',
     publisherFamily:source.publisherFamily||'',title:clean(source.title||candidate.title||''),
-    verified:source.verified!==false,primary:source.primary===true,
+    verified:source.verified!==false,primary:source.primary===true,sourceRole:source.sourceRole||'CONTEXT',
     credibilityTier:source.credibilityTier||'unknown',
     lineage:source.lineage||{id:`lineage-unknown-${index+1}`,type:'unknown',members:1},
     passages:Array.isArray(source.passages)?source.passages.map(clean).filter(Boolean):[],
@@ -25,6 +25,7 @@ export function validateAuthoritativeEvidencePack(pack){
     if(Number(b.metrics.relevantPassageCount||0)!==b.relevantPassages.length)return false;
     if(Number(b.metrics.supportedClaimCount||0)!==b.supportedClaims.length)return false;
     if(!b.storyFactMap||b.storyFactMap.version!==1||!Array.isArray(b.storyFactMap.coreFacts)||!b.storyFactMap.capacity)return false;
+    if(!Number.isFinite(Number(b.storyFactMap.capacity.maxFactualClaims)))return false;
   }
-  return pack.sources.every(source=>typeof source.id==='string'&&/^S\d+$/.test(source.id)&&typeof source.url==='string'&&source.url.length>0&&typeof source.publisherFamily==='string'&&Array.isArray(source.passages)&&source.passages.length>0&&source.lineage&&typeof source.lineage.id==='string');
+  return pack.sources.every(source=>typeof source.id==='string'&&/^S\d+$/.test(source.id)&&typeof source.url==='string'&&source.url.length>0&&typeof source.publisherFamily==='string'&&typeof source.sourceRole==='string'&&Array.isArray(source.passages)&&source.passages.length>0&&source.lineage&&typeof source.lineage.id==='string');
 }
