@@ -10,6 +10,8 @@ const currentRunArticlePath='data/current-run-article.json';
 
 fs.mkdirSync('data',{recursive:true});
 fs.writeFileSync(currentRunArticlePath,JSON.stringify({version:1,runId:process.env.GITHUB_RUN_ID||'local',generated:false,articlePath:null,briefTitle:null,updatedAt:new Date().toISOString()},null,2)+'\n');
+// Native-writer publication is run-scoped too; never inherit a stale marker from an older run.
+try{fs.rmSync(nativeMarker,{force:true});}catch{}
 if(!fs.existsSync(scoredPath)){console.log(`No ${scoredPath}; nothing to publish.`);process.exit(0);}
 
 const original=JSON.parse(fs.readFileSync(scoredPath,'utf8'));
