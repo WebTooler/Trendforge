@@ -19,7 +19,7 @@ if(!verifierV2Source.includes("String(manifest.runId||'')!==runId")) throw new E
 if(!verifierV2Source.includes("manifest.articlePath")) throw new Error('Claim verifier must verify the manifest article path.');
 if(!verifierV2Source.includes("status:'skipped'")) throw new Error('Claim verifier must record a safe no-article skip.');
 if(!verifierV2Source.includes("function write(report){fs.writeFileSync(claimPath")) throw new Error('Claim verifier no-article path must define its report writer.');
-if(!verifierV2Source.includes("const anchoredPassage=coreFactMatch&&Number.isInteger(coreFactMatch.passageIndex)")) throw new Error('Claim verifier must anchor matched core facts to their exact source passage.');
+if(!verifierV2Source.includes("const anchoredPassage=coreFactMatch&&Number.isInteger(coreFactMatch.passageIndex)&&")) throw new Error('Claim verifier must anchor matched core facts to their exact source passage.');
 if(!verifierV2Source.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Claim verifier must record fact-map anchored provenance.');
 const generatorSource=fs.readFileSync(new URL('./generate-article.ts',import.meta.url),'utf8');
 if(!generatorSource.includes("pack.evidenceBrief??pack.editorialEvidenceBrief??null")) throw new Error('Article generator must consume the canonical pack.evidenceBrief Fact Map.');
