@@ -76,6 +76,8 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
   const rawChars=sources.reduce((n,s)=>n+String(s.body||s.passages?.join(' ')||'').length,0);
   const independentSourceCount=normalizedSources.length;
   const publisherFamilies=[...new Set(normalizedSources.map(s=>s.publisherFamily).filter(Boolean))];
+  const sourceEvidenceMetrics=normalizedSources.map(s=>({sourceId:s.publisherFamily||s.domain||'unknown',relevantPassageCount:s.passages.length,relevantChars:s.body.length,substantive:s.passages.length>=2&&s.body.length>=500}));
+  const substantiveSourceCount=sourceEvidenceMetrics.filter(s=>s.substantive).length;
   const density=rawPassageCount?Number((relevantPassageCount/rawPassageCount).toFixed(3)):0;
   const evidenceCapacity=uniqueClaims.length>=18&&relevantChars>=7000&&substantiveSourceCount>=2?'high':uniqueClaims.length>=9&&relevantChars>=3500&&substantiveSourceCount>=2?'medium':uniqueClaims.length>=3&&relevantChars>=1200&&substantiveSourceCount>=1?'low':'none';
   const contradictions=[];
