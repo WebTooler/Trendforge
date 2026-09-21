@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-20T21:02:31.807Z",
+  "updatedAt": "2026-09-21T05:24:14.572Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,26 +12,26 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 20,
-    "topicCount": 265,
+    "runCount": 21,
+    "topicCount": 280,
     "articleCount": 20,
     "latestEditorialScore": 74,
     "latestClaimConfidence": 82,
-    "latestEvidencePassRate": 24,
+    "latestEvidencePassRate": 26,
     "latestEvidenceBlockRate": 8,
-    "singleSourceReadyRate": 33,
+    "singleSourceReadyRate": 34,
     "publishCandidateRate": 0
   },
   "changes": {
     "editorialScore": 0,
     "claimConfidence": 0,
-    "evidencePassRate": -4
+    "evidencePassRate": 2
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 140,
+      "failures": 147,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -45,9 +45,9 @@
       "latestClass": "rate_limit"
     },
     "Cohere": {
-      "successRate": 15,
-      "successes": 135,
-      "failures": 744,
+      "successRate": 16,
+      "successes": 147,
+      "failures": 798,
       "cooldownRuns": 0,
       "latestStatus": 200,
       "latestClass": "transient"
@@ -55,15 +55,15 @@
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 383,
+      "failures": 416,
       "cooldownRuns": 3,
       "latestStatus": 503,
       "latestClass": "server"
     },
     "Groq": {
-      "successRate": 30,
-      "successes": 347,
-      "failures": 799,
+      "successRate": 31,
+      "successes": 383,
+      "failures": 845,
       "cooldownRuns": 2,
       "latestStatus": 429,
       "latestClass": "rate_limit"
@@ -71,15 +71,15 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 60,
+      "failures": 63,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
       "successRate": 5,
-      "successes": 29,
-      "failures": 541,
+      "successes": 31,
+      "failures": 585,
       "cooldownRuns": 0,
       "latestStatus": 200,
       "latestClass": "transient"
@@ -114,16 +114,16 @@
       }
     },
     "Digital Life": {
-      "topicSamples": 70,
-      "averageScore": 71,
+      "topicSamples": 80,
+      "averageScore": 70,
       "averageConfidence": 86,
       "evidenceLevels": {
-        "none": 32,
-        "single-source-verified": 18,
-        "strong": 20
+        "none": 38,
+        "single-source-verified": 19,
+        "strong": 23
       },
       "decisions": {
-        "review": 69,
+        "review": 79,
         "publish_candidate": 1
       }
     },
@@ -150,30 +150,31 @@
       }
     },
     "Product Launches": {
-      "topicSamples": 32,
-      "averageScore": 57,
-      "averageConfidence": 63,
+      "topicSamples": 34,
+      "averageScore": 59,
+      "averageConfidence": 64,
       "evidenceLevels": {
-        "none": 24,
+        "none": 25,
         "single-source-verified": 7,
-        "strong": 1
+        "strong": 2
       },
       "decisions": {
         "hold": 30,
-        "review": 2
+        "review": 3,
+        "publish_candidate": 1
       }
     },
     "Technology": {
-      "topicSamples": 17,
+      "topicSamples": 20,
       "averageScore": 69,
-      "averageConfidence": 86,
+      "averageConfidence": 87,
       "evidenceLevels": {
         "strong": 5,
-        "single-source-verified": 4,
-        "none": 8
+        "single-source-verified": 6,
+        "none": 9
       },
       "decisions": {
-        "review": 17
+        "review": 20
       }
     }
   },
@@ -231,7 +232,7 @@
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by -4 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by +2 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
@@ -246,7 +247,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 20,
+    "memoryRuns": 21,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
