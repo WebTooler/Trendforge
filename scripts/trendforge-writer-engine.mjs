@@ -7,7 +7,7 @@ const MAX_TRANSIENT_RETRIES=1;
 const MAX_PROVIDER_ATTEMPTS_PER_RUN=6;
 const MAX_PROVIDER_ATTEMPTS_PER_CANDIDATE=2;
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
-const MIN_WRITER_WORDS=400;
+const MIN_WRITER_WORDS=300;
 const WRITER_TARGET_MIN_WORDS=500;
 const WRITER_TARGET_MAX_WORDS=700;
 const writerBudgetPath='data/ai-run-budget.json';
@@ -69,7 +69,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
   const blueprint=loadEvidenceBlueprint(expectedTitle);
   const wordGuide=blueprint?.targetWords||{min:WRITER_TARGET_MIN_WORDS,max:WRITER_TARGET_MAX_WORDS,soft:600};
   const h2Guide=blueprint?.h2Guidance||{preferredMin:2,preferredMax:3};
-  const hardWordMin=Math.max(300,Number(wordGuide.min||WRITER_TARGET_MIN_WORDS));
+  const hardWordMin=Math.max(MIN_WRITER_WORDS,Number(wordGuide.min||WRITER_TARGET_MIN_WORDS));
   const hardWordMax=Math.min(1100,Math.max(hardWordMin,Number(wordGuide.max||WRITER_TARGET_MAX_WORDS)));
   const architectureGuide=blueprint ? [
     'ARTICLE ARCHITECTURE — derive the structure from evidence before drafting:',
