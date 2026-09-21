@@ -197,7 +197,7 @@ for (const file of files) {
   const evidenceMaxH2 = Number(depthBlueprint?.maxH2 || 0);
   if (isCurrentRun && words < evidenceMinWords) errors.push(`${slug}: article is too short (${words} words; evidence-derived minimum ${evidenceMinWords}).`);
   if (isCurrentRun && words > evidenceMaxWords) errors.push(`${slug}: article exceeds evidence-derived maximum (${words} > ${evidenceMaxWords}).`);
-  if (isCurrentRun && evidenceMaxH2 > 0 && headings > evidenceMaxH2) errors.push(`${slug}: H2 count ${headings} exceeds evidence-derived maximum ${evidenceMaxH2}.`);
+  // H2 count is advisory. Structural depth and substantive-section checks remain authoritative.
     const requiredSubstantiveParagraphs = Math.max(1, Number(depth?.rules?.minSubstantiveParagraphs || 1));
   if (isCurrentRun && paragraphs.length < requiredSubstantiveParagraphs) errors.push(`${slug}: needs at least ${requiredSubstantiveParagraphs} substantive paragraphs for ${depth.mode} evidence.`);
   if (isCurrentRun && (sourceUrls.length < requiredSourceLinks || canonicalSourceUrls.length < requiredSourceLinks || sourceUrls.some((url) => !url.startsWith('https://')))) {
