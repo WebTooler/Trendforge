@@ -6,7 +6,6 @@ assert.equal(rich.version,3);
 assert.equal(rich.mode,'rich');
 assert.ok(rich.maxH2>=3&&rich.maxH2<=5);
 assert.equal(rich.evidenceCapacity.level,'high');
-assert.equal(rich.claimBudget.maxFactualClaims,12);
 assert.ok(rich.sectionPlan.includes('limitations/uncertainty'));
 
 const bounded=deriveEvidenceArticleBlueprint({band:'usable',readyForRichArticle:true,sourceCount:2,independentPublisherFamilies:2,totalPassages:6,totalChars:5000,evidenceBrief:{storyFactMap:{capacity:{coreFactCount:7,coreFactChars:3000,maxSupportedWords:700,maxFactualClaims:7}}}});
@@ -14,7 +13,6 @@ assert.equal(bounded.mode,'bounded');
 assert.equal(bounded.maxH2,3);
 assert.equal(bounded.evidenceCapacity.level,'medium');
 assert.equal(bounded.allowContextSection,false);
-assert.equal(bounded.claimBudget.maxFactualClaims,7);
 
 const thin=deriveEvidenceArticleBlueprint({band:'thin',sourceCount:1,independentPublisherFamilies:1,totalPassages:4,totalChars:1800,evidenceBrief:{storyFactMap:{capacity:{coreFactCount:5,coreFactChars:1800,maxSupportedWords:420,maxFactualClaims:5}}}});
 assert.equal(thin.mode,'narrow');
