@@ -1,60 +1,435 @@
 {
-  "generatedAt": "2026-09-21T10:26:32.270Z",
+  "generatedAt": "2026-09-21T11:51:37.634Z",
   "brief": {
-    "title": "An undercover Google analyst infiltrated a notorious supply-chain hacking gang",
-    "category": "Technology",
+    "title": "Trump now says he wants to form an ‘AI Force’",
+    "category": "Digital Life",
     "angle": "Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.",
     "keyPoints": [
-      "Google’s threat intelligence group said it had a mole inside TeamPCP's inner circle.",
-      "Ground the article entirely in the validated publisher source; preserve attribution and uncertainty where applicable."
+      "The president posted on Truth Social that he wanted to appoint an \"AI czar\" to lead a new \"AI force.\" He made the announcement amid growing calls from across the political spectrum and even within the industry to pump the brakes on AI development. He posted that his administration \"will not in any way hinder [&#8230;]",
+      "Cross-check the development across 4 independent reachable source domains. Prefer primary/official evidence when available, while retaining independent secondary reporting for corroboration."
     ],
     "sources": [
       {
-        "title": "An undercover Google analyst infiltrated a notorious supply-chain hacking gang",
-        "url": "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/",
-        "publishedAt": "2026-09-20T11:07:00.000Z"
+        "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar - BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o",
+        "publishedAt": "2026-09-20T15:39:22.000Z"
+      },
+      {
+        "title": "Trump now says he wants to form an ‘AI Force’",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/997867/trump-ai-force-ai-czar",
+        "publishedAt": "2026-09-20T15:39:22.000Z"
+      },
+      {
+        "title": "Trump vows to create ‘AI Force’ and appoint czar amid calls to regulate technology’s development",
+        "url": "https://www.cnn.com/2026/09/19/politics/trump-ai-task-force-czar",
+        "publishedAt": "2026-09-20T15:39:22.000Z"
+      },
+      {
+        "title": "Trump says he will create 'AI Force' like Space Force, name AI czar; calls attack on AI latest 'Hoax'",
+        "url": "https://economictimes.indiatimes.com/news/international/world-news/trump-says-he-will-create-ai-force-like-space-force-name-ai-czar-calls-attack-on-ai-latest-hoax/articleshow/134358015.cms?from=mdr",
+        "publishedAt": "2026-09-20T15:39:22.000Z"
       }
     ]
   },
-  "prompt": "Write an original English-language editorial article for TrendForge.\n\nDo not copy, paraphrase sentence-by-sentence, or imitate any source article.\n\nSynthesize the supplied facts and explain why they matter, but keep the evidence boundary hard: the supplied evidence is the only source of factual premises.\n\nUse clear H2 sections, short paragraphs, and useful editorial context where appropriate.\n\nDo not invent facts, quotes, statistics, dates, product capabilities, sources, motives, causes, outcomes, comparisons, or future developments.\n\nEvery checkable factual claim must be directly traceable to the supplied evidence. Preserve attribution when the source is expressing a person or publisher opinion.\n\nEditorial analysis, implications, and recommendations are allowed only when clearly framed as analysis or advice and when they do not introduce a new factual premise. Do not turn an inference into a fact.\n\nA 400-900 word fully grounded article is acceptable. When the evidence is rich, expand by covering additional supported details, attributed statements, context explicitly present in the evidence, and clearly labeled implications—not by adding outside knowledge or filler.\n\nPrefer a complete 500-800 word article when the evidence supports it, but never pad solely to hit a word target.\n\nReturn clean article prose with Markdown H2 headings (## Heading). Do not return HTML tags.\n\nTitle: An undercover Google analyst infiltrated a notorious supply-chain hacking gang\n\nCategory: Technology\n\nEditorial angle: Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.\n\nKey points:\n- Google’s threat intelligence group said it had a mole inside TeamPCP's inner circle.\n- Ground the article entirely in the validated publisher source; preserve attribution and uncertainty where applicable.\n\nSources:\n- An undercover Google analyst infiltrated a notorious supply-chain hacking gang: https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/EDITORIAL EVIDENCE BRIEF V3 — STRUCTURED MAP OF THE SAME SUPPLIED EVIDENCE:RETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:SOURCE S1Publisher/article: An undercover Google analyst infiltrated a notorious supply-chain hacking gangURL: https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/Evidence passages:[S1-P1] Larsen now says that in March, just as TeamPCP was beginning its frenzied supply-chain hacking, Google’s own undercover analyst was invited to join the hackers’ inner circle.[S1-P2] That inside source, whose name Larsen declined to reveal, was one of about 12 members of the group given access to a core chat that TeamPCP called CanisterWorm.[S1-P3] The company also received intelligence from ShinyHunters, another infamous cybercriminal group that TeamPCP partnered with, but which later turned on the supply-chain hackers.[S1-P4] Google’s team got a copy of the exploit code, tested it out, and found that, with a few tweaks, it worked—a rare instance of an in-the-wild AI-created hacking technique that took advantage of a previously unknown software vulnerability.[S1-P5] Google warned the software’s developer, who was able to patch its security flaw. (The incident was described in a case study Google released in May , but without naming TeamPCP or detailing how Google learned about the exploit.)[S1-P6] “My thought was: How can we, as quickly as possible, disrupt their campaign before more compromises can happen?” Larsen says.[S1-P7] “They were a fly on the wall, only saying enough to not be suspicious,” Larsen says.[S1-P8] One of those cybercriminal partners was ShinyHunters, a years-old, highly prolific hacker group that has extorted millions of dollars from victims through data theft and ransomware, including in the breach of educational software platform Canvas that would later paralyze thousands of schools across the US.[S1-P9] The hacker group, which seems to have first appeared online in late 2025, had made headlines with a brazen string of cascading supply-chain attacks : It repeatedly compromised open-source software to hide its malware, which then allowed it to hijack the credentials of software developers and plant its malicious code in yet another widely used tool, in a repeating cycle.[S1-P10] ShinyHunters also taunted TeamPCP in messages on X, and its louder betrayal got the latter group’s attention.[S1-P11] Even prior to Google’s disruption effort, Larsen says, the group struggled to profit from its enormous collection of stolen data, which, according to the AFP, included more than half a million users’ credentials.[S1-P12] So in an attempt to better monetize its hacking, TeamPCP invited multiple other cybercriminal groups to partner with it, giving them access to the stolen credentials in exchange for a percentage of any extortion payments they were able to extract.[S1-P13] But Larsen also notes that his team’s work to actively foil TeamPCP’s hacking is part of a new shift within Google.[S1-P14] The investigation, after all, kicked off around the same time as Google’s newly launched Cyber Disruption Unit, which has been officially tasked with taking a more aggressive approach to combating cybercrime and state-sponsored hacking.[S1-P15] Rather than focus on alerting the owners of the stolen credentials at victim companies directly, which Larsen says would have taken too long given the sheer number of breached companies, Google first reached out to providers where those credentials could be used, like Amazon Web Services and Microsoft, to have the credentials revoked and prevent the hackers from exploiting them.[S1-P16] Larsen and his team sent out hundreds of notification emails to those providers and then to victims, many of which got immediate responses.[S1-P17] About a month after his tip, Larsen says, US law enforcement had finished the legal process of requesting Thomson’s data from Google with a warrant.[S1-P18] Late last month, Thomson was arrested by Australian police, who released a video of him being walked out of a suburban home in a Northface hoodie and sweatpants.GROUNDING CONTRACT:- Every material factual statement must be supported by at least one evidence passage above.- Do not use model memory or outside knowledge to add facts, prices, numbers, dates, names, quotes, product details or causal claims.- If a detail is not explicitly supported by the evidence pack, omit it.- Preserve uncertainty and attribution when the evidence is uncertain or attributed.- Do not combine different stories merely because they share a keyword.- Do not invent quotations or statistics.- The evidence-pack source IDs are internal and must NOT appear in the published prose.- Prefer a smaller, fully grounded article over a longer article with unsupported context.- The Editorial Evidence Brief is a derived map, not an additional factual source. If any brief summary conflicts with a supporting passage, follow the passage and preserve uncertainty.OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Evidence-mode word range: 260-420 words. Do not pad with unsupported material. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.",
-  "sourceRelationship": "single-source verified evidence",
+  "prompt": "Write an original English-language editorial article for TrendForge.\n\nDo not copy, paraphrase sentence-by-sentence, or imitate any source article.\n\nSynthesize the supplied facts and explain why they matter, but keep the evidence boundary hard: the supplied evidence is the only source of factual premises.\n\nUse clear H2 sections, short paragraphs, and useful editorial context where appropriate.\n\nDo not invent facts, quotes, statistics, dates, product capabilities, sources, motives, causes, outcomes, comparisons, or future developments.\n\nEvery checkable factual claim must be directly traceable to the supplied evidence. Preserve attribution when the source is expressing a person or publisher opinion.\n\nEditorial analysis, implications, and recommendations are allowed only when clearly framed as analysis or advice and when they do not introduce a new factual premise. Do not turn an inference into a fact.\n\nA 400-900 word fully grounded article is acceptable. When the evidence is rich, expand by covering additional supported details, attributed statements, context explicitly present in the evidence, and clearly labeled implications—not by adding outside knowledge or filler.\n\nPrefer a complete 500-800 word article when the evidence supports it, but never pad solely to hit a word target.\n\nReturn clean article prose with Markdown H2 headings (## Heading). Do not return HTML tags.\n\nTitle: Trump now says he wants to form an ‘AI Force’\n\nCategory: Digital Life\n\nEditorial angle: Explain what changed, why it matters, what is known versus uncertain, and what readers should watch next. Use only the retrieved evidence passages as factual context.\n\nKey points:\n- The president posted on Truth Social that he wanted to appoint an \"AI czar\" to lead a new \"AI force.\" He made the announcement amid growing calls from across the political spectrum and even within the industry to pump the brakes on AI development. He posted that his administration \"will not in any way hinder [&#8230;]\n- Cross-check the development across 4 independent reachable source domains. Prefer primary/official evidence when available, while retaining independent secondary reporting for corroboration.\n\nSources:\n- Trump says US will form 'AI Force' and appoint an artificial intelligence tsar - BBC: https://www.bbc.co.uk/news/articles/cqlykr2vrv04o\n- Trump now says he wants to form an ‘AI Force’: https://www.theverge.com/ai-artificial-intelligence/997867/trump-ai-force-ai-czar\n- Trump vows to create ‘AI Force’ and appoint czar amid calls to regulate technology’s development: https://www.cnn.com/2026/09/19/politics/trump-ai-task-force-czar\n- Trump says he will create 'AI Force' like Space Force, name AI czar; calls attack on AI latest 'Hoax': https://economictimes.indiatimes.com/news/international/world-news/trump-says-he-will-create-ai-force-like-space-force-name-ai-czar-calls-attack-on-ai-latest-hoax/articleshow/134358015.cms?from=mdrEDITORIAL EVIDENCE BRIEF V3 — STRUCTURED MAP OF THE SAME SUPPLIED EVIDENCE:{\n  \"version\": 3,\n  \"storyCapacity\": \"medium\",\n  \"storyFactMap\": {\n    \"version\": 1,\n    \"story\": {\n      \"title\": \"Trump now says he wants to form an ‘AI Force’\",\n      \"description\": \"\"\n    },\n    \"sourceRoles\": [\n      {\n        \"id\": \"S1\",\n        \"role\": \"DIRECT_REPORTING\"\n      },\n      {\n        \"id\": \"S2\",\n        \"role\": \"DIRECT_REPORTING\"\n      },\n      {\n        \"id\": \"S3\",\n        \"role\": \"CORROBORATION\"\n      },\n      {\n        \"id\": \"S4\",\n        \"role\": \"DIRECT_REPORTING\"\n      }\n    ],\n    \"facts\": [\n      {\n        \"factId\": \"F1\",\n        \"claimId\": \"C1\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 1,\n        \"text\": \"US President Donald Trump has announced that he will form an \\\"AI Force\\\" and appoint an artificial intelligence tsar amid warnings about the emergent technology.\",\n        \"attribution\": true,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 14,\n        \"titleOverlap\": 3,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F2\",\n        \"claimId\": \"C2\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 20,\n        \"text\": \"Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 2,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F3\",\n        \"claimId\": \"C3\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 8,\n        \"text\": \"Meanwhile, Trump said his administration would use the existing criminal and civil justice system to target any bad actors using the AI.\",\n        \"attribution\": true,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 6,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F4\",\n        \"claimId\": \"C4\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 4,\n        \"text\": \"Trump offered no details or a timeline for his plan.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F5\",\n        \"claimId\": \"C5\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 7,\n        \"text\": \"AI now sits at the heart of the US-China rivalry as the world's two largest economies seek to gain an edge in advanced tech, and it is expected to be discussed when Trump meets President Xi Jinping next week.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F7\",\n        \"claimId\": \"C7\",\n        \"sourceId\": \"S2\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 2,\n        \"text\": \"Rather, we will cherish it, help it, and watch over it, as it grows!” In the rambling post, Trump said that data centers were “wealthy and prestigious” and claimed without evidence that they raised salaries, lowered taxes, and made for safer streets in the communities in which they were built.\",\n        \"attribution\": true,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F11\",\n        \"claimId\": \"C11\",\n        \"sourceId\": \"S3\",\n        \"sourceRole\": \"CORROBORATION\",\n        \"passageIndex\": 10,\n        \"text\": \"AI’s meteoric growth has led to major stock market gains and buoyed the manufacturing sector through the construction of data centers — which Trump calls “the golden goose.” Yet fears about the technology’s potential to eliminate jobs and AI data centers’ impact on communities have led to a souring in public sentiment.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": false,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F14\",\n        \"claimId\": \"C14\",\n        \"sourceId\": \"S3\",\n        \"sourceRole\": \"CORROBORATION\",\n        \"passageIndex\": 6,\n        \"text\": \"Trump’s announcement comes as the White House and Congress have faced pressure in recent weeks to enact AI safeguards.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": false,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F15\",\n        \"claimId\": \"C15\",\n        \"sourceId\": \"S3\",\n        \"sourceRole\": \"CORROBORATION\",\n        \"passageIndex\": 13,\n        \"text\": \"Government has to be regulating this.” Venture capitalist David Sacks served as Trump’s AI and cryptocurrency czar until March, when he stepped down after reaching his time limit as a special government employee.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": false,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F18\",\n        \"claimId\": \"C18\",\n        \"sourceId\": \"S4\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 8,\n        \"text\": \"He also alleged a SICK conspiracy against AI and data centres, saying China was the only one happy about it.Since returning to office in January 2025, Trump has backed rapid AI development and US dominance in the field.\",\n        \"attribution\": false,\n        \"numbers\": [\n          \"2025\"\n        ],\n        \"core\": true,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      }\n    ],\n    \"coreFacts\": [\n      {\n        \"factId\": \"F1\",\n        \"claimId\": \"C1\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 1,\n        \"text\": \"US President Donald Trump has announced that he will form an \\\"AI Force\\\" and appoint an artificial intelligence tsar amid warnings about the emergent technology.\",\n        \"attribution\": true,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 14,\n        \"titleOverlap\": 3,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F2\",\n        \"claimId\": \"C2\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 20,\n        \"text\": \"Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 2,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F3\",\n        \"claimId\": \"C3\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 8,\n        \"text\": \"Meanwhile, Trump said his administration would use the existing criminal and civil justice system to target any bad actors using the AI.\",\n        \"attribution\": true,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 6,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F4\",\n        \"claimId\": \"C4\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 4,\n        \"text\": \"Trump offered no details or a timeline for his plan.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F5\",\n        \"claimId\": \"C5\",\n        \"sourceId\": \"S1\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 7,\n        \"text\": \"AI now sits at the heart of the US-China rivalry as the world's two largest economies seek to gain an edge in advanced tech, and it is expected to be discussed when Trump meets President Xi Jinping next week.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F7\",\n        \"claimId\": \"C7\",\n        \"sourceId\": \"S2\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 2,\n        \"text\": \"Rather, we will cherish it, help it, and watch over it, as it grows!” In the rambling post, Trump said that data centers were “wealthy and prestigious” and claimed without evidence that they raised salaries, lowered taxes, and made for safer streets in the communities in which they were built.\",\n        \"attribution\": true,\n        \"numbers\": [],\n        \"core\": true,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F18\",\n        \"claimId\": \"C18\",\n        \"sourceId\": \"S4\",\n        \"sourceRole\": \"DIRECT_REPORTING\",\n        \"passageIndex\": 8,\n        \"text\": \"He also alleged a SICK conspiracy against AI and data centres, saying China was the only one happy about it.Since returning to office in January 2025, Trump has backed rapid AI development and US dominance in the field.\",\n        \"attribution\": false,\n        \"numbers\": [\n          \"2025\"\n        ],\n        \"core\": true,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      }\n    ],\n    \"contextFacts\": [\n      {\n        \"factId\": \"F11\",\n        \"claimId\": \"C11\",\n        \"sourceId\": \"S3\",\n        \"sourceRole\": \"CORROBORATION\",\n        \"passageIndex\": 10,\n        \"text\": \"AI’s meteoric growth has led to major stock market gains and buoyed the manufacturing sector through the construction of data centers — which Trump calls “the golden goose.” Yet fears about the technology’s potential to eliminate jobs and AI data centers’ impact on communities have led to a souring in public sentiment.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": false,\n        \"specificityScore\": 7,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F14\",\n        \"claimId\": \"C14\",\n        \"sourceId\": \"S3\",\n        \"sourceRole\": \"CORROBORATION\",\n        \"passageIndex\": 6,\n        \"text\": \"Trump’s announcement comes as the White House and Congress have faced pressure in recent weeks to enact AI safeguards.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": false,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      },\n      {\n        \"factId\": \"F15\",\n        \"claimId\": \"C15\",\n        \"sourceId\": \"S3\",\n        \"sourceRole\": \"CORROBORATION\",\n        \"passageIndex\": 13,\n        \"text\": \"Government has to be regulating this.” Venture capitalist David Sacks served as Trump’s AI and cryptocurrency czar until March, when he stepped down after reaching his time limit as a special government employee.\",\n        \"attribution\": false,\n        \"numbers\": [],\n        \"core\": false,\n        \"specificityScore\": 5,\n        \"titleOverlap\": 1,\n        \"descriptionOverlap\": 0\n      }\n    ],\n    \"gaps\": [],\n    \"capacity\": {\n      \"level\": \"low\",\n      \"coreFactCount\": 7,\n      \"coreFactChars\": 1147,\n      \"directCoreFactCount\": 7,\n      \"coreSourceCount\": 3,\n      \"maxFactualClaims\": 7,\n      \"maxSupportedWords\": 273\n    },\n    \"policy\": {\n      \"coreFactsOnlyForCoreNarrative\": true,\n      \"contextCannotCompensateForCore\": true,\n      \"sourceRoleRequired\": true,\n      \"claimToFactMappingRequired\": true\n    }\n  },\n  \"uncertainty\": [],\n  \"unknowns\": [\n    \"No primary-source material established in the evidence brief.\"\n  ],\n  \"contradictions\": []\n}RETRIEVED EVIDENCE PACK — THIS IS THE ONLY FACTUAL KNOWLEDGE YOU MAY USE:SOURCE S1\nPublisher/article: Trump says US will form 'AI Force' and appoint an artificial intelligence tsar - BBC\nURL: https://www.bbc.co.uk/news/articles/cqlykr2vrv04o\nRole: DIRECT_REPORTING\nEvidence passages:\n[S1-P1] US President Donald Trump has announced that he will form an \"AI Force\" and appoint an artificial intelligence tsar amid warnings about the emergent technology.\\n[S1-P2] Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards\\n\\nSOURCE S2\nPublisher/article: Trump now says he wants to form an ‘AI Force’\nURL: https://www.theverge.com/ai-artificial-intelligence/997867/trump-ai-force-ai-czar\nRole: DIRECT_REPORTING\nEvidence passages:\n[S2-P1] He also related the AI Force to his creation of the Space Force, which he claimed was a “tremendous SUCCESS.” The president gave no timeline or further details about the AI Force nor who might be tapped to lead it.\\n[S2-P2] Rather, we will cherish it, help it, and watch over it, as it grows!” In the rambling post, Trump said that data centers were “wealthy and prestigious” and claimed without evidence that they raised salaries, lowered taxes, and made for safer streets in the communities in which they were built.\\n\\nSOURCE S3\nPublisher/article: Trump vows to create ‘AI Force’ and appoint czar amid calls to regulate technology’s development\nURL: https://www.cnn.com/2026/09/19/politics/trump-ai-task-force-czar\nRole: CORROBORATION\nEvidence passages:\n[S3-P1] President Donald Trump said Saturday he plans to create an “AI Force” and name an AI czar as the government faces growing calls to impose guardrails on the rapid development of artificial intelligence.\\n[S3-P2] The president, writing on Truth Social, repeated his assessment that fears over AI amount to a hoax and also seemed to acknowledge some of the risks the technology presents, saying, “we will also be looking for BAD, and we can do that, very easily, with our already existing Criminal and Civil Justice System.” “For this purpose, I am forming the AI Force, much like I did Space Force, which has been a tremendous SUCCESS, in my First Term.\\n\\nSOURCE S4\nPublisher/article: Trump says he will create 'AI Force' like Space Force, name AI czar; calls attack on AI latest 'Hoax'\nURL: https://economictimes.indiatimes.com/news/international/world-news/trump-says-he-will-create-ai-force-like-space-force-name-ai-czar-calls-attack-on-ai-latest-hoax/articleshow/134358015.cms?from=mdr\nRole: DIRECT_REPORTING\nEvidence passages:\n[S4-P1] US President Donald Trump on Truth Social said he is forming an AI Force, like the Space Force of his first term, and will soon announce an AI Czar , as he called the destruction of artificial intelligence the latest Hoax by the Radical Left Democrats.Trump said he, as President of the United States, will not stand by and let this happen .He listed the Russia and Ukraine allegations, global warming, his two impeachments, men in women's sports and Transgender for Everyone among the earlier Hoaxes he blamed on the Democrats.Also read: Denmark emerges smiling from Trump-Greenland deal, experts sayHe said the attack on AI began with an attack on data centres, which he claimed had largely failed once people realised the benefits to their communities.\\n[S4-P2] He said the only guardrails AI needs is a STRONG AND SMART (High IQ!) PRESIDENT .Also read: Trump says US reached 'infinite' security deal with Denmark over GreenlandHe said his administration already has tremendous CRIMINAL and REGULATORY power over these companies , and named Anthropic chief executive Dario Amodei in his posts.GROUNDING CONTRACT:- Every material factual statement must be supported by at least one evidence passage above.- Do not use model memory or outside knowledge to add facts, prices, numbers, dates, names, quotes, product details or causal claims.- If a detail is not explicitly supported by the evidence pack, omit it.- Preserve uncertainty and attribution when the evidence is uncertain or attributed.- Do not combine different stories merely because they share a keyword.- Do not invent quotations or statistics.- The evidence-pack source IDs are internal and must NOT appear in the published prose.- Prefer a smaller, fully grounded article over a longer article with unsupported context.- The Editorial Evidence Brief is a derived map, not an additional factual source. If any brief summary conflicts with a supporting passage, follow the passage and preserve uncertainty.OUTPUT FORMAT: Return ONLY one valid JSON object with exactly three string keys: title, description, content. No markdown fences, no commentary. IMPORTANT: title must be a descriptive original headline between 20 and 110 characters. description must be at least 80 characters. Evidence-mode word range: 220-273 words. Do not pad with unsupported material. Write an original synthesis and do not reproduce source sentences, paragraphs, or headlines.",
+  "sourceRelationship": "same-candidate strong verified evidence",
   "verifiedEvidenceDomains": [
-    "arstechnica.com"
+    "bbc.co.uk",
+    "theverge.com",
+    "cnn.com",
+    "economictimes.indiatimes.com"
   ],
-  "storyFactMap": null,
+  "storyFactMap": {
+    "version": 1,
+    "story": {
+      "title": "Trump now says he wants to form an ‘AI Force’",
+      "description": ""
+    },
+    "sourceRoles": [
+      {
+        "id": "S1",
+        "role": "DIRECT_REPORTING"
+      },
+      {
+        "id": "S2",
+        "role": "DIRECT_REPORTING"
+      },
+      {
+        "id": "S3",
+        "role": "CORROBORATION"
+      },
+      {
+        "id": "S4",
+        "role": "DIRECT_REPORTING"
+      }
+    ],
+    "facts": [
+      {
+        "factId": "F1",
+        "claimId": "C1",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 1,
+        "text": "US President Donald Trump has announced that he will form an \"AI Force\" and appoint an artificial intelligence tsar amid warnings about the emergent technology.",
+        "attribution": true,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 14,
+        "titleOverlap": 3,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F2",
+        "claimId": "C2",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 20,
+        "text": "Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards",
+        "attribution": false,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 7,
+        "titleOverlap": 2,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F3",
+        "claimId": "C3",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 8,
+        "text": "Meanwhile, Trump said his administration would use the existing criminal and civil justice system to target any bad actors using the AI.",
+        "attribution": true,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 6,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F4",
+        "claimId": "C4",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 4,
+        "text": "Trump offered no details or a timeline for his plan.",
+        "attribution": false,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F5",
+        "claimId": "C5",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 7,
+        "text": "AI now sits at the heart of the US-China rivalry as the world's two largest economies seek to gain an edge in advanced tech, and it is expected to be discussed when Trump meets President Xi Jinping next week.",
+        "attribution": false,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F7",
+        "claimId": "C7",
+        "sourceId": "S2",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 2,
+        "text": "Rather, we will cherish it, help it, and watch over it, as it grows!” In the rambling post, Trump said that data centers were “wealthy and prestigious” and claimed without evidence that they raised salaries, lowered taxes, and made for safer streets in the communities in which they were built.",
+        "attribution": true,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 7,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F11",
+        "claimId": "C11",
+        "sourceId": "S3",
+        "sourceRole": "CORROBORATION",
+        "passageIndex": 10,
+        "text": "AI’s meteoric growth has led to major stock market gains and buoyed the manufacturing sector through the construction of data centers — which Trump calls “the golden goose.” Yet fears about the technology’s potential to eliminate jobs and AI data centers’ impact on communities have led to a souring in public sentiment.",
+        "attribution": false,
+        "numbers": [],
+        "core": false,
+        "specificityScore": 7,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F14",
+        "claimId": "C14",
+        "sourceId": "S3",
+        "sourceRole": "CORROBORATION",
+        "passageIndex": 6,
+        "text": "Trump’s announcement comes as the White House and Congress have faced pressure in recent weeks to enact AI safeguards.",
+        "attribution": false,
+        "numbers": [],
+        "core": false,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F15",
+        "claimId": "C15",
+        "sourceId": "S3",
+        "sourceRole": "CORROBORATION",
+        "passageIndex": 13,
+        "text": "Government has to be regulating this.” Venture capitalist David Sacks served as Trump’s AI and cryptocurrency czar until March, when he stepped down after reaching his time limit as a special government employee.",
+        "attribution": false,
+        "numbers": [],
+        "core": false,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F18",
+        "claimId": "C18",
+        "sourceId": "S4",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 8,
+        "text": "He also alleged a SICK conspiracy against AI and data centres, saying China was the only one happy about it.Since returning to office in January 2025, Trump has backed rapid AI development and US dominance in the field.",
+        "attribution": false,
+        "numbers": [
+          "2025"
+        ],
+        "core": true,
+        "specificityScore": 7,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      }
+    ],
+    "coreFacts": [
+      {
+        "factId": "F1",
+        "claimId": "C1",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 1,
+        "text": "US President Donald Trump has announced that he will form an \"AI Force\" and appoint an artificial intelligence tsar amid warnings about the emergent technology.",
+        "attribution": true,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 14,
+        "titleOverlap": 3,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F2",
+        "claimId": "C2",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 20,
+        "text": "Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards",
+        "attribution": false,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 7,
+        "titleOverlap": 2,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F3",
+        "claimId": "C3",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 8,
+        "text": "Meanwhile, Trump said his administration would use the existing criminal and civil justice system to target any bad actors using the AI.",
+        "attribution": true,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 6,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F4",
+        "claimId": "C4",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 4,
+        "text": "Trump offered no details or a timeline for his plan.",
+        "attribution": false,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F5",
+        "claimId": "C5",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 7,
+        "text": "AI now sits at the heart of the US-China rivalry as the world's two largest economies seek to gain an edge in advanced tech, and it is expected to be discussed when Trump meets President Xi Jinping next week.",
+        "attribution": false,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F7",
+        "claimId": "C7",
+        "sourceId": "S2",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 2,
+        "text": "Rather, we will cherish it, help it, and watch over it, as it grows!” In the rambling post, Trump said that data centers were “wealthy and prestigious” and claimed without evidence that they raised salaries, lowered taxes, and made for safer streets in the communities in which they were built.",
+        "attribution": true,
+        "numbers": [],
+        "core": true,
+        "specificityScore": 7,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F18",
+        "claimId": "C18",
+        "sourceId": "S4",
+        "sourceRole": "DIRECT_REPORTING",
+        "passageIndex": 8,
+        "text": "He also alleged a SICK conspiracy against AI and data centres, saying China was the only one happy about it.Since returning to office in January 2025, Trump has backed rapid AI development and US dominance in the field.",
+        "attribution": false,
+        "numbers": [
+          "2025"
+        ],
+        "core": true,
+        "specificityScore": 7,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      }
+    ],
+    "contextFacts": [
+      {
+        "factId": "F11",
+        "claimId": "C11",
+        "sourceId": "S3",
+        "sourceRole": "CORROBORATION",
+        "passageIndex": 10,
+        "text": "AI’s meteoric growth has led to major stock market gains and buoyed the manufacturing sector through the construction of data centers — which Trump calls “the golden goose.” Yet fears about the technology’s potential to eliminate jobs and AI data centers’ impact on communities have led to a souring in public sentiment.",
+        "attribution": false,
+        "numbers": [],
+        "core": false,
+        "specificityScore": 7,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F14",
+        "claimId": "C14",
+        "sourceId": "S3",
+        "sourceRole": "CORROBORATION",
+        "passageIndex": 6,
+        "text": "Trump’s announcement comes as the White House and Congress have faced pressure in recent weeks to enact AI safeguards.",
+        "attribution": false,
+        "numbers": [],
+        "core": false,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      },
+      {
+        "factId": "F15",
+        "claimId": "C15",
+        "sourceId": "S3",
+        "sourceRole": "CORROBORATION",
+        "passageIndex": 13,
+        "text": "Government has to be regulating this.” Venture capitalist David Sacks served as Trump’s AI and cryptocurrency czar until March, when he stepped down after reaching his time limit as a special government employee.",
+        "attribution": false,
+        "numbers": [],
+        "core": false,
+        "specificityScore": 5,
+        "titleOverlap": 1,
+        "descriptionOverlap": 0
+      }
+    ],
+    "gaps": [],
+    "capacity": {
+      "level": "low",
+      "coreFactCount": 7,
+      "coreFactChars": 1147,
+      "directCoreFactCount": 7,
+      "coreSourceCount": 3,
+      "maxFactualClaims": 7,
+      "maxSupportedWords": 273
+    },
+    "policy": {
+      "coreFactsOnlyForCoreNarrative": true,
+      "contextCannotCompensateForCore": true,
+      "sourceRoleRequired": true,
+      "claimToFactMappingRequired": true
+    }
+  },
   "grounding": {
     "version": 8,
-    "strongEvidence": false,
-    "sourceCount": 1,
+    "strongEvidence": true,
+    "sourceCount": 4,
     "usablePassages": 18,
-    "minimumUsablePassages": 3,
+    "minimumUsablePassages": 6,
     "primarySourceCount": 0,
     "sources": [
       {
-        "title": "An undercover Google analyst infiltrated a notorious supply-chain hacking gang",
-        "url": "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/",
-        "role": "secondary",
+        "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar - BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o",
+        "role": "DIRECT_REPORTING",
         "kind": "paragraph-evidence",
-        "articleBodyLength": 3626,
+        "articleBodyLength": 638,
         "passages": [
-          "Larsen now says that in March, just as TeamPCP was beginning its frenzied supply-chain hacking, Google’s own undercover analyst was invited to join the hackers’ inner circle.",
-          "That inside source, whose name Larsen declined to reveal, was one of about 12 members of the group given access to a core chat that TeamPCP called CanisterWorm.",
-          "The company also received intelligence from ShinyHunters, another infamous cybercriminal group that TeamPCP partnered with, but which later turned on the supply-chain hackers.",
-          "Google’s team got a copy of the exploit code, tested it out, and found that, with a few tweaks, it worked—a rare instance of an in-the-wild AI-created hacking technique that took advantage of a previously unknown software vulnerability.",
-          "Google warned the software’s developer, who was able to patch its security flaw. (The incident was described in a case study Google released in May , but without naming TeamPCP or detailing how Google learned about the exploit.)",
-          "“My thought was: How can we, as quickly as possible, disrupt their campaign before more compromises can happen?” Larsen says.",
-          "“They were a fly on the wall, only saying enough to not be suspicious,” Larsen says.",
-          "One of those cybercriminal partners was ShinyHunters, a years-old, highly prolific hacker group that has extorted millions of dollars from victims through data theft and ransomware, including in the breach of educational software platform Canvas that would later paralyze thousands of schools across the US.",
-          "The hacker group, which seems to have first appeared online in late 2025, had made headlines with a brazen string of cascading supply-chain attacks : It repeatedly compromised open-source software to hide its malware, which then allowed it to hijack the credentials of software developers and plant its malicious code in yet another widely used tool, in a repeating cycle.",
-          "ShinyHunters also taunted TeamPCP in messages on X, and its louder betrayal got the latter group’s attention.",
-          "Even prior to Google’s disruption effort, Larsen says, the group struggled to profit from its enormous collection of stolen data, which, according to the AFP, included more than half a million users’ credentials.",
-          "So in an attempt to better monetize its hacking, TeamPCP invited multiple other cybercriminal groups to partner with it, giving them access to the stolen credentials in exchange for a percentage of any extortion payments they were able to extract.",
-          "But Larsen also notes that his team’s work to actively foil TeamPCP’s hacking is part of a new shift within Google.",
-          "The investigation, after all, kicked off around the same time as Google’s newly launched Cyber Disruption Unit, which has been officially tasked with taking a more aggressive approach to combating cybercrime and state-sponsored hacking.",
-          "Rather than focus on alerting the owners of the stolen credentials at victim companies directly, which Larsen says would have taken too long given the sheer number of breached companies, Google first reached out to providers where those credentials could be used, like Amazon Web Services and Microsoft, to have the credentials revoked and prevent the hackers from exploiting them.",
-          "Larsen and his team sent out hundreds of notification emails to those providers and then to victims, many of which got immediate responses.",
-          "About a month after his tip, Larsen says, US law enforcement had finished the legal process of requesting Thomson’s data from Google with a warrant.",
-          "Late last month, Thomson was arrested by Australian police, who released a video of him being walked out of a suburban home in a Northface hoodie and sweatpants."
+          "US President Donald Trump has announced that he will form an \"AI Force\" and appoint an artificial intelligence tsar amid warnings about the emergent technology.",
+          "Trump says AI safety fears a 'hoax' as he rejects calls for greater safeguards",
+          "Meanwhile, Trump said his administration would use the existing criminal and civil justice system to target any bad actors using the AI.",
+          "Trump offered no details or a timeline for his plan.",
+          "AI now sits at the heart of the US-China rivalry as the world's two largest economies seek to gain an edge in advanced tech, and it is expected to be discussed when Trump meets President Xi Jinping next week."
+        ]
+      },
+      {
+        "title": "Trump now says he wants to form an ‘AI Force’",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/997867/trump-ai-force-ai-czar",
+        "role": "DIRECT_REPORTING",
+        "kind": "jsonld-evidence",
+        "articleBodyLength": 509,
+        "passages": [
+          "He also related the AI Force to his creation of the Space Force, which he claimed was a “tremendous SUCCESS.” The president gave no timeline or further details about the AI Force nor who might be tapped to lead it.",
+          "Rather, we will cherish it, help it, and watch over it, as it grows!” In the rambling post, Trump said that data centers were “wealthy and prestigious” and claimed without evidence that they raised salaries, lowered taxes, and made for safer streets in the communities in which they were built."
+        ]
+      },
+      {
+        "title": "Trump vows to create ‘AI Force’ and appoint czar amid calls to regulate technology’s development",
+        "url": "https://www.cnn.com/2026/09/19/politics/trump-ai-task-force-czar",
+        "role": "CORROBORATION",
+        "kind": "jsonld-evidence",
+        "articleBodyLength": 1748,
+        "passages": [
+          "President Donald Trump said Saturday he plans to create an “AI Force” and name an AI czar as the government faces growing calls to impose guardrails on the rapid development of artificial intelligence.",
+          "The president, writing on Truth Social, repeated his assessment that fears over AI amount to a hoax and also seemed to acknowledge some of the risks the technology presents, saying, “we will also be looking for BAD, and we can do that, very easily, with our already existing Criminal and Civil Justice System.” “For this purpose, I am forming the AI Force, much like I did Space Force, which has been a tremendous SUCCESS, in my First Term.",
+          "“We will not in any way hinder or stifle the Growth of this incredible Industry,” Trump said in his post Saturday.",
+          "AI’s meteoric growth has led to major stock market gains and buoyed the manufacturing sector through the construction of data centers — which Trump calls “the golden goose.” Yet fears about the technology’s potential to eliminate jobs and AI data centers’ impact on communities have led to a souring in public sentiment.",
+          "A White House official also said that AI safety would be “on the agenda” when Trump meets with Xi.",
+          "“We are leading China, and the rest of the World, and I intend to keep it that way!” Trump has made clear that he considers outpacing China and preserving AI-driven economic gains a higher priority than addressing growing public concerns.",
+          "Trump’s announcement comes as the White House and Congress have faced pressure in recent weeks to enact AI safeguards.",
+          "Government has to be regulating this.” Venture capitalist David Sacks served as Trump’s AI and cryptocurrency czar until March, when he stepped down after reaching his time limit as a special government employee."
+        ]
+      },
+      {
+        "title": "Trump says he will create 'AI Force' like Space Force, name AI czar; calls attack on AI latest 'Hoax'",
+        "url": "https://economictimes.indiatimes.com/news/international/world-news/trump-says-he-will-create-ai-force-like-space-force-name-ai-czar-calls-attack-on-ai-latest-hoax/articleshow/134358015.cms?from=mdr",
+        "role": "DIRECT_REPORTING",
+        "kind": "jsonld-evidence",
+        "articleBodyLength": 1307,
+        "passages": [
+          "US President Donald Trump on Truth Social said he is forming an AI Force, like the Space Force of his first term, and will soon announce an AI Czar , as he called the destruction of artificial intelligence the latest Hoax by the Radical Left Democrats.Trump said he, as President of the United States, will not stand by and let this happen .He listed the Russia and Ukraine allegations, global warming, his two impeachments, men in women's sports and Transgender for Everyone among the earlier Hoaxes he blamed on the Democrats.Also read: Denmark emerges smiling from Trump-Greenland deal, experts sayHe said the attack on AI began with an attack on data centres, which he claimed had largely failed once people realised the benefits to their communities.",
+          "He said the only guardrails AI needs is a STRONG AND SMART (High IQ!) PRESIDENT .Also read: Trump says US reached 'infinite' security deal with Denmark over GreenlandHe said his administration already has tremendous CRIMINAL and REGULATORY power over these companies , and named Anthropic chief executive Dario Amodei in his posts.",
+          "He also alleged a SICK conspiracy against AI and data centres, saying China was the only one happy about it.Since returning to office in January 2025, Trump has backed rapid AI development and US dominance in the field."
         ]
       }
     ]
