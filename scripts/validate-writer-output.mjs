@@ -14,12 +14,12 @@ const parseFrontmatter=(raw)=>{
 };
 
 const proseOnly=(body='')=>body.replace(/\n##\s+Sources[\s\S]*$/i,'').trim();
-let canonicalBlueprint=null;
-try{canonicalBlueprint=JSON.parse(fs.readFileSync('data/article-brief.json','utf8'))?.blueprint||null;}catch{}
+let canonicalBlueprint=null,currentRun=null;
+try{const brief=JSON.parse(fs.readFileSync('data/article-brief.json','utf8'));canonicalBlueprint=brief?.blueprint||null;currentRun=JSON.parse(fs.readFileSync('data/current-run-article.json','utf8'));}catch{}
 
 let status='';
 try{status=execFileSync('git',['status','--short','content/articles'],{encoding:'utf8'});}catch(error){console.error(`Writer output gate could not inspect git status: ${error.message}`);process.exit(1);}
-const files=status.split('\n').map(x=>x.trim()).filter(x=>/^(\?\?|[AM])\s+content\/articles\/[^ ]+\.md$/.test(x)).map(x=>x.replace(/^(\?\?|[AM])\s+/,'')).filter((v,i,a)=>a.indexOf(v)===i);
+const files=status.split('\n').map(x=>x.trim()).filter(x=>/^(\?\?|[AM])\s+content\/articles\/[^ ]+\.md$/.test(x)).map(x=>x.replace(/^(\?\?|[AM])\s+/,'')).filter((v,i,a)=>a.indexOf(v)===i).filter(file=>!currentRun?.generated||currentRun.articlePath===file);
 
 if(files.length===0){console.log('Writer output gate: no newly generated article detected; skipped safely.');process.exit(0);}
 let failed=false;
