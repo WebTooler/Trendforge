@@ -16,7 +16,7 @@ assert.equal(bounded.maxH2,3);
 assert.equal(bounded.evidenceCapacity.level,'medium');
 assert.equal(bounded.allowContextSection,false);
 
-const thin=deriveEvidenceArticleBlueprint({band:'thin',sourceCount:1,independentPublisherFamilies:1,totalPassages:4,totalChars:1800,evidenceBrief:{storyFactMap:{capacity:{coreFactCount:5,coreFactChars:1800,maxSupportedWords:420,maxFactualClaims:5}}}});
+const thin=deriveEvidenceArticleBlueprint({band:'thin',sourceCount:1,independentPublisherFamilies:1,totalPassages:4,totalChars:1800,evidenceBrief:{storyFactMap:{capacity:{coreFactCount:5,coreFactChars:1800,maxSupportedWords:420,maxFactualClaims:5,synthesisCapacity:{allowed:true,maxWords:60,maxStatements:2,allowedFactIds:['F1','F2','F3','F4','F5']}}}});
 assert.equal(thin.mode,'narrow');
 assert.equal(thin.maxH2,2);
 assert.equal(thin.targetWords.max,420);
