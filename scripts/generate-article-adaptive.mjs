@@ -6,7 +6,10 @@ const articlesDir='content/articles';
 const decisionPath='data/decision-queue.json';
 const integrityPath='data/evidence-integrity.json';
 const nativeMarker='data/native-writer-published.json';
+const currentRunArticlePath='data/current-run-article.json';
 
+fs.mkdirSync('data',{recursive:true});
+fs.writeFileSync(currentRunArticlePath,JSON.stringify({version:1,runId:process.env.GITHUB_RUN_ID||'local',generated:false,articlePath:null,briefTitle:null,updatedAt:new Date().toISOString()},null,2)+'\n');
 if(!fs.existsSync(scoredPath)){console.log(`No ${scoredPath}; nothing to publish.`);process.exit(0);}
 
 const original=JSON.parse(fs.readFileSync(scoredPath,'utf8'));
@@ -99,7 +102,12 @@ for(const candidate of queue){
   const result=spawnSync('npx',['tsx','scripts/generate-article.ts'],{stdio:'inherit',env:process.env});
   const after=new Set(fs.existsSync(articlesDir)?fs.readdirSync(articlesDir).filter(name=>name.endsWith('.md')):[]);
   const newArticle=[...after].find(name=>!before.has(name));
-  if(newArticle){console.log(`Adaptive queue published: ${newArticle}`);published=true;break;}
+  if(newArticle){
+    const briefPath='data/article-brief.json';
+    let briefTitle=null;try{briefTitle=JSON.parse(fs.readFileSync(briefPath,'utf8'))?.brief?.title||null;}catch{}
+    fs.writeFileSync(currentRunArticlePath,JSON.stringify({version:1,runId:process.env.GITHUB_RUN_ID||'local',generated:true,articlePath:`${articlesDir}/${newArticle}`,briefTitle,updatedAt:new Date().toISOString()},null,2)+'\n');
+    console.log(`Adaptive queue published current-run article: ${newArticle}`);published=true;break;
+  }
   if(result.error)console.log(`Candidate attempt failed to execute: ${result.error.message}`);
   console.log('Candidate did not produce a publishable article; moving to the next candidate.');
 }
@@ -110,7 +118,14 @@ if(!published&&!fs.existsSync(nativeMarker)){
   console.log('Adaptive generation exhausted without publication; checking for post-exhaustion Native Writer fallback.');
   const nativeRun=spawnSync('npx',['tsx','scripts/run-native-writer-fallback.mjs'],{stdio:'inherit',env:process.env});
   if(nativeRun.error)console.log(`Post-exhaustion Native Writer failed to execute: ${nativeRun.error.message}`);
-  if(fs.existsSync(nativeMarker)){console.log('Post-exhaustion Native Writer published a gated article; skipping evergreen fallback.');published=true;}
+  if(fs.existsSync(nativeMarker)){
+    const briefPath='data/article-brief.json';
+    let briefTitle=null,articlePath=null;try{const marker=JSON.parse(fs.readFileSync(nativeMarker,'utf8'));articlePath=marker?.articlePath||marker?.path||null;briefTitle=JSON.parse(fs.readFileSync(briefPath,'utf8'))?.brief?.title||null;}catch{}
+    if(articlePath&&fs.existsSync(articlePath)){
+      fs.writeFileSync(currentRunArticlePath,JSON.stringify({version:1,runId:process.env.GITHUB_RUN_ID||'local',generated:true,articlePath,briefTitle,updatedAt:new Date().toISOString(),producer:'native-writer-fallback'},null,2)+'\n');
+      console.log('Post-exhaustion Native Writer published a gated current-run article; skipping evergreen fallback.');published=true;
+    }else{console.log('Native Writer marker exists but current-run article path is missing; treating as no publication.');}
+  }
   else console.log('Post-exhaustion Native Writer produced no publishable article; continuing safely.');
 }
 
