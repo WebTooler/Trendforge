@@ -202,7 +202,7 @@ for(const record of candidates){
     const blockedFactMap=evidenceBrief.storyFactMap||buildStoryFactMap({candidate:record,sources:lineageSources,evidenceBrief});
     const blockedEvidenceBrief={...evidenceBrief,storyFactMap:blockedFactMap};
     authoritativePacks.push(buildAuthoritativeEvidencePack({candidate:record,sources:lineageSources,coverage:blockedCoverage,blueprint:blockedBlueprint,evidenceBrief:blockedEvidenceBrief}));
-    results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage),editorialEvidenceBrief:evidenceBrief},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
+    results.push({title:record.title,link:record.link,category:record.category,verification:{status:record.status,confidence:record.confidence,credibleSourceCount:record.credibleSourceCount,reachableSourceCount:record.reachableSourceCount,discoveredSourceCount:record.discoveredSourceCount},integrityPreflight:preflight,evidence:{sources:lineageSources,coverage:blockedCoverage,blueprint:deriveEvidenceArticleBlueprint(blockedCoverage),editorialEvidenceBrief:blockedEvidenceBrief,storyFactMap:blockedFactMap},readyForWriter:false,writerGateReason:duplicateHistory.reason,duplicateStory:duplicateHistory});
     continue;
   }
   const coverage=scoreEvidenceCoverage({sources,evidenceBrief});
