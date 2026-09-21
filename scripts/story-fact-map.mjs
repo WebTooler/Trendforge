@@ -64,6 +64,10 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
   if(finalCoreFacts.length&&coreRoles.every(r=>r==='CONTEXT'))gaps.push('core-facts-are-context-only');
   const claimCapacity=Math.max(0,Math.min(18,finalCoreFacts.length));
   const wordCapacity=Math.floor(coreChars/4.2);
+  const synthesisMaxWords=Math.min(100,Math.max(0,Math.floor(Math.min(coreChars/20,finalCoreFacts.length*12))));
+  const synthesisStatementCapacity=Math.min(3,Math.floor(finalCoreFacts.length/2));
+  const synthesisAllowed=synthesisStatementCapacity>=1&&synthesisMaxWords>=35;
+  const synthesisAllowedFactIds=finalCoreFacts.slice(0,Math.min(12,finalCoreFacts.length)).map(x=>x.factId);
   let level='none';
   if(finalCoreFacts.length>=10&&coreChars>=3500)level='high';
   else if(finalCoreFacts.length>=6&&coreChars>=2200)level='medium';
@@ -76,8 +80,8 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     coreFacts:finalCoreFacts,
     contextFacts,
     gaps,
-    capacity:{level,coreFactCount:finalCoreFacts.length,coreFactChars:coreChars,directCoreFactCount:directCoreFacts.length,coreSourceCount:coreSourceIds.length,maxFactualClaims:claimCapacity,maxSupportedWords:Math.max(0,Math.min(900,wordCapacity))},
-    policy:{coreFactsOnlyForCoreNarrative:true,contextCannotCompensateForCore:true,sourceRoleRequired:true,claimToFactMappingRequired:true}
+    capacity:{level,coreFactCount:finalCoreFacts.length,coreFactChars:coreChars,directCoreFactCount:directCoreFacts.length,coreSourceCount:coreSourceIds.length,maxFactualClaims:claimCapacity,maxSupportedWords:Math.max(0,Math.min(900,wordCapacity+synthesisMaxWords)),maxBodyWords:Math.max(0,Math.min(900,wordCapacity)),synthesisCapacity:{allowed:synthesisAllowed,maxWords:synthesisMaxWords,maxStatements:synthesisStatementCapacity,allowedFactIds:synthesisAllowedFactIds}},
+    policy:{coreFactsOnlyForCoreNarrative:true,contextCannotCompensateForCore:true,sourceRoleRequired:true,claimToFactMappingRequired:true,synthesisMustReuseVerifiedFacts:true,synthesisCannotIntroduceNewPremise:true}
   };
 }
 export { buildStoryFactMap, sourceRole };
