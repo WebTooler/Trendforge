@@ -66,9 +66,13 @@ const mapMaterialSentencesToFacts=(sentences=[],factMap=null)=>{
  for(const sentence of sentences){
   const st=factTokens(sentence); if(!st.size)continue; const sn=factNumbers(sentence);
   const matches=facts.map(f=>{const ft=factTokens(f.text),shared=[...st].filter(x=>ft.has(x)).length;const coverage=shared/Math.max(1,Math.min(st.size,ft.size));const phrases=factPhraseOverlap(sentence,f.text);const fn=factNumbers(f.text),numeric=[...sn].filter(x=>fn.has(x)).length;const score=shared*1.5+coverage*2+Math.min(3,phrases)*2+Math.min(2,numeric)*2;return{factId:f.factId,score,shared,coverage,phrases,numeric};}).filter(x=>x.shared>=2&&(x.coverage>=0.2||x.phrases>=1||x.numeric>0)).sort((a,b)=>b.score-a.score);
-  if(matches.length)matches.slice(0,3).forEach(x=>mappedFactIds.add(x.factId)); else unmapped.push(sentence);
+  if(matches.length){
+   const top=matches[0].score;
+   const selected=matches.filter(x=>x.score>=Math.max(4,top*0.65)&&(x.coverage>=0.25||x.phrases>=2||x.numeric>0)).slice(0,3);
+   if(selected.length)selected.forEach(x=>mappedFactIds.add(x.factId)); else unmapped.push(sentence);
+  } else unmapped.push(sentence);
  }
- return{distinctFactClaimCount:mappedFactIds.size,mappedFactIds:[...mappedFactIds],unmappedMaterialSentences:unmapped.length};
+ return{distinctFactClaimCount:mappedFactIds.size,mappedFactIds:[...mappedFactIds],unmappedMaterialSentences:unmapped.length}
 };
 
 export function validateDraft({title='',description='',content='',category='Technology',blueprint=null,maxFactualClaims=0,evidenceFactMap=null}){
