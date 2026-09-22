@@ -18,8 +18,8 @@ const contentWithinBudget=[
  'Anthropic said the model is available through its developer platform, making that platform part of the documented availability information in the supplied evidence.',
  'The developer platform is therefore the documented channel through which Anthropic said the model is available, restating the same availability fact rather than adding a new claim.',
  'The September 22 announcement, the stated safeguards, and the developer-platform availability are the three documented facts used by this test, even though each fact is expressed in more than one sentence.',
- 'Taken together, these sentences show that repeated factual wording can expand an article without increasing the number of distinct evidence-backed facts being claimed.'
-].join('\\n\\n');
+ 'These three documented facts remain the only factual premises in the test, and the repeated wording is intentionally explanatory rather than a new report about another event, location, company facility, or product capability.'
+].join('\n\n');
 
 const pass=validateDraft({...base,content:contentWithinBudget});
 assert.equal(pass.passed,true,'Repeated sentences supported by the same facts must not consume the claim budget: '+pass.errors.join('; '));
