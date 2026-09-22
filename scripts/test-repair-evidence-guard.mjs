@@ -11,11 +11,11 @@ try{
  const subset=loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',bestPassageId:'S1-F9',bestPassage:'Supported fact passage. It continues with additional canonical context'}],path});
  assert.equal(subset.claims[0].bestPassage,'A publisher paragraph begins here. Supported fact passage. It continues with additional canonical context and attribution.');
  const byId=loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',sourceId:'S1',bestPassageId:'S1-P1',bestPassage:'Different whitespace text.'}],path});
- assert.equal(byId.claims[0].bestPassage,'Supported fact passage.');
+ assert.equal(byId.claims[0].bestPassage,'A publisher paragraph begins here. Supported fact passage. It continues with additional canonical context and attribution.');
  const byIdWithoutSource=loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',bestPassageId:'S1-P1',bestPassage:'Different whitespace text.'}],path});
- assert.equal(byIdWithoutSource.claims[0].bestPassage,'Supported fact passage.');
+ assert.equal(byIdWithoutSource.claims[0].bestPassage,'A publisher paragraph begins here. Supported fact passage. It continues with additional canonical context and attribution.');
  const factSentence=loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',bestPassageId:'S1-F9',bestPassage:'Supported fact passage.'}],path});
- assert.equal(factSentence.claims[0].bestPassage,'Supported fact passage.');
+ assert.equal(factSentence.claims[0].bestPassage,'A publisher paragraph begins here. Supported fact passage. It continues with additional canonical context and attribution.');
  const byBody=loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://example.com/source',bestPassageId:'S1-BODY',bestPassage:'Full canonical publisher body.'}],path});
  assert.equal(byBody.claims[0].bestPassage,'Full canonical publisher body.');
  assert.throws(()=>loadCanonicalRepairEvidence({briefTitle:'Repair fixture',failedClaims:[{claim:'x',bestUrl:'https://evil.example/source',bestPassage:'Supported fact passage.'}],path}),/non-canonical evidence URL/);
