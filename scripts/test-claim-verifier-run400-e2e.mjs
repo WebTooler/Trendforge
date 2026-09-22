@@ -45,7 +45,7 @@ const brief={
   }
 };
 
-const pack={
+const packCandidate={
   version:1,status:'authoritative',evidenceBriefVersion:0,generatedAt:new Date().toISOString(),
   candidate:{title,link:'https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/',category:'Digital Life'},
   policy:'Run 400 isolated immutable provenance regression pack.',
@@ -66,7 +66,7 @@ const articleContent=[
 ].join('\\n');
 
 fs.writeFileSync(path.join(temp,'data','article-brief.json'),JSON.stringify(brief,null,2));
-fs.writeFileSync(path.join(temp,'data','authoritative-evidence-pack.json'),JSON.stringify(pack,null,2));
+fs.writeFileSync(path.join(temp,'data','authoritative-evidence-pack.json'),JSON.stringify({candidates:[packCandidate]},null,2));
 fs.writeFileSync(path.join(temp,'content','articles','run-400-regression.md'),articleContent);
 
 const verifierPath=new URL('./verify-article-claims-smart.mjs',import.meta.url);
