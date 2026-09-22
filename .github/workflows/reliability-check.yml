@@ -81,6 +81,9 @@ jobs:
       - name: Verify writer evidence passage selection
         run: npm run writer-evidence-selection:test
 
+      - name: Verify writer evidence claim mapping
+        run: npm run writer-evidence-claim-mapping:test
+
       - name: Verify Phase 3 quality canonical evidence
         run: npm run quality-evidence:test
 
