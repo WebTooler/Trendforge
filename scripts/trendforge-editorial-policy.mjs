@@ -67,7 +67,7 @@ const mapMaterialSentencesToFacts=(sentences=[],factMap=null)=>{
  for(const f of facts){for(const t of factTokens(f.text))tokenFactFrequency.set(t,(tokenFactFrequency.get(t)||0)+1);}
  for(const sentence of sentences){
   const st=factTokens(sentence); if(!st.size)continue; const sn=factNumbers(sentence);
-  const matches=facts.map(f=>{const ft=factTokens(f.text),shared=[...st].filter(x=>ft.has(x)).length;const uniqueShared=[...st].filter(x=>ft.has(x)&&(tokenFactFrequency.get(x)||0)===1).length;const coverage=shared/Math.max(1,Math.min(st.size,ft.size));const phrases=factPhraseOverlap(sentence,f.text);const fn=factNumbers(f.text),numeric=[...sn].filter(x=>fn.has(x)).length;const score=shared*1.5+uniqueShared*3+coverage*2+Math.min(3,phrases)*2+Math.min(2,numeric)*2;return{factId:f.factId,score,shared,uniqueShared,coverage,phrases,numeric};}).filter(x=>(x.shared>=2||x.phrases>=1||x.numeric>0)&&(x.uniqueShared>0||x.phrases>=1||x.numeric>0)).sort((a,b)=>b.score-a.score);
+  const matches=facts.map(f=>{const ft=factTokens(f.text),shared=[...st].filter(x=>ft.has(x)).length;const uniqueShared=[...st].filter(x=>ft.has(x)&&(tokenFactFrequency.get(x)||0)===1).length;const coverage=shared/Math.max(1,Math.min(st.size,ft.size));const phrases=factPhraseOverlap(sentence,f.text);const fn=factNumbers(f.text),numeric=[...sn].filter(x=>fn.has(x)).length;const score=shared*1.5+uniqueShared*3+coverage*2+Math.min(3,phrases)*2+Math.min(2,numeric)*2;return{factId:f.factId,score,shared,uniqueShared,coverage,phrases,numeric};}).filter(x=>x.uniqueShared>0||x.numeric>0||(x.shared>=2&&x.phrases>=2)).sort((a,b)=>b.score-a.score);
   if(matches.length){
    const top=matches[0];
    // A material sentence normally expresses one underlying evidence fact. Do not
