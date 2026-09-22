@@ -67,6 +67,8 @@ jobs:
         run: npm run claims:deterministic
       - name: Verify Run 400 immutable provenance regression
         run: npm run claims:run400-regression
+      - name: Verify Run 400 end-to-end claim verifier provenance
+        run: npm run claims:run400-e2e
 
       - name: Verify Phase 3 quality canonical evidence
         run: npm run quality-evidence:test
