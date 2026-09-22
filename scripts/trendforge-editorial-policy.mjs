@@ -74,7 +74,7 @@ const mapMaterialSentencesToFacts=(sentences=[],factMap=null)=>{
    // charge additional Fact IDs merely because generic words overlap with them.
    // Only allow a second fact when it has an independent numeric or strong phrase anchor.
    mappedFactIds.add(top.factId);
-   const secondary=matches.slice(1).filter(x=>x.score>=Math.max(7,top.score*0.8)&&(x.numeric>0||x.phrases>=2)).slice(0,2);
+   const secondary=matches.slice(1).filter(x=>x.score>=Math.max(7,top.score*0.8)&&x.uniqueShared>0&&(x.numeric>0||x.phrases>=2)).slice(0,2);
    secondary.forEach(x=>mappedFactIds.add(x.factId));
   } else unmapped.push(sentence);
  }
