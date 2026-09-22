@@ -17,7 +17,7 @@ const contentWithinBudget=[
  'The documented safeguard statement concerns protection against misuse. It is a restatement of the same safeguard fact from the evidence record, using different wording while deliberately avoiding a new product capability or separate security event.',
  'Anthropic said the model is available through its developer platform. The supplied evidence identifies that developer platform as the documented access channel, and this sentence adds no separate distribution agreement, pricing statement, regional restriction, or additional service claim.',
  'The recorded access channel is Anthropic’s developer platform. This repeats the same availability fact in different wording and is intentionally limited to the documented platform relationship, so it should map to F3 rather than create a fourth factual claim.'
-
+].join('\\n\\n');
 
 const pass=validateDraft({...base,content:contentWithinBudget});
 assert.equal(pass.passed,true,'Repeated sentences supported by the same facts must not consume the claim budget: '+pass.errors.join('; '));
