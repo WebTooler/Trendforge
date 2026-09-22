@@ -12,13 +12,11 @@ const base={title:'Anthropic announces a new Claude model',description:'Anthropi
 
 const contentWithinBudget=[
  'Anthropic announced a new Claude model on September 22, according to the supplied evidence record, and that date is the documented timing of the announcement.',
- 'The announcement identifies September 22 as the date on which Anthropic announced the new Claude model, so both sentences describe the same underlying announcement fact.',
- 'The company said the model includes stronger safeguards against misuse, according to the evidence, with those safeguards presented as part of the model announcement.',
- 'Anthropic described the stronger safeguards as part of the model announcement and its stated protections against misuse, repeating the same documented safeguard fact.',
- 'Anthropic said the model is available through its developer platform, making that platform part of the documented availability information in the supplied evidence.',
- 'The developer platform is therefore the documented channel through which Anthropic said the model is available, restating the same availability fact rather than adding a new claim.',
- 'The September 22 announcement, the stated safeguards, and the developer-platform availability are the three documented facts used by this test, even though each fact is expressed in more than one sentence.',
- 'These three documented facts remain the only factual premises in the test, and the repeated wording is intentionally explanatory rather than a new report about another event, location, company facility, or product capability.'
+ 'The announcement identifies September 22 as the date on which Anthropic announced the new Claude model, so both sentences describe the same underlying announcement fact and not a second event.',
+ 'The company said the model includes stronger safeguards against misuse, according to the evidence, with those safeguards presented as part of the model announcement and its stated protections.',
+ 'Anthropic described the stronger safeguards as part of the model announcement and its stated protections against misuse, repeating the same documented safeguard fact without adding another capability.',
+ 'Anthropic said the model is available through its developer platform, making that platform part of the documented availability information in the supplied evidence and the relevant access channel.',
+ 'The developer platform is therefore the documented channel through which Anthropic said the model is available, restating the same availability fact rather than adding a new product or service claim.'
 ].join('\n\n');
 
 const pass=validateDraft({...base,content:contentWithinBudget});
