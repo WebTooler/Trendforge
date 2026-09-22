@@ -27,7 +27,11 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
   const story={title:String(candidate.title||''),description:String(candidate.description||'')};
   const normalizedSources=[]; const allClaims=[]; let rawPassageCount=0;
   for(let si=0;si<sources.length;si++){
-    const source=sources[si]||{}; const raw=Array.isArray(source.passages)?source.passages.map(x=>String(x).replace(/\s+/g,' ').trim()).filter(Boolean):[];
+    const source=sources[si]||{};
+    // Match evidence against the publisher's own headline/description as well
+    // as the TrendForge candidate title; wording often differs materially.
+    const sourceStory={title:String(source.title||candidate.title||''),description:String(source.description||candidate.description||'')};
+    const raw=Array.isArray(source.passages)?source.passages.map(x=>String(x).replace(/\s+/g,' ').trim()).filter(Boolean):[];
     rawPassageCount+=raw.length;
     const units=[];
     for(let pi=0;pi<raw.length;pi++){
@@ -36,14 +40,16 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       const sentenceUnits=sentences.length?sentences:[passage];
       for(const sentence of sentenceUnits){
         if(isNoise(sentence))continue;
-        const rel=relevanceScore(sentence,story);
-        const fallbackRel=relevanceScore(passage,story);
+        const rel=relevanceScore(sentence,sourceStory);
+        const fallbackRel=relevanceScore(passage,sourceStory);
+        const candidateRel=relevanceScore(sentence,story);
         const effectiveRel=rel.score>=fallbackRel.score?rel:fallbackRel;
-        const titleAnchor=overlap(sentence,story.title);
-        const storyAnchored=titleAnchor.count>=2||effectiveRel.numericMatch>0||effectiveRel.entityShared>0;
+        const titleAnchor=overlap(sentence,sourceStory.title);
+        const candidateAnchor=overlap(sentence,story.title);
+        const storyAnchored=titleAnchor.count>=2||candidateAnchor.count>=2||effectiveRel.numericMatch>0||effectiveRel.entityShared>0;
         if(!storyAnchored)continue;
-        const minimumScore=(titleAnchor.count>=2||effectiveRel.entityShared>0||effectiveRel.numericMatch>0)?1:3;
-        if(effectiveRel.score<minimumScore)continue;
+        const minimumScore=(titleAnchor.count>=2||candidateAnchor.count>=2||effectiveRel.entityShared>0||effectiveRel.numericMatch>0)?1:3;
+        if(effectiveRel.score<minimumScore && candidateRel.score<minimumScore)continue;
         units.push({rawPassageIndex:pi,text:sentence,relevance:effectiveRel.score,topicOverlap:effectiveRel.topicOverlap,entityShared:effectiveRel.entityShared});
       }
     }
