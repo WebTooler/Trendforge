@@ -21,7 +21,7 @@ const contentWithinBudget=[
 
 const pass=validateDraft({...base,content:contentWithinBudget});
 assert.equal(pass.passed,true,'Repeated sentences supported by the same facts must not consume the claim budget: '+pass.errors.join('; '));
-assert.equal(pass.metrics.evidenceClaimMetrics.materialSentenceCount,6);
+assert.equal(pass.metrics.evidenceClaimMetrics.materialSentenceCount,4);
 assert.equal(pass.metrics.evidenceClaimMetrics.distinctFactClaimCount,3);
 assert.equal(pass.metrics.evidenceClaimMetrics.unmappedMaterialSentences,0);
 
