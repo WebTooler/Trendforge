@@ -63,7 +63,7 @@ const synthesis=fixture.claims.find(c=>c.expected==='supported-synthesis')?.clai
 const articleContent=[
   '---',`title: "${title.replaceAll('"','\\\"')}"`,'---','',
   '## What Happened',...factual,'','## What the Evidence Shows',synthesis
-].join('\\n');
+].join('\n');
 
 fs.writeFileSync(path.join(temp,'data','article-brief.json'),JSON.stringify(brief,null,2));
 fs.writeFileSync(path.join(temp,'data','authoritative-evidence-pack.json'),JSON.stringify({candidates:[packCandidate]},null,2));
