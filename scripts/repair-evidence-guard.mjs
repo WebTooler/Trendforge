@@ -46,7 +46,21 @@ export function loadCanonicalRepairEvidence({briefTitle, failedClaims, path='dat
       }
     }
     if(!canonicalMatch){
-      canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizeEvidence(passage))||'';
+      const normalizedPassage=normalizeEvidence(passage);
+      canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizedPassage)||'';
+    }
+    // Fact-map provenance can preserve a sentence-level immutable fact extracted
+    // from a canonical publisher passage. That fact is authoritative only when
+    // the exact normalized text is contained in the canonical passage (or vice
+    // versa); semantic similarity alone is deliberately NOT accepted here.
+    if(!canonicalMatch){
+      const normalizedPassage=normalizeEvidence(passage);
+      if(normalizedPassage.length>=60){
+        canonicalMatch=canonicalPassages.find(p=>{
+          const normalizedCanonical=normalizeEvidence(p);
+          return normalizedCanonical.includes(normalizedPassage)||normalizedPassage.includes(normalizedCanonical);
+        })||'';
+      }
     }
     if(!passage||!canonicalMatch) throw new Error(`Failed claim ${index+1} uses evidence outside the canonical passage set.`);
     return {...claim,bestUrl:source.url,bestSource:source.title||source.domain||source.url,bestPassage:canonicalMatch};
