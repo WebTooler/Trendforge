@@ -2,13 +2,13 @@
   "version": 10,
   "providers": {
     "Groq": {
-      "failures": 70,
-      "quotaBlockedUntil": 0,
-      "lastStatus": 200,
-      "lastError": null,
-      "lastClass": "success",
-      "successes": 57,
-      "lastSuccessAt": "2026-09-22T17:09:42.622Z",
+      "failures": 71,
+      "quotaBlockedUntil": 1790098135013,
+      "lastStatus": 429,
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5396, Requested 5136. Please try again in 18.99s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastClass": "rate_limit",
+      "successes": 56,
+      "lastSuccessAt": "2026-09-22T06:09:15.686Z",
       "history": [
         {
           "at": 1790013184404,
@@ -216,36 +216,23 @@
           }
         },
         {
-          "at": 1790096982622,
-          "ok": true,
-          "class": "success",
-          "status": 200,
-          "latencyMs": 1304,
-          "usage": {
-            "queue_time": 0.275538804,
-            "prompt_tokens": 4292,
-            "prompt_time": 0.236641861,
-            "completion_tokens": 518,
-            "completion_time": 0.574743142,
-            "total_tokens": 4810,
-            "total_time": 0.811385003,
-            "completion_tokens_details": {
-              "reasoning_tokens": 24
-            }
-          }
+          "at": 1790098127013,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
         }
       ],
-      "lastLatencyMs": 1304,
+      "lastLatencyMs": 975,
       "lastUsage": {
-        "queue_time": 0.275538804,
-        "prompt_tokens": 4292,
-        "prompt_time": 0.236641861,
-        "completion_tokens": 518,
-        "completion_time": 0.574743142,
-        "total_tokens": 4810,
-        "total_time": 0.811385003,
+        "queue_time": 0.241404858,
+        "prompt_tokens": 2528,
+        "prompt_time": 0.128458559,
+        "completion_tokens": 419,
+        "completion_time": 0.532172061,
+        "total_tokens": 2947,
+        "total_time": 0.66063062,
         "completion_tokens_details": {
-          "reasoning_tokens": 24
+          "reasoning_tokens": 86
         }
       }
     },
@@ -566,5 +553,5 @@
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-22T17:09:43.205Z"
+  "updatedAt": "2026-09-22T17:28:47.013Z"
 }

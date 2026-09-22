@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "generatedAt": "2026-09-22T17:09:22.258Z",
+  "generatedAt": "2026-09-22T17:28:18.770Z",
   "minimumStrongSources": 2,
   "minimumStrongPublisherFamilies": 2,
   "minimumStrongDomains": 2,
@@ -10,37 +10,6 @@
   ],
   "policy": "Source-page integrity is required for generation. Two independent publisher families is strong evidence, but a single verified publisher article may enter the generation path and remains subject to writer grounding, claim verification, editorial quality, safety and SEO gates.",
   "report": [
-    {
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMnNYR3JuYXZmUzBJOF9MeXdyaEJCd0N2cVBBSGMxdkVIVVBXa3ZYRUR6UTM1QTFRMkIxVW1kbTJNR0EzZ210MXJqOXdaZFBnNWs4N3JpQjlUejJvQ2dqVTIxOGt1TDQzdEh6QUx1aU5nRzYwZXNxdWtmWkdfcjB5dUtKTjM1Zw?oc=5",
-      "title": "Trump Addresses United Nations to Rebrand Artificial Intelligence as \"Super Intelligence\" - Futurism",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "futurism.com"
-      ],
-      "independentDomains": [
-        "futurism.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://futurism.com/artificial-intelligence/donald-trump-un-super-intelligence",
-          "domain": "futurism.com",
-          "publisherFamily": "futurism.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://futurism.com/artificial-intelligence/donald-trump-un-super-intelligence",
-          "pageTitle": "Trump Addresses United Nations to Declare That the United States Is Now Calling Artificial Intelligence \"Super Intelligence\" in \"All Official Documents\"",
-          "canonical": "https://futurism.com/artificial-intelligence/donald-trump-un-super-intelligence",
-          "bodyChars": 3402,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
     {
       "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQdzdoSjQxeEVTZjVPbVV6RmRBSVhOZ0FPbUxLUlFfTVJjS2tmYk5xQldGLTdfN21BRG80Z1ZHN3Vmc2lqRm9IVkNyVTRvQUZMc19ZNWdYU1RhTndkaEtveVF4U181c3JMVzlVZ1VGOVJhTTJfMWdpRjl0QXBKbmdYU0tyUmhGT3RhcVNLYVFQSy1wTzV3UlZjbWtackNkLUk5RmxHWnM3RDVGakg1MGpGa0kxT0VmMllKVGpvX1JhV0hJQVdFMFpPdHNOWGZPMW5yc0ZleWQ2VUdlM1ZNY3FXQmViVVNUN2M1NURLckM0TUhkZk1KVms0NkxDSGhXblZUMGl3R0JFalRPWWd1VUgxVzdvNDRfYUlhX2ZiVjR0WnpuZGpL?oc=5",
       "title": "Bitcoin and ethereum prices today, Tuesday, September 22, 2026: Crypto prices continue to surge to prices last seen in January - Yahoo Finance",
@@ -165,7 +134,7 @@
           "finalUrl": "https://en.tempo.co/read/2119934/trump-announces-new-ai-force-amid-mounting-pressure",
           "pageTitle": "Trump Announces New &#039;AI Force&#039; amid Mounting Pressure - En.tempo.co",
           "canonical": "https://en.tempo.co/read/2119934/trump-announces-new-ai-force-amid-mounting-pressure",
-          "bodyChars": 6395,
+          "bodyChars": 6406,
           "topicOverlap": 7
         }
       ],
@@ -238,14 +207,16 @@
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQdnBFTVhqVUVKZzd1b2I2ajFHNTkwWDNVV0dwRjR3Q2lzZVdCZHFDakJOeUtYT2tVc0dCOF8zbkJ1cnNILTNPSmRkZFFDZTZIakV0R0tRSUxCQnpZQnRMSEtpZi03OHFqUnc2RlZLaVRPOGY3ZmZ3LXhReTNiTlE1bzNTaDBNSVZQMGZIRU9Gekw4Vk9BUlkya2lOSlZYUlJCS2wwZHR1TVhBdm9lSkNvbTFpeDYzRmVMTDFlaDZKQmI?oc=5",
       "title": "Accenture and Google Cloud Transform Software Development with Volvo Cars - Google Cloud Press Corner",
       "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
       "independentPublisherFamilies": [
-        "googlecloudpresscorner.com"
+        "googlecloudpresscorner.com",
+        "eagletribune.com"
       ],
       "independentDomains": [
-        "googlecloudpresscorner.com"
+        "googlecloudpresscorner.com",
+        "eagletribune.com"
       ],
       "sources": [
         {
@@ -260,10 +231,23 @@
           "canonical": "https://www.googlecloudpresscorner.com/2026-09-22-Accenture-and-Google-Cloud-Transform-Software-Development-with-Volvo-Cars",
           "bodyChars": 4732,
           "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://www.eagletribune.com/region/accenture-and-google-cloud-transform-software-development-with-volvo-cars/article_8d4651fa-5ee3-5fc8-a5d8-be2984480910.html",
+          "domain": "eagletribune.com",
+          "publisherFamily": "eagletribune.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.eagletribune.com/region/accenture-and-google-cloud-transform-software-development-with-volvo-cars/article_8d4651fa-5ee3-5fc8-a5d8-be2984480910.html",
+          "pageTitle": "Accenture and Google Cloud Transform Software Development with Volvo Cars | Region | eagletribune.com",
+          "canonical": "https://www.businesswire.com/news/home/20260921777209/en/",
+          "bodyChars": 2047,
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTHFSRVlHOGRzQlVzcWRvcHlCU2pyMGhSXzlPLUxvNnFqaldRVnpIYWJWMHpvRHY5OUR3UmV1eGtCS29LbHlHUFFDaHc5YjVhN1owS0RfT2Y1X0FSVVJsZ09WZUNNOUV4MGtZLTRMeS01bVJ2MHdaaE5VMEI3M3laVEZGejJCNHZSWDFuNWZ1NjBHd9IBlwFBVV95cUxQTnJVNkJmdXZuX2pHN0pqd1JKczNfM21JVHFLaHU5QVFHN1VERkxtNUhqQVZuZi1xaUZrZms3SzFWU201SUs2Y0cySEN2SG4wUmQ1TnVOMEo5T2lacDJpMzVoS2RwQWdUOUV2cG93bkZURUxNb2JhRkE1R1RyZlk1dkhvS1k2cGxSTjRlallVRzF4RzB4RkJr?oc=5",
@@ -311,7 +295,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9wZElLYTA3N1pYMHNTa0dOTGpMT2dnUG9oQ0RYZE9KRm1VRnJJVWxLUFluRHpaT1V0SWpkMzBoODNpN0hhZGVJRnFHYWduMlN5eHJyMmN4ZXk?oc=5",
-      "title": "Watch: Moment Trump rebrands Artificial Intelligence to Super Intelligence - BBC",
+      "title": "Watch: Moment Trump rebrands Artificial Intelligence to Super Intelligence - bbc.com",
       "status": "pass",
       "evidenceLevel": "strong",
       "validSourceCount": 2,
@@ -356,6 +340,95 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQckMxTlUwUEdVMk5jNEVzdGt3aS1FUHhwS2JwQThYLWNHaUpCbnI1T1dLcWxxVXkzTVlOVkwwbEE5S3UyYmhXbHBjYWkza0x2TTZ0ZEFoMWVNaHRuaWNwLWpmT2JzY09nY3pybDlzbGlNR3YtTGpaMC1LaDQxdWdZR2ZwQmxtaGUwSk5iRjYxRlBFTXNvUnVXWHgwY18xV3py?oc=5",
+      "title": "Trump says he’s renaming AI to ‘super intelligence’ - washingtonpost.com",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.washingtonpost.com/technology/2026/09/22/trump-says-hes-renaming-ai-super-intelligence/",
+          "domain": "washingtonpost.com",
+          "publisherFamily": "washingtonpost.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.washingtonpost.com/technology/2026/09/22/trump-says-hes-renaming-ai-super-intelligence/",
+          "pageTitle": "Trump says he’s renaming AI to ‘super intelligence’ - The Washington Post",
+          "canonical": "https://www.washingtonpost.com/technology/2026/09/22/trump-says-hes-renaming-ai-super-intelligence/",
+          "bodyChars": 493,
+          "topicOverlap": 4
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOMnNYR3JuYXZmUzBJOF9MeXdyaEJCd0N2cVBBSGMxdkVIVVBXa3ZYRUR6UTM1QTFRMkIxVW1kbTJNR0EzZ210MXJqOXdaZFBnNWs4N3JpQjlUejJvQ2dqVTIxOGt1TDQzdEh6QUx1aU5nRzYwZXNxdWtmWkdfcjB5dUtKTjM1Zw?oc=5",
+      "title": "Trump Addresses United Nations to Rebrand Artificial Intelligence as \"Super Intelligence\" - futurism.com",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "futurism.com"
+      ],
+      "independentDomains": [
+        "futurism.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://futurism.com/artificial-intelligence/donald-trump-un-super-intelligence",
+          "domain": "futurism.com",
+          "publisherFamily": "futurism.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://futurism.com/artificial-intelligence/donald-trump-un-super-intelligence",
+          "pageTitle": "Trump Addresses United Nations to Declare That the United States Is Now Calling Artificial Intelligence \"Super Intelligence\" in \"All Official Documents\"",
+          "canonical": "https://futurism.com/artificial-intelligence/donald-trump-un-super-intelligence",
+          "bodyChars": 3402,
+          "topicOverlap": 5
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaGk0VWlrbnliZFpGdEtiZkloYjVHQjdaWDNsaVBrWXVvNW1PNVNrcGtlVUtWQkZzcm9vcU9LX3MyODN1RzgwX0owM1BaVEFtaVBTaGRvcmNFWnpzQWVVN3E0clZTWmstMEQwVVNscEZOOWlEUUk5dmFkbzd0V0ktZ3hSNmZSbXBQZmFxZ3JHcEJJc0VvOEMxSGM1QW9nNXhmR0x1OFJIdjRGcG82ZnQ4cnln0gHGAUFVX3lxTE9xeDhVcGlrUW42R082c01hZUtCRVZpYTJJQnlqbVk0ckV4cElHcjVlLW1ocnRwN2haeUwwa1BkWnhYSlkzQXZoUnU4cmpJZFlad0tYZkU1ZXlMSnBMbVVBclV0RXFFN3l3cjJTRFVlN1hyeExfcjZPVHAyc2dYdmx4d1NDZjF4a0lxVDg2ZGR6cEtodWx4emhlMUhlZGVzUkZPcGRTLTZlWXhja1o5WkUxeWVhaDJIeHJmczRFa2xwcnB6MkdDQQ?oc=5",
+      "title": "Data center being considered at Roanoke Wood Haven Technology Park, Authority says - WDBJ7",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "wdbj7.com"
+      ],
+      "independentDomains": [
+        "wdbj7.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.wdbj7.com/2026/09/22/data-center-being-considered-roanoke-wood-haven-technology-park-authority-says/",
+          "domain": "wdbj7.com",
+          "publisherFamily": "wdbj7.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.wdbj7.com/2026/09/22/data-center-being-considered-roanoke-wood-haven-technology-park-authority-says/",
+          "pageTitle": "Roanoke Wood Haven Technology Park being evaluated for data center, Authority says",
+          "canonical": "https://www.wdbj7.com/2026/09/22/data-center-being-considered-roanoke-wood-haven-technology-park-authority-says/",
+          "bodyChars": 2942,
+          "topicOverlap": 8
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://techcrunch.com/2026/09/22/five-ai-safety-sessions-every-founder-should-have-on-their-techcrunch-disrupt-2026-agenda/",
       "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
       "status": "pass",
@@ -387,57 +460,63 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcTAzQ0dOS3poenhSZENOSWRmeF9xRkxVNjNmU2dfaDBSY3dvSzBoejVPNGE1Q3pkc2U0M2JMQ2g0a0V3UUF6UF9jb0ZuakxJLURRSFRvRnJteWE5Vk50RXpRZDZtRnpJOVpBTm1GUjZHVzZJYnA4eEJRU2xYbGlDZ2F6bkJ3UnJtVlpESklKRDdzQm94cDJ1YWFYa0paT1N5SUJpZVFLNXNvMjdxVVZUeWVB?oc=5",
-      "title": "Alibaba Looks to Strengthen Artificial Intelligence Position After Unveiling New Chips, Models - Yahoo Finance",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYkFwcnFpOFFycEx0SEwwNUxZazVuTTh6aUNKZ0pUUHlPU2toMkk2WXAyc3RkYTdKWlVsTEVoTmR5VGJaZlhaU21OdHp2aXRWZ0VGNGtJdERKVGUtWXBiMWdKRm9JY04zTnZ3YXp5akdBU2RsS0tHZG9ESTVmR0hOWUYyaWpjYVNCcFF3c3RBVk53NC1SanNTaXpxOHdMei1SNUJPWnhLLTkzU2VOaUE?oc=5",
+      "title": "Trump says US Justice Department could rein in AI companies if needed - Reuters",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "cnbc.com",
+        "yahoo.com"
+      ],
+      "independentDomains": [
+        "cnbc.com",
+        "yahoo.com"
+      ],
       "sources": [
         {
-          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/alibaba-looks-strengthen-artificial-intelligence-145452881.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
+          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RD:0-trump-says-us-justice-department-could-rein-in-ai-companies-if-needed/",
+          "domain": "tradingview.com",
+          "publisherFamily": "tradingview.com",
+          "resolvedFrom": "article-link",
           "ok": false,
-          "reason": "unreachable-or-non-html"
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RD:0-trump-says-us-justice-department-could-rein-in-ai-companies-if-needed/",
+          "pageTitle": "Trump says US Justice Department could rein in AI companies if needed — TradingView News",
+          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RD:0-trump-says-us-justice-department-could-rein-in-ai-companies-if-needed/",
+          "bodyChars": 344,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://www.cnbc.com/2026/09/21/trump-ai-doj.html",
+          "domain": "cnbc.com",
+          "publisherFamily": "cnbc.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.cnbc.com/2026/09/21/trump-ai-doj.html",
+          "pageTitle": "Trump says DOJ will rein in AI 'if we have to'",
+          "canonical": "https://www.cnbc.com/2026/09/21/trump-ai-doj.html",
+          "bodyChars": 2301,
+          "topicOverlap": 4
+        },
+        {
+          "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-says-ways-rein-ai-175933317.html",
+          "domain": "yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-says-ways-rein-ai-175933317.html",
+          "pageTitle": "Trump says there are ways to 'rein' in AI 'if we have to'",
+          "canonical": "https://www.businessinsider.com/trump-ai-justice-department-regulations-2026-9",
+          "bodyChars": 2962,
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTlZzZTRtZTFlcWZpRF9fQU1YeEFJQnlYN01fUndXY3lmZmo3ZmFrMDUwU1FLaERjUXplVE8zZVFSQXdyLWtuemU5R0lHeDNQUjl4UmFlWlZhc3d1REtQTUp4eF8wMDR4SDBJNGxQWXM3bzhJQkVrcTR6RzY0QWQweA?oc=5",
-      "title": "Bitcoin and Crypto Stocks Have Been on a Tear. Here’s Why. - Barron's",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "indiatimes.com"
-      ],
-      "independentDomains": [
-        "economictimes.indiatimes.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://economictimes.indiatimes.com/news/international/us/why-crypto-is-down-today-bitcoin-price-btc-eth-ether-xrp-and-sol-solana-down-this-week-fed-inflation-data/articleshow/124130672.cms?from=mdr",
-          "domain": "economictimes.indiatimes.com",
-          "publisherFamily": "indiatimes.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://economictimes.indiatimes.com/news/international/us/why-crypto-is-down-today-bitcoin-price-btc-eth-ether-xrp-and-sol-solana-down-this-week-fed-inflation-data/articleshow/124130672.cms?from=mdr",
-          "pageTitle": "Bitcoin price: Is crypto market crashing again today? Here's why Bitcoin price, Ether, XRP, and Solana are down this week - The Economic Times",
-          "canonical": "https://m.economictimes.com/news/international/us/why-crypto-is-down-today-bitcoin-price-btc-eth-ether-xrp-and-sol-solana-down-this-week-fed-inflation-data/articleshow/124130672.cms",
-          "bodyChars": 4564,
-          "topicOverlap": 12
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOYUdUcGFvVkFxd2VkMmg5QWxkZkxxY0VldDJIOXpIYkRMYzFpcjA4NUhMRk1FRnd0bjZZNkJIeU54TzhMRGZlY09nMWtJOU1VM09fSm9KaDhBZXd0Z05jdWtJMXRoX1Q1bnFXR2ZmSlBNS2cxUjJMQkp0TzVRbVo0WlFHU3BIMmozSHoxenBZQWQxZmxyeVBOamRiTWZoUQ?oc=5",
@@ -461,6 +540,52 @@
           "canonical": "",
           "bodyChars": 0,
           "topicOverlap": 0
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTlZzZTRtZTFlcWZpRF9fQU1YeEFJQnlYN01fUndXY3lmZmo3ZmFrMDUwU1FLaERjUXplVE8zZVFSQXdyLWtuemU5R0lHeDNQUjl4UmFlWlZhc3d1REtQTUp4eF8wMDR4SDBJNGxQWXM3bzhJQkVrcTR6RzY0QWQweA?oc=5",
+      "title": "Bitcoin and Crypto Stocks Have Been on a Tear. Here’s Why. - Barron's",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "money.com",
+        "indiatimes.com"
+      ],
+      "independentDomains": [
+        "money.com",
+        "economictimes.indiatimes.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://money.com/bitcoin-price-predictions-2023/",
+          "domain": "money.com",
+          "publisherFamily": "money.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://money.com/bitcoin-price-predictions-2023/",
+          "pageTitle": "Crypto Predictions: Where Bitcoin's Price Is Headed in 2023 | Money",
+          "canonical": "https://money.com/bitcoin-price-predictions-2023/",
+          "bodyChars": 4226,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://economictimes.indiatimes.com/news/international/us/why-crypto-is-down-today-bitcoin-price-btc-eth-ether-xrp-and-sol-solana-down-this-week-fed-inflation-data/articleshow/124130672.cms?from=mdr",
+          "domain": "economictimes.indiatimes.com",
+          "publisherFamily": "indiatimes.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://economictimes.indiatimes.com/news/international/us/why-crypto-is-down-today-bitcoin-price-btc-eth-ether-xrp-and-sol-solana-down-this-week-fed-inflation-data/articleshow/124130672.cms?from=mdr",
+          "pageTitle": "Bitcoin price: Is crypto market crashing again today? Here's why Bitcoin price, Ether, XRP, and Solana are down this week - The Economic Times",
+          "canonical": "https://m.economictimes.com/news/international/us/why-crypto-is-down-today-bitcoin-price-btc-eth-ether-xrp-and-sol-solana-down-this-week-fed-inflation-data/articleshow/124130672.cms",
+          "bodyChars": 4564,
+          "topicOverlap": 12
         }
       ],
       "recoveryAttempts": 0,
@@ -528,152 +653,46 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbWhsMEtYNUNCQU9CS0lJSEUyOWgzeTJPNl8xYUNNU1lpRGIwTEVLZGhleDllbWpXRjZoM29vc0RLcXA3UExZY0tjc0Fjc0g2YW1mTUIyaWdNbUdoa2xxZnZHSGJwSVZ0bTFBOHBYTGN0WTZZbHNWX1JkbThCSFNqYlpnaXplVFFKNjI2Rl9JYXV0OUpwZFI0?oc=5",
-      "title": "Apple May Return to Servers With Its Own AI Chips. Nvidia Could Still Get Paid - Yahoo Finance",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/apple-may-return-servers-own-124420628.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTXotVG1mcHYyRFJFZURlbXpiMWstQ3BaMDVtMGpzel9BVUhncm1pVnI3bDFpS1ZRSXY3bkdMZ3hiTXVDdVJxUXZoV3Q4V20zaTV0Z180b1U0R3pPT1dORVBxeGRKMUNoeXMza2N2TjhES1hNdEREM3pORDJOS2Y1bjFtbFF6Q3NTQ3ZKY3FPb09LcFNCcGlMeFRUM3hMY2FIbC1CUW9BOWo0SC1SV05MUA?oc=5",
-      "title": "This security technology stock has an 'underappreciated' edge, Jefferies says - CNBC",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
-          "domain": "cnbc.com",
-          "publisherFamily": "cnbc.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
-          "pageTitle": "This security technology stock has an 'underappreciated' edge, Jefferies says",
-          "canonical": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
-          "bodyChars": 426,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMipgNBVV95cUxPZ2JJQ25zZlFnOXBERENiYmJiT24xMDg2dmtMUnpuR2dLWmg2bzYxTTBTWUxLTmtITlNySTFoeWRtVTlxLVZfYTVGNElSNGtMNUNwNzVUbHE2OFNFWnczS01NWTQwZHFzVVJCZ1ZlNkEtRGZ5YUpsaTBmSFZXcGg2bkU2QVhGdTZFSkZXM0FzYzZPemg2cXZ3YVBVNFBfdlFiZFUzQXFBYlZiTnRaZDFVeFAxMFE3dV9sanpuR1dZcHJtTm5XekZPTUhmZGZiZ081dHU0cEdNMXh5aXlSdmVfZ1VMSkFEMmR2Zl9YWEhCWUlLSEpXaTVkUHoySnlaaU1va2lSYTJEYUFJeG1WVjRNRUg1WThyOGpKX1lvUDFESFN1WEhUOTRWb1JncG5ObFRGdGNfbUYwRE9RN1BfZUtOVU5NSlROY2FXVy0wU3ZIQjAtMkdCeTRQT2xBdjNtSDVheTdEdHJrYkpqWVc0QzVadEZWdnZuazhodFR5Z0VFSjUwNDNTN0VEdUo2d2xJQ1VhSHF2MUI0czBqZFphRkNwRW1HNTlYZw?oc=5",
       "title": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled - Business Wire",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYkFwcnFpOFFycEx0SEwwNUxZazVuTTh6aUNKZ0pUUHlPU2toMkk2WXAyc3RkYTdKWlVsTEVoTmR5VGJaZlhaU21OdHp2aXRWZ0VGNGtJdERKVGUtWXBiMWdKRm9JY04zTnZ3YXp5akdBU2RsS0tHZG9ESTVmR0hOWUYyaWpjYVNCcFF3c3RBVk53NC1SanNTaXpxOHdMei1SNUJPWnhLLTkzU2VOaUE?oc=5",
-      "title": "Trump says US Justice Department could rein in AI companies if needed - Reuters",
       "status": "pass",
       "evidenceLevel": "strong",
       "validSourceCount": 2,
       "independentPublisherCount": 2,
       "independentPublisherFamilies": [
-        "cnbc.com",
-        "yahoo.com"
+        "joplinglobe.com",
+        "itemonline.com"
       ],
       "independentDomains": [
-        "cnbc.com",
-        "yahoo.com"
+        "joplinglobe.com",
+        "itemonline.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RD:0-trump-says-us-justice-department-could-rein-in-ai-companies-if-needed/",
-          "domain": "tradingview.com",
-          "publisherFamily": "tradingview.com",
+          "suppliedUrl": "https://www.joplinglobe.com/region/national_business/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38fedcee-d304-55dc-8269-0d7e8bb8d3fb.html",
+          "domain": "joplinglobe.com",
+          "publisherFamily": "joplinglobe.com",
           "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RD:0-trump-says-us-justice-department-could-rein-in-ai-companies-if-needed/",
-          "pageTitle": "Trump says US Justice Department could rein in AI companies if needed — TradingView News",
-          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RD:0-trump-says-us-justice-department-could-rein-in-ai-companies-if-needed/",
-          "bodyChars": 344,
-          "topicOverlap": 7
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.joplinglobe.com/region/national_business/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38fedcee-d304-55dc-8269-0d7e8bb8d3fb.html",
+          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled | National Business | joplinglobe.com",
+          "canonical": "https://www.businesswire.com/news/home/20260920309558/en/",
+          "bodyChars": 1611,
+          "topicOverlap": 24
         },
         {
-          "suppliedUrl": "https://www.cnbc.com/2026/09/21/trump-ai-doj.html",
-          "domain": "cnbc.com",
-          "publisherFamily": "cnbc.com",
+          "suppliedUrl": "https://www.itemonline.com/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38641563-8a4d-5d38-a16d-3a50d89b02fc.html",
+          "domain": "itemonline.com",
+          "publisherFamily": "itemonline.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cnbc.com/2026/09/21/trump-ai-doj.html",
-          "pageTitle": "Trump says DOJ will rein in AI 'if we have to'",
-          "canonical": "https://www.cnbc.com/2026/09/21/trump-ai-doj.html",
-          "bodyChars": 2301,
-          "topicOverlap": 4
-        },
-        {
-          "suppliedUrl": "https://www.yahoo.com/news/politics/articles/trump-says-ways-rein-ai-175933317.html",
-          "domain": "yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.yahoo.com/news/politics/articles/trump-says-ways-rein-ai-175933317.html",
-          "pageTitle": "Trump says there are ways to 'rein' in AI 'if we have to'",
-          "canonical": "https://www.businessinsider.com/trump-ai-justice-department-regulations-2026-9",
-          "bodyChars": 2962,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaGk0VWlrbnliZFpGdEtiZkloYjVHQjdaWDNsaVBrWXVvNW1PNVNrcGtlVUtWQkZzcm9vcU9LX3MyODN1RzgwX0owM1BaVEFtaVBTaGRvcmNFWnpzQWVVN3E0clZTWmstMEQwVVNscEZOOWlEUUk5dmFkbzd0V0ktZ3hSNmZSbXBQZmFxZ3JHcEJJc0VvOEMxSGM1QW9nNXhmR0x1OFJIdjRGcG82ZnQ4cnln0gHGAUFVX3lxTE9xeDhVcGlrUW42R082c01hZUtCRVZpYTJJQnlqbVk0ckV4cElHcjVlLW1ocnRwN2haeUwwa1BkWnhYSlkzQXZoUnU4cmpJZFlad0tYZkU1ZXlMSnBMbVVBclV0RXFFN3l3cjJTRFVlN1hyeExfcjZPVHAyc2dYdmx4d1NDZjF4a0lxVDg2ZGR6cEtodWx4emhlMUhlZGVzUkZPcGRTLTZlWXhja1o5WkUxeWVhaDJIeHJmczRFa2xwcnB6MkdDQQ?oc=5",
-      "title": "Data center being considered at Roanoke Wood Haven Technology Park, Authority says - WDBJ7",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "wdbj7.com"
-      ],
-      "independentDomains": [
-        "wdbj7.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.wdbj7.com/2026/09/22/data-center-being-considered-roanoke-wood-haven-technology-park-authority-says/",
-          "domain": "wdbj7.com",
-          "publisherFamily": "wdbj7.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.wdbj7.com/2026/09/22/data-center-being-considered-roanoke-wood-haven-technology-park-authority-says/",
-          "pageTitle": "Roanoke Wood Haven Technology Park being evaluated for data center, Authority says",
-          "canonical": "https://www.wdbj7.com/2026/09/22/data-center-being-considered-roanoke-wood-haven-technology-park-authority-says/",
-          "bodyChars": 2942,
-          "topicOverlap": 8
+          "finalUrl": "https://www.itemonline.com/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38641563-8a4d-5d38-a16d-3a50d89b02fc.html",
+          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled | | itemonline.com",
+          "canonical": "https://www.businesswire.com/news/home/20260920309558/en/",
+          "bodyChars": 1730,
+          "topicOverlap": 24
         }
       ],
       "recoveryAttempts": 0,
@@ -740,6 +759,19 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWjFSMGM0WDEzdFVqc3RrczI5d0JkSTlzX0pUTVFpa1V6bGh1UUZxeHNsTDNmRkJOQ2tGUWh3NnJ1MzZBclF1QnpCeHg1ZjR6cVZ3cU9jbUp6SzVWMFY4WFZZUmVQOE1mczBPdGR1TTk5VVNMTFlWc2Y3cjBGWkJSVElfZXMtbTRaWExTTnZCY0tJQ01i?oc=5",
+      "title": "Trump rejects global entity for AI oversight - Politico",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE95NzdrTUt3S0tmZEdkbUJDZVcwZjlITFNDWnE2LW96X3R4a05kbmhzTGgzWG9pdHo3V3cwaTZCUGMzLTVOU3FLZ2J0SXFSZDRUNVJtNE8tb0o2aVE5aURJSnJycEJLb0E?oc=5",
@@ -842,7 +874,7 @@
           "pageTitle": "Andreessen Horowitz launches AI academy as an alternative to college degree - The Tech Portal",
           "canonical": "https://thetechportal.com/2026/09/22/horowitz-andreessen-ai-academy-alternative-to-college-degree/",
           "bodyChars": 3203,
-          "topicOverlap": 7
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
@@ -853,14 +885,16 @@
       "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
       "independentPublisherFamilies": [
         "theverge.com",
+        "mashable.com",
         "lifehacker.com"
       ],
       "independentDomains": [
         "theverge.com",
+        "mashable.com",
         "lifehacker.com"
       ],
       "sources": [
@@ -874,8 +908,21 @@
           "finalUrl": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
           "pageTitle": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity | The Verge",
           "canonical": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
-          "bodyChars": 2757,
+          "bodyChars": 3121,
           "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://mashable.com/tech/claude-opus-launch-promises-better-performance-cheaper-price",
+          "domain": "mashable.com",
+          "publisherFamily": "mashable.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://mashable.com/tech/claude-opus-launch-promises-better-performance-cheaper-price",
+          "pageTitle": "Anthropic launches Claude Opus 5.5: Benchmarks, pricing, safety | Mashable",
+          "canonical": "https://mashable.com/tech/claude-opus-launch-promises-better-performance-cheaper-price",
+          "bodyChars": 4057,
+          "topicOverlap": 8
         },
         {
           "suppliedUrl": "https://lifehacker.com/tech/claude-says-its-latest-model-is-mythos-level",
@@ -895,72 +942,68 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNazd5QnVvMnB1cTVHODIzVmhNcGZfWXFpQW5iVlRXbWJ2SUtXekx1azJLTnc1dlFfZDJPUDBNNDhkTWoxOXdhZDFfR0FCWXZpdWpqY0hNbFJGUGx5YkpjVExVbURWM2tjQkRCVExhaGFxTVFtUHp6emR0NXRpOWxLaWk2NllrcV9KMFNUcmlEZUlfMDVVZTViZA?oc=5",
-      "title": "Not Micron. Not Alphabet. Here's My Top Artificial Intelligence (AI) Stock Pick for the Next 3 Years. - Yahoo Finance",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSGdURXFrNW1oN0pRM0Z6Z3Y3YmpFaXEyaHFiRDVCS1lYSFR0Y0MtSGJoeUk4Zmdud3ZUNzY4QUNEQTJkV1VJT2dVMGpDd2FEMndwVmxKVzJVVTkzVE05dkNRam9KMFlCOXh6S0VLN0hEaWM3ODUxamJuTUplS3hWUGNWMVlwVENiaHFpN2pRbnFjeVpISWg5VA?oc=5",
+      "title": "Not Micron. Not Alphabet. Here's My Top Artificial Intelligence (AI) Stock Pick for the Next 3 Years. - The Motley Fool",
       "status": "pass",
-      "evidenceLevel": "single-source",
+      "evidenceLevel": "strong",
       "validSourceCount": 2,
-      "independentPublisherCount": 1,
+      "independentPublisherCount": 2,
       "independentPublisherFamilies": [
-        "fool.com"
+        "fool.com",
+        "theglobeandmail.com"
       ],
       "independentDomains": [
-        "fool.com"
+        "fool.com",
+        "theglobeandmail.com"
       ],
       "sources": [
+        {
+          "suppliedUrl": "https://www.fool.com/investing/2026/09/22/not-micron-not-alphabet-heres-my-top-artificial-in/",
+          "domain": "fool.com",
+          "publisherFamily": "fool.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.fool.com/investing/2026/09/22/not-micron-not-alphabet-heres-my-top-artificial-in/",
+          "pageTitle": "Not Micron. Not Alphabet. Here's My Top Artificial Intelligence (AI) Stock Pick for the Next 3 Years. | The Motley Fool",
+          "canonical": "https://www.fool.com/investing/2026/09/22/not-micron-not-alphabet-heres-my-top-artificial-in/",
+          "bodyChars": 3901,
+          "topicOverlap": 9
+        },
         {
           "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/not-micron-not-alphabet-heres-065000040.html",
           "domain": "finance.yahoo.com",
           "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
+          "resolvedFrom": "article-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
         },
         {
-          "suppliedUrl": "https://www.fool.com/investing/2026/08/11/micron-technology-stock-cheaper-sp-500-not-buying/",
-          "domain": "fool.com",
-          "publisherFamily": "fool.com",
+          "suppliedUrl": "https://www.theglobeandmail.com/investing/markets/stocks/AMD/pressreleases/4724288/not-micron-not-alphabet-heres-my-top-artificial-intelligence-ai-stock-pick-for-the-next-3-years/",
+          "domain": "theglobeandmail.com",
+          "publisherFamily": "theglobeandmail.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.fool.com/investing/2026/08/11/micron-technology-stock-cheaper-sp-500-not-buying/",
-          "pageTitle": "Micron Technology Stock Is Cheaper Than the S&P 500 and the Nasdaq-100. Here's Why I'm Still Not Buying It. | The Motley Fool",
-          "canonical": "https://www.fool.com/investing/2026/08/11/micron-technology-stock-cheaper-sp-500-not-buying/",
-          "bodyChars": 5756,
+          "finalUrl": "https://www.theglobeandmail.com/investing/markets/stocks/AMD/pressreleases/4724288/not-micron-not-alphabet-heres-my-top-artificial-intelligence-ai-stock-pick-for-the-next-3-years/",
+          "pageTitle": "Not Micron. Not Alphabet. Here's My Top Artificial Intelligence (AI) Stock Pick for the Next 3 Years. - The Globe and Mail",
+          "canonical": "https://www.theglobeandmail.com/investing/markets/stocks/AMD/pressreleases/4724288/not-micron-not-alphabet-heres-my-top-artificial-intelligence-ai-stock-pick-for-the-next-3-years/",
+          "bodyChars": 9405,
           "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://www.fool.com/investing/2026/03/26/heres-why-micron-stock-fell-12-this-week/",
-          "domain": "fool.com",
-          "publisherFamily": "fool.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.fool.com/investing/2026/03/26/heres-why-micron-stock-fell-12-this-week/",
-          "pageTitle": "Here's Why Micron Stock Fell 12% This Week | The Motley Fool",
-          "canonical": "https://www.fool.com/investing/2026/03/26/heres-why-micron-stock-fell-12-this-week/",
-          "bodyChars": 3225,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSm85MEQ3bzVXNzdtcU44OWZsUjgtZGxyMGotd1NsbndPZ0pvcS1QQXhpekdKdHJZLVE3Znpad01sTE9HV1ZKOWNmS1ZoTjdzanBuX1RjS3lUaEtDWTBGUWZKdE53TnNiZndvR0NkSnV2aVhqMFhKdnRJa1Rhek9ubjJlbWdzc1lCTndlMUFMSDBZTkh6cDRDcGpRb08?oc=5",
-      "title": "Bitcoin Leads Crypto Back Above $3 Trillion as Risk Builds - Yahoo Finance",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-leads-crypto-back-above-093150937.html",
+          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/not-nvidia-not-micron-magnificent-125300713.html",
           "domain": "finance.yahoo.com",
           "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://finance.yahoo.com/markets/stocks/articles/not-nvidia-not-micron-dirt-223501021.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
         }
@@ -1008,7 +1051,29 @@
           "pageTitle": "a16z Crypto&rsquo;s Comment on SEC Exchange Act Proposal | Andreessen Horowitz",
           "canonical": "https://a16z.com/a16z-cryptos-comment-on-sec-exchange-act-proposal/",
           "bodyChars": 5951,
-          "topicOverlap": 5
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSm85MEQ3bzVXNzdtcU44OWZsUjgtZGxyMGotd1NsbndPZ0pvcS1QQXhpekdKdHJZLVE3Znpad01sTE9HV1ZKOWNmS1ZoTjdzanBuX1RjS3lUaEtDWTBGUWZKdE53TnNiZndvR0NkSnV2aVhqMFhKdnRJa1Rhek9ubjJlbWdzc1lCTndlMUFMSDBZTkh6cDRDcGpRb08?oc=5",
+      "title": "Bitcoin Leads Crypto Back Above $3 Trillion as Risk Builds - Yahoo Finance",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-leads-crypto-back-above-093150937.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         }
       ],
       "recoveryAttempts": 0,
@@ -1099,7 +1164,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNamhDbTVfVk5NbXdOa2xaSHhGbTlQb01uNVliOUM0d1IzNjFWR2oxSEZyWjF0cGhPc1RUNnRjZkdQTUNJREZBZURIZmFSNEhqWW9mZUdLRjJHWXZsQ0xMRjlqUUU0WkU2UW1iOTdPRElXR09wY0Y5V0pTcl9GbkpnaEp1VmRyY2tHV0FlYS01SlR6NnlCeHlUdzJ6T0R3VC1hejU4?oc=5",
-      "title": "Good reasons to ease off the artificial intelligence panic pedal - Complete Colorado",
+      "title": "Good reasons to ease off the artificial intelligence panic pedal - completecolorado.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -1122,7 +1187,108 @@
           "pageTitle": "Good reasons to ease off the artificial intelligence panic pedal - Complete Colorado",
           "canonical": "https://completecolorado.com/2026/09/22/three-reasons-for-colorado-to-bet-on-artificial-intelligence/",
           "bodyChars": 9517,
-          "topicOverlap": 7
+          "topicOverlap": 5
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPd1BOWVdPYk5JNmhZRjl3U0Zid2gxUTJpYW9aMHNGcWU3NktYTWJ6UTdLUGE1ektILXp2TWZuSGZjUGZKTjhsNnFpVVlvLTN5QkhpcERiOVFOR0g2UGdvRTZwQjlxQzFRWW54eV9rRWlJb2pOUTdldVBnNXFsT1dkc01MZ1JYQUV2cWZva3RDMHlCbDEtd00zWWR1TjR4MUl3VHBDNmtkNlltbHdQNmtMSA?oc=5",
+      "title": "Vylor confirms breakthrough wheat technology will launch in 2027 - Michigan Farm News",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "michiganfarmnews.com"
+      ],
+      "independentDomains": [
+        "michiganfarmnews.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.michiganfarmnews.com/about/news-media/vylor-confirms-breakthrough-wheat-technology-will-launch-2027",
+          "domain": "michiganfarmnews.com",
+          "publisherFamily": "michiganfarmnews.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.michiganfarmnews.com/about/news-media/vylor-confirms-breakthrough-wheat-technology-will-launch-2027",
+          "pageTitle": "Vylor confirms breakthrough wheat technology will launch in 2027 | An official publication of Michigan Farm Bureau",
+          "canonical": "https://www.michiganfarmnews.com/about/news-media/vylor-confirms-breakthrough-wheat-technology-will-launch-2027",
+          "bodyChars": 2491,
+          "topicOverlap": 8
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRW5HQUVrb2UtcDRaRF9qcFpZTEN1VzJZSTZxQU1pWXdHTmxVaHBtOWxrTlpNcGVFN2tvNlBYZUI5SC1PMU5vdmMyMWlmOTVibTNRWFpHUWFJbktLcXQyMkRqY1huUVFncmVhYTV4bUxWY3BiMTJVVU5aWF9aNkhzQXFNSVoyZkgxUkpwUnl5Wmh1TloyTWRfSEpwcjRyVXFyVUZETDB2ZGVBSkdXcURjUC05cndxRm50R1JZNzdndWVZVDJrWWc?oc=5",
+      "title": "Nucleus Research Releases 2026 Data Integration Technology Value Matrix - PR Newswire",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "prnewswire.com"
+      ],
+      "independentDomains": [
+        "prnewswire.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-data-integration-technology-value-matrix-302886250.html",
+          "domain": "prnewswire.com",
+          "publisherFamily": "prnewswire.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-data-integration-technology-value-matrix-302886250.html",
+          "pageTitle": "Nucleus Research Releases 2026 Data Integration Technology Value Matrix",
+          "canonical": "https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-data-integration-technology-value-matrix-302886250.html",
+          "bodyChars": 4356,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://finance.yahoo.com/technology/articles/nucleus-research-releases-2026-lcap-150000751.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNeUNlTDhUUThtaDBMTzN5djhjU1RnSUV1OTQzR0RJQV8tcjlzNGVycWVFXzVlQjBRUWVabXh3eDB3LU04aW5nWUt5Q0tVVGdNVFhjaHlYMmdBTHp2U1pKOHZGTVM4d3NxUC1BWkt2SnBaa2NGVFl1bWZhbTlFemZvQmo0cm1PUVg1ZHgybXNrUXVQcjYxSTROYnRwZEowTERlOGlZVzRQTGpoZnhKeE10RkVwTV9idWxHNGY4V3BPdEllaXloUUxYbERzckJzeHV5cnFFeEpiOA?oc=5",
+      "title": "Insurance Technology Leaders Unite Around Data, Truth, and Trust at ACORD Connect 2026 - PR Newswire",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "prnewswire.com"
+      ],
+      "independentDomains": [
+        "prnewswire.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.prnewswire.com/news-releases/insurance-technology-leaders-unite-around-data-truth-and-trust-at-acord-connect-2026-302886507.html",
+          "domain": "prnewswire.com",
+          "publisherFamily": "prnewswire.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.prnewswire.com/news-releases/insurance-technology-leaders-unite-around-data-truth-and-trust-at-acord-connect-2026-302886507.html",
+          "pageTitle": "Insurance Technology Leaders Unite Around Data, Truth, and Trust at ACORD Connect 2026",
+          "canonical": "https://www.prnewswire.com/news-releases/insurance-technology-leaders-unite-around-data-truth-and-trust-at-acord-connect-2026-302886507.html",
+          "bodyChars": 3386,
+          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -1153,6 +1319,37 @@
           "pageTitle": "Dolly Parton's nephew, Bryan Seaver, reportedly fired as head security for estates - KCRA",
           "canonical": "https://www.kcra.com/article/bryan-seaver-dolly-parton-security/73833206",
           "bodyChars": 2550,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPM05iQTlBM1NVejBOZEx1dExIa21FTi1MNnd0b01TdDJvZWltS1lWb3FXQU5EdTdJQUl2R0hvVUIxVDJJNHljT0NuUnllSl9XeFU1YkIxVXFfZGQtbWt2STJWeWRlaGlidjFIdms4RlNWS2FpWmR5UEZRb0lJZEJQZDRmbjJrOWJOV01fQUZjUkVkUjd1MUZGemg1X1hQVm5qWThRRG9pbzdtZUF2WW1ZemhLZ3lBdUItc2RYQXRtVWNwWU9TanFKLWtRSk1YUE00Y1FnZXlaZWJiVFN2cGJ5elIyWXpBXzFUOVpzcnR6OWZsRXZoaEZnTmFYN0d1U3RKV3BBd3VsRkdrWGpGY2lKc1ZvNVdqaHlfa3d3bl9EY1REcUtlTGZibllyUVFNc2NTOVIwbmp4NzN3cHpORDhPXw?oc=5",
+      "title": "Dolly Parton's nephew fired as security chief amid estate dispute - WZTV",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "fox17.com"
+      ],
+      "independentDomains": [
+        "fox17.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://fox17.com/news/entertainment/dolly-partons-nephew-bryan-seaver-fired-as-security-chief-amid-estate-dispute-termination-notice-guards-nashville-home-former-manager-danny-nozell-pinnacle-bank?teaserSource=trending",
+          "domain": "fox17.com",
+          "publisherFamily": "fox17.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://fox17.com/news/entertainment/dolly-partons-nephew-bryan-seaver-fired-as-security-chief-amid-estate-dispute-termination-notice-guards-nashville-home-former-manager-danny-nozell-pinnacle-bank?teaserSource=trending",
+          "pageTitle": "Dolly Parton's nephew fired as security chief amid estate dispute",
+          "canonical": "https://wpde.com/news/entertainment/dolly-partons-nephew-bryan-seaver-fired-as-security-chief-amid-estate-dispute-termination-notice-guards-nashville-home-former-manager-danny-nozell-pinnacle-bank",
+          "bodyChars": 1636,
           "topicOverlap": 9
         }
       ],
@@ -1301,37 +1498,24 @@
       "validSourceCount": 7,
       "independentPublisherCount": 7,
       "independentPublisherFamilies": [
-        "bozemandailychronicle.com",
         "whec.com",
-        "tricityrecordnm.com",
         "ottumwacourier.com",
+        "tricityrecordnm.com",
+        "record-eagle.com",
         "eagletribune.com",
-        "enidnews.com",
-        "net.au"
+        "tribdem.com",
+        "gulfnews.com"
       ],
       "independentDomains": [
-        "bozemandailychronicle.com",
         "whec.com",
-        "tricityrecordnm.com",
         "ottumwacourier.com",
+        "tricityrecordnm.com",
+        "record-eagle.com",
         "eagletribune.com",
-        "enidnews.com",
-        "abc.net.au"
+        "tribdem.com",
+        "gulfnews.com"
       ],
       "sources": [
-        {
-          "suppliedUrl": "https://www.bozemandailychronicle.com/wire/international/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_8219a805-c87d-5e9f-8f0e-0b887c16e40f.html",
-          "domain": "bozemandailychronicle.com",
-          "publisherFamily": "bozemandailychronicle.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.bozemandailychronicle.com/wire/international/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_8219a805-c87d-5e9f-8f0e-0b887c16e40f.html",
-          "pageTitle": "Trump signs US-Denmark-Greenland agreement to bolster Arctic security",
-          "canonical": "",
-          "bodyChars": 5261,
-          "topicOverlap": 8
-        },
         {
           "suppliedUrl": "https://www.whec.com/ap-top-news/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-after-prolonged-tensions/",
           "domain": "whec.com",
@@ -1344,6 +1528,19 @@
           "canonical": "https://www.whec.com/ap-top-news/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-after-prolonged-tensions/",
           "bodyChars": 6316,
           "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://www.ottumwacourier.com/news/national_news/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-after-prolonged-tensions/article_e2cf05e7-5de9-50f2-8030-54d26318054b.html",
+          "domain": "ottumwacourier.com",
+          "publisherFamily": "ottumwacourier.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.ottumwacourier.com/news/national_news/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-after-prolonged-tensions/article_e2cf05e7-5de9-50f2-8030-54d26318054b.html",
+          "pageTitle": "Trump signs US-Denmark-Greenland agreement to bolster Arctic security after prolonged tensions | National News | ottumwacourier.com",
+          "canonical": "https://apnews.com/article/trump-greenland-denmark-security-agreement-084ac2a82952c2dff403c48bd3564113",
+          "bodyChars": 5575,
+          "topicOverlap": 10
         },
         {
           "suppliedUrl": "https://www.tricityrecordnm.com/articles/associated-press/briefs-trump-signs-u-s-denmark-greenland-agreement-to-bolster-arctic-security/",
@@ -1359,17 +1556,17 @@
           "topicOverlap": 10
         },
         {
-          "suppliedUrl": "https://www.ottumwacourier.com/news/national_news/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_e2cf05e7-5de9-50f2-8030-54d26318054b.html",
-          "domain": "ottumwacourier.com",
-          "publisherFamily": "ottumwacourier.com",
+          "suppliedUrl": "https://www.record-eagle.com/ap/international/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-after-prolonged-tensions/article_621e3090-6a80-5728-9771-31bdae4e8f2f.html",
+          "domain": "record-eagle.com",
+          "publisherFamily": "record-eagle.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.ottumwacourier.com/news/national_news/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_e2cf05e7-5de9-50f2-8030-54d26318054b.html",
-          "pageTitle": "Trump signs US-Denmark-Greenland agreement to bolster Arctic security | National News | ottumwacourier.com",
+          "finalUrl": "https://www.record-eagle.com/ap/international/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-after-prolonged-tensions/article_621e3090-6a80-5728-9771-31bdae4e8f2f.html",
+          "pageTitle": "Trump signs US-Denmark-Greenland agreement to bolster Arctic security after prolonged tensions | Ap | record-eagle.com",
           "canonical": "https://apnews.com/article/trump-greenland-denmark-security-agreement-084ac2a82952c2dff403c48bd3564113",
-          "bodyChars": 5485,
-          "topicOverlap": 9
+          "bodyChars": 4844,
+          "topicOverlap": 12
         },
         {
           "suppliedUrl": "https://www.eagletribune.com/region/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_4dfd00da-7f06-5a63-b69f-c47e5136c837.html",
@@ -1379,35 +1576,35 @@
           "ok": true,
           "reason": "story-relevant-publisher-article",
           "finalUrl": "https://www.eagletribune.com/region/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_4dfd00da-7f06-5a63-b69f-c47e5136c837.html",
-          "pageTitle": "Trump signs US-Denmark-Greenland agreement to bolster Arctic security | Region | eagletribune.com",
+          "pageTitle": "Trump signs US-Denmark-Greenland agreement to bolster Arctic security after prolonged tensions | Region | eagletribune.com",
           "canonical": "https://apnews.com/article/trump-greenland-denmark-security-agreement-084ac2a82952c2dff403c48bd3564113",
-          "bodyChars": 4679,
-          "topicOverlap": 10
+          "bodyChars": 4753,
+          "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://www.enidnews.com/region/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_86bddaa2-1e07-55dd-b222-41d7b4b51d21.html",
-          "domain": "enidnews.com",
-          "publisherFamily": "enidnews.com",
+          "suppliedUrl": "https://www.tribdem.com/news/latest_news/trump-signs-u-s--denmark-greenland-agreement-to-bolster-arctic-security/article_0c36f14f-b3d1-5571-8dae-6b8bed74346a.html",
+          "domain": "tribdem.com",
+          "publisherFamily": "tribdem.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.enidnews.com/region/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security/article_86bddaa2-1e07-55dd-b222-41d7b4b51d21.html",
-          "pageTitle": "Trump signs US-Denmark-Greenland agreement to bolster Arctic security | Associated Press | syndication news | enidnews.com",
+          "finalUrl": "https://www.tribdem.com/news/latest_news/trump-signs-u-s--denmark-greenland-agreement-to-bolster-arctic-security/article_0c36f14f-b3d1-5571-8dae-6b8bed74346a.html",
+          "pageTitle": "Trump signs U.S.-Denmark-Greenland agreement to bolster Arctic security | Latest News | tribdem.com",
           "canonical": "https://apnews.com/article/trump-greenland-denmark-security-agreement-084ac2a82952c2dff403c48bd3564113",
-          "bodyChars": 2935,
-          "topicOverlap": 12
+          "bodyChars": 4011,
+          "topicOverlap": 8
         },
         {
-          "suppliedUrl": "https://www.abc.net.au/news/2026-09-19/donald-trump-announces-deal-with-denmark-us-military-greenland/107171964",
-          "domain": "abc.net.au",
-          "publisherFamily": "net.au",
+          "suppliedUrl": "https://gulfnews.com/world/americas/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-1.500684173",
+          "domain": "gulfnews.com",
+          "publisherFamily": "gulfnews.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.abc.net.au/news/2026-09-19/donald-trump-announces-deal-with-denmark-us-military-greenland/107171964",
-          "pageTitle": "US and Denmark reach deal over Greenland after Donald Trump's vows to take island - ABC News",
-          "canonical": "https://www.abc.net.au/news/2026-09-19/donald-trump-announces-deal-with-denmark-us-military-greenland/107171964",
-          "bodyChars": 7160,
+          "finalUrl": "https://gulfnews.com/world/americas/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-1.500684173",
+          "pageTitle": "Trump Signs US-Denmark-Greenland Pact to Boost Arctic Security and Expand American Military Bases",
+          "canonical": "https://gulfnews.com/world/americas/trump-signs-us-denmark-greenland-agreement-to-bolster-arctic-security-1.500684173",
+          "bodyChars": 5342,
           "topicOverlap": 8
         }
       ],
@@ -1415,167 +1612,17 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMmFXeXlvZzdyejc4Vk9VWEhlc2s2UkVrbWNNQllsZzBBTEZTbndVcUZmZFZjcGVzcF8yYktra1hDbXppTVRwNzhJc1NyUDFFOGktUTZGXzVOcW5Jbm12TzlFYVhyY1VWNDMwV3JuNVFKckhtWGp1YWRtbDdlVDJJWWZOUFkxbXlxNS1yczJvYU42NjFoUUF3YmU3Q2FYaXY0MmtoRlh2VEhRRENiSTJCVm9rY0ZIMTdkYnc?oc=5",
-      "title": "As resistance mounts, Trump reaches for a familiar shield: national security - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
+      "title": "From smart glasses to AI pins, privacy fears challenge tech's next big bet - Reuters",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
       "independentPublisherCount": 0,
       "independentPublisherFamilies": [],
       "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N45D0TS:0-as-resistance-mounts-trump-reaches-for-a-familiar-shield-national-security/",
-          "domain": "tradingview.com",
-          "publisherFamily": "tradingview.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N45D0TS:0-as-resistance-mounts-trump-reaches-for-a-familiar-shield-national-security/",
-          "pageTitle": "As resistance mounts, Trump reaches for a familiar shield: national security — TradingView News",
-          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N45D0TS:0-as-resistance-mounts-trump-reaches-for-a-familiar-shield-national-security/",
-          "bodyChars": 344,
-          "topicOverlap": 9
-        }
-      ],
+      "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzM1WjZvTTFNRDBEdTM2VjVsT19sQ25pRWg5Zm4xTDZBdkhKUjljZnVWNGkyQkRsVUhCUTl3bkl5NUh0LTNOenJKTDNpdFVoSnYzVEMtaVRTaV9QMDc0QUhKNUZ5NlpNeGltVGdFdUQ2bEtlekgwS2N5WUNMY2g1dUp2Tl82SzhaTjJ0MUNFaW4tQWJWRWNtODJB?oc=5",
-      "title": "Dolly Parton’s Nephew Bryan Seaver Reacts to Being Fired as Head of Security by Estate: ‘Refuse to Be Intimidated’ - People.com",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 8,
-      "independentPublisherCount": 8,
-      "independentPublisherFamilies": [
-        "realtor.com",
-        "iheart.com",
-        "indiatimes.com",
-        "usatoday.com",
-        "com.au",
-        "whiskeyriff.com",
-        "tmz.com",
-        "fox23.com"
-      ],
-      "independentDomains": [
-        "realtor.com",
-        "country.iheart.com",
-        "timesofindia.indiatimes.com",
-        "usatoday.com",
-        "nine.com.au",
-        "whiskeyriff.com",
-        "tmz.com",
-        "fox23.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.realtor.com/news/celebrity-real-estate/dolly-parton-nephew-bryan-seaver-fired-from-security-homes-death/",
-          "domain": "realtor.com",
-          "publisherFamily": "realtor.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.realtor.com/news/celebrity-real-estate/dolly-parton-nephew-bryan-seaver-fired-from-security-homes-death/",
-          "pageTitle": "Dolly Parton's Nephew Bryan Seaver Fired as Head of Security at Her Estate",
-          "canonical": "https://www.realtor.com/news/celebrity-real-estate/dolly-parton-nephew-bryan-seaver-fired-from-security-homes-death/",
-          "bodyChars": 10148,
-          "topicOverlap": 12
-        },
-        {
-          "suppliedUrl": "https://country.iheart.com/featured/women-of-iheartcountry/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
-          "domain": "country.iheart.com",
-          "publisherFamily": "iheart.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://country.iheart.com/featured/women-of-iheartcountry/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
-          "pageTitle": "Dolly Parton's Nephew Bryan Seaver Reportedly Fired From Security Role Amid Dispute Over Estate | iHeartCountry Radio | Women of iHeartCountry",
-          "canonical": "https://country.iheart.com/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
-          "bodyChars": 1883,
-          "topicOverlap": 12
-        },
-        {
-          "suppliedUrl": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/dolly-partons-nephew-bryan-seaver-fired-from-security-role-amid-estate-war-over-singers-usd-450-million-fortune-reports/articleshow/134399451.cms",
-          "domain": "timesofindia.indiatimes.com",
-          "publisherFamily": "indiatimes.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/dolly-partons-nephew-bryan-seaver-fired-from-security-role-amid-estate-war-over-singers-usd-450-million-fortune-reports/articleshow/134399451.cms",
-          "pageTitle": "Dolly Parton's nephew Bryan Seaver FIRED from security role amid estate war over singer's USD 450 million fortune: Reports | - The Times of India",
-          "canonical": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/dolly-partons-nephew-bryan-seaver-fired-from-security-role-amid-estate-war-over-singers-usd-450-million-fortune-reports/articleshow/134399451.cms",
-          "bodyChars": 1149,
-          "topicOverlap": 14
-        },
-        {
-          "suppliedUrl": "https://www.usatoday.com/story/entertainment/music/2026/09/21/dolly-parton-nephew-bryan-seaver-fired-security/91880794007/",
-          "domain": "usatoday.com",
-          "publisherFamily": "usatoday.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.usatoday.com/story/entertainment/music/2026/09/21/dolly-parton-nephew-bryan-seaver-fired-security/91880794007/",
-          "pageTitle": "Dolly Parton's nephew Bryan Seaver fired from security role: Report",
-          "canonical": "",
-          "bodyChars": 3147,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://www.nine.com.au/entertainment/celebrity/dolly-parton-estate-nephew-bryan-seaver-fired-head-of-security-20260922-p60zd9.html",
-          "domain": "nine.com.au",
-          "publisherFamily": "com.au",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.nine.com.au/entertainment/celebrity/dolly-parton-estate-nephew-bryan-seaver-fired-head-of-security-20260922-p60zd9.html",
-          "pageTitle": "Dolly Parton’s nephew Bryan Seaver fired amid dispute over late singer’s $600m estate | Nine.com.au",
-          "canonical": "",
-          "bodyChars": 3956,
-          "topicOverlap": 13
-        },
-        {
-          "suppliedUrl": "https://www.whiskeyriff.com/2026/09/21/dolly-partons-nephew-fired-as-head-of-security-for-her-estate-calls-out-the-country-legends-longtime-manager/",
-          "domain": "whiskeyriff.com",
-          "publisherFamily": "whiskeyriff.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.whiskeyriff.com/2026/09/21/dolly-partons-nephew-fired-as-head-of-security-for-her-estate-calls-out-the-country-legends-longtime-manager/",
-          "pageTitle": "Dolly Parton’s Nephew Fired As Head Of Security For Her Estate, Calls Out The Country Legend’s Longtime Manager | Whiskey Riff",
-          "canonical": "https://www.whiskeyriff.com/2026/09/21/dolly-partons-nephew-fired-as-head-of-security-for-her-estate-calls-out-the-country-legends-longtime-manager/",
-          "bodyChars": 8462,
-          "topicOverlap": 14
-        },
-        {
-          "suppliedUrl": "https://www.tmz.com/2026/09/21/dolly-parton-nephew-fired-estate-battle/",
-          "domain": "tmz.com",
-          "publisherFamily": "tmz.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.tmz.com/2026/09/21/dolly-parton-nephew-fired-estate-battle/",
-          "pageTitle": "Dolly Parton&#039;s Nephew Fired From Security Role Amid Estate War",
-          "canonical": "https://www.tmz.com/2026/09/21/dolly-parton-nephew-fired-estate-battle/",
-          "bodyChars": 1544,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://fox23.com/news/entertainment/dolly-partons-nephew-bryan-seaver-fired-as-security-chief-amid-estate-dispute-termination-notice-guards-nashville-home-former-manager-danny-nozell-pinnacle-bank",
-          "domain": "fox23.com",
-          "publisherFamily": "fox23.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://fox23.com/news/entertainment/dolly-partons-nephew-bryan-seaver-fired-as-security-chief-amid-estate-dispute-termination-notice-guards-nashville-home-former-manager-danny-nozell-pinnacle-bank",
-          "pageTitle": "Dolly Parton's nephew fired as security chief amid estate dispute",
-          "canonical": "https://wpde.com/news/entertainment/dolly-partons-nephew-bryan-seaver-fired-as-security-chief-amid-estate-dispute-termination-notice-guards-nashville-home-former-manager-danny-nozell-pinnacle-bank",
-          "bodyChars": 1636,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSXRDVk4xeDlHODFYMGEwU0xXWkxmU3JNNWdXdDg0cWtaeWpFdGRYYm9EcTJhMl9ub1dqekVlT1hETjNLSzhlUGN2aVk4YVY2WWVsaDBVaFM4MWRFQTdWZXNmLWx5N0JZWlJUWDBKSndfeEN5SmhOLXhoR2M5NTdNc0dnSDU0YXZIeWZqSg?oc=5",
@@ -1609,35 +1656,43 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00cmYyMTQxSWI3N0VKcHFIZXU4aXBSMEJZc1NZU09UWUE1VHNVc19HRl8zLWpMdVFYdTZFcXJUbmFTVjdyN2J0bW9oRldBeEhNTlFuSTMzbjBYVklpcENCalEybVowVGM?oc=5",
-      "title": "Current price of Bitcoin for Sept. 22, 2026 - Fortune",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQ0dtWU1vM1BVUW5OY3JDMzNGdDF5ZVQxdmQ0aEtTWnhVdkE4RDEwWWRjR2VnLVJKRTBadkRPNndMemxtQjMzS3FURUJTY2ZGVXB5VktBY0o1cjZjcDJFUDkzYmpDOGthYmtaZ1ZTZmhCaDNMMEdNUkR3eC05REFXNDM4eG4wSUhZNUlCdlRoUGQzeDlySjJjVWJ3?oc=5",
+      "title": "CME Group to Launch Bitcoin Cash and Uniswap Futures - Yahoo Finance",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "fortune.com"
+        "cryptotimes.io"
       ],
       "independentDomains": [
-        "fortune.com"
+        "cryptotimes.io"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://fortune.com/article/price-of-bitcoin-09-22-2026/",
-          "domain": "fortune.com",
-          "publisherFamily": "fortune.com",
+          "suppliedUrl": "https://finance.yahoo.com/markets/crypto/articles/cme-group-launch-bitcoin-cash-165200159.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
           "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        },
+        {
+          "suppliedUrl": "https://www.cryptotimes.io/2026/09/22/cme-group-sets-october-19-target-for-bitcoin-cash-and-uniswap-futures-launch/",
+          "domain": "cryptotimes.io",
+          "publisherFamily": "cryptotimes.io",
+          "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://fortune.com/article/price-of-bitcoin-09-22-2026/",
-          "pageTitle": "Current price of Bitcoin for Sept. 22, 2026 | Fortune",
-          "canonical": "https://fortune.com/article/price-of-bitcoin-09-22-2026/",
-          "bodyChars": 6585,
-          "topicOverlap": 6
+          "finalUrl": "https://www.cryptotimes.io/2026/09/22/cme-group-sets-october-19-target-for-bitcoin-cash-and-uniswap-futures-launch/",
+          "pageTitle": "CME Group Sets October 19 Target for Bitcoin Cash and Uniswap Futures Launch",
+          "canonical": "https://www.cryptotimes.io/2026/09/22/cme-group-sets-october-19-target-for-bitcoin-cash-and-uniswap-futures-launch/",
+          "bodyChars": 6501,
+          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://techcrunch.com/2026/09/22/noble-carbon-will-show-how-its-making-ev-charger-installs-painless-at-techcrunch-disrupt/",
@@ -1715,8 +1770,39 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQRW5HQUVrb2UtcDRaRF9qcFpZTEN1VzJZSTZxQU1pWXdHTmxVaHBtOWxrTlpNcGVFN2tvNlBYZUI5SC1PMU5vdmMyMWlmOTVibTNRWFpHUWFJbktLcXQyMkRqY1huUVFncmVhYTV4bUxWY3BiMTJVVU5aWF9aNkhzQXFNSVoyZkgxUkpwUnl5Wmh1TloyTWRfSEpwcjRyVXFyVUZETDB2ZGVBSkdXcURjUC05cndxRm50R1JZNzdndWVZVDJrWWc?oc=5",
-      "title": "Nucleus Research Releases 2026 Data Integration Technology Value Matrix - PR Newswire",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPd0x4aWFqRHlJWXZGVHZ5OEdjZmJ3NjYybEdMcWNta3pDTTVNOFNGUnJHVnpOSV9TaVFzZmxsYTU0bFMwS1d5VnVsdm9fMXh0QTgzWGRxdmVkaUVHS2E5elR5MVdxQVZZZWl6OTE4aUpXeXVuRjRXV2dzWDNqRmtJakFxcnYxMUJUY2xxLWhOUTd2X3FOMUU2YVRWNUV3bTVWcWV2bWREYXdSdTBYVHVGc0xyOFVrZGdTSGloZnFTOWFjUQ?oc=5",
+      "title": "New spin-out launches technology to revolutionize hormone disorder diagnosis - News-Medical",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "news-medical.net"
+      ],
+      "independentDomains": [
+        "news-medical.net"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.news-medical.net/news/20260922/New-spin-out-launches-technology-to-revolutionize-hormone-disorder-diagnosis.aspx",
+          "domain": "news-medical.net",
+          "publisherFamily": "news-medical.net",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.news-medical.net/news/20260922/New-spin-out-launches-technology-to-revolutionize-hormone-disorder-diagnosis.aspx",
+          "pageTitle": "New spin-out launches technology to revolutionize hormone disorder diagnosis",
+          "canonical": "https://www.news-medical.net/news/20260922/New-spin-out-launches-technology-to-revolutionize-hormone-disorder-diagnosis.aspx",
+          "bodyChars": 7999,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxQcVZNRExrLU9ZQW52TlR5X3E1YlhGSDEyb3Z5WDIwVmM2OXdoNDZ6ZDQ2aHVEVlpidldiWnlMNWtSeGowUXRNa2NybE54OGtUNURqczF0T3IxeTFNXzJqbnhYNlhFUHFqcWJFNEg4ZzVmS19sQTBWcE0zVzVVWEVreExDcUhGZVhzUE1TTVdBTFE0RXhRREdXVW5OVXliRk1zalR0Z3RaS2lyWWVFMS1IbU1PeFpaN2R3VzVuM2VoZEdGYkU4bEM2eHpVcVFFTktXNUxwaWN5RW8ydXI2UjVqMk9xSTNsMGVGV0tMZUpRZTB4djRXVTVhTFBtLUNXWThrRXlUdlkxVlBJTmQwWlJyV29OZXRRZUkzaG9Ob3hoRlB0U1ZRcmFqeGRlZEFQOUxobUJMeg?oc=5",
+      "title": "OpenSearch Software Foundation and Linux Foundation Research Report Finds Organizations Seek Neutral Data Infrastructure as Global AI Implementation Peaks - PR Newswire",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -1729,98 +1815,21 @@
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-data-integration-technology-value-matrix-302886250.html",
+          "suppliedUrl": "https://www.prnewswire.com/news-releases/opensearch-software-foundation-and-linux-foundation-research-report-finds-organizations-seek-neutral-data-infrastructure-as-global-ai-implementation-peaks-302886412.html",
           "domain": "prnewswire.com",
           "publisherFamily": "prnewswire.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-data-integration-technology-value-matrix-302886250.html",
-          "pageTitle": "Nucleus Research Releases 2026 Data Integration Technology Value Matrix",
-          "canonical": "https://www.prnewswire.com/news-releases/nucleus-research-releases-2026-data-integration-technology-value-matrix-302886250.html",
-          "bodyChars": 4356,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://finance.yahoo.com/technology/articles/nucleus-research-releases-2026-lcap-150000751.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        },
-        {
-          "suppliedUrl": "https://sg.finance.yahoo.com/news/o9-solutions-named-leader-2026-122300008.html",
-          "domain": "sg.finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
+          "finalUrl": "https://www.prnewswire.com/news-releases/opensearch-software-foundation-and-linux-foundation-research-report-finds-organizations-seek-neutral-data-infrastructure-as-global-ai-implementation-peaks-302886412.html",
+          "pageTitle": "OpenSearch Software Foundation and Linux Foundation Research Report Finds Organizations Seek Neutral Data Infrastructure as Global AI Implementation Peaks",
+          "canonical": "https://www.prnewswire.com/news-releases/opensearch-software-foundation-and-linux-foundation-research-report-finds-organizations-seek-neutral-data-infrastructure-as-global-ai-implementation-peaks-302886412.html",
+          "bodyChars": 5689,
+          "topicOverlap": 14
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRTA0cHJaNmJlUl9uZ1BYU1pNdGpWTkxONXkxdFhfTmpQWmJIWElMcm5mc2hEU3NpZmZoZVY5UzBJcFhoQkFUZDR1anN5OE54V3NRdkhud29pOV95VldDUDF4ejFnWjhaT21xMFpRMUJGY2QyeEVJN3p2YVZSeHNGa25ma1F1MmhDSjNTczc1d1V4QjJEVmJ2QkpRQQ?oc=5",
-      "title": "Why Gabelli Global Growth Fund Added Micron Technology (MU) in Q2 - Yahoo Finance",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://finance.yahoo.com/markets/stocks/articles/why-gabelli-global-growth-fund-141037360.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdmgxYVVmX1dCWFN3a0xvLVVDSl9ZUnAwUWF3VV9HRGNVY0t6U0RhSkZLT1NzdUVPNG5LMUVmMWtLQVN5SmxZZm1scWJhempGTWFQbFRxSHFIZXJod0hpZXZGNXFIVDB0Q1dLenZPSE5aVnBRcGwyaHczQVdxaWt4ZnJ4ZFBIeU9jMXZfSTQwVEJtUQ?oc=5",
-      "title": "Nvidia and AMD Can't Make AI Chips Without This Growth Stock. Here's Why It Could Soar. - Yahoo Finance",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "fool.com"
-      ],
-      "independentDomains": [
-        "fool.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/nvidia-amd-cant-ai-chips-123500916.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        },
-        {
-          "suppliedUrl": "https://www.fool.com/investing/2026/04/02/amazon-apple-and-nvidia-cant-make-ai-chips-without/",
-          "domain": "fool.com",
-          "publisherFamily": "fool.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.fool.com/investing/2026/04/02/amazon-apple-and-nvidia-cant-make-ai-chips-without/",
-          "pageTitle": "Amazon, Apple, and Nvidia Can't Make AI Chips Without This Company. Here's Why Its Growth Stock Could Soar. | The Motley Fool",
-          "canonical": "https://www.fool.com/investing/2026/04/02/amazon-apple-and-nvidia-cant-make-ai-chips-without/",
-          "bodyChars": 4281,
-          "topicOverlap": 12
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX0tFTjJvcTh3OUZWdVRNSUJpbWlWU0RhZjRyRDRVR2phT3YtMGRLVlpIZE5fcEszRE81Ynhwak96LTN0a1Vod1kyTTNWRHlfejVrdzNnTWFUUXZNZ0VUQVJmZ2dNSTQ1allWakxqUXRjV3ZGUW92ZGFQcmozTllmWGt6Sm1hYWl1WWtFNUw5UTAtckI0SG96TDdkTEM?oc=5",
@@ -1884,48 +1893,35 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
-      "title": "From smart glasses to AI pins, privacy fears challenge tech's next big bet - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByWHNrSFdNcU5SNko4Tl81c2RfNXFILWpyYXBhNDQ0Mnh3UWUxcHFDNTRUdmI5VzZzWHFrUmg3TGJCVTRWRWkweHNSdTJwRUxsYzF0RlllQTNhMFhmXzV6c0NmWUFtNlhqLXQwcUZSdFVpX2fSAXhBVV95cUxPQjBpQ09zU3NsT3dtU1ZQRXl3RnFoQnFwd2JOWjNuZm03SFlwTkU2SXU0bVp2QXMwT3RZMEpFVTkyal81TXBxU0k1T19jekF1djdnZnQ1Q2ZLczZzYWRRaWJmbUlKRk1adEl1U0lNWUItRlF5UTh1b1E?oc=5",
-      "title": "Altman and Amodei expected to join UN Security Council meeting about AI - CNBC",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMGxSNVRwV25NZktubFVfOXcyd0tGYk5US1dDYUFlSTNyRUtBeEoxQ1I1d0pLbmtJVHZyMkstaXY5VkNLWC1Jell6SVJCVVFIdUFmdHVXWXNablRNRmJIV3FPZFdieTVBSF9PUmlFTk5JTWtwaEVXa2FUOFFLSDgyOHFMZXIzMHBSTEdLZEdYYnZaN3N2Yk44TE9ZRQ?oc=5",
+      "title": "Some cheap smart glasses are a security disaster - Malwarebytes",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "cnbc.com"
+        "malwarebytes.com"
       ],
       "independentDomains": [
-        "cnbc.com"
+        "malwarebytes.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
-          "domain": "cnbc.com",
-          "publisherFamily": "cnbc.com",
+          "suppliedUrl": "https://www.malwarebytes.com/blog/news/2026/09/some-cheap-smart-glasses-are-a-security-disaster",
+          "domain": "malwarebytes.com",
+          "publisherFamily": "malwarebytes.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
-          "pageTitle": "Altman, Amodei expected to join UN Security Council meeting about AI",
-          "canonical": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
-          "bodyChars": 2190,
-          "topicOverlap": 8
+          "finalUrl": "https://www.malwarebytes.com/blog/news/2026/09/some-cheap-smart-glasses-are-a-security-disaster",
+          "pageTitle": "Some cheap smart glasses are a security disaster | Malwarebytes",
+          "canonical": "https://www.malwarebytes.com/blog/news/2026/09/some-cheap-smart-glasses-are-a-security-disaster",
+          "bodyChars": 4401,
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdVZ5dUNUbG83aHBkZ3hZMDFzOGEzMHFjYkN3Vk83WEQzNzFnd25KTmRzbUk4QXRiSmp2RHZBT0xzVVk3Y3RqTllaS1daaGNsMkFveEw3bmRsN1h4UGZ4UGlpUGM1dDU3M215MVp4OUhRZk9VMVM2MnUwaEZaMkJtQkJOV18wT2J6RDR0OXducGRXYTBHRFJaSkhFR3UzTVdpNTNPdzlVd3hwOENVWmwwaGJYNXVmQVk?oc=5",
@@ -1959,6 +1955,33 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMmFXeXlvZzdyejc4Vk9VWEhlc2s2UkVrbWNNQllsZzBBTEZTbndVcUZmZFZjcGVzcF8yYktra1hDbXppTVRwNzhJc1NyUDFFOGktUTZGXzVOcW5Jbm12TzlFYVhyY1VWNDMwV3JuNVFKckhtWGp1YWRtbDdlVDJJWWZOUFkxbXlxNS1yczJvYU42NjFoUUF3YmU3Q2FYaXY0MmtoRlh2VEhRRENiSTJCVm9rY0ZIMTdkYnc?oc=5",
+      "title": "As resistance mounts, Trump reaches for a familiar shield: national security - Reuters",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N45D0TS:0-as-resistance-mounts-trump-reaches-for-a-familiar-shield-national-security/",
+          "domain": "tradingview.com",
+          "publisherFamily": "tradingview.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N45D0TS:0-as-resistance-mounts-trump-reaches-for-a-familiar-shield-national-security/",
+          "pageTitle": "As resistance mounts, Trump reaches for a familiar shield: national security — TradingView News",
+          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N45D0TS:0-as-resistance-mounts-trump-reaches-for-a-familiar-shield-national-security/",
+          "bodyChars": 344,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5vWGRQVkJEdHdGc1pmS1J0TlMzS0pVVGZoamVWUURXRUVWazZrdzFxSlVwdV9EVzVKNmthOU01M0VvaHhMakg1aG8xZmxZeVY0Uk9mWE9OSHpwZVN1ZXQyeHpPdGc3RnRFa3Z3RS1wYzh6M28tV3dobg?oc=5",
       "title": "Great comeback: Has crypto winter really ended? - The Jerusalem Post",
       "status": "pass",
@@ -1988,6 +2011,33 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTXotVG1mcHYyRFJFZURlbXpiMWstQ3BaMDVtMGpzel9BVUhncm1pVnI3bDFpS1ZRSXY3bkdMZ3hiTXVDdVJxUXZoV3Q4V20zaTV0Z180b1U0R3pPT1dORVBxeGRKMUNoeXMza2N2TjhES1hNdEREM3pORDJOS2Y1bjFtbFF6Q3NTQ3ZKY3FPb09LcFNCcGlMeFRUM3hMY2FIbC1CUW9BOWo0SC1SV05MUA?oc=5",
+      "title": "This security technology stock has an 'underappreciated' edge, Jefferies says - CNBC",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
+          "domain": "cnbc.com",
+          "publisherFamily": "cnbc.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
+          "pageTitle": "This security technology stock has an 'underappreciated' edge, Jefferies says",
+          "canonical": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
+          "bodyChars": 426,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9qc3VaZGdJZm5oeXZIMDNFNmk2bkxVUjgzRFYydlJPekhvS1dXd043bHBKcnFwUnpWdUhKcXFCUkxHbm12Y1NZMXlJNUF4eFJWV29CeXIwb1J3dEJPWEx4dg?oc=5",
@@ -2036,97 +2086,35 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcHY0MlFPMWZFNkNtUkpPbE1IV0dXUmJOMFYxMUVwM29NUjBxcnRYb0lCOGtTb2FJM0k3cGU1LVhWTmhOX3RwbG41RTRQMkpwSjQ0VWd6UXFHeHRpYm95RlNJbkcxb1RaZVFQVTNuZkZEdEI1bTlZMjJfZFNPRGoxbmVraG92RjNxWkdMSmxyVlU4alZXZnlPbnpFYTY?oc=5",
-      "title": "IMC Logistics Adds Tesla Semis to Multi-Technology Fleet Strategy - act-news.com",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByWHNrSFdNcU5SNko4Tl81c2RfNXFILWpyYXBhNDQ0Mnh3UWUxcHFDNTRUdmI5VzZzWHFrUmg3TGJCVTRWRWkweHNSdTJwRUxsYzF0RlllQTNhMFhmXzV6c0NmWUFtNlhqLXQwcUZSdFVpX2fSAXhBVV95cUxPQjBpQ09zU3NsT3dtU1ZQRXl3RnFoQnFwd2JOWjNuZm03SFlwTkU2SXU0bVp2QXMwT3RZMEpFVTkyal81TXBxU0k1T19jekF1djdnZnQ1Q2ZLczZzYWRRaWJmbUlKRk1adEl1U0lNWUItRlF5UTh1b1E?oc=5",
+      "title": "Altman and Amodei expected to join UN Security Council meeting about AI - CNBC",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "act-news.com"
+        "cnbc.com"
       ],
       "independentDomains": [
-        "act-news.com"
+        "cnbc.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.act-news.com/news/imc-logistics-adds-tesla-semis-to-multi-technology-fleet-strategy/",
-          "domain": "act-news.com",
-          "publisherFamily": "act-news.com",
+          "suppliedUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
+          "domain": "cnbc.com",
+          "publisherFamily": "cnbc.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.act-news.com/news/imc-logistics-adds-tesla-semis-to-multi-technology-fleet-strategy/",
-          "pageTitle": "IMC Logistics Adds Tesla Semis to Multi-Technology Fleet Strategy - ACT News",
-          "canonical": "https://www.act-news.com/news/imc-logistics-adds-tesla-semis-to-multi-technology-fleet-strategy/",
-          "bodyChars": 2400,
-          "topicOverlap": 7
+          "finalUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
+          "pageTitle": "Altman, Amodei expected to join UN Security Council meeting about AI",
+          "canonical": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
+          "bodyChars": 2190,
+          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxQcVZNRExrLU9ZQW52TlR5X3E1YlhGSDEyb3Z5WDIwVmM2OXdoNDZ6ZDQ2aHVEVlpidldiWnlMNWtSeGowUXRNa2NybE54OGtUNURqczF0T3IxeTFNXzJqbnhYNlhFUHFqcWJFNEg4ZzVmS19sQTBWcE0zVzVVWEVreExDcUhGZVhzUE1TTVdBTFE0RXhRREdXVW5OVXliRk1zalR0Z3RaS2lyWWVFMS1IbU1PeFpaN2R3VzVuM2VoZEdGYkU4bEM2eHpVcVFFTktXNUxwaWN5RW8ydXI2UjVqMk9xSTNsMGVGV0tMZUpRZTB4djRXVTVhTFBtLUNXWThrRXlUdlkxVlBJTmQwWlJyV29OZXRRZUkzaG9Ob3hoRlB0U1ZRcmFqeGRlZEFQOUxobUJMeg?oc=5",
-      "title": "OpenSearch Software Foundation and Linux Foundation Research Report Finds Organizations Seek Neutral Data Infrastructure as Global AI Implementation Peaks - PR Newswire",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "prnewswire.com"
-      ],
-      "independentDomains": [
-        "prnewswire.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.prnewswire.com/news-releases/opensearch-software-foundation-and-linux-foundation-research-report-finds-organizations-seek-neutral-data-infrastructure-as-global-ai-implementation-peaks-302886412.html",
-          "domain": "prnewswire.com",
-          "publisherFamily": "prnewswire.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.prnewswire.com/news-releases/opensearch-software-foundation-and-linux-foundation-research-report-finds-organizations-seek-neutral-data-infrastructure-as-global-ai-implementation-peaks-302886412.html",
-          "pageTitle": "OpenSearch Software Foundation and Linux Foundation Research Report Finds Organizations Seek Neutral Data Infrastructure as Global AI Implementation Peaks",
-          "canonical": "https://www.prnewswire.com/news-releases/opensearch-software-foundation-and-linux-foundation-research-report-finds-organizations-seek-neutral-data-infrastructure-as-global-ai-implementation-peaks-302886412.html",
-          "bodyChars": 5689,
-          "topicOverlap": 14
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMGxSNVRwV25NZktubFVfOXcyd0tGYk5US1dDYUFlSTNyRUtBeEoxQ1I1d0pLbmtJVHZyMkstaXY5VkNLWC1Jell6SVJCVVFIdUFmdHVXWXNablRNRmJIV3FPZFdieTVBSF9PUmlFTk5JTWtwaEVXa2FUOFFLSDgyOHFMZXIzMHBSTEdLZEdYYnZaN3N2Yk44TE9ZRQ?oc=5",
-      "title": "Some cheap smart glasses are a security disaster - Malwarebytes",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "malwarebytes.com"
-      ],
-      "independentDomains": [
-        "malwarebytes.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.malwarebytes.com/blog/news/2026/09/some-cheap-smart-glasses-are-a-security-disaster",
-          "domain": "malwarebytes.com",
-          "publisherFamily": "malwarebytes.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.malwarebytes.com/blog/news/2026/09/some-cheap-smart-glasses-are-a-security-disaster",
-          "pageTitle": "Some cheap smart glasses are a security disaster | Malwarebytes",
-          "canonical": "https://www.malwarebytes.com/blog/news/2026/09/some-cheap-smart-glasses-are-a-security-disaster",
-          "bodyChars": 4401,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdTRlclZKNk9kN3hVMW5NbTR2VjJ0V2hmTFRfUWVLcVoxVVl5cXNtVUtvbW5CdHpUVzN2Y1k0QjZDdzF6dUtBTENWSGxELTlvSk5PVjBOUUdoc0xkZDZVZEY4WDdaVGt3emExdC1rRTZqcXVMT3NSOEJmVGE2SENOd1FOQlB5bzNCa0hNSmp3Y3BSUDVPdWRYNmNoWTljcHFhSFdn0gGoAUFVX3lxTFBRT1B5d0ZaM1lsbUlOWUFjRWc1dzV3eUtMYzEwZkwyMWVzaEFpZTR2TFhTTVpCd3AwTE5faEdibDBaWEdoR3pLeEhoYWJRcTQ2NUJHR2JZM1hFLUF4Y0NyS0hjeTBaVEw2T01aM0FORGlpVXg3MFVMWGRSWG9SdjBCOFN1a3NWZm4xY2lJc1FIR0NSdFlZM294dXdiRTNZVExHaldfcWZ0Zw?oc=5",
@@ -2174,18 +2162,16 @@
       "status": "pass",
       "evidenceLevel": "strong",
       "validSourceCount": 8,
-      "independentPublisherCount": 5,
+      "independentPublisherCount": 4,
       "independentPublisherFamilies": [
         "businesswire.com",
         "itemonline.com",
-        "joplinglobe.com",
         "stocktitan.net",
         "gamesbeat.com"
       ],
       "independentDomains": [
         "businesswire.com",
         "itemonline.com",
-        "joplinglobe.com",
         "stocktitan.net",
         "gamesbeat.com"
       ],
@@ -2214,19 +2200,6 @@
           "pageTitle": "Faraday Future Launches Four Industry Productivity Solutions, Nine New EAI Devices at Its 919 Event, Building Its “One-Brain Multi-Form Multi-Capability” FF EAI Robot World 2.0; All-New Futurist Now on Sale and Master Mini Starts at $9,990 | | itemonline.com",
           "canonical": "https://www.businesswire.com/news/home/20260919657129/en/",
           "bodyChars": 5641,
-          "topicOverlap": 23
-        },
-        {
-          "suppliedUrl": "https://www.joplinglobe.com/region/national_business/faraday-future-launches-four-industry-productivity-solutions-nine-new-eai-devices-at-its-919-event/article_860a14ee-db7d-5ce1-9eac-f33bff6d46de.html",
-          "domain": "joplinglobe.com",
-          "publisherFamily": "joplinglobe.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.joplinglobe.com/region/national_business/faraday-future-launches-four-industry-productivity-solutions-nine-new-eai-devices-at-its-919-event/article_860a14ee-db7d-5ce1-9eac-f33bff6d46de.html",
-          "pageTitle": "Faraday Future Launches Four Industry Productivity Solutions, Nine New EAI Devices at Its 919 Event, Building Its “One-Brain Multi-Form Multi-Capability” FF EAI Robot World 2.0; All-New Futurist Now on Sale and Master Mini Starts at $9,990 | National Business | joplinglobe.com",
-          "canonical": "https://www.businesswire.com/news/home/20260919657129/en/",
-          "bodyChars": 5581,
           "topicOverlap": 23
         },
         {
@@ -2293,6 +2266,19 @@
           "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-announces-the-launch-of-part-one-of-the-ff-eai-hr31idoaaezr.html",
           "bodyChars": 5199,
           "topicOverlap": 16
+        },
+        {
+          "suppliedUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-global-ceo-yt-jia-shares-weekly-investor-update-sets-78l61vnoyyap.html",
+          "domain": "stocktitan.net",
+          "publisherFamily": "stocktitan.net",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-global-ceo-yt-jia-shares-weekly-investor-update-sets-78l61vnoyyap.html",
+          "pageTitle": "Faraday Future Sets 152-Unit July Robotics Sales Record | FFAI Stock News",
+          "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-global-ceo-yt-jia-shares-weekly-investor-update-sets-78l61vnoyyap.html",
+          "bodyChars": 9982,
+          "topicOverlap": 15
         }
       ],
       "recoveryAttempts": 0,
@@ -2328,13 +2314,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "united nations",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
     },
     {
       "link": "https://techcrunch.com/2026/09/21/discover-whats-next-5-days-left-to-save-up-to-200-on-techcrunch-disrupt-2026/",
@@ -2392,19 +2371,19 @@
         "theverge.com",
         "metro.co.uk",
         "themirror.com",
+        "ndtv.com",
         "t2online.in",
         "tempo.co",
-        "manchestereveningnews.co.uk",
-        "com.pk"
+        "manchestereveningnews.co.uk"
       ],
       "independentDomains": [
         "theverge.com",
         "metro.co.uk",
         "themirror.com",
+        "ndtv.com",
         "t2online.in",
         "en.tempo.co",
-        "manchestereveningnews.co.uk",
-        "thenews.com.pk"
+        "manchestereveningnews.co.uk"
       ],
       "sources": [
         {
@@ -2443,8 +2422,8 @@
           "finalUrl": "https://metro.co.uk/2026/09/22/donald-trump-renaming-ai-super-intelligence-its-going-kill-us-all-fear-29645026/",
           "pageTitle": "Donald Trump renaming AI to &#039;Super Intelligence&#039; over bad rep | News US | Metro News",
           "canonical": "https://metro.co.uk/2026/09/22/donald-trump-renaming-ai-super-intelligence-its-going-kill-us-all-fear-29645026/",
-          "bodyChars": 4354,
-          "topicOverlap": 5
+          "bodyChars": 4353,
+          "topicOverlap": 7
         },
         {
           "suppliedUrl": "https://www.themirror.com/news/politics/donald-trump-ai-rigged-poll-2034872.amp",
@@ -2458,6 +2437,19 @@
           "canonical": "https://www.themirror.com/news/politics/donald-trump-ai-rigged-poll-2034872",
           "bodyChars": 3537,
           "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.ndtv.com/world-news/us-to-call-ai-super-intelligence-donald-trump-says-artificial-makes-it-sound-fake-12083194",
+          "domain": "ndtv.com",
+          "publisherFamily": "ndtv.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.ndtv.com/world-news/us-to-call-ai-super-intelligence-donald-trump-says-artificial-makes-it-sound-fake-12083194",
+          "pageTitle": "US To Call AI \"Super Intelligence\", Donald Trump Says Artificial Makes It Sound \"Fake\"",
+          "canonical": "https://www.ndtv.com/world-news/us-to-call-ai-super-intelligence-donald-trump-says-artificial-makes-it-sound-fake-12083194",
+          "bodyChars": 2700,
+          "topicOverlap": 6
         },
         {
           "suppliedUrl": "https://t2online.in/tech/tech-news/donald-trump-declares-ai-will-be-renamed--super-intelligence-/2008187",
@@ -2482,7 +2474,7 @@
           "finalUrl": "https://en.tempo.co/read/2120113/trump-proposes-renaming-ai-as-super-intelligence",
           "pageTitle": "Trump Proposes Renaming AI as &#039;Super Intelligence&#039; - World En.tempo.co",
           "canonical": "https://en.tempo.co/read/2120113/trump-proposes-renaming-ai-as-super-intelligence",
-          "bodyChars": 6902,
+          "bodyChars": 6913,
           "topicOverlap": 6
         },
         {
@@ -2497,19 +2489,6 @@
           "canonical": "https://www.manchestereveningnews.co.uk/news/world-news/donald-trump-rename-artificial-intelligence-34656166",
           "bodyChars": 4377,
           "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://www.thenews.com.pk/latest/1416872-trump-opens-poll-on-renaming-artificial-intelligence-what-to-know",
-          "domain": "thenews.com.pk",
-          "publisherFamily": "com.pk",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.thenews.com.pk/latest/1416872-trump-opens-poll-on-renaming-artificial-intelligence-what-to-know",
-          "pageTitle": "Trump opens poll on renaming Artificial Intelligence: What to know",
-          "canonical": "https://www.thenews.com.pk/latest/1416872-trump-opens-poll-on-renaming-artificial-intelligence-what-to-know",
-          "bodyChars": 1554,
-          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -2605,98 +2584,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVnQtM0NWNGtuRUpfSVlEamlNeDk5U0VSRTZxX0txcmdkNE1lclJKaGJxblJ0QmEwWDVidmtuZ2g0Y0ppMUJsN1NUNm0wOGoyMGlfWW9UdEV4X2g3VFdDaHVDc3JMQ2pkRmljZks1YXFRUjI1azBaM3BkQ2MyU05jMHdjeW1TbFFCbU8td2RjRTNrc1dSRy1hZjd3SHlUQ1FXbFZINlhfY0VYUXZYSUlwb2VKekp2S29jd1RhekUzUlRyUTB6THpVTVBR?oc=5",
-      "title": "New Artificial Intelligence Takes Flight on Dassault Aviation’s Rafale - dassault-aviation.com",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "dassault-aviation.com",
-        "aerotime.aero"
-      ],
-      "independentDomains": [
-        "dassault-aviation.com",
-        "aerotime.aero"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.dassault-aviation.com/en/group/press/press-kits/new-artificial-intelligence-takes-flight-on-dassault-aviations-rafale/",
-          "domain": "dassault-aviation.com",
-          "publisherFamily": "dassault-aviation.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.dassault-aviation.com/en/group/press/press-kits/new-artificial-intelligence-takes-flight-on-dassault-aviations-rafale/",
-          "pageTitle": "New Artificial Intelligence Takes Flight on Dassault Aviation’s Rafale - Press kits",
-          "canonical": "https://www.dassault-aviation.com/en/group/press/press-kits/new-artificial-intelligence-takes-flight-on-dassault-aviations-rafale/",
-          "bodyChars": 5765,
-          "topicOverlap": 5
-        },
-        {
-          "suppliedUrl": "https://www.aerotime.aero/articles/dassault-rafale-ai-flight-tests-future-upgrades",
-          "domain": "aerotime.aero",
-          "publisherFamily": "aerotime.aero",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.aerotime.aero/articles/dassault-rafale-ai-flight-tests-future-upgrades",
-          "pageTitle": "Rafale flies two new AI algorithms from Dassault, Thales",
-          "canonical": "https://www.aerotime.aero/articles/dassault-rafale-ai-flight-tests-future-upgrades",
-          "bodyChars": 3455,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNNldVcFowZlZfWHh1dVJpbmtGM3RYR3dqLVdVdnFITVpLQU43NGpSbVZqNXg5emN2OVNYemNkWGF6Nnl6WjVRWlVXTEk3UnhqcWRxQWpIclNqZHRHcnBPQ2NCNHBqb1JaRkJWdTZpemltX3RiQTEwQ09Jc0s0amlROS1KUzVBdEZBZ2dnMU92elRXUHJqWjNRSFU5Z1ZHVTIwdEFYRjkwTFpBeGpyYk12V0F0eEJINlBBdDdvZDlnTWhZckc4aENILWlkTFZvQQ?oc=5",
-      "title": "Gorilla Technology Wins Major National AI Intelligence Infrastructure Expansion in Taiwan - TMX Newsfile",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "newsfilecorp.com",
-        "tradingview.com"
-      ],
-      "independentDomains": [
-        "newsfilecorp.com",
-        "tradingview.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.newsfilecorp.com/release/315404/Gorilla-Technology-Wins-Major-National-AI-Intelligence-Infrastructure-Expansion-in-Taiwan",
-          "domain": "newsfilecorp.com",
-          "publisherFamily": "newsfilecorp.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.newsfilecorp.com/release/315404/Gorilla-Technology-Wins-Major-National-AI-Intelligence-Infrastructure-Expansion-in-Taiwan",
-          "pageTitle": "Gorilla Technology Wins Major National AI Intelligence Infrastructure Expansion in Taiwan",
-          "canonical": "http://www.newsfilecorp.com/release/315404/Gorilla-Technology-Wins-Major-National-AI-Intelligence-Infrastructure-Expansion-in-Taiwan",
-          "bodyChars": 11006,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.tradingview.com/news/tradingview:48e7ce4538d59:0-gorilla-technology-group-inc-grrr-lands-multi-year-taiwan-ai-contract/",
-          "domain": "tradingview.com",
-          "publisherFamily": "tradingview.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.tradingview.com/news/tradingview:48e7ce4538d59:0-gorilla-technology-group-inc-grrr-lands-multi-year-taiwan-ai-contract/",
-          "pageTitle": "Gorilla Technology Group Inc. (GRRR) Lands Multi-Year Taiwan AI Contract — TradingView News",
-          "canonical": "https://www.newsfilecorp.com/release/315404/Gorilla-Technology-Wins-Major-National-AI-Intelligence-Infrastructure-Expansion-in-Taiwan",
-          "bodyChars": 971,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYTBXQ0tEcFNaRTU4dV9GdmJTSmxPVUYzVVhNQmRyWkRHSEx5YTJNMjFLcjNIWFI2R05iSEhSdlF3b29abnEteEcyR3dtWHBCYmNDWmJXcTBqQkdwWUxmWi12Yk1sQWV6VWJPTjZWeG9FckdFT3FlMVhXRkk5SFZyWElxZXVMZ1J2SEpiMm1CZ19jQXVkSnFpUVB6Ujk4cmdyOXNESXhiZXprUQ?oc=5",
       "title": "Corporate bond buyers get picky with flood of AI debt - Reuters",
       "status": "block",
@@ -2713,37 +2600,6 @@
           "resolvedFrom": "article-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Yc3l2R2NOajVfTERQME01WER0VEIwcVZKVUxMcmdVR2VPQVlEQXRodnV2blVMWVlzS0MxenhuQW5Nd0xFa3Bxd3hjSC1yYkFpdWpjMGNCLVRwYldJZDd6MUFn?oc=5",
-      "title": "Online Poll: Should Wyoming residents worry about AI or embrace it? - KGAB",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "kgab.com"
-      ],
-      "independentDomains": [
-        "kgab.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://kgab.com/ai-threat-debate-local-perspective/",
-          "domain": "kgab.com",
-          "publisherFamily": "kgab.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://kgab.com/ai-threat-debate-local-perspective/",
-          "pageTitle": "The Growing Debate Over AI's Threat to Society",
-          "canonical": "https://kgab.com/ai-threat-debate-local-perspective/",
-          "bodyChars": 4185,
-          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -2825,8 +2681,30 @@
       "sourceVerificationStatus": "unverified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRTA0cHJaNmJlUl9uZ1BYU1pNdGpWTkxONXkxdFhfTmpQWmJIWElMcm5mc2hEU3NpZmZoZVY5UzBJcFhoQkFUZDR1anN5OE54V3NRdkhud29pOV95VldDUDF4ejFnWjhaT21xMFpRMUJGY2QyeEVJN3p2YVZSeHNGa25ma1F1MmhDSjNTczc1d1V4QjJEVmJ2QkpRQQ?oc=5",
+      "title": "Why Gabelli Global Growth Fund Added Micron Technology (MU) in Q2 - Yahoo Finance",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://finance.yahoo.com/markets/stocks/articles/why-gabelli-global-growth-fund-141037360.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA4ZHpPemRjSlZyOVktMkZKamhfaGJSU0hacklhM0tFVk9SN202RVQ5cURlWDFZOGFld1lPZFFqMjAxZUNXTTVTRWJsWngwOGdpVU51WWRuYXlQb2FZTHg5dER0Yk1sMGVDd19ONWRRLUNSYnRPdkJnN2FYWQ?oc=5",
-      "title": "Dolly Parton's Nephew Fired From Security Role Amid Estate War - tmz.com",
+      "title": "Dolly Parton's Nephew Fired From Security Role Amid Estate War - TMZ",
       "status": "pass",
       "evidenceLevel": "strong",
       "validSourceCount": 8,
@@ -2835,7 +2713,7 @@
         "tmz.com",
         "pagesix.com",
         "iheart.com",
-        "yahoo.com",
+        "the-independent.com",
         "indiatimes.com",
         "okmagazine.com",
         "fashiontimes.co.uk",
@@ -2844,8 +2722,8 @@
       "independentDomains": [
         "tmz.com",
         "pagesix.com",
-        "country.iheart.com",
-        "nz.news.yahoo.com",
+        "700wlw.iheart.com",
+        "the-independent.com",
         "timesofindia.indiatimes.com",
         "okmagazine.com",
         "fashiontimes.co.uk",
@@ -2879,30 +2757,30 @@
           "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://country.iheart.com/featured/wayne-and-tay/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
-          "domain": "country.iheart.com",
+          "suppliedUrl": "https://700wlw.iheart.com/featured/women-of-iheartcountry/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
+          "domain": "700wlw.iheart.com",
           "publisherFamily": "iheart.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://country.iheart.com/featured/wayne-and-tay/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
-          "pageTitle": "Dolly Parton's Nephew Bryan Seaver Reportedly Fired From Security Role Amid Dispute Over Estate | iHeartCountry Radio | Wayne and Tay",
+          "finalUrl": "https://700wlw.iheart.com/featured/women-of-iheartcountry/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
+          "pageTitle": "Dolly Parton's Nephew Bryan Seaver Reportedly Fired From Security Role Amid Dispute Over Estate | 700WLW | Women of iHeartCountry",
           "canonical": "https://country.iheart.com/content/2026-09-22-dolly-partons-nephew-bryan-seaver-reportedly-fired-from-security-role-amid-dispute-over-estate/",
-          "bodyChars": 1785,
-          "topicOverlap": 12
+          "bodyChars": 1883,
+          "topicOverlap": 13
         },
         {
-          "suppliedUrl": "https://nz.news.yahoo.com/dolly-parton-nephew-announced-her-140522505.html",
-          "domain": "nz.news.yahoo.com",
-          "publisherFamily": "yahoo.com",
+          "suppliedUrl": "https://www.the-independent.com/arts-entertainment/music/news/dolly-parton-nephew-fired-security-bryan-seaver-b3054330.html",
+          "domain": "the-independent.com",
+          "publisherFamily": "the-independent.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://nz.news.yahoo.com/dolly-parton-nephew-announced-her-140522505.html",
-          "pageTitle": "Dolly Parton’s nephew who announced her death fired from longtime security role amid estate dispute - Yahoo",
+          "finalUrl": "https://www.the-independent.com/arts-entertainment/music/news/dolly-parton-nephew-fired-security-bryan-seaver-b3054330.html",
+          "pageTitle": "Dolly Parton’s nephew who announced her death fired from longtime security role amid estate dispute | The Independent",
           "canonical": "https://www.independent.co.uk/arts-entertainment/music/news/dolly-parton-nephew-fired-security-bryan-seaver-b3054330.html",
-          "bodyChars": 2780,
-          "topicOverlap": 13
+          "bodyChars": 4083,
+          "topicOverlap": 11
         },
         {
           "suppliedUrl": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/dolly-partons-nephew-bryan-seaver-fired-from-security-role-amid-estate-war-over-singers-usd-450-million-fortune-reports/articleshow/134399451.cms",
@@ -2962,71 +2840,52 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZmoybTcxQ0FoMC1TZm0xdWM1ZzBPWE1hY1RiMV9pRG9BbkNXNFE0VEtWcEIxUE1Vc1J2NUMwckpQUGFfcGQ4MHJ5WlJtYkFIOFd5d3BmNjNPcko3SVE3QWs2RHk1cFR5cDRiOE54Q2ZoMnJrdnphemlhaXNTTmtTU3Rsd3RJd3hOVEdocFRreXFvWm8?oc=5",
-      "title": "How Cisco and KETS Achieved a Quantum Security Milestone - cybermagazine.com",
+      "title": "How Cisco and KETS Achieved a Quantum Security Milestone - Cyber Magazine",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
       "independentPublisherCount": 0,
       "independentPublisherFamilies": [],
       "independentDomains": [],
-      "sources": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://cybermagazine.com/news/cisco-and-kets-achieve-a-secure-quantum-security-milestone",
+          "domain": "cybermagazine.com",
+          "publisherFamily": "cybermagazine.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
+        }
+      ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
+      "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQX2ZLc3FkMFBGdGM0Mno4QmV0ZFJtVWZ2X3RyLUp6SmFUX0tQQ0FPRHlLRmdJVmU5dy11SlE3SXFJUVlySDNQOXlmZTFkV3JNc19nSDlyUlhJZzgyMDY1d0VRaV9IT054T2stSTd5VWNOVVJNa0w3VHctTW9GdUJjYkRkQXdmSW1pOWllUVV4OVdOU003ckJBaWloZ0JKUmdtVTFiLVRhajY2N2pKUHhiYXV1Z3Y?oc=5",
-      "title": "EXCLUSIVE: DeepSeek to brief UN Security Council on AI this week, sources say - Reuters",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE00cmYyMTQxSWI3N0VKcHFIZXU4aXBSMEJZc1NZU09UWUE1VHNVc19HRl8zLWpMdVFYdTZFcXJUbmFTVjdyN2J0bW9oRldBeEhNTlFuSTMzbjBYVklpcENCalEybVowVGM?oc=5",
+      "title": "Current price of Bitcoin for Sept. 22, 2026 - fortune.com",
       "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "thenextweb.com",
-        "biggo.com"
+        "fortune.com"
       ],
       "independentDomains": [
-        "thenextweb.com",
-        "finance.biggo.com"
+        "fortune.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://thenextweb.com/news/deepseek-un-security-council-ai-briefing",
-          "domain": "thenextweb.com",
-          "publisherFamily": "thenextweb.com",
-          "resolvedFrom": "article-link",
+          "suppliedUrl": "https://fortune.com/article/price-of-bitcoin-09-22-2026/",
+          "domain": "fortune.com",
+          "publisherFamily": "fortune.com",
+          "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://thenextweb.com/news/deepseek-un-security-council-ai-briefing",
-          "pageTitle": "DeepSeek to brief UN Security Council on AI risks this week, Reuters reports",
-          "canonical": "https://thenextweb.com/news/deepseek-un-security-council-ai-briefing",
-          "bodyChars": 3463,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N45E09I:0-deepseek-to-brief-un-security-council-on-ai-this-week-sources-say/",
-          "domain": "tradingview.com",
-          "publisherFamily": "tradingview.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N45E09I:0-deepseek-to-brief-un-security-council-on-ai-this-week-sources-say/",
-          "pageTitle": "DeepSeek to brief UN Security Council on AI this week, sources say — TradingView News",
-          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N45E09I:0-deepseek-to-brief-un-security-council-on-ai-this-week-sources-say/",
-          "bodyChars": 344,
-          "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://finance.biggo.com/news/4c08c8cd-a013-4e73-ab7c-79c321e9de71",
-          "domain": "finance.biggo.com",
-          "publisherFamily": "biggo.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://finance.biggo.com/news/4c08c8cd-a013-4e73-ab7c-79c321e9de71",
-          "pageTitle": "DeepSeek, OpenAI and Anthropic Set to Brief UN Security Council on AI Risks — BigGo Finance",
-          "canonical": "https://finance.biggo.com/news/4c08c8cd-a013-4e73-ab7c-79c321e9de71",
-          "bodyChars": 6782,
-          "topicOverlap": 9
+          "finalUrl": "https://fortune.com/article/price-of-bitcoin-09-22-2026/",
+          "pageTitle": "Current price of Bitcoin for Sept. 22, 2026 | Fortune",
+          "canonical": "https://fortune.com/article/price-of-bitcoin-09-22-2026/",
+          "bodyChars": 6585,
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
@@ -3064,54 +2923,8 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUXE3dVpUeHdrTVNfYUhRdFAyRFk3ZmxjZ0tIQ3ZxMDNhQks5V1dBeXRYSldKeW05WEZuTmN1S1RsWlV2dU1od3VnQ2lFbVI5WUlYTklFTU9IMUh0U0h3S0NVcEt6UlhBZndGR2NxYmJqZFlEVlViamNKSXNqNURockxkNzlXZVNFa1U3aGxoWW5ha0NhdmI1blpvVUl5OXNVOUxtNWhRc1kxdWhZN2tDTWluVXlZSWlxaDFoQ2VSQ1dBSG1wU2xUMW5sWmx1cnhYanlIQ19EOHU?oc=5",
-      "title": "Bitcoin, ether perpetual volumes on Kalshi are dominated by an unusual, repetitive trade, data shows - coindesk.com",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "coindesk.com",
-        "pluang.com"
-      ],
-      "independentDomains": [
-        "coindesk.com",
-        "pluang.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.coindesk.com/markets/2026/09/21/bitcoin-ether-perpetual-volumes-on-kalshi-are-dominated-by-an-unusual-repetitive-trade-data-shows",
-          "domain": "coindesk.com",
-          "publisherFamily": "coindesk.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.coindesk.com/markets/2026/09/21/bitcoin-ether-perpetual-volumes-on-kalshi-are-dominated-by-an-unusual-repetitive-trade-data-shows",
-          "pageTitle": "Kalshi's bitcoin, ether perpetual volume is dominated by repeating trade sizes, data shows",
-          "canonical": "https://www.coindesk.com/markets/2026/09/21/bitcoin-ether-perpetual-volumes-on-kalshi-are-dominated-by-an-unusual-repetitive-trade-data-shows",
-          "bodyChars": 7918,
-          "topicOverlap": 12
-        },
-        {
-          "suppliedUrl": "https://pluang.com/en/news-feed/volume-perpetual-bitcoin-ether-kalshi-didominasi-ukuran-trade-berulang",
-          "domain": "pluang.com",
-          "publisherFamily": "pluang.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://pluang.com/en/news-feed/volume-perpetual-bitcoin-ether-kalshi-didominasi-ukuran-trade-berulang",
-          "pageTitle": "Unusual repetitive trades dominate Kalshi's bit... | Pluang",
-          "canonical": "https://pluang.com/en/news-feed/volume-perpetual-bitcoin-ether-kalshi-didominasi-ukuran-trade-berulang",
-          "bodyChars": 2356,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcTR1LUlyMm52bkI5U19xOTlVeHpDbDlFTGM2WTh4TGNGUUQycW13VDY3bi13aVFyMFBNVEZqeGNZaGdMSm91Z1ZOeVRDODFCQXBQN2JGYW8zWG4zXzBBVVl4QlpQcnR1UzNSSWFHSWUyZ1AyNTJZQ19vc081bnBfa0RWMUMzNlQ2Z0lzXzlnd3FMQTExQkQ1bE9tU1p5UFlWemRZWWxLeFNsVWVPS2I2ZWJkNjU0NHVMRlFR?oc=5",
-      "title": "UN relief chief urges stronger humanitarian diplomacy to defend international humanitarian law - OCHA",
+      "title": "UN relief chief urges stronger humanitarian diplomacy to defend international humanitarian law - unocha.org",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -3180,7 +2993,7 @@
           "pageTitle": "AstroForge Puts AI in Command of Next Spacecraft Mission | The Tech Buzz",
           "canonical": "https://www.techbuzz.ai/articles/astroforge-puts-ai-in-command-of-next-spacecraft-mission",
           "bodyChars": 4646,
-          "topicOverlap": 7
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
@@ -3350,6 +3163,138 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5iX09UUjhNamJjQWM2WlpUMTdTc2pCdldpOUlfNW00LVZ6ckhxdW5Bdkk2a0pzSV9ub19BRFRaT3hCdHcwSGwyaF8xNzZ5LVd1SFhUOFhZdG9ZTzA3VDJpLVRncDdsS3JvNkFGeGhadjZyZw?oc=5",
+      "title": "News : Update to Technology Use for K-2 Students - Seattle Public Schools",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
+      "independentPublisherFamilies": [
+        "seattleschools.org",
+        "komonews.com",
+        "seattlemet.com"
+      ],
+      "independentDomains": [
+        "seattleschools.org",
+        "komonews.com",
+        "seattlemet.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.seattleschools.org/news/technology-use-k-2-students/",
+          "domain": "seattleschools.org",
+          "publisherFamily": "seattleschools.org",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.seattleschools.org/news/technology-use-k-2-students/",
+          "pageTitle": "News : Update to Technology Use for K-2 Students - Seattle Public Schools",
+          "canonical": "https://www.seattleschools.org/news/technology-use-k-2-students/",
+          "bodyChars": 5689,
+          "topicOverlap": 4
+        },
+        {
+          "suppliedUrl": "https://komonews.com/news/local/seattle-public-schools-technology-use-kindergarten-through-second-grade-students-learning-reduce-screen-time-hands-on-learning-reading-writing-discussion-classes",
+          "domain": "komonews.com",
+          "publisherFamily": "komonews.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://komonews.com/news/local/seattle-public-schools-technology-use-kindergarten-through-second-grade-students-learning-reduce-screen-time-hands-on-learning-reading-writing-discussion-classes",
+          "pageTitle": "New Seattle Public Schools guidelines to limit screen time for young students",
+          "canonical": "https://komonews.com/news/local/seattle-public-schools-technology-use-kindergarten-through-second-grade-students-learning-reduce-screen-time-hands-on-learning-reading-writing-discussion-classes",
+          "bodyChars": 820,
+          "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://www.govtech.com/education/k-12/seattle-schools-curb-screen-time-for-youngest-students",
+          "domain": "govtech.com",
+          "publisherFamily": "govtech.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.govtech.com/education/k-12/seattle-schools-curb-screen-time-for-youngest-students",
+          "pageTitle": "Seattle Schools Curb Screen Time for Youngest Students",
+          "canonical": "https://www.govtech.com/education/k-12/seattle-schools-curb-screen-time-for-youngest-students",
+          "bodyChars": 0,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://www.seattlemet.com/news-and-city-life/2026/08/seattle-public-schools-technology",
+          "domain": "seattlemet.com",
+          "publisherFamily": "seattlemet.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.seattlemet.com/news-and-city-life/2026/08/seattle-public-schools-technology",
+          "pageTitle": "How Seattle Public Schools Is Rethinking Technology | Seattle Met",
+          "canonical": "https://www.seattlemet.com/news-and-city-life/2026/08/seattle-public-schools-technology",
+          "bodyChars": 6379,
+          "topicOverlap": 4
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTXotVG1mcHYyRFJFZURlbXpiMWstQ3BaMDVtMGpzel9BVUhncm1pVnI3bDFpS1ZRSXY3bkdMZ3hiTXVDdVJxUXZoV3Q4V20zaTV0Z180b1U0R3pPT1dORVBxeGRKMUNoeXMza2N2TjhES1hNdEREM3pORDJOS2Y1bjFtbFF6Q3NTQ3ZKY3FPb09LcFNCcGlMeFRUM3hMY2FIbC1CUW9BOWo0SC1SV05MUA?oc=5",
+      "title": "This security technology stock has an 'underappreciated' edge, Jefferies says - CNBC",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
+          "domain": "cnbc.com",
+          "publisherFamily": "cnbc.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
+          "pageTitle": "This security technology stock has an 'underappreciated' edge, Jefferies says",
+          "canonical": "https://www.cnbc.com/2026/09/22/this-security-technology-stock-has-an-underappreciated-edge-jefferies-says.html",
+          "bodyChars": 426,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY3U3b0FBYThtMmV6WWdpQTM1X2RJM3lmbDhCZi16Wnp0YjZ4OWhVbmZRUEY1MlhNb1l6SzFVZkxQeTl5em5iRDJVb2xRVGtGT1NmNGU3c0ZlTXd4T0hrcHhBUW1UMVdyZHBoQkhPV1lrdUtwWjVxYnlpQU1RM3NLbVhLWm4?oc=5",
+      "title": "‘Turn the cameras off:’ London’s growing privacy pushback against smart glasses - CNN",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "cnn.com"
+      ],
+      "independentDomains": [
+        "cnn.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.cnn.com/2026/09/22/tech/london-privacy-pushback-meta-smart-glasses",
+          "domain": "cnn.com",
+          "publisherFamily": "cnn.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.cnn.com/2026/09/22/tech/london-privacy-pushback-meta-smart-glasses",
+          "pageTitle": "‘Turn the cameras off:’ London’s growing privacy pushback against smart glasses | CNN Business",
+          "canonical": "https://www.cnn.com/2026/09/22/tech/london-privacy-pushback-meta-smart-glasses",
+          "bodyChars": 11761,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYWJ6LW0wekhLOHdheTMtbUxLUU52a3h1cXY0UG9vY3YtUlU5LXFTbHY3ckI3dGlZMHdRRWEtNjBUSlZhYjhhVkRwUzZvS2FaV20zVFcwYktiZlZ3UklZRzZKMTJaOTlwSXE3NWpobmt1MU1vdHkxc1RCNkJCUXFxYndSRnd3UQ?oc=5",
       "title": "\"National security\" becomes Trump's executive sledgehammer - Axios",
       "status": "block",
@@ -3394,8 +3339,34 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbm1ocHJySVRjNEFTTk9TQnk2bGJReXFfc3VvcEk4Q3ZwaElWZFptS2FvSUFVNWJsU2p6Q2RUU3BoNWdWNUpyMHVYbzNEZ3dVajlKY2YzSnNBdC1sWDlJV3lIOXBOa0ZqeWYtU01Yemw3WFFIeDVVRTE1b0lUUDFwZWtVM2xQSy1iUzNvMktrWkFKaFhm?oc=5",
+      "title": "Bitcoin Jumps Above $86,000 to 8-Month High - WSJ",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMkE0U2tuSDlZUU1hbVd3V0JnN3FQeXhEdmpzUURGNEdjZnZqY1RQdk4xenN3Z01LQjd4eXdITFRKWGZybVVkUzRIMzRYeklneGZqWWN1VkVabWxxamdDZVh6WE1RVFVlYmtJSWY0cUhReEJOUGprbjZCMWtzeXB1YUoxVjVBcGQweWpHVVl1R0hwb09ON3FHOW1VYzdBTjlKVnVaNWprM3NiSEVTdzZGdFRYQQ?oc=5",
+      "title": "Bitcoin (BTC) Retreats From Eight-Month High After Dizzying 13% Rally - Bloomberg.com",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE92UGszZTNYcXREMm9MMVptMnFaanJlR181TFhuMS1rUmFKWVQtcGdYbGVoR2lZbVYxcnk5UlBxTU8tUEJDWms4SW9WZFotWGZYWXRLS0Fxci1RYVdyakpub2ROODVDYTk0?oc=5",
-      "title": "Current price of Ethereum for Sept. 22, 2026 - Fortune",
+      "title": "Current price of Ethereum for Sept. 22, 2026 - fortune.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -3423,32 +3394,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbm1ocHJySVRjNEFTTk9TQnk2bGJReXFfc3VvcEk4Q3ZwaElWZFptS2FvSUFVNWJsU2p6Q2RUU3BoNWdWNUpyMHVYbzNEZ3dVajlKY2YzSnNBdC1sWDlJV3lIOXBOa0ZqeWYtU01Yemw3WFFIeDVVRTE1b0lUUDFwZWtVM2xQSy1iUzNvMktrWkFKaFhm?oc=5",
-      "title": "Bitcoin Jumps Above $86,000 to 8-Month High - WSJ",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMkE0U2tuSDlZUU1hbVd3V0JnN3FQeXhEdmpzUURGNEdjZnZqY1RQdk4xenN3Z01LQjd4eXdITFRKWGZybVVkUzRIMzRYeklneGZqWWN1VkVabWxxamdDZVh6WE1RVFVlYmtJSWY0cUhReEJOUGprbjZCMWtzeXB1YUoxVjVBcGQweWpHVVl1R0hwb09ON3FHOW1VYzdBTjlKVnVaNWprM3NiSEVTdzZGdFRYQQ?oc=5",
-      "title": "Bitcoin (BTC) Retreats From Eight-Month High After Dizzying 13% Rally - bloomberg.com",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://techcrunch.com/2026/09/22/techcrunch-disrupt-2026-aaron-edsinger-brings-hello-robots-stretch-4-to-life-onstage/",
@@ -3566,66 +3511,79 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5iX09UUjhNamJjQWM2WlpUMTdTc2pCdldpOUlfNW00LVZ6ckhxdW5Bdkk2a0pzSV9ub19BRFRaT3hCdHcwSGwyaF8xNzZ5LVd1SFhUOFhZdG9ZTzA3VDJpLVRncDdsS3JvNkFGeGhadjZyZw?oc=5",
-      "title": "News : Update to Technology Use for K-2 Students - Seattle Public Schools",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNLUhXemhJUFpxaUR5dC1ETDdzUW9BZTNseURHVFFqVW5uQ1VmcVdTVnVrVEhGUkRma094Z0d3SUxuSGo4U3RNeVhfMno1TlYzaThaenFPdm1RODAxZ1VHMjk1ci1MNTdaZC1yQVIwb1NRbWUxekN3NVZrZ19vcWZ3YW1xM0Fyd1hqRjA1QmRGRzJkWGEwbzVGWHFiYmxyNkRXUDhJMUlNemxPZw?oc=5",
+      "title": "Prosus names AI and technology leaders building the next chapter - Prosus",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "seattleschools.org"
+        "prosus.com"
       ],
       "independentDomains": [
-        "seattleschools.org"
+        "prosus.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.seattleschools.org/news/technology-use-k-2-students/",
-          "domain": "seattleschools.org",
-          "publisherFamily": "seattleschools.org",
+          "suppliedUrl": "https://www.prosus.com/news-insights/2026/prosus-names-ai-and-technology-leaders-building-the-next-chapter",
+          "domain": "prosus.com",
+          "publisherFamily": "prosus.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.seattleschools.org/news/technology-use-k-2-students/",
-          "pageTitle": "News : Update to Technology Use for K-2 Students - Seattle Public Schools",
-          "canonical": "https://www.seattleschools.org/news/technology-use-k-2-students/",
-          "bodyChars": 5689,
-          "topicOverlap": 4
+          "finalUrl": "https://www.prosus.com/news-insights/2026/prosus-names-ai-and-technology-leaders-building-the-next-chapter",
+          "pageTitle": "Prosus names AI and technology leaders building the next chapter – Prosus",
+          "canonical": "",
+          "bodyChars": 4737,
+          "topicOverlap": 6
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQN2pfSDRPbHBLSGtkZmVsM3V1dEMzMWp6bUxvVl9LS1piSFJzTE0xUnY2Zkl1b1g1aUhZalRVaWtTYzdUQkl6MXpHRm11S0dMVTZDU1lQaVg0QTA0cXB2R04wc1RIcWxNQ2tVS2Z6UU9jYXA4T0U0N3JvMEU5MkNWckxpaXM2YWFadjNDSHJmM2VCaHBDeER1Q21n?oc=5",
-      "title": "As Software VCs Chase SpaceX Alumni, A Defense Tech Veteran Warns Of ‘Tourists And FOMO’ - Crunchbase News",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPM0xDeHVNZmdsZUp2ajJXMGNhcU81M3V1MDF5VzhNdHpBb1lHWHZfZk1PTkNRLXJndVQ4RUx2MGg4S1djOXZkZEJSRjI0RVQ0N3ltNkQ3eC1ZblU0UlYzVVNVcENzV0pWbloxNm5QQTJQcWc4TlB4LUpoR1gwTG1NbGF6TTJVcXA2STRRV0FGcHRJcFJOQzlDblA1MG94Q2pkellYQzJQT3dxOGEx?oc=5",
+      "title": "The State of Illinois Newsroom - The State of Illinois Newsroom",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "crunchbase.com"
+        "prezly.com"
       ],
       "independentDomains": [
-        "news.crunchbase.com"
+        "gov-pritzker-newsroom.prezly.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://news.crunchbase.com/venture/qa-defense-tech-warning-ai-venture-espahbodi-generational/",
-          "domain": "news.crunchbase.com",
-          "publisherFamily": "crunchbase.com",
+          "suppliedUrl": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet",
+          "domain": "gov-pritzker-newsroom.prezly.com",
+          "publisherFamily": "prezly.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://news.crunchbase.com/venture/qa-defense-tech-warning-ai-venture-espahbodi-generational/",
-          "pageTitle": "As Software VCs Chase SpaceX Alumni, A Defense Tech Veteran Warns Of ‘Tourists And FOMO’",
-          "canonical": "https://news.crunchbase.com/venture/qa-defense-tech-warning-ai-venture-espahbodi-generational/",
-          "bodyChars": 14342,
-          "topicOverlap": 10
+          "finalUrl": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet",
+          "pageTitle": "Gov. Pritzker Establishes Illinois Artificial Intelligence (AI) Cabinet",
+          "canonical": "https://gov-pritzker-newsroom.prezly.com/gov-pritzker-establishs-illinois-artificial-intelligence-ai-cabinet",
+          "bodyChars": 4455,
+          "topicOverlap": 3
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdjljX1dKVG55bGRTZ2xjY2c1QXkxcV9rSHdKS0FhYUY1dkxQVnF2QXJzOEljalVFcWFINzNHQktXazlsdFVPbTlUZFNNTzRWT3E2X3VybHpjVDhzSzI0OHllZnJtVlRKSy1weDdSdUhXbTFiOFlFbFpidVczcE9yZzlmMjNCMnM?oc=5",
+      "title": "Trump and Xi to Discuss A.I. Risks and Competition at US-China Summit - The New York Times",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://techcrunch.com/2026/09/22/bill-gates-breakthrough-energy-bets-these-21-startups-will-shape-energys-future/",
@@ -3752,37 +3710,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNLUhXemhJUFpxaUR5dC1ETDdzUW9BZTNseURHVFFqVW5uQ1VmcVdTVnVrVEhGUkRma094Z0d3SUxuSGo4U3RNeVhfMno1TlYzaThaenFPdm1RODAxZ1VHMjk1ci1MNTdaZC1yQVIwb1NRbWUxekN3NVZrZ19vcWZ3YW1xM0Fyd1hqRjA1QmRGRzJkWGEwbzVGWHFiYmxyNkRXUDhJMUlNemxPZw?oc=5",
-      "title": "Prosus names AI and technology leaders building the next chapter - Prosus",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "prosus.com"
-      ],
-      "independentDomains": [
-        "prosus.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.prosus.com/news-insights/2026/prosus-names-ai-and-technology-leaders-building-the-next-chapter",
-          "domain": "prosus.com",
-          "publisherFamily": "prosus.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.prosus.com/news-insights/2026/prosus-names-ai-and-technology-leaders-building-the-next-chapter",
-          "pageTitle": "Prosus names AI and technology leaders building the next chapter – Prosus",
-          "canonical": "",
-          "bodyChars": 4737,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5NeE84aHR1OGVWMTIzUzZ3bkxFbWpSV0RaSkhaRkhiZDlfVVg4aFdKZTBRNDAxa3RjY1lleFhsV2hPcUNjYjZ0TDZhQ2pRRGprZGN4NUxjT2hiZWNWTEg0ai1jeGt6bjJIUUE5Q1VRSVBpaWst?oc=5",
       "title": "Will Crypto Crash the Blue Wave? - Paul Krugman | Substack",
       "status": "block",
@@ -3887,19 +3814,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdjljX1dKVG55bGRTZ2xjY2c1QXkxcV9rSHdKS0FhYUY1dkxQVnF2QXJzOEljalVFcWFINzNHQktXazlsdFVPbTlUZFNNTzRWT3E2X3VybHpjVDhzSzI0OHllZnJtVlRKSy1weDdSdUhXbTFiOFlFbFpidVczcE9yZzlmMjNCMnM?oc=5",
-      "title": "U.S. and China Balance A.I. Risks and Rivalry - The New York Times",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOb055UzNtaDdHUExaMC1XNHN5dEJoaEFVUWFQQ1hHM2VHZnNFYUlwQkNoUW9KY2s0bnJQOXVGSlhaRVNSN3M3R0NNb05RUHkzdkZSYkw5RlZ3c0N2SkJDSFlld2hZTDNOMFBHTEh3SXhXcEMyRkxpbXpMN0JWa0pqUV8yQ29YZnNzYzVVU2Z6UHlvaktkcDRpQjdudEtXMkZ1YWVJaHRPVWhIUQ?oc=5",
@@ -4288,16 +4202,14 @@
       "link": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
       "title": "Microsoft is laying off 268 Xbox staffers and Ninja Theory may close",
       "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "theverge.com",
-        "kotaku.com"
+        "theverge.com"
       ],
       "independentDomains": [
-        "theverge.com",
-        "kotaku.com"
+        "theverge.com"
       ],
       "sources": [
         {
@@ -4312,19 +4224,6 @@
           "canonical": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
           "bodyChars": 3518,
           "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://kotaku.com/xbox-reset-268-laid-off-ninja-theory-halo-activision-2000736434",
-          "domain": "kotaku.com",
-          "publisherFamily": "kotaku.com",
-          "resolvedFrom": "news-feed-publisher-page",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://kotaku.com/xbox-reset-268-laid-off-ninja-theory-halo-activision-2000736434",
-          "pageTitle": "Xbox Lays Off 268 As &#039;Reset&#039; Continues",
-          "canonical": "https://kotaku.com/xbox-reset-268-laid-off-ninja-theory-halo-activision-2000736434",
-          "bodyChars": 3423,
-          "topicOverlap": 4
         }
       ],
       "recoveryAttempts": 0,
@@ -4334,16 +4233,14 @@
       "link": "https://www.theverge.com/news/998586/activision-halo-xbox-reorganization-layoffs",
       "title": "Activision is taking over Halo as part of a massive Xbox shake-up",
       "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "theverge.com",
-        "purexbox.com"
+        "theverge.com"
       ],
       "independentDomains": [
-        "theverge.com",
-        "purexbox.com"
+        "theverge.com"
       ],
       "sources": [
         {
@@ -4358,19 +4255,6 @@
           "canonical": "https://www.theverge.com/news/998586/activision-halo-xbox-reorganization-layoffs",
           "bodyChars": 7238,
           "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://www.purexbox.com/news/2026/09/activision-issues-statement-after-taking-on-some-of-the-biggest-ip-in-xbox-history",
-          "domain": "purexbox.com",
-          "publisherFamily": "purexbox.com",
-          "resolvedFrom": "news-feed-publisher-page",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.purexbox.com/news/2026/09/activision-issues-statement-after-taking-on-some-of-the-biggest-ip-in-xbox-history",
-          "pageTitle": "Activision Issues Statement After Taking On Some Of The Biggest IP In Xbox History | Pure Xbox",
-          "canonical": "https://www.purexbox.com/news/2026/09/activision-issues-statement-after-taking-on-some-of-the-biggest-ip-in-xbox-history",
-          "bodyChars": 7275,
-          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -4437,7 +4321,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
-      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - news.njit.edu",
+      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4451,7 +4335,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQQ25UWWR5ZktHUHhNRnRtWUxTbG9BZXJZZElUWFA1WVVqSTA2NHIwczNQMV9JUlRfbzRJVExYZVNTME5ySFhiUEJ3STgtUjdkZ3Awa2xXNUFOcEg0QWlVNnBkakFfTHNoRVZyQk1hbGIxNHJEa3ZnNDRfWk1sTGlTa0l6QlRURS1FS1F6TllBWE9nRVdsUTI1V0FGWmlLVE5ZbUg1dFA5ak85eldKOS1NeURsNFUwTlhJNDFnNmFWRVQyd2psZE1BTHpfWmtmYkZFYjhFazlkMms4TzZhYy15Uw?oc=5",
-      "title": "Bybit Odds: View to Victory official product launch with a 17,000 USDT total prize pool! - Bybit",
+      "title": "Bybit Odds: View to Victory official product launch with a 17,000 USDT total prize pool! - announcements.bybit.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4459,6 +4343,13 @@
     {
       "link": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
       "title": "Muse, Meta's extraordinarily privileged AI assistant, has a serious 0-day",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWnYwQWVnNS1PejZ6VXFCRjRzcVZrcnh6S3hzZldtUGR3TWdSTmRsbVVvdWFUaHdwSHZqX2lpaV9pWlNRYmVjUk45czNacGlJR29BcGdjUnB5MzRfOXhkcDlfNE00ZEx5SjRZNlpEOXliSzZVRDZYeUlFdGlZUG1BbzNkWnVvV1dWNmJJUmEtM3ZPNTdmNTE5N1o1NVlUS3A1?oc=5",
+      "title": "U.N. Seeks Relevance on A.I. as the U.S. and China Race Ahead - The New York Times",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4598,7 +4489,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQUM4WGNTX0syZ01wenpzWmZCRmVtckdYSV9ZTk1PVnNTZE5seUFKSHJTNEFPR09GY2dyU3hZUmxBdjVQZTd0ZjhRZ2JYbXB4c2FvQlQtdnEtQlYzY20tVVV1Z0NhOVROdlQySHNIbGlLZlNkOFFCODhGeVVmeFppUm5JcHl0T2dKZ3Zv?oc=5",
-      "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - uwaterloo.ca",
+      "title": "Opinion: Why Canada’s health Innovation bottleneck is adoption, not invention - University of Waterloo",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4682,7 +4573,42 @@
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "clock",
+      "title": "opus 5.5",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "beats 360",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "fat bear week voting",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "rays vs yankees",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "nyt",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "tubi",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4703,42 +4629,14 @@
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "foreign policy",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
       "title": "icc",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "hayden panettiere",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "schd",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "halo",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "maria sakkari",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "tsla",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4767,6 +4665,13 @@
     {
       "link": "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/",
       "title": "She died at the San Diego border. A surveillance camera was in plain sight",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Db1M3SWg3WG9OOU9xZ1QwTjlKUDZvSVpVektnRnFTSXFvdXBmQm5lS2h5ODFwdWl2eFlQT0hRZWR1ZUxfdzFHVXhBZUNKRl9Semw3NG55S0lrUXFXNFR4eVZwdHFtLVZxU1NZeS1Va0RZNU0?oc=5",
+      "title": "Bitcoin Futures - cmegroup.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4836,7 +4741,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5",
-      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - bloomberg.com",
+      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - Bloomberg.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4857,14 +4762,14 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
-      "title": "America's true innovation advantage: we don't just invent technologies — we reinvent how innovation works - Fortune",
+      "title": "America's true innovation advantage: we don't just invent technologies — we reinvent how innovation works - fortune.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaWlLQndiYXEzcWRjNnFRaDl1QUlMOFh6MWp2R21WX1dkZkV5RzE5enNTRm9FSmpxVGhfdEtiMU9Xd05FWEFBbm9QLVZGbGRyYlBVWXdhMG05R0dvaGZyZUtQcFNKdmRUdEFQcWcyOGFkckozNURNa2lhU3E4VlltOHI1aExtOXhxb19GNlE5S0dfNi1rQ1QtVFhMSG1WWEtXWVB2cllYa3gzVlZPaVI4OWpuYnlYRzJaUUVFSzFIZlJMR1lnVWgxLW1TZWw3dzFzNVRZbi1NV0NQWVNDbHlvc0tScmhWVWZ0SlMwRHU1N0NQVGxyN1hHb1RSTTI5V2Jl?oc=5",
-      "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - SCMP",
+      "title": "From invention to impact: Hong Kong Science Fair gives young innovators a wider stage - South China Morning Post",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4884,13 +4789,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5",
-      "title": "Leaders at Davos 2026 on how we can deploy innovation and technology at scale and responsibly - The World Economic Forum",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBOa2owd25HUm1tY193ZzIxWlVJZjJuaElKN1V1djFzaWlFX0piTzR0YjU3akdQQXcydDNXUDNoX0RSUUw1TXpJRFRIZnRxVWxVOWozRmN0c0hOTDZXejNFLVhuTTd4clhaQXJtTDhDM3djZw?oc=5",
       "title": "Apple unveils iPhone Duo - Apple",
       "status": "not-eligible",
@@ -4905,15 +4803,15 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Db1M3SWg3WG9OOU9xZ1QwTjlKUDZvSVpVektnRnFTSXFvdXBmQm5lS2h5ODFwdWl2eFlQT0hRZWR1ZUxfdzFHVXhBZUNKRl9Semw3NG55S0lrUXFXNFR4eVZwdHFtLVZxU1NZeS1Va0RZNU0?oc=5",
-      "title": "Bitcoin Futures - cmegroup.com",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdU1tN1NrOVBudm1vRHJ1WVI1c3RrS1ZnX2laZURLVDJFYUtpbWNCT2VQMHVsVXBvcGpNZDljVzloRklTcXdvenV2UTBrZjdjczZFRlAxVG9TTF9sNWdTT2pPVGVQNi1SMWRDdjBRQW9RdmZ5LVFKYzctdk1fM09FNXV6dlBPTnA5Q0tjRHhId0cxd3pSYTAzUHZ5WEZOaUlsVktYWXFQckE1MEpPOWRfUw?oc=5",
+      "title": "Apple App Store Guidelines Have Some Vibe Coding Apps in Limbo - CNET",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPdU1tN1NrOVBudm1vRHJ1WVI1c3RrS1ZnX2laZURLVDJFYUtpbWNCT2VQMHVsVXBvcGpNZDljVzloRklTcXdvenV2UTBrZjdjczZFRlAxVG9TTF9sNWdTT2pPVGVQNi1SMWRDdjBRQW9RdmZ5LVFKYzctdk1fM09FNXV6dlBPTnA5Q0tjRHhId0cxd3pSYTAzUHZ5WEZOaUlsVktYWXFQckE1MEpPOWRfUw?oc=5",
-      "title": "Apple App Store Guidelines Have Some Vibe Coding Apps in Limbo - CNET",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxORmIwOGdHeHlHbG1SbWpUandXeXlOLThYZXhfV3pFR3BTNmpTbndSSlE2OGhhZmJ4dFU2V05fdWpkblQzdWFvN3VUQ2hBNm1PZDNaQnh1ZV9SU2gwX0QxNEdIRTJXb2hwSVhPRXNRLXFOa21jNDZsbGpzQ1BjZkotTjNjdnVIZGZmRWRqNU0zWEZXcVk0VGdJYnduZk9MNjFLRjlUQzhyejZ5TjFZMm16QmJ5ejhzQzBzYl9XMGlnZFVxU3cwOEZ2VW5BMW0zQlVpZk5fZ3FB?oc=5",
+      "title": "Leaders at Davos 2026 on how we can deploy innovation and technology at scale and responsibly - The World Economic Forum",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4933,8 +4831,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMENfMjlBQ2RaRzZ2anFzZmtuZzdHLVViN2dlanlyMzFyYjYwNU9hU3BmdkxtZ09LYWlJd3g1eWZsNEtWQVg3V2w4VWVESVpCUFk2dlVPVFlFUG1xUjhyTGJScXZfY2hEYjZxbnFpVHdnLXcyeDMtQUNJSFRzLVMxZUdNMzdjUFZteGlWMzhxeVVDczJENEtGd1hZQXJwNWJP?oc=5",
-      "title": "Challenges of protecting innovation in an artificial (intelligence) world - McAfee & Taft",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYU9MUTJGZl9qV24xZjN1UmVkeGQtcm9Xc21ObEEzbkFBR0l5N01ZdEUzZXpKVFFxYjhMeDF1ZFc4Zzl5SjBaSmg1Tmk3cWNOTWZ0OXNWMWtkVVl2d2tNbTgzOFdMQmtXa01lWnlfamYzb09RMzgydVhuamYxREZOZmNCR242RFRkSHd0Z2xUdFBlRDdFaWQxRA?oc=5",
+      "title": "China surpasses 5 million valid invention patents - The Straits Times",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5010,6 +4908,13 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNE1YWGZPd0RSZjlfRDhrajZqYmt6STU4Z3JUV002VFphU0FndkFXZDFuM0JqM3NSaGt2UFE5NjdfdmxjZGVxMHBPTDFTbDJHRm1kcGNyLXZaaUhEdWx6ODgwcEN4SkxqbUtoaU41ckdpTFlPOFE4ZG9RcUNHbG45eUtjZG1HQQ?oc=5",
+      "title": "Apple's Latest Product Announcements Were Extremely Rare - MacRumors",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbXM2QnpTUE85SFEtQ25yUlR5YWtFUDcyZnR6NFhCZ25CVlJPdnhtZ0RtVFMyU043RWE5S2phcGJXcC1iOWpYd3FQNjUza2o4c2Q0cFY4bzN6VC1IY2ZMaWJHb2ZsbmwxV2J6Y2JMRHhVVnQ1M2hldTFGRVotNUoxMnBZTVNsSWZFTmZzLWtjU0xJanpTX0IyaDRCZ3Q?oc=5",
       "title": "Autumn 2026 International Student Experience Workshop Series - The Ohio State University",
       "status": "not-eligible",
@@ -5059,13 +4964,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNE1YWGZPd0RSZjlfRDhrajZqYmt6STU4Z3JUV002VFphU0FndkFXZDFuM0JqM3NSaGt2UFE5NjdfdmxjZGVxMHBPTDFTbDJHRm1kcGNyLXZaaUhEdWx6ODgwcEN4SkxqbUtoaU41ckdpTFlPOFE4ZG9RcUNHbG45eUtjZG1HQQ?oc=5",
-      "title": "Apple's Latest Product Announcements Were Extremely Rare - MacRumors",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9iLXhFNFlHbUg5eV9vZUs1RzhpUnVOTW95VVpCLVk1YTVIZFdRTUdBR3JMOXFBS1NuTnlMTmI2Tmh0OGducVpUWklxZXM0WnNGVXZxLWFYbE85THZLQU5EbmtMY1hPWnliWEliYUhPNzNqMnhIUUdPODBn?oc=5",
       "title": "CISA lays out new guidance for using open-source software - Help Net Security",
       "status": "not-eligible",
@@ -5082,13 +4980,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpKX0ZNT2R5SmROOGl4cFE3VUFoYTZFZHY2eC1ubjFsRUMwWGljMXZvY2YtOVdST0Vja0hZVHM1Q0hPdDkzc3RZT3RvVHh4bGwtOHVRa3p6WmRwOTRtUUNwbHM4aUxUT3dQelUtN0c2elgwTFhVTG51ZUZWQkJVblpqdkM5TjkwOFQw?oc=5",
       "title": "Husband and wife invent new wind turbine technology - Enlit World",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
-      "title": "News | The University of Alabama in Huntsville - The University of Alabama in Huntsville",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5131,6 +5022,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE81cUUzUmlVLUUxWjhHb1NPTHJGSmlxYlNBUU1UZk1rcGF6aVNWWDZUNmdJbVhPS19LS2JNaVIzazhhZzlLWm5Ea2hEQ0RuQnIyWEMyd1dHOHR2V2hRQVFuTzFHaUNieHZTYjZqS3c1OERxSDNnT283UkNQZHVfdw?oc=5",
       "title": "10 Skills Every Software Engineer Needs - Intuit",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUVfUEpNOHJvWFo1NUhJWjJTcnE0NXZ3VS13SFExeG1hWjY5a3d0WFZ0X1ZrTTM1TUVUUDVvNzMya1ZzZEtwWkhmejljWjgyekVMU2tMRjdWMjgwNDdNSDVlWmVjTHl0SUlTX2QyMDA5THJwekFEaktwNkl2djMzZThaMl81SmV4M01ERndRdkRzSHhqcHoxeUNzcmhSRzVwc2VhZXljMXVRSDZseExHbmo5MHU2QVZiOGpnbTM0UzM0TjVlLXhQQnRIVUdIMGJPazNCTlM5WXFzNUNDdVE?oc=5",
+      "title": "News | The University of Alabama in Huntsville - uah.edu",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
