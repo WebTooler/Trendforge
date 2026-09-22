@@ -36,7 +36,7 @@ if(!provenanceAnchorSource.includes("coreFactMatch.text")) throw new Error('Fact
 if(!verifierSmartSource.includes("f.passageId||`${f.sourceId}-P${f.passageIndex}`")) throw new Error('Verifier diagnostics must expose immutable passage ids.');
 if(!verifierSmartSource.includes("passageId:f.passageId||`${f.sourceId}-P${f.passageIndex}`,text:f.text")) throw new Error('Fact matches must carry immutable fact text for provenance anchoring.');
 if(!verifierSmartSource.includes('data/current-run-article.json')) throw new Error('Smart claim verifier must prefer the current-run article manifest over stale mtime ordering.');
-if(!verifierSmartSource.includes("synthesisRequiresTwoCoreFacts:true")) throw new Error('Smart claim verifier must require two or more core facts for synthesis.');
+if(!verifierSmartSource.includes("synthesisRequiresTwoCoreFacts:false")) throw new Error('Smart claim verifier must allow a sufficiently anchored canonical composite fact for synthesis.');
 if(!verifierV2Source.includes("scripts/verify-article-claims-smart.mjs")) throw new Error('Canonical claim verifier must invoke the smart verifier.');
 const generatorSource=fs.readFileSync(new URL('./generate-article.ts',import.meta.url),'utf8');
 if(!generatorSource.includes("pack.evidenceBrief??pack.editorialEvidenceBrief??null")) throw new Error('Article generator must consume the canonical pack.evidenceBrief Fact Map.');
