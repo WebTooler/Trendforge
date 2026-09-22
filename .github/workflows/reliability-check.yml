@@ -5,7 +5,7 @@ name: TrendForge Reliability Check
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "fix/claim-verifier-phase0-baseline"]
   workflow_dispatch:
 
 permissions:
