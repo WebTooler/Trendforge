@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T17:09:42.636Z",
+  "generatedAt": "2026-09-22T18:32:09.361Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 1997,
-      "sentenceCount": 12,
+      "normalizedLength": 2688,
+      "sentenceCount": 16,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -32,12 +32,14 @@
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
     "theverge.com",
-    "lifehacker.com"
+    "newschannel9.com",
+    "sun-sentinel.com",
+    "sfstandard.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 2,
-    "usablePassages": 14,
+    "sourceCount": 4,
+    "usablePassages": 30,
     "primarySourceCount": 0
   }
 }

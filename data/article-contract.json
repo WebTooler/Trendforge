@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
-  "mode": "narrow",
+  "title": "San Francisco sues Trump Media for selling early access to Trump posts",
+  "mode": "bounded",
   "wordBudget": {
-    "min": 231,
-    "max": 420,
-    "soft": 326
+    "min": 425,
+    "max": 750,
+    "soft": 588
   },
   "h2Budget": {
-    "preferredMin": 1,
-    "preferredMax": 2
+    "preferredMin": 2,
+    "preferredMax": 4
   },
-  "atomicClaimBudget": 12,
+  "atomicClaimBudget": 18,
   "allowedFactIds": [
     "F1",
     "F2",
@@ -23,12 +23,29 @@
     "F8",
     "F9",
     "F10",
+    "F11",
     "F12",
-    "F14"
+    "F13",
+    "F14",
+    "F15",
+    "F16",
+    "F17",
+    "F18",
+    "F19",
+    "F20",
+    "F21",
+    "F22",
+    "F23",
+    "F24",
+    "F25",
+    "F26",
+    "F27",
+    "F28",
+    "F30"
   ],
   "synthesis": {
     "allowed": true,
-    "maxWords": 91,
+    "maxWords": 100,
     "maxStatements": 3,
     "allowedFactIds": [
       "F1",
@@ -41,8 +58,8 @@
       "F8",
       "F9",
       "F10",
-      "F12",
-      "F14"
+      "F11",
+      "F12"
     ]
   },
   "rules": {
@@ -51,7 +68,7 @@
     "newEntitiesInSynthesis": false,
     "newCausalityInSynthesis": false
   },
-  "generatedAt": "2026-09-22T17:09:42.637Z",
-  "articleTitle": "Anthropic Unveils Claude Opus 5.5 With Stronger Safeguards After Recent AI Breaches",
-  "articleSlug": "anthropic-unveils-claude-opus-5-5-with-stronger-safeguards-after-recent-ai-breaches"
+  "generatedAt": "2026-09-22T18:32:09.361Z",
+  "articleTitle": "San Francisco Suits Trump Media Over Paid Early‑Access Service",
+  "articleSlug": "san-francisco-suits-trump-media-over-paid-early-access-service"
 }
