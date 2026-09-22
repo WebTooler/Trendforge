@@ -16,7 +16,7 @@ const contentWithinBudget=[
  'The company said the model includes stronger safeguards against misuse, according to the evidence, with those safeguards presented as part of the model announcement and its stated protections.',
  'Anthropic described the stronger safeguards as part of the model announcement and its stated protections against misuse, repeating the same documented safeguard fact without adding another capability.',
  'Anthropic said the model is available through its developer platform, making that platform part of the documented availability information in the supplied evidence and the relevant access channel.',
- 'The developer platform is therefore the documented channel through which Anthropic said the model is available, restating the same availability fact rather than adding a new product or service claim.'
+ 'The developer platform is therefore the documented channel through which Anthropic said the model is available, restating the same availability fact rather than adding a new product or service claim. This deliberately tests repetition within one evidence boundary, so the article can contain explanatory prose while the underlying factual inventory remains limited to the three supplied facts.'
 ].join('\n\n');
 
 const pass=validateDraft({...base,content:contentWithinBudget});
