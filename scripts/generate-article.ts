@@ -7,7 +7,7 @@ import { validateAuthoritativeEvidencePack } from './authoritative-evidence-pack
 
 type Trend = { title:string; link:string; source:string; sourceName?:string; publishedAt?:string; category:string; description?:string; eligible?:boolean; score?:number; sources?:{title?:string;url:string;publishedAt?:string}[] };
 type VerificationRecord = { link:string; sources?:{title?:string;url?:string;domain?:string;ok?:boolean;status?:number;finalUrl?:string;discovered?:boolean;resolvedFrom?:string}[]; independentReachableDomains?:string[]; relevantReachableSourceCount?:number; status?:string };
-type EvidencePackItem = { title:string; url:string; description:string; kind:string; passages:string[]; articleBody:string; articleBodyLength:number; publisherFamily?:string; verified?:boolean; primary?:boolean; lineage?:Record<string, unknown>; sourceRole?:string };
+type EvidencePackItem = { title:string; url:string; description:string; kind:string; passages:string[]; articleBody:string; articleBodyLength:number; publisherFamily?:string; verified?:boolean; primary?:boolean; lineage?:Record<string, unknown>; sourceRole?:string; extraction?:{relevantPassages?:Array<{rawPassageIndex?:number;text?:string}>}|null };
 const stopWords = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies','industry','development','developments','story','stories','article','articles']);
 const topicWords=(text='')=>new Set(text.toLowerCase().split(/[^a-z0-9]+/).filter(w=>w.length>=4&&!stopWords.has(w)));
 const publisherName=(item:Trend)=>{const explicit=(item.sourceName||item.source||'').trim();if(explicit&&explicit.toLowerCase()!=='google news')return explicit;const m=item.description?.match(/<font[^>]*>([^<]+)<\/font>/i);return m?.[1]?.trim()||explicit||'Unknown publisher';};
@@ -93,7 +93,7 @@ async function main(){
   const evidencePack:EvidencePackItem[]=(pack.sources??[]).map((source:any)=>({
     title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
     passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
-    publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage,sourceRole:source.sourceRole||'CONTEXT'
+    publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage,sourceRole:source.sourceRole||'CONTEXT',extraction:source.extraction||null
   }));
   const sources=evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt,role:s.sourceRole||sourceRole(s)}));
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
