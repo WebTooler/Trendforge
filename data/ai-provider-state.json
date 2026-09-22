@@ -2,14 +2,38 @@
   "version": 10,
   "providers": {
     "Groq": {
-      "failures": 72,
-      "quotaBlockedUntil": 1790087946533,
-      "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5982, Requested 3782. Please try again in 13.23s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
-      "lastClass": "rate_limit",
-      "successes": 59,
-      "lastSuccessAt": "2026-09-22T14:38:43.395Z",
+      "failures": 70,
+      "quotaBlockedUntil": 0,
+      "lastStatus": 200,
+      "lastError": null,
+      "lastClass": "success",
+      "successes": 57,
+      "lastSuccessAt": "2026-09-22T17:09:42.622Z",
       "history": [
+        {
+          "at": 1790013184404,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
+        },
+        {
+          "at": 1790013192567,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
+        },
+        {
+          "at": 1790013909409,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
+        },
+        {
+          "at": 1790013927680,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
+        },
         {
           "at": 1790013935864,
           "ok": false,
@@ -192,95 +216,45 @@
           }
         },
         {
-          "at": 1790087837202,
+          "at": 1790096982622,
           "ok": true,
           "class": "success",
           "status": 200,
-          "latencyMs": 989,
+          "latencyMs": 1304,
           "usage": {
-            "queue_time": 0.082223408,
-            "prompt_tokens": 4071,
-            "prompt_time": 0.203891861,
-            "completion_tokens": 454,
-            "completion_time": 0.498022269,
-            "total_tokens": 4525,
-            "total_time": 0.70191413,
+            "queue_time": 0.275538804,
+            "prompt_tokens": 4292,
+            "prompt_time": 0.236641861,
+            "completion_tokens": 518,
+            "completion_time": 0.574743142,
+            "total_tokens": 4810,
+            "total_time": 0.811385003,
             "completion_tokens_details": {
-              "reasoning_tokens": 22
+              "reasoning_tokens": 24
             }
           }
-        },
-        {
-          "at": 1790087838252,
-          "ok": false,
-          "class": "rate_limit",
-          "status": 429
-        },
-        {
-          "at": 1790087921045,
-          "ok": true,
-          "class": "success",
-          "status": 200,
-          "latencyMs": 1494,
-          "usage": {
-            "queue_time": 0.179059177,
-            "prompt_tokens": 3252,
-            "prompt_time": 0.172400487,
-            "completion_tokens": 900,
-            "completion_time": 1.027914155,
-            "total_tokens": 4152,
-            "total_time": 1.200314642,
-            "completion_tokens_details": {
-              "reasoning_tokens": 524
-            }
-          }
-        },
-        {
-          "at": 1790087923395,
-          "ok": true,
-          "class": "success",
-          "status": 200,
-          "latencyMs": 2256,
-          "usage": {
-            "queue_time": 0.082157213,
-            "prompt_tokens": 3213,
-            "prompt_time": 0.191778653,
-            "completion_tokens": 1600,
-            "completion_time": 1.8328218920000001,
-            "total_tokens": 4813,
-            "total_time": 2.024600545,
-            "completion_tokens_details": {
-              "reasoning_tokens": 1290
-            }
-          }
-        },
-        {
-          "at": 1790087938533,
-          "ok": false,
-          "class": "rate_limit",
-          "status": 429
         }
       ],
-      "lastLatencyMs": 2256,
+      "lastLatencyMs": 1304,
       "lastUsage": {
-        "queue_time": 0.082157213,
-        "prompt_tokens": 3213,
-        "prompt_time": 0.191778653,
-        "completion_tokens": 1600,
-        "completion_time": 1.8328218920000001,
-        "total_tokens": 4813,
-        "total_time": 2.024600545,
+        "queue_time": 0.275538804,
+        "prompt_tokens": 4292,
+        "prompt_time": 0.236641861,
+        "completion_tokens": 518,
+        "completion_time": 0.574743142,
+        "total_tokens": 4810,
+        "total_time": 0.811385003,
         "completion_tokens_details": {
-          "reasoning_tokens": 1290
+          "reasoning_tokens": 24
         }
       }
     },
     "Gemini": {
-      "failures": 42,
-      "quotaBlockedUntil": 1790088024549,
-      "lastStatus": 503,
-      "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
-      "lastClass": "server",
+      "failures": 41,
+      "quotaBlockedUntil": 1790035508791,
+      "lastStatus": 429,
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 51.227916547s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
+      "lastClass": "quota",
       "history": [
         {
           "at": 1789926372551,
@@ -347,12 +321,6 @@
           "ok": false,
           "class": "quota",
           "status": 429
-        },
-        {
-          "at": 1790087904549,
-          "ok": false,
-          "class": "server",
-          "status": 503
         }
       ]
     },
@@ -371,8 +339,8 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 58,
-      "quotaBlockedUntil": 1790087919580,
+      "failures": 56,
+      "quotaBlockedUntil": 1790020704609,
       "lastStatus": 200,
       "lastError": "Invalid repair structured output",
       "lastClass": "error",
@@ -462,23 +430,11 @@
           "ok": false,
           "class": "error",
           "status": 200
-        },
-        {
-          "at": 1790087889580,
-          "ok": false,
-          "class": "transient",
-          "status": 0
-        },
-        {
-          "at": 1790087961325,
-          "ok": false,
-          "class": "error",
-          "status": 200
         }
       ]
     },
     "Cohere": {
-      "failures": 74,
+      "failures": 72,
       "quotaBlockedUntil": 1790020690741,
       "lastStatus": 200,
       "lastError": "Empty atomic repair response",
@@ -486,6 +442,18 @@
       "successes": 12,
       "lastSuccessAt": "2026-09-20T11:24:33.823Z",
       "history": [
+        {
+          "at": 1789928062363,
+          "ok": false,
+          "class": "transient",
+          "status": 200
+        },
+        {
+          "at": 1789962092719,
+          "ok": false,
+          "class": "transient",
+          "status": 200
+        },
         {
           "at": 1789986456423,
           "ok": false,
@@ -593,22 +561,10 @@
           "ok": false,
           "class": "error",
           "status": 200
-        },
-        {
-          "at": 1790087849578,
-          "ok": false,
-          "class": "error",
-          "status": 200
-        },
-        {
-          "at": 1790087944515,
-          "ok": false,
-          "class": "error",
-          "status": 200
         }
       ]
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-22T14:39:21.325Z"
+  "updatedAt": "2026-09-22T17:09:43.205Z"
 }
