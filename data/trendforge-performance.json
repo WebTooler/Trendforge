@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T12:01:34.362Z",
+  "updatedAt": "2026-09-22T17:14:50.117Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,26 +12,26 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 24,
-    "topicCount": 347,
+    "runCount": 25,
+    "topicCount": 374,
     "articleCount": 21,
     "latestEditorialScore": 75,
-    "latestClaimConfidence": 15,
-    "latestEvidencePassRate": 33,
+    "latestClaimConfidence": 65,
+    "latestEvidencePassRate": 39,
     "latestEvidenceBlockRate": 10,
-    "singleSourceReadyRate": 32,
+    "singleSourceReadyRate": 31,
     "publishCandidateRate": 0
   },
   "changes": {
     "editorialScore": 0,
-    "claimConfidence": -31,
-    "evidencePassRate": -5
+    "claimConfidence": 50,
+    "evidencePassRate": 6
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 168,
+      "failures": 175,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -46,8 +46,8 @@
     },
     "Cohere": {
       "successRate": 15,
-      "successes": 183,
-      "failures": 1000,
+      "successes": 195,
+      "failures": 1072,
       "cooldownRuns": 0,
       "latestStatus": 200,
       "latestClass": "error"
@@ -55,15 +55,15 @@
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 536,
+      "failures": 577,
       "cooldownRuns": 4,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "Groq": {
-      "successRate": 34,
-      "successes": 540,
-      "failures": 1038,
+      "successRate": 35,
+      "successes": 597,
+      "failures": 1108,
       "cooldownRuns": 2,
       "latestStatus": 200,
       "latestClass": "success"
@@ -71,15 +71,15 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 72,
+      "failures": 75,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
       "successRate": 5,
-      "successes": 37,
-      "failures": 746,
+      "successes": 39,
+      "failures": 802,
       "cooldownRuns": 0,
       "latestStatus": 200,
       "latestClass": "error"
@@ -100,30 +100,30 @@
       }
     },
     "Crypto": {
-      "topicSamples": 104,
+      "topicSamples": 105,
       "averageScore": 72,
       "averageConfidence": 82,
       "evidenceLevels": {
         "none": 93,
         "single-source-verified": 4,
-        "strong": 7
+        "strong": 8
       },
       "decisions": {
-        "review": 94,
+        "review": 95,
         "hold": 10
       }
     },
     "Digital Life": {
-      "topicSamples": 139,
+      "topicSamples": 165,
       "averageScore": 69,
-      "averageConfidence": 85,
+      "averageConfidence": 86,
       "evidenceLevels": {
-        "none": 73,
-        "single-source-verified": 34,
-        "strong": 32
+        "none": 81,
+        "single-source-verified": 42,
+        "strong": 42
       },
       "decisions": {
-        "review": 128,
+        "review": 154,
         "publish_candidate": 1,
         "hold": 10
       }
@@ -161,8 +161,8 @@
         "strong": 1
       },
       "decisions": {
-        "hold": 31,
-        "review": 9
+        "hold": 32,
+        "review": 8
       }
     },
     "Technology": {
@@ -227,13 +227,13 @@
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by -31 points versus the previous run."
+      "detail": "Average claim confidence changed by +50 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by -5 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by +6 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
@@ -248,7 +248,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 24,
+    "memoryRuns": 25,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
