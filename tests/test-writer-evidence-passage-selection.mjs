@@ -4,7 +4,7 @@ import fs from 'node:fs';
 const source=fs.readFileSync('scripts/generate-article.ts','utf8');
 
 assert.ok(source.includes('const sourceId=`S${i+1}`;'),'writer evidence selection must address canonical source IDs');
-assert.match(source,/s\.extraction\?\.relevantPassages/,'writer evidence selection must resolve immutable raw passage metadata');
+assert.match(source,/\(s as any\)\.extraction\?\.relevantPassages/,'writer evidence selection must resolve immutable raw passage metadata');
 assert.match(source,/extraction:source\.extraction\|\|null/,'evidence pack must preserve extraction metadata from the authoritative pack');
 assert.match(source,/byRawIndex\.set\(rawIndex,p\.text\)/,'writer evidence selection must map raw passage IDs to exact text');
 assert.match(source,/corePassageRefs\.get\(sourceId\)/,'writer evidence selection must use fact-map source IDs');
