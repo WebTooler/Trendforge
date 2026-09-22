@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-09-21T12:12:50.533Z",
-  "articlePath": "content/articles/crypto-rally-driven-by-falling-oil-bitcoin-s-45-week-rebound-and-short-seller-squeeze.md",
+  "generatedAt": "2026-09-22T18:47:15.978Z",
+  "runId": "35768815681",
+  "articlePath": "content/articles/san-francisco-files-suit-against-trump-media-over-paid-early-access-service.md",
   "provider": "Groq",
-  "previousTitle": "Crypto Rally Driven by Falling Oil, Bitcoin’s 45‑Week Rebound, and Short‑Seller Squeeze",
-  "newTitle": "Crypto Rally Driven by Falling Oil, Bitcoin’s 45‑Week Rebound, and Short‑Seller Squeeze",
-  "briefTitle": "Why Is Crypto Up Today? Oil Prices Drop, Short Sellers Squeezed, and Bitcoin Reclaims Key Level After 45 Weeks - Yahoo Finance",
-  "evidenceClaims": 12,
-  "failedClaims": 5,
-  "evidenceChars": 4914,
+  "previousTitle": "San Francisco Files Suit Against Trump Media Over Paid Early‑Access Service",
+  "newTitle": "San Francisco Files Suit Against Trump Media Over Paid Early‑Access Service",
+  "briefTitle": "San Francisco sues Trump Media for selling early access to Trump posts",
+  "evidenceClaims": 15,
+  "failedClaims": 10,
+  "evidenceChars": 7707,
   "mode": "atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery",
   "repairOrder": [
     "rewrite",
@@ -18,14 +19,14 @@
   "maxRecoveryPasses": 1,
   "recoveryWaitMs": 15000,
   "providerAttempts": 4,
-  "appliedRepairs": 1,
-  "rewriteOrNarrowRepairs": 1,
+  "appliedRepairs": 4,
+  "rewriteOrNarrowRepairs": 4,
   "deletedSentences": 0,
   "wordCountValidation": {
-    "before": 249,
-    "after": 237,
-    "minimum": 260,
-    "depthMode": "narrow",
-    "preservedFloor": false
+    "before": 447,
+    "after": 481,
+    "minimum": 425,
+    "depthMode": "bounded",
+    "preservedFloor": true
   }
 }

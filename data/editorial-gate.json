@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T18:32:09.361Z",
+  "generatedAt": "2026-09-22T18:46:21.137Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,7 +22,7 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2688,
+      "normalizedLength": 2917,
       "sentenceCount": 16,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
@@ -33,13 +33,13 @@
   "verifiedEvidenceDomains": [
     "theverge.com",
     "newschannel9.com",
-    "sun-sentinel.com",
-    "sfstandard.com"
+    "sfstandard.com",
+    "news.bloomberglaw.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
     "sourceCount": 4,
-    "usablePassages": 30,
+    "usablePassages": 32,
     "primarySourceCount": 0
   }
 }
