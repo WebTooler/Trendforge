@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T12:01:32.460Z",
+  "updatedAt": "2026-09-22T17:14:51.846Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,8 +14,8 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 24,
-    "topics": 347,
+    "runs": 25,
+    "topics": 374,
     "articles": 21
   },
   "learningInput": {
@@ -88,248 +88,248 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OTDdubjMyVGhFZ3lmTlR6QVFvZzFyQlhDOW1NOHRqS0ZoLS1mN0pUaFkzeVUzVlB5MW5hUWtCWmRMSFNkbmR5S0ZWWlMwOE5Mcl9paDhPd2p1S0VHUWZxR244MTEwV0R3S053SUQwRFZua3FPcXl3V3oyUHI?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzM1WjZvTTFNRDBEdTM2VjVsT19sQ25pRWg5Zm4xTDZBdkhKUjljZnVWNGkyQkRsVUhCUTl3bkl5NUh0LTNOenJKTDNpdFVoSnYzVEMtaVRTaV9QMDc0QUhKNUZ5NlpNeGltVGdFdUQ2bEtlekgwS2N5WUNMY2g1dUp2Tl82SzhaTjJ0MUNFaW4tQWJWRWNtODJB?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR0c1aFRBQlFORVFuaXpwbkhpRE1jUWVXdGhNU1VXREJadUczOGtSZk9sTGxaekszcFAyeWZRQll1RWhWX3AtTGdCN3hfcV9uaHc3SzlCWlIxX1F0TmtlOXpTVWptYjVyVGF0RE8zdENTR3VqWlB3ckt3c2lJbWhtc0ZCZFQ0dW8wZXlLRHZoOUNEbTZMVWI4WHlKMWFhX1o3WkxiOXdtU1Y?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX0tFTjJvcTh3OUZWdVRNSUJpbWlWU0RhZjRyRDRVR2phT3YtMGRLVlpIZE5fcEszRE81Ynhwak96LTN0a1Vod1kyTTNWRHlfejVrdzNnTWFUUXZNZ0VUQVJmZ2dNSTQ1allWakxqUXRjV3ZGUW92ZGFQcmozTllmWGt6Sm1hYWl1WWtFNUw5UTAtckI0SG96TDdkTEM?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs",
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdVZ5dUNUbG83aHBkZ3hZMDFzOGEzMHFjYkN3Vk83WEQzNzFnd25KTmRzbUk4QXRiSmp2RHZBT0xzVVk3Y3RqTllaS1daaGNsMkFveEw3bmRsN1h4UGZ4UGlpUGM1dDU3M215MVp4OUhRZk9VMVM2MnUwaEZaMkJtQkJOV18wT2J6RDR0OXducGRXYTBHRFJaSkhFR3UzTVdpNTNPdzlVd3hwOENVWmwwaGJYNXVmQVk?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNEhiaTM2SWhSNVBFWE0yUExfLUhaZ2ZTSjV4Szg5cHN0RUVINF9SMTdrSUd2UTRHWGtDWTI3MXhKbFdfZndJMmdxejU1NUFhZjFRQlJpNmh6TVVManVYbE1LQU56UDVFa1hVdVNuSWdVTE9WN2hsY2dBXzFLNWtvSjhyQ0l4b3JKQTlaSDBkMHZYNXNDT0ZURE45X2FRcTBzMF92MGNzUmhIaWFwOS12djRn?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaXRWWWFjaW8xNmFkNUpkZFNlOGxHQ2dINDdPSkJoX2JjT3ZNRnA3YUZ4SENZY0o3cHFkNjJTcWJNN1RRMUwzazZyZWNDRkdMaHZmNk5GMVc2aHdCZVNuVGpUdVh6ZEJsRjhITGdfZ01TMjB2RjQtZlNlTXdaYkRScXhhdjBxTHdGOWdfbUNvTkxub3RvTWxOQ0NaeldXRDJoWUY4M3NoWnpzWC1NX01oSHJXT2NQbXFIanNuSG5jNA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNelZQSFp2VXRhTVhnRk9UbmhBaXlRbUZwdnRYYTItbE9XNHpxQnF5UDctdEZ0QXRIN1ZwWHU2d1AzZHlEcFQ2dnVQZk1UdU9Sd00xb2RLY0t4cjFpOV96X081aGM5YUxIM2dYdWZYM0N1bmhrYjRUV3YzV01VVFd1MkpXbGl6OUtOUDFQWtIBkgFBVV95cUxQdkRGUVJZOS1DTWJnb3h4d1FjUnNXV1B3b0pMREptRm90LVh5Z0paYmtGaVFZaFpGMWIzU0ktSDJjVEZaS3dtNEJNbl82QmhFMGNGSjNNMWNtNUlmdGNpMm9IX1otQXJOQ1lJR3lXNlVrSXRDMVJUOVFBZDl3dGVELWw1cUFwbnh4WHdNTWdEbjh0Zw?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVkRXZ0hNdHpVaXVTdmVkbHcyRnlnNmdhbDVFcUlCMEo5MnpQbjBJdFYyVktNbFpHUDduVGlrX1VqbXFBSm9tYThnckQ0a1kwTkhhX3FuNjRlaEhJa1dXNFJhUlREMFZvZTdESnZpaTQtakhTNmx0SXJ3NjMyM1FNSTY2U1FFRnFTcDVoNHlnWnhFMmJVUnZIcVloX2FxQdIBowFBVV95cUxOSDl4R2tTcTBUajQzay1ndGY0WTEyaEEzY2h6cUlhbXV1LTdQRGdxbTg2MFYxN21Nclo4UW1ZQWVtRWE1NGZQYmdLd3dsYndXSXBEeDg5RU9uRUNkN2tRcnhtcFA2V2UxUG1BazgwUF81NWE2RHVSMndBVG9mOHFwVUJ4MDNNQmxBUnh3VWpGT1Q2Z3FXQll3aWJLTWdnNnNmWVY0?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/transportation/998762/rivian-r2-climate-impact-carbon-lifecycle-half",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVERDTy1sR0JQS3VfSjkzUWkwakE3LVdyS0FKWTc5SmdHdW1NaVFwTGtKSGFYMHAzREZpUUg4VHBxaVBLdVRFazZ0NThvbk8zdjZjX0RSQ19EWnNqVHkxaHhwelZaaVB6YmdQYlZhRTJ5LUhMVEpmUkFleDNDWWhpSzFoZW8xN0lUMTMtUmxPSG5XaUZuOHFDSzdXcDNWcmh0VnlqY01NLVRoczFpRUc5Uk9HdHRyLUNHa1FNT1QxSmpfR3JPN0YtOQ?oc=5",
+        "key": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA4ZHpPemRjSlZyOVktMkZKamhfaGJSU0hacklhM0tFVk9SN202RVQ5cURlWDFZOGFld1lPZFFqMjAxZUNXTTVTRWJsWngwOGdpVU51WWRuYXlQb2FZTHg5dER0Yk1sMGVDd19ONWRRLUNSYnRPdkJnN2FYWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPY0lZX3FlTXk4M2NIbnVBaWVGQ25TdVlOYTM3V3pzQkVuOTRkYmNFemYyNGVrYVdNT19oOUtBMGZRU3ZiUzVqWTNkVDBTUWJHQjNUSjVacTNoMFhwYS1hbEhrdDdDOTFoTmxtSk1xdVhJZk9xSW0zZlNBQXNIX1FSR1N0bnFkNGVKOTJFU1RfbU9hY2V2cTRQaldfSzZPb2Q1ZGFqRg?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVW91WWdIVWRUVW1FYnh0bG1qYWgyQzFEVmI4RTlnWUNJU1lEcWpmVEIyYjZRR2pzM3l6Szdjd2IxNGRweDRlN1hEUlBlSzRUdGpIVEhEbUpoVDNQSWhJaVJkQ0xrV0k3WFUwNzJDTnVsc3Q5ZGp0cnVJR0twWEZpLVF4OEpndDNGVC1ack9FR0x0bUQ3blVxUXp1VUlLZ05sbVFZ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPNzVtVmkyVXM5VWw5eFdCXzBfTmRkWEhLdHVUdFBLVU95RXZtLTk0T25CVUhNWGlvYXNKbnV2MzY3UFgxQVdnRTRVSGd6WVpoQ0Q3bmpXZUNsNjI1UHJNWVp2aDZIYkU1c3g0OURuUVJUckRWbldSd2N3c1lVMUwyazltYmR2WS1yZmhHNjBqbTZFZWNYcVI1TFQwYU9RS0tka0VuN0lzb21QNlpDbHdJQnhqOGJicEZYM0w2X2dtQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMmFXeXlvZzdyejc4Vk9VWEhlc2s2UkVrbWNNQllsZzBBTEZTbndVcUZmZFZjcGVzcF8yYktra1hDbXppTVRwNzhJc1NyUDFFOGktUTZGXzVOcW5Jbm12TzlFYVhyY1VWNDMwV3JuNVFKckhtWGp1YWRtbDdlVDJJWWZOUFkxbXlxNS1yczJvYU42NjFoUUF3YmU3Q2FYaXY0MmtoRlh2VEhRRENiSTJCVm9rY0ZIMTdkYnc?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSjRYbTlWZGtsVW1Fb2FjQk01RHo4YkRDZFBlWTczQldrSW9XU0J5VFlkX2pOdDI1WTNmLWZmUEN4Mm9BVnJtb1JKV1BYTGpkX1hrdW84WUtQZWlLRWxBdXpabnNrcXYzaThuLVhSdTZKMWlPTXRLZVBIMUV3ZmtWLVJFeXZhWnYxVmlxdmtHVjBxMXhDRnBKSFNCZnFiMlNQWmlWRw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQM010S0p4NGlCOUtJVjZnTGM2RHFqZ3BHdWNVM184TWlORUdaa0h5Q1QwTGxPYmhYVmlhOW9jeGk4QXNQTE5LODVLMHNsdkJUdy1UQW9BWjFUbGIteUtvVEEycDRnNDFkX0taLTYzWWxBRW8zNkN6cUh6THdsMWpvR3lPWmd0MGhma0lBdVhzOHhrVS1lMUc1NnlMYWhNbDd0U1M2alF4Q09hV1pIcjlGdW9NdGl5NEZZNWZSYjlXYjB0Q0pvZmxkMDJKYVI?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMGxSNVRwV25NZktubFVfOXcyd0tGYk5US1dDYUFlSTNyRUtBeEoxQ1I1d0pLbmtJVHZyMkstaXY5VkNLWC1Jell6SVJCVVFIdUFmdHVXWXNablRNRmJIV3FPZFdieTVBSF9PUmlFTk5JTWtwaEVXa2FUOFFLSDgyOHFMZXIzMHBSTEdLZEdYYnZaN3N2Yk44TE9ZRQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBBT2thNDFaSmFGTjdLMjhXOGJJTkhxTVR0UXRpc2JrZE1oSGxmcVhDczdYTG5Vc2hEQUxSQzRrZWlsdDFCOFFFWmZCNnNhSDNVWjNZWmVTT1MyNUtmeE53YW1HbDVGVUQ4aEVDbWprQnFSMHExUTlZTzlwVHk2UWc?oc=5",
+        "key": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZmoybTcxQ0FoMC1TZm0xdWM1ZzBPWE1hY1RiMV9pRG9BbkNXNFE0VEtWcEIxUE1Vc1J2NUMwckpQUGFfcGQ4MHJ5WlJtYkFIOFd5d3BmNjNPcko3SVE3QWs2RHk1cFR5cDRiOE54Q2ZoMnJrdnphemlhaXNTTmtTU3Rsd3RJd3hOVEdocFRreXFvWm8?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNa2IxdXp3dFlSZ1N0V0dzYWRXWkllWDVDNjg5Ym1QUjc4OWw0aHdWU2xPaUItVk5qQjd1MkV6UDFEUkJCb0lKSlZlVzM1dXpjQ0xPWW1LeFBuajRWbHZaLURoU2lRaDVUcTdNWmxEbjkyVUFKdkdfLW5ZU0R2ZUE3azZmWDkzbkpiWVE?oc=5",
+        "key": "https://www.theverge.com/gadgets/998902/apple-whoop-fitness-tracker",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ1hEa1pkaVI4VUpGM2tISlBJRFFuT0tkVW8ydkc1cnl0M0pIb1QxMXpJZ1RLZWJvY2duTXNzNEV1Sy05dTlPSGFpa2p0U2xkVnpDbFg5a3ptX013ZTl0a2lmRFUtb3k2MmRobGd5SHRWZHNCbnl4SzV6a3JCT212WkdIQ0xwUDk1Y3d6RFNrQ083RjZINEMwWThqU25ESF9EQVRTZ3Y3dzhIc2lJbHfSAbMBQVVfeXFMT2h0RGpob2lFWW0xcTlZVFJKMG90dmxPM0tvQXVHS2d6UXY2OGpsU1oyVmhBOHZiUUxKRG4xTGtZS2c3WjhRQWxaOG1QZW9hVzcyN0VUb1lXcDJ4RDJySWtLYjg4THpoZUZ4QkdmVFdCRWtfbkc3bEhFSzFOdzJDTVpvSjZ4WGpSVHF6b0t6WWEtR0Rjdl8wYWF1NG8yaEp6a2ZReDY2QjFzVkdIWU1uQ0ZydHc?oc=5",
+        "key": "https://www.theverge.com/news/998592/xbox-is-merging-its-forza-developers-into-a-single-studio",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZ29wbDl4VFFhQ2ZMREJIenVYeGZpOWdpZGhkbUFadlJBV2NiOVhUY1dsaFVQMVRjNVlhRHVXeHVnNTdiS01rUzhaaXJaN1d0M01IYmpsQnJ3eWhCSHkzeTRpd3htWnMzVGhaUzZGWjNyMGlVTTFSTjVBOWJFNkg3WHlBeThXRlRCdXhhdkN0dFNiN041dFE?oc=5",
+        "key": "https://www.theverge.com/news/998586/activision-halo-xbox-reorganization-layoffs",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQdzdoSjQxeEVTZjVPbVV6RmRBSVhOZ0FPbUxLUlFfTVJjS2tmYk5xQldGLTdfN21BRG80Z1ZHN3Vmc2lqRm9IVkNyVTRvQUZMc19ZNWdYU1RhTndkaEtveVF4U181c3JMVzlVZ1VGOVJhTTJfMWdpRjl0QXBKbmdYU0tyUmhGT3RhcVNLYVFQSy1wTzV3UlZjbWtackNkLUk5RmxHWnM3RDVGakg1MGpGa0kxT0VmMllKVGpvX1JhV0hJQVdFMFpPdHNOWGZPMW5yc0ZleWQ2VUdlM1ZNY3FXQmViVVNUN2M1NURLckM0TUhkZk1KVms0NkxDSGhXblZUMGl3R0JFalRPWWd1VUgxVzdvNDRfYUlhX2ZiVjR0WnpuZGpL?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQX2ZLc3FkMFBGdGM0Mno4QmV0ZFJtVWZ2X3RyLUp6SmFUX0tQQ0FPRHlLRmdJVmU5dy11SlE3SXFJUVlySDNQOXlmZTFkV3JNc19nSDlyUlhJZzgyMDY1d0VRaV9IT054T2stSTd5VWNOVVJNa0w3VHctTW9GdUJjYkRkQXdmSW1pOWllUVV4OVdOU003ckJBaWloZ0JKUmdtVTFiLVRhajY2N2pKUHhiYXV1Z3Y?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9vbVZWVXZ4NnU4R0JWaXpZOHA5T25OdkU2akhxLXBEdFFWcjI5Y3o3ZVZWS0tGdzY3MDRORjRKYVRkLVE3bGVyckJsWFFQWDl1RXFfREhIYnVkRG5Sb1pYOGlPdHZPYnRyd3R2bGh2dHBpLXNiR3c?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTk1HdVQ3NlJGZUJoYTJmQmJQamMtWFFZNkJMWmUyNDZmTEEyZVhJYzF1MDBadHhFdjdQS0tYTHFjTS1CZ2dZN1RxZFQyRkduQ3dpbUhWNFl0WURoQnJPZk5FNEpULUZlZzE1TEEyZ3JxOV9ZblEtZmJPZTZPQ2hhWnk3YmxNYlB3VDdHbHBIMzUwc3BsSzd5bDRHUlV2UElld3AzcTdjTUtpdkN2YW5JREk3MHBQSkhFZl9xNw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTkMyaENsc0Q5TExlQWRWaDhpTGtDdHZjbWJRbm54Z2puVHRTZUJ0SDd0bHk2cGQ1Q0UyMVJNVlM2RHBaTmdLNEpaZlo2UGJSSGRRTWFPb2IzXzM0aW94NFVpUjdPUDI2NFhhOWhUVk1FTFpLelJuUkQ5MEpEenExRFlDRVQ4Q2pyTGphakh3SDR5OUJ2STdDLUM2amZ1Z9IBowFBVV95cUxNNEVpNF9mekF2UUNWWVhzTHZIcWg3YllSTzczMHp6MTh0VWdlTUoyeGRUSUswaVFrMW9zejRLTzhSY2tlV3ZlVnNtSDFZMWpGOVhxckxlZEFfOGlHSC12VFViWVNrcHM2UkhWbV91ZUZaSHQzSGRDNnRTV19HMmdlZGR4cVF4NmY2VFFCRU9CczczNzdlUE54N2N2SEc5U1g5YXFN?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998550/a-cut-cable-disrupted-hundreds-of-flights-across-the-us",
-        "bucket": "variant"
+        "key": "https://www.theverge.com/tech/998566/beats-360-headphones-review",
+        "bucket": "control"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OTDdubjMyVGhFZ3lmTlR6QVFvZzFyQlhDOW1NOHRqS0ZoLS1mN0pUaFkzeVUzVlB5MW5hUWtCWmRMSFNkbmR5S0ZWWlMwOE5Mcl9paDhPd2p1S0VHUWZxR244MTEwV0R3S053SUQwRFZua3FPcXl3V3oyUHI?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzM1WjZvTTFNRDBEdTM2VjVsT19sQ25pRWg5Zm4xTDZBdkhKUjljZnVWNGkyQkRsVUhCUTl3bkl5NUh0LTNOenJKTDNpdFVoSnYzVEMtaVRTaV9QMDc0QUhKNUZ5NlpNeGltVGdFdUQ2bEtlekgwS2N5WUNMY2g1dUp2Tl82SzhaTjJ0MUNFaW4tQWJWRWNtODJB?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR0c1aFRBQlFORVFuaXpwbkhpRE1jUWVXdGhNU1VXREJadUczOGtSZk9sTGxaekszcFAyeWZRQll1RWhWX3AtTGdCN3hfcV9uaHc3SzlCWlIxX1F0TmtlOXpTVWptYjVyVGF0RE8zdENTR3VqWlB3ckt3c2lJbWhtc0ZCZFQ0dW8wZXlLRHZoOUNEbTZMVWI4WHlKMWFhX1o3WkxiOXdtU1Y?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX0tFTjJvcTh3OUZWdVRNSUJpbWlWU0RhZjRyRDRVR2phT3YtMGRLVlpIZE5fcEszRE81Ynhwak96LTN0a1Vod1kyTTNWRHlfejVrdzNnTWFUUXZNZ0VUQVJmZ2dNSTQ1allWakxqUXRjV3ZGUW92ZGFQcmozTllmWGt6Sm1hYWl1WWtFNUw5UTAtckI0SG96TDdkTEM?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs",
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdVZ5dUNUbG83aHBkZ3hZMDFzOGEzMHFjYkN3Vk83WEQzNzFnd25KTmRzbUk4QXRiSmp2RHZBT0xzVVk3Y3RqTllaS1daaGNsMkFveEw3bmRsN1h4UGZ4UGlpUGM1dDU3M215MVp4OUhRZk9VMVM2MnUwaEZaMkJtQkJOV18wT2J6RDR0OXducGRXYTBHRFJaSkhFR3UzTVdpNTNPdzlVd3hwOENVWmwwaGJYNXVmQVk?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNEhiaTM2SWhSNVBFWE0yUExfLUhaZ2ZTSjV4Szg5cHN0RUVINF9SMTdrSUd2UTRHWGtDWTI3MXhKbFdfZndJMmdxejU1NUFhZjFRQlJpNmh6TVVManVYbE1LQU56UDVFa1hVdVNuSWdVTE9WN2hsY2dBXzFLNWtvSjhyQ0l4b3JKQTlaSDBkMHZYNXNDT0ZURE45X2FRcTBzMF92MGNzUmhIaWFwOS12djRn?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaXRWWWFjaW8xNmFkNUpkZFNlOGxHQ2dINDdPSkJoX2JjT3ZNRnA3YUZ4SENZY0o3cHFkNjJTcWJNN1RRMUwzazZyZWNDRkdMaHZmNk5GMVc2aHdCZVNuVGpUdVh6ZEJsRjhITGdfZ01TMjB2RjQtZlNlTXdaYkRScXhhdjBxTHdGOWdfbUNvTkxub3RvTWxOQ0NaeldXRDJoWUY4M3NoWnpzWC1NX01oSHJXT2NQbXFIanNuSG5jNA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNelZQSFp2VXRhTVhnRk9UbmhBaXlRbUZwdnRYYTItbE9XNHpxQnF5UDctdEZ0QXRIN1ZwWHU2d1AzZHlEcFQ2dnVQZk1UdU9Sd00xb2RLY0t4cjFpOV96X081aGM5YUxIM2dYdWZYM0N1bmhrYjRUV3YzV01VVFd1MkpXbGl6OUtOUDFQWtIBkgFBVV95cUxQdkRGUVJZOS1DTWJnb3h4d1FjUnNXV1B3b0pMREptRm90LVh5Z0paYmtGaVFZaFpGMWIzU0ktSDJjVEZaS3dtNEJNbl82QmhFMGNGSjNNMWNtNUlmdGNpMm9IX1otQXJOQ1lJR3lXNlVrSXRDMVJUOVFBZDl3dGVELWw1cUFwbnh4WHdNTWdEbjh0Zw?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVkRXZ0hNdHpVaXVTdmVkbHcyRnlnNmdhbDVFcUlCMEo5MnpQbjBJdFYyVktNbFpHUDduVGlrX1VqbXFBSm9tYThnckQ0a1kwTkhhX3FuNjRlaEhJa1dXNFJhUlREMFZvZTdESnZpaTQtakhTNmx0SXJ3NjMyM1FNSTY2U1FFRnFTcDVoNHlnWnhFMmJVUnZIcVloX2FxQdIBowFBVV95cUxOSDl4R2tTcTBUajQzay1ndGY0WTEyaEEzY2h6cUlhbXV1LTdQRGdxbTg2MFYxN21Nclo4UW1ZQWVtRWE1NGZQYmdLd3dsYndXSXBEeDg5RU9uRUNkN2tRcnhtcFA2V2UxUG1BazgwUF81NWE2RHVSMndBVG9mOHFwVUJ4MDNNQmxBUnh3VWpGT1Q2Z3FXQll3aWJLTWdnNnNmWVY0?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/transportation/998762/rivian-r2-climate-impact-carbon-lifecycle-half",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVERDTy1sR0JQS3VfSjkzUWkwakE3LVdyS0FKWTc5SmdHdW1NaVFwTGtKSGFYMHAzREZpUUg4VHBxaVBLdVRFazZ0NThvbk8zdjZjX0RSQ19EWnNqVHkxaHhwelZaaVB6YmdQYlZhRTJ5LUhMVEpmUkFleDNDWWhpSzFoZW8xN0lUMTMtUmxPSG5XaUZuOHFDSzdXcDNWcmh0VnlqY01NLVRoczFpRUc5Uk9HdHRyLUNHa1FNT1QxSmpfR3JPN0YtOQ?oc=5",
+        "key": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA4ZHpPemRjSlZyOVktMkZKamhfaGJSU0hacklhM0tFVk9SN202RVQ5cURlWDFZOGFld1lPZFFqMjAxZUNXTTVTRWJsWngwOGdpVU51WWRuYXlQb2FZTHg5dER0Yk1sMGVDd19ONWRRLUNSYnRPdkJnN2FYWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPY0lZX3FlTXk4M2NIbnVBaWVGQ25TdVlOYTM3V3pzQkVuOTRkYmNFemYyNGVrYVdNT19oOUtBMGZRU3ZiUzVqWTNkVDBTUWJHQjNUSjVacTNoMFhwYS1hbEhrdDdDOTFoTmxtSk1xdVhJZk9xSW0zZlNBQXNIX1FSR1N0bnFkNGVKOTJFU1RfbU9hY2V2cTRQaldfSzZPb2Q1ZGFqRg?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVW91WWdIVWRUVW1FYnh0bG1qYWgyQzFEVmI4RTlnWUNJU1lEcWpmVEIyYjZRR2pzM3l6Szdjd2IxNGRweDRlN1hEUlBlSzRUdGpIVEhEbUpoVDNQSWhJaVJkQ0xrV0k3WFUwNzJDTnVsc3Q5ZGp0cnVJR0twWEZpLVF4OEpndDNGVC1ack9FR0x0bUQ3blVxUXp1VUlLZ05sbVFZ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPNzVtVmkyVXM5VWw5eFdCXzBfTmRkWEhLdHVUdFBLVU95RXZtLTk0T25CVUhNWGlvYXNKbnV2MzY3UFgxQVdnRTRVSGd6WVpoQ0Q3bmpXZUNsNjI1UHJNWVp2aDZIYkU1c3g0OURuUVJUckRWbldSd2N3c1lVMUwyazltYmR2WS1yZmhHNjBqbTZFZWNYcVI1TFQwYU9RS0tka0VuN0lzb21QNlpDbHdJQnhqOGJicEZYM0w2X2dtQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMmFXeXlvZzdyejc4Vk9VWEhlc2s2UkVrbWNNQllsZzBBTEZTbndVcUZmZFZjcGVzcF8yYktra1hDbXppTVRwNzhJc1NyUDFFOGktUTZGXzVOcW5Jbm12TzlFYVhyY1VWNDMwV3JuNVFKckhtWGp1YWRtbDdlVDJJWWZOUFkxbXlxNS1yczJvYU42NjFoUUF3YmU3Q2FYaXY0MmtoRlh2VEhRRENiSTJCVm9rY0ZIMTdkYnc?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSjRYbTlWZGtsVW1Fb2FjQk01RHo4YkRDZFBlWTczQldrSW9XU0J5VFlkX2pOdDI1WTNmLWZmUEN4Mm9BVnJtb1JKV1BYTGpkX1hrdW84WUtQZWlLRWxBdXpabnNrcXYzaThuLVhSdTZKMWlPTXRLZVBIMUV3ZmtWLVJFeXZhWnYxVmlxdmtHVjBxMXhDRnBKSFNCZnFiMlNQWmlWRw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQM010S0p4NGlCOUtJVjZnTGM2RHFqZ3BHdWNVM184TWlORUdaa0h5Q1QwTGxPYmhYVmlhOW9jeGk4QXNQTE5LODVLMHNsdkJUdy1UQW9BWjFUbGIteUtvVEEycDRnNDFkX0taLTYzWWxBRW8zNkN6cUh6THdsMWpvR3lPWmd0MGhma0lBdVhzOHhrVS1lMUc1NnlMYWhNbDd0U1M2alF4Q09hV1pIcjlGdW9NdGl5NEZZNWZSYjlXYjB0Q0pvZmxkMDJKYVI?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMGxSNVRwV25NZktubFVfOXcyd0tGYk5US1dDYUFlSTNyRUtBeEoxQ1I1d0pLbmtJVHZyMkstaXY5VkNLWC1Jell6SVJCVVFIdUFmdHVXWXNablRNRmJIV3FPZFdieTVBSF9PUmlFTk5JTWtwaEVXa2FUOFFLSDgyOHFMZXIzMHBSTEdLZEdYYnZaN3N2Yk44TE9ZRQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBBT2thNDFaSmFGTjdLMjhXOGJJTkhxTVR0UXRpc2JrZE1oSGxmcVhDczdYTG5Vc2hEQUxSQzRrZWlsdDFCOFFFWmZCNnNhSDNVWjNZWmVTT1MyNUtmeE53YW1HbDVGVUQ4aEVDbWprQnFSMHExUTlZTzlwVHk2UWc?oc=5",
+        "key": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZmoybTcxQ0FoMC1TZm0xdWM1ZzBPWE1hY1RiMV9pRG9BbkNXNFE0VEtWcEIxUE1Vc1J2NUMwckpQUGFfcGQ4MHJ5WlJtYkFIOFd5d3BmNjNPcko3SVE3QWs2RHk1cFR5cDRiOE54Q2ZoMnJrdnphemlhaXNTTmtTU3Rsd3RJd3hOVEdocFRreXFvWm8?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNa2IxdXp3dFlSZ1N0V0dzYWRXWkllWDVDNjg5Ym1QUjc4OWw0aHdWU2xPaUItVk5qQjd1MkV6UDFEUkJCb0lKSlZlVzM1dXpjQ0xPWW1LeFBuajRWbHZaLURoU2lRaDVUcTdNWmxEbjkyVUFKdkdfLW5ZU0R2ZUE3azZmWDkzbkpiWVE?oc=5",
+        "key": "https://www.theverge.com/gadgets/998902/apple-whoop-fitness-tracker",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ1hEa1pkaVI4VUpGM2tISlBJRFFuT0tkVW8ydkc1cnl0M0pIb1QxMXpJZ1RLZWJvY2duTXNzNEV1Sy05dTlPSGFpa2p0U2xkVnpDbFg5a3ptX013ZTl0a2lmRFUtb3k2MmRobGd5SHRWZHNCbnl4SzV6a3JCT212WkdIQ0xwUDk1Y3d6RFNrQ083RjZINEMwWThqU25ESF9EQVRTZ3Y3dzhIc2lJbHfSAbMBQVVfeXFMT2h0RGpob2lFWW0xcTlZVFJKMG90dmxPM0tvQXVHS2d6UXY2OGpsU1oyVmhBOHZiUUxKRG4xTGtZS2c3WjhRQWxaOG1QZW9hVzcyN0VUb1lXcDJ4RDJySWtLYjg4THpoZUZ4QkdmVFdCRWtfbkc3bEhFSzFOdzJDTVpvSjZ4WGpSVHF6b0t6WWEtR0Rjdl8wYWF1NG8yaEp6a2ZReDY2QjFzVkdIWU1uQ0ZydHc?oc=5",
+        "key": "https://www.theverge.com/news/998592/xbox-is-merging-its-forza-developers-into-a-single-studio",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZ29wbDl4VFFhQ2ZMREJIenVYeGZpOWdpZGhkbUFadlJBV2NiOVhUY1dsaFVQMVRjNVlhRHVXeHVnNTdiS01rUzhaaXJaN1d0M01IYmpsQnJ3eWhCSHkzeTRpd3htWnMzVGhaUzZGWjNyMGlVTTFSTjVBOWJFNkg3WHlBeThXRlRCdXhhdkN0dFNiN041dFE?oc=5",
+        "key": "https://www.theverge.com/news/998586/activision-halo-xbox-reorganization-layoffs",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQdzdoSjQxeEVTZjVPbVV6RmRBSVhOZ0FPbUxLUlFfTVJjS2tmYk5xQldGLTdfN21BRG80Z1ZHN3Vmc2lqRm9IVkNyVTRvQUZMc19ZNWdYU1RhTndkaEtveVF4U181c3JMVzlVZ1VGOVJhTTJfMWdpRjl0QXBKbmdYU0tyUmhGT3RhcVNLYVFQSy1wTzV3UlZjbWtackNkLUk5RmxHWnM3RDVGakg1MGpGa0kxT0VmMllKVGpvX1JhV0hJQVdFMFpPdHNOWGZPMW5yc0ZleWQ2VUdlM1ZNY3FXQmViVVNUN2M1NURLckM0TUhkZk1KVms0NkxDSGhXblZUMGl3R0JFalRPWWd1VUgxVzdvNDRfYUlhX2ZiVjR0WnpuZGpL?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQX2ZLc3FkMFBGdGM0Mno4QmV0ZFJtVWZ2X3RyLUp6SmFUX0tQQ0FPRHlLRmdJVmU5dy11SlE3SXFJUVlySDNQOXlmZTFkV3JNc19nSDlyUlhJZzgyMDY1d0VRaV9IT054T2stSTd5VWNOVVJNa0w3VHctTW9GdUJjYkRkQXdmSW1pOWllUVV4OVdOU003ckJBaWloZ0JKUmdtVTFiLVRhajY2N2pKUHhiYXV1Z3Y?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9vbVZWVXZ4NnU4R0JWaXpZOHA5T25OdkU2akhxLXBEdFFWcjI5Y3o3ZVZWS0tGdzY3MDRORjRKYVRkLVE3bGVyckJsWFFQWDl1RXFfREhIYnVkRG5Sb1pYOGlPdHZPYnRyd3R2bGh2dHBpLXNiR3c?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTk1HdVQ3NlJGZUJoYTJmQmJQamMtWFFZNkJMWmUyNDZmTEEyZVhJYzF1MDBadHhFdjdQS0tYTHFjTS1CZ2dZN1RxZFQyRkduQ3dpbUhWNFl0WURoQnJPZk5FNEpULUZlZzE1TEEyZ3JxOV9ZblEtZmJPZTZPQ2hhWnk3YmxNYlB3VDdHbHBIMzUwc3BsSzd5bDRHUlV2UElld3AzcTdjTUtpdkN2YW5JREk3MHBQSkhFZl9xNw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTkMyaENsc0Q5TExlQWRWaDhpTGtDdHZjbWJRbm54Z2puVHRTZUJ0SDd0bHk2cGQ1Q0UyMVJNVlM2RHBaTmdLNEpaZlo2UGJSSGRRTWFPb2IzXzM0aW94NFVpUjdPUDI2NFhhOWhUVk1FTFpLelJuUkQ5MEpEenExRFlDRVQ4Q2pyTGphakh3SDR5OUJ2STdDLUM2amZ1Z9IBowFBVV95cUxNNEVpNF9mekF2UUNWWVhzTHZIcWg3YllSTzczMHp6MTh0VWdlTUoyeGRUSUswaVFrMW9zejRLTzhSY2tlV3ZlVnNtSDFZMWpGOVhxckxlZEFfOGlHSC12VFViWVNrcHM2UkhWbV91ZUZaSHQzSGRDNnRTV19HMmdlZGR4cVF4NmY2VFFCRU9CczczNzdlUE54N2N2SEc5U1g5YXFN?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998550/a-cut-cable-disrupted-hundreds-of-flights-across-the-us",
-        "bucket": "variant"
+        "key": "https://www.theverge.com/tech/998566/beats-360-headphones-review",
+        "bucket": "control"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUmRuUWE2SThVb2IxbEozR1dfa3Q2VlR2UzB6anlRTndHOENPd0wwaFMydUNuaWRfT0FlcmlvVmRxYkt3SzNXcnlCN1RPSF9SYnA3QmNYUHpyRm5YU1R1ZGxzTG9KbmRvNFd6Z21pUE55ZHIyNlJHcWNGaXZvOU9LeG9LVEhjbWM3Z3dWTXJHZlk2aUtwZVVBWWVTb3BfaVhudVdPTjhtRmlnYmdrdnp1RtIBtgFBVV95cUxNRnVkSW0wR0huaGR2Tnk0UDJoQTF2ektpYjVfdl9yTExfQ2R1LUthcXJKaEtoQWFIWGdtTUFXR1VpYzNiMDgySDhIN1pha0dRZmkyS2lDZjUxTjZuMUJmUzEtSkg2Sm9TNENiZV9kNEZZR0FxdFJXY3ZTZjE0aDFfZXdDYXZtUjRySzVaNUhvSGtSUWZ0cmdlaElqcnBzdU5XLWg4cDRtd2lWOVJGQm92REF0ZURCQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OTDdubjMyVGhFZ3lmTlR6QVFvZzFyQlhDOW1NOHRqS0ZoLS1mN0pUaFkzeVUzVlB5MW5hUWtCWmRMSFNkbmR5S0ZWWlMwOE5Mcl9paDhPd2p1S0VHUWZxR244MTEwV0R3S053SUQwRFZua3FPcXl3V3oyUHI?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzM1WjZvTTFNRDBEdTM2VjVsT19sQ25pRWg5Zm4xTDZBdkhKUjljZnVWNGkyQkRsVUhCUTl3bkl5NUh0LTNOenJKTDNpdFVoSnYzVEMtaVRTaV9QMDc0QUhKNUZ5NlpNeGltVGdFdUQ2bEtlekgwS2N5WUNMY2g1dUp2Tl82SzhaTjJ0MUNFaW4tQWJWRWNtODJB?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPR0c1aFRBQlFORVFuaXpwbkhpRE1jUWVXdGhNU1VXREJadUczOGtSZk9sTGxaekszcFAyeWZRQll1RWhWX3AtTGdCN3hfcV9uaHc3SzlCWlIxX1F0TmtlOXpTVWptYjVyVGF0RE8zdENTR3VqWlB3ckt3c2lJbWhtc0ZCZFQ0dW8wZXlLRHZoOUNEbTZMVWI4WHlKMWFhX1o3WkxiOXdtU1Y?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX0tFTjJvcTh3OUZWdVRNSUJpbWlWU0RhZjRyRDRVR2phT3YtMGRLVlpIZE5fcEszRE81Ynhwak96LTN0a1Vod1kyTTNWRHlfejVrdzNnTWFUUXZNZ0VUQVJmZ2dNSTQ1allWakxqUXRjV3ZGUW92ZGFQcmozTllmWGt6Sm1hYWl1WWtFNUw5UTAtckI0SG96TDdkTEM?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/tech/997986/google-googlebooks-android-laptops-dell-hp-lenovo-acer-asus-price-specs",
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdVZ5dUNUbG83aHBkZ3hZMDFzOGEzMHFjYkN3Vk83WEQzNzFnd25KTmRzbUk4QXRiSmp2RHZBT0xzVVk3Y3RqTllaS1daaGNsMkFveEw3bmRsN1h4UGZ4UGlpUGM1dDU3M215MVp4OUhRZk9VMVM2MnUwaEZaMkJtQkJOV18wT2J6RDR0OXducGRXYTBHRFJaSkhFR3UzTVdpNTNPdzlVd3hwOENVWmwwaGJYNXVmQVk?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNEhiaTM2SWhSNVBFWE0yUExfLUhaZ2ZTSjV4Szg5cHN0RUVINF9SMTdrSUd2UTRHWGtDWTI3MXhKbFdfZndJMmdxejU1NUFhZjFRQlJpNmh6TVVManVYbE1LQU56UDVFa1hVdVNuSWdVTE9WN2hsY2dBXzFLNWtvSjhyQ0l4b3JKQTlaSDBkMHZYNXNDT0ZURE45X2FRcTBzMF92MGNzUmhIaWFwOS12djRn?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNaXRWWWFjaW8xNmFkNUpkZFNlOGxHQ2dINDdPSkJoX2JjT3ZNRnA3YUZ4SENZY0o3cHFkNjJTcWJNN1RRMUwzazZyZWNDRkdMaHZmNk5GMVc2aHdCZVNuVGpUdVh6ZEJsRjhITGdfZ01TMjB2RjQtZlNlTXdaYkRScXhhdjBxTHdGOWdfbUNvTkxub3RvTWxOQ0NaeldXRDJoWUY4M3NoWnpzWC1NX01oSHJXT2NQbXFIanNuSG5jNA?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNelZQSFp2VXRhTVhnRk9UbmhBaXlRbUZwdnRYYTItbE9XNHpxQnF5UDctdEZ0QXRIN1ZwWHU2d1AzZHlEcFQ2dnVQZk1UdU9Sd00xb2RLY0t4cjFpOV96X081aGM5YUxIM2dYdWZYM0N1bmhrYjRUV3YzV01VVFd1MkpXbGl6OUtOUDFQWtIBkgFBVV95cUxQdkRGUVJZOS1DTWJnb3h4d1FjUnNXV1B3b0pMREptRm90LVh5Z0paYmtGaVFZaFpGMWIzU0ktSDJjVEZaS3dtNEJNbl82QmhFMGNGSjNNMWNtNUlmdGNpMm9IX1otQXJOQ1lJR3lXNlVrSXRDMVJUOVFBZDl3dGVELWw1cUFwbnh4WHdNTWdEbjh0Zw?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVkRXZ0hNdHpVaXVTdmVkbHcyRnlnNmdhbDVFcUlCMEo5MnpQbjBJdFYyVktNbFpHUDduVGlrX1VqbXFBSm9tYThnckQ0a1kwTkhhX3FuNjRlaEhJa1dXNFJhUlREMFZvZTdESnZpaTQtakhTNmx0SXJ3NjMyM1FNSTY2U1FFRnFTcDVoNHlnWnhFMmJVUnZIcVloX2FxQdIBowFBVV95cUxOSDl4R2tTcTBUajQzay1ndGY0WTEyaEEzY2h6cUlhbXV1LTdQRGdxbTg2MFYxN21Nclo4UW1ZQWVtRWE1NGZQYmdLd3dsYndXSXBEeDg5RU9uRUNkN2tRcnhtcFA2V2UxUG1BazgwUF81NWE2RHVSMndBVG9mOHFwVUJ4MDNNQmxBUnh3VWpGT1Q2Z3FXQll3aWJLTWdnNnNmWVY0?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/transportation/998762/rivian-r2-climate-impact-carbon-lifecycle-half",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVERDTy1sR0JQS3VfSjkzUWkwakE3LVdyS0FKWTc5SmdHdW1NaVFwTGtKSGFYMHAzREZpUUg4VHBxaVBLdVRFazZ0NThvbk8zdjZjX0RSQ19EWnNqVHkxaHhwelZaaVB6YmdQYlZhRTJ5LUhMVEpmUkFleDNDWWhpSzFoZW8xN0lUMTMtUmxPSG5XaUZuOHFDSzdXcDNWcmh0VnlqY01NLVRoczFpRUc5Uk9HdHRyLUNHa1FNT1QxSmpfR3JPN0YtOQ?oc=5",
+        "key": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA4ZHpPemRjSlZyOVktMkZKamhfaGJSU0hacklhM0tFVk9SN202RVQ5cURlWDFZOGFld1lPZFFqMjAxZUNXTTVTRWJsWngwOGdpVU51WWRuYXlQb2FZTHg5dER0Yk1sMGVDd19ONWRRLUNSYnRPdkJnN2FYWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPY0lZX3FlTXk4M2NIbnVBaWVGQ25TdVlOYTM3V3pzQkVuOTRkYmNFemYyNGVrYVdNT19oOUtBMGZRU3ZiUzVqWTNkVDBTUWJHQjNUSjVacTNoMFhwYS1hbEhrdDdDOTFoTmxtSk1xdVhJZk9xSW0zZlNBQXNIX1FSR1N0bnFkNGVKOTJFU1RfbU9hY2V2cTRQaldfSzZPb2Q1ZGFqRg?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVW91WWdIVWRUVW1FYnh0bG1qYWgyQzFEVmI4RTlnWUNJU1lEcWpmVEIyYjZRR2pzM3l6Szdjd2IxNGRweDRlN1hEUlBlSzRUdGpIVEhEbUpoVDNQSWhJaVJkQ0xrV0k3WFUwNzJDTnVsc3Q5ZGp0cnVJR0twWEZpLVF4OEpndDNGVC1ack9FR0x0bUQ3blVxUXp1VUlLZ05sbVFZ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPNzVtVmkyVXM5VWw5eFdCXzBfTmRkWEhLdHVUdFBLVU95RXZtLTk0T25CVUhNWGlvYXNKbnV2MzY3UFgxQVdnRTRVSGd6WVpoQ0Q3bmpXZUNsNjI1UHJNWVp2aDZIYkU1c3g0OURuUVJUckRWbldSd2N3c1lVMUwyazltYmR2WS1yZmhHNjBqbTZFZWNYcVI1TFQwYU9RS0tka0VuN0lzb21QNlpDbHdJQnhqOGJicEZYM0w2X2dtQQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMmFXeXlvZzdyejc4Vk9VWEhlc2s2UkVrbWNNQllsZzBBTEZTbndVcUZmZFZjcGVzcF8yYktra1hDbXppTVRwNzhJc1NyUDFFOGktUTZGXzVOcW5Jbm12TzlFYVhyY1VWNDMwV3JuNVFKckhtWGp1YWRtbDdlVDJJWWZOUFkxbXlxNS1yczJvYU42NjFoUUF3YmU3Q2FYaXY0MmtoRlh2VEhRRENiSTJCVm9rY0ZIMTdkYnc?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSjRYbTlWZGtsVW1Fb2FjQk01RHo4YkRDZFBlWTczQldrSW9XU0J5VFlkX2pOdDI1WTNmLWZmUEN4Mm9BVnJtb1JKV1BYTGpkX1hrdW84WUtQZWlLRWxBdXpabnNrcXYzaThuLVhSdTZKMWlPTXRLZVBIMUV3ZmtWLVJFeXZhWnYxVmlxdmtHVjBxMXhDRnBKSFNCZnFiMlNQWmlWRw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQM010S0p4NGlCOUtJVjZnTGM2RHFqZ3BHdWNVM184TWlORUdaa0h5Q1QwTGxPYmhYVmlhOW9jeGk4QXNQTE5LODVLMHNsdkJUdy1UQW9BWjFUbGIteUtvVEEycDRnNDFkX0taLTYzWWxBRW8zNkN6cUh6THdsMWpvR3lPWmd0MGhma0lBdVhzOHhrVS1lMUc1NnlMYWhNbDd0U1M2alF4Q09hV1pIcjlGdW9NdGl5NEZZNWZSYjlXYjB0Q0pvZmxkMDJKYVI?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOMGxSNVRwV25NZktubFVfOXcyd0tGYk5US1dDYUFlSTNyRUtBeEoxQ1I1d0pLbmtJVHZyMkstaXY5VkNLWC1Jell6SVJCVVFIdUFmdHVXWXNablRNRmJIV3FPZFdieTVBSF9PUmlFTk5JTWtwaEVXa2FUOFFLSDgyOHFMZXIzMHBSTEdLZEdYYnZaN3N2Yk44TE9ZRQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBBT2thNDFaSmFGTjdLMjhXOGJJTkhxTVR0UXRpc2JrZE1oSGxmcVhDczdYTG5Vc2hEQUxSQzRrZWlsdDFCOFFFWmZCNnNhSDNVWjNZWmVTT1MyNUtmeE53YW1HbDVGVUQ4aEVDbWprQnFSMHExUTlZTzlwVHk2UWc?oc=5",
+        "key": "https://www.theverge.com/ai-artificial-intelligence/998816/donald-trump-ai-super-intelligence",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZmoybTcxQ0FoMC1TZm0xdWM1ZzBPWE1hY1RiMV9pRG9BbkNXNFE0VEtWcEIxUE1Vc1J2NUMwckpQUGFfcGQ4MHJ5WlJtYkFIOFd5d3BmNjNPcko3SVE3QWs2RHk1cFR5cDRiOE54Q2ZoMnJrdnphemlhaXNTTmtTU3Rsd3RJd3hOVEdocFRreXFvWm8?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNa2IxdXp3dFlSZ1N0V0dzYWRXWkllWDVDNjg5Ym1QUjc4OWw0aHdWU2xPaUItVk5qQjd1MkV6UDFEUkJCb0lKSlZlVzM1dXpjQ0xPWW1LeFBuajRWbHZaLURoU2lRaDVUcTdNWmxEbjkyVUFKdkdfLW5ZU0R2ZUE3azZmWDkzbkpiWVE?oc=5",
+        "key": "https://www.theverge.com/gadgets/998902/apple-whoop-fitness-tracker",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZ1hEa1pkaVI4VUpGM2tISlBJRFFuT0tkVW8ydkc1cnl0M0pIb1QxMXpJZ1RLZWJvY2duTXNzNEV1Sy05dTlPSGFpa2p0U2xkVnpDbFg5a3ptX013ZTl0a2lmRFUtb3k2MmRobGd5SHRWZHNCbnl4SzV6a3JCT212WkdIQ0xwUDk1Y3d6RFNrQ083RjZINEMwWThqU25ESF9EQVRTZ3Y3dzhIc2lJbHfSAbMBQVVfeXFMT2h0RGpob2lFWW0xcTlZVFJKMG90dmxPM0tvQXVHS2d6UXY2OGpsU1oyVmhBOHZiUUxKRG4xTGtZS2c3WjhRQWxaOG1QZW9hVzcyN0VUb1lXcDJ4RDJySWtLYjg4THpoZUZ4QkdmVFdCRWtfbkc3bEhFSzFOdzJDTVpvSjZ4WGpSVHF6b0t6WWEtR0Rjdl8wYWF1NG8yaEp6a2ZReDY2QjFzVkdIWU1uQ0ZydHc?oc=5",
+        "key": "https://www.theverge.com/news/998592/xbox-is-merging-its-forza-developers-into-a-single-studio",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZ29wbDl4VFFhQ2ZMREJIenVYeGZpOWdpZGhkbUFadlJBV2NiOVhUY1dsaFVQMVRjNVlhRHVXeHVnNTdiS01rUzhaaXJaN1d0M01IYmpsQnJ3eWhCSHkzeTRpd3htWnMzVGhaUzZGWjNyMGlVTTFSTjVBOWJFNkg3WHlBeThXRlRCdXhhdkN0dFNiN041dFE?oc=5",
+        "key": "https://www.theverge.com/news/998586/activision-halo-xbox-reorganization-layoffs",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQdzdoSjQxeEVTZjVPbVV6RmRBSVhOZ0FPbUxLUlFfTVJjS2tmYk5xQldGLTdfN21BRG80Z1ZHN3Vmc2lqRm9IVkNyVTRvQUZMc19ZNWdYU1RhTndkaEtveVF4U181c3JMVzlVZ1VGOVJhTTJfMWdpRjl0QXBKbmdYU0tyUmhGT3RhcVNLYVFQSy1wTzV3UlZjbWtackNkLUk5RmxHWnM3RDVGakg1MGpGa0kxT0VmMllKVGpvX1JhV0hJQVdFMFpPdHNOWGZPMW5yc0ZleWQ2VUdlM1ZNY3FXQmViVVNUN2M1NURLckM0TUhkZk1KVms0NkxDSGhXblZUMGl3R0JFalRPWWd1VUgxVzdvNDRfYUlhX2ZiVjR0WnpuZGpL?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQX2ZLc3FkMFBGdGM0Mno4QmV0ZFJtVWZ2X3RyLUp6SmFUX0tQQ0FPRHlLRmdJVmU5dy11SlE3SXFJUVlySDNQOXlmZTFkV3JNc19nSDlyUlhJZzgyMDY1d0VRaV9IT054T2stSTd5VWNOVVJNa0w3VHctTW9GdUJjYkRkQXdmSW1pOWllUVV4OVdOU003ckJBaWloZ0JKUmdtVTFiLVRhajY2N2pKUHhiYXV1Z3Y?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9vbVZWVXZ4NnU4R0JWaXpZOHA5T25OdkU2akhxLXBEdFFWcjI5Y3o3ZVZWS0tGdzY3MDRORjRKYVRkLVE3bGVyckJsWFFQWDl1RXFfREhIYnVkRG5Sb1pYOGlPdHZPYnRyd3R2bGh2dHBpLXNiR3c?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTk1HdVQ3NlJGZUJoYTJmQmJQamMtWFFZNkJMWmUyNDZmTEEyZVhJYzF1MDBadHhFdjdQS0tYTHFjTS1CZ2dZN1RxZFQyRkduQ3dpbUhWNFl0WURoQnJPZk5FNEpULUZlZzE1TEEyZ3JxOV9ZblEtZmJPZTZPQ2hhWnk3YmxNYlB3VDdHbHBIMzUwc3BsSzd5bDRHUlV2UElld3AzcTdjTUtpdkN2YW5JREk3MHBQSkhFZl9xNw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTkMyaENsc0Q5TExlQWRWaDhpTGtDdHZjbWJRbm54Z2puVHRTZUJ0SDd0bHk2cGQ1Q0UyMVJNVlM2RHBaTmdLNEpaZlo2UGJSSGRRTWFPb2IzXzM0aW94NFVpUjdPUDI2NFhhOWhUVk1FTFpLelJuUkQ5MEpEenExRFlDRVQ4Q2pyTGphakh3SDR5OUJ2STdDLUM2amZ1Z9IBowFBVV95cUxNNEVpNF9mekF2UUNWWVhzTHZIcWg3YllSTzczMHp6MTh0VWdlTUoyeGRUSUswaVFrMW9zejRLTzhSY2tlV3ZlVnNtSDFZMWpGOVhxckxlZEFfOGlHSC12VFViWVNrcHM2UkhWbV91ZUZaSHQzSGRDNnRTV19HMmdlZGR4cVF4NmY2VFFCRU9CczczNzdlUE54N2N2SEc5U1g5YXFN?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998550/a-cut-cable-disrupted-hundreds-of-flights-across-the-us",
-        "bucket": "variant"
+        "key": "https://www.theverge.com/tech/998566/beats-360-headphones-review",
+        "bucket": "control"
       }
     ]
   },
@@ -337,13 +337,13 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 73,
+        "claimConfidence": 72,
         "evidencePassRate": 22
       },
       "conclusion": "insufficient-data",
@@ -352,13 +352,13 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 73,
+        "claimConfidence": 72,
         "evidencePassRate": 22
       },
       "conclusion": "insufficient-data",
@@ -367,13 +367,13 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 73,
+        "claimConfidence": 72,
         "evidencePassRate": 22
       },
       "conclusion": "insufficient-data",
@@ -381,6 +381,6 @@
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-21T22:10:38.416Z"
+    "previousUpdatedAt": "2026-09-22T12:01:32.460Z"
   }
 }
