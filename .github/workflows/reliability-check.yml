@@ -5,7 +5,7 @@ name: TrendForge Reliability Check
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "fix/evidence-provenance-run401"]
   workflow_dispatch:
 
 permissions:
