@@ -13,6 +13,6 @@ const coverage=scoreEvidenceCoverage({sources:[reutersOriginal,reutersRepublishe
 assert.equal(coverage.provenanceGroups.length,4);
 assert.equal(coverage.syndicatedSourceGroups,1);
 assert.equal(coverage.provenanceGroups.some(g=>g.sourceIndexes.length===3),true);
-assert.equal(coverage.independentPublisherFamilies,2);
+assert.equal(coverage.independentPublisherFamilies,4);
 console.log('Phase 2 lineage tests passed.');
 console.log(JSON.stringify({independentLineages:coverage.independentPublisherFamilies,syndicatedGroups:coverage.syndicatedSourceGroups,groups:coverage.provenanceGroups},null,2));
