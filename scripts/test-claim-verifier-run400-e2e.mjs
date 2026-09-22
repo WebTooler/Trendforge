@@ -71,7 +71,7 @@ fs.writeFileSync(path.join(temp,'content','articles','run-400-regression.md'),ar
 
 const verifierPath=new URL('./verify-article-claims-smart.mjs',import.meta.url);
 const run=spawnSync(process.execPath,[verifierPath.pathname],{cwd:temp,env:{...process.env,GITHUB_RUN_ID:'run400-e2e-fixture'},encoding:'utf8'});
-if(run.status!==0) throw new Error(`Run 400 E2E verifier failed.\\nSTDOUT:\\n${run.stdout}\\nSTDERR:\\n${run.stderr}`);
+if(run.status!==0){ let diagnostic=''; try{const debug=JSON.parse(fs.readFileSync(path.join(temp,'data','claim-verification.json'),'utf8')); diagnostic='\\nCLAIMS:\\n'+debug.claims.map(x=>JSON.stringify({claim:x.claim,status:x.status,classification:x.classification,confidence:x.confidence,bestPassageId:x.bestPassageId,matchingMode:x.matchingMode,sourceId:x.sourceId,sharedTerms:x.sharedTerms})).join('\\n');}catch{} throw new Error(`Run 400 E2E verifier failed.\\nSTDOUT:\\n${run.stdout}\\nSTDERR:\\n${run.stderr}${diagnostic}`);}
 
 const result=JSON.parse(fs.readFileSync(path.join(temp,'data','claim-verification.json'),'utf8'));
 if(result.pass!==true) throw new Error('Run 400 E2E verifier did not PASS.');
