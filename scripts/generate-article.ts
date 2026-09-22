@@ -112,14 +112,30 @@ async function main(){
   // directly referenced by core facts, with a hard total character budget.
   const coreFacts=Array.isArray(storyFactMap?.coreFacts)?storyFactMap.coreFacts:[];
   const sourceIdFor=(s:any)=>s.publisherFamily||domainOf(s.url)||s.url;
+  // Core fact passageIndex values refer to raw passage IDs preserved by
+  // editorial-evidence-brief, not to the reindexed normalized source.passages array.
+  // Resolve them through extraction.relevantPassages so writer evidence uses the
+  // exact immutable passage text instead of silently falling back to passage #1.
   const corePassageRefs=new Map<string,Set<number>>();
-  for(const fact of coreFacts){const id=String(fact.sourceId||'');if(!id)continue;if(!corePassageRefs.has(id))corePassageRefs.set(id,new Set());const idx=Number(fact.passageIndex);if(Number.isInteger(idx)&&idx>=0)corePassageRefs.get(id)!.add(idx);}
+  for(const fact of coreFacts){
+    const id=String(fact.sourceId||''); if(!id)continue;
+    if(!corePassageRefs.has(id))corePassageRefs.set(id,new Set());
+    const idx=Number(fact.passageIndex);
+    if(Number.isInteger(idx)&&idx>=1)corePassageRefs.get(id)!.add(idx);
+  }
   const evidenceChunks=evidencePack.map((s,i)=>{
-    const refs=corePassageRefs.get(String(sourceIdFor(s)))||new Set<number>();
-    const selected=[...refs].sort((a,b)=>a-b).map(n=>s.passages[n]).filter(Boolean);
-    const fallback=s.passages.slice(0,1);
-    const passages=[...new Set((selected.length?selected:fallback).map(x=>String(x).trim()).filter(Boolean))].slice(0,2).map(x=>x.slice(0,900));
-    return `SOURCE S${i+1}\nPublisher/article: ${s.title}\nURL: ${s.url}\nRole: ${s.sourceRole||sourceRole(s)}\n${passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\\n')}`;
+    const sourceId=`S${i+1}`;
+    const refs=corePassageRefs.get(sourceId)||new Set<number>();
+    const extracted=Array.isArray((s as any).extraction?.relevantPassages)?(s as any).extraction.relevantPassages:[];
+    const byRawIndex=new Map<number,string>();
+    for(const p of extracted){
+      const rawIndex=Number(p?.rawPassageIndex);
+      if(Number.isInteger(rawIndex)&&rawIndex>=1&&typeof p?.text==='string'&&p.text.trim())byRawIndex.set(rawIndex,p.text);
+    }
+    const selected=[...refs].sort((a,b)=>a-b).map(n=>byRawIndex.get(n)).filter(Boolean) as string[];
+    const fallback=s.passages.slice(0,3);
+    const passages=[...new Set((selected.length?selected:fallback).map(x=>String(x).trim()).filter(Boolean))].slice(0,8).map(x=>x.slice(0,900));
+    return `SOURCE ${sourceId}\nPublisher/article: ${s.title}\nURL: ${s.url}\nRole: ${s.sourceRole||sourceRole(s)}\n${passages.map((p,j)=>`[${sourceId}-P${j+1}] ${p}`).join('\\n')}`;
   });
   const MAX_WRITER_EVIDENCE_CHARS=9000;
   let evidenceText='';
