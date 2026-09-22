@@ -29,6 +29,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
       sourceId:claim.sourceId,
       sourceRole:role,
       passageIndex:claim.passageIndex,
+      passageId:claim.passageId||`${claim.sourceId}-P${claim.passageIndex||'unknown'}`,
       text:clean(claim.text),
       attribution:claim.attribution===true,
       numbers:Array.isArray(claim.numbers)?claim.numbers:[],
