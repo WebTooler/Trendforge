@@ -62,6 +62,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       id:'C'+(allClaims.length+idx+1),
       sourceId:'S'+(si+1),
       passageIndex:x.rawPassageIndex+1,
+      passageId:`S${si+1}-P${x.rawPassageIndex+1}`,
       text:x.text,
       supportType:'direct-passage',
       relevanceScore:x.relevance,
@@ -69,7 +70,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       attribution:/\b(?:according to|said|reported|told|announced|argued|noted|confirmed|denied)\b/i.test(x.text)
     }));
     allClaims.push(...claims);
-    normalizedSources.push({...source,passages:relevant.map(x=>x.text),body:relevant.map(x=>x.text).join(' '),extraction:{...(source.extraction||{}),rawPassageCount:raw.length,relevantPassageCount:relevant.length,relevanceFiltered:true,relevantPassages:relevant.map((x,i)=>({id:'P'+(i+1),rawPassageIndex:x.rawPassageIndex+1,text:x.text,score:x.relevance}))}});
+    normalizedSources.push({...source,passages:relevant.map(x=>x.text),body:relevant.map(x=>x.text).join(' '),extraction:{...(source.extraction||{}),rawPassageCount:raw.length,relevantPassageCount:relevant.length,relevanceFiltered:true,relevantPassages:relevant.map(x=>({id:`P${x.rawPassageIndex+1}`,rawPassageIndex:x.rawPassageIndex+1,text:x.text,score:x.relevance}))}});
   }
   const uniqueClaims=[]; const claimSeen=new Set();
   for(const claim of allClaims){const key=claim.text.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();if(!key||claimSeen.has(key))continue;claimSeen.add(key);uniqueClaims.push({...claim,id:'C'+(uniqueClaims.length+1)});}
@@ -101,7 +102,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
     storyCapacity:evidenceCapacity,
     coreStoryFacts:uniqueClaims.slice(0,24).map(c=>({claimId:c.id,sourceId:c.sourceId,text:c.text})),
     supportedClaims:uniqueClaims.slice(0,48),
-    sourceSupportMapping:uniqueClaims.slice(0,48).map(c=>({claimId:c.id,sourceId:c.sourceId,passageIndex:c.passageIndex})),
+    sourceSupportMapping:uniqueClaims.slice(0,48).map(c=>({claimId:c.id,sourceId:c.sourceId,passageId:c.passageId,passageIndex:c.passageIndex})),
     relevantPassages:normalizedSources.flatMap((s,si)=>s.passages.map((text,pi)=>({sourceId:'S'+(si+1),passageId:'P'+(pi+1),text}))),
     uncertainty,
     unknowns,
