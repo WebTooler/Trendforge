@@ -57,6 +57,20 @@ assert.equal(brief.storyFactMap.policy.synthesisMustReuseVerifiedFacts,true);
 assert.ok(brief.storyFactMap.capacity.synthesisCapacity);
 assert.ok(Array.isArray(brief.storyFactMap.capacity.synthesisCapacity.allowedFactIds));
 
+// Evidence integrity regressions:
+// 1) relevantPassageCount is a raw-passage metric and must never exceed rawPassageCount.
+// 2) sentence-level evidence depth is tracked separately.
+// 3) independently corroborating publishers must retain separate fact-map entries.
+assert.ok(brief.metrics.relevantPassageCount<=brief.metrics.rawPassageCount,
+  'relevant passage count must not exceed raw passage count');
+assert.ok(brief.metrics.relevantEvidenceUnitCount>=brief.metrics.relevantPassageCount,
+  'sentence-level evidence units must be at least the represented raw passages');
+const corroboratedLaunchFacts=brief.storyFactMap.facts.filter(f=>/launched.*nova|nova.*launched/i.test(f.text));
+assert.ok(new Set(corroboratedLaunchFacts.map(f=>f.sourceId)).size>=2,
+  'cross-source corroboration must survive fact-map deduplication');
+assert.ok(brief.supportedClaims.some(c=>c.passageId==='S1-P1'),
+  'claims must carry stable source-passage provenance IDs');
+
 const coverage=scoreEvidenceCoverage({sources:brief.sources,evidenceBrief:brief});
 const blueprint=deriveEvidenceArticleBlueprint({...coverage,evidenceBrief:brief});
 assert.ok(blueprint.evidenceCapacity.coreFactCount===brief.storyFactMap.capacity.coreFactCount);
