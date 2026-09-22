@@ -20,8 +20,11 @@ if(!verifierV2Source.includes("String(manifest.runId||'')!==runId")) throw new E
 if(!verifierV2Source.includes("manifest.articlePath")) throw new Error('Claim verifier must verify the manifest article path.');
 if(!verifierV2Source.includes("status:'skipped'")) throw new Error('Claim verifier must record a safe no-article skip.');
 if(!verifierV2Source.includes("function write(report){fs.writeFileSync(claimPath")) throw new Error('Claim verifier no-article path must define its report writer.');
-if(!verifierSmartSource.includes('provenanceFacts.map(f=>f.text).join(\' \')')) throw new Error('Smart claim verifier must compose matched core facts from immutable fact text.');
-if(!verifierSmartSource.includes('coreFactMatch?.text||best.bestPassage')) throw new Error('Smart claim verifier must anchor single matched core facts to immutable fact text.');
+if(!verifierSmartSource.includes('anchorClaimProvenance')) throw new Error('Smart claim verifier must use the immutable provenance anchor helper.');
+const provenanceAnchorSource=fs.readFileSync(new URL('./claim-provenance-anchor.mjs',import.meta.url),'utf8');
+if(!provenanceAnchorSource.includes("facts.map(f=>f.text).join(' ')")) throw new Error('Provenance anchor must compose immutable fact text.');
+if(!provenanceAnchorSource.includes("text:f.text")) throw new Error('Provenance anchor must use immutable single-fact text.');
+if(!provenanceAnchorSource.includes("source:'semantic-fallback'")) throw new Error('Provenance anchor must make semantic fallback explicit.');
 if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
 if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must support explicit multi-fact synthesis provenance.');
 if(!verifierSmartSource.includes('const compatibleFacts=factMatches.filter')) throw new Error('Smart claim verifier must compose multiple core facts for composite factual claims.');
@@ -29,7 +32,7 @@ if(!verifierSmartSource.includes('provenanceFactMatches')) throw new Error('Smar
 if(!fs.readFileSync(new URL('./editorial-evidence-brief.mjs',import.meta.url),'utf8').includes('passageId:`S${si+1}-P${x.rawPassageIndex+1}`')) throw new Error('Evidence brief must persist immutable source passage ids.');
 if(!fs.readFileSync(new URL('./story-fact-map.mjs',import.meta.url),'utf8').includes('passageId:claim.passageId||`${claim.sourceId}-P${claim.passageIndex}`')) throw new Error('Story Fact Map must persist immutable passage ids.');
 if(!verifierSmartSource.includes("passageText:f.text")) throw new Error('Synthesis provenance must use immutable fact text, not filtered passage indexes.');
-if(!verifierSmartSource.includes("coreFactMatch?.text||best.bestPassage")) throw new Error('Factual provenance must use immutable fact text, not filtered passage indexes.');
+if(!provenanceAnchorSource.includes("coreFactMatch.text")) throw new Error('Factual provenance must use immutable core-fact text.');
 if(!verifierSmartSource.includes("f.passageId||`${f.sourceId}-P${f.passageIndex}`")) throw new Error('Verifier diagnostics must expose immutable passage ids.');
 if(!verifierSmartSource.includes("passageId:f.passageId||`${f.sourceId}-P${f.passageIndex}`,text:f.text")) throw new Error('Fact matches must carry immutable fact text for provenance anchoring.');
 if(!verifierSmartSource.includes('data/current-run-article.json')) throw new Error('Smart claim verifier must prefer the current-run article manifest over stale mtime ordering.');
