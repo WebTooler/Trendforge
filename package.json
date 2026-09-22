@@ -53,7 +53,8 @@
     "claims:provenance-anchor": "node scripts/test-claim-provenance-anchor.mjs",
     "claims:passage-provenance": "node tests/test-passage-provenance.mjs",
     "evidence-extraction:test": "node tests/test-evidence-extraction-headline-context.mjs",
-    "evidence-brief:publisher-headline:test": "node tests/test-evidence-brief-publisher-headline-context.mjs"
+    "evidence-brief:publisher-headline:test": "node tests/test-evidence-brief-publisher-headline-context.mjs",
+    "writer-evidence-selection:test": "node tests/test-writer-evidence-passage-selection.mjs"
   },
   "dependencies": {
     "next": "15.5.24",
