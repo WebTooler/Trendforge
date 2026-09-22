@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T19:57:56.311Z",
+  "generatedAt": "2026-09-22T06:08:34.502Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,7 +22,7 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2489,
+      "normalizedLength": 2218,
       "sentenceCount": 16,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
@@ -31,13 +31,12 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "finance.yahoo.com",
-    "247wallst.com"
+    "arstechnica.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 2,
-    "usablePassages": 27,
+    "sourceCount": 1,
+    "usablePassages": 35,
     "primarySourceCount": 0
   }
 }
