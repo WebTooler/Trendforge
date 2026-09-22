@@ -1,0 +1,102 @@
+{
+  "fixtureVersion": 1,
+  "name": "Run 400 Muse claim-verifier baseline",
+  "sourceRun": 35693274596,
+  "sourceArtifact": "trendforge-article-attempt-400",
+  "articleTitle": "Meta’s Muse AI assistant faces zero-day breach that lets apps take full control",
+  "purpose": "Golden regression fixture for the Phase 0 claim-verifier investigation. It records the claims that exposed the current provenance/matching failure without changing verifier behavior.",
+  "observedBaseline": {
+    "writerStatus": "PASS",
+    "claimVerifierVersion": "18.1/v2",
+    "factualClaimsObserved": 14,
+    "verifierUnsupportedObserved": 13,
+    "verifierVerifiedObserved": 1,
+    "manualGenuineUnsupported": 0,
+    "manualSupported": 11,
+    "manualPartialOrSynthesis": 2,
+    "editorialClaims": 3,
+    "repairTriggered": true
+  },
+  "claims": [
+    {
+      "id": "C2",
+      "claim": "The flaw lets any app or terminal command acquire the token that authenticates users to their Muse account.",
+      "expected": "supported",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P9",
+      "support": "The zero-day allows any app or terminal command to gain access to the token that authenticates users to their Muse account."
+    },
+    {
+      "id": "C4",
+      "claim": "One key setting is the endpoint used for transcription.",
+      "expected": "supported",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P12",
+      "support": "It allows processes to change the endpoint where transcription occurs."
+    },
+    {
+      "id": "C5",
+      "claim": "Normally the endpoint points to a Meta-operated server.",
+      "expected": "supported",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P13",
+      "support": "Normally, it’s a server address operated by Meta."
+    },
+    {
+      "id": "C6",
+      "claim": "The vulnerability enables a process to redirect this endpoint to an attacker’s server, effectively hijacking the transcription flow.",
+      "expected": "supported",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P14",
+      "support": "Attackers can exploit this flaw by changing the location to their own endpoint."
+    },
+    {
+      "id": "C7",
+      "claim": "Amazon, on Sunday, began blocking Muse from its site.",
+      "expected": "supported",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P2",
+      "support": "Further raising questions, Amazon on Sunday began blocking Muse from its site."
+    },
+    {
+      "id": "C9",
+      "claim": "Muse is designed to book appointments, fill forms, handle customer service, make purchases, generate images, create documents, and integrate with popular apps.",
+      "expected": "supported",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P3",
+      "support": "The assistant books appointments, fills out forms and handles customer service; it can make purchases, generate images, create documents, and connect with apps and services."
+    },
+    {
+      "id": "C10",
+      "claim": "It can also work with a user’s WhatsApp, email, calendar, and social media accounts.",
+      "expected": "supported",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P3",
+      "support": "The macOS app also works with a user’s WhatsApp, email, calendar, and social media accounts."
+    },
+    {
+      "id": "C15",
+      "claim": "Meta’s claim that Muse is ‘built from the ground up for privacy and security’ is contradicted by a flaw that permits complete local control of the agent.",
+      "expected": "supported-synthesis",
+      "sourceId": "S1",
+      "sourcePassageId": "S1-P1",
+      "support": "Meta promoted Muse as built from the ground up for privacy and security; the zero-day gives locally run apps and terminal commands complete control of the agent."
+    }
+  ],
+  "provenanceFailureSignature": {
+    "factMatchMayBeHigh": true,
+    "selectedPassageMayBeUnrelated": true,
+    "example": {
+      "claimId": "C2",
+      "factMatch": "F9 / high semantic match",
+      "wrongSelectedEvidence": "It’s likely Meta intended for apps working with Muse to control UI settings.",
+      "correctEvidencePassage": "S1-P9"
+    }
+  },
+  "phase0PassCriteria": [
+    "Fixture preserves the Run 400 article/claim failure pattern.",
+    "Each supported claim has an explicit sourceId and immutable passageId.",
+    "The fixture can be used as a regression target without changing production verifier thresholds.",
+    "Current verifier behavior is measured before Phase 1 changes."
+  ]
+}
