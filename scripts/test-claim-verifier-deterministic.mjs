@@ -20,7 +20,10 @@ if(!verifierV2Source.includes("String(manifest.runId||'')!==runId")) throw new E
 if(!verifierV2Source.includes("manifest.articlePath")) throw new Error('Claim verifier must verify the manifest article path.');
 if(!verifierV2Source.includes("status:'skipped'")) throw new Error('Claim verifier must record a safe no-article skip.');
 if(!verifierV2Source.includes("function write(report){fs.writeFileSync(claimPath")) throw new Error('Claim verifier no-article path must define its report writer.');
-if(!verifierSmartSource.includes("const anchoredPassage=provenanceFacts.length>1?provenanceFacts.map(f=>best.sourcePassages?.[f.passageIndex]||f.text).join(' '):(coreFactMatch&&Number.isInteger(coreFactMatch.passageIndex)&&best.sourcePassages?.[coreFactMatch.passageIndex]?String(best.sourcePassages[coreFactMatch.passageIndex]):best.bestPassage);")) throw new Error('Smart claim verifier must anchor matched core facts to their exact source passage.');
+if(!verifierSmartSource.includes("anchorClaimProvenance")) throw new Error('Smart claim verifier must use the immutable claim provenance anchor.');
+if(!verifierSmartSource.includes("const anchored=anchorClaimProvenance({provenanceFacts,coreFactMatch,best});")) throw new Error('Smart claim verifier must anchor matched core facts through immutable provenance.');
+if(verifierSmartSource.includes("best.sourcePassages?.[f.passageIndex]")) throw new Error('Smart claim verifier must not re-index filtered source passages for claim provenance.');
+if(!verifierSmartSource.includes("const anchoredPassage=anchored.text;")) throw new Error('Smart claim verifier must use the anchored immutable fact text.');
 if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
 if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must support explicit multi-fact synthesis provenance.');
 if(!verifierSmartSource.includes('const compatibleFacts=factMatches.filter')) throw new Error('Smart claim verifier must compose multiple core facts for composite factual claims.');
