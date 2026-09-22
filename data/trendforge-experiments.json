@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T17:14:51.846Z",
+  "updatedAt": "2026-09-22T21:38:35.047Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,8 +14,8 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 25,
-    "topics": 374,
+    "runs": 26,
+    "topics": 381,
     "articles": 21
   },
   "learningInput": {
@@ -88,34 +88,6 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OTDdubjMyVGhFZ3lmTlR6QVFvZzFyQlhDOW1NOHRqS0ZoLS1mN0pUaFkzeVUzVlB5MW5hUWtCWmRMSFNkbmR5S0ZWWlMwOE5Mcl9paDhPd2p1S0VHUWZxR244MTEwV0R3S053SUQwRFZua3FPcXl3V3oyUHI?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzM1WjZvTTFNRDBEdTM2VjVsT19sQ25pRWg5Zm4xTDZBdkhKUjljZnVWNGkyQkRsVUhCUTl3bkl5NUh0LTNOenJKTDNpdFVoSnYzVEMtaVRTaV9QMDc0QUhKNUZ5NlpNeGltVGdFdUQ2bEtlekgwS2N5WUNMY2g1dUp2Tl82SzhaTjJ0MUNFaW4tQWJWRWNtODJB?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX0tFTjJvcTh3OUZWdVRNSUJpbWlWU0RhZjRyRDRVR2phT3YtMGRLVlpIZE5fcEszRE81Ynhwak96LTN0a1Vod1kyTTNWRHlfejVrdzNnTWFUUXZNZ0VUQVJmZ2dNSTQ1allWakxqUXRjV3ZGUW92ZGFQcmozTllmWGt6Sm1hYWl1WWtFNUw5UTAtckI0SG96TDdkTEM?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdVZ5dUNUbG83aHBkZ3hZMDFzOGEzMHFjYkN3Vk83WEQzNzFnd25KTmRzbUk4QXRiSmp2RHZBT0xzVVk3Y3RqTllaS1daaGNsMkFveEw3bmRsN1h4UGZ4UGlpUGM1dDU3M215MVp4OUhRZk9VMVM2MnUwaEZaMkJtQkJOV18wT2J6RDR0OXducGRXYTBHRFJaSkhFR3UzTVdpNTNPdzlVd3hwOENVWmwwaGJYNXVmQVk?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNelZQSFp2VXRhTVhnRk9UbmhBaXlRbUZwdnRYYTItbE9XNHpxQnF5UDctdEZ0QXRIN1ZwWHU2d1AzZHlEcFQ2dnVQZk1UdU9Sd00xb2RLY0t4cjFpOV96X081aGM5YUxIM2dYdWZYM0N1bmhrYjRUV3YzV01VVFd1MkpXbGl6OUtOUDFQWtIBkgFBVV95cUxQdkRGUVJZOS1DTWJnb3h4d1FjUnNXV1B3b0pMREptRm90LVh5Z0paYmtGaVFZaFpGMWIzU0ktSDJjVEZaS3dtNEJNbl82QmhFMGNGSjNNMWNtNUlmdGNpMm9IX1otQXJOQ1lJR3lXNlVrSXRDMVJUOVFBZDl3dGVELWw1cUFwbnh4WHdNTWdEbjh0Zw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998762/rivian-r2-climate-impact-carbon-lifecycle-half",
-        "bucket": "control"
-      },
-      {
         "key": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
         "bucket": "control"
       },
@@ -165,39 +137,39 @@
       },
       {
         "key": "https://www.theverge.com/tech/998566/beats-360-headphones-review",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/998914/trump-truth-social-api-lawsuit-san-francisco",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPcU9zcEo3bDU4QUhCS0U0WDNZRDk2bzQ0dVRSWkhKUERXY01Gd2lZYjN6aDRhQUNvc2RuSWRYcG8yWEZMNjdXU1pjbTctU25BazNUUmhhN1NKaTFhMWNXTWlyTHFLZUxySkc5eldDZy11UUhYaWROZlBSWmllZFg5Q2FpSVktczFhWHNJSm1lbEttVlF2SnQwREM4enhqX2VDZEp0aFRQOE5qTW5yelFhR09ZSi1kSDE3MzNFbUhHOHVORElDLXllTHVSSVZtZ1lHbHBCM2szNUgyX1lRNHNTRFJlMW80NkhKOWtKQVY3NkRJNVlqS1R6UjlyZHp2SHhRME8tM3huN0NVWFFjcUc1b2VLNE01eDVBc2xSVkNlTGIyYlU?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY3U3b0FBYThtMmV6WWdpQTM1X2RJM3lmbDhCZi16Wnp0YjZ4OWhVbmZRUEY1MlhNb1l6SzFVZkxQeTl5em5iRDJVb2xRVGtGT1NmNGU3c0ZlTXd4T0hrcHhBUW1UMVdyZHBoQkhPV1lrdUtwWjVxYnlpQU1RM3NLbVhLWm4?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5xTEdGOTZXOGhvbTJ0TWkyb1B6NjF4M1pKZGVXY3F0cy1QcnBMSkR4cEo2RUgxZXdkQ1k2TWExSlRYc0pObXBRY3h4WGc1dk53VEdmSnR6YVFNc3NNbVJjUFJ5c0F2NWVJYUE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWlduTjNYZVg4b1Y1TWdOMHYtSGE0dW5hLWVlV01OTVBzVV9IMWpjM3Y2dDU3RVl1cXB6RElHSEZILVlaZjN5R0dBMmNLN05IUTVJX3dUaFBORzY5Zl9ERWVOSWVQS2Z5akJtYVQ3WFppalRTSzB5blZoRGhPVExjTmVYaDFWd0RZdE5GVk1mRWdmSDhCNVFPRGtkdlZVQ0NlMjNiTA?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/gadgets/998824/apple-magic-keyboard-touch-interstellar-4k-blu-ray-deal-sale",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPcEtndnE5RjBLN2FNTzZPa012bGd6Ymp2MjVnZzM1RWF0SGhmTC15N09JUWcyWFQ1ekZFM0MxVkg3V2QwcHpYQ05XZHFfRlJURVNqNE9KX1g2bjVmWnNpTnNxcFNRRk05eEpKa1JDYllFTVFBdV9wbWVkQmlMRUxjRg?oc=5",
         "bucket": "control"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OTDdubjMyVGhFZ3lmTlR6QVFvZzFyQlhDOW1NOHRqS0ZoLS1mN0pUaFkzeVUzVlB5MW5hUWtCWmRMSFNkbmR5S0ZWWlMwOE5Mcl9paDhPd2p1S0VHUWZxR244MTEwV0R3S053SUQwRFZua3FPcXl3V3oyUHI?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzM1WjZvTTFNRDBEdTM2VjVsT19sQ25pRWg5Zm4xTDZBdkhKUjljZnVWNGkyQkRsVUhCUTl3bkl5NUh0LTNOenJKTDNpdFVoSnYzVEMtaVRTaV9QMDc0QUhKNUZ5NlpNeGltVGdFdUQ2bEtlekgwS2N5WUNMY2g1dUp2Tl82SzhaTjJ0MUNFaW4tQWJWRWNtODJB?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX0tFTjJvcTh3OUZWdVRNSUJpbWlWU0RhZjRyRDRVR2phT3YtMGRLVlpIZE5fcEszRE81Ynhwak96LTN0a1Vod1kyTTNWRHlfejVrdzNnTWFUUXZNZ0VUQVJmZ2dNSTQ1allWakxqUXRjV3ZGUW92ZGFQcmozTllmWGt6Sm1hYWl1WWtFNUw5UTAtckI0SG96TDdkTEM?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdVZ5dUNUbG83aHBkZ3hZMDFzOGEzMHFjYkN3Vk83WEQzNzFnd25KTmRzbUk4QXRiSmp2RHZBT0xzVVk3Y3RqTllaS1daaGNsMkFveEw3bmRsN1h4UGZ4UGlpUGM1dDU3M215MVp4OUhRZk9VMVM2MnUwaEZaMkJtQkJOV18wT2J6RDR0OXducGRXYTBHRFJaSkhFR3UzTVdpNTNPdzlVd3hwOENVWmwwaGJYNXVmQVk?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNelZQSFp2VXRhTVhnRk9UbmhBaXlRbUZwdnRYYTItbE9XNHpxQnF5UDctdEZ0QXRIN1ZwWHU2d1AzZHlEcFQ2dnVQZk1UdU9Sd00xb2RLY0t4cjFpOV96X081aGM5YUxIM2dYdWZYM0N1bmhrYjRUV3YzV01VVFd1MkpXbGl6OUtOUDFQWtIBkgFBVV95cUxQdkRGUVJZOS1DTWJnb3h4d1FjUnNXV1B3b0pMREptRm90LVh5Z0paYmtGaVFZaFpGMWIzU0ktSDJjVEZaS3dtNEJNbl82QmhFMGNGSjNNMWNtNUlmdGNpMm9IX1otQXJOQ1lJR3lXNlVrSXRDMVJUOVFBZDl3dGVELWw1cUFwbnh4WHdNTWdEbjh0Zw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998762/rivian-r2-climate-impact-carbon-lifecycle-half",
-        "bucket": "control"
-      },
-      {
         "key": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
         "bucket": "control"
       },
@@ -247,39 +219,39 @@
       },
       {
         "key": "https://www.theverge.com/tech/998566/beats-360-headphones-review",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/998914/trump-truth-social-api-lawsuit-san-francisco",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPcU9zcEo3bDU4QUhCS0U0WDNZRDk2bzQ0dVRSWkhKUERXY01Gd2lZYjN6aDRhQUNvc2RuSWRYcG8yWEZMNjdXU1pjbTctU25BazNUUmhhN1NKaTFhMWNXTWlyTHFLZUxySkc5eldDZy11UUhYaWROZlBSWmllZFg5Q2FpSVktczFhWHNJSm1lbEttVlF2SnQwREM4enhqX2VDZEp0aFRQOE5qTW5yelFhR09ZSi1kSDE3MzNFbUhHOHVORElDLXllTHVSSVZtZ1lHbHBCM2szNUgyX1lRNHNTRFJlMW80NkhKOWtKQVY3NkRJNVlqS1R6UjlyZHp2SHhRME8tM3huN0NVWFFjcUc1b2VLNE01eDVBc2xSVkNlTGIyYlU?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY3U3b0FBYThtMmV6WWdpQTM1X2RJM3lmbDhCZi16Wnp0YjZ4OWhVbmZRUEY1MlhNb1l6SzFVZkxQeTl5em5iRDJVb2xRVGtGT1NmNGU3c0ZlTXd4T0hrcHhBUW1UMVdyZHBoQkhPV1lrdUtwWjVxYnlpQU1RM3NLbVhLWm4?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5xTEdGOTZXOGhvbTJ0TWkyb1B6NjF4M1pKZGVXY3F0cy1QcnBMSkR4cEo2RUgxZXdkQ1k2TWExSlRYc0pObXBRY3h4WGc1dk53VEdmSnR6YVFNc3NNbVJjUFJ5c0F2NWVJYUE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWlduTjNYZVg4b1Y1TWdOMHYtSGE0dW5hLWVlV01OTVBzVV9IMWpjM3Y2dDU3RVl1cXB6RElHSEZILVlaZjN5R0dBMmNLN05IUTVJX3dUaFBORzY5Zl9ERWVOSWVQS2Z5akJtYVQ3WFppalRTSzB5blZoRGhPVExjTmVYaDFWd0RZdE5GVk1mRWdmSDhCNVFPRGtkdlZVQ0NlMjNiTA?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/gadgets/998824/apple-magic-keyboard-touch-interstellar-4k-blu-ray-deal-sale",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPcEtndnE5RjBLN2FNTzZPa012bGd6Ymp2MjVnZzM1RWF0SGhmTC15N09JUWcyWFQ1ekZFM0MxVkg3V2QwcHpYQ05XZHFfRlJURVNqNE9KX1g2bjVmWnNpTnNxcFNRRk05eEpKa1JDYllFTVFBdV9wbWVkQmlMRUxjRg?oc=5",
         "bucket": "control"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9OTDdubjMyVGhFZ3lmTlR6QVFvZzFyQlhDOW1NOHRqS0ZoLS1mN0pUaFkzeVUzVlB5MW5hUWtCWmRMSFNkbmR5S0ZWWlMwOE5Mcl9paDhPd2p1S0VHUWZxR244MTEwV0R3S053SUQwRFZua3FPcXl3V3oyUHI?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTzM1WjZvTTFNRDBEdTM2VjVsT19sQ25pRWg5Zm4xTDZBdkhKUjljZnVWNGkyQkRsVUhCUTl3bkl5NUh0LTNOenJKTDNpdFVoSnYzVEMtaVRTaV9QMDc0QUhKNUZ5NlpNeGltVGdFdUQ2bEtlekgwS2N5WUNMY2g1dUp2Tl82SzhaTjJ0MUNFaW4tQWJWRWNtODJB?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPX0tFTjJvcTh3OUZWdVRNSUJpbWlWU0RhZjRyRDRVR2phT3YtMGRLVlpIZE5fcEszRE81Ynhwak96LTN0a1Vod1kyTTNWRHlfejVrdzNnTWFUUXZNZ0VUQVJmZ2dNSTQ1allWakxqUXRjV3ZGUW92ZGFQcmozTllmWGt6Sm1hYWl1WWtFNUw5UTAtckI0SG96TDdkTEM?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdVZ5dUNUbG83aHBkZ3hZMDFzOGEzMHFjYkN3Vk83WEQzNzFnd25KTmRzbUk4QXRiSmp2RHZBT0xzVVk3Y3RqTllaS1daaGNsMkFveEw3bmRsN1h4UGZ4UGlpUGM1dDU3M215MVp4OUhRZk9VMVM2MnUwaEZaMkJtQkJOV18wT2J6RDR0OXducGRXYTBHRFJaSkhFR3UzTVdpNTNPdzlVd3hwOENVWmwwaGJYNXVmQVk?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNelZQSFp2VXRhTVhnRk9UbmhBaXlRbUZwdnRYYTItbE9XNHpxQnF5UDctdEZ0QXRIN1ZwWHU2d1AzZHlEcFQ2dnVQZk1UdU9Sd00xb2RLY0t4cjFpOV96X081aGM5YUxIM2dYdWZYM0N1bmhrYjRUV3YzV01VVFd1MkpXbGl6OUtOUDFQWtIBkgFBVV95cUxQdkRGUVJZOS1DTWJnb3h4d1FjUnNXV1B3b0pMREptRm90LVh5Z0paYmtGaVFZaFpGMWIzU0ktSDJjVEZaS3dtNEJNbl82QmhFMGNGSjNNMWNtNUlmdGNpMm9IX1otQXJOQ1lJR3lXNlVrSXRDMVJUOVFBZDl3dGVELWw1cUFwbnh4WHdNTWdEbjh0Zw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPOUgyOXZwdDA0cWZ2dk1tOU0tcHBBZG95TXFOLUwydXpqem4xZDRfYVJvMkhocFVldVp1cXNOX01zd1Z4YnJGZmxQYWFjY044VlQ2Z1V0UlNhUkU1bEVycUlMX3ZOVGhfMEh3SHRkNlVCTzkyc0w1MXR6RXF3bmJaak1tbXRTMEVNejBTWXFPeDVNQXNPWm1TdW5TTkhGakxMUHJWZURrdVoyanhQRENfc1pTdE5YMll4YjRqNzBNWG8?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998762/rivian-r2-climate-impact-carbon-lifecycle-half",
-        "bucket": "control"
-      },
-      {
         "key": "https://www.theverge.com/news/998589/microsoft-xbox-layoffs-ninja-theory-closure",
         "bucket": "control"
       },
@@ -329,6 +301,34 @@
       },
       {
         "key": "https://www.theverge.com/tech/998566/beats-360-headphones-review",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/tech/998914/trump-truth-social-api-lawsuit-san-francisco",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPcU9zcEo3bDU4QUhCS0U0WDNZRDk2bzQ0dVRSWkhKUERXY01Gd2lZYjN6aDRhQUNvc2RuSWRYcG8yWEZMNjdXU1pjbTctU25BazNUUmhhN1NKaTFhMWNXTWlyTHFLZUxySkc5eldDZy11UUhYaWROZlBSWmllZFg5Q2FpSVktczFhWHNJSm1lbEttVlF2SnQwREM4enhqX2VDZEp0aFRQOE5qTW5yelFhR09ZSi1kSDE3MzNFbUhHOHVORElDLXllTHVSSVZtZ1lHbHBCM2szNUgyX1lRNHNTRFJlMW80NkhKOWtKQVY3NkRJNVlqS1R6UjlyZHp2SHhRME8tM3huN0NVWFFjcUc1b2VLNE01eDVBc2xSVkNlTGIyYlU?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQY3U3b0FBYThtMmV6WWdpQTM1X2RJM3lmbDhCZi16Wnp0YjZ4OWhVbmZRUEY1MlhNb1l6SzFVZkxQeTl5em5iRDJVb2xRVGtGT1NmNGU3c0ZlTXd4T0hrcHhBUW1UMVdyZHBoQkhPV1lrdUtwWjVxYnlpQU1RM3NLbVhLWm4?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5xTEdGOTZXOGhvbTJ0TWkyb1B6NjF4M1pKZGVXY3F0cy1QcnBMSkR4cEo2RUgxZXdkQ1k2TWExSlRYc0pObXBRY3h4WGc1dk53VEdmSnR6YVFNc3NNbVJjUFJ5c0F2NWVJYUE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWlduTjNYZVg4b1Y1TWdOMHYtSGE0dW5hLWVlV01OTVBzVV9IMWpjM3Y2dDU3RVl1cXB6RElHSEZILVlaZjN5R0dBMmNLN05IUTVJX3dUaFBORzY5Zl9ERWVOSWVQS2Z5akJtYVQ3WFppalRTSzB5blZoRGhPVExjTmVYaDFWd0RZdE5GVk1mRWdmSDhCNVFPRGtkdlZVQ0NlMjNiTA?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/gadgets/998824/apple-magic-keyboard-touch-interstellar-4k-blu-ray-deal-sale",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPcEtndnE5RjBLN2FNTzZPa012bGd6Ymp2MjVnZzM1RWF0SGhmTC15N09JUWcyWFQ1ekZFM0MxVkg3V2QwcHpYQ05XZHFfRlJURVNqNE9KX1g2bjVmWnNpTnNxcFNRRk05eEpKa1JDYllFTVFBdV9wbWVkQmlMRUxjRg?oc=5",
         "bucket": "control"
       }
     ]
@@ -337,14 +337,14 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 72,
-        "evidencePassRate": 22
+        "evidencePassRate": 23
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -352,14 +352,14 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 72,
-        "evidencePassRate": 22
+        "evidencePassRate": 23
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -367,20 +367,20 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 11,
+        "variant": 9,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 72,
-        "evidencePassRate": 22
+        "evidencePassRate": 23
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-22T12:01:32.460Z"
+    "previousUpdatedAt": "2026-09-22T17:14:51.846Z"
   }
 }
