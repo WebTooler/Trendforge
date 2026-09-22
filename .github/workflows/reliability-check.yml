@@ -78,6 +78,9 @@ jobs:
       - name: Verify evidence brief publisher headline context
         run: npm run evidence-brief:publisher-headline:test
 
+      - name: Verify writer evidence passage selection
+        run: npm run writer-evidence-selection:test
+
       - name: Verify Phase 3 quality canonical evidence
         run: npm run quality-evidence:test
 
