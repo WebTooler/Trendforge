@@ -62,6 +62,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
       id:'C'+(allClaims.length+idx+1),
       sourceId:'S'+(si+1),
       passageIndex:x.rawPassageIndex+1,
+      passageId:'S'+(si+1)+'-P'+(x.rawPassageIndex+1),
       text:x.text,
       supportType:'direct-passage',
       relevanceScore:x.relevance,
@@ -71,9 +72,25 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
     allClaims.push(...claims);
     normalizedSources.push({...source,passages:relevant.map(x=>x.text),body:relevant.map(x=>x.text).join(' '),extraction:{...(source.extraction||{}),rawPassageCount:raw.length,relevantPassageCount:relevant.length,relevanceFiltered:true,relevantPassages:relevant.map((x,i)=>({id:'P'+(i+1),rawPassageIndex:x.rawPassageIndex+1,text:x.text,score:x.relevance}))}});
   }
-  const uniqueClaims=[]; const claimSeen=new Set();
-  for(const claim of allClaims){const key=claim.text.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();if(!key||claimSeen.has(key))continue;claimSeen.add(key);uniqueClaims.push({...claim,id:'C'+(uniqueClaims.length+1)});}
-  const relevantPassageCount=normalizedSources.reduce((n,s)=>n+s.passages.length,0);
+  // Preserve the same claim when independently supported by different publishers.
+  // Deduplication is source-local; cross-source corroboration is evidence, not duplication.
+  const uniqueClaims=[]; const claimSeenBySource=new Set();
+  for(const claim of allClaims){
+    const key=claim.text.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+    const sourceKey=(claim.sourceId||'unknown')+'|'+key;
+    if(!key||claimSeenBySource.has(sourceKey))continue;
+    claimSeenBySource.add(sourceKey);
+    uniqueClaims.push({...claim,id:'C'+(uniqueClaims.length+1)});
+  }
+  // passages are sentence-level evidence units after normalization. Keep the
+  // historical relevantPassageCount metric as an actual raw-passage count so
+  // it cannot exceed rawPassageCount; expose sentence-level depth separately.
+  const relevantSourcePassageCount=normalizedSources.reduce((n,s)=>{
+    const ids=new Set((s.extraction?.relevantPassages||[]).map(p=>p.rawPassageIndex).filter(Number.isInteger));
+    return n+ids.size;
+  },0);
+  const relevantEvidenceUnitCount=normalizedSources.reduce((n,s)=>n+s.passages.length,0);
+  const relevantPassageCount=relevantSourcePassageCount;
   const relevantChars=normalizedSources.reduce((n,s)=>n+s.body.length,0);
   const rawChars=sources.reduce((n,s)=>n+String(s.body||s.passages?.join(' ')||'').length,0);
   const independentSourceCount=normalizedSources.length;
@@ -107,7 +124,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
     unknowns,
     contradictions,
     storyFactMap,
-    metrics:{rawPassageCount,relevantPassageCount,supportedClaimCount:Math.min(48,uniqueClaims.length),independentSourceCount,publisherFamilyCount:publisherFamilies.length,substantiveSourceCount,sourceEvidenceMetrics,relevantEvidenceDensity:density,rawChars,relevantChars,evidenceCapacity},
+    metrics:{rawPassageCount,relevantPassageCount,supportedClaimCount:Math.min(48,uniqueClaims.length),relevantEvidenceUnitCount,independentSourceCount,publisherFamilyCount:publisherFamilies.length,substantiveSourceCount,sourceEvidenceMetrics,relevantEvidenceDensity:density,rawChars,relevantChars,evidenceCapacity},
     sources:normalizedSources
   };
 }
