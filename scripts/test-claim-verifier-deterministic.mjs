@@ -25,6 +25,11 @@ if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-
 if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must support explicit multi-fact synthesis provenance.');
 if(!verifierSmartSource.includes('const compatibleFacts=factMatches.filter')) throw new Error('Smart claim verifier must compose multiple core facts for composite factual claims.');
 if(!verifierSmartSource.includes('provenanceFactMatches')) throw new Error('Smart claim verifier must persist multi-fact provenance for factual claims.');
+if(!fs.readFileSync(new URL('./editorial-evidence-brief.mjs',import.meta.url),'utf8').includes('passageId:`S${si+1}-P${x.rawPassageIndex+1}`')) throw new Error('Evidence brief must persist immutable source passage ids.');
+if(!fs.readFileSync(new URL('./story-fact-map.mjs',import.meta.url),'utf8').includes('passageId:claim.passageId||`${claim.sourceId}-P${claim.passageIndex}`')) throw new Error('Story Fact Map must persist immutable passage ids.');
+if(!verifierSmartSource.includes("passageText:f.text")) throw new Error('Synthesis provenance must use immutable fact text, not filtered passage indexes.');
+if(!verifierSmartSource.includes("coreFactMatch?.text||best.bestPassage")) throw new Error('Factual provenance must use immutable fact text, not filtered passage indexes.');
+if(!verifierSmartSource.includes("f.passageId||`${f.sourceId}-P${f.passageIndex}`")) throw new Error('Verifier diagnostics must expose immutable passage ids.');
 if(!verifierSmartSource.includes('data/current-run-article.json')) throw new Error('Smart claim verifier must prefer the current-run article manifest over stale mtime ordering.');
 if(!verifierSmartSource.includes("synthesisRequiresTwoCoreFacts:true")) throw new Error('Smart claim verifier must require two or more core facts for synthesis.');
 if(!verifierV2Source.includes("scripts/verify-article-claims-smart.mjs")) throw new Error('Canonical claim verifier must invoke the smart verifier.');
