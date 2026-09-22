@@ -40,7 +40,9 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
   }).filter(x=>x.text);
   const dedup=[];
   for(const fact of facts){
-    const duplicate=dedup.find(x=>phraseOverlap(x.text,fact.text)>=2);
+    // The same factual statement appearing in two publishers is corroboration.
+    // Only collapse near-duplicates within the same source.
+    const duplicate=dedup.find(x=>x.sourceId===fact.sourceId&&phraseOverlap(x.text,fact.text)>=2);
     if(duplicate){
       if(fact.core&&!duplicate.core)Object.assign(duplicate,{core:true});
       continue;
