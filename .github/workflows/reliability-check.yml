@@ -66,6 +66,9 @@ jobs:
       - name: Verify Phase 3 canonical claim verifier
         run: npm run claims:deterministic
 
+      - name: Verify immutable claim provenance anchor
+        run: npm run claims:provenance-anchor
+
       - name: Verify Phase 3 quality canonical evidence
         run: npm run quality-evidence:test
 
