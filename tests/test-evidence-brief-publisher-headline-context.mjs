@@ -13,11 +13,11 @@ const sources=[{
   title:'Bitcoin opens at $86,597.82 as Ethereum starts at $2,775.96',
   passages:[
     'Bitcoin opened at $86,597.82 on Tuesday, while Ethereum started the session at $2,775.96, giving traders a clear reference point for the opening of the latest market session.',
-    'Market participants continued to watch bitcoin trading activity as investors assessed the latest move, while analysts tracked whether the opening prices would hold through the session.',
-    'The cryptocurrency market remained active during the session, with bitcoin and ethereum among the most watched assets as investors compared the latest prices with recent trading levels.',
-    'Analysts said the opening prices reflected the latest market conditions and continued to monitor trading activity as the session developed.'
+    'Bitcoin investors monitored exchange liquidity and order flow as the morning session developed.',
+    'Ethereum trading volumes drew attention from market participants after the opening print.',
+    'Analysts tracked broader cryptocurrency activity while comparing the latest session with recent trading levels.'
   ],
-  body:'Bitcoin opened at $86,597.82 on Tuesday, while Ethereum started the session at $2,775.96.'
+  body:'Bitcoin opened at $86,597.82 on Tuesday, while Ethereum started the session at $2,775.96. Bitcoin investors monitored exchange liquidity and order flow as the morning session developed.'
 }];
 
 const brief=buildEditorialEvidenceBrief({candidate,sources});
