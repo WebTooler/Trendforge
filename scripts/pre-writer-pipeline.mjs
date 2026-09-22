@@ -166,7 +166,7 @@ for(const record of candidates){
     if(!fam||seenFamilies.has(fam))continue;
     const page=await fetchPage(url);
     if(!page)continue;
-    const evidence=extractEvidenceFromHtml(page.html,record.title);
+    const evidence=extractEvidenceFromHtml(page.html,record.title,`${source.title||''} ${record.description||''}`);
     if(!evidence.body||evidence.selectedPassageCount<3)continue;
 
     seenFamilies.add(fam);
