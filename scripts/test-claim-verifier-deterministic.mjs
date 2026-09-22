@@ -31,6 +31,7 @@ if(!fs.readFileSync(new URL('./story-fact-map.mjs',import.meta.url),'utf8').incl
 if(!verifierSmartSource.includes("passageText:f.text")) throw new Error('Synthesis provenance must use immutable fact text, not filtered passage indexes.');
 if(!verifierSmartSource.includes("coreFactMatch?.text||best.bestPassage")) throw new Error('Factual provenance must use immutable fact text, not filtered passage indexes.');
 if(!verifierSmartSource.includes("f.passageId||`${f.sourceId}-P${f.passageIndex}`")) throw new Error('Verifier diagnostics must expose immutable passage ids.');
+if(!verifierSmartSource.includes("passageId:f.passageId||`${f.sourceId}-P${f.passageIndex}`,text:f.text")) throw new Error('Fact matches must carry immutable fact text for provenance anchoring.');
 if(!verifierSmartSource.includes('data/current-run-article.json')) throw new Error('Smart claim verifier must prefer the current-run article manifest over stale mtime ordering.');
 if(!verifierSmartSource.includes("synthesisRequiresTwoCoreFacts:true")) throw new Error('Smart claim verifier must require two or more core facts for synthesis.');
 if(!verifierV2Source.includes("scripts/verify-article-claims-smart.mjs")) throw new Error('Canonical claim verifier must invoke the smart verifier.');
