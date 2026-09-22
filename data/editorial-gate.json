@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T06:08:34.502Z",
+  "generatedAt": "2026-09-22T14:37:17.212Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2218,
-      "sentenceCount": 16,
+      "normalizedLength": 1883,
+      "sentenceCount": 13,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,12 +31,13 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "arstechnica.com"
+    "finance.yahoo.com",
+    "decrypt.co"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 1,
-    "usablePassages": 35,
+    "sourceCount": 2,
+    "usablePassages": 23,
     "primarySourceCount": 0
   }
 }
