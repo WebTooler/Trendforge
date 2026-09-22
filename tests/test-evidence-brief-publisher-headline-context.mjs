@@ -12,13 +12,12 @@ const sources=[{
   publisherFamily:'example.com',
   title:'Bitcoin opens at $86,597.82 as Ethereum starts at $2,775.96',
   passages:[
-    'Bitcoin opened at $86,597.82 on Tuesday, while Ethereum started the session at $2,775.96. The opening levels gave traders a concrete reference point for the latest market session and established the prices being tracked in this report.',
-    'Bitcoin investors monitored exchange liquidity and order flow as the morning session developed, while traders compared the opening level with recent sessions, watched changes in market depth, and tracked activity across major cryptocurrency exchanges during the session.',
-    'Ethereum trading volumes drew attention from market participants after the opening print, with investors tracking activity across exchanges, comparing the move with recent cryptocurrency sessions, and watching whether trading conditions changed as the market developed through the morning.',
-    'Analysts tracked broader cryptocurrency activity while comparing the latest session with recent trading levels, including changes in bitcoin liquidity, ethereum volumes, and the behavior of other major digital assets as traders assessed the opening market conditions.',
-    'The bitcoin and ethereum opening prices remained central reference points for the session, with market participants using the reported levels to compare later trading activity, exchange liquidity, and cryptocurrency market conditions.'
+    'Bitcoin opened at $86,597.82 on Tuesday while Ethereum started at $2,775.96, establishing the two reported reference prices used by traders to describe the opening conditions and giving readers concrete figures for the latest cryptocurrency update.',
+    'Bitcoin order-flow activity was closely watched during the morning as exchange liquidity changed across venues, while Ethereum liquidity indicators gave participants another measure for assessing how trading conditions developed after the published opening figures.',
+    'Bitcoin derivatives desks tracked positioning and funding signals separately from the cash market, while Ethereum spot activity provided another stream of observable information that traders used when comparing cryptocurrency conditions during the session.',
+    'Bitcoin exchange balances and reported transaction activity supplied additional market context, while Ethereum volume readings helped participants assess whether later trading activity was consistent with the conditions described around the published opening prices.'
   ],
-  body:'Bitcoin opened at $86,597.82 on Tuesday, while Ethereum started the session at $2,775.96. The opening levels gave traders a concrete reference point for the latest market session and established the prices being tracked in this report.'
+  body:'Bitcoin opened at $86,597.82 on Tuesday while Ethereum started at $2,775.96, establishing the two reported reference prices used by traders to describe the opening conditions.'
 }];
 
 const brief=buildEditorialEvidenceBrief({candidate,sources});
