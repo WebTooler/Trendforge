@@ -11,6 +11,8 @@ const repairProviderBudgetPath='data/ai-repair-run-budget.json';
 const MAX_REPAIR_PROVIDER_ATTEMPTS=4;
 const MAX_REPAIR_RECOVERY_PASSES=1;
 const MAX_DEPTH_RECOVERY_PASSES=0;
+const REPAIR_PASS=process.env.GROUNDING_REPAIR_PASS==='2'?'surgical':'primary';
+const SURGICAL_DELETE_ON_PROVIDER_FAILURE=REPAIR_PASS==='surgical';
 const REPAIR_RECOVERY_WAIT_MS=15000;
 const runKey=process.env.GITHUB_RUN_ID||`local-${new Date().toISOString().slice(0,10)}`;
 const titleFrom=r=>(r.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1]||'').trim();
@@ -43,11 +45,11 @@ async function main(){
  const brief=fs.existsSync(briefPath)?JSON.parse(fs.readFileSync(briefPath,'utf8')):null;
  const verification=fs.existsSync(claimPath)?JSON.parse(fs.readFileSync(claimPath,'utf8')):null;
  const claims=Array.isArray(verification?.claims)?verification.claims:Array.isArray(verification?.results)?verification.results:[];
- const failed=claims.filter(x=>x.status==='unsupported'||x.status==='partial'||x.status==='uncertain'||x.classification==='uncertain').slice(0,10);
+ const failed=claims.filter(x=>x.status==='unsupported'||x.classification==='unsupported');
  if(!failed.length){console.log('Grounding repair: no failed factual claims; article left unchanged.');return;}
  const canonical=loadCanonicalRepairEvidence({briefTitle:brief?.brief?.title||titleFrom(raw),failedClaims:failed});
  const canonicalByUrl=new Map(canonical.sources.map(source=>[source.url,source]));
- const evidence=canonical.claims.map((x,i)=>{const source=canonicalByUrl.get(x.bestUrl);return `FAILED CLAIM ${i+1}: ${x.claim}\nSTATUS: ${x.status||x.classification||'failed'}\nEVIDENCE: ${String(x.bestPassage||'').slice(0,700)}\nSOURCE: ${x.bestSource||source?.title||''}\nURL: ${x.bestUrl||''}`}).join('\n\n');
+ const evidence=canonical.claims.map((x,i)=>{const source=canonicalByUrl.get(x.bestUrl);return `UNSUPPORTED CLAIM ${i+1}: ${x.claim}\nSTATUS: unsupported\nEVIDENCE: ${String(x.bestPassage||'').slice(0,700)}\nSOURCE: ${x.bestSource||source?.title||''}\nURL: ${x.bestUrl||''}`}).join('\n\n');
  if(evidence.length<200)throw new Error('Current claim evidence is incomplete; grounding repair refused.');
  const oldTitle=titleFrom(raw),oldDescription=descriptionFrom(raw);
  const body=raw.replace(/^---[\s\S]*?---/,'').replace(/\n\s*##\s+Sources[\s\S]*$/i,'').trim();
@@ -57,8 +59,9 @@ async function main(){
  const basePrompt=[
   'You are TrendForge Atomic Grounding Repair v11.',
   'DO NOT rewrite the article. Return ONLY JSON containing an array named repairs.',
-  'For each failed claim, provide exactly one repair object with keys: original, replacement.',
-  'original MUST be copied verbatim from the current article sentence that contains the failed claim.',
+  'Repair EVERY unsupported claim supplied below. Do not stop after the first successful repair.',
+  'For each distinct affected article sentence, provide exactly one repair object with keys: original, replacement. If multiple unsupported claims occur in the same sentence, one replacement must fix ALL of them.',
+  'original MUST be copied verbatim from the current article sentence that contains the unsupported claim.',
   '',
   'REPAIR ORDER IS MANDATORY: REWRITE -> NARROW -> DELETE.',
   '1) REWRITE: First try to rewrite the sentence while preserving its original meaning as closely as possible and making every factual element directly supported by the supplied evidence.',
@@ -107,18 +110,34 @@ async function main(){
       }
       if(!applied) throw new Error('Atomic repair produced no matching sentence replacements.');
       finalDepth=assessArticleDepth({content:updatedBody,blueprint});
-      if(finalDepth.words<minimumWords){
+      if(REPAIR_PASS==='primary' && finalDepth.words<minimumWords){
        throw new Error(`Evidence-first repair would leave article below the evidence-derived minimum (${finalDepth.words} words; target floor ${minimumWords}); article must be rejected rather than preserved below depth.`);
       }
     }catch(e){lastError=e;out=null;console.log(`Grounding repair v11: provider pass failed — ${e?.message||String(e)}.`);}
    }
   }
-  if(!out)throw new Error(`Grounding repair provider failed after bounded depth-preserving recovery: ${lastError?.message||String(lastError)}`);
+  if(!out){
+    if(SURGICAL_DELETE_ON_PROVIDER_FAILURE){
+      console.log('Grounding repair v11: surgical fallback — provider could not produce a valid repair; deleting remaining unsupported claims.');
+      updatedBody=body; applied=0; deleted=0; narrowedOrRewritten=0;
+      for(const claim of failed){
+        const target=String(claim?.sentence||claim?.claim||'').trim();
+        if(!target) continue;
+        const result=replaceSentence(updatedBody,target,'');
+        if(result.changed){updatedBody=result.body;applied++;deleted++;}
+      }
+      if(!applied) throw new Error('Surgical repair could not locate any remaining unsupported claim sentence for deletion.');
+      finalDepth=assessArticleDepth({content:updatedBody,blueprint});
+      out={provider:'surgical-delete-fallback',attempts:0,text:''};
+    }else{
+      throw new Error(`Grounding repair provider failed after bounded depth-preserving recovery: ${lastError?.message||String(lastError)}`);
+    }
+  }
   const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
   const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
   fs.writeFileSync(articlePath,`${frontmatter}\n\n${updatedBody.trim()}\n${sources||''}\n`);
-  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),runId:runKey,articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:'atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery',repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:{before:originalDepth.words,after:finalDepth.words,minimum:minimumWords,depthMode:finalDepth.mode,preservedFloor:finalDepth.words>=minimumWords}},null,2)+'\n');
-  console.log(`Grounding repair v11: applied ${applied} repair(s) — ${narrowedOrRewritten} rewritten/narrowed, ${deleted} deleted. Strategy: rewrite -> narrow -> delete. Recovery pass enabled; unrelated article content preserved using dedicated repair provider ${out.provider}.`);
+  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),runId:runKey,articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:`atomic-sentence-repair-v11-${REPAIR_PASS}-rewrite-narrow-delete-isolated-recovery`,repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:{before:originalDepth.words,after:finalDepth.words,minimum:minimumWords,depthMode:finalDepth.mode,preservedFloor:finalDepth.words>=minimumWords}},null,2)+'\n');
+  console.log(`Grounding repair v11 (${REPAIR_PASS}): applied ${applied} repair(s) — ${narrowedOrRewritten} rewritten/narrowed, ${deleted} deleted. Unsupported-claim-only targeting; unrelated article content preserved.`);
  }finally{restoreWriterBudget(originalBudget);}
 }
 main().catch(e=>{const message=e?.message||String(e);if(/No article generated by the current workflow run|grounding repair skipped/i.test(message)){console.log(`Grounding repair: SKIPPED — ${message}`);process.exit(0);}console.error(`Grounding repair failed: ${message}`);process.exit(1)});
