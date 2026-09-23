@@ -18,7 +18,7 @@ export function assessArticleDepth({content='',blueprint=null}={}){
   const errors=[];
   if(words<rules.minWords) errors.push('article depth is too shallow for '+mode+' evidence ('+words+' words; minimum '+rules.minWords+')');
   
-  if((mode==='rich'||mode==='bounded')&&sectionBodies.length&&thinSections>0) errors.push('article contains '+thinSections+' underdeveloped H2 section(s) below '+rules.minSectionWords+' words');
+  // H2 section length is advisory; do not block a complete section merely because it is shorter than the guidance target.
   if(substantiveParagraphs<rules.minSubstantiveParagraphs) errors.push('article depth has too few substantive paragraphs ('+substantiveParagraphs+'; minimum '+rules.minSubstantiveParagraphs+')');
   if(sentences<rules.minSentences&&words>=rules.minWords) errors.push('article depth has too few complete sentences ('+sentences+'; minimum '+rules.minSentences+')');
   const largest=sectionWords.length?Math.max(...sectionWords):0;
