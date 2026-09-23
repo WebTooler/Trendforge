@@ -1,5 +1,9 @@
 name: TrendForge Reliability Check
 
+permissions:
+  contents: read
+  actions: read
+
 # Phase 1: deterministic build/static verification.
 # The production AI pipeline remains manually locked in publish.yml.
 
@@ -67,6 +71,8 @@ jobs:
         run: npm run claims:deterministic
 
       - name: Verify Run 405 claim calibration
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run claims:run405-calibration
 
       - name: Verify immutable claim provenance anchor
