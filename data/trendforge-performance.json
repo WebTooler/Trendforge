@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T12:04:18.825Z",
+  "updatedAt": "2026-09-23T17:26:32.614Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,26 +12,26 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 28,
-    "topicCount": 408,
+    "runCount": 29,
+    "topicCount": 421,
     "articleCount": 21,
     "latestEditorialScore": 75,
     "latestClaimConfidence": 0,
-    "latestEvidencePassRate": 33,
-    "latestEvidenceBlockRate": 8,
-    "singleSourceReadyRate": 35,
+    "latestEvidencePassRate": 34,
+    "latestEvidenceBlockRate": 10,
+    "singleSourceReadyRate": 33,
     "publishCandidateRate": 0
   },
   "changes": {
     "editorialScore": 0,
-    "claimConfidence": -71,
-    "evidencePassRate": -8
+    "claimConfidence": 0,
+    "evidencePassRate": 1
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 196,
+      "failures": 203,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -46,43 +46,43 @@
     },
     "Cohere": {
       "successRate": 15,
-      "successes": 231,
-      "failures": 1292,
+      "successes": 243,
+      "failures": 1366,
       "cooldownRuns": 0,
       "latestStatus": 200,
-      "latestClass": "error"
+      "latestClass": "transient"
     },
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 702,
+      "failures": 744,
       "cooldownRuns": 4,
-      "latestStatus": 429,
-      "latestClass": "quota"
+      "latestStatus": 503,
+      "latestClass": "server"
     },
     "Groq": {
       "successRate": 37,
-      "successes": 771,
-      "failures": 1322,
+      "successes": 827,
+      "failures": 1396,
       "cooldownRuns": 2,
-      "latestStatus": 200,
-      "latestClass": "success"
+      "latestStatus": 429,
+      "latestClass": "rate_limit"
     },
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 84,
+      "failures": 87,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
       "successRate": 4,
-      "successes": 45,
-      "failures": 974,
+      "successes": 47,
+      "failures": 1031,
       "cooldownRuns": 0,
       "latestStatus": 200,
-      "latestClass": "error"
+      "latestClass": "transient"
     }
   },
   "categories": {
@@ -114,16 +114,16 @@
       }
     },
     "Digital Life": {
-      "topicSamples": 197,
+      "topicSamples": 209,
       "averageScore": 68,
       "averageConfidence": 85,
       "evidenceLevels": {
-        "none": 95,
-        "single-source-verified": 53,
-        "strong": 49
+        "none": 101,
+        "single-source-verified": 54,
+        "strong": 54
       },
       "decisions": {
-        "review": 174,
+        "review": 186,
         "publish_candidate": 1,
         "hold": 22
       }
@@ -152,16 +152,16 @@
       }
     },
     "Product Launches": {
-      "topicSamples": 42,
+      "topicSamples": 43,
       "averageScore": 60,
       "averageConfidence": 65,
       "evidenceLevels": {
-        "none": 33,
+        "none": 34,
         "single-source-verified": 9
       },
       "decisions": {
         "hold": 35,
-        "review": 7
+        "review": 8
       }
     },
     "Technology": {
@@ -226,13 +226,13 @@
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by -71 points versus the previous run."
+      "detail": "Average claim confidence changed by +0 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by -8 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by +1 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
@@ -247,7 +247,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 28,
+    "memoryRuns": 29,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
