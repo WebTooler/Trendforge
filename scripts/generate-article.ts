@@ -54,8 +54,17 @@ async function main(){
   if(fs.existsSync(outputDir))for(const file of fs.readdirSync(outputDir).filter(n=>n.endsWith('.md'))){const raw=fs.readFileSync(`${outputDir}/${file}`,'utf8');const title=raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1];if(title)existingTitles.add(title.toLowerCase().trim());const category=raw.match(/^category:\s*"([\s\S]*?)"\s*$/m)?.[1]||'';const body=raw.replace(/^---[\s\S]*?---/,'').slice(0,6500);existingTopics.push(`${category} ${title??''} ${body}`);}
   const verification=loadVerification();
   const eligible=trends.filter(i=>i.eligible&&!existingTitles.has(i.title.toLowerCase().trim())&&!existingTopicMatches(i,existingTopics)).sort((a,b)=>(b.score??0)-(a.score??0));
+  // Adaptive V2 passes the exact pre-writer candidate link. Never silently
+  // replace it with the first independently eligible trend: that would break
+  // the candidate -> authoritative evidence-pack handoff.
+  const requestedLink=String(process.env.TRENDFORGE_WRITER_CANDIDATE_LINK||'').trim();
   const findRelated=(candidate:Trend)=>{const pa=publisherName(candidate);return trends.filter(item=>{if(item===candidate||item.link===candidate.link||existingTopicMatches(item,existingTopics))return false;const pb=publisherName(item);if(!isCrediblePublisher(pb)||pa.toLowerCase()===pb.toLowerCase())return false;const evidence=verifiedEvidence(item,verification);return evidence.sources.length>=2&&relatedEnough(candidate,item);}).sort((a,b)=>(b.score??0)-(a.score??0))[0];};
-  const trend=eligible.find(candidate=>{const evidence=verifiedEvidence(candidate,verification);return evidence.sources.length>=1;});
+  const requestedCandidate=requestedLink?eligible.find(candidate=>candidate.link===requestedLink):null;
+  if(requestedLink&&!requestedCandidate){
+    console.log(`Requested pre-writer candidate not eligible/available in scored trends; publication blocked: ${requestedLink}`);
+    process.exit(0);
+  }
+  const trend=requestedCandidate||eligible.find(candidate=>{const evidence=verifiedEvidence(candidate,verification);return evidence.sources.length>=1;});
   if(!trend){console.log('No new eligible trend with at least one independent reachable verified publisher evidence source and semantic uniqueness found.');process.exit(0);}
   const category=classifyArticleCategory(trend);
   process.env.TRENDFORGE_WRITER_CATEGORY=category;
