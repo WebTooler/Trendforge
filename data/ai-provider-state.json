@@ -3,9 +3,9 @@
   "providers": {
     "Groq": {
       "failures": 75,
-      "quotaBlockedUntil": 1790190811835,
+      "quotaBlockedUntil": 1790191289440,
       "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 3300, Requested 5615. Please try again in 6.8625s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
+      "lastError": "429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m2bey814e17a788bb067zxjk` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 4078, Requested 5668. Please try again in 13.095s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n",
       "lastClass": "rate_limit",
       "successes": 56,
       "lastSuccessAt": "2026-09-22T06:09:15.686Z",
@@ -192,31 +192,31 @@
           }
         },
         {
-          "at": 1790190755468,
-          "ok": false,
-          "class": "rate_limit",
-          "status": 429
-        },
-        {
-          "at": 1790190781228,
+          "at": 1790191224808,
           "ok": false,
           "class": "request",
           "status": 400
         },
         {
-          "at": 1790190781902,
+          "at": 1790191235986,
           "ok": false,
           "class": "rate_limit",
           "status": 429
         },
         {
-          "at": 1790190795626,
+          "at": 1790191254541,
           "ok": false,
           "class": "rate_limit",
           "status": 429
         },
         {
-          "at": 1790190803835,
+          "at": 1790191265044,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
+        },
+        {
+          "at": 1790191281440,
           "ok": false,
           "class": "rate_limit",
           "status": 429
@@ -238,7 +238,7 @@
     },
     "Gemini": {
       "failures": 42,
-      "quotaBlockedUntil": 1790190903684,
+      "quotaBlockedUntil": 1790191378955,
       "lastStatus": 503,
       "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
       "lastClass": "server",
@@ -310,7 +310,7 @@
           "status": 429
         },
         {
-          "at": 1790190783684,
+          "at": 1790191258955,
           "ok": false,
           "class": "server",
           "status": 503
@@ -333,9 +333,9 @@
     },
     "OpenRouter": {
       "failures": 57,
-      "quotaBlockedUntil": 1790190808983,
+      "quotaBlockedUntil": 1790191283981,
       "lastStatus": 200,
-      "lastError": "Empty model response",
+      "lastError": "Invalid structured output",
       "lastClass": "transient",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z",
@@ -425,7 +425,7 @@
           "status": 200
         },
         {
-          "at": 1790190778983,
+          "at": 1790191253981,
           "ok": false,
           "class": "transient",
           "status": 200
@@ -434,9 +434,9 @@
     },
     "Cohere": {
       "failures": 74,
-      "quotaBlockedUntil": 1790190824903,
+      "quotaBlockedUntil": 1790191310885,
       "lastStatus": 200,
-      "lastError": "Invalid structured output",
+      "lastError": "Empty model response",
       "lastClass": "transient",
       "successes": 12,
       "lastSuccessAt": "2026-09-20T11:24:33.823Z",
@@ -550,13 +550,13 @@
           "status": 200
         },
         {
-          "at": 1790190754782,
+          "at": 1790191235451,
           "ok": false,
           "class": "transient",
           "status": 200
         },
         {
-          "at": 1790190794903,
+          "at": 1790191280885,
           "ok": false,
           "class": "transient",
           "status": 200
@@ -565,5 +565,5 @@
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-23T19:13:23.835Z"
+  "updatedAt": "2026-09-23T19:21:21.440Z"
 }
