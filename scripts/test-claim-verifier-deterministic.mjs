@@ -24,7 +24,9 @@ if(!verifierSmartSource.includes("anchorClaimProvenance")) throw new Error('Smar
 if(!verifierSmartSource.includes('anchorClaimProvenance({provenanceFacts,coreFactMatch,directFactExact,best})')) throw new Error('Smart claim verifier must anchor matched core facts through immutable provenance.');
 if(verifierSmartSource.includes("best.sourcePassages?.[f.passageIndex]")) throw new Error('Smart claim verifier must not re-index filtered source passages for claim provenance.');
 if(!verifierSmartSource.includes('const anchoredPassage=anchored.text;')) throw new Error('Smart claim verifier must use the anchored immutable fact text.');
-if(!verifierSmartSource.includes("matchingMode:multiFactSupported?'fact-map-multi-fact-anchored':directExact?'direct-exact-evidence':coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
+if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage':'semantic-context-evidence-pack'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
+if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must record multi-fact synthesis provenance.');
+if(!verifierSmartSource.includes("directFactExact:!!directFactExact")) throw new Error('Smart claim verifier must expose direct exact fact matching.');
 if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must support explicit multi-fact synthesis provenance.');
 if(!verifierSmartSource.includes('const compatibleFacts=factMatches.filter')) throw new Error('Smart claim verifier must compose multiple core facts for composite factual claims.');
 if(!verifierSmartSource.includes('const factCoverage=compatibleFacts.length')) throw new Error('Smart claim verifier must aggregate cross-source compatible fact coverage before downgrading composite claims.');
