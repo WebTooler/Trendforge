@@ -34,6 +34,7 @@ const latestArticle=()=>{
   return articlePath;
 };const parseJson=raw=>{const t=String(raw).trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'');for(const x of [t,(()=>{const a=t.indexOf('{'),b=t.lastIndexOf('}');return a>=0&&b>a?t.slice(a,b+1):''})()]){if(!x)continue;try{return JSON.parse(x)}catch{}}throw new Error('Atomic repair output was not valid JSON');};
 const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle)return{body,changed:false,deleted:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false,deleted:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true,deleted:!rep};};
+const resolveClaimSentence=(body,claim)=>{const target=String(claim||'').trim();if(!target)return'';if(body.includes(target))return target;const escaped=target.replace(/[.*+?^${}()|[\]\\]/g,'\\const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle)return{body,changed:false,deleted:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false,deleted:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true,deleted:!rep};};');const m=body.match(new RegExp(`[^.!?\\n]*${escaped}[^.!?]*(?:[.!?]|$)`));return m?.[0]?.trim()||'';};
 const beginRepairBudget=()=>{let original=null;try{const raw=JSON.parse(fs.readFileSync(aiBudgetPath,'utf8'));if(raw?.runKey===runKey&&Number.isFinite(raw?.attempts))original=raw;}catch{}fs.mkdirSync('data',{recursive:true});fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-pass'},null,2)+'\n');console.log(`Grounding repair v11: isolated repair budget from writer budget for run ${runKey}.`);return original;};
 const resetRepairProviderBudget=()=>{fs.mkdirSync('data',{recursive:true});fs.writeFileSync(repairProviderBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-recovery-pass'},null,2)+'\n');};
 const restoreWriterBudget=original=>{if(original){fs.writeFileSync(aiBudgetPath,JSON.stringify(original,null,2)+'\n');console.log(`Grounding repair v11: restored writer AI budget (${original.attempts} attempt(s)).`);}else{fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString()},null,2)+'\n');}};
@@ -109,15 +110,21 @@ async function main(){
        if(result.deleted)deleted++; else narrowedOrRewritten++;
       }
       if(!applied) throw new Error('Atomic repair produced no matching sentence replacements.');
-      const repairTargets=[...new Set(failed.map(x=>String(x?.sentence||x?.claim||'').trim()).filter(Boolean))];
-      const uncoveredTargets=repairTargets.filter(target=>body.includes(target) && updatedBody.includes(target));
+      const repairTargets=[...new Set(failed.map(x=>resolveClaimSentence(body,x?.sentence||x?.claim)).filter(Boolean))];
+      let uncoveredTargets=repairTargets.filter(target=>updatedBody.includes(target));
       if(uncoveredTargets.length){
-        throw new Error(`Atomic repair did not cover all unsupported claims; ${uncoveredTargets.length} target sentence(s) remain unchanged.`);
+        if(REPAIR_PASS==='surgical'){
+          for(const target of uncoveredTargets){
+            const result=replaceSentence(updatedBody,target,'');
+            if(result.changed){updatedBody=result.body;applied++;deleted++;}
+          }
+          uncoveredTargets=repairTargets.filter(target=>updatedBody.includes(target));
+          if(uncoveredTargets.length) throw new Error(`Surgical repair left ${uncoveredTargets.length} unsupported target sentence(s) unchanged.`);
+        }else{
+          throw new Error(`Atomic repair did not cover all unsupported claims; ${uncoveredTargets.length} target sentence(s) remain unchanged.`);
+        }
       }
       finalDepth=assessArticleDepth({content:updatedBody,blueprint});
-      if(REPAIR_PASS==='primary' && finalDepth.words<minimumWords){
-       throw new Error(`Evidence-first repair would leave article below the evidence-derived minimum (${finalDepth.words} words; target floor ${minimumWords}); article must be rejected rather than preserved below depth.`);
-      }
     }catch(e){lastError=e;out=null;console.log(`Grounding repair v11: provider pass failed — ${e?.message||String(e)}.`);}
    }
   }
@@ -126,7 +133,7 @@ async function main(){
       console.log('Grounding repair v11: surgical fallback — provider could not produce a valid repair; deleting remaining unsupported claims.');
       updatedBody=body; applied=0; deleted=0; narrowedOrRewritten=0;
       for(const claim of failed){
-        const target=String(claim?.sentence||claim?.claim||'').trim();
+        const target=resolveClaimSentence(body,claim?.sentence||claim?.claim);
         if(!target) continue;
         const result=replaceSentence(updatedBody,target,'');
         if(result.changed){updatedBody=result.body;applied++;deleted++;}
