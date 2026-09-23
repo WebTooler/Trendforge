@@ -60,7 +60,7 @@ const sentenceSimilarity=(a='',b='')=>{const A=sentenceTokens(a),B=sentenceToken
 const factTokens=(text='')=>sentenceTokens(text);
 const factNumbers=(text='')=>new Set((String(text).match(/\b\d+(?:[.,]\d+)?(?:%|percent|million|billion|thousand|bn|mn|k)?\b/gi)||[]).map(x=>x.toLowerCase().replace(/,/g,'')));
 const factPhraseOverlap=(a='',b='')=>{const grams=x=>{const w=String(x).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(Boolean);const s=new Set();for(let i=0;i<w.length-1;i++)s.add(w[i]+' '+w[i+1]);return s};const A=grams(a),B=grams(b);return[...A].filter(x=>B.has(x)).length;};
-const mapMaterialSentencesToFacts=(sentences=[],factMap=null)=>{
+export const mapMaterialSentencesToFacts=(sentences=[],factMap=null)=>{
  const facts=Array.isArray(factMap?.coreFacts)?factMap.coreFacts.filter(f=>f?.factId&&f?.text):[];
  const mappedFactIds=new Set(),unmapped=[];
  const tokenFactFrequency=new Map();
