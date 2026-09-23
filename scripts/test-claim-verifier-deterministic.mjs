@@ -24,7 +24,9 @@ if(!verifierSmartSource.includes("anchorClaimProvenance")) throw new Error('Smar
 if(!verifierSmartSource.includes('anchorClaimProvenance({provenanceFacts,coreFactMatch,directFactExact,best})')) throw new Error('Smart claim verifier must anchor matched core facts through immutable provenance.');
 if(verifierSmartSource.includes("best.sourcePassages?.[f.passageIndex]")) throw new Error('Smart claim verifier must not re-index filtered source passages for claim provenance.');
 if(!verifierSmartSource.includes('const anchoredPassage=anchored.text;')) throw new Error('Smart claim verifier must use the anchored immutable fact text.');
-if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage':'semantic-context-evidence-pack'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
+if(!verifierSmartSource.includes('matchingMode:multiFactSupported?')) throw new Error('Smart claim verifier must record multi-fact provenance mode.');
+if(!verifierSmartSource.includes("'fact-map-anchored-source-passage'")) throw new Error('Smart claim verifier must retain fact-map anchored provenance mode.');
+if(!verifierSmartSource.includes("'semantic-context-evidence-pack'")) throw new Error('Smart claim verifier must retain semantic fallback provenance mode.');
 if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must record multi-fact synthesis provenance.');
 if(!verifierSmartSource.includes("directFactExact:!!directFactExact")) throw new Error('Smart claim verifier must expose direct exact fact matching.');
 if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must support explicit multi-fact synthesis provenance.');
