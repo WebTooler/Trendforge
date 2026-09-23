@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T18:46:21.137Z",
+  "generatedAt": "2026-09-23T18:01:32.883Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2917,
-      "sentenceCount": 16,
+      "normalizedLength": 4343,
+      "sentenceCount": 28,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,15 +31,15 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "theverge.com",
-    "newschannel9.com",
-    "sfstandard.com",
-    "news.bloomberglaw.com"
+    "techcrunch.com",
+    "tubefilter.com",
+    "ppc.land",
+    "innovation-village.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
     "sourceCount": 4,
-    "usablePassages": 32,
+    "usablePassages": 79,
     "primarySourceCount": 0
   }
 }
