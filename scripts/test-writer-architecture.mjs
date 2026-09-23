@@ -4,10 +4,23 @@ import { validateDraft } from './trendforge-editorial-policy.mjs';
 
 const writerEngine=fs.readFileSync(new URL('./trendforge-writer-engine.mjs',import.meta.url),'utf8');
 assert.ok(writerEngine.includes('const maxFactualClaims=claimBudget>0?claimBudget:0;'),'Writer must use the exact evidence claim budget.');
+assert.ok(writerEngine.includes('planning boundary, not a sentence-count quota'),'Writer must treat evidence capacity as planning guidance, not a sentence quota.');
+assert.ok(writerEngine.includes('Group related facts into coherent paragraphs'),'Writer must synthesize related evidence instead of mechanically enumerating facts.');
+assert.doesNotMatch(writerEngine,/Maximum material factual claims:/,'Writer prompt must not present evidence capacity as a hard sentence/claim quota.');
 assert.doesNotMatch(writerEngine,/Math\\.max\\(3,claimBudget\\)/,'Writer must not inflate a small evidence budget to three claims.');
 const base={title:'A sufficiently descriptive TrendForge headline',description:'A sufficiently long description that explains the development and gives readers useful context without making unsupported claims.',category:'Technology'};
 const synthesisBlueprint={mode:'narrow',targetWords:{min:220,max:450,soft:300},maxH2:2,synthesis:{allowed:true,maxStatements:1,maxWords:60,allowedFactIds:['F1','F2']}};
 const conclusionSynthesis='## Evidence\\n\\nThe available evidence establishes the reported development and its immediate details. The supplied record gives enough concrete information to describe what happened without importing outside facts.\\n\\n## Conclusion\\n\\nIn conclusion, taken together, the evidence points to the same documented development without adding a new factual premise. This closing statement only combines the established points and does not introduce a new number, date, entity, cause, outcome, or stronger certainty.';
+
+// Regression: an 18-fact evidence capacity must not reject an article merely because
+// the writer used more than 18 factual sentences when those sentences map to the same
+// supported fact set and the closing synthesis is editorial.
+const eighteenFacts=Array.from({length:18},(_,i)=>({factId:'F'+(i+1),text:`The documented development includes supported detail number ${i+1} in the supplied evidence record.`}));
+const eighteenContent=eighteenFacts.map((f,i)=>`The documented development includes supported detail number ${i+1} in the supplied evidence record.`).join(' ')
+  + ' The supplied evidence remains bounded, so the article should not add unsupported context.';
+const eighteenResult=validateDraft({...base,content:eighteenContent,blueprint:{mode:'narrow',targetWords:{min:220,max:450,soft:300}},maxFactualClaims:18,evidenceFactMap:{coreFacts:eighteenFacts}});
+assert.ok(!eighteenResult.errors.some(e=>e.includes('material factual claim count')),'18 supported facts must not become a sentence-count rejection.');
+
 const conclusionResult=validateDraft({...base,content:conclusionSynthesis,blueprint:synthesisBlueprint,maxFactualClaims:3});
 assert.ok(!conclusionResult.errors.some(e=>e.includes('material factual sentence count')),'Evidence-backed conclusion synthesis must not consume the ordinary factual claim budget.');
 assert.equal(conclusionResult.metrics.claimBudgetSynthesisAllowance,1);
@@ -30,9 +43,9 @@ assert.ok(repetitive.errors.some(x=>x.includes('repeated factual sentence')||x.i
 const generic=validateDraft({...base,content:'## Evidence\n\nThis is a game-changing development in an ever-evolving landscape. It plays a crucial role in the modern world and helps unlock the potential of the technology. More evidence is needed to explain the concrete details for readers.\n\n## Impact\n\nThe report provides specific evidence about the development and its practical effects for users. It also identifies limits and uncertainty around what can be concluded from the available evidence.\n\n## Details\n\nThe supplied evidence describes the change, the timing, and the directly reported consequences. These details give readers a concrete basis for understanding what happened and what remains uncertain.\n\n## Context\n\nThe evidence also provides context about the affected product and the reported response. That context helps explain the development without adding unsupported claims.',blueprint:{maxH2:4}});
 assert.equal(generic.passed,false);
 assert.ok(generic.errors.some(x=>x.includes('generic/filler phrasing')));
-const shallow=validateDraft({...base,content:'## Evidence\n\nThe report confirms the change.\n\n## Impact\n\nThe available evidence explains the practical effect in enough detail for readers and identifies what remains uncertain. This section adds a separate supported point and keeps the explanation concrete.\n\n## Context\n\nThe source provides additional context about the development and its timing. These details clarify the story without adding unsupported claims.',blueprint:{mode:'bounded',targetWords:{min:425,max:750,soft:600},maxH2:3}});
-assert.equal(shallow.passed,false);
-assert.ok(shallow.errors.some(x=>x.includes('shallow H2 explanation')));
+const shortCompleteH2=validateDraft({...base,content:'## Evidence\n\nThe report confirms the change.\n\n## Details\n\nThe available evidence explains the practical effect in enough detail for readers and identifies what remains uncertain. This section adds a separate supported point and keeps the explanation concrete. The wording remains tied to the supplied record and does not add background from model memory. The section gives readers enough concrete detail to understand the reported development without repeating the headline or inventing a broader outcome. It also preserves attribution and uncertainty where the evidence requires it.\n\n## Context\n\nThe source provides additional context about the development and its timing. These details clarify the story without adding unsupported claims. The context remains distinct from the main development and helps readers understand the documented material without padding the article.\n\n## Limits\n\nThe supplied evidence also identifies what cannot be established from the available material. This section keeps the article precise by distinguishing documented facts from interpretation and by avoiding unsupported predictions, motives, or comparisons. The final section gives the reader a complete boundary around the evidence.',blueprint:{mode:'bounded',targetWords:{min:425,max:750,soft:600},maxH2:4}});
+assert.equal(shortCompleteH2.passed,true);
+assert.equal(shortCompleteH2.metrics.shallowSections,0);
 const thin=validateDraft({...base,content:'## One\n\nA concrete paragraph with enough words to be substantive and useful for readers, but the overall article remains structurally thin.\n\n## Two\n\nAnother concrete paragraph with enough words to be substantive and useful for readers, while still lacking the required depth across the full article.',blueprint:{mode:'bounded',targetWords:{min:425,max:750,soft:600},maxH2:2}});
 assert.equal(thin.passed,false);
 assert.ok(thin.errors.some(x=>x.includes('too few substantive paragraphs')));
