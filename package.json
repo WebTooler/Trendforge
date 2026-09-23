@@ -55,7 +55,7 @@
     "evidence-extraction:test": "node tests/test-evidence-extraction-headline-context.mjs",
     "evidence-brief:publisher-headline:test": "node tests/test-evidence-brief-publisher-headline-context.mjs",
     "writer-evidence-selection:test": "node tests/test-writer-evidence-passage-selection.mjs",
-    "writer-evidence-claim-mapping:test": "node scripts/test-writer-evidence-claim-mapping.mjs",
+    "writer-evidence-claim-mapping:test": "node tests/test-writer-evidence-claim-mapping.mjs",
     "claims:run405-calibration": "node scripts/test-claim-verifier-run405-calibration.mjs"
   },
   "dependencies": {
