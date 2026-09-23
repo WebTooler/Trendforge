@@ -106,6 +106,8 @@ jobs:
         id: grounding_repair_1
         if: steps.claim_verification.outcome == 'failure'
         continue-on-error: true
+        env:
+          GROUNDING_REPAIR_PASS: '1'
         run: node scripts/repair-article-grounding.mjs
       - name: Re-verify repaired article claims
         id: claim_reverification_1
@@ -116,6 +118,8 @@ jobs:
         id: grounding_repair_2
         if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome != 'success'
         continue-on-error: true
+        env:
+          GROUNDING_REPAIR_PASS: '2'
         run: node scripts/repair-article-grounding.mjs
       - name: Final claim verification
         id: claim_verification_final
