@@ -1,7 +1,7 @@
 const wordCount=(text='')=>String(text).trim().split(/\s+/).filter(Boolean).length;
 const sentenceCount=(text='')=>(String(text).match(/[.!?](?:\s|$)/g)||[]).length;
 const sections=(content='')=>String(content).split(/^##\s+.+$/m).slice(1).map(s=>s.trim()).filter(Boolean);
-const paragraphCount=(content='')=>String(content).replace(/^##\s+.+$/gm,'\n\n').split(/\n\s*\n/).map(p=>p.trim()).filter(p=>p&&wordCount(p)>=25).length;
+const paragraphCount=(content='')=>String(content).replace(/^##\s+.+$/gm,'\n\n').split(/\n\s*\n/).map(p=>p.trim()).filter(p=>p&&(wordCount(p)>=25||(wordCount(p)>=5&&sentenceCount(p)>=1))).length;
 
 export function assessArticleDepth({content='',blueprint=null}={}){
   const words=wordCount(content);
