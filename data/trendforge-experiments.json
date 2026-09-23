@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T12:04:16.618Z",
+  "updatedAt": "2026-09-23T17:26:35.917Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,8 +14,8 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 28,
-    "topics": 408,
+    "runs": 29,
+    "topics": 421,
     "articles": 21
   },
   "learningInput": {
@@ -88,58 +88,6 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0yYkZrQ2JXMHZ2LWJaSDNjQndqOEdEOGFTQWFNQlg0OVduRUx1V3NlZXBka2RianBxTDVMcVRiekxuZmhMUFRIdkdZb1ZjSnl6N2hrRDdiWl9XMHpwQ3F3?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998791/ceer-ev-saudi-arabia-foxconn-exobot",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGtxSFI5cjVtY3YxRVFoaUlodkQ4akFMbkoyaVZQTl95SjJmVHRZWTVwVHVYUW5sdGN6WHphVGVIZmgySm5VT2JIbXIxRWFsa1FhR1RhbkZvWDhFcnFwc0J6elR6V0RuazRUZ2VBeEhhU0lGSThuajVaYkxMbHQ2cUFB?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/998874/apple-iphone-18-pro-ios-27-camera-texture-grain-photographic-style",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999018/eight-sleep-pod-6-intelligent-sleep-system-sensors-health-tracking",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR2txb3RqODJqWDBDLUdGUTdTbVJSZEdyNDhMd1g2OWV2RjQtRVBPcTR3VE5kZU9wc2pDc3pvVWxIUnhleXQtQ3lERGdadV95RmxQSUxOaFJJZWp1NFk5cGRiS2xtN01GTUdkNjFIcUxUVnhUZThkSDJTS3c4emVIXzFzT2JnZ0E?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZHhhSEc3Tjdxd3BETTNweURGdTNNWkxzMXRoa0NLaTBYeU5PekJwTTNBYkdxcmZPX0dSeTYyQTdzWDZ4SHBZOGJuZDRpX203MTAwOWVOYjdIN0Z5Yjh0V2JtOUhDdGRfelUtb1ZHdzBualowUUxVNmNZclZKdF9hLW5yTGxvV0FBVUhjaFRyU2xoUmF1U281ay03RHlnQW0zbld0eWdUcGpRYVpiczZRZGptSTc1enFsOXlqc2E5QTJ4UQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaUctb0xJR0htTnY2Ynk0TG1ra1J5X01tMnlmclZjUVRVQWN1RkF5NExaUjliR21fY0ZYcHJqQ0VaWkstZ01pNEtKeDZkVlFBTHpTMFRqRDhReFJzZ2pRTGZyOWJqQVZxQldKdGs4QjYxYW5BNHFEY0pSRlJsZHZtSWhOSVR1MlNlZExKWFJ2NlQ1MnI0WktF?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYmoxOUpIUDE4QmhnWFl4RlBJQURFZmlMZk5aM3NIa1hld1lBWEg5SnlLbTl6Yk9wQ2VwdmVrNXp1V3ZrNGNlcDdJRzhZRXhTdFE5cWdHbmJJb2V4Q1VYVTkwemx2X0dHeHZsUTBRTlpYd1d6TmZNZzNseW5vcEo5YV9VVkJoS1YzS0RydTFaZlkwekxzd2VBZU45dW40Tk43eFg2aFlQbw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1YRldiRDhmUGpHcEVrdm9NU0laVUotUDBWblM1ZTUzVktWdE5qOWVCZFRXMWpmZEVHcHN0OGUxTWlDMURNQnVFM2IyRUFzaGphVEJLVmVoa2pzaHVsUnMtN3MwZS1GcjFuSmxsZTBLVQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQb3Vvbm00a3pzcFVJdl8yTG4zU3VHN0RIanVaVHlicnpjcmRvY2VVQ3NaWmRkbHB2ZGJSbXotdTB6UVRmUjQ4RzBQbTF6b29TbjQydHlmcWZnTHFXRnpLNk5NWXFEbVlfNXIwT0ZENjJrMzRWR01YRVVFNnVsYVEtYTFGVGxwV0o4WTFBbnZLajUyc3BEMnZFQTdBZ0JKVVlsYjV4QkV3TlY?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE00T3A0VHBUeFE2c2x1STVqMUJNQnBYLVlvbFIxeUhXNFkxU3hucWpyb0pvTS1WX1ZXcnhITFo5aG9oRmxlcGdHRjFLMzN6c1ctMURjemFBVC16OFpGT0xHRnFWczJwNS0wbExzeXlyZDZVT2tJbTVmTlhYVUpjWUHSAYQBQVVfeXFMTkdLdlBNbjRPZWkwVjRzdU9zWjUxYTFlTnpJZHVSajR2NTZ1MjZOblBtTkVtLXE5SE9BMnkzMmFwMnVENFItS1VaRGI1SDVDeE5wN3ZvbjRBQ1J3UjAxZzRQa0VmcUlwZDMwV09DYUF4NTZlTGt2a1RTdVlvTDJMY3hGV2lm?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/gadgets/998842/qualcomm-snapdragon-8-elite-extreme-gen-6",
-        "bucket": "variant"
-      },
-      {
         "key": "https://www.theverge.com/tech/998844/motorola-signature-27-specs-snapdragon-8-elite-extreme-gen-6",
         "bucket": "control"
       },
@@ -165,63 +113,63 @@
       },
       {
         "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYmdfdXYzbWFBODNlQzl6bWhLSmQzVFgzdWRWSTJZbGxyMW8xYUpCYm1QLVlGdDZpb3VrQ0RiMWZVV052R3lFV1FVNThTZ1VtTjdXUVF6cXAwMmxGUEY5cnVEUm1WNXpsOHg2blR6d2hsQmM2R2p0eFk3eHNwczdaMWJMQUtQZmJuX0VFejN3MkFTVkdGYUtN?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX3FaYUlSZUI0NEVvazRSd0JVWXlfaHdtUFhha1d5NUVJVDQ4ZW13dm5tWHFQTUkxUndKdHcxdHdXOUotY0dkRVVqb3NOcFBkd2VEMHAyMXdqMjB5MkRTWVhNa0FHYzBfSExrSDVqQnlZWWx3MUk5cDJsckRkeXZDLWdsYVppUHBYU0E2U0tsb1g4RXM0VFZRLVViNklKbk9BcTJpYXh6T0VSUUUxbnNOREg0MXg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObE05WERqVUVFa0UtVllxdVlwckduNFR2RGNDQ0Y4ZmJFVW4xOW8ybWR0bGwza3dMbnFzSFFmQWdmTnJDM1o4RDZZN21Zajk0aDJIcHFnZlRGZXJxYXkxaXBBR2dVZXM3ZUN1R1pjdW1faTIzOE9ucEQ2d1lFOEVkT0FuZlBrd0YxNUplS1htRXFGVVNwQTZENVl3S3JHWGVEb1N5eWxQbUo4REJLOUtMTjNOdklDUWc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQREkzTG1UdlE2X0RXU1RvSXhOSzFTMjQ0TzlXUjhwX1NFcDVqZ0NLWUItWmZkaGV2a0E1Z3U1dEs2ODMwSWs3SVB3S2Vqc3Y3VlFHbk1uejFxS3FQbG40Mnc5Yzl6dHhwTG16TFktamhoZXdsZUhnV2VVUkFKeDQxRXl2aHlfdTZuXzJPbDVURFkyTFVGcDgxT3lUdXVqQ3hIZzItMDVSdF9fRk5peWNjeEZXWEJERENGY2lhcVNMZ01SbU9wcUJz?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMzdYaW5wWFRadFcwV2ZiVWJ0RHBYT21ZVUc0bXlXSktSbWlhOXNIb0tsQ3hSV2k0UjluUnotTS1DNkdtbWZXRXFyMVpWeHVoUFNpRld6WFV5SlJCR21JRnUyTlZUNENxenRsbzFOX0xqX0xkdDF6elR4endvcC1ock9ZZFFuSm5TQlJIRWpxT3JRWTJCaHFtRTB2MkJodlR2b016TGttTlVKb0dRRE5fT3Mtb0luLVE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNekFybUMweWxsZHBZOXd3S2ZyckZQZzJsdmhhQWZsUGIxZHk1ZWJpM01JTXdzQXJud0NpWjVRd3I1ejA3MlZUM1dnN09KNXpMUktrVXpJaV9BclpnZ0U3RkJYYVdKSFkxN0Rza0F1N3F1c1JWbi1SWFdzRnJycUhWTWxCOFBSaFdua1hBdnlCckc5TlVZRVc0cTBJb0dzQjhaQjhoLWhkVTg3Uzdz?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/tech/999253/xiaomi-18-pro-max-privacy-display-launch-china",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWVhwTzJISXlxS3ZoMnAxRzVyZzJkSUVpMTg0aWpLaDl5Z1FKVjUxOGhobEppam1pdkRiUEdHNElFR0hWZzlUdWFvY2V0NXBMc2VRbVVZOUxfTWNkOWVpYjdMc1V4aG9PMTEzYmk3TmlnRGVFZWpMdzBhQVFWVmRQYzBTblMzZkxtclRPVWVNZlZHNDJtTklQRjZHV1ZMSkZOT0FxNUIzNjBlaUxwVTc2SDE1aTNjenl1UG1rdA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMGtwVnpqdzhKQlBxQlBIWEZXSllIc1RSUzNLMWtWN3Vuc19HRVlRcjZBZzZGdEMtTVJOZGxGNzJXMzNUY1plNGo0YXpKU1dpdlh2MFNQY1I1d3R6eU4yWmlUOWhJTzk0b1pvOFF3QVJkTVMzSFptTTNYQjNaSU9ES09xa0pRdlp4MFZYWE9JaUZZSGVW?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMieEFVX3lxTE13b0Q5VWs0M2FuZkRILU1ER2I0eTZGbkY2TnZGTVlNNmZrQ2NsVG5jeXk2Q3FKY0o5X3FGVE9LZG5neWxHZ2FScHhSTGFxZGQ0SkZGX2F3SzA2cFhTQ1BwYl9wQVN1Ti1sUTNpTDVtRndxUmdUOFM0Uw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcjRYUWVxeWdqa0pjSXpmNWN5aFQ1b05vZzlxM3h5M2MtRzBiZXRjTWp1Sk1heENKQzBmSmNGR1ptVVQ1MTkwV3VGN2xYMHFQc1BORU5EY2phZm5hVWtsam0wc1dYN1pHaG5FREpWM2dVR2ZNZGwzQWZCUW9INS16NnpKX1FNTnluWmRIM3B2NVgyWm5IbE9RX3pR0gGfAUFVX3lxTFBwcjVFcFRETEI5T1dMTTlsYm0xdUZST0loTE5yQzY2QzRvZ3JHXzVjTnc2REJUOTJSQWZGUTVRRmJ5djNDMU9EZHp3R2lWSElPdXlQSGE1M3RJdHozcVBoYzVibDhKZmRqdURWb0FrX3N1RVpjeDQ3dnVSUjY2dWhzZ3paMzNfckRuN0NDM1hLeDFfbHh0MXF0RUhNbXVaZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/games/999268/control-resonant-review-ps5-xbox",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYTNzOThRV0dwUFdHQ2F2TkxaMVFHRTJQS0VFT3czUGFGZWx0ZkRiZ2Z0ZE9wOVhxek5fQm1SSVlZbElMVXR4dTNuSlZMc2FOeGJsUnJyME1ON2tiMzZVQTZaX2NJMXhpYmhQdGZoRC1yQ3BCQlRMMTVFV2dnMUxrdlpJWGZIY3B2RGV0MzRkaXYwMXIzRE5Ybndwdk53d3o3cmfSAacBQVVfeXFMTkNoRGxxQ0hNcHQ3OGdzTk5DV0JSZDN1V0NlV0VBbDJNaW9SV0xqVjVPdHRURzVhWUtOYjd1S0hOMmY0VzdnT2N6OHpPU2lIbzBSd1JqMFA3NHlWeU92UFNwRzdNWE1ScnhyamhQSXVNTjhwQ3YtQVhsaTQ4OGd4TElTcVZfV0s1ZXN3SHBmUjV1NHVHbEVSbXFWVV82SWpVblhGSm9sMEk?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOazV6Q242LXE0TVZZRV9wcXl4UmJlMHp2ZHMtX0h4RGlPeGlUbkhGQklJTDhuN0FKaFdzUUs3cS0zN1ZsTVR1Mk51M190NFFuVjdZekJVSjlXMXpuaDAwVGVaSl9LbnpKMWlmMG1YaUVOQ3lqTXl4ck5nZm94RlMxaFA2N091TUxyNWJCSkpLOER1TDAtRF94TWZ6NVNIM01lcWxvOUJaWTVHYUZ3WlJjSm16WWtUSldqcHdWOFNR?oc=5",
         "bucket": "variant"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0yYkZrQ2JXMHZ2LWJaSDNjQndqOEdEOGFTQWFNQlg0OVduRUx1V3NlZXBka2RianBxTDVMcVRiekxuZmhMUFRIdkdZb1ZjSnl6N2hrRDdiWl9XMHpwQ3F3?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998791/ceer-ev-saudi-arabia-foxconn-exobot",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGtxSFI5cjVtY3YxRVFoaUlodkQ4akFMbkoyaVZQTl95SjJmVHRZWTVwVHVYUW5sdGN6WHphVGVIZmgySm5VT2JIbXIxRWFsa1FhR1RhbkZvWDhFcnFwc0J6elR6V0RuazRUZ2VBeEhhU0lGSThuajVaYkxMbHQ2cUFB?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/998874/apple-iphone-18-pro-ios-27-camera-texture-grain-photographic-style",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999018/eight-sleep-pod-6-intelligent-sleep-system-sensors-health-tracking",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR2txb3RqODJqWDBDLUdGUTdTbVJSZEdyNDhMd1g2OWV2RjQtRVBPcTR3VE5kZU9wc2pDc3pvVWxIUnhleXQtQ3lERGdadV95RmxQSUxOaFJJZWp1NFk5cGRiS2xtN01GTUdkNjFIcUxUVnhUZThkSDJTS3c4emVIXzFzT2JnZ0E?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZHhhSEc3Tjdxd3BETTNweURGdTNNWkxzMXRoa0NLaTBYeU5PekJwTTNBYkdxcmZPX0dSeTYyQTdzWDZ4SHBZOGJuZDRpX203MTAwOWVOYjdIN0Z5Yjh0V2JtOUhDdGRfelUtb1ZHdzBualowUUxVNmNZclZKdF9hLW5yTGxvV0FBVUhjaFRyU2xoUmF1U281ay03RHlnQW0zbld0eWdUcGpRYVpiczZRZGptSTc1enFsOXlqc2E5QTJ4UQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaUctb0xJR0htTnY2Ynk0TG1ra1J5X01tMnlmclZjUVRVQWN1RkF5NExaUjliR21fY0ZYcHJqQ0VaWkstZ01pNEtKeDZkVlFBTHpTMFRqRDhReFJzZ2pRTGZyOWJqQVZxQldKdGs4QjYxYW5BNHFEY0pSRlJsZHZtSWhOSVR1MlNlZExKWFJ2NlQ1MnI0WktF?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYmoxOUpIUDE4QmhnWFl4RlBJQURFZmlMZk5aM3NIa1hld1lBWEg5SnlLbTl6Yk9wQ2VwdmVrNXp1V3ZrNGNlcDdJRzhZRXhTdFE5cWdHbmJJb2V4Q1VYVTkwemx2X0dHeHZsUTBRTlpYd1d6TmZNZzNseW5vcEo5YV9VVkJoS1YzS0RydTFaZlkwekxzd2VBZU45dW40Tk43eFg2aFlQbw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1YRldiRDhmUGpHcEVrdm9NU0laVUotUDBWblM1ZTUzVktWdE5qOWVCZFRXMWpmZEVHcHN0OGUxTWlDMURNQnVFM2IyRUFzaGphVEJLVmVoa2pzaHVsUnMtN3MwZS1GcjFuSmxsZTBLVQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQb3Vvbm00a3pzcFVJdl8yTG4zU3VHN0RIanVaVHlicnpjcmRvY2VVQ3NaWmRkbHB2ZGJSbXotdTB6UVRmUjQ4RzBQbTF6b29TbjQydHlmcWZnTHFXRnpLNk5NWXFEbVlfNXIwT0ZENjJrMzRWR01YRVVFNnVsYVEtYTFGVGxwV0o4WTFBbnZLajUyc3BEMnZFQTdBZ0JKVVlsYjV4QkV3TlY?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE00T3A0VHBUeFE2c2x1STVqMUJNQnBYLVlvbFIxeUhXNFkxU3hucWpyb0pvTS1WX1ZXcnhITFo5aG9oRmxlcGdHRjFLMzN6c1ctMURjemFBVC16OFpGT0xHRnFWczJwNS0wbExzeXlyZDZVT2tJbTVmTlhYVUpjWUHSAYQBQVVfeXFMTkdLdlBNbjRPZWkwVjRzdU9zWjUxYTFlTnpJZHVSajR2NTZ1MjZOblBtTkVtLXE5SE9BMnkzMmFwMnVENFItS1VaRGI1SDVDeE5wN3ZvbjRBQ1J3UjAxZzRQa0VmcUlwZDMwV09DYUF4NTZlTGt2a1RTdVlvTDJMY3hGV2lm?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/gadgets/998842/qualcomm-snapdragon-8-elite-extreme-gen-6",
-        "bucket": "variant"
-      },
-      {
         "key": "https://www.theverge.com/tech/998844/motorola-signature-27-specs-snapdragon-8-elite-extreme-gen-6",
         "bucket": "control"
       },
@@ -247,63 +195,63 @@
       },
       {
         "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYmdfdXYzbWFBODNlQzl6bWhLSmQzVFgzdWRWSTJZbGxyMW8xYUpCYm1QLVlGdDZpb3VrQ0RiMWZVV052R3lFV1FVNThTZ1VtTjdXUVF6cXAwMmxGUEY5cnVEUm1WNXpsOHg2blR6d2hsQmM2R2p0eFk3eHNwczdaMWJMQUtQZmJuX0VFejN3MkFTVkdGYUtN?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX3FaYUlSZUI0NEVvazRSd0JVWXlfaHdtUFhha1d5NUVJVDQ4ZW13dm5tWHFQTUkxUndKdHcxdHdXOUotY0dkRVVqb3NOcFBkd2VEMHAyMXdqMjB5MkRTWVhNa0FHYzBfSExrSDVqQnlZWWx3MUk5cDJsckRkeXZDLWdsYVppUHBYU0E2U0tsb1g4RXM0VFZRLVViNklKbk9BcTJpYXh6T0VSUUUxbnNOREg0MXg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObE05WERqVUVFa0UtVllxdVlwckduNFR2RGNDQ0Y4ZmJFVW4xOW8ybWR0bGwza3dMbnFzSFFmQWdmTnJDM1o4RDZZN21Zajk0aDJIcHFnZlRGZXJxYXkxaXBBR2dVZXM3ZUN1R1pjdW1faTIzOE9ucEQ2d1lFOEVkT0FuZlBrd0YxNUplS1htRXFGVVNwQTZENVl3S3JHWGVEb1N5eWxQbUo4REJLOUtMTjNOdklDUWc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQREkzTG1UdlE2X0RXU1RvSXhOSzFTMjQ0TzlXUjhwX1NFcDVqZ0NLWUItWmZkaGV2a0E1Z3U1dEs2ODMwSWs3SVB3S2Vqc3Y3VlFHbk1uejFxS3FQbG40Mnc5Yzl6dHhwTG16TFktamhoZXdsZUhnV2VVUkFKeDQxRXl2aHlfdTZuXzJPbDVURFkyTFVGcDgxT3lUdXVqQ3hIZzItMDVSdF9fRk5peWNjeEZXWEJERENGY2lhcVNMZ01SbU9wcUJz?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMzdYaW5wWFRadFcwV2ZiVWJ0RHBYT21ZVUc0bXlXSktSbWlhOXNIb0tsQ3hSV2k0UjluUnotTS1DNkdtbWZXRXFyMVpWeHVoUFNpRld6WFV5SlJCR21JRnUyTlZUNENxenRsbzFOX0xqX0xkdDF6elR4endvcC1ock9ZZFFuSm5TQlJIRWpxT3JRWTJCaHFtRTB2MkJodlR2b016TGttTlVKb0dRRE5fT3Mtb0luLVE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNekFybUMweWxsZHBZOXd3S2ZyckZQZzJsdmhhQWZsUGIxZHk1ZWJpM01JTXdzQXJud0NpWjVRd3I1ejA3MlZUM1dnN09KNXpMUktrVXpJaV9BclpnZ0U3RkJYYVdKSFkxN0Rza0F1N3F1c1JWbi1SWFdzRnJycUhWTWxCOFBSaFdua1hBdnlCckc5TlVZRVc0cTBJb0dzQjhaQjhoLWhkVTg3Uzdz?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/tech/999253/xiaomi-18-pro-max-privacy-display-launch-china",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWVhwTzJISXlxS3ZoMnAxRzVyZzJkSUVpMTg0aWpLaDl5Z1FKVjUxOGhobEppam1pdkRiUEdHNElFR0hWZzlUdWFvY2V0NXBMc2VRbVVZOUxfTWNkOWVpYjdMc1V4aG9PMTEzYmk3TmlnRGVFZWpMdzBhQVFWVmRQYzBTblMzZkxtclRPVWVNZlZHNDJtTklQRjZHV1ZMSkZOT0FxNUIzNjBlaUxwVTc2SDE1aTNjenl1UG1rdA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMGtwVnpqdzhKQlBxQlBIWEZXSllIc1RSUzNLMWtWN3Vuc19HRVlRcjZBZzZGdEMtTVJOZGxGNzJXMzNUY1plNGo0YXpKU1dpdlh2MFNQY1I1d3R6eU4yWmlUOWhJTzk0b1pvOFF3QVJkTVMzSFptTTNYQjNaSU9ES09xa0pRdlp4MFZYWE9JaUZZSGVW?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMieEFVX3lxTE13b0Q5VWs0M2FuZkRILU1ER2I0eTZGbkY2TnZGTVlNNmZrQ2NsVG5jeXk2Q3FKY0o5X3FGVE9LZG5neWxHZ2FScHhSTGFxZGQ0SkZGX2F3SzA2cFhTQ1BwYl9wQVN1Ti1sUTNpTDVtRndxUmdUOFM0Uw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcjRYUWVxeWdqa0pjSXpmNWN5aFQ1b05vZzlxM3h5M2MtRzBiZXRjTWp1Sk1heENKQzBmSmNGR1ptVVQ1MTkwV3VGN2xYMHFQc1BORU5EY2phZm5hVWtsam0wc1dYN1pHaG5FREpWM2dVR2ZNZGwzQWZCUW9INS16NnpKX1FNTnluWmRIM3B2NVgyWm5IbE9RX3pR0gGfAUFVX3lxTFBwcjVFcFRETEI5T1dMTTlsYm0xdUZST0loTE5yQzY2QzRvZ3JHXzVjTnc2REJUOTJSQWZGUTVRRmJ5djNDMU9EZHp3R2lWSElPdXlQSGE1M3RJdHozcVBoYzVibDhKZmRqdURWb0FrX3N1RVpjeDQ3dnVSUjY2dWhzZ3paMzNfckRuN0NDM1hLeDFfbHh0MXF0RUhNbXVaZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/games/999268/control-resonant-review-ps5-xbox",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYTNzOThRV0dwUFdHQ2F2TkxaMVFHRTJQS0VFT3czUGFGZWx0ZkRiZ2Z0ZE9wOVhxek5fQm1SSVlZbElMVXR4dTNuSlZMc2FOeGJsUnJyME1ON2tiMzZVQTZaX2NJMXhpYmhQdGZoRC1yQ3BCQlRMMTVFV2dnMUxrdlpJWGZIY3B2RGV0MzRkaXYwMXIzRE5Ybndwdk53d3o3cmfSAacBQVVfeXFMTkNoRGxxQ0hNcHQ3OGdzTk5DV0JSZDN1V0NlV0VBbDJNaW9SV0xqVjVPdHRURzVhWUtOYjd1S0hOMmY0VzdnT2N6OHpPU2lIbzBSd1JqMFA3NHlWeU92UFNwRzdNWE1ScnhyamhQSXVNTjhwQ3YtQVhsaTQ4OGd4TElTcVZfV0s1ZXN3SHBmUjV1NHVHbEVSbXFWVV82SWpVblhGSm9sMEk?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOazV6Q242LXE0TVZZRV9wcXl4UmJlMHp2ZHMtX0h4RGlPeGlUbkhGQklJTDhuN0FKaFdzUUs3cS0zN1ZsTVR1Mk51M190NFFuVjdZekJVSjlXMXpuaDAwVGVaSl9LbnpKMWlmMG1YaUVOQ3lqTXl4ck5nZm94RlMxaFA2N091TUxyNWJCSkpLOER1TDAtRF94TWZ6NVNIM01lcWxvOUJaWTVHYUZ3WlJjSm16WWtUSldqcHdWOFNR?oc=5",
         "bucket": "variant"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0yYkZrQ2JXMHZ2LWJaSDNjQndqOEdEOGFTQWFNQlg0OVduRUx1V3NlZXBka2RianBxTDVMcVRiekxuZmhMUFRIdkdZb1ZjSnl6N2hrRDdiWl9XMHpwQ3F3?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/transportation/998791/ceer-ev-saudi-arabia-foxconn-exobot",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdGtxSFI5cjVtY3YxRVFoaUlodkQ4akFMbkoyaVZQTl95SjJmVHRZWTVwVHVYUW5sdGN6WHphVGVIZmgySm5VT2JIbXIxRWFsa1FhR1RhbkZvWDhFcnFwc0J6elR6V0RuazRUZ2VBeEhhU0lGSThuajVaYkxMbHQ2cUFB?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/998874/apple-iphone-18-pro-ios-27-camera-texture-grain-photographic-style",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999018/eight-sleep-pod-6-intelligent-sleep-system-sensors-health-tracking",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR2txb3RqODJqWDBDLUdGUTdTbVJSZEdyNDhMd1g2OWV2RjQtRVBPcTR3VE5kZU9wc2pDc3pvVWxIUnhleXQtQ3lERGdadV95RmxQSUxOaFJJZWp1NFk5cGRiS2xtN01GTUdkNjFIcUxUVnhUZThkSDJTS3c4emVIXzFzT2JnZ0E?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZHhhSEc3Tjdxd3BETTNweURGdTNNWkxzMXRoa0NLaTBYeU5PekJwTTNBYkdxcmZPX0dSeTYyQTdzWDZ4SHBZOGJuZDRpX203MTAwOWVOYjdIN0Z5Yjh0V2JtOUhDdGRfelUtb1ZHdzBualowUUxVNmNZclZKdF9hLW5yTGxvV0FBVUhjaFRyU2xoUmF1U281ay03RHlnQW0zbld0eWdUcGpRYVpiczZRZGptSTc1enFsOXlqc2E5QTJ4UQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaUctb0xJR0htTnY2Ynk0TG1ra1J5X01tMnlmclZjUVRVQWN1RkF5NExaUjliR21fY0ZYcHJqQ0VaWkstZ01pNEtKeDZkVlFBTHpTMFRqRDhReFJzZ2pRTGZyOWJqQVZxQldKdGs4QjYxYW5BNHFEY0pSRlJsZHZtSWhOSVR1MlNlZExKWFJ2NlQ1MnI0WktF?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYmoxOUpIUDE4QmhnWFl4RlBJQURFZmlMZk5aM3NIa1hld1lBWEg5SnlLbTl6Yk9wQ2VwdmVrNXp1V3ZrNGNlcDdJRzhZRXhTdFE5cWdHbmJJb2V4Q1VYVTkwemx2X0dHeHZsUTBRTlpYd1d6TmZNZzNseW5vcEo5YV9VVkJoS1YzS0RydTFaZlkwekxzd2VBZU45dW40Tk43eFg2aFlQbw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1YRldiRDhmUGpHcEVrdm9NU0laVUotUDBWblM1ZTUzVktWdE5qOWVCZFRXMWpmZEVHcHN0OGUxTWlDMURNQnVFM2IyRUFzaGphVEJLVmVoa2pzaHVsUnMtN3MwZS1GcjFuSmxsZTBLVQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQb3Vvbm00a3pzcFVJdl8yTG4zU3VHN0RIanVaVHlicnpjcmRvY2VVQ3NaWmRkbHB2ZGJSbXotdTB6UVRmUjQ4RzBQbTF6b29TbjQydHlmcWZnTHFXRnpLNk5NWXFEbVlfNXIwT0ZENjJrMzRWR01YRVVFNnVsYVEtYTFGVGxwV0o4WTFBbnZLajUyc3BEMnZFQTdBZ0JKVVlsYjV4QkV3TlY?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE00T3A0VHBUeFE2c2x1STVqMUJNQnBYLVlvbFIxeUhXNFkxU3hucWpyb0pvTS1WX1ZXcnhITFo5aG9oRmxlcGdHRjFLMzN6c1ctMURjemFBVC16OFpGT0xHRnFWczJwNS0wbExzeXlyZDZVT2tJbTVmTlhYVUpjWUHSAYQBQVVfeXFMTkdLdlBNbjRPZWkwVjRzdU9zWjUxYTFlTnpJZHVSajR2NTZ1MjZOblBtTkVtLXE5SE9BMnkzMmFwMnVENFItS1VaRGI1SDVDeE5wN3ZvbjRBQ1J3UjAxZzRQa0VmcUlwZDMwV09DYUF4NTZlTGt2a1RTdVlvTDJMY3hGV2lm?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/gadgets/998842/qualcomm-snapdragon-8-elite-extreme-gen-6",
-        "bucket": "variant"
-      },
-      {
         "key": "https://www.theverge.com/tech/998844/motorola-signature-27-specs-snapdragon-8-elite-extreme-gen-6",
         "bucket": "control"
       },
@@ -329,6 +277,58 @@
       },
       {
         "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQYmdfdXYzbWFBODNlQzl6bWhLSmQzVFgzdWRWSTJZbGxyMW8xYUpCYm1QLVlGdDZpb3VrQ0RiMWZVV052R3lFV1FVNThTZ1VtTjdXUVF6cXAwMmxGUEY5cnVEUm1WNXpsOHg2blR6d2hsQmM2R2p0eFk3eHNwczdaMWJMQUtQZmJuX0VFejN3MkFTVkdGYUtN?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX3FaYUlSZUI0NEVvazRSd0JVWXlfaHdtUFhha1d5NUVJVDQ4ZW13dm5tWHFQTUkxUndKdHcxdHdXOUotY0dkRVVqb3NOcFBkd2VEMHAyMXdqMjB5MkRTWVhNa0FHYzBfSExrSDVqQnlZWWx3MUk5cDJsckRkeXZDLWdsYVppUHBYU0E2U0tsb1g4RXM0VFZRLVViNklKbk9BcTJpYXh6T0VSUUUxbnNOREg0MXg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxObE05WERqVUVFa0UtVllxdVlwckduNFR2RGNDQ0Y4ZmJFVW4xOW8ybWR0bGwza3dMbnFzSFFmQWdmTnJDM1o4RDZZN21Zajk0aDJIcHFnZlRGZXJxYXkxaXBBR2dVZXM3ZUN1R1pjdW1faTIzOE9ucEQ2d1lFOEVkT0FuZlBrd0YxNUplS1htRXFGVVNwQTZENVl3S3JHWGVEb1N5eWxQbUo4REJLOUtMTjNOdklDUWc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQREkzTG1UdlE2X0RXU1RvSXhOSzFTMjQ0TzlXUjhwX1NFcDVqZ0NLWUItWmZkaGV2a0E1Z3U1dEs2ODMwSWs3SVB3S2Vqc3Y3VlFHbk1uejFxS3FQbG40Mnc5Yzl6dHhwTG16TFktamhoZXdsZUhnV2VVUkFKeDQxRXl2aHlfdTZuXzJPbDVURFkyTFVGcDgxT3lUdXVqQ3hIZzItMDVSdF9fRk5peWNjeEZXWEJERENGY2lhcVNMZ01SbU9wcUJz?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMzdYaW5wWFRadFcwV2ZiVWJ0RHBYT21ZVUc0bXlXSktSbWlhOXNIb0tsQ3hSV2k0UjluUnotTS1DNkdtbWZXRXFyMVpWeHVoUFNpRld6WFV5SlJCR21JRnUyTlZUNENxenRsbzFOX0xqX0xkdDF6elR4endvcC1ock9ZZFFuSm5TQlJIRWpxT3JRWTJCaHFtRTB2MkJodlR2b016TGttTlVKb0dRRE5fT3Mtb0luLVE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNekFybUMweWxsZHBZOXd3S2ZyckZQZzJsdmhhQWZsUGIxZHk1ZWJpM01JTXdzQXJud0NpWjVRd3I1ejA3MlZUM1dnN09KNXpMUktrVXpJaV9BclpnZ0U3RkJYYVdKSFkxN0Rza0F1N3F1c1JWbi1SWFdzRnJycUhWTWxCOFBSaFdua1hBdnlCckc5TlVZRVc0cTBJb0dzQjhaQjhoLWhkVTg3Uzdz?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/tech/999253/xiaomi-18-pro-max-privacy-display-launch-china",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWVhwTzJISXlxS3ZoMnAxRzVyZzJkSUVpMTg0aWpLaDl5Z1FKVjUxOGhobEppam1pdkRiUEdHNElFR0hWZzlUdWFvY2V0NXBMc2VRbVVZOUxfTWNkOWVpYjdMc1V4aG9PMTEzYmk3TmlnRGVFZWpMdzBhQVFWVmRQYzBTblMzZkxtclRPVWVNZlZHNDJtTklQRjZHV1ZMSkZOT0FxNUIzNjBlaUxwVTc2SDE1aTNjenl1UG1rdA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMGtwVnpqdzhKQlBxQlBIWEZXSllIc1RSUzNLMWtWN3Vuc19HRVlRcjZBZzZGdEMtTVJOZGxGNzJXMzNUY1plNGo0YXpKU1dpdlh2MFNQY1I1d3R6eU4yWmlUOWhJTzk0b1pvOFF3QVJkTVMzSFptTTNYQjNaSU9ES09xa0pRdlp4MFZYWE9JaUZZSGVW?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMieEFVX3lxTE13b0Q5VWs0M2FuZkRILU1ER2I0eTZGbkY2TnZGTVlNNmZrQ2NsVG5jeXk2Q3FKY0o5X3FGVE9LZG5neWxHZ2FScHhSTGFxZGQ0SkZGX2F3SzA2cFhTQ1BwYl9wQVN1Ti1sUTNpTDVtRndxUmdUOFM0Uw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcjRYUWVxeWdqa0pjSXpmNWN5aFQ1b05vZzlxM3h5M2MtRzBiZXRjTWp1Sk1heENKQzBmSmNGR1ptVVQ1MTkwV3VGN2xYMHFQc1BORU5EY2phZm5hVWtsam0wc1dYN1pHaG5FREpWM2dVR2ZNZGwzQWZCUW9INS16NnpKX1FNTnluWmRIM3B2NVgyWm5IbE9RX3pR0gGfAUFVX3lxTFBwcjVFcFRETEI5T1dMTTlsYm0xdUZST0loTE5yQzY2QzRvZ3JHXzVjTnc2REJUOTJSQWZGUTVRRmJ5djNDMU9EZHp3R2lWSElPdXlQSGE1M3RJdHozcVBoYzVibDhKZmRqdURWb0FrX3N1RVpjeDQ3dnVSUjY2dWhzZ3paMzNfckRuN0NDM1hLeDFfbHh0MXF0RUhNbXVaZw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://www.theverge.com/games/999268/control-resonant-review-ps5-xbox",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYTNzOThRV0dwUFdHQ2F2TkxaMVFHRTJQS0VFT3czUGFGZWx0ZkRiZ2Z0ZE9wOVhxek5fQm1SSVlZbElMVXR4dTNuSlZMc2FOeGJsUnJyME1ON2tiMzZVQTZaX2NJMXhpYmhQdGZoRC1yQ3BCQlRMMTVFV2dnMUxrdlpJWGZIY3B2RGV0MzRkaXYwMXIzRE5Ybndwdk53d3o3cmfSAacBQVVfeXFMTkNoRGxxQ0hNcHQ3OGdzTk5DV0JSZDN1V0NlV0VBbDJNaW9SV0xqVjVPdHRURzVhWUtOYjd1S0hOMmY0VzdnT2N6OHpPU2lIbzBSd1JqMFA3NHlWeU92UFNwRzdNWE1ScnhyamhQSXVNTjhwQ3YtQVhsaTQ4OGd4TElTcVZfV0s1ZXN3SHBmUjV1NHVHbEVSbXFWVV82SWpVblhGSm9sMEk?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOazV6Q242LXE0TVZZRV9wcXl4UmJlMHp2ZHMtX0h4RGlPeGlUbkhGQklJTDhuN0FKaFdzUUs3cS0zN1ZsTVR1Mk51M190NFFuVjdZekJVSjlXMXpuaDAwVGVaSl9LbnpKMWlmMG1YaUVOQ3lqTXl4ck5nZm94RlMxaFA2N091TUxyNWJCSkpLOER1TDAtRF94TWZ6NVNIM01lcWxvOUJaWTVHYUZ3WlJjSm16WWtUSldqcHdWOFNR?oc=5",
         "bucket": "variant"
       }
     ]
@@ -343,7 +343,7 @@
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 70,
+        "claimConfidence": 67,
         "evidencePassRate": 24
       },
       "conclusion": "insufficient-data",
@@ -358,7 +358,7 @@
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 70,
+        "claimConfidence": 67,
         "evidencePassRate": 24
       },
       "conclusion": "insufficient-data",
@@ -373,7 +373,7 @@
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 70,
+        "claimConfidence": 67,
         "evidencePassRate": 24
       },
       "conclusion": "insufficient-data",
@@ -381,6 +381,6 @@
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-23T05:07:17.019Z"
+    "previousUpdatedAt": "2026-09-23T12:04:16.618Z"
   }
 }
