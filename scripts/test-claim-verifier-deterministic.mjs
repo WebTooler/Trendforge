@@ -27,7 +27,10 @@ if(!verifierSmartSource.includes("const anchoredPassage=anchored.text;")) throw 
 if(!verifierSmartSource.includes("matchingMode:coreFactMatch?'fact-map-anchored-source-passage'")) throw new Error('Smart claim verifier must record fact-map anchored provenance.');
 if(!verifierSmartSource.includes("matchingMode:'fact-map-multi-fact-source-passage-synthesis'")) throw new Error('Smart claim verifier must support explicit multi-fact synthesis provenance.');
 if(!verifierSmartSource.includes('const compatibleFacts=factMatches.filter')) throw new Error('Smart claim verifier must compose multiple core facts for composite factual claims.');
-if(!verifierSmartSource.includes('const factCoverage=compatibleFacts.filter(f=>f.score>=45).length')) throw new Error('Smart claim verifier must aggregate compatible fact coverage before downgrading composite claims.');
+if(!verifierSmartSource.includes('const factCoverage=compatibleFacts.length')) throw new Error('Smart claim verifier must aggregate cross-source compatible fact coverage before downgrading composite claims.');
+if(!verifierSmartSource.includes('const numericConflict=A.size>0&&B.size>0')) throw new Error('Smart claim verifier must not treat every supporting fact missing the claim\'s other numbers as a numeric contradiction.');
+if(!verifierSmartSource.includes('const directFactExact=factMatches.find')) throw new Error('Smart claim verifier must recognize exact numeric facts through fact-level matching.');
+if(!verifierSmartSource.includes('const multiFactSupported=factCoverage>=2')) throw new Error('Smart claim verifier must recognize multi-fact supported claims.');
 if(!verifierSmartSource.includes('const directExact=nums(claim).size>0')) throw new Error('Smart claim verifier must preserve exact quantitative evidence matches.');
 if(!verifierSmartSource.includes('const multiFactSupported=factCoverage>=2')) throw new Error('Smart claim verifier must recognize multi-fact supported claims.');
 if(!verifierSmartSource.includes('provenanceFactMatches')) throw new Error('Smart claim verifier must persist multi-fact provenance for factual claims.');
