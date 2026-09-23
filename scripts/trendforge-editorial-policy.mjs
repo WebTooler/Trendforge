@@ -64,19 +64,31 @@ const mapMaterialSentencesToFacts=(sentences=[],factMap=null)=>{
  const facts=Array.isArray(factMap?.coreFacts)?factMap.coreFacts.filter(f=>f?.factId&&f?.text):[];
  const mappedFactIds=new Set(),unmapped=[];
  const tokenFactFrequency=new Map();
- for(const f of facts){for(const t of factTokens(f.text))tokenFactFrequency.set(t,(tokenFactFrequency.get(t)||0)+1);}
+ for(const f of facts)for(const t of factTokens(f.text))tokenFactFrequency.set(t,(tokenFactFrequency.get(t)||0)+1);
+ const scoreMatch=(sentence,f)=>{
+  const st=factTokens(sentence),ft=factTokens(f.text); if(!st.size||!ft.size)return null;
+  const shared=[...st].filter(x=>ft.has(x));
+  const uniqueShared=shared.filter(x=>(tokenFactFrequency.get(x)||0)===1);
+  const coverage=shared.length/Math.max(1,Math.min(st.size,ft.size));
+  const phrases=factPhraseOverlap(sentence,f.text);
+  const sn=factNumbers(sentence),fn=factNumbers(f.text);
+  const numericMismatch=sn.size>0&&[...sn].some(x=>!fn.has(x));
+  const numeric=[...sn].filter(x=>fn.has(x)).length;
+  const phraseStrength=Math.min(1,phrases/Math.max(1,Math.min(6,st.size-1)));
+  const score=Math.round(Math.min(100,coverage*52+Math.min(1,shared.length/5)*12+phraseStrength*16+Math.min(12,uniqueShared.length*4)+Math.min(8,numeric*4)));
+  return{factId:f.factId,score,shared:shared.length,uniqueShared:uniqueShared.length,coverage,phrases,numeric,numericMismatch};
+ };
  for(const sentence of sentences){
-  const st=factTokens(sentence); if(!st.size)continue; const sn=factNumbers(sentence);
-  const matches=facts.map(f=>{const ft=factTokens(f.text),shared=[...st].filter(x=>ft.has(x)).length;const uniqueShared=[...st].filter(x=>ft.has(x)&&(tokenFactFrequency.get(x)||0)===1).length;const coverage=shared/Math.max(1,Math.min(st.size,ft.size));const phrases=factPhraseOverlap(sentence,f.text);const fn=factNumbers(f.text),numeric=[...sn].filter(x=>fn.has(x)).length;const score=shared*1.5+uniqueShared*3+coverage*2+Math.min(3,phrases)*2+Math.min(2,numeric)*2;return{factId:f.factId,score,shared,uniqueShared,coverage,phrases,numeric};}).filter(x=>x.uniqueShared>0||x.numeric>0||(x.shared>=2&&x.phrases>=2)).sort((a,b)=>b.score-a.score);
-  if(matches.length){
-   const top=matches[0];
-   // A material sentence normally expresses one underlying evidence fact. Do not
-   // charge additional Fact IDs merely because generic words overlap with them.
-   // Only allow a second fact when it has an independent numeric or strong phrase anchor.
-   mappedFactIds.add(top.factId);
-   const secondary=matches.slice(1).filter(x=>x.score>=Math.max(7,top.score*0.8)&&x.uniqueShared>0&&(x.numeric>0||x.phrases>=2)).slice(0,2);
-   secondary.forEach(x=>mappedFactIds.add(x.factId));
-  } else unmapped.push(sentence);
+  const matches=facts.map(f=>scoreMatch(sentence,f)).filter(Boolean).filter(x=>!x.numericMismatch).sort((a,b)=>b.score-a.score);
+  const top=matches[0];
+  if(!top){unmapped.push(sentence);continue;}
+  const inference=/\\b(?:can|could|may|might|will|would|should|likely|expected|appears?|suggests?|implies?|influence|impact|cause|lead|result)\\b/i.test(sentence);
+  const strongDirect=top.score>=58&&(top.phrases>=1||top.uniqueShared>=2)&&top.coverage>=0.25;
+  const strongInference=top.score>=62&&top.phrases>=2&&top.uniqueShared>=2&&top.coverage>=0.30;
+  if(!(inference?strongInference:strongDirect)){unmapped.push(sentence);continue;}
+  mappedFactIds.add(top.factId);
+  const secondary=matches.slice(1).filter(x=>x.score>=Math.max(52,top.score-12)&&x.uniqueShared>=2&&x.phrases>=1&&x.coverage>=0.20).slice(0,2);
+  secondary.forEach(x=>mappedFactIds.add(x.factId));
  }
  return{distinctFactClaimCount:mappedFactIds.size,mappedFactIds:[...mappedFactIds],unmappedMaterialSentences:unmapped.length}
 };
