@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-22T21:38:35.047Z",
+  "updatedAt": "2026-09-23T05:07:17.019Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,7 +14,7 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 26,
+    "runs": 27,
     "topics": 381,
     "articles": 21
   },
@@ -344,7 +344,7 @@
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 72,
-        "evidencePassRate": 23
+        "evidencePassRate": 24
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -359,7 +359,7 @@
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 72,
-        "evidencePassRate": 23
+        "evidencePassRate": 24
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
@@ -374,13 +374,13 @@
       "outcomeMetrics": {
         "editorialScore": null,
         "claimConfidence": 72,
-        "evidencePassRate": 23
+        "evidencePassRate": 24
       },
       "conclusion": "insufficient-data",
       "confidence": "medium"
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-22T17:14:51.846Z"
+    "previousUpdatedAt": "2026-09-22T21:38:35.047Z"
   }
 }
