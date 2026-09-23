@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-23T18:01:51.830Z",
-  "runId": "35899042622",
-  "articlePath": "content/articles/youtube-unveils-ai-powered-tools-for-a-b-testing-dynamic-thumbnails-and-live-dubbing.md",
+  "generatedAt": "2026-09-23T18:34:41.077Z",
+  "runId": "35902619441",
+  "articlePath": "content/articles/bitcoin-and-ethereum-rally-to-8-month-peaks-amid-mixed-market-signals.md",
   "provider": "Groq",
-  "previousTitle": "YouTube Unveils AI‑Powered Tools for A/B Testing, Dynamic Thumbnails, and Live Dubbing",
-  "newTitle": "YouTube Unveils AI‑Powered Tools for A/B Testing, Dynamic Thumbnails, and Live Dubbing",
-  "briefTitle": "YouTube adds new creator tools like video A/B testing, dynamic thumbnails, and live dubbing",
-  "evidenceClaims": 27,
-  "failedClaims": 7,
-  "evidenceChars": 7794,
-  "mode": "atomic-sentence-repair-v11-rewrite-narrow-delete-isolated-recovery",
+  "previousTitle": "Bitcoin and Ethereum Rally to 8‑Month Peaks Amid Mixed Market Signals",
+  "newTitle": "Bitcoin and Ethereum Rally to 8‑Month Peaks Amid Mixed Market Signals",
+  "briefTitle": "Bitcoin and ethereum prices today, Wednesday, September 23, 2026: Crypto prices open near 8-month highs. Is the crypto winter over? - Yahoo Finance",
+  "evidenceClaims": 21,
+  "failedClaims": 6,
+  "evidenceChars": 6196,
+  "mode": "atomic-sentence-repair-v11-surgical-rewrite-narrow-delete-isolated-recovery",
   "repairOrder": [
     "rewrite",
     "narrow",
@@ -19,14 +19,14 @@
   "maxRecoveryPasses": 1,
   "recoveryWaitMs": 15000,
   "providerAttempts": 4,
-  "appliedRepairs": 1,
+  "appliedRepairs": 3,
   "rewriteOrNarrowRepairs": 1,
-  "deletedSentences": 0,
+  "deletedSentences": 2,
   "wordCountValidation": {
-    "before": 645,
-    "after": 630,
-    "minimum": 540,
-    "depthMode": "rich",
-    "preservedFloor": true
+    "before": 445,
+    "after": 416,
+    "minimum": 425,
+    "depthMode": "bounded",
+    "preservedFloor": false
   }
 }
