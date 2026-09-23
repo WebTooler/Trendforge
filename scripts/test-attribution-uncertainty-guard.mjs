@@ -10,5 +10,8 @@ assert.equal(assessAttributionUncertainty(escalated,uncertain).certaintyEscalati
 assert.equal(assessAttributionUncertainty(escalated,uncertain).blocked,true);
 assert.equal(assessAttributionUncertainty(preserved,uncertain).blocked,false);
 assert.equal(assessAttributionUncertainty(plain,'The company launched the model in London on Tuesday.').blocked,false);
+const attributedCertainty='The company frames Truth PSI as part of a broader effort to generate new revenue.';
+const mixedEvidence='Critics said the service raised concerns about conflicts of interest. The company says Truth PSI is part of a broader effort to generate new revenue.';
+assert.equal(assessAttributionUncertainty(attributedCertainty,mixedEvidence).blocked,false);
 
 console.log('Phase 6 attribution + uncertainty guard tests passed.');
