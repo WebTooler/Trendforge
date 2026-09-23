@@ -34,7 +34,26 @@ const latestArticle=()=>{
   return articlePath;
 };const parseJson=raw=>{const t=String(raw).trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'');for(const x of [t,(()=>{const a=t.indexOf('{'),b=t.lastIndexOf('}');return a>=0&&b>a?t.slice(a,b+1):''})()]){if(!x)continue;try{return JSON.parse(x)}catch{}}throw new Error('Atomic repair output was not valid JSON');};
 const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle)return{body,changed:false,deleted:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false,deleted:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true,deleted:!rep};};
-const resolveClaimSentence=(body,claim)=>{const target=String(claim||'').trim();if(!target)return'';if(body.includes(target))return target;const escaped=target.replace(/[.*+?^${}()|[\]\\]/g,'\\const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle)return{body,changed:false,deleted:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false,deleted:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true,deleted:!rep};};');const m=body.match(new RegExp(`[^.!?\\n]*${escaped}[^.!?]*(?:[.!?]|$)`));return m?.[0]?.trim()||'';};
+const resolveClaimSentence=(body,claim)=>{
+ const target=String(claim||'').trim();
+ if(!target)return'';
+ if(body.includes(target))return target;
+ const sentences=String(body).match(/[^.!?\\n]+[.!?]+|[^.!?\\n]+$/g)||[];
+ const norm=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+ const nt=norm(target);
+ const exact=sentences.find(s=>norm(s).includes(nt)||nt.includes(norm(s)));
+ if(exact)return exact.trim();
+ const targetTokens=[...new Set(nt.split(/\\s+/).filter(x=>x.length>=4))];
+ if(targetTokens.length<4)return'';
+ let best='',bestScore=0;
+ for(const sentence of sentences){
+   const st=new Set(norm(sentence).split(/\\s+/).filter(x=>x.length>=4));
+   const shared=targetTokens.filter(x=>st.has(x)).length;
+   const score=shared/Math.max(1,targetTokens.length);
+   if(shared>=4&&score>bestScore){bestScore=score;best=sentence.trim();}
+ }
+ return bestScore>=0.6?best:'';
+};
 const beginRepairBudget=()=>{let original=null;try{const raw=JSON.parse(fs.readFileSync(aiBudgetPath,'utf8'));if(raw?.runKey===runKey&&Number.isFinite(raw?.attempts))original=raw;}catch{}fs.mkdirSync('data',{recursive:true});fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-pass'},null,2)+'\n');console.log(`Grounding repair v11: isolated repair budget from writer budget for run ${runKey}.`);return original;};
 const resetRepairProviderBudget=()=>{fs.mkdirSync('data',{recursive:true});fs.writeFileSync(repairProviderBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-recovery-pass'},null,2)+'\n');};
 const restoreWriterBudget=original=>{if(original){fs.writeFileSync(aiBudgetPath,JSON.stringify(original,null,2)+'\n');console.log(`Grounding repair v11: restored writer AI budget (${original.attempts} attempt(s)).`);}else{fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString()},null,2)+'\n');}};
@@ -114,12 +133,13 @@ async function main(){
       let uncoveredTargets=repairTargets.filter(target=>updatedBody.includes(target));
       if(uncoveredTargets.length){
         if(REPAIR_PASS==='surgical'){
+          console.log(`Grounding repair v11 (surgical): deleting ${uncoveredTargets.length} unsupported target sentence(s) left unchanged by provider.`);
           for(const target of uncoveredTargets){
             const result=replaceSentence(updatedBody,target,'');
             if(result.changed){updatedBody=result.body;applied++;deleted++;}
           }
           uncoveredTargets=repairTargets.filter(target=>updatedBody.includes(target));
-          if(uncoveredTargets.length) throw new Error(`Surgical repair left ${uncoveredTargets.length} unsupported target sentence(s) unchanged.`);
+          if(uncoveredTargets.length) throw new Error(`Surgical repair left ${uncoveredTargets.length} unsupported target sentence(s) unchanged after deletion.`);
         }else{
           throw new Error(`Atomic repair did not cover all unsupported claims; ${uncoveredTargets.length} target sentence(s) remain unchanged.`);
         }
