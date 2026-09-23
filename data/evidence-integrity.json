@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "generatedAt": "2026-09-23T18:46:57.131Z",
+  "generatedAt": "2026-09-23T18:57:27.001Z",
   "minimumStrongSources": 2,
   "minimumStrongPublisherFamilies": 2,
   "minimumStrongDomains": 2,
@@ -43,18 +43,22 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOQUtBUUh0T3ZmSDBDcTdjZ0tZcFlDMThDd0hhNXhsT1JkNHdraDlhOXhHbmhXOU5IYkxtMzZsY05NQ3hsRTZHSWl0Skx4eGlhdVlKZDlhbHgwQ1RpcWVzTUtCb250UjFJcGU5eHRtZ1hrUWx4S0VDNTVodU5iOUhkODh2MjNiZXE2cWw1amxGWEtlb1NEMVRZUjZlR08tS0lNd1hCWURmaEtNWkpMclRZZkZVS1VuYUpicWhPQWdnVDh2M2h6eG5lVW1FLXMxY215S0h1U1RhS2ZmcnRRNUQtYno1QnVjcXRGQVZBcFZ6Mm94Y1ozeFVVRHJB?oc=5",
-      "title": "Microsoft strengthens its commitment to the Middle East by investing in technology, digital resilience, and people - The Official Microsoft Blog",
+      "title": "Microsoft strengthens its commitment to the Middle East by investing in technology, digital resilience, and people - blogs.microsoft.com",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "validSourceCount": 4,
+      "independentPublisherCount": 4,
       "independentPublisherFamilies": [
         "microsoft.com",
-        "tradingview.com"
+        "tradingview.com",
+        "unite.ai",
+        "securities.io"
       ],
       "independentDomains": [
         "blogs.microsoft.com",
-        "tradingview.com"
+        "tradingview.com",
+        "unite.ai",
+        "securities.io"
       ],
       "sources": [
         {
@@ -82,10 +86,67 @@
           "canonical": "https://stocktwits.com/news-articles/markets/equity/microsoft-commits-more-than-10-b-to-middle-east-through-2030-what-investors-need-to-know/cZM4RzdRBBT",
           "bodyChars": 3083,
           "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.unite.ai/microsoft-announces-middle-east-framework-with-ai-and-cloud-buildout/",
+          "domain": "unite.ai",
+          "publisherFamily": "unite.ai",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.unite.ai/microsoft-announces-middle-east-framework-with-ai-and-cloud-buildout/",
+          "pageTitle": "Microsoft Announces Middle East Framework With AI and Cloud Buildout &#8211; Unite.AI",
+          "canonical": "https://www.unite.ai/microsoft-announces-middle-east-framework-with-ai-and-cloud-buildout/",
+          "bodyChars": 7892,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.securities.io/microsoft-plans-more-than-10-billion-in-middle-east-investment/",
+          "domain": "securities.io",
+          "publisherFamily": "securities.io",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.securities.io/microsoft-plans-more-than-10-billion-in-middle-east-investment/",
+          "pageTitle": "Microsoft Plans More Than $10 Billion in Middle East Investment &#8211; Securities.io",
+          "canonical": "https://www.securities.io/microsoft-plans-more-than-10-billion-in-middle-east-investment/",
+          "bodyChars": 8646,
+          "topicOverlap": 7
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN3lYcDJJTVZBbnU3VFdXUDJZOFF3UjJpdTVudHNHUEgzb21mRG5QSHA1LVdnWk1Lem90VGhmTUtwVTExVTBLWDUxaERkUnU1QTNSWGJ4TWJLOGxsa3F5U2hUbkdIV1R0em9VeEV1Rko5dXd3SktFSWxiMEpZWjR5OW4wQVVRdzN3TXA5SzJodmVjd2g4WUhVdWpnU1g5ZmZtekFmUzFaNWQ4dkpiNlFXSzM5MFVTd9IBuwFBVV95cUxPTHZiRWxZVUFxdkk4WWR5aE03SXVXQndtZFlxSFJ0SUs2bFpWOXpaZ19BNTB5aFNHNGF1eHJEX3RKZldxZF95M29saExWb19ydFBad1p4TkduaE5fNjZCWEg0eExfcktrNjBuaU9ha0pxb0dGUXNlanU0ZUlNWlhKU0lPQTFra3dlWmxGVjRrcTZiSWVjZEotWUJMdkNWSzQyMVk4cmItTFo1ckFPLW1sM3AzX0dfQ09MaXMw?oc=5",
+      "title": "Sen. Bernie Sanders unveils bill to ban artificial superintelligence and create Department of AI - ABC News - Breaking News, Latest News and Videos",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "abcnews.com"
+      ],
+      "independentDomains": [
+        "abcnews.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://abcnews.com/Technology/wireStory/sen-bernie-sanders-unveils-bill-ban-artificial-superintelligence-136676811",
+          "domain": "abcnews.com",
+          "publisherFamily": "abcnews.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://abcnews.com/Technology/wireStory/sen-bernie-sanders-unveils-bill-ban-artificial-superintelligence-136676811",
+          "pageTitle": "Sen. Sanders unveils bill to ban artificial superintelligence, create Dept. of AI - ABC News",
+          "canonical": "https://abcnews.com/Technology/wireStory/sen-bernie-sanders-unveils-bill-ban-artificial-superintelligence-136676811",
+          "bodyChars": 11418,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQN1ZQOHJtNldtX1NieUVvT0JqbHMyUTVkcHpWNHZNM1dpcnBzRlcyRmJid0FKMTFxSjdGVUZEX296Z3ZUWHNRS2VIYkRMM1JWNU50QWpNa2FST0NqZ0dGWldxWWE0RjZoVGY1R3FMRUxyeFVpaGVmV0xDODBHQkNfS0NteDFTYzdfY1BUYi1nZE8ycF9xOXVMMkZ1SUhzbU1YbUx5LWpLWURuZ0R3a1pWWXJQNU41YXViRUE?oc=5",
@@ -524,64 +585,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRFgzaTZudUxoaXQ0TFAxVDRVdDEtZmR3MWVaYkVaeG9nUGhVLTlxbGpFY1FJQTlucHFjbmxJTTl1OEFFNTFkckQ5akprN1BZRzRHcWNWdVM4RVg3NXBIYk5pN0tkb2lna3UzR0drMXNqUUFnbk5xMi16NTV0SE1VdnpITHRobnZHR2lacEFsZVBWZmVlRzZzNjl3bHJPMUNFSndfOHN2Yw?oc=5",
-      "title": "NYSE and Blockchain.com to explore selling tokenised stocks - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RK:0-nyse-and-blockchain-com-to-explore-selling-tokenised-stocks/",
-          "domain": "tradingview.com",
-          "publisherFamily": "tradingview.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RK:0-nyse-and-blockchain-com-to-explore-selling-tokenised-stocks/",
-          "pageTitle": "NYSE and Blockchain.com to explore selling tokenised stocks — TradingView News",
-          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RK:0-nyse-and-blockchain-com-to-explore-selling-tokenised-stocks/",
-          "bodyChars": 344,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNRE5kNUdxZVExMV9UcGpyOEV0ampsTVZWYlg3WW5VTC15Mm9ralAybkFzelVTR1FnNlhiWkhQeTAyNjlPWXVVckx0blJtUlV4US1PUWl0bzBxNXVxcXpQandXNzNXa1h0TE1pTllYZkJXaWJrMXZjckY1RFk4c1l0M0lUbkNVQnQ2M0JNV1JHT3ZiSXFSclVGX1ZnNjZFb01kMjlVZGthWTZSaWtyS1FjdjhBZlRQYjk0MTNkVHB3UjBiSWZNSjdnaEpWejZkSVJ2RmJmbk5pVm9ab1E?oc=5",
-      "title": "Blockchain.com and NYSE Partner to Explore Global, 24/7/365 Trading of Tokenized Securities - PR Newswire",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "prnewswire.com"
-      ],
-      "independentDomains": [
-        "prnewswire.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.prnewswire.com/news-releases/blockchaincom-and-nyse-partner-to-explore-global-247365-trading-of-tokenized-securities-302887041.html",
-          "domain": "prnewswire.com",
-          "publisherFamily": "prnewswire.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.prnewswire.com/news-releases/blockchaincom-and-nyse-partner-to-explore-global-247365-trading-of-tokenized-securities-302887041.html",
-          "pageTitle": "Blockchain.com and NYSE Partner to Explore Global, 24/7/365 Trading of Tokenized Securities",
-          "canonical": "https://www.prnewswire.com/news-releases/blockchaincom-and-nyse-partner-to-explore-global-247365-trading-of-tokenized-securities-302887041.html",
-          "bodyChars": 3683,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/",
       "title": "ChatGPT mobile app gets voice-based agentic features",
       "status": "pass",
@@ -718,6 +721,33 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRFgzaTZudUxoaXQ0TFAxVDRVdDEtZmR3MWVaYkVaeG9nUGhVLTlxbGpFY1FJQTlucHFjbmxJTTl1OEFFNTFkckQ5akprN1BZRzRHcWNWdVM4RVg3NXBIYk5pN0tkb2lna3UzR0drMXNqUUFnbk5xMi16NTV0SE1VdnpITHRobnZHR2lacEFsZVBWZmVlRzZzNjl3bHJPMUNFSndfOHN2Yw?oc=5",
+      "title": "NYSE and Blockchain.com to explore selling tokenised stocks - Reuters",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RK:0-nyse-and-blockchain-com-to-explore-selling-tokenised-stocks/",
+          "domain": "tradingview.com",
+          "publisherFamily": "tradingview.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RK:0-nyse-and-blockchain-com-to-explore-selling-tokenised-stocks/",
+          "pageTitle": "NYSE and Blockchain.com to explore selling tokenised stocks — TradingView News",
+          "canonical": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N45E0RK:0-nyse-and-blockchain-com-to-explore-selling-tokenised-stocks/",
+          "bodyChars": 344,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOX3BIQ1VLZG1pVXRhamp5czg4VUt1UDZ2ZXQxUzNGLWxyd1RmdTM5ZVhMZF9LaUhodVhkeXRCcXhHRUJmVk1yME9BUzFuaUFjaVFCSUpSOTBEUFdPME5qY2V2SGpqSUtzSlZ2bkZ4WlNDTHhfa0hYMl9QVHdETVRhZi0yaTNhdlRhLU9VZ2ZoV0d4bkpRTUtldkx3ZV8xcklJMWd4cF9QRjBEd2hySnJrQXZxUTJSYk9IRWdCdFRBa0c3RGNGQlRJN3hsd1dxRlZCcjJmMGtwUQ?oc=5",
@@ -870,6 +900,68 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZGxNa3VKWlNrT0w2WWMyYkFvOEtLc0VEYWZBczNOdlJvMnBLNkQybnhWTUxWaFNpY3pkaTQxV3lNLTFEdllFT0VFMFo1SjNBRDFlVXRHWHNOTFJTc2NrSXhjTHNxTDBSc2hGQ2g5TkZ5NV94anQ5a3I1aTRnb1E1dW9GczZram9MWnljWURzNURfYlREcDFV?oc=5",
+      "title": "ETSU and Northeast State expand radiologic technology pathway - East Tennessee State University",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "etsu.edu"
+      ],
+      "independentDomains": [
+        "news.etsu.edu"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://news.etsu.edu/articles/etsu-and-northeast-state-expand-radiologic-technology-pathway",
+          "domain": "news.etsu.edu",
+          "publisherFamily": "etsu.edu",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://news.etsu.edu/articles/etsu-and-northeast-state-expand-radiologic-technology-pathway",
+          "pageTitle": "ETSU and Northeast State expand radiologic technology pathway - ETSU News",
+          "canonical": "",
+          "bodyChars": 2851,
+          "topicOverlap": 8
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR2txb3RqODJqWDBDLUdGUTdTbVJSZEdyNDhMd1g2OWV2RjQtRVBPcTR3VE5kZU9wc2pDc3pvVWxIUnhleXQtQ3lERGdadV95RmxQSUxOaFJJZWp1NFk5cGRiS2xtN01GTUdkNjFIcUxUVnhUZThkSDJTS3c4emVIXzFzT2JnZ0E?oc=5",
+      "title": "Trump Cites National Security as He Faces Pushback on Press Ban, D.C. Arch and More - The New York Times",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "inkl.com"
+      ],
+      "independentDomains": [
+        "inkl.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.inkl.com/news/wolff-says-white-house-aides-are-nearly-in-rebellion-as-trump-faces-ai-and-midterm-pushback-from-allies",
+          "domain": "inkl.com",
+          "publisherFamily": "inkl.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.inkl.com/news/wolff-says-white-house-aides-are-nearly-in-rebellion-as-trump-faces-ai-and-midterm-pushback-from-allies",
+          "pageTitle": "Wolff Says White House Aides Are 'Nearly' in Rebellion…",
+          "canonical": "https://www.inkl.com/news/wolff-says-white-house-aides-are-nearly-in-rebellion-as-trump-faces-ai-and-midterm-pushback-from-allies",
+          "bodyChars": 4927,
+          "topicOverlap": 12
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1jLUktUmJUY0FmVTVjRW9FY0xrSUduamF0V0dOTC12MEUtb0UzR05hMHhYanFPVlpFYTE3NFFlb1g3SThQSVNhcktPTWVkYTRpdXNaUGxjWQ?oc=5",
@@ -1087,24 +1179,20 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWVhwTzJISXlxS3ZoMnAxRzVyZzJkSUVpMTg0aWpLaDl5Z1FKVjUxOGhobEppam1pdkRiUEdHNElFR0hWZzlUdWFvY2V0NXBMc2VRbVVZOUxfTWNkOWVpYjdMc1V4aG9PMTEzYmk3TmlnRGVFZWpMdzBhQVFWVmRQYzBTblMzZkxtclRPVWVNZlZHNDJtTklQRjZHV1ZMSkZOT0FxNUIzNjBlaUxwVTc2SDE1aTNjenl1UG1rdA?oc=5",
-      "title": "White House claims national security concerns behind press access ban - Scripps News",
+      "title": "White House claims national security concerns behind press access ban - scrippsnews.com",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 5,
-      "independentPublisherCount": 5,
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
       "independentPublisherFamilies": [
         "scrippsnews.com",
         "pbs.org",
-        "aol.com",
-        "san.com",
-        "jamaicaobserver.com"
+        "aol.com"
       ],
       "independentDomains": [
         "scrippsnews.com",
         "pbs.org",
-        "aol.com",
-        "san.com",
-        "jamaicaobserver.com"
+        "aol.com"
       ],
       "sources": [
         {
@@ -1131,20 +1219,7 @@
           "pageTitle": "White House claims national security concerns behind press access ban",
           "canonical": "https://www.scrippsnews.com/videos/politics/the-president/white-house-claims-national-security-concerns-behind-press-access-ban",
           "bodyChars": 0,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://www.yahoo.com/news/videos/doj-defends-white-house-media-133649096.html",
-          "domain": "yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.yahoo.com/news/videos/doj-defends-white-house-media-133649096.html",
-          "pageTitle": "DOJ defends White House media ban, says access is 'a privilege, not a right'",
-          "canonical": "https://www.yahoo.com/news/videos/doj-defends-white-house-media-133649096.html",
-          "bodyChars": 222,
-          "topicOverlap": 8
+          "topicOverlap": 9
         },
         {
           "suppliedUrl": "https://www.pbs.org/newshour/show/trump-says-hes-banning-3-outlets-from-white-house-in-his-latest-attack-on-press-freedom",
@@ -1171,32 +1246,6 @@
           "canonical": "https://www.mediaite.com/media/news/trump-administration-cites-national-security-and-bad-vibes-to-justify-press-ban/",
           "bodyChars": 2008,
           "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://san.com/cc/ap-sues-trump-to-force-white-house-access-following-gulf-of-america-row/",
-          "domain": "san.com",
-          "publisherFamily": "san.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://san.com/cc/ap-sues-trump-to-force-white-house-access-following-gulf-of-america-row/",
-          "pageTitle": "AP sues Trump to force White House access following &#039;Gulf of America&#039; row",
-          "canonical": "https://san.com/cc/ap-sues-trump-to-force-white-house-access-following-gulf-of-america-row/",
-          "bodyChars": 10326,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://www.jamaicaobserver.com/2018/11/14/media-groups-including-fox-back-cnn-over-white-house-access/",
-          "domain": "jamaicaobserver.com",
-          "publisherFamily": "jamaicaobserver.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.jamaicaobserver.com/2018/11/14/media-groups-including-fox-back-cnn-over-white-house-access/",
-          "pageTitle": "Media groups including Fox back CNN over White House access - Jamaica Observer",
-          "canonical": "https://www.jamaicaobserver.com/2018/11/14/media-groups-including-fox-back-cnn-over-white-house-access/",
-          "bodyChars": 3545,
-          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -1263,6 +1312,37 @@
           "canonical": "https://fortune.com/article/price-of-bitcoin-09-23-2026/",
           "bodyChars": 6479,
           "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUkhIbURJQ0VQTTA1Z016RFotUWZFZGZKV29Ta3h0YTRtQm5YV3ItV3V1OVJnemJJdTRtcXJJV3F0T1RzSUxrMXdoSnZLLVVLU1cwaDU3cm9JUTZHTjhINFpxSTV0eXNzbTl2aGhlbktnS2RpUUJPb3pocE5PSHowUjRJWWtHVHpFT0xHdGdCUEVuMlJ1OGdlamRQSklaVjV6Wm9HZVZRTHFodWk0OTFPWW1NRGlZeXYyczBXUkhIaWFDUnczN0E?oc=5",
+      "title": "Bitcoin trades near $85,000 ahead of one of deribit’s largest options expiries of the year - CoinDesk",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "coindesk.com"
+      ],
+      "independentDomains": [
+        "coindesk.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-usd16-billion-quarterly-options-settlement-arrives-with-a-call-heavy-book",
+          "domain": "coindesk.com",
+          "publisherFamily": "coindesk.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-usd16-billion-quarterly-options-settlement-arrives-with-a-call-heavy-book",
+          "pageTitle": "Bitcoin trades near $85,000 ahead of one of deribit’s largest options expiries of the year",
+          "canonical": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-usd16-billion-quarterly-options-settlement-arrives-with-a-call-heavy-book",
+          "bodyChars": 5404,
+          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -1556,21 +1636,21 @@
       "independentPublisherCount": 7,
       "independentPublisherFamilies": [
         "techcrunch.com",
+        "gadgetreview.com",
         "innovation-village.com",
         "memeburn.com",
         "techbuzz.ai",
         "androidpolice.com",
-        "theverge.com",
-        "theguardian.com"
+        "theverge.com"
       ],
       "independentDomains": [
         "techcrunch.com",
+        "gadgetreview.com",
         "innovation-village.com",
         "memeburn.com",
         "techbuzz.ai",
         "androidpolice.com",
-        "theverge.com",
-        "theguardian.com"
+        "theverge.com"
       ],
       "sources": [
         {
@@ -1585,6 +1665,19 @@
           "canonical": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
           "bodyChars": 3922,
           "topicOverlap": 3
+        },
+        {
+          "suppliedUrl": "https://www.gadgetreview.com/youtubes-custom-feeds-let-you-tell-gemini-exactly-what-you-want-to-watch",
+          "domain": "gadgetreview.com",
+          "publisherFamily": "gadgetreview.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.gadgetreview.com/youtubes-custom-feeds-let-you-tell-gemini-exactly-what-you-want-to-watch",
+          "pageTitle": "YouTube&#039;s Custom Feeds Let You Tell Gemini Exactly What You Want to Watch - Gadget Review",
+          "canonical": "https://www.gadgetreview.com/youtubes-custom-feeds-let-you-tell-gemini-exactly-what-you-want-to-watch",
+          "bodyChars": 4714,
+          "topicOverlap": 10
         },
         {
           "suppliedUrl": "https://innovation-village.com/youtube-lets-users-build-custom-ai-video-feeds/",
@@ -1663,19 +1756,6 @@
           "canonical": "https://www.theverge.com/streaming/938759/youtube-custom-ai-feed-prompt-availability",
           "bodyChars": 2901,
           "topicOverlap": 6
-        },
-        {
-          "suppliedUrl": "https://www.theguardian.com/technology/2025/dec/27/more-than-20-of-videos-shown-to-new-youtube-users-are-ai-slop-study-finds",
-          "domain": "theguardian.com",
-          "publisherFamily": "theguardian.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theguardian.com/technology/2025/dec/27/more-than-20-of-videos-shown-to-new-youtube-users-are-ai-slop-study-finds",
-          "pageTitle": "More than 20% of videos shown to new YouTube users are ‘AI slop’, study finds | AI (artificial intelligence) | The Guardian",
-          "canonical": "https://www.theguardian.com/technology/2025/dec/27/more-than-20-of-videos-shown-to-new-youtube-users-are-ai-slop-study-finds",
-          "bodyChars": 6979,
-          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
@@ -1713,37 +1793,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN3lYcDJJTVZBbnU3VFdXUDJZOFF3UjJpdTVudHNHUEgzb21mRG5QSHA1LVdnWk1Lem90VGhmTUtwVTExVTBLWDUxaERkUnU1QTNSWGJ4TWJLOGxsa3F5U2hUbkdIV1R0em9VeEV1Rko5dXd3SktFSWxiMEpZWjR5OW4wQVVRdzN3TXA5SzJodmVjd2g4WUhVdWpnU1g5ZmZtekFmUzFaNWQ4dkpiNlFXSzM5MFVTd9IBuwFBVV95cUxPTHZiRWxZVUFxdkk4WWR5aE03SXVXQndtZFlxSFJ0SUs2bFpWOXpaZ19BNTB5aFNHNGF1eHJEX3RKZldxZF95M29saExWb19ydFBad1p4TkduaE5fNjZCWEg0eExfcktrNjBuaU9ha0pxb0dGUXNlanU0ZUlNWlhKU0lPQTFra3dlWmxGVjRrcTZiSWVjZEotWUJMdkNWSzQyMVk4cmItTFo1ckFPLW1sM3AzX0dfQ09MaXMw?oc=5",
-      "title": "Sen. Bernie Sanders unveils bill to ban artificial superintelligence and create Department of AI - ABC News - Breaking News, Latest News and Videos",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "abcnews.com"
-      ],
-      "independentDomains": [
-        "abcnews.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://abcnews.com/Technology/wireStory/sen-bernie-sanders-unveils-bill-ban-artificial-superintelligence-136676811",
-          "domain": "abcnews.com",
-          "publisherFamily": "abcnews.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://abcnews.com/Technology/wireStory/sen-bernie-sanders-unveils-bill-ban-artificial-superintelligence-136676811",
-          "pageTitle": "Sen. Sanders unveils bill to ban artificial superintelligence, create Dept. of AI - ABC News",
-          "canonical": "https://abcnews.com/Technology/wireStory/sen-bernie-sanders-unveils-bill-ban-artificial-superintelligence-136676811",
-          "bodyChars": 11418,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOd2ZZMkRQNzU3RE1VT1MyWkVhaWdSWm1MVzMtZHQ5cVAxSElEaDFTVWhDUkVkLXFNaWk1YjBpX0NjZlZDdFFUYXZJbU5LanBZWUVGVnA2WGFNZ2YtbW1JcGNDeXNGcEZ0ZU9RSVFpUW90WVVIdHRFYVplcGlXNXZ6aTdtWk9FdzRGYXliRWUtZUZiTlNQLXdMOGZaczNxalZ5bzZYc1NlWFhySjRQSXVEeHdtUGVwRVM5cGVYRDY4eHo4aVQ5UFg5MUd4OE1GQ2Q5Z0szeEZZeDhyQQ?oc=5",
       "title": "Velo3D Strengthens Technology and Operations Leadership to Advance Production at Scale - PR Newswire",
       "status": "pass",
@@ -1769,83 +1818,6 @@
           "canonical": "https://www.prnewswire.com/news-releases/velo3d-strengthens-technology-and-operations-leadership-to-advance-production-at-scale-302886998.html",
           "bodyChars": 5146,
           "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUDkwczlxNl9hb1RFTEN1U3NPb3Z5YzEwX0RXczhGeWZEUnp3c2trTFRZVUJqbjN5MlNYa2lEVDFkVkpSdVJod0s0UkNjMWVqVTBEZU9TTXVabnUxb3NsZnROQllsdzBHNG5ROFJ0aXpNVjZMSnVubm9iMXZVM1ZsWU53V3M0c0pRSXF5aG1VdE1nZEt3N1p5eGZxTlBzZkFndXk5dXB3OUpiaExGWW55cEZ5V2d5aWpVVDMxLTBaU054Mi15em5KelBVY0FTaXlF?oc=5",
-      "title": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need. - The GitHub Blog",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "github.blog",
-        "thenewstack.io"
-      ],
-      "independentDomains": [
-        "github.blog",
-        "thenewstack.io"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
-          "domain": "github.blog",
-          "publisherFamily": "github.blog",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
-          "pageTitle": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need. - The GitHub Blog",
-          "canonical": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
-          "bodyChars": 11565,
-          "topicOverlap": 11
-        },
-        {
-          "suppliedUrl": "https://thenewstack.io/github-copilot-token-billing/",
-          "domain": "thenewstack.io",
-          "publisherFamily": "thenewstack.io",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://thenewstack.io/github-copilot-token-billing/",
-          "pageTitle": "GitHub Copilot&#039;s usage-based billing is live: Here&#039;s what you need to know - The New Stack",
-          "canonical": "https://thenewstack.io/github-copilot-token-billing/",
-          "bodyChars": 10832,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQb2F1RExYZEdtYmt6RFIzMkp2TlM0MV82VUtPU3FDa0ZLT0ZVRjNYSjh1ZDJSbUNKTElRT1Utc2RNYU5sVnUtUEoxdllYQ1J0S3h4Q3hkU1hIbEV0THRsRUltSndPbjBPdF9OMFlkaGlNRGc3cmVuMDI1S0VrdVp2cWZfZzlYMlhnR1ZMWEoxWk1ma1lfZHc?oc=5",
-      "title": "Cycode Extends DevSecOps Reach to Software Packages Developers Download - DevOps.com",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "devops.com"
-      ],
-      "independentDomains": [
-        "devops.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://devops.com/cycode-extends-devsecops-reach-to-software-packages-developers-download/",
-          "domain": "devops.com",
-          "publisherFamily": "devops.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://devops.com/cycode-extends-devsecops-reach-to-software-packages-developers-download/",
-          "pageTitle": "Cycode Extends DevSecOps Reach to Software Packages Developers Download - DevOps.com",
-          "canonical": "https://devops.com/cycode-extends-devsecops-reach-to-software-packages-developers-download/",
-          "bodyChars": 4880,
-          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -2145,6 +2117,111 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxONTByR0lyeVpMQ2pucHVQWWh2bnJyYlo1Qnh2ZGY4S1RTeDV6MkJOQ3BmWUtGbkRKZXJZWDNxaldKTHozcWNRc3FGd2ZDamN2OExvcVJXUGxxaDI5bnc1dndFQVA2bDhlaUFuSjJ6Mkg3M2FjLVhJUDV5aHFZRjhJRFBobV9lS2dzeFJaZE5tYVVzTGZRVmJKOUJiVkVaOTRNaUE?oc=5",
+      "title": "Ondas Acquires Three Defense Technology Businesses to Expand Its Integrated Autonomous Defense Systems Platform - ir.ondas.com",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "ondas.com",
+        "newswire.com"
+      ],
+      "independentDomains": [
+        "ir.ondas.com",
+        "newswire.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://ir.ondas.com/press-releases/detail/329/ondas-acquires-three-defense-technology-businesses-to",
+          "domain": "ir.ondas.com",
+          "publisherFamily": "ondas.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://ir.ondas.com/press-releases/detail/329/ondas-acquires-three-defense-technology-businesses-to",
+          "pageTitle": "Ondas Acquires Three Defense Technology Businesses to Expand Its Integrated Autonomous Defense Systems Platform :: Ondas Inc. (ONDS)",
+          "canonical": "https://ir.ondas.com/press-releases/detail/329/ondas-acquires-three-defense-technology-businesses-to",
+          "bodyChars": 11082,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://www.newswire.com/news/ondas-acquires-bird-aerosystems-to-expand-airborne-missile-protection-and-isr",
+          "domain": "newswire.com",
+          "publisherFamily": "newswire.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.newswire.com/news/ondas-acquires-bird-aerosystems-to-expand-airborne-missile-protection-and-isr",
+          "pageTitle": "Ondas Acquires BIRD Aerosystems to Expand Airborne Missile Protection and ISR Capabilities | Newswire",
+          "canonical": "https://www.newswire.com/news/ondas-acquires-bird-aerosystems-to-expand-airborne-missile-protection-and-isr",
+          "bodyChars": 11383,
+          "topicOverlap": 10
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVVVPZ25iZ0tTc1VDRTdTZk1MSVV0WFpkUkZ0dldvVEFiNEhfcVNqNXhvSUdGQUVTUkg3NDlCWk90ZU12WlZaTnJBTXlkNmxOUGpmV0RBWnlKR04wRHh0ajhySVhzTGtEaUExbC1FTnhQMVUxemcyU2hmTVFoQkJ5ay1Bbmk4ajFldDJ0NnByWktncGwxTUZz0gGcAUFVX3lxTE9IVXNvNHNuellIYjNtQ1k4Vkp4Z2pZc3VFeW5zTjZZaWxDazZJN29vckdFc2RvQ2w4b3QyeW9ncmJPME5jejZGdjRsUjFUWS0yZzE1a3JYNTI0Um5IYjJId2x3VXJpSDBGUkJaZWtwNWd1dHBFR0V1Zy1ta25Ud0EtNnA2R1pYYXZJa1l1LTlUSFlFMjhVZkVNU1RoVg?oc=5",
+      "title": "NESCC and ETSU sign radiologic technology pathway agreement - WJHL",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUDkwczlxNl9hb1RFTEN1U3NPb3Z5YzEwX0RXczhGeWZEUnp3c2trTFRZVUJqbjN5MlNYa2lEVDFkVkpSdVJod0s0UkNjMWVqVTBEZU9TTXVabnUxb3NsZnROQllsdzBHNG5ROFJ0aXpNVjZMSnVubm9iMXZVM1ZsWU53V3M0c0pRSXF5aG1VdE1nZEt3N1p5eGZxTlBzZkFndXk5dXB3OUpiaExGWW55cEZ5V2d5aWpVVDMxLTBaU054Mi15em5KelBVY0FTaXlF?oc=5",
+      "title": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need. - The GitHub Blog",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "github.blog",
+        "thenewstack.io"
+      ],
+      "independentDomains": [
+        "github.blog",
+        "thenewstack.io"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
+          "domain": "github.blog",
+          "publisherFamily": "github.blog",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
+          "pageTitle": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need. - The GitHub Blog",
+          "canonical": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
+          "bodyChars": 11565,
+          "topicOverlap": 11
+        },
+        {
+          "suppliedUrl": "https://thenewstack.io/github-copilot-token-billing/",
+          "domain": "thenewstack.io",
+          "publisherFamily": "thenewstack.io",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://thenewstack.io/github-copilot-token-billing/",
+          "pageTitle": "GitHub Copilot&#039;s usage-based billing is live: Here&#039;s what you need to know - The New Stack",
+          "canonical": "https://thenewstack.io/github-copilot-token-billing/",
+          "bodyChars": 10832,
+          "topicOverlap": 10
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNTJqeE5xMFVFSjQyUGQycng4emludThCSEhkbmx2azVPUzVhaEdqUUMwMFdOWjRSMmdHZ25ZN3k1NVFlUDZwRXkzYUM5eEduN1RkLWtqc3JhQTZYLVFrNjU4SVkwRHFtWUdwQ1d2clFVLXpadkNWRkw2SnM2QXZMT2tscEI1Yk0?oc=5",
       "title": "6 Ways Technology is Transforming the Hospitality Industry: Benefits, Risks, and Considerations When Using AI Tools - JD Supra",
       "status": "block",
@@ -2226,7 +2303,7 @@
           "pageTitle": "Mark Zuckerberg's Meta May Ditch Camera In New Smart Glasses As Privacy Concerns Grow | Times Now",
           "canonical": "https://www.timesnownews.com/technology-science/mark-zuckerbergs-meta-may-ditch-camera-in-new-smart-glasses-as-privacy-concerns-grow-article-156210222",
           "bodyChars": 2272,
-          "topicOverlap": 11
+          "topicOverlap": 10
         },
         {
           "suppliedUrl": "https://thenextweb.com/news/meta-connect-camera-free-smart-glasses",
@@ -2420,8 +2497,8 @@
       "title": "America gave up its rare earth edge. China took full advantage.",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 8,
-      "independentPublisherCount": 8,
+      "validSourceCount": 7,
+      "independentPublisherCount": 7,
       "independentPublisherFamilies": [
         "arstechnica.com",
         "theconversation.com",
@@ -2429,8 +2506,7 @@
         "asiatimes.com",
         "thediplomat.com",
         "newrepublic.com",
-        "csis.org",
-        "cmcmarkets.com"
+        "csis.org"
       ],
       "independentDomains": [
         "arstechnica.com",
@@ -2439,8 +2515,7 @@
         "asiatimes.com",
         "thediplomat.com",
         "newrepublic.com",
-        "chinapower.csis.org",
-        "cmcmarkets.com"
+        "chinapower.csis.org"
       ],
       "sources": [
         {
@@ -2522,6 +2597,19 @@
           "topicOverlap": 8
         },
         {
+          "suppliedUrl": "https://www.scmp.com/news/china/diplomacy/article/3343609/could-us-unlock-chinas-rare-earths-grip-ai-and-quantum-computing",
+          "domain": "scmp.com",
+          "publisherFamily": "scmp.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.scmp.com/news/china/diplomacy/article/3343609/could-us-unlock-chinas-rare-earths-grip-ai-and-quantum-computing",
+          "pageTitle": "Could the US unlock China’s rare earths grip with AI and quantum computing? | South China Morning Post",
+          "canonical": "https://www.scmp.com/news/china/diplomacy/article/3343609/could-us-unlock-chinas-rare-earths-grip-ai-and-quantum-computing",
+          "bodyChars": 124,
+          "topicOverlap": 8
+        },
+        {
           "suppliedUrl": "https://chinapower.csis.org/china-rare-earths/",
           "domain": "chinapower.csis.org",
           "publisherFamily": "csis.org",
@@ -2533,19 +2621,6 @@
           "canonical": "https://chinapower.csis.org/china-rare-earths/",
           "bodyChars": 15526,
           "topicOverlap": 11
-        },
-        {
-          "suppliedUrl": "https://www.cmcmarkets.com/en-gb/opto/three-rare-earth-stocks-to-watch-amid-chinaus-tensions",
-          "domain": "cmcmarkets.com",
-          "publisherFamily": "cmcmarkets.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cmcmarkets.com/en-gb/opto/three-rare-earth-stocks-to-watch-amid-chinaus-tensions",
-          "pageTitle": "Three Rare Earth Stocks to Watch Amid China/US Tensions | CMC Aureon",
-          "canonical": "https://www.cmcmarkets.com/en-gb/opto/three-rare-earth-stocks-to-watch-amid-chinaus-tensions",
-          "bodyChars": 20077,
-          "topicOverlap": 8
         }
       ],
       "recoveryAttempts": 0,
@@ -2803,7 +2878,7 @@
           "pageTitle": "83% of Gen Z are content creators? Here's where India’s new creator class is coming from - The Times of India",
           "canonical": "https://timesofindia.indiatimes.com/technology/tech-news/83-of-gen-z-indians-are-content-creators-youtube-india-report-says-wave-led-by-small-town-women/articleshow/125359466.cms",
           "bodyChars": 1149,
-          "topicOverlap": 8
+          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -2931,7 +3006,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBOZUZJX1V6VHhqMi13UWVncGxhZEhQMW1IMHBPVk1fWEdObG1rcHF1cXlWTjNJVk54NVZjaGVrd2wxV3BBX1FvVWJNTEFkUnZQTHdPNlI3ZzYwNkE?oc=5",
-      "title": "Trump wants AI to be rebranded as super intelligence. Will it work? - bbc.com",
+      "title": "Trump wants AI to be rebranded as super intelligence. Will it work? - BBC",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -3199,65 +3274,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxONTByR0lyeVpMQ2pucHVQWWh2bnJyYlo1Qnh2ZGY4S1RTeDV6MkJOQ3BmWUtGbkRKZXJZWDNxaldKTHozcWNRc3FGd2ZDamN2OExvcVJXUGxxaDI5bnc1dndFQVA2bDhlaUFuSjJ6Mkg3M2FjLVhJUDV5aHFZRjhJRFBobV9lS2dzeFJaZE5tYVVzTGZRVmJKOUJiVkVaOTRNaUE?oc=5",
-      "title": "Ondas Acquires Three Defense Technology Businesses to Expand Its Integrated Autonomous Defense Systems Platform - ir.ondas.com",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "ondas.com",
-        "newswire.com"
-      ],
-      "independentDomains": [
-        "ir.ondas.com",
-        "newswire.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://ir.ondas.com/press-releases/detail/329/ondas-acquires-three-defense-technology-businesses-to",
-          "domain": "ir.ondas.com",
-          "publisherFamily": "ondas.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://ir.ondas.com/press-releases/detail/329/ondas-acquires-three-defense-technology-businesses-to",
-          "pageTitle": "Ondas Acquires Three Defense Technology Businesses to Expand Its Integrated Autonomous Defense Systems Platform :: Ondas Inc. (ONDS)",
-          "canonical": "https://ir.ondas.com/press-releases/detail/329/ondas-acquires-three-defense-technology-businesses-to",
-          "bodyChars": 11082,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://www.newswire.com/news/ondas-acquires-bird-aerosystems-to-expand-airborne-missile-protection-and-isr",
-          "domain": "newswire.com",
-          "publisherFamily": "newswire.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.newswire.com/news/ondas-acquires-bird-aerosystems-to-expand-airborne-missile-protection-and-isr",
-          "pageTitle": "Ondas Acquires BIRD Aerosystems to Expand Airborne Missile Protection and ISR Capabilities | Newswire",
-          "canonical": "https://www.newswire.com/news/ondas-acquires-bird-aerosystems-to-expand-airborne-missile-protection-and-isr",
-          "bodyChars": 11383,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVVVPZ25iZ0tTc1VDRTdTZk1MSVV0WFpkUkZ0dldvVEFiNEhfcVNqNXhvSUdGQUVTUkg3NDlCWk90ZU12WlZaTnJBTXlkNmxOUGpmV0RBWnlKR04wRHh0ajhySVhzTGtEaUExbC1FTnhQMVUxemcyU2hmTVFoQkJ5ay1Bbmk4ajFldDJ0NnByWktncGwxTUZz0gGcAUFVX3lxTE9IVXNvNHNuellIYjNtQ1k4Vkp4Z2pZc3VFeW5zTjZZaWxDazZJN29vckdFc2RvQ2w4b3QyeW9ncmJPME5jejZGdjRsUjFUWS0yZzE1a3JYNTI0Um5IYjJId2x3VXJpSDBGUkJaZWtwNWd1dHBFR0V1Zy1ta25Ud0EtNnA2R1pYYXZJa1l1LTlUSFlFMjhVZkVNU1RoVg?oc=5",
-      "title": "NESCC and ETSU sign radiologic technology pathway agreement - WJHL",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB0eGd1VzBEQTF5OG1WMlRfcnBKbThhZjVoS2JYWHV5OUtNRHRRZ2UxTUJvVGFSeXBYN1NSMUh5TUctOXhXWjZpVEoyaXRrajVpNF9LRzd1RXFoeTV3Z3RRSlhuZjlnLVRLMkZIQ0FB?oc=5",
       "title": "The 'godfather' of AI on where the technology is headed - WBUR",
       "status": "pass",
@@ -3333,14 +3349,15 @@
       "title": "Defending Trump media ban, DOJ cites national security and says White House access is a ‘privilege’ - NBC News",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 7,
+      "validSourceCount": 8,
+      "independentPublisherCount": 8,
       "independentPublisherFamilies": [
         "nbcnews.com",
         "timesnownews.com",
         "co.ke",
         "cbsnews.com",
         "truthout.org",
+        "plataformamedia.com",
         "cbsaustin.com",
         "aol.com"
       ],
@@ -3350,6 +3367,7 @@
         "streamlinefeed.co.ke",
         "cbsnews.com",
         "truthout.org",
+        "plataformamedia.com",
         "cbsaustin.com",
         "aol.com"
       ],
@@ -3378,7 +3396,7 @@
           "pageTitle": "'Access Is Privilege, Not A Right': DOJ Defends Trump’s White House Press Ban, Cites National Security Risk | Times Now",
           "canonical": "https://www.timesnownews.com/world/us/us-news/access-is-privilege-not-a-right-doj-defends-trumps-white-house-press-ban-cites-national-security-risk-article-156207962",
           "bodyChars": 3397,
-          "topicOverlap": 13
+          "topicOverlap": 12
         },
         {
           "suppliedUrl": "https://streamlinefeed.co.ke/news/doj-defends-trumps-white-house-media-ban-citing-national-security-and-access-as-a-privilege",
@@ -3416,7 +3434,7 @@
           "finalUrl": "https://truthout.org/articles/doj-cites-national-security-to-defend-trumps-white-house-ban-on-news-outlets/",
           "pageTitle": "DOJ Cites “National Security” to Defend Trump’s White House Ban on News Outlets | Truthout",
           "canonical": "https://truthout.org/articles/doj-cites-national-security-to-defend-trumps-white-house-ban-on-news-outlets/",
-          "bodyChars": 6192,
+          "bodyChars": 6208,
           "topicOverlap": 9
         },
         {
@@ -3424,8 +3442,13 @@
           "domain": "plataformamedia.com",
           "publisherFamily": "plataformamedia.com",
           "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.plataformamedia.com/en/2026/09/23/justice-dept-backs-trump-white-house-press-ban/",
+          "pageTitle": "The DOJ says Trump has the authority to ban reporters from the White House (with video)",
+          "canonical": "https://www.plataformamedia.com/en/2026/09/23/justice-dept-backs-trump-white-house-press-ban/",
+          "bodyChars": 2502,
+          "topicOverlap": 9
         },
         {
           "suppliedUrl": "https://cbsaustin.com/news/nation-world/doj-department-of-justice-calls-white-house-media-access-a-privilege-ahead-of-hearing-in-banned-outlets-lawsuit-cnn-ms-now-politico-pools-first-amendment-rights-news-organizations-temporary-restraining-order-president-trump-fake-news-national-security",
@@ -3508,7 +3531,7 @@
           "finalUrl": "https://truthout.org/articles/doj-cites-national-security-to-defend-trumps-white-house-ban-on-news-outlets/",
           "pageTitle": "DOJ Cites “National Security” to Defend Trump’s White House Ban on News Outlets | Truthout",
           "canonical": "https://truthout.org/articles/doj-cites-national-security-to-defend-trumps-white-house-ban-on-news-outlets/",
-          "bodyChars": 6192,
+          "bodyChars": 6208,
           "topicOverlap": 9
         },
         {
@@ -3625,19 +3648,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR2txb3RqODJqWDBDLUdGUTdTbVJSZEdyNDhMd1g2OWV2RjQtRVBPcTR3VE5kZU9wc2pDc3pvVWxIUnhleXQtQ3lERGdadV95RmxQSUxOaFJJZWp1NFk5cGRiS2xtN01GTUdkNjFIcUxUVnhUZThkSDJTS3c4emVIXzFzT2JnZ0E?oc=5",
-      "title": "Blocking Windmills? Banning Press? Building an Arch? Trump Cites National Security. - The New York Times",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMzdYaW5wWFRadFcwV2ZiVWJ0RHBYT21ZVUc0bXlXSktSbWlhOXNIb0tsQ3hSV2k0UjluUnotTS1DNkdtbWZXRXFyMVpWeHVoUFNpRld6WFV5SlJCR21JRnUyTlZUNENxenRsbzFOX0xqX0xkdDF6elR4endvcC1ock9ZZFFuSm5TQlJIRWpxT3JRWTJCaHFtRTB2MkJodlR2b016TGttTlVKb0dRRE5fT3Mtb0luLVE?oc=5",
       "title": "Moving fast, moving carefully: Gary Shiffman on AI, economic security and the next generation - Clemson News",
       "status": "pass",
@@ -3739,8 +3749,8 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbmE2Qm9CMWxnRUl2YU5VOGNuYWhFUW5HZ1JwS2FkYVlUNlc1Tm5VUjdYbzVwNFMzTkVJYlp4ODJrMk9mQVdja0NZQ0JfNmI0c29Ldm44LVg5amJjREtzYTN1SGNYQkgzZ2tEcmxRZE80c1lEaUpsYXM5b3gzMnpZTHJHZm52ajRLaEo0?oc=5",
-      "title": "Crypto weighs revenge against Democrats — and the risks that come with it - Politico",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYnpRa3RTY29yQjR3Qk5TM1ltRFpnREJwQUxSNjc1WlZhd1ZVZVRiOVZ6dndWUTVqbU9MdUlqVWJvVS1DcXREVnh2RWU3dmFXcV9HTEJ2Z3lFZjU0Qk03Z2NOMVFTU2k2VUdFa3d1VUlTM2lNVzVWMVlQV01VdmhsRmJ2U0lYcVJjUnJHSmEtcFlucGlxQ2NyVGxWN3hQZw?oc=5",
+      "title": "Crypto Doesn’t Need a Whole New Set of Laws - Bloomberg.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -3754,19 +3764,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTE5oU01ueU0zN0t6Mlh0QU1vU3M5bDNTSHUwSU12RmR3M0JaUjlGSUFTbkF1ZGNqWHVCN2JuR1JsRW40RnZvMUlqZk5TOTR3cGI0Z0pGX0R3U1RWZTh2UmRsUUllQlYwa1MyZ0VpRk95cUdOOWVnRjczSkV6UUhrOUN1cVltOG1YVnNJbWRlTEczRGdoWDBuQ3JUM2NOMzhHNjhzTGE3NjY?oc=5",
       "title": "Breakingviews - COMMENTARY: Bitcoin miners reveal the real AI scarcity trade - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYnpRa3RTY29yQjR3Qk5TM1ltRFpnREJwQUxSNjc1WlZhd1ZVZVRiOVZ6dndWUTVqbU9MdUlqVWJvVS1DcXREVnh2RWU3dmFXcV9HTEJ2Z3lFZjU0Qk03Z2NOMVFTU2k2VUdFa3d1VUlTM2lNVzVWMVlQV01VdmhsRmJ2U0lYcVJjUnJHSmEtcFlucGlxQ2NyVGxWN3hQZw?oc=5",
-      "title": "Crypto Doesn’t Need a Whole New Set of Laws - Bloomberg.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -3972,7 +3969,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaUctb0xJR0htTnY2Ynk0TG1ra1J5X01tMnlmclZjUVRVQWN1RkF5NExaUjliR21fY0ZYcHJqQ0VaWkstZ01pNEtKeDZkVlFBTHpTMFRqRDhReFJzZ2pRTGZyOWJqQVZxQldKdGs4QjYxYW5BNHFEY0pSRlJsZHZtSWhOSVR1MlNlZExKWFJ2NlQ1MnI0WktF?oc=5",
-      "title": "Exclusive | RFK Jr.’s Enhanced Security Was Funded With Money From Minority Health Office - WSJ",
+      "title": "Exclusive | RFK Jr.’s Enhanced Security Was Funded With Money From Minority Health Office - wsj.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -3982,6 +3979,37 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSTNwek11Y1Rrb1ZvUlF4cndLeEEtV2cweFlXNktTMDk0eEFzeU9LOHNsTU1aSWtvM3J3WFBmQ2FFVDdWeTJKc1ZhbDU4Q2ZoanVDNnk4UkExOUVUanFPSDFIQzJCSFRrZV9TT2EzbVlTS21CWlgyMjFmU2hVWXZoMGpocGs4ZEtPd0VYc2lqZHo1VzM2?oc=5",
+      "title": "Bitcoin news: The last time this happened to BTC, it was 2012 - CoinDesk",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "coindesk.com"
+      ],
+      "independentDomains": [
+        "coindesk.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-on-a-streak-it-hasn-t-hit-since-2012",
+          "domain": "coindesk.com",
+          "publisherFamily": "coindesk.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-on-a-streak-it-hasn-t-hit-since-2012",
+          "pageTitle": "Bitcoin news: The last time this happened to BTC, it was 2012",
+          "canonical": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-on-a-streak-it-hasn-t-hit-since-2012",
+          "bodyChars": 5827,
+          "topicOverlap": 5
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://www.technologyreview.com/2026/09/21/1144834/the-download-investigating-deaths-at-the-us-borders-virtual-wall/",
@@ -4115,6 +4143,19 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYkFwcnFpOFFycEx0SEwwNUxZazVuTTh6aUNKZ0pUUHlPU2toMkk2WXAyc3RkYTdKWlVsTEVoTmR5VGJaZlhaU21OdHp2aXRWZ0VGNGtJdERKVGUtWXBiMWdKRm9JY04zTnZ3YXp5akdBU2RsS0tHZG9ESTVmR0hOWUYyaWpjYVNCcFF3c3RBVk53NC1SanNTaXpxOHdMei1SNUJPWnhLLTkzU2VOaUE?oc=5",
+      "title": "Trump says US Justice Department could rein in AI companies if needed - Reuters",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTG5RQ3pSQWJMM0l1czh6dXo0NlFmWWtkOE9WZUx3c3dSQng3U28xNGdPY09iWlRfWUp4YU1vcDFKNHlEWHBoc1UyRV8yUXlSNnZCWHpjcFB6UjJNemdJRG9SU1h4N29qcWtVUng4UW9aeGJ2dUlPd0h4Unh5ZmYtQktlcw?oc=5",
       "title": "The next AI divide is the distance between learning and earning - The World Economic Forum",
       "status": "pass",
@@ -4144,19 +4185,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYkFwcnFpOFFycEx0SEwwNUxZazVuTTh6aUNKZ0pUUHlPU2toMkk2WXAyc3RkYTdKWlVsTEVoTmR5VGJaZlhaU21OdHp2aXRWZ0VGNGtJdERKVGUtWXBiMWdKRm9JY04zTnZ3YXp5akdBU2RsS0tHZG9ESTVmR0hOWUYyaWpjYVNCcFF3c3RBVk53NC1SanNTaXpxOHdMei1SNUJPWnhLLTkzU2VOaUE?oc=5",
-      "title": "Trump says US Justice Department could rein in AI companies if needed - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQTlkT0dzTlZZN1pCLWpmdTdUY3Jzb0lrN2FEVG9scE5hdFhUZE1TdkZmZjByaE9VSTlweDNXV2xPYTg5SVh4N2I1VTZsblhYcFVZSDRDbl8zazAxOXJOSHlfQkZEbUhJUHFzX0FTWnVuRDFNUzREZnBnTU5nT1BDdGRYMVhvSVNGVjNSMG9CQVZjVnRfQjdjRDQtMFlMN3Q4VkY5bkNNYVpUclU?oc=5",
@@ -4225,6 +4253,19 @@
       "sourceVerificationStatus": "unverified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNbmE2Qm9CMWxnRUl2YU5VOGNuYWhFUW5HZ1JwS2FkYVlUNlc1Tm5VUjdYbzVwNFMzTkVJYlp4ODJrMk9mQVdja0NZQ0JfNmI0c29Ldm44LVg5amJjREtzYTN1SGNYQkgzZ2tEcmxRZE80c1lEaUpsYXM5b3gzMnpZTHJHZm52ajRLaEo0?oc=5",
+      "title": "Crypto weighs revenge against Democrats — and the risks that come with it - Politico",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAtbDVaZHgwQXFCdG9fdXZDU0Q3dXN6YTM4d0xuVm8tQ3p1eTJEb0k4U1VkZ0hlTjBkdGV5MTNGWEhOMndzR1RiS1pxMUNuc0FEcUZMVXlzMkx4bzNRN0RScUVsNV9kQUtZd1psQ25obEVZNzlvT2FMZkI3X23SAYIBQVVfeXFMT3dmdTUwNnJ0eERJb2RWOElXbEdqclg3VzFZdWlZdWlzWEpDeFVCaEtQUmpOc0NMX1lVLWdFRVVNaVo1WGJEREU4cndydTZOSnBYZGpabmxpbERINzg4WE5vZ0VEWG1qM0IwNnlSUTM1R3VScTlvZi1YZ2pSV2F1WVJ6QQ?oc=5",
       "title": "U.S. regulators rush to write crypto rulebook after Clarity Act stalls in Senate - CNBC",
       "status": "pass",
@@ -4254,37 +4295,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQSTNwek11Y1Rrb1ZvUlF4cndLeEEtV2cweFlXNktTMDk0eEFzeU9LOHNsTU1aSWtvM3J3WFBmQ2FFVDdWeTJKc1ZhbDU4Q2ZoanVDNnk4UkExOUVUanFPSDFIQzJCSFRrZV9TT2EzbVlTS21CWlgyMjFmU2hVWXZoMGpocGs4ZEtPd0VYc2lqZHo1VzM2?oc=5",
-      "title": "Bitcoin news: The last time this happened to BTC, it was 2012 - CoinDesk",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "coindesk.com"
-      ],
-      "independentDomains": [
-        "coindesk.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-on-a-streak-it-hasn-t-hit-since-2012",
-          "domain": "coindesk.com",
-          "publisherFamily": "coindesk.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-on-a-streak-it-hasn-t-hit-since-2012",
-          "pageTitle": "Bitcoin news: The last time this happened to BTC, it was 2012",
-          "canonical": "https://www.coindesk.com/markets/2026/09/23/bitcoin-s-on-a-streak-it-hasn-t-hit-since-2012",
-          "bodyChars": 5827,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://techcrunch.com/2026/09/23/youtube-doubles-down-on-video-shopping-with-ai-powered-ask-youtube-feature/",
@@ -4325,6 +4335,19 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOazV6Q242LXE0TVZZRV9wcXl4UmJlMHp2ZHMtX0h4RGlPeGlUbkhGQklJTDhuN0FKaFdzUUs3cS0zN1ZsTVR1Mk51M190NFFuVjdZekJVSjlXMXpuaDAwVGVaSl9LbnpKMWlmMG1YaUVOQ3lqTXl4ck5nZm94RlMxaFA2N091TUxyNWJCSkpLOER1TDAtRF94TWZ6NVNIM01lcWxvOUJaWTVHYUZ3WlJjSm16WWtUSldqcHdWOFNR?oc=5",
+      "title": "AI leaders to brief UN amid warnings the technology could slip beyond human control - Reuters",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV1l2cEdDNUpVTVd4dFVhOExUWURmMnNIdEg4ckg2M1lzaEEyRjdQVnRKbkFMM0d3aFppMXRMeFlMbWFiV25HLXFKNl9rbVoyejJ4eEl4ZXpfZ3d4b2gydG1PTFJRaDhqUG9yRXBxWE5DZnRVTDhNOVZlbXl1b0FxWUhuajktNHlTNDJ5WEdFcElNdGRsOG9hQTVxaEtraXJfdEVNNDRxSlBkbS0xYmVSYlJNMWNuYjI4Z184?oc=5",
       "title": "Reimagining the SOC for the agentic era in Microsoft Defender - Microsoft",
       "status": "pass",
@@ -4354,19 +4377,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOazV6Q242LXE0TVZZRV9wcXl4UmJlMHp2ZHMtX0h4RGlPeGlUbkhGQklJTDhuN0FKaFdzUUs3cS0zN1ZsTVR1Mk51M190NFFuVjdZekJVSjlXMXpuaDAwVGVaSl9LbnpKMWlmMG1YaUVOQ3lqTXl4ck5nZm94RlMxaFA2N091TUxyNWJCSkpLOER1TDAtRF94TWZ6NVNIM01lcWxvOUJaWTVHYUZ3WlJjSm16WWtUSldqcHdWOFNR?oc=5",
-      "title": "AI leaders to brief UN amid warnings the technology could slip beyond human control - Reuters",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOTBGUXpac3JGbGhmY1pTczMwRmdIQjRUYWJlZG9hTWlaQ2R3YldmN3dQZmZObnY3SXVoenoxZVNSa3ZQQ3JscEN2alJXUGxpRHA0RkNkNW1CNHVGckUyWkttdHZmVHdtWGVKZVp3ajdRUkdsNnFfc3BJeHF6OEtpeWVtMWFlYXJfVFA4aVB0UjV5UHVZN1pldzVWU05WbVR3QVNvaWpic0Q?oc=5",
@@ -4707,6 +4717,13 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
+      "title": "Introducing GPT-6 Sol and Luna - OpenAI",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQmR1cXJCVTF5UE9qRXdaQWIxejlFQVNLVlRRaEw0M3V3UWZIU2dlVjNLdDYzUEk4aUxCWmx4c3dNQi1vYWItQzlXOG1TRW9PN0JuREpoeGhxWDBab1F1dzBGczJXNnpmT3U0SEV2VHBTSVlnQ2hRZHdadk1NR1hNcngtZ1p4WUc3ZUV5cmZBMjNTbjZKZ3NoQ1lhQW1GdlhidWFj?oc=5",
       "title": "Divided and Dispossessed: How Sudan’s Government Targets the Church - International Christian Concern - persecution.org",
       "status": "not-eligible",
@@ -4793,6 +4810,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ISGg2bkJ2TlpUZG5JRWJDR256ZlhEckxpRlpHY2JHbFQ0d3dfTXliS2JiUWlCUXNVbnhndUJyUWdHYzhzemlQSThHWWZfUEs2S0g4UlhUZw?oc=5",
       "title": "How To Vibe Code: Your 2026 Guide to Building Apps Without Writing Code - All About Cookies",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1rVWhYOW1KenVrVnM3OTJPN2NNQnJMMXdFUzhnU1BXcm5PRG93NUdtSXBDZFRXdDJfRWc0WHdfRDVFaEd5U1pYay1FUQ?oc=5",
+      "title": "Apple’s handy guide explains how to ID Creator Studio apps - Cult of Mac",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4938,13 +4962,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
-      "title": "Introducing GPT-6 Sol and Luna - OpenAI",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE01ODRqRUh0NFkzRG5PU3FBbTRuZ1ZvS0VsM1o4YWdFaG8xaWoyckJDODA5R2xrU0E1SmotZVEzdV9LcjBBb0lnalU1RU1jaGNSeko4NHFrZGpDdlhVNzZsLXBLM0RHUUNhNFp1N18zeUxRZ2JTM0tCWUp6Zw?oc=5",
       "title": "Dutch government publishes call from 21 countries and the EU for international oversight of frontier AI - The Next Web",
       "status": "not-eligible",
@@ -4953,7 +4970,49 @@
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "joe flacco",
+      "title": "jason landry",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "2 news nevada",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "wendys emo album",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "eater x tim janus",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "noahs ark",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "nicolás maduro",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "yechiel leiter",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4961,48 +5020,6 @@
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
       "title": "arnaud denis",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "general hospital",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "northeast side",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "one big beautiful bill act impact",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "dart",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "joe milton",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "blue jays vs orioles",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5017,6 +5034,13 @@
     {
       "link": "https://arstechnica.com/tech-policy/2026/09/trumps-sneaky-plan-to-gut-endangered-species-act-draws-from-1995-scalia-dissent/",
       "title": "Trump’s sneaky plan to gut Endangered Species Act draws from 1995 Scalia dissent",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX3FaYUlSZUI0NEVvazRSd0JVWXlfaHdtUFhha1d5NUVJVDQ4ZW13dm5tWHFQTUkxUndKdHcxdHdXOUotY0dkRVVqb3NOcFBkd2VEMHAyMXdqMjB5MkRTWVhNa0FHYzBfSExrSDVqQnlZWWx3MUk5cDJsckRkeXZDLWdsYVppUHBYU0E2U0tsb1g4RXM0VFZRLVViNklKbk9BcTJpYXh6T0VSUUUxbnNOREg0MXg?oc=5",
+      "title": "Apple Is Developing New Fitness Tracker Aimed at Rivaling Whoop - Bloomberg.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5085,8 +5109,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcjFrX3EwNU43U0hOb1VlV1puMDIyTzloMFFJQ1dSem1GOVJIdVZCbXVPd19WZzN4M0ZoaEloc2p3bW9lRWtVQzRNNG1LSTVGZ2ZNYTdULVp1UDBkcS1VUWF1dFJMS0NzOU1oZ1V4STFMNU1oa0lta3htZVJtUFVjMWI1dUZhUQ?oc=5",
-      "title": "Cost of Project Management Software: 2026 Buyer Guide - tech.co",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNLUx0b1ZPb1Axa1c5VlMyOTNuT05QUGFhY1diMmtnRjdCMy1FWkJSWGwzeUdadEtMRXF0emkydGRwaTB0QlMzRUdxSFgzdUs3N01henZOV0dzMnI5dkM2STMwOFljTlFUanJfMDVXQlV2RmhESjVVRHlFNXFJVXU1enFB?oc=5",
+      "title": "A dealmaker’s guide to how AI is shifting the software stack - PwC",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5094,6 +5118,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOOUpRWGJiWF8telhGT2kzRmxHRUtWSC1Ea05rQ1oycExUWURidXpOcDhucWFJTGo2TGo5bU5YWW96aG1mSE5OT0JjWnRNZ3ZRX1RRU0Voc0dwQkFjZDV6ZHlGTVJYU19xeW1CbFB2SjBuSFZsamFWeGx0WTg3M09yS1lwWQ?oc=5",
       "title": "Software Composition Analysis: A Complete Guide for 2026 - wiz.io",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ENXRkZlBHWFFkTlVBRkN2NTNaZ2hVcFJ4X2FYcWtpdE9xMEZkUlJ3Y2hPT2s2RUZIMmtjSzNhWEcybVlIdkdZVHloWUlsUnpGdmU4Sm1UTnVOZHJLamdr?oc=5",
+      "title": "AI App Development: Guide To Building AI-Powered Apps - Databricks",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5113,15 +5144,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTk5COHRzOGk3aXRzUGFOcTZlT0xENnRFeU4wTWlHRzN0VXRxbUxjUXlqUm9zOVNIUnFzTlpyZlAtMXBqSGdtTmdxNGlHZ3N0ZEJFbXo1dGdTb1FfYllEMjdoNV9CQ1VQOE1RUjRMOTdSdE12UnhfV29NdXJ1SVZNQV9UVkk0R2wwNlpjQk9JT24wOE91VF8wNXFNRU1Uc3VYQzdBUlRmcWtPd2YyYzhlTUJ3?oc=5",
-      "title": "[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide - The Daily Princetonian",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNLUx0b1ZPb1Axa1c5VlMyOTNuT05QUGFhY1diMmtnRjdCMy1FWkJSWGwzeUdadEtMRXF0emkydGRwaTB0QlMzRUdxSFgzdUs3N01henZOV0dzMnI5dkM2STMwOFljTlFUanJfMDVXQlV2RmhESjVVRHlFNXFJVXU1enFB?oc=5",
-      "title": "A dealmaker’s guide to how AI is shifting the software stack - PwC",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcjFrX3EwNU43U0hOb1VlV1puMDIyTzloMFFJQ1dSem1GOVJIdVZCbXVPd19WZzN4M0ZoaEloc2p3bW9lRWtVQzRNNG1LSTVGZ2ZNYTdULVp1UDBkcS1VUWF1dFJMS0NzOU1oZ1V4STFMNU1oa0lta3htZVJtUFVjMWI1dUZhUQ?oc=5",
+      "title": "Cost of Project Management Software: 2026 Buyer Guide - tech.co",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5134,8 +5158,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ENXRkZlBHWFFkTlVBRkN2NTNaZ2hVcFJ4X2FYcWtpdE9xMEZkUlJ3Y2hPT2s2RUZIMmtjSzNhWEcybVlIdkdZVHloWUlsUnpGdmU4Sm1UTnVOZHJLamdr?oc=5",
-      "title": "AI App Development: Guide To Building AI-Powered Apps - Databricks",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTk5COHRzOGk3aXRzUGFOcTZlT0xENnRFeU4wTWlHRzN0VXRxbUxjUXlqUm9zOVNIUnFzTlpyZlAtMXBqSGdtTmdxNGlHZ3N0ZEJFbXo1dGdTb1FfYllEMjdoNV9CQ1VQOE1RUjRMOTdSdE12UnhfV29NdXJ1SVZNQV9UVkk0R2wwNlpjQk9JT24wOE91VF8wNXFNRU1Uc3VYQzdBUlRmcWtPd2YyYzhlTUJ3?oc=5",
+      "title": "[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide - The Daily Princetonian",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5197,13 +5221,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNb2NJWXl0VmtFZFBUYlo3X1JkR3lTZUtDQWlwWHhhdGVzX0dhUGVxZ3drN0JxSDdWbXEtLUt5Z3lCUWVFRHdHaEw5bW5fQkdDMHJMalpEMU5DTmpWdHJNMFVucTliVGlUelJjbUtPMGNJNDkzM1otTDBXZXV6QUhKOVdfbHZiWWhEbkVQZFpEelkxSFZzMnFQal9sZXVDSWR3MzJ1UFVtR3RiMmowTlBtRVRTaThzUUJxVXJBYzBKcE1QdEoyc0Z6N05ROGtQSjg?oc=5",
-      "title": "Microsoft, IMDA unveil digital sustainability guidelines to spur green software development - Singapore Economic Development Board (EDB)",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNM0tDWlNLeG1ubFpLUkF2YkNuNzZTVXJEcElndks0UWJmOGFzVmpxbU0yTHo2am82QS01UEVVUndDMTY0U2dIUjdWV21RbER2dEpKQ21UaXY2ZDZSQURHZW56ejVKb01ySk5UaFcxcXNwVW1ZUndJb1czUk5kQ0lpcXg2Q0k2aFQ1MXZRWVZkQmM3OGM?oc=5",
       "title": "Apple unveils $2,000 iPhone Duo, its first foldable smartphone - Fortune",
       "status": "not-eligible",
@@ -5240,7 +5257,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1kb0NwNTBkV2laNEljU2VPTlk5ZFV1bm5RR29wN2RVYklkcGdHSlJOdWptR3ZnRzF3anJzdFE3bHJadXI5Y0t3T25LektaQUVodmRKZkFfUk04dmd3S2ZZNko1TEg2Mnp5WVMtUE1R?oc=5",
-      "title": "5 Apple product launches we still expect to see in 2026 - mashable.com",
+      "title": "5 Apple product launches we still expect to see in 2026 - Mashable",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5281,13 +5298,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMG1IQ2lfeEpmYkE1ak9raUhiSS1HUkhxZmpKeTBqenQtX2tSQ2tzbGhYOVhZTzAyNGJ3UTFKTmZMaUZ1cjc2Qjg3M0lkVHIxUkF4eFRCWjk1ZE5YcXhTLVpBQndVa3A5V21jS1dSUjJDYlhBREpMNjhUY1ZuQ1VhQWN3NzN4bnNxelHSAZ4BQVVfeXFMUFJoZkIwQXZlb21BUkhjTXVKdnhpdl9QREtReVVxU1lqdXBRRHNUNTRFUFB4aDg5TW5kZG0xcGhwRzgtMnBXelJHa2hfR3NQTHFQeU9SNWZoOV9fWEpyY3g5cmhCRzZOMGotRWRJOFY5NzFaMFBmYkZlcVVBOVlTZVpZeU1qTHZvUE9ta2RKWUMtbDlfeUR1VGtGLVhmV1E?oc=5",
-      "title": "How to improve medical device marketing strategies and accelerate product adoption - WSOC TV",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13VjlTZXl2bXpKMlVfYm9pcDBFa2RfQnJHa2JKRlQzMS1BVzduTm13MlVrTmc0UGdNQmNwdGNlSnRvS3pXVGgwTm5NQzFoMFdjOGl5UEZZZjFhZFppZTkwR051dnRvQTdQSFE5Ui1IZlgweTdpdWQyc0JZZTdSYlk?oc=5",
       "title": "The Best Work Management Software for 2026 - PCMag Australia",
       "status": "not-eligible",
@@ -5296,7 +5306,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5XV0tNMlVIN0F5a1Z3RlljUHo5M21MdDNqTmctdFNDbERHWjlINGVRSTVIWXF0elFRRGNxbVg5NTFhUE5fVEt5WG5sUXdKY25KZ2RyTEFSdEQ0MVBpUzJISW1OV0k5UVJBLTY0U1A0ckk1ZzdHWHBiMjdhYw?oc=5",
-      "title": "Top dating apps for serious relationships in September 2026 - mashable.com",
+      "title": "Top dating apps for serious relationships in September 2026 - Mashable",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
