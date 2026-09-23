@@ -35,6 +35,7 @@ if(!verifierSmartSource.includes('const factCoverage=relevantFacts.length')) thr
 if(!verifierSmartSource.includes('numericConflict')) throw new Error('Smart claim verifier must preserve numeric-conflict protection.');
 if(!verifierSmartSource.includes('const directFactExact=factMatches.find')) throw new Error('Smart claim verifier must recognize exact numeric facts through fact-level matching.');
 if(!verifierSmartSource.includes('const multiFactSupported=factCoverage>=2')) throw new Error('Smart claim verifier must recognize multi-fact supported claims.');
+if(!verifierSmartSource.includes('classify evidence-backed inference as partial') && !verifierSmartSource.includes('can|could') ) throw new Error('Smart claim verifier must preserve evidence-backed inference as partial.');
 if(!verifierSmartSource.includes('directFactExact')) throw new Error('Smart claim verifier must preserve exact quantitative fact matching.');
 if(!verifierSmartSource.includes('const multiFactSupported=factCoverage>=2')) throw new Error('Smart claim verifier must recognize multi-fact supported claims.');
 if(!verifierSmartSource.includes('provenanceFactMatches')) throw new Error('Smart claim verifier must persist multi-fact provenance for factual claims.');
