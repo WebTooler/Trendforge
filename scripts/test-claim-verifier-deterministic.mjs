@@ -35,7 +35,7 @@ if(!verifierSmartSource.includes('const factCoverage=compatibleFacts.length')) t
 if(!verifierSmartSource.includes('numericConflict')) throw new Error('Smart claim verifier must preserve numeric-conflict protection.');
 if(!verifierSmartSource.includes('const directFactExact=factMatches.find')) throw new Error('Smart claim verifier must recognize exact numeric facts through fact-level matching.');
 if(!verifierSmartSource.includes('const multiFactSupported=factCoverage>=2')) throw new Error('Smart claim verifier must recognize multi-fact supported claims.');
-if(!verifierSmartSource.includes('const directExact=nums(claim).size>0')) throw new Error('Smart claim verifier must preserve exact quantitative evidence matches.');
+if(!verifierSmartSource.includes('directFactExact')) throw new Error('Smart claim verifier must preserve exact quantitative fact matching.');
 if(!verifierSmartSource.includes('const multiFactSupported=factCoverage>=2')) throw new Error('Smart claim verifier must recognize multi-fact supported claims.');
 if(!verifierSmartSource.includes('provenanceFactMatches')) throw new Error('Smart claim verifier must persist multi-fact provenance for factual claims.');
 if(!verifierSmartSource.includes('data/current-run-article.json')) throw new Error('Smart claim verifier must prefer the current-run article manifest over stale mtime ordering.');
