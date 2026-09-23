@@ -109,6 +109,11 @@ async function main(){
        if(result.deleted)deleted++; else narrowedOrRewritten++;
       }
       if(!applied) throw new Error('Atomic repair produced no matching sentence replacements.');
+      const repairTargets=[...new Set(failed.map(x=>String(x?.sentence||x?.claim||'').trim()).filter(Boolean))];
+      const uncoveredTargets=repairTargets.filter(target=>body.includes(target) && updatedBody.includes(target));
+      if(uncoveredTargets.length){
+        throw new Error(`Atomic repair did not cover all unsupported claims; ${uncoveredTargets.length} target sentence(s) remain unchanged.`);
+      }
       finalDepth=assessArticleDepth({content:updatedBody,blueprint});
       if(REPAIR_PASS==='primary' && finalDepth.words<minimumWords){
        throw new Error(`Evidence-first repair would leave article below the evidence-derived minimum (${finalDepth.words} words; target floor ${minimumWords}); article must be rejected rather than preserved below depth.`);
