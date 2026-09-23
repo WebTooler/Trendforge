@@ -33,26 +33,58 @@ const latestArticle=()=>{
   if(!briefTitle||String(manifest.briefTitle||'').trim()!==briefTitle) throw new Error('Current-run article manifest/brief identity mismatch; grounding repair blocked.');
   return articlePath;
 };const parseJson=raw=>{const t=String(raw).trim().replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/i,'');for(const x of [t,(()=>{const a=t.indexOf('{'),b=t.lastIndexOf('}');return a>=0&&b>a?t.slice(a,b+1):''})()]){if(!x)continue;try{return JSON.parse(x)}catch{}}throw new Error('Atomic repair output was not valid JSON');};
-const replaceSentence=(body,original,replacement)=>{const needle=String(original).trim(),rep=String(replacement).trim();if(!needle)return{body,changed:false,deleted:false};const idx=body.indexOf(needle);if(idx<0)return{body,changed:false,deleted:false};return{body:`${body.slice(0,idx)}${rep}${body.slice(idx+needle.length)}`,changed:true,deleted:!rep};};
+const sentenceList=body=>String(body).match(/[^.!?\\n]+[.!?]+|[^.!?\\n]+$/g)||[];
+const sentenceFingerprint=s=>String(s).replace(/[\\u2018\\u2019]/g,"'").replace(/[\\u201c\\u201d]/g,'"').replace(/[\\u2013\\u2014]/g,'-').replace(/\\s+/g,' ').trim().toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const resolveClaimSentence=(body,claim)=>{
  const target=String(claim||'').trim();
  if(!target)return'';
- if(body.includes(target))return target;
- const sentences=String(body).match(/[^.!?\\n]+[.!?]+|[^.!?\\n]+$/g)||[];
- const norm=s=>String(s).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
- const nt=norm(target);
- const exact=sentences.find(s=>norm(s).includes(nt)||nt.includes(norm(s)));
+ const targetFp=sentenceFingerprint(target);
+ if(!targetFp)return'';
+ const sentences=sentenceList(body);
+ const exact=sentences.find(s=>sentenceFingerprint(s)===targetFp);
  if(exact)return exact.trim();
- const targetTokens=[...new Set(nt.split(/\\s+/).filter(x=>x.length>=4))];
+ const targetTokens=[...new Set(targetFp.split(/\\s+/).filter(x=>x.length>=4))];
  if(targetTokens.length<4)return'';
  let best='',bestScore=0;
  for(const sentence of sentences){
-   const st=new Set(norm(sentence).split(/\\s+/).filter(x=>x.length>=4));
+   const st=new Set(sentenceFingerprint(sentence).split(/\\s+/).filter(x=>x.length>=4));
    const shared=targetTokens.filter(x=>st.has(x)).length;
    const score=shared/Math.max(1,targetTokens.length);
    if(shared>=4&&score>bestScore){bestScore=score;best=sentence.trim();}
  }
  return bestScore>=0.6?best:'';
+};
+const replaceSentence=(body,original,replacement)=>{
+ const needle=String(original).trim(),rep=String(replacement).trim();
+ if(!needle)return{body,changed:false,deleted:false,count:0};
+ const fp=sentenceFingerprint(needle);
+ const sentences=sentenceList(body);
+ let cursor=0,output='',changed=0;
+ for(const sentence of sentences){
+   const idx=body.indexOf(sentence,cursor);
+   if(idx<0)continue;
+   output+=body.slice(cursor,idx);
+   if(sentenceFingerprint(sentence)===fp&&changed===0){output+=rep;changed++;}
+   else output+=sentence;
+   cursor=idx+sentence.length;
+ }
+ output+=body.slice(cursor);
+ return{body:output.replace(/\\n{3,}/g,'\\n\\n').trim(),changed:changed>0,deleted:changed>0&&!rep,count:changed};
+};
+const removeSentenceByFingerprint=(body,target)=>{
+ const fp=sentenceFingerprint(target);
+ if(!fp)return{body,changed:false,count:0};
+ const sentences=sentenceList(body);
+ let cursor=0,output='',removed=0;
+ for(const sentence of sentences){
+   const idx=body.indexOf(sentence,cursor);
+   if(idx<0)continue;
+   output+=body.slice(cursor,idx);
+   if(sentenceFingerprint(sentence)===fp){cursor=idx+sentence.length;removed++;}
+   else{output+=sentence;cursor=idx+sentence.length;}
+ }
+ output+=body.slice(cursor);
+ return{body:output.replace(/\\n{3,}/g,'\\n\\n').trim(),changed:removed>0,count:removed};
 };
 const beginRepairBudget=()=>{let original=null;try{const raw=JSON.parse(fs.readFileSync(aiBudgetPath,'utf8'));if(raw?.runKey===runKey&&Number.isFinite(raw?.attempts))original=raw;}catch{}fs.mkdirSync('data',{recursive:true});fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-pass'},null,2)+'\n');console.log(`Grounding repair v11: isolated repair budget from writer budget for run ${runKey}.`);return original;};
 const resetRepairProviderBudget=()=>{fs.mkdirSync('data',{recursive:true});fs.writeFileSync(repairProviderBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-recovery-pass'},null,2)+'\n');};
@@ -130,15 +162,16 @@ async function main(){
       }
       if(!applied) throw new Error('Atomic repair produced no matching sentence replacements.');
       const repairTargets=[...new Set(failed.map(x=>resolveClaimSentence(body,x?.sentence||x?.claim)).filter(Boolean))];
+      console.log(`Grounding repair v12: resolved ${repairTargets.length}/${failed.length} unsupported sentence target(s).`);
       let uncoveredTargets=repairTargets.filter(target=>updatedBody.includes(target));
       if(uncoveredTargets.length){
         if(REPAIR_PASS==='surgical'){
           console.log(`Grounding repair v11 (surgical): deleting ${uncoveredTargets.length} unsupported target sentence(s) left unchanged by provider.`);
           for(const target of uncoveredTargets){
-            const result=replaceSentence(updatedBody,target,'');
-            if(result.changed){updatedBody=result.body;applied++;deleted++;}
+            const result=removeSentenceByFingerprint(updatedBody,target);
+            if(result.changed){updatedBody=result.body;applied+=result.count;deleted+=result.count;}
           }
-          uncoveredTargets=repairTargets.filter(target=>updatedBody.includes(target));
+          uncoveredTargets=repairTargets.filter(target=>sentenceList(updatedBody).some(sentence=>sentenceFingerprint(sentence)===sentenceFingerprint(target)));
           if(uncoveredTargets.length) throw new Error(`Surgical repair left ${uncoveredTargets.length} unsupported target sentence(s) unchanged after deletion.`);
         }else{
           throw new Error(`Atomic repair did not cover all unsupported claims; ${uncoveredTargets.length} target sentence(s) remain unchanged.`);
@@ -155,9 +188,11 @@ async function main(){
       for(const claim of failed){
         const target=resolveClaimSentence(body,claim?.sentence||claim?.claim);
         if(!target) continue;
-        const result=replaceSentence(updatedBody,target,'');
-        if(result.changed){updatedBody=result.body;applied++;deleted++;}
+        const result=removeSentenceByFingerprint(updatedBody,target);
+        if(result.changed){updatedBody=result.body;applied+=result.count;deleted+=result.count;}
       }
+      const remainingTargets=repairTargets.filter(target=>sentenceList(updatedBody).some(sentence=>sentenceFingerprint(sentence)===sentenceFingerprint(target)));
+      if(remainingTargets.length) throw new Error(`Surgical repair fallback left ${remainingTargets.length} unsupported target sentence(s) unchanged after deterministic deletion.`);
       if(!applied) throw new Error('Surgical repair could not locate any remaining unsupported claim sentence for deletion.');
       finalDepth=assessArticleDepth({content:updatedBody,blueprint});
       out={provider:'surgical-delete-fallback',attempts:0,text:''};
@@ -168,8 +203,8 @@ async function main(){
   const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
   const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
   fs.writeFileSync(articlePath,`${frontmatter}\n\n${updatedBody.trim()}\n${sources||''}\n`);
-  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),runId:runKey,articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:`atomic-sentence-repair-v11-${REPAIR_PASS}-rewrite-narrow-delete-isolated-recovery`,repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:{before:originalDepth.words,after:finalDepth.words,minimum:minimumWords,depthMode:finalDepth.mode,preservedFloor:finalDepth.words>=minimumWords}},null,2)+'\n');
-  console.log(`Grounding repair v11 (${REPAIR_PASS}): applied ${applied} repair(s) — ${narrowedOrRewritten} rewritten/narrowed, ${deleted} deleted. Unsupported-claim-only targeting; unrelated article content preserved.`);
+  fs.writeFileSync('data/grounding-repair.json',JSON.stringify({generatedAt:new Date().toISOString(),runId:runKey,articlePath,provider:out.provider,previousTitle:oldTitle,newTitle:oldTitle,briefTitle:brief?.brief?.title||'',evidenceClaims:claims.length,failedClaims:failed.length,evidenceChars:evidence.length,mode:`atomic-sentence-repair-v12-${REPAIR_PASS}-fingerprint-rewrite-narrow-delete-isolated-recovery`,repairOrder:['rewrite','narrow','delete'],maxProviderAttempts:MAX_REPAIR_PROVIDER_ATTEMPTS,maxRecoveryPasses:MAX_REPAIR_RECOVERY_PASSES,recoveryWaitMs:REPAIR_RECOVERY_WAIT_MS,providerAttempts:out.attempts??MAX_REPAIR_PROVIDER_ATTEMPTS,appliedRepairs:applied,rewriteOrNarrowRepairs:narrowedOrRewritten,deletedSentences:deleted,wordCountValidation:{before:originalDepth.words,after:finalDepth.words,minimum:minimumWords,depthMode:finalDepth.mode,preservedFloor:finalDepth.words>=minimumWords}},null,2)+'\n');
+  console.log(`Grounding repair v12 (${REPAIR_PASS}): applied ${applied} repair(s) — ${narrowedOrRewritten} rewritten/narrowed, ${deleted} deleted. Unsupported-claim-only targeting; unrelated article content preserved.`);
  }finally{restoreWriterBudget(originalBudget);}
 }
 main().catch(e=>{const message=e?.message||String(e);if(/No article generated by the current workflow run|grounding repair skipped/i.test(message)){console.log(`Grounding repair: SKIPPED — ${message}`);process.exit(0);}console.error(`Grounding repair failed: ${message}`);process.exit(1)});
