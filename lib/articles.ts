@@ -635,44 +635,32 @@ export const articles: Article[] = [
     "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
-    "slug": "microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience",
-    "title": "Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
-    "description": "Microsoft has announced a new regional framework that will channel more than $10 B into technology, cloud and AI infrastructure, digital resilience programs and workforce development across Kuwait, Qatar, Saudi Arabia and the United Arab Emirates through 2030.",
-    "category": "Technology",
+    "slug": "meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset",
+    "title": "Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
+    "description": "Meta is set to launch its next‑generation smart glasses, a headset named Phoenix, and new AI integrations at its September 23 event, with details on design, privacy fixes and potential third‑party app support.",
+    "category": "Digital Life",
     "date": "2026-09-24",
-    "publishedAt": "2026-09-24T02:15:33.773Z",
+    "publishedAt": "2026-09-24T06:37:38.171Z",
     "author": "Tejendra Pal Singh",
-    "readTime": "3 min read",
+    "readTime": "2 min read",
     "content": [
-      "## A New $10 B+ Commitment\nOn September 23, 2026, Microsoft unveiled a regional investment framework that targets Kuwait, Qatar, Saudi Arabia and the United Arab Emirates. The plan calls for more than $10 B in capital and operating expenses through 2030, spread across three pillars: technology, digital resilience and people initiatives. The announcement came in a blog post by Microsoft’s vice‑chair Brad Smith and was corroborated by Yahoo Finance, Unite.AI and Securities.io.",
-      "## What the Investment Covers\nThe framework’s technology focus includes building sovereign‑ready cloud services and expanding Microsoft’s global AI infrastructure footprint in the Middle East. It also covers the deployment of Arabic‑ and multilingual‑AI capabilities and the use of AI to enhance public services and business outcomes.Subsea and terrestrial connectivity will receive more than $400 million of investment, expanding capacity, strengthening regional data flows, and supporting Microsoft’s growing cloud and AI infrastructure footprint across the region.",
-      "## Digital Resilience as a Cornerstone\nMicrosoft will launch a Middle East digital‑resilience initiative that provides assessments, continuity planning, recovery capabilities and other measures designed to help organizations protect critical data and maintain operations. The company says that, during past network disruptions, it rerouted traffic through Middle East corridors and kept service continuity with minimal impact on customers.Redundancy is described as “the foundation of continuity.”",
-      "## Partnerships and Local Impact\nThe plan calls for Microsoft to deepen strategic partnerships with governments and national AI champion organizations. These collaborations aim to translate AI ambition into economic growth, modern public services and global competitiveness. The investment will also support the region’s energy and water priorities, with a focus on building sustainable foundations for long‑term AI‑led economic growth.",
-      "## Practical Implications for the Region\nFor organizations operating in the Middle East, the investment means more robust cloud and AI services that are tailored to local languages and regulatory needs. Digital‑resilience programs will provide tools and guidance to identify vulnerabilities, protect critical data, and build tested recovery capabilities. The expanded connectivity budget should reduce latency and improve the reliability of data‑center traffic in the region.",
-      "## Limitations and Uncertainties\nMicrosoft announced it plans to invest more than $10 billion in the region through 2030 across technology, digital resilience, and people initiatives.The framework outlines high‑level goals. Additionally, the impact of the connectivity upgrades on existing network performance has not been quantified.",
-      "## What to Watch Next\nMicrosoft’s next steps will likely involve detailing the partnership agreements and rolling out the first wave of digital‑resilience assessments.The partnerships will support responsible AI adoption, sovereign‑ready cloud services, Arabic and multilingual AI, and the use of AI to improve services for citizens and businesses.Microsoft plans to invest more than $400 million in subsea and terrestrial connectivity across the Middle East by 2030, expanding capacity and strengthening regional data flows.",
-      "## What the Evidence Shows"
+      "Meta’s September 23 Connect event is scheduled to begin with an evening keynote from Mark Zuckerberg. The company has highlighted that the focus will be on building a future for everyone, a theme Zuckerberg has explored in recent commentary on AI, smart glasses, and related technologies.",
+      "## New Smart Glasses With Dual‑Lens Displays\nMeta is reportedly developing a pair of glasses that will feature displays in both lenses. The design is intended to enhance the user interface by providing visual output from both sides of the glasses. The glasses are expected to come in two styles and include extra microphones to facilitate interaction with Meta’s AI assistant. These updates are part of the company’s response to privacy and harassment concerns tied to its current lineup, and the company has already begun addressing those issues with privacy fixes and a new marketing campaign.",
+      "## Phoenix, Meta’s First Mixed‑Reality Headset\nAfter a long absence of new headset releases, Meta is preparing to debut a mixed‑reality headset known as Phoenix. Rumors suggest that Phoenix will be one of the first devices to use Qualcomm’s Snapdragon Reality Elite chip, a processor specifically designed for slimmer form factors suitable for headsets.",
+      "## AI and Ecosystem Expansion\nThe event is also expected to feature updates on Meta’s Muse AI agent and potential new opportunities for third‑party apps on the glasses ecosystem. An avatar of Meta’s CTO may appear during the keynote, adding a virtual dimension to the presentation. Overall, the Connect lineup signals Meta’s intent to advance its smart‑glasses offering while addressing ongoing privacy concerns and broadening its software ecosystem."
     ],
     "sources": [
       {
-        "title": "Microsoft strengthens its commitment to the Middle East by investing in technology, digital resilience, and people - The Official Microsoft Blog",
-        "url": "https://blogs.microsoft.com/on-the-issues/2026/09/23/microsoft-strengthens-its-commitment-to-the-middle-east-by-investing-in-technology-digital-resilience-and-people/"
+        "title": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+        "url": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/"
       },
       {
-        "title": "Microsoft Commits More Than $10B To Middle East Through 2030 – What Investors Need To Know - Yahoo Finance",
-        "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-commits-more-10b-middle-174050728.html"
-      },
-      {
-        "title": "Microsoft Announces Middle East Framework With AI and Cloud Buildout - Unite.AI",
-        "url": "https://www.unite.ai/microsoft-announces-middle-east-framework-with-ai-and-cloud-buildout/"
-      },
-      {
-        "title": "Microsoft Plans More Than $10 Billion in Middle East Investment - securities.io",
-        "url": "https://www.securities.io/microsoft-plans-more-than-10-billion-in-middle-east-investment/"
+        "title": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
+        "url": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote"
       }
     ],
-    "image": "/Trendforge/images/articles/microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience.1024x576.png",
-    "imageAlt": "Editorial image for Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
+    "image": "/Trendforge/images/articles/meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset.1024x576.png",
+    "imageAlt": "Editorial image for Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
     "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"

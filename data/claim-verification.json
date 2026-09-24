@@ -1,19 +1,19 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-24T03:28:58.876Z",
-  "articlePath": "content/articles/meta-s-new-vr-glasses-are-a-glass-style-headset-at-1-300.md",
-  "articleTitle": "Meta’s New VR Glasses Are a Glass‑Style Headset at $1,300",
+  "generatedAt": "2026-09-24T06:37:57.549Z",
+  "articlePath": "content/articles/meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset.md",
+  "articleTitle": "Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
   "verificationMode": "authoritative-evidence-pack-v20-fact-map-synthesis",
-  "sourceCount": 4,
-  "usableSourceCount": 4,
-  "claimCount": 18,
-  "editorialCount": 0,
-  "verified": 7,
-  "partial": 8,
-  "unsupported": 3,
+  "sourceCount": 2,
+  "usableSourceCount": 2,
+  "claimCount": 10,
+  "editorialCount": 1,
+  "verified": 8,
+  "partial": 2,
+  "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 62,
-  "pass": false,
+  "averageConfidence": 76,
+  "pass": true,
   "policy": {
     "verifiedMin": 62,
     "partialMin": 45,
@@ -45,100 +45,77 @@
   "sources": [
     {
       "id": "S1",
-      "title": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "url": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
+      "title": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "url": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
       "domain": "engadget.com",
-      "passageCount": 12,
-      "articleBodyLength": 1950
+      "passageCount": 16,
+      "articleBodyLength": 2472
     },
     {
       "id": "S2",
-      "title": "Meta’s next VR device isn’t a headset — it’s glasses",
-      "url": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
+      "title": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
+      "url": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
       "domain": "theverge.com",
-      "passageCount": 9,
-      "articleBodyLength": 1523
-    },
-    {
-      "id": "S3",
-      "title": "The next Meta VR device may not look like a Quest headset at all",
-      "url": "https://mashable.com/article/meta-quest-puffin-vr-xr-headset",
-      "domain": "mashable.com",
-      "passageCount": 2,
-      "articleBodyLength": 507
-    },
-    {
-      "id": "S4",
-      "title": "Meta Announces ‘VR Glasses’ Next-Gen XR Headset, Priced at $1,300 - Road to VR",
-      "url": "https://roadtovr.com/meta-vr-glasses-unveiled-price-release-date/",
-      "domain": "roadtovr.com",
       "passageCount": 4,
-      "articleBodyLength": 616
+      "articleBodyLength": 862
     }
   ],
   "claims": [
     {
       "index": 1,
-      "claim": "At its Connect event, Meta CEO Mark Zuckerberg announced a next‑generation VR headset that looks like a pair of oversized sunglasses.",
+      "claim": "Meta’s September 23 Connect event is scheduled to begin with an evening keynote from Mark Zuckerberg.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 99,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
+      "confidence": 85,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
       "bestDomain": "engadget.com",
       "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
+      "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F1",
+        "factId": "F14",
         "sourceId": "S1",
-        "sourceRole": "CORROBORATION",
-        "score": 79
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 66
       },
       "provenanceFactMatches": [
         {
-          "factId": "F1",
+          "factId": "F14",
           "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 79,
-          "passageIndex": 1
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 66,
+          "passageIndex": 4
         }
       ],
       "contextOnlySource": false,
       "bestPassageId": "S1-BODY",
-      "evidence": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight.",
-      "bestPassage": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight.",
+      "evidence": "Like last year's event, Meta has again opted for an evening keynote, with Zuckerberg taking the stage at 4PM PT/7PM ET on September 23 .",
+      "bestPassage": "Like last year's event, Meta has again opted for an evening keynote, with Zuckerberg taking the stage at 4PM PT/7PM ET on September 23 .",
       "matchedPassages": [
         "S1-BODY",
-        "S1-P1"
+        "S1-P14"
       ],
       "sharedTerms": [
-        "its",
+        "meta",
+        "september",
         "connect",
         "event",
-        "meta",
-        "ceo",
+        "keynote",
         "mark",
-        "zuckerberg",
-        "next",
-        "generation",
-        "headset",
-        "look",
-        "like",
-        "pair",
-        "oversiz",
-        "sunglass"
+        "zuckerberg"
       ],
       "entityShared": [
-        "connect",
         "meta",
-        "ceo",
+        "september",
+        "connect",
         "mark",
         "zuckerberg"
       ],
       "topicShared": [
         "meta",
-        "next",
-        "headset"
+        "connect",
+        "mark",
+        "zuckerberg"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -148,7 +125,7 @@
         "evidenceUncertain": false,
         "claimUncertain": false,
         "evidenceAttributed": false,
-        "claimAttributed": true,
+        "claimAttributed": false,
         "certaintyEscalation": false,
         "attributionDropped": false,
         "blocked": false
@@ -161,123 +138,260 @@
     },
     {
       "index": 2,
-      "claim": "The device, named the Meta VR Glasses, will ship in Spring 2027 and will be sold for $1,300.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 89,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": null,
-      "provenanceFactMatches": [],
+      "claim": "The company has highlighted that the focus will be on building a future for everyone, a theme Zuckerberg has explored in recent commentary on AI, smart glasses, and related technologies.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 74,
+      "bestSource": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
+      "bestUrl": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
+      "bestDomain": "theverge.com",
+      "sourceId": "S2",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F18",
+        "sourceId": "S2",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 68
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F18",
+          "sourceId": "S2",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 68,
+          "passageIndex": 2
+        }
+      ],
       "contextOnlySource": false,
-      "bestPassageId": "S1-BODY",
-      "evidence": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight. Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro. While they're not cheap at $1,300, they're a far cry from the Vision Pro's original $3,500 cost, or its current $3,700 price. Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras. Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device. It relies on six external cameras for color passthrough and motion tracking, and also has four internal eye-tracking cameras. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets. It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. You won't look like a huge weirdo slipping them on while flying, and since you wear them like glasses, there's little chance they'll mess up your hair as badly as a typical VR headset. Additionally, it sounds like the company is taking a cue from Apple's Immersive Video Format — Meta says National Geographic will be launching a new app next year with 180-degree 3D Video. A new \"VR Enhanced Cinema\" format will let you watch 3D movies with effects that bleed into your real-world space, similar to the way dynamic ambient lighting on TVs makes content more immersive.",
-      "bestPassage": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight. Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro. While they're not cheap at $1,300, they're a far cry from the Vision Pro's original $3,500 cost, or its current $3,700 price. Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras. Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device. It relies on six external cameras for color passthrough and motion tracking, and also has four internal eye-tracking cameras. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets. It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. You won't look like a huge weirdo slipping them on while flying, and since you wear them like glasses, there's little chance they'll mess up your hair as badly as a typical VR headset. Additionally, it sounds like the company is taking a cue from Apple's Immersive Video Format — Meta says National Geographic will be launching a new app next year with 180-degree 3D Video. A new \"VR Enhanced Cinema\" format will let you watch 3D movies with effects that bleed into your real-world space, similar to the way dynamic ambient lighting on TVs makes content more immersive.",
+      "bestPassageId": "S2-BODY",
+      "evidence": "Meta says that today’s keynote by Mark Zuckerberg will be about how “Meta is building a future for everyone” — something he wrote at length about in a recent essay about AI, smart glasses, and more.",
+      "bestPassage": "Meta says that today’s keynote by Mark Zuckerberg will be about how “Meta is building a future for everyone” — something he wrote at length about in a recent essay about AI, smart glasses, and more.",
       "matchedPassages": [
-        "S1-BODY"
+        "S2-BODY",
+        "S2-P2"
       ],
       "sharedTerms": [
         "the",
-        "device",
-        "meta",
-        "glass",
-        "spr",
-        "2027",
-        "and",
+        "has",
+        "build",
+        "future",
         "for",
-        "300"
+        "everyone",
+        "zuckerberg",
+        "recent",
+        "smart",
+        "glass",
+        "and"
       ],
       "entityShared": [
-        "meta",
-        "glass",
-        "spr"
+        "zuckerberg"
       ],
       "topicShared": [
-        "device",
-        "meta",
-        "glass"
+        "the",
+        "zuckerberg"
       ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
       "scopeWarnings": [],
       "attributionUncertainty": {
-        "evidenceUncertain": true,
+        "evidenceUncertain": false,
         "claimUncertain": false,
         "evidenceAttributed": true,
         "claimAttributed": false,
-        "certaintyEscalation": true,
-        "attributionDropped": true,
-        "blocked": true
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
       },
-      "factCoverage": 0,
+      "factCoverage": 1,
       "multiFactSupported": false,
       "directFactExact": false,
       "directExact": false,
-      "matchingMode": "semantic-context-evidence-pack"
+      "matchingMode": "fact-map-anchored-source-passage"
     },
     {
       "index": 3,
-      "claim": "The glasses are tethered to an external computing puck that can fit in a pocket.",
+      "claim": "Meta is reportedly developing a pair of glasses that will feature displays in both lenses.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 67,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
+      "confidence": 72,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
       "bestDomain": "engadget.com",
       "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
+      "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F14",
-        "sourceId": "S2",
+        "factId": "F4",
+        "sourceId": "S1",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 33
+        "score": 72
       },
       "provenanceFactMatches": [
         {
-          "factId": "F14",
-          "sourceId": "S2",
+          "factId": "F4",
+          "sourceId": "S1",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 33,
-          "passageIndex": 8
-        },
-        {
-          "factId": "F7",
-          "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 31,
-          "passageIndex": 3
-        },
-        {
-          "factId": "F2",
-          "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 25,
-          "passageIndex": 1
+          "score": 72,
+          "passageIndex": 7
         }
       ],
       "contextOnlySource": false,
-      "bestPassageId": "S2-FF14,S1-FF7,S1-FF2",
-      "evidence": "The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro.",
-      "bestPassage": "The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro.",
+      "bestPassageId": "S1-P4",
+      "evidence": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
+      "bestPassage": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
+      "matchedPassages": [
+        "S1-P4",
+        "S1-BODY"
+      ],
+      "sharedTerms": [
+        "meta",
+        "report",
+        "glass",
+        "display",
+        "both",
+        "lens"
+      ],
+      "entityShared": [
+        "meta"
+      ],
+      "topicShared": [
+        "meta"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": true,
+        "evidenceAttributed": true,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 4,
+      "claim": "The design is intended to enhance the user interface by providing visual output from both sides of the glasses.",
+      "status": "partial",
+      "classification": "uncertain",
+      "confidence": 49,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
+      "bestDomain": "engadget.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F4",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 26
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F4",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 26,
+          "passageIndex": 7
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
+      "bestPassage": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
       "matchedPassages": [
         "S1-BODY"
       ],
       "sharedTerms": [
         "the",
-        "glass",
-        "external",
-        "comput",
-        "puck",
-        "can",
-        "pocket"
+        "design",
+        "intend",
+        "both",
+        "glass"
       ],
       "entityShared": [],
       "topicShared": [
-        "glass"
+        "the"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": true,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 2,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 5,
+      "claim": "The glasses are expected to come in two styles and include extra microphones to facilitate interaction with Meta’s AI assistant.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 80,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
+      "bestDomain": "engadget.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F15",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 70
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F15",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 70,
+          "passageIndex": 5
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "These glasses, which will reportedly come in two styles, will instead come with extra microphones for chatting with Meta's AI assistant.",
+      "bestPassage": "These glasses, which will reportedly come in two styles, will instead come with extra microphones for chatting with Meta's AI assistant.",
+      "matchedPassages": [
+        "S1-BODY",
+        "S1-P15"
+      ],
+      "sharedTerms": [
+        "the",
+        "glass",
+        "expect",
+        "come",
+        "two",
+        "styl",
+        "and",
+        "extra",
+        "microphon",
+        "meta",
+        "assistant"
+      ],
+      "entityShared": [
+        "meta"
+      ],
+      "topicShared": [
+        "the",
+        "meta"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -286,191 +400,69 @@
       "attributionUncertainty": {
         "evidenceUncertain": true,
         "claimUncertain": true,
-        "evidenceAttributed": true,
+        "evidenceAttributed": false,
         "claimAttributed": false,
         "certaintyEscalation": false,
         "attributionDropped": false,
         "blocked": false
       },
-      "factCoverage": 3,
-      "multiFactSupported": true,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-multi-fact-anchored"
-    },
-    {
-      "index": 4,
-      "claim": "The glasses have a lightweight frame.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 53,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": {
-        "factId": "F9",
-        "sourceId": "S1",
-        "sourceRole": "CORROBORATION",
-        "score": 34
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F9",
-          "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 34,
-          "passageIndex": 8
-        },
-        {
-          "factId": "F14",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 34,
-          "passageIndex": 8
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S1-FF9,S2-FF14",
-      "evidence": "It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged.",
-      "bestPassage": "It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged.",
-      "matchedPassages": [
-        "S1-BODY",
-        "S1-P9"
-      ],
-      "sharedTerms": [
-        "the",
-        "glass",
-        "frame"
-      ],
-      "entityShared": [],
-      "topicShared": [
-        "glass"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": true,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": false,
-        "certaintyEscalation": true,
-        "attributionDropped": true,
-        "blocked": true
-      },
-      "factCoverage": 2,
-      "multiFactSupported": true,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-multi-fact-anchored"
-    },
-    {
-      "index": 5,
-      "claim": "They use six external cameras for color passthrough and motion tracking, plus four internal cameras for eye tracking.The detachable puck contains a Snapdragon Reality Elite processor, 12 GB of RAM, 128 GB of storage, a microSD slot, and a battery.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 5,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": null,
-      "provenanceFactMatches": [],
-      "contextOnlySource": false,
-      "bestPassageId": "S1-BODY",
-      "evidence": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight. Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro. While they're not cheap at $1,300, they're a far cry from the Vision Pro's original $3,500 cost, or its current $3,700 price. Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras. Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device. It relies on six external cameras for color passthrough and motion tracking, and also has four internal eye-tracking cameras. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets. It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. You won't look like a huge weirdo slipping them on while flying, and since you wear them like glasses, there's little chance they'll mess up your hair as badly as a typical VR headset. Additionally, it sounds like the company is taking a cue from Apple's Immersive Video Format — Meta says National Geographic will be launching a new app next year with 180-degree 3D Video. A new \"VR Enhanced Cinema\" format will let you watch 3D movies with effects that bleed into your real-world space, similar to the way dynamic ambient lighting on TVs makes content more immersive.",
-      "bestPassage": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight. Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro. While they're not cheap at $1,300, they're a far cry from the Vision Pro's original $3,500 cost, or its current $3,700 price. Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras. Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device. It relies on six external cameras for color passthrough and motion tracking, and also has four internal eye-tracking cameras. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets. It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. You won't look like a huge weirdo slipping them on while flying, and since you wear them like glasses, there's little chance they'll mess up your hair as badly as a typical VR headset. Additionally, it sounds like the company is taking a cue from Apple's Immersive Video Format — Meta says National Geographic will be launching a new app next year with 180-degree 3D Video. A new \"VR Enhanced Cinema\" format will let you watch 3D movies with effects that bleed into your real-world space, similar to the way dynamic ambient lighting on TVs makes content more immersive.",
-      "matchedPassages": [],
-      "sharedTerms": [
-        "six",
-        "external",
-        "camera",
-        "for",
-        "color",
-        "passthrough",
-        "and",
-        "motion",
-        "track",
-        "four",
-        "internal",
-        "eye",
-        "the",
-        "puck",
-        "ram",
-        "storage",
-        "microsd",
-        "slot"
-      ],
-      "entityShared": [
-        "ram"
-      ],
-      "topicShared": [],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": true,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": true,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": true,
-        "blocked": true
-      },
-      "factCoverage": 0,
+      "factCoverage": 1,
       "multiFactSupported": false,
       "directFactExact": false,
       "directExact": false,
-      "matchingMode": "semantic-context-evidence-pack"
+      "matchingMode": "fact-map-anchored-source-passage"
     },
     {
       "index": 6,
-      "claim": "While the puck is charging, the glasses remain usable.",
+      "claim": "These updates are part of the company’s response to privacy and harassment concerns tied to its current lineup, and the company has already begun addressing those issues with privacy fixes and a new marketing campaign.",
       "status": "partial",
       "classification": "supported_with_context",
-      "confidence": 60,
-      "bestSource": "Meta’s next VR device isn’t a headset — it’s glasses",
-      "bestUrl": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
+      "confidence": 66,
+      "bestSource": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
+      "bestUrl": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
       "bestDomain": "theverge.com",
       "sourceId": "S2",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F14",
+        "factId": "F19",
         "sourceId": "S2",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 55
+        "score": 64
       },
       "provenanceFactMatches": [
         {
-          "factId": "F14",
+          "factId": "F19",
           "sourceId": "S2",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 55,
-          "passageIndex": 8
+          "score": 64,
+          "passageIndex": 5
         }
       ],
       "contextOnlySource": false,
-      "bestPassageId": "S2-P2",
-      "evidence": "The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged.",
-      "bestPassage": "The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged.",
+      "bestPassageId": "S2-BODY",
+      "evidence": "The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
+      "bestPassage": "The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
       "matchedPassages": [
-        "S2-P2",
-        "S2-BODY"
+        "S2-BODY",
+        "S2-P3"
       ],
       "sharedTerms": [
+        "updat",
         "the",
-        "puck",
-        "charg",
-        "glass"
+        "privacy",
+        "and",
+        "harassment",
+        "fear",
+        "has",
+        "those",
+        "fix",
+        "new",
+        "market",
+        "campaign"
       ],
       "entityShared": [],
       "topicShared": [
-        "glass"
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -479,10 +471,10 @@
       "attributionUncertainty": {
         "evidenceUncertain": true,
         "claimUncertain": false,
-        "evidenceAttributed": true,
+        "evidenceAttributed": false,
         "claimAttributed": false,
         "certaintyEscalation": true,
-        "attributionDropped": true,
+        "attributionDropped": false,
         "blocked": true
       },
       "factCoverage": 1,
@@ -493,31 +485,234 @@
     },
     {
       "index": 7,
-      "claim": "” Each eye receives 2,412 × 2,288 pixels, which translates to 37 pixels per degree, and the system can drive a 120 Hz refresh rate.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 0,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
+      "claim": "After a long absence of new headset releases, Meta is preparing to debut a mixed‑reality headset known as Phoenix.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 85,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
       "bestDomain": "engadget.com",
       "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": null,
-      "provenanceFactMatches": [],
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F1",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 78
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F1",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 78,
+          "passageIndex": 8
+        }
+      ],
       "contextOnlySource": false,
-      "bestPassageId": "S1-P1",
-      "evidence": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight.",
-      "bestPassage": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight.",
-      "matchedPassages": [],
-      "sharedTerms": [],
-      "entityShared": [],
-      "topicShared": [],
-      "numericMismatch": true,
+      "bestPassageId": "S1-BODY",
+      "evidence": "It's been a while since we've seen a new headset from Meta, and we've never seen anything from them quite like the device currently known as \"Phoenix.\" The mixed reality headset has been rumored for some time, but it certainly seems like the company is gearing up for it to make its official debut at Connect.",
+      "bestPassage": "It's been a while since we've seen a new headset from Meta, and we've never seen anything from them quite like the device currently known as \"Phoenix.\" The mixed reality headset has been rumored for some time, but it certainly seems like the company is gearing up for it to make its official debut at Connect.",
+      "matchedPassages": [
+        "S1-BODY",
+        "S1-P1"
+      ],
+      "sharedTerms": [
+        "new",
+        "headset",
+        "release",
+        "meta",
+        "debut",
+        "mix",
+        "reality",
+        "known",
+        "phoenix"
+      ],
+      "entityShared": [
+        "meta",
+        "phoenix"
+      ],
+      "topicShared": [
+        "meta"
+      ],
+      "numericMismatch": false,
       "contradicted": false,
-      "offTopic": true,
+      "offTopic": false,
       "scopeWarnings": [],
       "attributionUncertainty": {
         "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": true,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 8,
+      "claim": "Rumors suggest that Phoenix will be one of the first devices to use Qualcomm’s Snapdragon Reality Elite chip, a processor specifically designed for slimmer form factors suitable for headsets.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 93,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
+      "bestDomain": "engadget.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F5",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 76
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F5",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 76,
+          "passageIndex": 10
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "And while we don't know much about what Phoenix will look like in the way of specs, it seems like a pretty good bet the headset will be among the first devices to use the new Snapdragon Reality Elite chip Qualcomm announced earlier this year.",
+      "bestPassage": "And while we don't know much about what Phoenix will look like in the way of specs, it seems like a pretty good bet the headset will be among the first devices to use the new Snapdragon Reality Elite chip Qualcomm announced earlier this year.",
+      "matchedPassages": [
+        "S1-BODY",
+        "S1-P5"
+      ],
+      "sharedTerms": [
+        "rumor",
+        "phoenix",
+        "one",
+        "the",
+        "first",
+        "devic",
+        "use",
+        "qualcomm",
+        "snapdragon",
+        "reality",
+        "elite",
+        "chip",
+        "specifically",
+        "design",
+        "for",
+        "form",
+        "factor",
+        "headset"
+      ],
+      "entityShared": [
+        "phoenix",
+        "qualcomm",
+        "snapdragon",
+        "reality",
+        "elite"
+      ],
+      "topicShared": [
+        "the"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": true,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 9,
+      "claim": "The event is also expected to feature updates on Meta’s Muse AI agent and potential new opportunities for third‑party apps on the glasses ecosystem.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 84,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
+      "bestDomain": "engadget.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F20",
+        "sourceId": "S2",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 56
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F20",
+          "sourceId": "S2",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 56,
+          "passageIndex": 3
+        },
+        {
+          "factId": "F13",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 49,
+          "passageIndex": 15
+        },
+        {
+          "factId": "F19",
+          "sourceId": "S2",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 44,
+          "passageIndex": 5
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S2-FF20,S1-FF13,S2-FF19",
+      "evidence": "That means we can expect more news from Zuckerberg and his team on those topics; perhaps we’ll hear more about Meta’s recently launched Muse AI agent and new glasses hardware. I'm also hoping to hear more about Meta's work to bring more third-party apps to its glasses ecosystem. The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
+      "bestPassage": "That means we can expect more news from Zuckerberg and his team on those topics; perhaps we’ll hear more about Meta’s recently launched Muse AI agent and new glasses hardware. I'm also hoping to hear more about Meta's work to bring more third-party apps to its glasses ecosystem. The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
+      "matchedPassages": [
+        "S1-BODY"
+      ],
+      "sharedTerms": [
+        "the",
+        "expect",
+        "updat",
+        "meta",
+        "muse",
+        "agent",
+        "and",
+        "new",
+        "third",
+        "party",
+        "apps",
+        "glass",
+        "ecosystem"
+      ],
+      "entityShared": [
+        "meta",
+        "muse"
+      ],
+      "topicShared": [
+        "the",
+        "meta"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": true,
         "claimUncertain": true,
         "evidenceAttributed": false,
         "claimAttributed": false,
@@ -525,187 +720,7 @@
         "attributionDropped": false,
         "blocked": false
       },
-      "factCoverage": 0,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 8,
-      "claim": "Meta says the glasses run Quest OS, the same operating system that powers the Quest 3.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 72,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": {
-        "factId": "F14",
-        "sourceId": "S2",
-        "sourceRole": "DIRECT_REPORTING",
-        "score": 52
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F14",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 52,
-          "passageIndex": 8
-        },
-        {
-          "factId": "F13",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 41,
-          "passageIndex": 25
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S1-BODY",
-      "evidence": "The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them.",
-      "bestPassage": "The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them.",
-      "matchedPassages": [
-        "S1-BODY"
-      ],
-      "sharedTerms": [
-        "meta",
-        "says",
-        "the",
-        "glass",
-        "quest",
-        "same",
-        "power"
-      ],
-      "entityShared": [
-        "meta",
-        "quest"
-      ],
-      "topicShared": [
-        "meta",
-        "glass"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": true,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": true,
-        "certaintyEscalation": false,
-        "attributionDropped": false,
-        "blocked": false
-      },
-      "factCoverage": 2,
-      "multiFactSupported": true,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-multi-fact-anchored"
-    },
-    {
-      "index": 9,
-      "claim": "In a demo, Meta showed footage from James Cameron’s Billie Eilish concert film, a VR180 NBA Finals clip, and a “VR Enhanced Cinema” version of Avengers: Endgame produced with Disney and Industrial Light & Magic.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 94,
-      "bestSource": "Meta’s next VR device isn’t a headset — it’s glasses",
-      "bestUrl": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-      "bestDomain": "theverge.com",
-      "sourceId": "S2",
-      "sourceRole": "DIRECT_REPORTING",
-      "coreFactMatch": {
-        "factId": "F18",
-        "sourceId": "S2",
-        "sourceRole": "DIRECT_REPORTING",
-        "score": 77
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F18",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 77,
-          "passageIndex": 16
-        },
-        {
-          "factId": "F19",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 71,
-          "passageIndex": 17
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S2-FF18,S2-FF19",
-      "evidence": "Meta showed me a clip from James Cameron’s Billie Eilish concert film, which was impressive on a huge virtual display, and parts of the most recent NBA Finals, which was filmed on a format called VR180 that provided a 180-degree view of the court. I also got to watch some of Avengers: Endgame in what Meta characterized as a “VR Enhanced Cinema” experience made in partnership with Disney and Industrial Light & Magic.",
-      "bestPassage": "Meta showed me a clip from James Cameron’s Billie Eilish concert film, which was impressive on a huge virtual display, and parts of the most recent NBA Finals, which was filmed on a format called VR180 that provided a 180-degree view of the court. I also got to watch some of Avengers: Endgame in what Meta characterized as a “VR Enhanced Cinema” experience made in partnership with Disney and Industrial Light & Magic.",
-      "matchedPassages": [
-        "S2-BODY",
-        "S2-P6"
-      ],
-      "sharedTerms": [
-        "meta",
-        "show",
-        "jam",
-        "cameron",
-        "billie",
-        "eilish",
-        "concert",
-        "film",
-        "vr180",
-        "nba",
-        "final",
-        "clip",
-        "and",
-        "enhanc",
-        "cinema",
-        "avenger",
-        "endgame",
-        "disney",
-        "industrial",
-        "light",
-        "magic"
-      ],
-      "entityShared": [
-        "meta",
-        "jam",
-        "cameron",
-        "billie",
-        "eilish",
-        "vr180",
-        "nba",
-        "final",
-        "enhanc",
-        "cinema",
-        "avenger",
-        "endgame",
-        "disney",
-        "industrial",
-        "light",
-        "magic"
-      ],
-      "topicShared": [
-        "meta"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": false,
-        "claimUncertain": false,
-        "evidenceAttributed": false,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": false,
-        "blocked": false
-      },
-      "factCoverage": 2,
+      "factCoverage": 3,
       "multiFactSupported": true,
       "directFactExact": false,
       "directExact": false,
@@ -713,199 +728,63 @@
     },
     {
       "index": 10,
-      "claim": "99 Quest 3 and Apple’s Vision Pro, which retails for $3,499.",
-      "status": "unsupported",
-      "classification": "contradicted",
-      "confidence": 21,
-      "bestSource": "Meta’s next VR device isn’t a headset — it’s glasses",
-      "bestUrl": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-      "bestDomain": "theverge.com",
-      "sourceId": "S2",
+      "claim": "An avatar of Meta’s CTO may appear during the keynote, adding a virtual dimension to the presentation.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 71,
+      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
+      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
+      "bestDomain": "engadget.com",
+      "sourceId": "S1",
       "sourceRole": "DIRECT_REPORTING",
-      "coreFactMatch": null,
-      "provenanceFactMatches": [],
-      "contextOnlySource": false,
-      "bestPassageId": "S2-BODY",
-      "evidence": "That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them. The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. The display is what Meta calls a 5K MicroOLED “Infinite Display.” It has 2412 x 2288 pixels per eye at 37 pixels per degree and supports a refresh rate of up to 120Hz. Meta is still planning to develop full VR headsets, the company’s VP of product for VR, Angela Chang, tells The Verge. Meta is launching new VR hardware: a pair of glasses. Meta showed me a clip from James Cameron’s Billie Eilish concert film, which was impressive on a huge virtual display, and parts of the most recent NBA Finals, which was filmed on a format called VR180 that provided a 180-degree view of the court. I also got to watch some of Avengers: Endgame in what Meta characterized as a “VR Enhanced Cinema” experience made in partnership with Disney and Industrial Light & Magic. Snap’s idea is the augmented reality-focused Specs glasses, and Meta is working on AR glasses too. I don’t think they will transform the landscape of VR, especially when Meta itself has been divesting from VR software and largely moving on from the VR version of Horizon Worlds.",
-      "bestPassage": "That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them. The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. The display is what Meta calls a 5K MicroOLED “Infinite Display.” It has 2412 x 2288 pixels per eye at 37 pixels per degree and supports a refresh rate of up to 120Hz. Meta is still planning to develop full VR headsets, the company’s VP of product for VR, Angela Chang, tells The Verge. Meta is launching new VR hardware: a pair of glasses. Meta showed me a clip from James Cameron’s Billie Eilish concert film, which was impressive on a huge virtual display, and parts of the most recent NBA Finals, which was filmed on a format called VR180 that provided a 180-degree view of the court. I also got to watch some of Avengers: Endgame in what Meta characterized as a “VR Enhanced Cinema” experience made in partnership with Disney and Industrial Light & Magic. Snap’s idea is the augmented reality-focused Specs glasses, and Meta is working on AR glasses too. I don’t think they will transform the landscape of VR, especially when Meta itself has been divesting from VR software and largely moving on from the VR version of Horizon Worlds.",
-      "matchedPassages": [],
-      "sharedTerms": [
-        "quest",
-        "and",
-        "apple",
-        "vision",
-        "pro",
-        "for",
-        "499"
-      ],
-      "entityShared": [
-        "quest",
-        "apple",
-        "vision",
-        "pro"
-      ],
-      "topicShared": [],
-      "numericMismatch": true,
-      "contradicted": false,
-      "offTopic": true,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": true,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": true,
-        "blocked": true
-      },
-      "factCoverage": 0,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 11,
-      "claim": "Meta markets the glasses as an all‑in‑one entertainment and productivity device.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 89,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
       "coreFactMatch": {
-        "factId": "F5",
+        "factId": "F12",
         "sourceId": "S1",
-        "sourceRole": "CORROBORATION",
-        "score": 89
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 67
       },
       "provenanceFactMatches": [
         {
-          "factId": "F5",
+          "factId": "F12",
           "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 89,
-          "passageIndex": 2
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S1-P5",
-      "evidence": "Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device.",
-      "bestPassage": "Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device.",
-      "matchedPassages": [
-        "S1-P5",
-        "S1-BODY"
-      ],
-      "sharedTerms": [
-        "meta",
-        "the",
-        "glass",
-        "all",
-        "one",
-        "entertainment",
-        "and",
-        "productivity",
-        "device"
-      ],
-      "entityShared": [
-        "meta"
-      ],
-      "topicShared": [
-        "meta",
-        "glass",
-        "device"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": false,
-        "claimUncertain": false,
-        "evidenceAttributed": false,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": false,
-        "blocked": false
-      },
-      "factCoverage": 1,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-anchored-source-passage"
-    },
-    {
-      "index": 12,
-      "claim": "Because the glasses rely on external cameras for passthrough and tracking, they do not carry the same privacy concerns that Meta’s Ray‑Ban and Display glasses had.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 94,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": {
-        "factId": "F4",
-        "sourceId": "S1",
-        "sourceRole": "CORROBORATION",
-        "score": 80
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F4",
-          "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 80,
-          "passageIndex": 9
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 67,
+          "passageIndex": 12
         }
       ],
       "contextOnlySource": false,
       "bestPassageId": "S1-BODY",
-      "evidence": "Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras.",
-      "bestPassage": "Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras.",
+      "evidence": "The Information also recently reported that an avatar of Meta's CTO could make an appearance during the Connect keynote.",
+      "bestPassage": "The Information also recently reported that an avatar of Meta's CTO could make an appearance during the Connect keynote.",
       "matchedPassages": [
         "S1-BODY",
-        "S1-P4"
+        "S1-P12"
       ],
       "sharedTerms": [
-        "the",
-        "glass",
-        "external",
-        "camera",
-        "for",
-        "passthrough",
-        "and",
-        "track",
-        "not",
-        "same",
-        "privacy",
-        "fear",
+        "avatar",
         "meta",
-        "ray",
-        "ban",
-        "display"
+        "cto",
+        "dur",
+        "the",
+        "keynote",
+        "virtual"
       ],
       "entityShared": [
         "meta",
-        "ray",
-        "ban",
-        "display"
+        "cto"
       ],
       "topicShared": [
-        "glass",
-        "meta"
+        "meta",
+        "the"
       ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
       "scopeWarnings": [],
       "attributionUncertainty": {
-        "evidenceUncertain": false,
-        "claimUncertain": false,
-        "evidenceAttributed": false,
+        "evidenceUncertain": true,
+        "claimUncertain": true,
+        "evidenceAttributed": true,
         "claimAttributed": false,
         "certaintyEscalation": false,
         "attributionDropped": false,
@@ -916,408 +795,14 @@
       "directFactExact": false,
       "directExact": false,
       "matchingMode": "fact-map-anchored-source-passage"
-    },
-    {
-      "index": 13,
-      "claim": "However, Meta has already stated that it believes wearing cameras in public is problematic.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 55,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": {
-        "factId": "F4",
-        "sourceId": "S1",
-        "sourceRole": "CORROBORATION",
-        "score": 53
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F4",
-          "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 53,
-          "passageIndex": 9
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S1-P4",
-      "evidence": "Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras.",
-      "bestPassage": "Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras.",
-      "matchedPassages": [
-        "S1-P4",
-        "S1-BODY"
-      ],
-      "sharedTerms": [
-        "meta",
-        "has",
-        "wear",
-        "camera",
-        "public"
-      ],
-      "entityShared": [
-        "meta"
-      ],
-      "topicShared": [
-        "meta"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": false,
-        "claimUncertain": false,
-        "evidenceAttributed": false,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": false,
-        "blocked": false
-      },
-      "factCoverage": 1,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-anchored-source-passage"
-    },
-    {
-      "index": 14,
-      "claim": "Meta has not yet confirmed whether the glasses will support standalone use, the full range of Quest applications, or future content distribution.",
-      "status": "partial",
-      "classification": "uncertain",
-      "confidence": 48,
-      "bestSource": "Meta’s next VR device isn’t a headset — it’s glasses",
-      "bestUrl": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-      "bestDomain": "theverge.com",
-      "sourceId": "S2",
-      "sourceRole": "DIRECT_REPORTING",
-      "coreFactMatch": {
-        "factId": "F8",
-        "sourceId": "S1",
-        "sourceRole": "CORROBORATION",
-        "score": 29
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F8",
-          "sourceId": "S1",
-          "sourceRole": "CORROBORATION",
-          "score": 29,
-          "passageIndex": 6
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S2-BODY",
-      "evidence": "And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets.",
-      "bestPassage": "And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets.",
-      "matchedPassages": [
-        "S2-BODY"
-      ],
-      "sharedTerms": [
-        "meta",
-        "has",
-        "the",
-        "glass",
-        "support",
-        "full",
-        "quest"
-      ],
-      "entityShared": [
-        "meta",
-        "quest"
-      ],
-      "topicShared": [
-        "meta",
-        "glass"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": false,
-        "claimUncertain": false,
-        "evidenceAttributed": false,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": false,
-        "blocked": false
-      },
-      "factCoverage": 3,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-anchored-source-passage"
-    },
-    {
-      "index": 15,
-      "claim": "The company has also said that it will continue developing full VR headsets, indicating that the glasses are a complementary product rather than a replacement.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 70,
-      "bestSource": "Meta’s next VR device isn’t a headset — it’s glasses",
-      "bestUrl": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-      "bestDomain": "theverge.com",
-      "sourceId": "S2",
-      "sourceRole": "DIRECT_REPORTING",
-      "coreFactMatch": {
-        "factId": "F16",
-        "sourceId": "S2",
-        "sourceRole": "DIRECT_REPORTING",
-        "score": 45
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F16",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 45,
-          "passageIndex": 27
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S2-BODY",
-      "evidence": "Meta is still planning to develop full VR headsets, the company’s VP of product for VR, Angela Chang, tells The Verge.",
-      "bestPassage": "Meta is still planning to develop full VR headsets, the company’s VP of product for VR, Angela Chang, tells The Verge.",
-      "matchedPassages": [
-        "S2-BODY",
-        "S2-P4"
-      ],
-      "sharedTerms": [
-        "the",
-        "has",
-        "continue",
-        "develop",
-        "full",
-        "headset",
-        "glass",
-        "product"
-      ],
-      "entityShared": [],
-      "topicShared": [
-        "headset",
-        "glass"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": false,
-        "claimUncertain": false,
-        "evidenceAttributed": false,
-        "claimAttributed": true,
-        "certaintyEscalation": false,
-        "attributionDropped": false,
-        "blocked": false
-      },
-      "factCoverage": 1,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-anchored-source-passage"
-    },
-    {
-      "index": 16,
-      "claim": "Meta’s glasses bring a headset‑like immersion into a glasses‑style form factor.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 53,
-      "bestSource": "The next Meta VR device may not look like a Quest headset at all",
-      "bestUrl": "https://mashable.com/article/meta-quest-puffin-vr-xr-headset",
-      "bestDomain": "mashable.com",
-      "sourceId": "S3",
-      "sourceRole": "DIRECT_REPORTING",
-      "coreFactMatch": {
-        "factId": "F13",
-        "sourceId": "S2",
-        "sourceRole": "DIRECT_REPORTING",
-        "score": 45
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F13",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 45,
-          "passageIndex": 25
-        },
-        {
-          "factId": "F23",
-          "sourceId": "S3",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 42,
-          "passageIndex": 4
-        },
-        {
-          "factId": "F22",
-          "sourceId": "S3",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 36,
-          "passageIndex": 2
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S2-FF13,S3-FF23,S3-FF22",
-      "evidence": "That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them. SEE ALSO: Meta reportedly replacing human risk assessors with AI According to an older report by The Information that originally shed light on this new Meta device, codenamed \"Puffin,\" it looks more like a pair of big glasses than a headset and weighs less than 100g. It also sounds like the next one will be something a little different.UploadVR reported that Meta's next head-worn VR device might launch in 2026, but it likely won't be a big, bulky VR headset like we're used to seeing from Quest devices.",
-      "bestPassage": "That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them. SEE ALSO: Meta reportedly replacing human risk assessors with AI According to an older report by The Information that originally shed light on this new Meta device, codenamed \"Puffin,\" it looks more like a pair of big glasses than a headset and weighs less than 100g. It also sounds like the next one will be something a little different.UploadVR reported that Meta's next head-worn VR device might launch in 2026, but it likely won't be a big, bulky VR headset like we're used to seeing from Quest devices.",
-      "matchedPassages": [
-        "S3-BODY",
-        "S3-P2",
-        "S3-P1"
-      ],
-      "sharedTerms": [
-        "meta",
-        "glass",
-        "headset",
-        "like"
-      ],
-      "entityShared": [
-        "meta"
-      ],
-      "topicShared": [
-        "meta",
-        "glass",
-        "headset"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": true,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": true,
-        "blocked": true
-      },
-      "factCoverage": 3,
-      "multiFactSupported": true,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-multi-fact-anchored"
-    },
-    {
-      "index": 17,
-      "claim": "With a tethered puck, 5K OLED panels, and Quest OS compatibility, they offer a lower‑priced alternative to Vision Pro while maintaining a comparable visual experience.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 56,
-      "bestSource": "Meta’s next VR device isn’t a headset — it’s glasses",
-      "bestUrl": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-      "bestDomain": "theverge.com",
-      "sourceId": "S2",
-      "sourceRole": "DIRECT_REPORTING",
-      "coreFactMatch": null,
-      "provenanceFactMatches": [],
-      "contextOnlySource": false,
-      "bestPassageId": "S2-BODY",
-      "evidence": "That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them. The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. The display is what Meta calls a 5K MicroOLED “Infinite Display.” It has 2412 x 2288 pixels per eye at 37 pixels per degree and supports a refresh rate of up to 120Hz. Meta is still planning to develop full VR headsets, the company’s VP of product for VR, Angela Chang, tells The Verge. Meta is launching new VR hardware: a pair of glasses. Meta showed me a clip from James Cameron’s Billie Eilish concert film, which was impressive on a huge virtual display, and parts of the most recent NBA Finals, which was filmed on a format called VR180 that provided a 180-degree view of the court. I also got to watch some of Avengers: Endgame in what Meta characterized as a “VR Enhanced Cinema” experience made in partnership with Disney and Industrial Light & Magic. Snap’s idea is the augmented reality-focused Specs glasses, and Meta is working on AR glasses too. I don’t think they will transform the landscape of VR, especially when Meta itself has been divesting from VR software and largely moving on from the VR version of Horizon Worlds.",
-      "bestPassage": "That price puts the VR Glasses between Meta’s $599.99 Quest 3 and a high-end VR headset like Apple’s $3,499 Vision Pro, and I think that’s the right way to think about them. The separate puck connected with a wire contains the guts powering the headset: a Snapdragon Reality Elite processor, 128GB of storage, 12GB of RAM, and the battery, which Meta says will offer up to three hours of media playback, though you can continue using the glasses even while the puck is being charged. The display is what Meta calls a 5K MicroOLED “Infinite Display.” It has 2412 x 2288 pixels per eye at 37 pixels per degree and supports a refresh rate of up to 120Hz. Meta is still planning to develop full VR headsets, the company’s VP of product for VR, Angela Chang, tells The Verge. Meta is launching new VR hardware: a pair of glasses. Meta showed me a clip from James Cameron’s Billie Eilish concert film, which was impressive on a huge virtual display, and parts of the most recent NBA Finals, which was filmed on a format called VR180 that provided a 180-degree view of the court. I also got to watch some of Avengers: Endgame in what Meta characterized as a “VR Enhanced Cinema” experience made in partnership with Disney and Industrial Light & Magic. Snap’s idea is the augmented reality-focused Specs glasses, and Meta is working on AR glasses too. I don’t think they will transform the landscape of VR, especially when Meta itself has been divesting from VR software and largely moving on from the VR version of Horizon Worlds.",
-      "matchedPassages": [
-        "S2-BODY"
-      ],
-      "sharedTerms": [
-        "puck",
-        "and",
-        "quest",
-        "offer",
-        "vision",
-        "pro",
-        "experience"
-      ],
-      "entityShared": [
-        "quest",
-        "vision",
-        "pro"
-      ],
-      "topicShared": [],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": true,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": true,
-        "blocked": true
-      },
-      "factCoverage": 0,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "semantic-context-evidence-pack"
-    },
-    {
-      "index": 18,
-      "claim": "Meta’s VR Glasses are a $1,300 glasses‑style device that pairs with a pocket‑size puck and runs Quest OS.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 94,
-      "bestSource": "Meta's $1,300 VR Glasses Look Like The Vision Pro Sequel Apple Should Be Making - engadget.com",
-      "bestUrl": "https://www.engadget.com/2267218/meta-vr-glasses-price-specs-apple-vision-pro-comparison/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "CORROBORATION",
-      "coreFactMatch": null,
-      "provenanceFactMatches": [],
-      "contextOnlySource": false,
-      "bestPassageId": "S1-BODY",
-      "evidence": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight. Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro. While they're not cheap at $1,300, they're a far cry from the Vision Pro's original $3,500 cost, or its current $3,700 price. Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras. Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device. It relies on six external cameras for color passthrough and motion tracking, and also has four internal eye-tracking cameras. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets. It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. You won't look like a huge weirdo slipping them on while flying, and since you wear them like glasses, there's little chance they'll mess up your hair as badly as a typical VR headset. Additionally, it sounds like the company is taking a cue from Apple's Immersive Video Format — Meta says National Geographic will be launching a new app next year with 180-degree 3D Video. A new \"VR Enhanced Cinema\" format will let you watch 3D movies with effects that bleed into your real-world space, similar to the way dynamic ambient lighting on TVs makes content more immersive.",
-      "bestPassage": "After a few leaks, Meta CEO Mark Zuckerberg finally revealed the company's next-generation Meta VR Glasses at its Connect event tonight. Arriving in Spring 2027, they look like oversized sunglasses (similar to display frames from Xreal and other), paired with an external power and computing pod, like the Apple Vision Pro. While they're not cheap at $1,300, they're a far cry from the Vision Pro's original $3,500 cost, or its current $3,700 price. Since these are obviously VR specs, I don't think they'd have the same privacy concerns as Meta's Ray-Ban and Display glasses , but the company has significantly poisoned the idea of wearing anything in public with cameras. Meta is pitching the VR Glasses as an all-in-one entertainment and productivity device. It relies on six external cameras for color passthrough and motion tracking, and also has four internal eye-tracking cameras. Meta's wired computing puck, which looks compact enough to slip in a pocket, holds 12GB of RAM and 128GB of storage (along with a microSD card slot for more content). And since the Meta VR runs Quest OS, I'm hoping this 3D content storefront eventually heads to the Quest VR headsets. It likely won't be as immersive as the Frame and other headsets that completely envelop your field of vision, but for most people, it's probably worth losing that to have a device that's just easier to wear. You won't look like a huge weirdo slipping them on while flying, and since you wear them like glasses, there's little chance they'll mess up your hair as badly as a typical VR headset. Additionally, it sounds like the company is taking a cue from Apple's Immersive Video Format — Meta says National Geographic will be launching a new app next year with 180-degree 3D Video. A new \"VR Enhanced Cinema\" format will let you watch 3D movies with effects that bleed into your real-world space, similar to the way dynamic ambient lighting on TVs makes content more immersive.",
-      "matchedPassages": [
-        "S1-BODY"
-      ],
-      "sharedTerms": [
-        "meta",
-        "glass",
-        "are",
-        "300",
-        "device",
-        "pair",
-        "pocket",
-        "puck",
-        "and",
-        "runs",
-        "quest"
-      ],
-      "entityShared": [
-        "meta",
-        "glass",
-        "quest"
-      ],
-      "topicShared": [
-        "meta",
-        "glass",
-        "device"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": true,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": false,
-        "certaintyEscalation": true,
-        "attributionDropped": true,
-        "blocked": true
-      },
-      "factCoverage": 0,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "semantic-context-evidence-pack"
     }
   ],
-  "editorial": []
+  "editorial": [
+    {
+      "index": 11,
+      "claim": "Overall, the Connect lineup signals Meta’s intent to advance its smart‑glasses offering while addressing ongoing privacy concerns and broadening its software ecosystem.",
+      "type": "editorial-analysis",
+      "status": "editorial-excluded"
+    }
+  ]
 }

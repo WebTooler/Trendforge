@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-24T03:29:07.748Z",
+  "generatedAt": "2026-09-24T06:38:04.351Z",
   "policy": {
     "privacyFirst": true,
     "no_scraping": true,
@@ -83,6 +83,38 @@
     {
       "slug": "the-apple-watch-series-12-is-the-start-of-a-new-wearable-era",
       "title": "The Apple Watch Series 12 is the start of a new wearable era",
+      "category": "Digital Life",
+      "channels": [
+        {
+          "channel": "Google Search",
+          "action": "publish and keep canonical/indexable",
+          "reason": "organic discovery"
+        },
+        {
+          "channel": "Newsletter",
+          "action": "include when relevant",
+          "reason": "subscriber retention"
+        },
+        {
+          "channel": "RSS",
+          "action": "make available through feed",
+          "reason": "reader-controlled distribution"
+        },
+        {
+          "channel": "Social",
+          "action": "share a concise human-written excerpt",
+          "reason": "additional discovery"
+        },
+        {
+          "channel": "Direct",
+          "action": "link from related articles",
+          "reason": "internal discovery"
+        }
+      ]
+    },
+    {
+      "slug": "meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset",
+      "title": "Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
       "category": "Digital Life",
       "channels": [
         {
@@ -595,38 +627,6 @@
     {
       "slug": "al-gore-says-the-real-ai-risk-isn-t-data-centers",
       "title": "Al Gore Says the Real AI Risk Isn’t Data Centers",
-      "category": "AI",
-      "channels": [
-        {
-          "channel": "Google Search",
-          "action": "publish and keep canonical/indexable",
-          "reason": "organic discovery"
-        },
-        {
-          "channel": "Newsletter",
-          "action": "include when relevant",
-          "reason": "subscriber retention"
-        },
-        {
-          "channel": "RSS",
-          "action": "make available through feed",
-          "reason": "reader-controlled distribution"
-        },
-        {
-          "channel": "Social",
-          "action": "share a concise human-written excerpt",
-          "reason": "additional discovery"
-        },
-        {
-          "channel": "Direct",
-          "action": "link from related articles",
-          "reason": "internal discovery"
-        }
-      ]
-    },
-    {
-      "slug": "ai-doomsday-fears-what-can-ordinary-people-actually-do",
-      "title": "AI doomsday fears: what can ordinary people actually do?",
       "category": "AI",
       "channels": [
         {

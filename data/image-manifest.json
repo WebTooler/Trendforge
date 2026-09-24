@@ -1,12 +1,79 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-24T03:29:06.826Z",
+  "generatedAt": "2026-09-24T06:38:03.600Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 0,
+  "generated": 1,
   "skipped": 0,
   "failed": 0,
-  "images": {}
+  "images": {
+    "meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset": {
+      "status": "generated",
+      "image": "/Trendforge/images/articles/meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset.1024x576.png",
+      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
+      "width": 1024,
+      "height": 576,
+      "steps": 4,
+      "elapsedMs": 2271,
+      "bytes": 683860,
+      "visualBrief": {
+        "version": 2,
+        "mode": "documentary-person",
+        "primarySubject": "Mark Zuckerberg, the central person named by the story",
+        "scene": "A restrained documentary technology-publication photograph of the central person publicly speaking, being interviewed, or addressing an industry audience in a context that directly matches the article.",
+        "supportingElements": [
+          "softly blurred audience or event environment",
+          "Meta-specific event context without invented logos or text"
+        ],
+        "composition": "Medium or medium-wide horizontal frame; subject slightly off-center; back, side, over-the-shoulder, cropped, silhouette, or natural-distance framing so the face is not clearly identifiable.",
+        "company": "Meta",
+        "namedPerson": "Mark Zuckerberg",
+        "category": "Digital Life",
+        "storyAnchors": [
+          "meta",
+          "connect",
+          "2026",
+          "unveils",
+          "glasses",
+          "rumored",
+          "mixed",
+          "reality"
+        ],
+        "avoid": [
+          "generic office imagery",
+          "random tablet or laptop",
+          "generic futuristic technology",
+          "glowing holograms, floating code, HUDs and neon sci-fi effects",
+          "prominent readable text or fake headlines",
+          "generic product hero replacing the person",
+          "invented facial likeness",
+          "random consumer electronics as the main subject"
+        ]
+      },
+      "relevance": {
+        "passed": false,
+        "anchors": [
+          "meta",
+          "connect",
+          "2026",
+          "unveils",
+          "glasses",
+          "rumored",
+          "mixed",
+          "reality"
+        ],
+        "matchedAnchors": [
+          "meta"
+        ],
+        "entityMatches": [
+          "meta",
+          "mark zuckerberg"
+        ],
+        "score": 0.125
+      },
+      "promptLength": 1900
+    }
+  }
 }
