@@ -16,6 +16,7 @@ assert.doesNotMatch(writerEngine,/Maximum material factual claims:/,'Writer prom
 assert.doesNotMatch(writerEngine,/Math\\.max\\(3,claimBudget\\)/,'Writer must not inflate a small evidence budget to three claims.');
 assert.match(writerEngine,/ENTITY DEDUPLICATION LOCK/,'Writer must deduplicate abbreviations and full-form entities within lists and sentences.');
 assert.match(writerEngine,/BANNED EDITORIAL WORDS/,'Writer prompt must explicitly exclude banned editorial words.');
+assert.match(writerEngine,/robust/,'Writer prompt must exclude the actual banned editorial word robust.');
 const base={title:'A sufficiently descriptive TrendForge headline',description:'A sufficiently long description that explains the development and gives readers useful context without making unsupported claims.',category:'Technology'};
 const synthesisBlueprint={mode:'narrow',targetWords:{min:220,max:450,soft:300},maxH2:2,synthesis:{allowed:true,maxStatements:1,maxWords:60,allowedFactIds:['F1','F2']}};
 const conclusionSynthesis='## Evidence\\n\\nThe available evidence establishes the reported development and its immediate details. The supplied record gives enough concrete information to describe what happened without importing outside facts.\\n\\n## Conclusion\\n\\nIn conclusion, taken together, the evidence points to the same documented development without adding a new factual premise. This closing statement only combines the established points and does not introduce a new number, date, entity, cause, outcome, or stronger certainty.';
