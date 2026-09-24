@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { buildAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
 
 const root=process.cwd();
 const verifier=fs.readFileSync(path.join(root,'scripts','verify-article-claims-smart.mjs'),'utf8');
@@ -14,12 +15,16 @@ fs.writeFileSync(path.join(tmp,'scripts','verify-article-claims-smart.mjs'),veri
 
 function runArticle(body,evidence){
   fs.writeFileSync(path.join(tmp,'content','articles','fixture.md'),'---\ntitle: "Amazon Bedrock AgentCore migration"\n---\n'+body+'\n');
-  fs.writeFileSync(path.join(tmp,'data','article-brief.json'),JSON.stringify({
-    brief:{title:'Amazon Bedrock AgentCore migration',summary:'Amazon Bedrock AgentCore migration'},
-    storyFactMap:{temporal:{eventDate:'2026-09-23T00:00:00.000Z',eventDateSource:'metadata',sources:[{sourceId:'S1',sourceDate:'2026-09-18T12:00:00.000Z',temporalStatus:'pre-event'}]}},
-    temporal:{eventDate:'2026-09-23T00:00:00.000Z',eventDateSource:'metadata',sources:[{sourceId:'S1',sourceDate:'2026-09-18T12:00:00.000Z',temporalStatus:'pre-event'}]},
-    grounding:{sources:[{title:'AWS',url:'https://aws.amazon.com/example',passages:evidence}]}
-  }));
+  const temporal={eventDate:'2026-09-23T00:00:00.000Z',eventDateSource:'metadata',sources:[{sourceId:'S1',sourceDate:'2026-09-18T12:00:00.000Z',temporalStatus:'pre-event'}]};
+  const brief={title:'Amazon Bedrock AgentCore migration',summary:'Amazon Bedrock AgentCore migration',storyFactMap:{temporal}};
+  const pack=buildAuthoritativeEvidencePack({
+    candidate:{title:brief.title,link:'https://example.com/story',category:'Technology'},
+    sources:[{id:'S1',title:'AWS',url:'https://aws.amazon.com/example',domain:'aws.amazon.com',publisherFamily:'aws.com',verified:true,passages:evidence,body:evidence.join(' '),lineage:{id:'lineage-test',type:'independent',members:1}}],
+    coverage:{score:90,band:'usable',independentPublisherFamilies:1},
+    blueprint:{mode:'bounded',targetWords:{min:300,max:750}}
+  });
+  fs.writeFileSync(path.join(tmp,'data','article-brief.json'),JSON.stringify({brief,storyFactMap:{temporal},grounding:{sources:[{title:'AWS',url:'https://aws.amazon.com/example',passages:evidence}]}}));
+  fs.writeFileSync(path.join(tmp,'data','authoritative-evidence-pack.json'),JSON.stringify({candidates:[pack]}));
   const r=spawnSync(process.execPath,['scripts/verify-article-claims-smart.mjs'],{cwd:tmp,encoding:'utf8'});
   let report={};
   try{report=JSON.parse(fs.readFileSync(path.join(tmp,'data','claim-verification.json'),'utf8'));}catch{}
@@ -64,19 +69,19 @@ const cases=[
     name:'stale-post-event-prediction',
     body:'Meta is expected to unveil Phoenix at Connect 2026.',
     evidence:['Meta was expected to unveil Phoenix at its September 23 event.'],
-    check:r=>r.code!==0&&r.report.claims.some(x=>x.classification==='stale_post_event'&&x.temporalWarning?.type==='stale-post-event')
+    check:r=>r.code!==0&&Array.isArray(r.report.claims)&&r.report.claims.some(x=>x.classification==='stale_post_event'&&x.temporalWarning?.type==='stale-post-event')
   },
   {
     name:'confirmed-post-event-language-is-not-stale',
     body:'Meta announced its new glasses at Connect 2026.',
     evidence:['Meta announced its new glasses at its September 23 event.'],
-    check:r=>r.code===0&&r.report.claims.some(x=>x.status==='verified'&&x.classification!=='stale_post_event')
+    check:r=>r.code===0&&Array.isArray(r.report.claims)&&r.report.claims.some(x=>x.status==='verified'&&x.classification!=='stale_post_event')
   },
   {
     name:'future-availability-is-not-stale',
     body:'Meta VR Glasses will ship in Spring 2027.',
     evidence:['Meta announced Meta VR Glasses, with availability planned for Spring 2027.'],
-    check:r=>r.code===0&&r.report.claims.some(x=>x.classification!=='stale_post_event')
+    check:r=>r.code===0&&Array.isArray(r.report.claims)&&r.report.claims.some(x=>x.classification!=='stale_post_event')
   },
   {
     name:'genuine-unsupported-still-blocks',
