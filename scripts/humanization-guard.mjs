@@ -1,4 +1,4 @@
-const BANNED_EDITORIAL_WORDS=['crucial','delve'];
+const BANNED_EDITORIAL_WORDS=['robust','delve'];
 const GENERIC_AI_PATTERNS=[
   /\b(?:in today's|in the ever-evolving|in an ever-changing|in the modern) (?:world|landscape|era)\b/i,
   /\b(?:this article|this piece) (?:explores|examines|delves into|takes a closer look)\b/i,
