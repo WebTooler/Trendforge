@@ -67,6 +67,9 @@ jobs:
       - name: Verify Phase 3 canonical claim verifier
         run: npm run claims:deterministic
 
+      - name: Verify temporal claim verification
+        run: npm run temporal:test
+
       - name: Verify Run 405 claim calibration
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
