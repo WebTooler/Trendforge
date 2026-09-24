@@ -47,11 +47,29 @@ const removeSentenceByFingerprint=(body,target)=>{
  for(const sentence of sentences){const idx=body.indexOf(sentence,cursor);if(idx<0)continue;output+=body.slice(cursor,idx);if(sentenceFingerprint(sentence)===fp){cursor=idx+sentence.length;removed++;}else{output+=sentence;cursor=idx+sentence.length;}}
  output+=body.slice(cursor);return{body:output.replace(/\n{3,}/g,'\n\n').trim(),changed:removed>0,count:removed};
 };
+const claimVariants=claim=>{
+ const raw=String(claim||'').trim();if(!raw)return[];
+ const variants=[raw,...sentenceList(raw)].map(x=>String(x).trim()).filter(Boolean);
+ return[...new Map(variants.map(x=>[sentenceFingerprint(x),x])).values()];
+};
+const claimNumbers=t=>{const m=String(t).match(/\b\d+(?:[.,]\d+)?\s*(?:%|percent|percentage|bn|billion|b|m|million|mn|thousand|k|x|am|pm)?\b/gi)||[];return new Set(m.map(x=>x.toLowerCase().replace(/,/g,'').replace(/\s+/g,' ').trim()));};
 const resolveClaimSentence=(body,claim)=>{
- const target=String(claim||'').trim();if(!target)return'';const targetFp=sentenceFingerprint(target),sentences=sentenceList(body);
- const exact=sentences.find(s=>sentenceFingerprint(s)===targetFp);if(exact)return exact.trim();
- const targetTokens=[...new Set(targetFp.split(/\s+/).filter(x=>x.length>=4))];if(targetTokens.length<4)return'';
- let best='',bestScore=0;for(const sentence of sentences){const st=new Set(sentenceFingerprint(sentence).split(/\s+/).filter(x=>x.length>=4));const shared=targetTokens.filter(x=>st.has(x)).length,score=shared/Math.max(1,targetTokens.length);if(shared>=4&&score>bestScore){bestScore=score;best=sentence.trim();}}return bestScore>=0.6?best:'';
+ const variants=claimVariants(claim),sentences=sentenceList(body);if(!variants.length||!sentences.length)return'';
+ for(const variant of variants){const fp=sentenceFingerprint(variant);const exact=sentences.find(s=>sentenceFingerprint(s)===fp);if(exact)return exact.trim();}
+ let best='',bestScore=0;
+ for(const variant of variants){
+  const targetFp=sentenceFingerprint(variant),targetTokens=[...new Set(targetFp.split(/\s+/).filter(x=>x.length>=4))],targetNums=claimNumbers(variant);
+  if(targetTokens.length<4)continue;
+  for(const sentence of sentences){
+   const sfp=sentenceFingerprint(sentence),st=new Set(sfp.split(/\s+/).filter(x=>x.length>=4));
+   const shared=targetTokens.filter(x=>st.has(x)).length,score=shared/Math.max(1,targetTokens.length);
+   const sentenceNums=claimNumbers(sentence),numericCompatible=[...targetNums].every(n=>sentenceNums.has(n));
+   if(targetNums.size&&!numericCompatible)continue;
+   const candidateScore=score+(shared>=6?0.1:0);
+   if(shared>=4&&candidateScore>bestScore){bestScore=candidateScore;best=sentence.trim();}
+  }
+ }
+ return bestScore>=0.5?best:'';
 };
 const beginRepairBudget=()=>{let original=null;try{const raw=JSON.parse(fs.readFileSync(aiBudgetPath,'utf8'));if(raw?.runKey===runKey&&Number.isFinite(raw?.attempts))original=raw;}catch{}fs.mkdirSync('data',{recursive:true});fs.writeFileSync(aiBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-pass'},null,2)+'\n');console.log(`Grounding repair v11: isolated repair budget from writer budget for run ${runKey}.`);return original;};
 const resetRepairProviderBudget=()=>{fs.mkdirSync('data',{recursive:true});fs.writeFileSync(repairProviderBudgetPath,JSON.stringify({runKey,attempts:0,updatedAt:new Date().toISOString(),scope:'repair-recovery-pass'},null,2)+'\n');};
@@ -103,11 +121,20 @@ async function main(){
   `FAILED CLAIMS AND THEIR EVIDENCE:\n${evidence}`,
   'Return JSON only: {"repairs":[{"original":"...","replacement":"..."}]}.'
  ].join('\n\n');
- const repairTargets=[...new Set(failed.map(x=>resolveClaimSentence(body,x?.sentence||x?.claim)).filter(Boolean))];
+ const repairTargets=[...new Set(failed.map(x=>resolveClaimSentence(body,x?.sentence||x?.claim||x?.text)).filter(Boolean))];
+ const unresolvedClaims=failed.filter(x=>!resolveClaimSentence(body,x?.sentence||x?.claim||x?.text));
+ if(unresolvedClaims.length){
+  console.log(`Grounding repair v12: deterministic target resolution still missing ${unresolvedClaims.length} unsupported claim sentence(s); attempting claim-text recovery before provider repair.`);
+  const recovered=unresolvedClaims.map(x=>resolveClaimSentence(body,x?.claim||x?.text||x?.sentence)).filter(Boolean);
+  for(const target of recovered){if(!repairTargets.some(existing=>sentenceFingerprint(existing)===sentenceFingerprint(target)))repairTargets.push(target);}
+ }
+ if(repairTargets.length<failed.length){
+  throw new Error(`Grounding repair could not deterministically map all unsupported claims to article sentences: ${repairTargets.length}/${failed.length} mapped.`);
+ }
  const originalBudget=beginRepairBudget();
  try{
   let out=null,lastError=null,parsed=null,updatedBody=body,applied=0,deleted=0,narrowedOrRewritten=0,finalDepth=originalDepth;
-  console.log(`Grounding repair v12: resolved ${repairTargets.length}/${failed.length} unsupported sentence target(s).`);
+  console.log(`Grounding repair v12: resolved ${repairTargets.length}/${failed.length} unsupported sentence target(s) with fingerprint, claim-variant, token-overlap and numeric-compatibility matching.`);
   for(let depthPass=0;depthPass<=MAX_DEPTH_RECOVERY_PASSES && !out;depthPass++){
    for(let providerPass=0;providerPass<=MAX_REPAIR_RECOVERY_PASSES && !out;providerPass++){
     if(providerPass>0 || depthPass>0){
