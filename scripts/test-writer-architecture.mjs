@@ -4,6 +4,10 @@ import { validateDraft } from './trendforge-editorial-policy.mjs';
 
 const writerEngine=fs.readFileSync(new URL('./trendforge-writer-engine.mjs',import.meta.url),'utf8');
 const storyFactMap=fs.readFileSync(new URL('./story-fact-map.mjs',import.meta.url),'utf8');
+assert.match(writerEngine,/TEMPORAL EVIDENCE LOCK/);
+assert.match(writerEngine,/pre-event reporting as prediction\/expectation/);
+assert.match(writerEngine,/separate products, prototypes, variants, and rumored devices/);
+
 const claimVerifier=fs.readFileSync(new URL('./verify-article-claims-smart.mjs',import.meta.url),'utf8');
 assert.match(storyFactMap,/const synthesisAllowedFactIds=finalCoreFacts\.map\(x=>x\.factId\);/,'Synthesis capacity must expose all core facts to deterministic verification.');
 assert.match(claimVerifier,/const sentenceKey=s=>/,'Claim verifier must normalize sentence identity before classifying synthesis.');
