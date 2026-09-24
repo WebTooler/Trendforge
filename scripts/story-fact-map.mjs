@@ -12,6 +12,7 @@ const sourceRole=({candidate={},source={}}={})=>{
   return 'CONTEXT';
 };
 function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
+  const temporal=deriveTemporalContext({candidate,sources});
   const claims=Array.isArray(evidenceBrief?.supportedClaims)?evidenceBrief.supportedClaims:[];
   const sourceById=new Map((sources||[]).map((s,i)=>[s.id||'S'+(i+1),s]));
   const facts=claims.map((claim,index)=>{
@@ -79,6 +80,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     version:1,
     story:{title:clean(candidate.title),description:clean(candidate.description)},
     sourceRoles:[...new Set((sources||[]).map((s,i)=>({id:s.id||'S'+(i+1),role:s.sourceRole||sourceRole({candidate,source:s})})))],
+    temporal,
     facts:dedup,
     coreFacts:finalCoreFacts,
     contextFacts,
@@ -87,4 +89,4 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     policy:{coreFactsOnlyForCoreNarrative:true,contextCannotCompensateForCore:true,sourceRoleRequired:true,claimToFactMappingRequired:true,synthesisMustReuseVerifiedFacts:true,synthesisCannotIntroduceNewPremise:true}
   };
 }
-export { buildStoryFactMap, sourceRole };
+export { buildStoryFactMap, sourceRole, deriveTemporalContext, temporalStatus, inferEventDate };
