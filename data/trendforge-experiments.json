@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-23T21:45:11.850Z",
+  "updatedAt": "2026-09-24T05:19:04.380Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,9 +14,9 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 30,
-    "topics": 441,
-    "articles": 21
+    "runs": 31,
+    "topics": 464,
+    "articles": 22
   },
   "learningInput": {
     "version": 2,
@@ -88,248 +88,248 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBqVGZCZ3prNmhaQXp3bkxTeWlRWlpjYUkxV2V0UWJGTy01dTFZQ2NoLXlXQWtVQ3lySFJsZmNuMDRWMWZQbmhfUGpqN3VsbFlPZ1ltNl9HQQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999526/meta-muse-ai-agent-hands-on-shopping",
+        "key": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVk52TllfMkhZN0x1WEkzV3duTUN3dEhabi1OU3FUUm9BeXBGZzF1cG4zd1NibnNrVHplRHhrU0R3UUlDZ1c0S0IzeWE5RkJBU3BERWMtWk51cm1XeE96Umc1bUFCalpBTEt6SDJ4aTM0TzJuWUZHQTFCVXE2STB5N2paUUNscDhUaEc3Yw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNcXRpYlQ0bzVKcFVjMEdaQ194MlJXckNJYUtwVUh3REFkNERvRUo1dGYydG9vLXVGaE9SQUhDVUd4S1NJSlN5UjNxaG9TZ3lHSmVnbDkyNDVRaS1jQlEyWG8wQ1RseGdPMmhYREwwQ1pVQmV6d3h3S3Rfbi1GdThDZVpiTVB4Nl9nRkJjTUR4aXhBbVJ5WUNSQjlwa0ZMYy1sTlVtaEpHejFnQTdPaWlsYWJNZ2Y2MzAxb1E?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNWUtpR0hzOWdRSkxFLW9hejZ1TWFqa2kzVmdYNWVVOEtVaTdCWEg1NmlkODE4TldGdml2a0ozYTdHelpTYnNELUk1WXVmUGZYa1hLbk00bEhTOGJjLVNPNWI2dUswakNsbkgySjR0UWlMdlh2Sll1d3Z6QWZJOHUzZ0NVM0ZvT19sc0Y1a2hBZEt0ZUxvNW5zekJLTUVfdmZWemljMmQzVEVsWUxuVGFSNVMydnlzd3o1UGRYTmJuZDJjNURod0pTWGFVVWVEUHhndUlHNElOWGI?oc=5",
+        "key": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
+        "key": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5IVnpQUWptMHZVbWRRMlBRVlRjenZiWHR4UWpNUDE5eTVLdEFyOTRDMUNyUk1JdDM3S2hoUnFkaUUxOU1nTkZmdnRUU1hWX2hWSU1nQU5GTWhWdnVTM1NJUk9SalJtSUk5eWcxY3ZBbHdNWHM?oc=5",
+        "key": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1jLUktUmJUY0FmVTVjRW9FY0xrSUduamF0V0dOTC12MEUtb0UzR05hMHhYanFPVlpFYTE3NFFlb1g3SThQSVNhcktPTWVkYTRpdXNaUGxjWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZjB2VlMybXdDdXNYUVc3NHJOR05Da1F5SnlrVzY5R09MaWhKZDc4eDR3TF9HWlpIVjFiRGZFWmJrc3lKX1JXbDBEdjNKUklYN2ZUR2tETXd4cTdMRW0xT3NEU25DOUJIMkdnclItVG4zLWNuM09CVG1sbDlKSFJkQ25EaXc3RjVSUkFXNGpxTFhFQWRpNllnc3dKSmVVSFV1THRHQ3ZYMXNYY0xkS3pSMHlrZnRCQTVx?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSnBoOXhTQkh4U2xkelNDVElDdkJBaHFwVVcyRk5UVWlUSFpsRGxmOWl3UjFPalF4Qk9HcnJJdElXZlNtckNuR0dWdzhHVUduVFJDbkhZd1RiYXY1UDA1dEhXS0NjTnFrbjdISXFTdTQ5ejFLemx3dDVOX2hsakcweFlRR0s5Z1lrWXkzbno2ODBVanlodUIzMElhQ1hFRHk5cmJlSGFOZ0o4UDUzYUVxbzVWaElWUQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1R1FfVlpxTExFMktuUmtSaGcwRjkyUEZUNDBocmk2UEdySmtqVGszSWdQbGRUMTVDTEtVQnJ2NXpMNHhoV1VNSUxSRjN1Z0VhY2FrQThyZFd4UXZVM2FkcENEV19BV2xiQUFPdXhSeXJxczRBblR0WnNiSQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcmt4MDhleU1ELVgyS0tEM0tTMHFmbkNTZTNsSUNpZ0JjZmpEb0VXTGEwTVFxbDV4ZTFmYnZtdWI5Slg0VFZTVF9DVXdpTmY2M0hpNFUxV3RDQ1prQTZ1Y19hMWRKRTJJQWU4QW5vZnk4M1lWOGxualliVXg1QzFQOFkydWNkNDcxV2lRMlhHU085SWhQOVBDa1kwOWI1VGhJWU5iTTBIc1RLWF9nQ3cwbnpFMEc0VU10VHhSdFJKXy1Tbjg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdFNGMkFCcDNETkhJNnowdEVGS3RQenJ1T2ZRUEZFRTlpdnROV1dGT2tPTG11OFQ3Y0xsdHJBcUFTLU9IVGswQmlqZzF5SnczeDA4SklSSk5wb203TkFaek4yS1BmS0g4SGNPenRuUXhDYVEtWVBuQ2lGcXRkLVVBMkI1eUhFSy1ERndkWFNQUm91SHBsMWdTZjh2b2IxYVpLNE5EdXdaQ2NXYkowaFRCMW1pRGJlNGlqaGxuSXRDMFY?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests",
+        "key": "https://www.theverge.com/tech/999593/meta-connect-2026-everything-announced",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999406/blue-yeti-2-usb-microphone-price-availability",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/news/998266/logitech-x3-pro-superstrike-specs-price",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/news/999404/xbox-mythic-achievement-feature",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
+        "key": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999380/una-watch-sports-gps-modular",
+        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbzV4b1RJeC1yQko4bHd2emRxcHhjalM0bTFabzdZeHBaRXkyVDVNNXRrc2lDdFVxcVItWjlQUDJRQXRKcGl1aDZoZDZmSWVLdUdRdzduTG5PeHIyZVVQOFlYNjdXMkw2TThNV01fT2ZzLVdUQjJodVE3RTMwNzB5cHk1N1Y1cWNfTGN4TWZKM2tsUHpBN3dBS2Z5dGs1N29qOUtCSV92TEFCY0RXcU1LM1dITTAtQQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVzdhb3lNMndiZ0xYS3JYQmxTbUVJaHZLTGxQemZGNXA4ZU0zYWx2WDlnWG1ZMEtDbmx5YTctdHpPY2llbUFZSEJqdXBnMk9NQXpEc1pSQmlXV2h1NFVPYXRyUUVwVmZSb2RwbXliZ3dsS1pGT2dUV2JoNEhlME4tMm56UQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV1l2cEdDNUpVTVd4dFVhOExUWURmMnNIdEg4ckg2M1lzaEEyRjdQVnRKbkFMM0d3aFppMXRMeFlMbWFiV25HLXFKNl9rbVoyejJ4eEl4ZXpfZ3d4b2gydG1PTFJRaDhqUG9yRXBxWE5DZnRVTDhNOVZlbXl1b0FxWUhuajktNHlTNDJ5WEdFcElNdGRsOG9hQTVxaEtraXJfdEVNNDRxSlBkbS0xYmVSYlJNMWNuYjI4Z184?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KSllHMS1Cb2QyZVQ5QVh2SEJzamI0N2tfSjE0OGJYQ2hzdERiMldGZnpGZ3AtYUk2NU1FNGVLNGEwcU9pQUJUa0F4V0lZVXVfd1RGbGZQZF81b29EMWFoYUp5X051YkNsYjJmclJLR3Z4dw?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr",
+        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeDY3NVVfOWVmSUQzeGNOVzNINFZ5T014ZVVYV1RkZGVYdXdNMlZodnF6MUY5VUdnakx1YmFBbl93WW42alY5RDluc0FrTlgyMU8xN3pXMC1YckxKenhPN1R2c0d3Y003ZllNaWhsUTVRdTJYaF9hbS1CMWRPMW9tenlHdHYwSzJwTUVHMnNXeDNOaVhUbXAzS2tZc2ZUc2FjUUlMcVhaeTVoUVpLNV9sNk53dFc4UdIBuwFBVV95cUxQRFFnS1M5WENMU2FQMVpQczNnQng4bXJCNnkybEVYTkQyWnhVYm8xY1hwX2hJNlVsOVlLSUdleUtIUUUwT1VhVHFNUFdvcERpbHhoY2F1SmgteTVxZHNIQU91am52dFF6VVIyTGhuTTdYRjFNTEhoNnJnYjQ1dDJHVXpEVk5MRkJnWWF6dVNqWlIzdUFIaXhfSnhDMUhEVGZCbUJkeFh5cmxrd2Z0QWZEY0ZCZ1AwMEZUNWdN?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999329/metroid-prime-remastered-nintendo-flow-usbc-apple-deal-sale",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/policy/999412/data-center-water-electricity-disclosure-bills",
+        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSHBObE1ZM3ZSc0QwNURQWkZkS2tORVNRMHhNUUhvNjNZRjR4RHNIVWlyUE5qZV82WVowbEFFX2RhR09TeE5WMHQ4S3l0TkdZTjN3YWdvVUNfRUZYdTZVOW9jc3YtQlNHdWNjcFh4cl9jNlk4VDkxMlFJc18ybzlLN3B4NjZxZVB3cFNBTy1mSXlLVmZlbDRpdXd4WVljVEtaZGxkRHpIMTBSZw?oc=5",
         "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPT0Z3MDRZT0dMU1I4SzgxZF95TTgxLUtsNENmSm1jNmMxNUxQeFFQd3R6NndFNXNGTVFjbHd3SUQ2U1RXeGtlWVRlT2JTLUNnNThJdHhyNGpOWnJXRDZGb3NUZDFUZElGSVJwcVQtQ0VfWS04RlpkaEFjMXBQVzJua2hvZWxjT0hhOUlFdw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZkFnOFBTZU1NS1Vsek1yamNjdUt5WndXdDZlSmRreFFqRGdIUTFNMXFhZzhHRjhUc1FGcGRkM3E4dncxTERVWXM3b245cV9uU0NTYnFqdUQ1clRGSzlKWE5NNnpydmp5NHN4SEYxRlJEdnN5SkhpYkhHNS0ybFZhb05YMWpiUzRqbEE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNmRudERzel9EemdGTXAyOEwwNkRKN2lxQzlPT0Z0SmY3bFFIMUlUb044c3JQa1JwODhGRFZGa0diWXBIb21sbEY2aE5fTUZzMDZIQnRoT1lLbGNaRkRNczVTUTlvSzE2bzNzVEtqMV9YWEZkcXhDX1FXRE4zVTlUUlFEVlRxMnRhOWdmelc5WURmM1VuWUstTFBQdlZ0MnNJQmdOeldOUW8yZk1uZTAxZHFn?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTjBhSlFYbVlkOEUybTZHVHN0RjZHWUR4RHh5UURBRmpGbTcxcTBTU00wUVdBUU0zZVpYWEdJNVc0YXJOVFkwZ3pvVjhDUmZKSWNHWkc4Zm1ZRVdwZW1kR0NxbzFybGNWSF9Oc01TUEIwTTR2SDdUTjBXY3JTaWRFdG5rM1BNSlYtOHRkQXJqd2l1UExOVXI40gGcAUFVX3lxTE1zNmVTdkNQQTNEQVM5bU55bDhpUEJfVTcxNWsyT1RScEtQTXpkSkFPM2l1b2RVZXU0Z1FjbmNKTjVyWm8wSWJBZzdWRUw5VklEX3ZqWXd0Y0NGbm03VXBkNUVVR0h1SUsxWnZBMUpsQ2hXdkZycTRJd1ZCSVFKSmQyTEtHc3JORnVDOVR4Ql8tUHRqU2dZQ1JZdjdueQ?oc=5",
+        "bucket": "variant"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBqVGZCZ3prNmhaQXp3bkxTeWlRWlpjYUkxV2V0UWJGTy01dTFZQ2NoLXlXQWtVQ3lySFJsZmNuMDRWMWZQbmhfUGpqN3VsbFlPZ1ltNl9HQQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999526/meta-muse-ai-agent-hands-on-shopping",
+        "key": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVk52TllfMkhZN0x1WEkzV3duTUN3dEhabi1OU3FUUm9BeXBGZzF1cG4zd1NibnNrVHplRHhrU0R3UUlDZ1c0S0IzeWE5RkJBU3BERWMtWk51cm1XeE96Umc1bUFCalpBTEt6SDJ4aTM0TzJuWUZHQTFCVXE2STB5N2paUUNscDhUaEc3Yw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNcXRpYlQ0bzVKcFVjMEdaQ194MlJXckNJYUtwVUh3REFkNERvRUo1dGYydG9vLXVGaE9SQUhDVUd4S1NJSlN5UjNxaG9TZ3lHSmVnbDkyNDVRaS1jQlEyWG8wQ1RseGdPMmhYREwwQ1pVQmV6d3h3S3Rfbi1GdThDZVpiTVB4Nl9nRkJjTUR4aXhBbVJ5WUNSQjlwa0ZMYy1sTlVtaEpHejFnQTdPaWlsYWJNZ2Y2MzAxb1E?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNWUtpR0hzOWdRSkxFLW9hejZ1TWFqa2kzVmdYNWVVOEtVaTdCWEg1NmlkODE4TldGdml2a0ozYTdHelpTYnNELUk1WXVmUGZYa1hLbk00bEhTOGJjLVNPNWI2dUswakNsbkgySjR0UWlMdlh2Sll1d3Z6QWZJOHUzZ0NVM0ZvT19sc0Y1a2hBZEt0ZUxvNW5zekJLTUVfdmZWemljMmQzVEVsWUxuVGFSNVMydnlzd3o1UGRYTmJuZDJjNURod0pTWGFVVWVEUHhndUlHNElOWGI?oc=5",
+        "key": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
+        "key": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5IVnpQUWptMHZVbWRRMlBRVlRjenZiWHR4UWpNUDE5eTVLdEFyOTRDMUNyUk1JdDM3S2hoUnFkaUUxOU1nTkZmdnRUU1hWX2hWSU1nQU5GTWhWdnVTM1NJUk9SalJtSUk5eWcxY3ZBbHdNWHM?oc=5",
+        "key": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1jLUktUmJUY0FmVTVjRW9FY0xrSUduamF0V0dOTC12MEUtb0UzR05hMHhYanFPVlpFYTE3NFFlb1g3SThQSVNhcktPTWVkYTRpdXNaUGxjWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZjB2VlMybXdDdXNYUVc3NHJOR05Da1F5SnlrVzY5R09MaWhKZDc4eDR3TF9HWlpIVjFiRGZFWmJrc3lKX1JXbDBEdjNKUklYN2ZUR2tETXd4cTdMRW0xT3NEU25DOUJIMkdnclItVG4zLWNuM09CVG1sbDlKSFJkQ25EaXc3RjVSUkFXNGpxTFhFQWRpNllnc3dKSmVVSFV1THRHQ3ZYMXNYY0xkS3pSMHlrZnRCQTVx?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSnBoOXhTQkh4U2xkelNDVElDdkJBaHFwVVcyRk5UVWlUSFpsRGxmOWl3UjFPalF4Qk9HcnJJdElXZlNtckNuR0dWdzhHVUduVFJDbkhZd1RiYXY1UDA1dEhXS0NjTnFrbjdISXFTdTQ5ejFLemx3dDVOX2hsakcweFlRR0s5Z1lrWXkzbno2ODBVanlodUIzMElhQ1hFRHk5cmJlSGFOZ0o4UDUzYUVxbzVWaElWUQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1R1FfVlpxTExFMktuUmtSaGcwRjkyUEZUNDBocmk2UEdySmtqVGszSWdQbGRUMTVDTEtVQnJ2NXpMNHhoV1VNSUxSRjN1Z0VhY2FrQThyZFd4UXZVM2FkcENEV19BV2xiQUFPdXhSeXJxczRBblR0WnNiSQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcmt4MDhleU1ELVgyS0tEM0tTMHFmbkNTZTNsSUNpZ0JjZmpEb0VXTGEwTVFxbDV4ZTFmYnZtdWI5Slg0VFZTVF9DVXdpTmY2M0hpNFUxV3RDQ1prQTZ1Y19hMWRKRTJJQWU4QW5vZnk4M1lWOGxualliVXg1QzFQOFkydWNkNDcxV2lRMlhHU085SWhQOVBDa1kwOWI1VGhJWU5iTTBIc1RLWF9nQ3cwbnpFMEc0VU10VHhSdFJKXy1Tbjg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdFNGMkFCcDNETkhJNnowdEVGS3RQenJ1T2ZRUEZFRTlpdnROV1dGT2tPTG11OFQ3Y0xsdHJBcUFTLU9IVGswQmlqZzF5SnczeDA4SklSSk5wb203TkFaek4yS1BmS0g4SGNPenRuUXhDYVEtWVBuQ2lGcXRkLVVBMkI1eUhFSy1ERndkWFNQUm91SHBsMWdTZjh2b2IxYVpLNE5EdXdaQ2NXYkowaFRCMW1pRGJlNGlqaGxuSXRDMFY?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests",
+        "key": "https://www.theverge.com/tech/999593/meta-connect-2026-everything-announced",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999406/blue-yeti-2-usb-microphone-price-availability",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/news/998266/logitech-x3-pro-superstrike-specs-price",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/news/999404/xbox-mythic-achievement-feature",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
+        "key": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999380/una-watch-sports-gps-modular",
+        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbzV4b1RJeC1yQko4bHd2emRxcHhjalM0bTFabzdZeHBaRXkyVDVNNXRrc2lDdFVxcVItWjlQUDJRQXRKcGl1aDZoZDZmSWVLdUdRdzduTG5PeHIyZVVQOFlYNjdXMkw2TThNV01fT2ZzLVdUQjJodVE3RTMwNzB5cHk1N1Y1cWNfTGN4TWZKM2tsUHpBN3dBS2Z5dGs1N29qOUtCSV92TEFCY0RXcU1LM1dITTAtQQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVzdhb3lNMndiZ0xYS3JYQmxTbUVJaHZLTGxQemZGNXA4ZU0zYWx2WDlnWG1ZMEtDbmx5YTctdHpPY2llbUFZSEJqdXBnMk9NQXpEc1pSQmlXV2h1NFVPYXRyUUVwVmZSb2RwbXliZ3dsS1pGT2dUV2JoNEhlME4tMm56UQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV1l2cEdDNUpVTVd4dFVhOExUWURmMnNIdEg4ckg2M1lzaEEyRjdQVnRKbkFMM0d3aFppMXRMeFlMbWFiV25HLXFKNl9rbVoyejJ4eEl4ZXpfZ3d4b2gydG1PTFJRaDhqUG9yRXBxWE5DZnRVTDhNOVZlbXl1b0FxWUhuajktNHlTNDJ5WEdFcElNdGRsOG9hQTVxaEtraXJfdEVNNDRxSlBkbS0xYmVSYlJNMWNuYjI4Z184?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KSllHMS1Cb2QyZVQ5QVh2SEJzamI0N2tfSjE0OGJYQ2hzdERiMldGZnpGZ3AtYUk2NU1FNGVLNGEwcU9pQUJUa0F4V0lZVXVfd1RGbGZQZF81b29EMWFoYUp5X051YkNsYjJmclJLR3Z4dw?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr",
+        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeDY3NVVfOWVmSUQzeGNOVzNINFZ5T014ZVVYV1RkZGVYdXdNMlZodnF6MUY5VUdnakx1YmFBbl93WW42alY5RDluc0FrTlgyMU8xN3pXMC1YckxKenhPN1R2c0d3Y003ZllNaWhsUTVRdTJYaF9hbS1CMWRPMW9tenlHdHYwSzJwTUVHMnNXeDNOaVhUbXAzS2tZc2ZUc2FjUUlMcVhaeTVoUVpLNV9sNk53dFc4UdIBuwFBVV95cUxQRFFnS1M5WENMU2FQMVpQczNnQng4bXJCNnkybEVYTkQyWnhVYm8xY1hwX2hJNlVsOVlLSUdleUtIUUUwT1VhVHFNUFdvcERpbHhoY2F1SmgteTVxZHNIQU91am52dFF6VVIyTGhuTTdYRjFNTEhoNnJnYjQ1dDJHVXpEVk5MRkJnWWF6dVNqWlIzdUFIaXhfSnhDMUhEVGZCbUJkeFh5cmxrd2Z0QWZEY0ZCZ1AwMEZUNWdN?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999329/metroid-prime-remastered-nintendo-flow-usbc-apple-deal-sale",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/policy/999412/data-center-water-electricity-disclosure-bills",
+        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSHBObE1ZM3ZSc0QwNURQWkZkS2tORVNRMHhNUUhvNjNZRjR4RHNIVWlyUE5qZV82WVowbEFFX2RhR09TeE5WMHQ4S3l0TkdZTjN3YWdvVUNfRUZYdTZVOW9jc3YtQlNHdWNjcFh4cl9jNlk4VDkxMlFJc18ybzlLN3B4NjZxZVB3cFNBTy1mSXlLVmZlbDRpdXd4WVljVEtaZGxkRHpIMTBSZw?oc=5",
         "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPT0Z3MDRZT0dMU1I4SzgxZF95TTgxLUtsNENmSm1jNmMxNUxQeFFQd3R6NndFNXNGTVFjbHd3SUQ2U1RXeGtlWVRlT2JTLUNnNThJdHhyNGpOWnJXRDZGb3NUZDFUZElGSVJwcVQtQ0VfWS04RlpkaEFjMXBQVzJua2hvZWxjT0hhOUlFdw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZkFnOFBTZU1NS1Vsek1yamNjdUt5WndXdDZlSmRreFFqRGdIUTFNMXFhZzhHRjhUc1FGcGRkM3E4dncxTERVWXM3b245cV9uU0NTYnFqdUQ1clRGSzlKWE5NNnpydmp5NHN4SEYxRlJEdnN5SkhpYkhHNS0ybFZhb05YMWpiUzRqbEE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNmRudERzel9EemdGTXAyOEwwNkRKN2lxQzlPT0Z0SmY3bFFIMUlUb044c3JQa1JwODhGRFZGa0diWXBIb21sbEY2aE5fTUZzMDZIQnRoT1lLbGNaRkRNczVTUTlvSzE2bzNzVEtqMV9YWEZkcXhDX1FXRE4zVTlUUlFEVlRxMnRhOWdmelc5WURmM1VuWUstTFBQdlZ0MnNJQmdOeldOUW8yZk1uZTAxZHFn?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTjBhSlFYbVlkOEUybTZHVHN0RjZHWUR4RHh5UURBRmpGbTcxcTBTU00wUVdBUU0zZVpYWEdJNVc0YXJOVFkwZ3pvVjhDUmZKSWNHWkc4Zm1ZRVdwZW1kR0NxbzFybGNWSF9Oc01TUEIwTTR2SDdUTjBXY3JTaWRFdG5rM1BNSlYtOHRkQXJqd2l1UExOVXI40gGcAUFVX3lxTE1zNmVTdkNQQTNEQVM5bU55bDhpUEJfVTcxNWsyT1RScEtQTXpkSkFPM2l1b2RVZXU0Z1FjbmNKTjVyWm8wSWJBZzdWRUw5VklEX3ZqWXd0Y0NGbm03VXBkNUVVR0h1SUsxWnZBMUpsQ2hXdkZycTRJd1ZCSVFKSmQyTEtHc3JORnVDOVR4Ql8tUHRqU2dZQ1JZdjdueQ?oc=5",
+        "bucket": "variant"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBqVGZCZ3prNmhaQXp3bkxTeWlRWlpjYUkxV2V0UWJGTy01dTFZQ2NoLXlXQWtVQ3lySFJsZmNuMDRWMWZQbmhfUGpqN3VsbFlPZ1ltNl9HQQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999526/meta-muse-ai-agent-hands-on-shopping",
+        "key": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVk52TllfMkhZN0x1WEkzV3duTUN3dEhabi1OU3FUUm9BeXBGZzF1cG4zd1NibnNrVHplRHhrU0R3UUlDZ1c0S0IzeWE5RkJBU3BERWMtWk51cm1XeE96Umc1bUFCalpBTEt6SDJ4aTM0TzJuWUZHQTFCVXE2STB5N2paUUNscDhUaEc3Yw?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNcXRpYlQ0bzVKcFVjMEdaQ194MlJXckNJYUtwVUh3REFkNERvRUo1dGYydG9vLXVGaE9SQUhDVUd4S1NJSlN5UjNxaG9TZ3lHSmVnbDkyNDVRaS1jQlEyWG8wQ1RseGdPMmhYREwwQ1pVQmV6d3h3S3Rfbi1GdThDZVpiTVB4Nl9nRkJjTUR4aXhBbVJ5WUNSQjlwa0ZMYy1sTlVtaEpHejFnQTdPaWlsYWJNZ2Y2MzAxb1E?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNWUtpR0hzOWdRSkxFLW9hejZ1TWFqa2kzVmdYNWVVOEtVaTdCWEg1NmlkODE4TldGdml2a0ozYTdHelpTYnNELUk1WXVmUGZYa1hLbk00bEhTOGJjLVNPNWI2dUswakNsbkgySjR0UWlMdlh2Sll1d3Z6QWZJOHUzZ0NVM0ZvT19sc0Y1a2hBZEt0ZUxvNW5zekJLTUVfdmZWemljMmQzVEVsWUxuVGFSNVMydnlzd3o1UGRYTmJuZDJjNURod0pTWGFVVWVEUHhndUlHNElOWGI?oc=5",
+        "key": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
+        "key": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5IVnpQUWptMHZVbWRRMlBRVlRjenZiWHR4UWpNUDE5eTVLdEFyOTRDMUNyUk1JdDM3S2hoUnFkaUUxOU1nTkZmdnRUU1hWX2hWSU1nQU5GTWhWdnVTM1NJUk9SalJtSUk5eWcxY3ZBbHdNWHM?oc=5",
+        "key": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1jLUktUmJUY0FmVTVjRW9FY0xrSUduamF0V0dOTC12MEUtb0UzR05hMHhYanFPVlpFYTE3NFFlb1g3SThQSVNhcktPTWVkYTRpdXNaUGxjWQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZjB2VlMybXdDdXNYUVc3NHJOR05Da1F5SnlrVzY5R09MaWhKZDc4eDR3TF9HWlpIVjFiRGZFWmJrc3lKX1JXbDBEdjNKUklYN2ZUR2tETXd4cTdMRW0xT3NEU25DOUJIMkdnclItVG4zLWNuM09CVG1sbDlKSFJkQ25EaXc3RjVSUkFXNGpxTFhFQWRpNllnc3dKSmVVSFV1THRHQ3ZYMXNYY0xkS3pSMHlrZnRCQTVx?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSnBoOXhTQkh4U2xkelNDVElDdkJBaHFwVVcyRk5UVWlUSFpsRGxmOWl3UjFPalF4Qk9HcnJJdElXZlNtckNuR0dWdzhHVUduVFJDbkhZd1RiYXY1UDA1dEhXS0NjTnFrbjdISXFTdTQ5ejFLemx3dDVOX2hsakcweFlRR0s5Z1lrWXkzbno2ODBVanlodUIzMElhQ1hFRHk5cmJlSGFOZ0o4UDUzYUVxbzVWaElWUQ?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1R1FfVlpxTExFMktuUmtSaGcwRjkyUEZUNDBocmk2UEdySmtqVGszSWdQbGRUMTVDTEtVQnJ2NXpMNHhoV1VNSUxSRjN1Z0VhY2FrQThyZFd4UXZVM2FkcENEV19BV2xiQUFPdXhSeXJxczRBblR0WnNiSQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcmt4MDhleU1ELVgyS0tEM0tTMHFmbkNTZTNsSUNpZ0JjZmpEb0VXTGEwTVFxbDV4ZTFmYnZtdWI5Slg0VFZTVF9DVXdpTmY2M0hpNFUxV3RDQ1prQTZ1Y19hMWRKRTJJQWU4QW5vZnk4M1lWOGxualliVXg1QzFQOFkydWNkNDcxV2lRMlhHU085SWhQOVBDa1kwOWI1VGhJWU5iTTBIc1RLWF9nQ3cwbnpFMEc0VU10VHhSdFJKXy1Tbjg?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdFNGMkFCcDNETkhJNnowdEVGS3RQenJ1T2ZRUEZFRTlpdnROV1dGT2tPTG11OFQ3Y0xsdHJBcUFTLU9IVGswQmlqZzF5SnczeDA4SklSSk5wb203TkFaek4yS1BmS0g4SGNPenRuUXhDYVEtWVBuQ2lGcXRkLVVBMkI1eUhFSy1ERndkWFNQUm91SHBsMWdTZjh2b2IxYVpLNE5EdXdaQ2NXYkowaFRCMW1pRGJlNGlqaGxuSXRDMFY?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests",
+        "key": "https://www.theverge.com/tech/999593/meta-connect-2026-everything-announced",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999406/blue-yeti-2-usb-microphone-price-availability",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/news/998266/logitech-x3-pro-superstrike-specs-price",
-        "bucket": "control"
-      },
-      {
-        "key": "https://www.theverge.com/news/999404/xbox-mythic-achievement-feature",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
+        "key": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999380/una-watch-sports-gps-modular",
+        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbzV4b1RJeC1yQko4bHd2emRxcHhjalM0bTFabzdZeHBaRXkyVDVNNXRrc2lDdFVxcVItWjlQUDJRQXRKcGl1aDZoZDZmSWVLdUdRdzduTG5PeHIyZVVQOFlYNjdXMkw2TThNV01fT2ZzLVdUQjJodVE3RTMwNzB5cHk1N1Y1cWNfTGN4TWZKM2tsUHpBN3dBS2Z5dGs1N29qOUtCSV92TEFCY0RXcU1LM1dITTAtQQ?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPVzdhb3lNMndiZ0xYS3JYQmxTbUVJaHZLTGxQemZGNXA4ZU0zYWx2WDlnWG1ZMEtDbmx5YTctdHpPY2llbUFZSEJqdXBnMk9NQXpEc1pSQmlXV2h1NFVPYXRyUUVwVmZSb2RwbXliZ3dsS1pGT2dUV2JoNEhlME4tMm56UQ?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV1l2cEdDNUpVTVd4dFVhOExUWURmMnNIdEg4ckg2M1lzaEEyRjdQVnRKbkFMM0d3aFppMXRMeFlMbWFiV25HLXFKNl9rbVoyejJ4eEl4ZXpfZ3d4b2gydG1PTFJRaDhqUG9yRXBxWE5DZnRVTDhNOVZlbXl1b0FxWUhuajktNHlTNDJ5WEdFcElNdGRsOG9hQTVxaEtraXJfdEVNNDRxSlBkbS0xYmVSYlJNMWNuYjI4Z184?oc=5",
+        "key": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KSllHMS1Cb2QyZVQ5QVh2SEJzamI0N2tfSjE0OGJYQ2hzdERiMldGZnpGZ3AtYUk2NU1FNGVLNGEwcU9pQUJUa0F4V0lZVXVfd1RGbGZQZF81b29EMWFoYUp5X051YkNsYjJmclJLR3Z4dw?oc=5",
         "bucket": "control"
       },
       {
-        "key": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr",
+        "key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeDY3NVVfOWVmSUQzeGNOVzNINFZ5T014ZVVYV1RkZGVYdXdNMlZodnF6MUY5VUdnakx1YmFBbl93WW42alY5RDluc0FrTlgyMU8xN3pXMC1YckxKenhPN1R2c0d3Y003ZllNaWhsUTVRdTJYaF9hbS1CMWRPMW9tenlHdHYwSzJwTUVHMnNXeDNOaVhUbXAzS2tZc2ZUc2FjUUlMcVhaeTVoUVpLNV9sNk53dFc4UdIBuwFBVV95cUxQRFFnS1M5WENMU2FQMVpQczNnQng4bXJCNnkybEVYTkQyWnhVYm8xY1hwX2hJNlVsOVlLSUdleUtIUUUwT1VhVHFNUFdvcERpbHhoY2F1SmgteTVxZHNIQU91am52dFF6VVIyTGhuTTdYRjFNTEhoNnJnYjQ1dDJHVXpEVk5MRkJnWWF6dVNqWlIzdUFIaXhfSnhDMUhEVGZCbUJkeFh5cmxrd2Z0QWZEY0ZCZ1AwMEZUNWdN?oc=5",
         "bucket": "variant"
       },
       {
-        "key": "https://www.theverge.com/gadgets/999329/metroid-prime-remastered-nintendo-flow-usbc-apple-deal-sale",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/policy/999412/data-center-water-electricity-disclosure-bills",
+        "key": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSHBObE1ZM3ZSc0QwNURQWkZkS2tORVNRMHhNUUhvNjNZRjR4RHNIVWlyUE5qZV82WVowbEFFX2RhR09TeE5WMHQ4S3l0TkdZTjN3YWdvVUNfRUZYdTZVOW9jc3YtQlNHdWNjcFh4cl9jNlk4VDkxMlFJc18ybzlLN3B4NjZxZVB3cFNBTy1mSXlLVmZlbDRpdXd4WVljVEtaZGxkRHpIMTBSZw?oc=5",
         "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPT0Z3MDRZT0dMU1I4SzgxZF95TTgxLUtsNENmSm1jNmMxNUxQeFFQd3R6NndFNXNGTVFjbHd3SUQ2U1RXeGtlWVRlT2JTLUNnNThJdHhyNGpOWnJXRDZGb3NUZDFUZElGSVJwcVQtQ0VfWS04RlpkaEFjMXBQVzJua2hvZWxjT0hhOUlFdw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZkFnOFBTZU1NS1Vsek1yamNjdUt5WndXdDZlSmRreFFqRGdIUTFNMXFhZzhHRjhUc1FGcGRkM3E4dncxTERVWXM3b245cV9uU0NTYnFqdUQ1clRGSzlKWE5NNnpydmp5NHN4SEYxRlJEdnN5SkhpYkhHNS0ybFZhb05YMWpiUzRqbEE?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNmRudERzel9EemdGTXAyOEwwNkRKN2lxQzlPT0Z0SmY3bFFIMUlUb044c3JQa1JwODhGRFZGa0diWXBIb21sbEY2aE5fTUZzMDZIQnRoT1lLbGNaRkRNczVTUTlvSzE2bzNzVEtqMV9YWEZkcXhDX1FXRE4zVTlUUlFEVlRxMnRhOWdmelc5WURmM1VuWUstTFBQdlZ0MnNJQmdOeldOUW8yZk1uZTAxZHFn?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTjBhSlFYbVlkOEUybTZHVHN0RjZHWUR4RHh5UURBRmpGbTcxcTBTU00wUVdBUU0zZVpYWEdJNVc0YXJOVFkwZ3pvVjhDUmZKSWNHWkc4Zm1ZRVdwZW1kR0NxbzFybGNWSF9Oc01TUEIwTTR2SDdUTjBXY3JTaWRFdG5rM1BNSlYtOHRkQXJqd2l1UExOVXI40gGcAUFVX3lxTE1zNmVTdkNQQTNEQVM5bU55bDhpUEJfVTcxNWsyT1RScEtQTXpkSkFPM2l1b2RVZXU0Z1FjbmNKTjVyWm8wSWJBZzdWRUw5VklEX3ZqWXd0Y0NGbm03VXBkNUVVR0h1SUsxWnZBMUpsQ2hXdkZycTRJd1ZCSVFKSmQyTEtHc3JORnVDOVR4Ql8tUHRqU2dZQ1JZdjdueQ?oc=5",
+        "bucket": "variant"
       }
     ]
   },
@@ -337,13 +337,13 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 11,
-        "variant": 9,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 68,
+        "claimConfidence": 67,
         "evidencePassRate": 25
       },
       "conclusion": "insufficient-data",
@@ -352,13 +352,13 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 11,
-        "variant": 9,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 68,
+        "claimConfidence": 67,
         "evidencePassRate": 25
       },
       "conclusion": "insufficient-data",
@@ -367,13 +367,13 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 11,
-        "variant": 9,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 68,
+        "claimConfidence": 67,
         "evidencePassRate": 25
       },
       "conclusion": "insufficient-data",
@@ -381,6 +381,6 @@
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-23T17:26:35.917Z"
+    "previousUpdatedAt": "2026-09-23T21:45:11.850Z"
   }
 }
