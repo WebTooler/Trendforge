@@ -3,6 +3,11 @@ const stop=new Set('about after again also been being could from have into more 
 const tokens=t=>new Set(clean(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(w=>w.length>=4&&!stop.has(w)));
 const overlap=(a,b)=>{const A=tokens(a),B=tokens(b),shared=[...A].filter(x=>B.has(x));return{shared,count:shared.length,coverage:shared.length/Math.max(1,A.size)};};
 const phraseOverlap=(a,b)=>{const words=x=>clean(x).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(Boolean);const grams=x=>{const s=new Set();for(let i=0;i<x.length-1;i++)s.add(x[i]+' '+x[i+1]);return s};const A=grams(words(a)),B=grams(words(b));return[...A].filter(x=>B.has(x)).length;};
+const parseDate=value=>{const ms=Date.parse(String(value||''));return Number.isFinite(ms)?new Date(ms):null};
+const inferEventDate=text=>{const value=String(text||'');const m=value.match(/\b(?:on|at|during|for)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:st|nd|rd|th)?(?:,?\s+(\d{4}))?/i);if(!m)return null;const year=Number(m[3]||new Date().getUTCFullYear());const ms=Date.parse(`${m[1]} ${m[2]}, ${year} UTC`);return Number.isFinite(ms)?new Date(ms):null};
+const temporalStatus=({eventDate=null,sourceDate=null}={})=>{if(!eventDate||!sourceDate)return 'unknown';return sourceDate.getTime()<eventDate.getTime()?'pre-event':'post-event'};
+const deriveTemporalContext=({candidate={},sources=[]}={})=>{const explicitEvent=parseDate(candidate.eventDate||candidate.eventAt||candidate.keyEventDate);const inferredEvent=explicitEvent||inferEventDate(`${candidate.title||''}. ${candidate.description||''}`);const sourceDates=(sources||[]).map((source,index)=>{const date=parseDate(source.publishedAt||source.published||source.date||source.updatedAt||source.extractedAt);return {sourceId:source.id||`S${index+1}`,sourceDate:date?date.toISOString():null,temporalStatus:temporalStatus({eventDate:inferredEvent,sourceDate:date})};});return {version:1,eventDate:inferredEvent?inferredEvent.toISOString():null,eventDateSource:explicitEvent?'metadata':inferredEvent?'description-or-title':'none',sources:sourceDates};};
+
 const sourceRole=({candidate={},source={}}={})=>{
   if(source.primary===true)return 'PRIMARY';
   const title=overlap(source.title||'',candidate.title||'');
