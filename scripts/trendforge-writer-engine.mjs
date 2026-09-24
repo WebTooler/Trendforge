@@ -101,15 +101,18 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
     factGuide
   ].join('\\n') : '';
   const temporal=factMap?.temporal||null;
-  const temporalGuide=temporal ? [
-    'TEMPORAL EVIDENCE LOCK:',
-    `- Event date: ${temporal.eventDate||'not established'} (source: ${temporal.eventDateSource||'unknown'}).`,
-    '- Treat pre-event reporting as prediction/expectation, not as confirmation.',
-    '- When post-event evidence exists, do not keep a superseded pre-event prediction as the current state.',
-    '- Do not silently convert rumor, expectation, or leak language into confirmed launch/announcement language.',
-    '- Keep separate products, prototypes, variants, and rumored devices separate unless the evidence explicitly establishes they are the same product.',
-    '- If the evidence contains both pre-event and post-event material, prefer the current post-event evidence for the current state while preserving earlier reporting only as historical context.'
-  ].join('\\n');
+  let temporalGuide='';
+  if (temporal) {
+    temporalGuide=[
+      'TEMPORAL EVIDENCE LOCK:',
+      `- Event date: ${temporal.eventDate||'not established'} (source: ${temporal.eventDateSource||'unknown'}).`,
+      '- Treat pre-event reporting as prediction/expectation, not as confirmation.',
+      '- When post-event evidence exists, do not keep a superseded pre-event prediction as the current state.',
+      '- Do not silently convert rumor, expectation, or leak language into confirmed launch/announcement language.',
+      '- Keep separate products, prototypes, variants, and rumored devices separate unless the evidence explicitly establishes they are the same product.',
+      '- If the evidence contains both pre-event and post-event material, prefer the current post-event evidence for the current state while preserving earlier reporting only as historical context.'
+    ].join('\\n');
+  }
   let architectureGuide='';
   if (blueprint) {
     const architectureLines=[
