@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T05:19:04.380Z",
+  "updatedAt": "2026-09-24T12:09:47.842Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,9 +14,9 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 31,
-    "topics": 464,
-    "articles": 22
+    "runs": 32,
+    "topics": 471,
+    "articles": 23
   },
   "learningInput": {
     "version": 2,
@@ -88,34 +88,6 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZjB2VlMybXdDdXNYUVc3NHJOR05Da1F5SnlrVzY5R09MaWhKZDc4eDR3TF9HWlpIVjFiRGZFWmJrc3lKX1JXbDBEdjNKUklYN2ZUR2tETXd4cTdMRW0xT3NEU25DOUJIMkdnclItVG4zLWNuM09CVG1sbDlKSFJkQ25EaXc3RjVSUkFXNGpxTFhFQWRpNllnc3dKSmVVSFV1THRHQ3ZYMXNYY0xkS3pSMHlrZnRCQTVx?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1R1FfVlpxTExFMktuUmtSaGcwRjkyUEZUNDBocmk2UEdySmtqVGszSWdQbGRUMTVDTEtVQnJ2NXpMNHhoV1VNSUxSRjN1Z0VhY2FrQThyZFd4UXZVM2FkcENEV19BV2xiQUFPdXhSeXJxczRBblR0WnNiSQ?oc=5",
-        "bucket": "control"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcmt4MDhleU1ELVgyS0tEM0tTMHFmbkNTZTNsSUNpZ0JjZmpEb0VXTGEwTVFxbDV4ZTFmYnZtdWI5Slg0VFZTVF9DVXdpTmY2M0hpNFUxV3RDQ1prQTZ1Y19hMWRKRTJJQWU4QW5vZnk4M1lWOGxualliVXg1QzFQOFkydWNkNDcxV2lRMlhHU085SWhQOVBDa1kwOWI1VGhJWU5iTTBIc1RLWF9nQ3cwbnpFMEc0VU10VHhSdFJKXy1Tbjg?oc=5",
         "bucket": "control"
       },
@@ -166,38 +138,38 @@
       {
         "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTjBhSlFYbVlkOEUybTZHVHN0RjZHWUR4RHh5UURBRmpGbTcxcTBTU00wUVdBUU0zZVpYWEdJNVc0YXJOVFkwZ3pvVjhDUmZKSWNHWkc4Zm1ZRVdwZW1kR0NxbzFybGNWSF9Oc01TUEIwTTR2SDdUTjBXY3JTaWRFdG5rM1BNSlYtOHRkQXJqd2l1UExOVXI40gGcAUFVX3lxTE1zNmVTdkNQQTNEQVM5bU55bDhpUEJfVTcxNWsyT1RScEtQTXpkSkFPM2l1b2RVZXU0Z1FjbmNKTjVyWm8wSWJBZzdWRUw5VklEX3ZqWXd0Y0NGbm03VXBkNUVVR0h1SUsxWnZBMUpsQ2hXdkZycTRJd1ZCSVFKSmQyTEtHc3JORnVDOVR4Ql8tUHRqU2dZQ1JZdjdueQ?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9kRFFhNDJrSUZUWmtDYnlqaXBCemhTVkdJb093MnRhZWpXQU9zenZsSG9zQWhMbXExWGUyZEd3eE9NRktQdkFncE9VQ2o3OWswdU05clNqcVltV1ZHOHFUd0dXeng0SnVlUFlZNy1Lb2dkRE9iQXc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUlRURVQxNFlkYmptWUp0V3dOTFRVbXZma2dJTUZNaHVhMHBpWGpaQXNwa0I5eDNPN1dZcE00eGhLanhyZkZqaWVTOF9vS0pHbVVMLWg4dWFDYmdTX2MtS1FzYVN0U09Bd01saEhyZFo0YjRKS1cwXzZnbG9UQmE2a1d6d01rVmJuUWFWenBBNTZKa2YxZWhhOXJ4Yw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaEJQZF9YWmpENEgwc0xLMmdCbGlaYmFzcl83VmhheGI5Y1hxTUVQUjN5MFFjaXpMRjJpajVKYlhoQUxaZGhGWVJZX3BWaUJsQ015bWF6T1JDYzdpUlRiVzJ4c2Q2VUJHLWZncmRzQnRBUnpsUUtwWDBFWGROdDljbGJXZFc1ZUNnQy1nYy1xWHdnZkFuY215VUc4YnRjQU9LVi02MHdIWGlxRHZFeHZfdWJhS2d0cTN6ZWNGZjktcDhpQm1Qd1lYNzV1Wk4xQQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMHhXcG0yang5aGR6Z1dTdTlnX0tOUUh2dGpKeFpOWk1Gem1QSTl3dmJJZlBpajBmRmRDWm5MdXRRTGNIYmZ2WkV6RjY0QzV1cXYxNzVnMmgwRDZKTWJFMEZvOTlZc0U4YWx4NG1KN2lka2NCZVZnNUQ5Y0g3Y2hmRWRmN0pwNlBOMGlmYTg4amxQbDZQeVNHMnNmMmdGOE4xNlBaZWZHOGpyLXQ4S0xEWERqbnNyQS1D?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWFVXakRXTHBpbWJqM0lCdmRVYkJKeWUzYVN4WVF4blZIT1FCaUZWZ2xvYUVGVDZkdGVRbFl0b2l2Q0pnYjVLUDF2ZUJjbURuYkVJUGY3QVZYQkE2dGpKbmpvTWVQYWtDczB6ZGwtUXF4VGJxcjA2cmtwY0EzYzZEQ0FaS3J1dTRVVzQw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb1FlZjZFZlhWZXlXQnByZzRYMm9YUDZYSFlCeVM4aTkyejdqM2JuRmlQZjRNbk1JazN0UHo5N1pLZlRXZXlWSDNrT2R5cWJFMUNlM1MtWi1scGIxYjduRHd3cUtkWWdIcnJ5TXNVQ2RVc0ZlakRQWFUtTnZab1czUTFRVjF1MVdieDBZbld2YVlTMkNPUGVMVkVMZXc5Y3c?oc=5",
+        "bucket": "control"
       }
     ],
     "intro-style": [
       {
-        "key": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZjB2VlMybXdDdXNYUVc3NHJOR05Da1F5SnlrVzY5R09MaWhKZDc4eDR3TF9HWlpIVjFiRGZFWmJrc3lKX1JXbDBEdjNKUklYN2ZUR2tETXd4cTdMRW0xT3NEU25DOUJIMkdnclItVG4zLWNuM09CVG1sbDlKSFJkQ25EaXc3RjVSUkFXNGpxTFhFQWRpNllnc3dKSmVVSFV1THRHQ3ZYMXNYY0xkS3pSMHlrZnRCQTVx?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1R1FfVlpxTExFMktuUmtSaGcwRjkyUEZUNDBocmk2UEdySmtqVGszSWdQbGRUMTVDTEtVQnJ2NXpMNHhoV1VNSUxSRjN1Z0VhY2FrQThyZFd4UXZVM2FkcENEV19BV2xiQUFPdXhSeXJxczRBblR0WnNiSQ?oc=5",
-        "bucket": "control"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcmt4MDhleU1ELVgyS0tEM0tTMHFmbkNTZTNsSUNpZ0JjZmpEb0VXTGEwTVFxbDV4ZTFmYnZtdWI5Slg0VFZTVF9DVXdpTmY2M0hpNFUxV3RDQ1prQTZ1Y19hMWRKRTJJQWU4QW5vZnk4M1lWOGxualliVXg1QzFQOFkydWNkNDcxV2lRMlhHU085SWhQOVBDa1kwOWI1VGhJWU5iTTBIc1RLWF9nQ3cwbnpFMEc0VU10VHhSdFJKXy1Tbjg?oc=5",
         "bucket": "control"
       },
@@ -248,38 +220,38 @@
       {
         "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTjBhSlFYbVlkOEUybTZHVHN0RjZHWUR4RHh5UURBRmpGbTcxcTBTU00wUVdBUU0zZVpYWEdJNVc0YXJOVFkwZ3pvVjhDUmZKSWNHWkc4Zm1ZRVdwZW1kR0NxbzFybGNWSF9Oc01TUEIwTTR2SDdUTjBXY3JTaWRFdG5rM1BNSlYtOHRkQXJqd2l1UExOVXI40gGcAUFVX3lxTE1zNmVTdkNQQTNEQVM5bU55bDhpUEJfVTcxNWsyT1RScEtQTXpkSkFPM2l1b2RVZXU0Z1FjbmNKTjVyWm8wSWJBZzdWRUw5VklEX3ZqWXd0Y0NGbm03VXBkNUVVR0h1SUsxWnZBMUpsQ2hXdkZycTRJd1ZCSVFKSmQyTEtHc3JORnVDOVR4Ql8tUHRqU2dZQ1JZdjdueQ?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9kRFFhNDJrSUZUWmtDYnlqaXBCemhTVkdJb093MnRhZWpXQU9zenZsSG9zQWhMbXExWGUyZEd3eE9NRktQdkFncE9VQ2o3OWswdU05clNqcVltV1ZHOHFUd0dXeng0SnVlUFlZNy1Lb2dkRE9iQXc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUlRURVQxNFlkYmptWUp0V3dOTFRVbXZma2dJTUZNaHVhMHBpWGpaQXNwa0I5eDNPN1dZcE00eGhLanhyZkZqaWVTOF9vS0pHbVVMLWg4dWFDYmdTX2MtS1FzYVN0U09Bd01saEhyZFo0YjRKS1cwXzZnbG9UQmE2a1d6d01rVmJuUWFWenBBNTZKa2YxZWhhOXJ4Yw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaEJQZF9YWmpENEgwc0xLMmdCbGlaYmFzcl83VmhheGI5Y1hxTUVQUjN5MFFjaXpMRjJpajVKYlhoQUxaZGhGWVJZX3BWaUJsQ015bWF6T1JDYzdpUlRiVzJ4c2Q2VUJHLWZncmRzQnRBUnpsUUtwWDBFWGROdDljbGJXZFc1ZUNnQy1nYy1xWHdnZkFuY215VUc4YnRjQU9LVi02MHdIWGlxRHZFeHZfdWJhS2d0cTN6ZWNGZjktcDhpQm1Qd1lYNzV1Wk4xQQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMHhXcG0yang5aGR6Z1dTdTlnX0tOUUh2dGpKeFpOWk1Gem1QSTl3dmJJZlBpajBmRmRDWm5MdXRRTGNIYmZ2WkV6RjY0QzV1cXYxNzVnMmgwRDZKTWJFMEZvOTlZc0U4YWx4NG1KN2lka2NCZVZnNUQ5Y0g3Y2hmRWRmN0pwNlBOMGlmYTg4amxQbDZQeVNHMnNmMmdGOE4xNlBaZWZHOGpyLXQ4S0xEWERqbnNyQS1D?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWFVXakRXTHBpbWJqM0lCdmRVYkJKeWUzYVN4WVF4blZIT1FCaUZWZ2xvYUVGVDZkdGVRbFl0b2l2Q0pnYjVLUDF2ZUJjbURuYkVJUGY3QVZYQkE2dGpKbmpvTWVQYWtDczB6ZGwtUXF4VGJxcjA2cmtwY0EzYzZEQ0FaS3J1dTRVVzQw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb1FlZjZFZlhWZXlXQnByZzRYMm9YUDZYSFlCeVM4aTkyejdqM2JuRmlQZjRNbk1JazN0UHo5N1pLZlRXZXlWSDNrT2R5cWJFMUNlM1MtWi1scGIxYjduRHd3cUtkWWdIcnJ5TXNVQ2RVc0ZlakRQWFUtTnZab1czUTFRVjF1MVdieDBZbld2YVlTMkNPUGVMVkVMZXc5Y3c?oc=5",
+        "bucket": "control"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZjB2VlMybXdDdXNYUVc3NHJOR05Da1F5SnlrVzY5R09MaWhKZDc4eDR3TF9HWlpIVjFiRGZFWmJrc3lKX1JXbDBEdjNKUklYN2ZUR2tETXd4cTdMRW0xT3NEU25DOUJIMkdnclItVG4zLWNuM09CVG1sbDlKSFJkQ25EaXc3RjVSUkFXNGpxTFhFQWRpNllnc3dKSmVVSFV1THRHQ3ZYMXNYY0xkS3pSMHlrZnRCQTVx?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1R1FfVlpxTExFMktuUmtSaGcwRjkyUEZUNDBocmk2UEdySmtqVGszSWdQbGRUMTVDTEtVQnJ2NXpMNHhoV1VNSUxSRjN1Z0VhY2FrQThyZFd4UXZVM2FkcENEV19BV2xiQUFPdXhSeXJxczRBblR0WnNiSQ?oc=5",
-        "bucket": "control"
-      },
-      {
         "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcmt4MDhleU1ELVgyS0tEM0tTMHFmbkNTZTNsSUNpZ0JjZmpEb0VXTGEwTVFxbDV4ZTFmYnZtdWI5Slg0VFZTVF9DVXdpTmY2M0hpNFUxV3RDQ1prQTZ1Y19hMWRKRTJJQWU4QW5vZnk4M1lWOGxualliVXg1QzFQOFkydWNkNDcxV2lRMlhHU085SWhQOVBDa1kwOWI1VGhJWU5iTTBIc1RLWF9nQ3cwbnpFMEc0VU10VHhSdFJKXy1Tbjg?oc=5",
         "bucket": "control"
       },
@@ -330,6 +302,34 @@
       {
         "key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTjBhSlFYbVlkOEUybTZHVHN0RjZHWUR4RHh5UURBRmpGbTcxcTBTU00wUVdBUU0zZVpYWEdJNVc0YXJOVFkwZ3pvVjhDUmZKSWNHWkc4Zm1ZRVdwZW1kR0NxbzFybGNWSF9Oc01TUEIwTTR2SDdUTjBXY3JTaWRFdG5rM1BNSlYtOHRkQXJqd2l1UExOVXI40gGcAUFVX3lxTE1zNmVTdkNQQTNEQVM5bU55bDhpUEJfVTcxNWsyT1RScEtQTXpkSkFPM2l1b2RVZXU0Z1FjbmNKTjVyWm8wSWJBZzdWRUw5VklEX3ZqWXd0Y0NGbm03VXBkNUVVR0h1SUsxWnZBMUpsQ2hXdkZycTRJd1ZCSVFKSmQyTEtHc3JORnVDOVR4Ql8tUHRqU2dZQ1JZdjdueQ?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9kRFFhNDJrSUZUWmtDYnlqaXBCemhTVkdJb093MnRhZWpXQU9zenZsSG9zQWhMbXExWGUyZEd3eE9NRktQdkFncE9VQ2o3OWswdU05clNqcVltV1ZHOHFUd0dXeng0SnVlUFlZNy1Lb2dkRE9iQXc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUlRURVQxNFlkYmptWUp0V3dOTFRVbXZma2dJTUZNaHVhMHBpWGpaQXNwa0I5eDNPN1dZcE00eGhLanhyZkZqaWVTOF9vS0pHbVVMLWg4dWFDYmdTX2MtS1FzYVN0U09Bd01saEhyZFo0YjRKS1cwXzZnbG9UQmE2a1d6d01rVmJuUWFWenBBNTZKa2YxZWhhOXJ4Yw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaEJQZF9YWmpENEgwc0xLMmdCbGlaYmFzcl83VmhheGI5Y1hxTUVQUjN5MFFjaXpMRjJpajVKYlhoQUxaZGhGWVJZX3BWaUJsQ015bWF6T1JDYzdpUlRiVzJ4c2Q2VUJHLWZncmRzQnRBUnpsUUtwWDBFWGROdDljbGJXZFc1ZUNnQy1nYy1xWHdnZkFuY215VUc4YnRjQU9LVi02MHdIWGlxRHZFeHZfdWJhS2d0cTN6ZWNGZjktcDhpQm1Qd1lYNzV1Wk4xQQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOMHhXcG0yang5aGR6Z1dTdTlnX0tOUUh2dGpKeFpOWk1Gem1QSTl3dmJJZlBpajBmRmRDWm5MdXRRTGNIYmZ2WkV6RjY0QzV1cXYxNzVnMmgwRDZKTWJFMEZvOTlZc0U4YWx4NG1KN2lka2NCZVZnNUQ5Y0g3Y2hmRWRmN0pwNlBOMGlmYTg4amxQbDZQeVNHMnNmMmdGOE4xNlBaZWZHOGpyLXQ4S0xEWERqbnNyQS1D?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWFVXakRXTHBpbWJqM0lCdmRVYkJKeWUzYVN4WVF4blZIT1FCaUZWZ2xvYUVGVDZkdGVRbFl0b2l2Q0pnYjVLUDF2ZUJjbURuYkVJUGY3QVZYQkE2dGpKbmpvTWVQYWtDczB6ZGwtUXF4VGJxcjA2cmtwY0EzYzZEQ0FaS3J1dTRVVzQw?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQb1FlZjZFZlhWZXlXQnByZzRYMm9YUDZYSFlCeVM4aTkyejdqM2JuRmlQZjRNbk1JazN0UHo5N1pLZlRXZXlWSDNrT2R5cWJFMUNlM1MtWi1scGIxYjduRHd3cUtkWWdIcnJ5TXNVQ2RVc0ZlakRQWFUtTnZab1czUTFRVjF1MVdieDBZbld2YVlTMkNPUGVMVkVMZXc5Y3c?oc=5",
+        "bucket": "control"
       }
     ]
   },
@@ -337,13 +337,13 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 12,
+        "variant": 8,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 67,
+        "claimConfidence": 68,
         "evidencePassRate": 25
       },
       "conclusion": "insufficient-data",
@@ -352,13 +352,13 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 12,
+        "variant": 8,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 67,
+        "claimConfidence": 68,
         "evidencePassRate": 25
       },
       "conclusion": "insufficient-data",
@@ -367,13 +367,13 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 10,
-        "variant": 10,
+        "control": 12,
+        "variant": 8,
         "total": 20
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 67,
+        "claimConfidence": 68,
         "evidencePassRate": 25
       },
       "conclusion": "insufficient-data",
@@ -381,6 +381,6 @@
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-23T21:45:11.850Z"
+    "previousUpdatedAt": "2026-09-24T05:19:04.380Z"
   }
 }
