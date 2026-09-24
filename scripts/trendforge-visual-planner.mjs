@@ -4,7 +4,7 @@ const PERSON_PATTERNS = [
   /\b(?:ceo|chief executive|founder|president|minister|researcher|scientist|spokesperson|executive|analyst)\b/i,
   /\b(?:said|says|called for|urged|announced|warned|argued)\b/i
 ];
-const PRODUCT_TERMS = ['iphone','ipad','macbook','pixel','galaxy','smartphone','phone','laptop','tablet','watch','headset','earbuds','camera','console','device','gpu','cpu','chip','processor','robot','drone','sensor'];
+const PRODUCT_TERMS = ['smart glasses','smart-glasses','glasses','wearables','wearable','iphone','ipad','macbook','pixel','galaxy','smartphone','phone','laptop','tablet','watch','headset','earbuds','camera','console','device','gpu','cpu','chip','processor','robot','drone','sensor'];
 const INFRA_TERMS = ['data center','data-centre','server rack','factory','laboratory','lab','warehouse','power plant','satellite','network infrastructure','semiconductor fab'];
 const ABSTRACT_TERMS = ['regulation','policy','legislation','governance','antitrust','trade policy','economic shift','industry shift','societal','oversight','slowdown','slow-down','agreement','ban','tariff','competition'];
 const STORY_STOPWORDS = new Set(['the','a','an','and','or','of','to','for','in','on','with','from','by','is','are','was','were','what','why','how','says','said','now','new','after','before','about']);
