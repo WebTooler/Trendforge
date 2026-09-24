@@ -47,6 +47,21 @@ const removeSentenceByFingerprint=(body,target)=>{
  for(const sentence of sentences){const idx=body.indexOf(sentence,cursor);if(idx<0)continue;output+=body.slice(cursor,idx);if(sentenceFingerprint(sentence)===fp){cursor=idx+sentence.length;removed++;}else{output+=sentence;cursor=idx+sentence.length;}}
  output+=body.slice(cursor);return{body:output.replace(/\n{3,}/g,'\n\n').trim(),changed:removed>0,count:removed};
 };
+const removeEmptyH2Sections=body=>{
+ const input=String(body);
+ const blocks=input.split(/(?=^##\\s+)/m);
+ const cleaned=[]; let removed=0;
+ for(const block of blocks){
+  const trimmed=block.trim();
+  if(!/^##\\s+/.test(trimmed)){if(trimmed)cleaned.push(trimmed);continue;}
+  const lines=trimmed.split(/\\n/);
+  const heading=lines.shift()||'';
+  const bodyLines=lines.join('\\n').trim();
+  if(!bodyLines){removed++;continue;}
+  cleaned.push(heading+'\\n\\n'+bodyLines);
+ }
+ return{body:cleaned.join('\\n\\n').replace(/\\n{3,}/g,'\\n\\n').trim(),removed};
+};
 const claimVariants=claim=>{
  const raw=String(claim||'').trim();if(!raw)return[];
  const variants=[raw,...sentenceList(raw)].map(x=>String(x).trim()).filter(Boolean);
@@ -194,6 +209,10 @@ async function main(){
       throw new Error(`Grounding repair provider failed after bounded depth-preserving recovery: ${lastError?.message||String(lastError)}`);
     }
   }
+  const emptyH2Cleanup=removeEmptyH2Sections(updatedBody);
+  if(emptyH2Cleanup.removed)console.log(`Grounding repair v12: removed ${emptyH2Cleanup.removed} empty H2 section(s) left by grounding repair.`);
+  updatedBody=emptyH2Cleanup.body;
+  finalDepth=assessArticleDepth({content:updatedBody,blueprint});
   const frontmatter=raw.match(/^---[\s\S]*?---/)?.[0]||'---\n---';
   const sources=raw.match(/\n\s*##\s+Sources[\s\S]*$/i)?.[0]||'';
   fs.writeFileSync(articlePath,`${frontmatter}\n\n${updatedBody.trim()}\n${sources||''}\n`);
