@@ -1,4 +1,4 @@
-import { buildStoryFactMap } from './story-fact-map.mjs';
+import { buildStoryFactMap, deriveTemporalContext } from './story-fact-map.mjs';
 const STOP=new Set('about after again also been being could from have into more most over said some than that their there these they this what when which with will would your technology tech digital latest news article articles story stories report reports reported according development developments company companies industry stock stocks shares market markets price prices product products service services system systems model models models model technology tech ai intelligence digital data today yesterday tomorrow while where whose through before between under using used uses make makes made less then still already now just even only often usually including another around really very much many somewhat generally'.split(' '));
 const FACTUAL=/\b(?:announced|launch(?:ed|es)?|released|reported|said|found|study|research|survey|percent|million|billion|approved|blocked|investigation|according|official|ceo|company|companies|product|model|models|agent|agents|incident|policy|regulator|funding|investment|acquisition|partnership|shares|stock|price|revenue|profit|loss|deal|agreement|vote|election|court|lawsuit|security|breach|hack(?:ed|ing)?|update|introduced|unveiled|confirmed|denied|allowed|banned|cut|raised|fell|rose|increased|decreased)\b/i;
 const JUNK=/^(?:advertisement|advertising|sponsored|promoted|partner content|follow us|read more|related|most popular|trending|watch now|listen now|subscribe|sign up|newsletter|when you purchase|last day to book|buy tickets|tickets? now|save up to|click here|learn more|shop now|download now)\b/i;
@@ -25,6 +25,7 @@ function isNoise(text){const x=String(text).replace(/\s+/g,' ').trim();if(x.leng
 
 export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
   const story={title:String(candidate.title||''),description:String(candidate.description||'')};
+  const temporal=deriveTemporalContext({candidate,sources});
   const normalizedSources=[]; const allClaims=[]; let rawPassageCount=0;
   for(let si=0;si<sources.length;si++){
     const source=sources[si]||{};
@@ -130,6 +131,7 @@ export function buildEditorialEvidenceBrief({candidate={},sources=[]}={}){
     unknowns,
     contradictions,
     storyFactMap,
+    temporal,
     metrics:{rawPassageCount,relevantPassageCount,supportedClaimCount:Math.min(48,uniqueClaims.length),relevantEvidenceUnitCount,independentSourceCount,publisherFamilyCount:publisherFamilies.length,substantiveSourceCount,sourceEvidenceMetrics,relevantEvidenceDensity:density,rawChars,relevantChars,evidenceCapacity},
     sources:normalizedSources
   };
