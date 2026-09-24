@@ -4,6 +4,20 @@ import { deriveEvidenceArticleBlueprint } from './evidence-article-blueprint.mjs
 import { scoreEvidenceCoverage } from './evidence-coverage.mjs';
 import { buildAuthoritativeEvidencePack, validateAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
 
+
+const temporal=deriveTemporalContext({
+  candidate:{title:'Meta Connect 2026 unveils new glasses',description:'Meta will hold its Connect event on September 23, 2026.'},
+  sources:[
+    {id:'S1',publishedAt:'2026-09-18T12:00:00Z'},
+    {id:'S2',publishedAt:'2026-09-23T20:00:00Z'}
+  ]
+});
+assert.equal(temporal.eventDate,'2026-09-23T00:00:00.000Z');
+assert.equal(temporal.sources[0].temporalStatus,'pre-event');
+assert.equal(temporal.sources[1].temporalStatus,'post-event');
+assert.equal(temporalStatus({eventDate:new Date('2026-09-23T00:00:00Z'),sourceDate:new Date('2026-09-18T00:00:00Z')}),'pre-event');
+assert.equal(temporalStatus({eventDate:new Date('2026-09-23T00:00:00Z'),sourceDate:new Date('2026-09-24T00:00:00Z')}),'post-event');
+
 const candidate={
   title:'Acme launches Nova AI model with lower inference costs',
   description:'Acme launched its Nova AI model in London and said inference costs fell by 20 percent.'
@@ -48,6 +62,7 @@ const sources=[
 
 const brief=buildEditorialEvidenceBrief({candidate,sources});
 assert.ok(brief.storyFactMap,'story fact map must be emitted');
+assert.ok(brief.temporal,'temporal context must be emitted');
 assert.ok(brief.storyFactMap.coreFacts.length>=4,'core facts must be extracted');
 assert.ok(brief.storyFactMap.capacity.directCoreFactCount>=3,'direct story facts must be available');
 assert.ok(brief.sources.some(s=>s.sourceRole==='PRIMARY'));
