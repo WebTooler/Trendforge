@@ -18,7 +18,7 @@ function runArticle(body,evidence){
   const brief={title:'Amazon Bedrock AgentCore migration',summary:'Amazon Bedrock AgentCore migration',storyFactMap:{temporal}};
   const pack=buildAuthoritativeEvidencePack({
     candidate:{title:brief.title,link:'https://example.com/story',category:'Technology'},
-    sources:[{id:'S1',title:'AWS',url:'https://aws.amazon.com/example',domain:'aws.amazon.com',publisherFamily:'aws.com',verified:true,passages:evidence,body:evidence.join(' '),lineage:{id:'lineage-test',type:'independent',members:1}}],
+    sources:[{id:'S1',title:'AWS',url:'https://aws.amazon.com/example',domain:'aws.amazon.com',publisherFamily:'aws.com',verified:true,primary:true,sourceRole:'PRIMARY',passages:evidence,body:evidence.join(' '),lineage:{id:'lineage-test',type:'independent',members:1}}],
     coverage:{score:90,band:'usable',independentPublisherFamilies:1},
     blueprint:{mode:'bounded',targetWords:{min:300,max:750}}
   });
