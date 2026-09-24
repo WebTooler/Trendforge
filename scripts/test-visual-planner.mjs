@@ -15,6 +15,12 @@ assert.equal(product.mode, 'editorial-product');
 
 const smartGlasses = buildVisualBrief({ title: 'Meta’s Muse AI Agent Set to Power New Smart Glasses', description: 'Meta is integrating its autonomous AI assistant Muse into its latest smart glasses, promising hands-free task execution, navigation, and secure purchases.', category: 'Digital Life' });
 assert.equal(smartGlasses.mode, 'editorial-product');
+
+const investment = buildVisualBrief({ title: 'Microsoft Eyes $10B+ Investment in Middle East Tech, AI, and Digital Resilience', description: 'Microsoft will invest more than $10 billion in technology, cloud, AI infrastructure and digital resilience across the Middle East.', category: 'Technology', body: 'The framework includes cloud infrastructure and regional connectivity.' });
+assert.equal(investment.mode, 'investment-infrastructure');
+assert.ok(investment.primarySubject.toLowerCase().includes('microsoft'));
+assert.ok(investment.scene.toLowerCase().includes('data-center') || investment.scene.toLowerCase().includes('network'));
+assert.equal(assessVisualRelevance({ title: 'Microsoft Eyes $10B+ Investment in Middle East Tech, AI, and Digital Resilience', description: 'Microsoft will invest more than $10 billion in technology, cloud, AI infrastructure and digital resilience across the Middle East.', brief: investment }).passed, true);
 assert.ok(smartGlasses.primarySubject.toLowerCase().includes('smart glasses') || smartGlasses.primarySubject.toLowerCase().includes('glasses'));
 assert.equal(assessVisualRelevance({ title: 'Meta’s Muse AI Agent Set to Power New Smart Glasses', description: 'Meta is integrating its autonomous AI assistant Muse into its latest smart glasses.', brief: smartGlasses }).passed, true);
 
