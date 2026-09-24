@@ -70,7 +70,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
   const synthesisMaxWords=Math.min(100,Math.max(0,Math.floor(Math.min(coreChars/20,finalCoreFacts.length*12))));
   const synthesisStatementCapacity=Math.min(3,Math.floor(finalCoreFacts.length/2));
   const synthesisAllowed=synthesisStatementCapacity>=1&&synthesisMaxWords>=35;
-  const synthesisAllowedFactIds=finalCoreFacts.slice(0,Math.min(12,finalCoreFacts.length)).map(x=>x.factId);
+  const synthesisAllowedFactIds=finalCoreFacts.map(x=>x.factId);
   let level='none';
   if(finalCoreFacts.length>=10&&coreChars>=3500)level='high';
   else if(finalCoreFacts.length>=6&&coreChars>=2200)level='medium';
