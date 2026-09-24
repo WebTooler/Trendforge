@@ -43,7 +43,15 @@ const loadEvidenceBlueprint=expectedTitle=>{
 };
 const normalizeGeneratedDraft=draft=>{
   const out={...draft};
-  const text=String(out.content||'');
+  let text=String(out.content||'');
+  // Deterministically remove empty H2 shells before validation/rendering. A heading
+  // with no body is never useful editorial content and can be produced when the
+  // optional synthesis ending is selected but the model has no supported synthesis
+  // statement to place under it.
+  const beforeEmptyH2=text;
+  text=text.replace(/(^|\\n)##\\s+[^\\n]+(?=\\n(?:##\\s+|$))/g,'$1').replace(/(^|\\n)##\\s+[^\\n]+\\s*$/g,'$1').replace(/\\n{3,}/g,'\\n\\n').trim();
+  const removedEmptyH2s=(beforeEmptyH2.match(/(^|\\n)##\\s+[^\\n]+(?=\\n(?:##\\s+|$))/g)||[]).length+(beforeEmptyH2.match(/(^|\\n)##\\s+[^\\n]+\\s*$/g)||[]).length;
+  if(removedEmptyH2s)console.log(`TrendForge Writer Engine: removed ${removedEmptyH2s} empty H2 heading shell(s) deterministically before validation.`);
   const parts=text.match(/[^.!?]+[.!?](?:\\s|$)/g)||[];
   const cleaned=[]; let removed=0;
   for(const sentence of parts){
@@ -52,7 +60,8 @@ const normalizeGeneratedDraft=draft=>{
     if(norm&&norm===prev){removed++;continue;}
     cleaned.push(sentence);
   }
-  if(removed) out.content=cleaned.join('').trim();
+  if(removed) text=cleaned.join('').trim();
+  out.content=text;
   const desc=String(out.description||'').trim();
   if(desc.length>320){
     const limit=desc.slice(0,320).trim();
