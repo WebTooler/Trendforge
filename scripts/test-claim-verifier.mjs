@@ -23,6 +23,15 @@ function runArticle(body,evidence){
   return {code:r.status,report};
 }
 
+const temporalContractChecks=[
+  /const temporalEventFromBrief=brief=>/,
+  /const temporalSourceDateMap=brief=>/,
+  /const temporalStaleEventClaim=\(claim/,
+  /stale-post-event/,
+  /stale_post_event/
+];
+for(const re of temporalContractChecks)assert.match(verifier,re);
+
 const cases=[
   {
     name:'citation-and-inline-advice',
