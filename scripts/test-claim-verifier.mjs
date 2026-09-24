@@ -11,7 +11,6 @@ const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'trendforge-claim-verifier-'));
 fs.mkdirSync(path.join(tmp,'scripts'),{recursive:true});
 fs.mkdirSync(path.join(tmp,'content','articles'),{recursive:true});
 fs.mkdirSync(path.join(tmp,'data'),{recursive:true});
-fs.writeFileSync(path.join(tmp,'scripts','verify-article-claims-smart.mjs'),verifier);
 
 function runArticle(body,evidence){
   fs.writeFileSync(path.join(tmp,'content','articles','fixture.md'),'---\ntitle: "Amazon Bedrock AgentCore migration"\n---\n'+body+'\n');
@@ -25,7 +24,7 @@ function runArticle(body,evidence){
   });
   fs.writeFileSync(path.join(tmp,'data','article-brief.json'),JSON.stringify({brief,storyFactMap:{temporal},grounding:{sources:[{title:'AWS',url:'https://aws.amazon.com/example',passages:evidence}]}}));
   fs.writeFileSync(path.join(tmp,'data','authoritative-evidence-pack.json'),JSON.stringify({candidates:[pack]}));
-  const r=spawnSync(process.execPath,['scripts/verify-article-claims-smart.mjs'],{cwd:tmp,encoding:'utf8'});
+  const r=spawnSync(process.execPath,[path.join(root,'scripts','verify-article-claims-smart.mjs')],{cwd:root,encoding:'utf8',env:{...process.env,TREND_FORGE_VERIFY_BRIEF_PATH:path.join(tmp,'data','article-brief.json'),TREND_FORGE_VERIFY_ARTICLE_DIR:path.join(tmp,'content','articles'),TREND_FORGE_VERIFY_OUTPUT:path.join(tmp,'data','claim-verification.json'),TREND_FORGE_VERIFY_EVIDENCE_PACK_PATH:path.join(tmp,'data','authoritative-evidence-pack.json')}});
   let report={};
   try{report=JSON.parse(fs.readFileSync(path.join(tmp,'data','claim-verification.json'),'utf8'));}catch{}
   return {code:r.status,report};
