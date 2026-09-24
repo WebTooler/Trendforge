@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-24T02:08:43.277Z",
+  "generatedAt": "2026-09-24T02:16:36.283Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,9 +11,9 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 21,
+    "articles": 22,
     "refreshCandidates": 0,
-    "watch": 9,
+    "watch": 10,
     "fresh": 12,
     "stale": 0,
     "duplicateClusters": 0
@@ -126,6 +126,20 @@
       "ageState": "fresh",
       "words": 564,
       "sourceCount": 2,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
+    },
+    {
+      "file": "microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience.md",
+      "title": "Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
+      "category": "Technology",
+      "publishedAt": "2026-09-24T02:15:33.773Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 534,
+      "sourceCount": 4,
       "refreshScore": 46,
       "status": "watch",
       "action": "watch",
@@ -468,6 +482,21 @@
       "priority": 7
     },
     {
+      "file": "microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience.md",
+      "title": "Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
+      "category": "Technology",
+      "publishedAt": "2026-09-24T02:15:33.773Z",
+      "ageDays": 0,
+      "ageState": "fresh",
+      "words": 534,
+      "sourceCount": 4,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 8
+    },
+    {
       "file": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.md",
       "title": "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
       "category": "World",
@@ -480,7 +509,7 @@
       "status": "watch",
       "action": "watch",
       "reasons": [],
-      "priority": 8
+      "priority": 9
     },
     {
       "file": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.md",
@@ -495,7 +524,7 @@
       "status": "watch",
       "action": "watch",
       "reasons": [],
-      "priority": 9
+      "priority": 10
     }
   ],
   "duplicateClusters": []

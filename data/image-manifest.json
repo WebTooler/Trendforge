@@ -1,12 +1,81 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-24T02:07:50.114Z",
+  "generatedAt": "2026-09-24T02:16:35.255Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 0,
+  "generated": 1,
   "skipped": 0,
   "failed": 0,
-  "images": {}
+  "images": {
+    "microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience": {
+      "status": "generated",
+      "image": "/Trendforge/images/articles/microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience.1024x576.png",
+      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
+      "width": 1024,
+      "height": 576,
+      "steps": 4,
+      "elapsedMs": 2699,
+      "bytes": 321753,
+      "visualBrief": {
+        "version": 2,
+        "mode": "conceptual-editorial",
+        "primarySubject": "the specific policy, governance, market, or industry action described by the story, specifically tied to microsoft, eyes, investment, middle",
+        "scene": "A sophisticated editorial photo-illustration or carefully staged metaphor that makes the specific central idea immediately understandable without relying on generic AI symbols.",
+        "supportingElements": [
+          "at most one concrete metaphorical object or environmental cue tied directly to the story"
+        ],
+        "composition": "One strong metaphor or visual action, restrained editorial treatment, clear hierarchy, no collage of unrelated symbols.",
+        "company": "Microsoft",
+        "namedPerson": "Yahoo Finance",
+        "category": "Technology",
+        "storyAnchors": [
+          "microsoft",
+          "eyes",
+          "investment",
+          "middle",
+          "east",
+          "tech",
+          "digital",
+          "resilience"
+        ],
+        "avoid": [
+          "generic office imagery",
+          "random tablet or laptop",
+          "generic futuristic technology",
+          "glowing holograms, floating code, HUDs and neon sci-fi effects",
+          "prominent readable text or fake headlines",
+          "generic AI brain",
+          "random server rack",
+          "generic circuit board",
+          "stock-looking technology montage"
+        ]
+      },
+      "relevance": {
+        "passed": true,
+        "anchors": [
+          "microsoft",
+          "eyes",
+          "investment",
+          "middle",
+          "east",
+          "tech",
+          "digital",
+          "resilience"
+        ],
+        "matchedAnchors": [
+          "microsoft",
+          "eyes",
+          "investment",
+          "middle"
+        ],
+        "entityMatches": [
+          "microsoft"
+        ],
+        "score": 0.5
+      },
+      "promptLength": 1900
+    }
+  }
 }
