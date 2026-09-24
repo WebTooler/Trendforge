@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T05:19:04.255Z",
+  "updatedAt": "2026-09-24T12:09:50.032Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,26 +12,26 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 31,
-    "topicCount": 464,
-    "articleCount": 22,
+    "runCount": 32,
+    "topicCount": 471,
+    "articleCount": 23,
     "latestEditorialScore": 75,
-    "latestClaimConfidence": 62,
-    "latestEvidencePassRate": 37,
-    "latestEvidenceBlockRate": 10,
-    "singleSourceReadyRate": 26,
+    "latestClaimConfidence": 76,
+    "latestEvidencePassRate": 33,
+    "latestEvidenceBlockRate": 9,
+    "singleSourceReadyRate": 28,
     "publishCandidateRate": 0
   },
   "changes": {
     "editorialScore": 0,
-    "claimConfidence": -14,
-    "evidencePassRate": -1
+    "claimConfidence": 14,
+    "evidencePassRate": -4
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 217,
+      "failures": 224,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -46,40 +46,40 @@
     },
     "Cohere": {
       "successRate": 15,
-      "successes": 269,
-      "failures": 1516,
+      "successes": 281,
+      "failures": 1591,
       "cooldownRuns": 0,
-      "latestStatus": 200,
-      "latestClass": "success"
+      "latestStatus": 422,
+      "latestClass": "error"
     },
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 828,
+      "failures": 870,
       "cooldownRuns": 4,
-      "latestStatus": 200,
-      "latestClass": "transient"
+      "latestStatus": 503,
+      "latestClass": "server"
     },
     "Groq": {
       "successRate": 38,
-      "successes": 944,
-      "failures": 1540,
+      "successes": 1002,
+      "failures": 1611,
       "cooldownRuns": 2,
-      "latestStatus": 429,
-      "latestClass": "rate_limit"
+      "latestStatus": 200,
+      "latestClass": "success"
     },
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 93,
+      "failures": 96,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
       "successRate": 4,
-      "successes": 51,
-      "failures": 1147,
+      "successes": 53,
+      "failures": 1205,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "rate_limit"
@@ -114,18 +114,18 @@
       }
     },
     "Digital Life": {
-      "topicSamples": 250,
+      "topicSamples": 254,
       "averageScore": 68,
       "averageConfidence": 85,
       "evidenceLevels": {
-        "none": 117,
+        "none": 120,
         "single-source-verified": 69,
-        "strong": 64
+        "strong": 65
       },
       "decisions": {
-        "review": 223,
+        "review": 224,
         "publish_candidate": 1,
-        "hold": 26
+        "hold": 29
       }
     },
     "How-To": {
@@ -152,17 +152,17 @@
       }
     },
     "Product Launches": {
-      "topicSamples": 45,
+      "topicSamples": 48,
       "averageScore": 61,
       "averageConfidence": 66,
       "evidenceLevels": {
-        "none": 35,
-        "single-source-verified": 9,
+        "none": 36,
+        "single-source-verified": 11,
         "strong": 1
       },
       "decisions": {
-        "hold": 33,
-        "review": 12
+        "hold": 35,
+        "review": 13
       }
     },
     "Technology": {
@@ -227,13 +227,13 @@
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by -14 points versus the previous run."
+      "detail": "Average claim confidence changed by +14 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by -1 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by -4 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
@@ -248,7 +248,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 31,
+    "memoryRuns": 32,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
