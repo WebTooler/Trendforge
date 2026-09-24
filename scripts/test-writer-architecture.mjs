@@ -3,6 +3,12 @@ import fs from 'node:fs';
 import { validateDraft } from './trendforge-editorial-policy.mjs';
 
 const writerEngine=fs.readFileSync(new URL('./trendforge-writer-engine.mjs',import.meta.url),'utf8');
+const storyFactMap=fs.readFileSync(new URL('./story-fact-map.mjs',import.meta.url),'utf8');
+const claimVerifier=fs.readFileSync(new URL('./verify-article-claims-smart.mjs',import.meta.url),'utf8');
+assert.match(storyFactMap,/const synthesisAllowedFactIds=finalCoreFacts\.map\(x=>x\.factId\);/,'Synthesis capacity must expose all core facts to deterministic verification.');
+assert.match(claimVerifier,/const sentenceKey=s=>/,'Claim verifier must normalize sentence identity before classifying synthesis.');
+assert.match(claimVerifier,/synthesisSet\.has\(sentenceKey\(claim\)\)/,'Synthesis classification must use the normalized sentence fingerprint.');
+
 assert.ok(writerEngine.includes('const maxFactualClaims=claimBudget>0?claimBudget:0;'),'Writer must use the exact evidence claim budget.');
 assert.ok(writerEngine.includes('planning boundary, not a sentence-count quota'),'Writer must treat evidence capacity as planning guidance, not a sentence quota.');
 assert.ok(writerEngine.includes('Group related facts into coherent paragraphs'),'Writer must synthesize related evidence instead of mechanically enumerating facts.');
