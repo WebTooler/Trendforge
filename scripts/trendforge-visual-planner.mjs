@@ -5,6 +5,7 @@ const PERSON_PATTERNS = [
   /\b(?:said|says|called for|urged|announced|warned|argued)\b/i
 ];
 const PRODUCT_TERMS = ['smart glasses','smart-glasses','glasses','wearables','wearable','iphone','ipad','macbook','pixel','galaxy','smartphone','phone','laptop','tablet','watch','headset','earbuds','camera','console','device','gpu','cpu','chip','processor','robot','drone','sensor'];
+const INVESTMENT_TERMS = ['investment','investments','funding','capital','billion','million'];
 const INFRA_TERMS = ['data center','data-centre','server rack','factory','laboratory','lab','warehouse','power plant','satellite','network infrastructure','semiconductor fab'];
 const ABSTRACT_TERMS = ['regulation','policy','legislation','governance','antitrust','trade policy','economic shift','industry shift','societal','oversight','slowdown','slow-down','agreement','ban','tariff','competition'];
 const STORY_STOPWORDS = new Set(['the','a','an','and','or','of','to','for','in','on','with','from','by','is','are','was','were','what','why','how','says','said','now','new','after','before','about']);
@@ -55,6 +56,7 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
   const storyText = title + ' ' + description;
   const product = PRODUCT_TERMS.find(term => new RegExp('\\b' + term + '\\b', 'i').test(storyText));
   const infrastructure = INFRA_TERMS.find(term => new RegExp('\\b' + term + '\\b', 'i').test(lower));
+  const investment = INVESTMENT_TERMS.find(term => new RegExp('\\b' + term + '\\b', 'i').test(lower));
   const abstract = ABSTRACT_TERMS.find(term => lower.includes(term));
   const anchors = storyAnchors(title, description);
 
@@ -65,6 +67,13 @@ function buildVisualBrief({ title = '', description = '', category = '', body = 
     supportingElements = ['softly blurred audience or event environment', company ? company + '-specific event context without invented logos or text' : 'minimal event context'];
     composition = 'Medium or medium-wide horizontal frame; subject slightly off-center; back, side, over-the-shoulder, cropped, silhouette, or natural-distance framing so the face is not clearly identifiable.';
     avoid.push('generic product hero replacing the person','invented facial likeness','random consumer electronics as the main subject');
+  } else if (investment && company) {
+    mode = 'investment-infrastructure';
+    primarySubject = company + ' regional digital infrastructure investment, represented through concrete cloud, connectivity, and AI infrastructure';
+    scene = 'A realistic commissioned editorial photograph of concrete regional digital infrastructure such as a modern data-center environment, high-capacity network equipment, or secure cloud infrastructure, visually tied to the investment story rather than generic finance imagery.';
+    supportingElements = ['subtle regional geographic context without maps or invented labels', 'one restrained human scale element only when useful'];
+    composition = 'Documentary wide frame with one dominant infrastructure subject, realistic materials, restrained depth of field, and clear visual hierarchy.';
+    avoid.push('generic stock-market trading screens','coins, cash piles, oversized dollar symbols','generic office handshake','abstract financial graphs as the main subject');
   } else if (infrastructure) {
     mode = 'environment-infrastructure';
     primarySubject = 'the specific ' + infrastructure + ' or physical infrastructure central to the story';
