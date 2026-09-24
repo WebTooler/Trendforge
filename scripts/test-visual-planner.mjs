@@ -13,6 +13,11 @@ assert.ok(policy.avoid.includes('generic AI brain'));
 const product = buildVisualBrief({ title: 'New Pixel phone launches with upgraded camera', description: 'The device adds a new camera system.', category: 'Technology' });
 assert.equal(product.mode, 'editorial-product');
 
+const smartGlasses = buildVisualBrief({ title: 'Meta’s Muse AI Agent Set to Power New Smart Glasses', description: 'Meta is integrating its autonomous AI assistant Muse into its latest smart glasses, promising hands-free task execution, navigation, and secure purchases.', category: 'Digital Life' });
+assert.equal(smartGlasses.mode, 'editorial-product');
+assert.ok(smartGlasses.primarySubject.toLowerCase().includes('smart glasses') || smartGlasses.primarySubject.toLowerCase().includes('glasses'));
+assert.equal(assessVisualRelevance({ title: 'Meta’s Muse AI Agent Set to Power New Smart Glasses', description: 'Meta is integrating its autonomous AI assistant Muse into its latest smart glasses.', brief: smartGlasses }).passed, true);
+
 const planned = buildImagePrompt({ title: 'Google unveils Gemini security update', description: 'The company says the update addresses a model vulnerability.', category: 'AI', body: 'Security researchers examined the model and the company described the change.' });
 assert.ok(planned.prompt.length <= 1900);
 assert.ok(planned.prompt.includes('STORY ANCHORS:'));
