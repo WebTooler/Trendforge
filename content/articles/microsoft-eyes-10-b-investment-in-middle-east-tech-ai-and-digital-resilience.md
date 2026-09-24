@@ -33,13 +33,9 @@ Microsoft announced it plans to invest more than $10 billion in the region throu
 ## What to Watch Next
 Microsoft’s next steps will likely involve detailing the partnership agreements and rolling out the first wave of digital‑resilience assessments.The partnerships will support responsible AI adoption, sovereign‑ready cloud services, Arabic and multilingual AI, and the use of AI to improve services for citizens and businesses.Microsoft plans to invest more than $400 million in subsea and terrestrial connectivity across the Middle East by 2030, expanding capacity and strengthening regional data flows.
 
-## What the Evidence Shows
-
-
 ## Sources
 
 - [Microsoft strengthens its commitment to the Middle East by investing in technology, digital resilience, and people - The Official Microsoft Blog](https://blogs.microsoft.com/on-the-issues/2026/09/23/microsoft-strengthens-its-commitment-to-the-middle-east-by-investing-in-technology-digital-resilience-and-people/)
 - [Microsoft Commits More Than $10B To Middle East Through 2030 – What Investors Need To Know - Yahoo Finance](https://finance.yahoo.com/technology/ai/articles/microsoft-commits-more-10b-middle-174050728.html)
 - [Microsoft Announces Middle East Framework With AI and Cloud Buildout - Unite.AI](https://www.unite.ai/microsoft-announces-middle-east-framework-with-ai-and-cloud-buildout/)
 - [Microsoft Plans More Than $10 Billion in Middle East Investment - securities.io](https://www.securities.io/microsoft-plans-more-than-10-billion-in-middle-east-investment/)
-
