@@ -15,6 +15,8 @@ function runArticle(body,evidence){
   fs.writeFileSync(path.join(tmp,'content','articles','fixture.md'),'---\ntitle: "Amazon Bedrock AgentCore migration"\n---\n'+body+'\n');
   fs.writeFileSync(path.join(tmp,'data','article-brief.json'),JSON.stringify({
     brief:{title:'Amazon Bedrock AgentCore migration',summary:'Amazon Bedrock AgentCore migration'},
+    storyFactMap:{temporal:{eventDate:'2026-09-23T00:00:00.000Z',eventDateSource:'metadata',sources:[{sourceId:'S1',sourceDate:'2026-09-18T12:00:00.000Z',temporalStatus:'pre-event'}]}},
+    temporal:{eventDate:'2026-09-23T00:00:00.000Z',eventDateSource:'metadata',sources:[{sourceId:'S1',sourceDate:'2026-09-18T12:00:00.000Z',temporalStatus:'pre-event'}]},
     grounding:{sources:[{title:'AWS',url:'https://aws.amazon.com/example',passages:evidence}]}
   }));
   const r=spawnSync(process.execPath,['scripts/verify-article-claims-smart.mjs'],{cwd:tmp,encoding:'utf8'});
@@ -56,6 +58,24 @@ const cases=[
     body:'The migration required no changes to the core agent logic. Teams should review their own infrastructure requirements and IAM permissions carefully before moving.',
     evidence:['The migration required no changes to the core agent logic.'],
     check:r=>r.code===0&&r.report.claims.length===1&&r.report.editorial.length===1
+  },
+  {
+    name:'stale-post-event-prediction',
+    body:'Meta is expected to unveil Phoenix at Connect 2026.',
+    evidence:['Meta was expected to unveil Phoenix at its September 23 event.'],
+    check:r=>r.code!==0&&r.report.claims.some(x=>x.classification==='stale_post_event'&&x.temporalWarning?.type==='stale-post-event')
+  },
+  {
+    name:'confirmed-post-event-language-is-not-stale',
+    body:'Meta announced its new glasses at Connect 2026.',
+    evidence:['Meta announced its new glasses at its September 23 event.'],
+    check:r=>r.code===0&&r.report.claims.some(x=>x.status==='verified'&&x.classification!=='stale_post_event')
+  },
+  {
+    name:'future-availability-is-not-stale',
+    body:'Meta VR Glasses will ship in Spring 2027.',
+    evidence:['Meta announced Meta VR Glasses, with availability planned for Spring 2027.'],
+    check:r=>r.code===0&&r.report.claims.some(x=>x.classification!=='stale_post_event')
   },
   {
     name:'genuine-unsupported-still-blocks',
