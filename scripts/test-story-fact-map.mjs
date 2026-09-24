@@ -3,6 +3,7 @@ import { buildEditorialEvidenceBrief } from './editorial-evidence-brief.mjs';
 import { deriveEvidenceArticleBlueprint } from './evidence-article-blueprint.mjs';
 import { scoreEvidenceCoverage } from './evidence-coverage.mjs';
 import { buildAuthoritativeEvidencePack, validateAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
+import { deriveTemporalContext, temporalStatus } from './story-fact-map.mjs';
 
 
 const temporal=deriveTemporalContext({
