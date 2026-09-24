@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-24T02:16:26.811Z",
-  "runId": "35946185235",
-  "articlePath": "content/articles/microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience.md",
-  "provider": "Groq",
-  "previousTitle": "Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
-  "newTitle": "Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
-  "briefTitle": "Microsoft strengthens its commitment to the Middle East by investing in technology, digital resilience, and people - The Official Microsoft Blog",
-  "evidenceClaims": 23,
+  "generatedAt": "2026-09-24T03:28:58.583Z",
+  "runId": "35951249760",
+  "articlePath": "content/articles/meta-s-new-vr-glasses-are-a-glass-style-headset-at-1-300.md",
+  "provider": "Cohere",
+  "previousTitle": "Meta’s New VR Glasses Are a Glass‑Style Headset at $1,300",
+  "newTitle": "Meta’s New VR Glasses Are a Glass‑Style Headset at $1,300",
+  "briefTitle": "Meta’s next VR device isn’t a headset — it’s glasses",
+  "evidenceClaims": 22,
   "failedClaims": 8,
-  "evidenceChars": 7946,
+  "evidenceChars": 7699,
   "mode": "atomic-sentence-repair-v12-surgical-fingerprint-rewrite-narrow-delete-isolated-recovery",
   "repairOrder": [
     "rewrite",
@@ -20,13 +20,13 @@
   "recoveryWaitMs": 15000,
   "providerAttempts": 4,
   "appliedRepairs": 8,
-  "rewriteOrNarrowRepairs": 6,
-  "deletedSentences": 2,
+  "rewriteOrNarrowRepairs": 3,
+  "deletedSentences": 5,
   "wordCountValidation": {
     "before": 520,
-    "after": 464,
+    "after": 383,
     "minimum": 425,
     "depthMode": "bounded",
-    "preservedFloor": true
+    "preservedFloor": false
   }
 }

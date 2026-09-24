@@ -1,6 +1,6 @@
 {
   "version": 7,
-  "generatedAt": "2026-09-24T02:14:34.685Z",
+  "generatedAt": "2026-09-24T03:27:34.682Z",
   "minimumStrongSources": 2,
   "minimumStrongPublisherFamilies": 2,
   "minimumStrongDomains": 2,
@@ -40,7 +40,7 @@
           "topicOverlap": 6
         },
         {
-          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/meta-8217-mark-zuckerberg-rejects-135500874.html",
+          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/j-p-morgan-keeps-meta-142107017.html",
           "domain": "finance.yahoo.com",
           "publisherFamily": "yahoo.com",
           "resolvedFrom": "article-link",
@@ -48,7 +48,7 @@
           "reason": "unreachable-or-non-html"
         },
         {
-          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/j-p-morgan-keeps-meta-142107017.html",
+          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/meta-8217-mark-zuckerberg-rejects-135500874.html",
           "domain": "finance.yahoo.com",
           "publisherFamily": "yahoo.com",
           "resolvedFrom": "article-link",
@@ -168,7 +168,7 @@
       "title": "Muse is coming to Meta smart glasses",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 8,
+      "validSourceCount": 7,
       "independentPublisherCount": 7,
       "independentPublisherFamilies": [
         "theverge.com",
@@ -201,6 +201,14 @@
           "canonical": "https://www.theverge.com/tech/999673/meta-connect-2026-muse-glasses-features",
           "bodyChars": 4063,
           "topicOverlap": 5
+        },
+        {
+          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/meta-platforms-unveils-muse-ai-030205273.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         },
         {
           "suppliedUrl": "https://www.androidauthority.com/meta-smart-glasses-muse-agent-leak-3714611/",
@@ -268,19 +276,6 @@
           "topicOverlap": 6
         },
         {
-          "suppliedUrl": "https://mashable.com/tech/muse-charm-reveal-meta-connect-2026",
-          "domain": "mashable.com",
-          "publisherFamily": "mashable.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://mashable.com/tech/muse-charm-reveal-meta-connect-2026",
-          "pageTitle": "Meta to release Muse Charm, a Tamagotchi-like device for the Muse AI agent | Mashable",
-          "canonical": "https://mashable.com/tech/muse-charm-reveal-meta-connect-2026",
-          "bodyChars": 2345,
-          "topicOverlap": 9
-        },
-        {
           "suppliedUrl": "https://www.uploadvr.com/meta-muse-spark-ai-model-replaces-llama-on-smart-glasses/",
           "domain": "uploadvr.com",
           "publisherFamily": "uploadvr.com",
@@ -329,64 +324,16 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
-      "title": "OpenAI’s Altman and Anthropic’s Amodei address UN security council - The Guardian",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "theguardian.com",
-        "newscord.org"
-      ],
-      "independentDomains": [
-        "theguardian.com",
-        "newscord.org"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
-          "domain": "theguardian.com",
-          "publisherFamily": "theguardian.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
-          "pageTitle": "OpenAI’s Altman and Anthropic’s Amodei address UN security council | United Nations | The Guardian",
-          "canonical": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
-          "bodyChars": 4134,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://newscord.org/article/guterres-warns-rogue-artificial-agents-at-un-general-assembly-as-nyc-imposes-no--Story_20260922_Guterreswelcomesworlb20d5af5",
-          "domain": "newscord.org",
-          "publisherFamily": "newscord.org",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://newscord.org/article/guterres-warns-rogue-artificial-agents-at-un-general-assembly-as-nyc-imposes-no--Story_20260922_Guterreswelcomesworlb20d5af5",
-          "pageTitle": "Dario Amodei, Sam Altman Urge UN Security Council Oversight To Prevent AI Risk: 69 outlets compared | NewsCord",
-          "canonical": "https://newscord.org/article/guterres-warns-rogue-artificial-agents-at-un-general-assembly-as-nyc-imposes-no--Story_20260922_Guterreswelcomesworlb20d5af5",
-          "bodyChars": 3677,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPZXNlX0p5OU5zek5FTU5udGNJanJWYnpMYlpXRFNodEdUb0VJUlZ6d3JFZHZmeHRiYi0yYU1qaGx5VlppUGR1NS04S2NJOGNyQy1vUTFlNlFLVWRSYlZtRjZpd1FDYmZ5Mk0yRGFCZzRIZmtsNGpGQTRSUG1RT2lETFRRcDFFWWlWX3plQlVZVTVuaTZLVHlBZ3k4RE85M3BFYUJzOGxNTmpuV04zREVfMlFINXV1MmhYd251NVQxUmZwZEtpMDFNbE55aERyUk1ES0tGcUU2X2xjaXdhcS1JWmtNcy1yNkF4NldYc1Q2ZVV1MUR3TjNCcWhuYzhpcE44Q013Y0JUTl9NSUktVm13M0c2Nzk5eEE3TXBPR2ZLNWVsSVZ1UlR6bA?oc=5",
-      "title": "Bitcoin and ethereum prices today, Wednesday, September 23, 2026: Crypto prices open near 8-month highs. Is the crypto winter over? - Yahoo Finance",
+      "title": "Bitcoin and ethereum prices today, Wednesday, September 23, 2026: Crypto prices open near 8-month highs. Is the crypto winter over? - finance.yahoo.com",
       "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "decrypt.co",
         "cryptonews.com"
       ],
       "independentDomains": [
-        "decrypt.co",
         "cryptonews.com"
       ],
       "sources": [
@@ -397,19 +344,6 @@
           "resolvedFrom": "research-story-link",
           "ok": false,
           "reason": "unreachable-or-non-html"
-        },
-        {
-          "suppliedUrl": "https://decrypt.co/357044/xrp-leads-crypto-losses-ethereum-dogecoin-crater-bitcoin",
-          "domain": "decrypt.co",
-          "publisherFamily": "decrypt.co",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://decrypt.co/357044/xrp-leads-crypto-losses-ethereum-dogecoin-crater-bitcoin",
-          "pageTitle": "XRP Leads Crypto Losses as Ethereum, Dogecoin Prices Crater Alongside Bitcoin - Decrypt",
-          "canonical": "https://decrypt.co/357044/xrp-leads-crypto-losses-ethereum-dogecoin-crater-bitcoin",
-          "bodyChars": 3366,
-          "topicOverlap": 10
         },
         {
           "suppliedUrl": "https://cryptonews.com/cryptocurrency/best-crypto-to-buy/",
@@ -437,23 +371,23 @@
       "independentPublisherCount": 8,
       "independentPublisherFamilies": [
         "theverge.com",
+        "biggo.com",
         "vogue.com",
         "businessinsider.com",
         "roadtovr.com",
         "androidcentral.com",
         "cryptobriefing.com",
-        "engadget.com",
-        "pcmag.com"
+        "engadget.com"
       ],
       "independentDomains": [
         "theverge.com",
+        "finance.biggo.com",
         "vogue.com",
         "businessinsider.com",
         "roadtovr.com",
         "androidcentral.com",
         "cryptobriefing.com",
-        "engadget.com",
-        "au.pcmag.com"
+        "engadget.com"
       ],
       "sources": [
         {
@@ -468,6 +402,19 @@
           "canonical": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
           "bodyChars": 10554,
           "topicOverlap": 6
+        },
+        {
+          "suppliedUrl": "https://finance.biggo.com/news/a622467c-c407-4e79-bb4b-785b1d602f98",
+          "domain": "finance.biggo.com",
+          "publisherFamily": "biggo.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://finance.biggo.com/news/a622467c-c407-4e79-bb4b-785b1d602f98",
+          "pageTitle": "Meta Connect 2026 Kicks Off: Camera-Free Smart Glasses and MR Headset Take Center Stage — BigGo Finance",
+          "canonical": "https://finance.biggo.com/news/a622467c-c407-4e79-bb4b-785b1d602f98",
+          "bodyChars": 7455,
+          "topicOverlap": 14
         },
         {
           "suppliedUrl": "https://www.vogue.com/article/metas-new-smart-glasses-ditch-the-camera-amid-privacy-backlash",
@@ -519,7 +466,7 @@
           "pageTitle": "Meta's next smart glasses could solve a big privacy concern by ditching the camera | Android Central",
           "canonical": "https://www.androidcentral.com/wearables/meta-is-preparing-to-launch-new-camera-less-smart-glasses",
           "bodyChars": 3534,
-          "topicOverlap": 9
+          "topicOverlap": 11
         },
         {
           "suppliedUrl": "https://cryptobriefing.com/meta-camera-free-ray-ban-audio-glasses/",
@@ -546,19 +493,6 @@
           "canonical": "https://www.engadget.com/2267212/meta-announces-ray-ban-meta-audio-its-first-smart-glasses-without-a-camera/",
           "bodyChars": 2646,
           "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://au.pcmag.com/smart-glasses/120058/metas-new-audio-smart-glasses-ditch-the-camera-to-avoid-creep-complaints",
-          "domain": "au.pcmag.com",
-          "publisherFamily": "pcmag.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://au.pcmag.com/smart-glasses/120058/metas-new-audio-smart-glasses-ditch-the-camera-to-avoid-creep-complaints",
-          "pageTitle": "Meta's New Audio Smart Glasses Ditch the Camera to Avoid Creep Complaints",
-          "canonical": "https://au.pcmag.com/smart-glasses/120058/metas-new-audio-smart-glasses-ditch-the-camera-to-avoid-creep-complaints",
-          "bodyChars": 3802,
-          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -566,7 +500,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNd3lUeGI3bUpUNE9hM19CRzJKWUFGUkVscGJfVGVLQVI5R05FNm9hQm11M3lJUU03NnZYcjZtXzNoQW5sRlROSkMwaDMtLUV1NzlxczNTX0pBazB2RUtNbncwek9KWTk4bDA0OXNYbC1aVW1OUUliVUp2eXF1WUV0ajg2UE9Bd2EzdTFEYjhMaEFJNHNleGY0?oc=5",
-      "title": "BigBear.ai vs. IONQ: Comparing Revenue Trends Between an Artificial Intelligence Upstart and a Quantum Computer Company - Yahoo Finance",
+      "title": "BigBear.ai vs. IONQ: Comparing Revenue Trends Between an Artificial Intelligence Upstart and a Quantum Computer Company - finance.yahoo.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -712,46 +646,39 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOR1M0bU5sQUtqS3ZRcTMwcUFFbUU1ek5jbTNoX2NOZ2NudW0yc3VoOVRsS1BaMkplemp1YVBBVHlhdmZxclA1UXlHNmpLVFZ0WHNJRlRibE9xRmRuSDFfQjgxWHRLZnVmZ3FGeE50RDBjTDdCQW5qRVdtdDZLSW8zQ1FSdXJSU2dZM2dHTGIwLU9Sdw?oc=5",
-      "title": "Trump-Approved TV Pool Makes Major Security Blunder At UN - The Daily Beast",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ2JLWjd6cEpraUFiTlhaNDVSZFMyQkt1SF9wYnc2RWZKaGxmVS1jOXJxVVBWZVNrV2lMRk8wdnlOT2R3bnRXVjFvUHBMaWh6UWJCNGNHVzhUYXBvWXpwNkxwU0lrR2tVS1pPaUJkRnRuSnNJMy1SVXc5Z3pLQlJ3Y1BUTDBEM1F4eTJuTWtZZU1GaHhTd1VuLTNuaFZMZEpF?oc=5",
+      "title": "Ethereum vs. Chainlink: Which Will Benefit More From Tokenization? - finance.yahoo.com",
       "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "thedailybeast.com",
-        "yahoo.com"
+        "247wallst.com"
       ],
       "independentDomains": [
-        "thedailybeast.com",
-        "yahoo.com"
+        "247wallst.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.thedailybeast.com/trump-approved-tv-pool-makes-major-security-blunder-at-un/",
-          "domain": "thedailybeast.com",
-          "publisherFamily": "thedailybeast.com",
+          "suppliedUrl": "https://finance.yahoo.com/markets/crypto/articles/ethereum-vs-chainlink-benefit-more-222503207.html",
+          "domain": "finance.yahoo.com",
+          "publisherFamily": "yahoo.com",
           "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.thedailybeast.com/trump-approved-tv-pool-makes-major-security-blunder-at-un/",
-          "pageTitle": "Trump-Approved TV Pool Makes Major Security Blunder At UN",
-          "canonical": "https://www.thedailybeast.com/trump-approved-tv-pool-makes-major-security-blunder-at-un/",
-          "bodyChars": 3621,
-          "topicOverlap": 7
+          "ok": false,
+          "reason": "unreachable-or-non-html"
         },
         {
-          "suppliedUrl": "https://www.yahoo.com/news/politics/articles/why-pathological-trump-just-made-003058625.html",
-          "domain": "yahoo.com",
-          "publisherFamily": "yahoo.com",
+          "suppliedUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/23/ethereum-vs-chainlink-which-will-benefit-more-from-tokenization/",
+          "domain": "247wallst.com",
+          "publisherFamily": "247wallst.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.yahoo.com/news/politics/articles/why-pathological-trump-just-made-003058625.html",
-          "pageTitle": "Why Pathological Trump Just Made a Major Blunder: Political Guru",
-          "canonical": "https://www.thedailybeast.com/why-pathological-trump-just-made-a-major-blunder-political-guru/",
-          "bodyChars": 4915,
-          "topicOverlap": 8
+          "finalUrl": "https://247wallst.com/investing/cryptocurrency/2026/09/23/ethereum-vs-chainlink-which-will-benefit-more-from-tokenization/",
+          "pageTitle": "Ethereum vs. Chainlink: Which Will Benefit More From Tokenization? - 24/7 Wall St.",
+          "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/23/ethereum-vs-chainlink-which-will-benefit-more-from-tokenization/",
+          "bodyChars": 8067,
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -762,14 +689,16 @@
       "title": "Meta is trying VR glasses (again), this time with more IMAX",
       "status": "pass",
       "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
+      "validSourceCount": 3,
+      "independentPublisherCount": 3,
       "independentPublisherFamilies": [
         "techcrunch.com",
+        "yahoo.com",
         "ign.com"
       ],
       "independentDomains": [
         "techcrunch.com",
+        "tech.yahoo.com",
         "ign.com"
       ],
       "sources": [
@@ -783,7 +712,20 @@
           "finalUrl": "https://techcrunch.com/2026/09/23/meta-is-trying-vr-glasses-again-this-time-with-more-imax/",
           "pageTitle": "Meta is trying VR glasses (again), this time with more IMAX | TechCrunch",
           "canonical": "https://techcrunch.com/2026/09/23/meta-is-trying-vr-glasses-again-this-time-with-more-imax/",
-          "bodyChars": 4468,
+          "bodyChars": 4358,
+          "topicOverlap": 5
+        },
+        {
+          "suppliedUrl": "https://tech.yahoo.com/ar-vr/articles/meta-trying-vr-glasses-again-234735057.html",
+          "domain": "tech.yahoo.com",
+          "publisherFamily": "yahoo.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://tech.yahoo.com/ar-vr/articles/meta-trying-vr-glasses-again-234735057.html",
+          "pageTitle": "Meta is trying VR glasses (again), this time with more IMAX",
+          "canonical": "https://tech.yahoo.com/ar-vr/articles/meta-trying-vr-glasses-again-234735057.html",
+          "bodyChars": 5103,
           "topicOverlap": 5
         },
         {
@@ -812,11 +754,11 @@
       "independentPublisherCount": 2,
       "independentPublisherFamilies": [
         "joplinglobe.com",
-        "stocktitan.net"
+        "itemonline.com"
       ],
       "independentDomains": [
         "joplinglobe.com",
-        "stocktitan.net"
+        "itemonline.com"
       ],
       "sources": [
         {
@@ -837,33 +779,17 @@
           "domain": "itemonline.com",
           "publisherFamily": "itemonline.com",
           "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        },
-        {
-          "suppliedUrl": "https://finance.yahoo.com/technology/ai/articles/faraday-future-unveil-nine-ai-005700326.html",
-          "domain": "finance.yahoo.com",
-          "publisherFamily": "yahoo.com",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        },
-        {
-          "suppliedUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-e4rqh4g3jfh4.html",
-          "domain": "stocktitan.net",
-          "publisherFamily": "stocktitan.net",
-          "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-e4rqh4g3jfh4.html",
-          "pageTitle": "Faraday Future launches 9 robots from $9,990 | FFAI Stock News",
-          "canonical": "https://www.stocktitan.net/news/FFAI/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-e4rqh4g3jfh4.html",
-          "bodyChars": 11516,
+          "finalUrl": "https://www.itemonline.com/faraday-future-founder-and-global-ceo-yt-jia-weekly-investor-update-shares-details-from-ff/article_38641563-8a4d-5d38-a16d-3a50d89b02fc.html",
+          "pageTitle": "Faraday Future Founder and Global CEO YT Jia Weekly Investor Update: Shares Details from FF’s 919 FF EAI Robotics “Four-Core Full-Stack AI” Ecosystem New Product Series Launch; Four Industry Productivity Solutions, Nine New EAI Devices Unveiled | | itemonline.com",
+          "canonical": "https://www.businesswire.com/news/home/20260920309558/en/",
+          "bodyChars": 1660,
           "topicOverlap": 24
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBqVGZCZ3prNmhaQXp3bkxTeWlRWlpjYUkxV2V0UWJGTy01dTFZQ2NoLXlXQWtVQ3lySFJsZmNuMDRWMWZQbmhfUGpqN3VsbFlPZ1ltNl9HQQ?oc=5",
@@ -907,21 +833,21 @@
         "techcrunch.com",
         "mashable.com",
         "businessinsider.com",
-        "firstpost.com",
-        "manilatimes.net",
-        "grafa.com",
-        "com.pk",
-        "co.kr"
+        "newscord.org",
+        "france24.com",
+        "bloomberg.com",
+        "wired.com",
+        "biggo.com"
       ],
       "independentDomains": [
         "techcrunch.com",
         "mashable.com",
         "businessinsider.com",
-        "firstpost.com",
-        "manilatimes.net",
-        "grafa.com",
-        "thenews.com.pk",
-        "digitaltoday.co.kr"
+        "newscord.org",
+        "france24.com",
+        "bloomberg.com",
+        "wired.com",
+        "finance.biggo.com"
       ],
       "sources": [
         {
@@ -964,68 +890,68 @@
           "topicOverlap": 8
         },
         {
-          "suppliedUrl": "https://www.firstpost.com/tech/no-more-perv-glasses-meta-launches-camera-free-ray-ban-meta-audio-glasses-14047966.html",
-          "domain": "firstpost.com",
-          "publisherFamily": "firstpost.com",
+          "suppliedUrl": "https://newscord.org/article/meta-unveils-ray-ban-meta-audio-camera-free-ai-glasses-with-muse-at-connect-2026--Story_20260923_Metaintroducescamera85b6c150",
+          "domain": "newscord.org",
+          "publisherFamily": "newscord.org",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.firstpost.com/tech/no-more-perv-glasses-meta-launches-camera-free-ray-ban-meta-audio-glasses-14047966.html",
-          "pageTitle": "No more ‘perv glasses’: Meta launches camera-free Ray-Ban Meta Audio glasses",
-          "canonical": "https://www.firstpost.com/tech/no-more-perv-glasses-meta-launches-camera-free-ray-ban-meta-audio-glasses-14047966.html",
-          "bodyChars": 4236,
+          "finalUrl": "https://newscord.org/article/meta-unveils-ray-ban-meta-audio-camera-free-ai-glasses-with-muse-at-connect-2026--Story_20260923_Metaintroducescamera85b6c150",
+          "pageTitle": "Meta Unveils Ray-Ban Meta Audio Camera-Free AI Glasses With Muse at Connect 2026: how 15 outlets framed it | NewsCord",
+          "canonical": "https://newscord.org/article/meta-unveils-ray-ban-meta-audio-camera-free-ai-glasses-with-muse-at-connect-2026--Story_20260923_Metaintroducescamera85b6c150",
+          "bodyChars": 3855,
+          "topicOverlap": 12
+        },
+        {
+          "suppliedUrl": "https://www.france24.com/en/live-news/20260924-meta-launches-camera-free-ai-glasses-amid-privacy-pushback",
+          "domain": "france24.com",
+          "publisherFamily": "france24.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.france24.com/en/live-news/20260924-meta-launches-camera-free-ai-glasses-amid-privacy-pushback",
+          "pageTitle": "Meta launches camera-free AI glasses amid privacy pushback",
+          "canonical": "https://www.france24.com/en/live-news/20260924-meta-launches-camera-free-ai-glasses-amid-privacy-pushback",
+          "bodyChars": 4846,
           "topicOverlap": 8
         },
         {
-          "suppliedUrl": "https://www.manilatimes.net/2026/09/24/business/science-technology/meta-launches-camera-free-ai-glasses-amid-privacy-pushback/2431833",
-          "domain": "manilatimes.net",
-          "publisherFamily": "manilatimes.net",
+          "suppliedUrl": "https://www.bloomberg.com/news/articles/2026-09-23/meta-debuts-349-camera-free-ray-bans-and-brings-muse-to-glasses",
+          "domain": "bloomberg.com",
+          "publisherFamily": "bloomberg.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.manilatimes.net/2026/09/24/business/science-technology/meta-launches-camera-free-ai-glasses-amid-privacy-pushback/2431833",
-          "pageTitle": "\"Meta launches camera-free AI glasses amid privacy pushback\" | The Manila Times",
-          "canonical": "",
-          "bodyChars": 4289,
-          "topicOverlap": 10
+          "finalUrl": "https://www.bloomberg.com/news/articles/2026-09-23/meta-debuts-349-camera-free-ray-bans-and-brings-muse-to-glasses",
+          "pageTitle": "Meta Debuts $349 Camera-Free Ray-Bans and Brings Muse to Glasses - Bloomberg",
+          "canonical": "https://www.bloomberg.com/news/articles/2026-09-23/meta-debuts-349-camera-free-ray-bans-and-brings-muse-to-glasses",
+          "bodyChars": 635,
+          "topicOverlap": 9
         },
         {
-          "suppliedUrl": "https://grafa.com/en/news/united-states/meta-expected-to-launch-camera-free-ai-glasses",
-          "domain": "grafa.com",
-          "publisherFamily": "grafa.com",
+          "suppliedUrl": "https://www.wired.com/story/metas-answer-to-the-meta-creep-camera-free-smart-glasses/",
+          "domain": "wired.com",
+          "publisherFamily": "wired.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://grafa.com/en/news/united-states/meta-expected-to-launch-camera-free-ai-glasses",
-          "pageTitle": "Meta expected to launch camera-free AI glasses | Grafa",
-          "canonical": "https://grafa.com/en/news/united-states/meta-expected-to-launch-camera-free-ai-glasses",
-          "bodyChars": 2330,
-          "topicOverlap": 7
+          "finalUrl": "https://www.wired.com/story/metas-answer-to-the-meta-creep-camera-free-smart-glasses/",
+          "pageTitle": "Meta VR Glasses, Ray-Ban Meta Audio, Ray-Ban Meta Gen 3: Specs, Features, Prices | WIRED",
+          "canonical": "https://www.wired.com/story/metas-answer-to-the-meta-creep-camera-free-smart-glasses/",
+          "bodyChars": 6285,
+          "topicOverlap": 8
         },
         {
-          "suppliedUrl": "https://www.thenews.com.pk/latest/1417377-meta-unveils-camera-free-smart-glasses-amid-growing-privacy-backlash-and-scrutiny",
-          "domain": "thenews.com.pk",
-          "publisherFamily": "com.pk",
+          "suppliedUrl": "https://finance.biggo.com/news/75e8a7d8-08a9-4ee7-910a-335e00b04c2d",
+          "domain": "finance.biggo.com",
+          "publisherFamily": "biggo.com",
           "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.thenews.com.pk/latest/1417377-meta-unveils-camera-free-smart-glasses-amid-growing-privacy-backlash-and-scrutiny",
-          "pageTitle": "Meta unveils camera-free smart glasses amid growing privacy backlash and scrutiny",
-          "canonical": "https://www.thenews.com.pk/latest/1417377-meta-unveils-camera-free-smart-glasses-amid-growing-privacy-backlash-and-scrutiny",
-          "bodyChars": 1994,
-          "topicOverlap": 11
-        },
-        {
-          "suppliedUrl": "https://www.digitaltoday.co.kr/en/view/107359/meta-unveils-camera-free-ai-glasses-amid-privacy-controversy-starting-at-349-dollars",
-          "domain": "digitaltoday.co.kr",
-          "publisherFamily": "co.kr",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.digitaltoday.co.kr/en/view/107359/meta-unveils-camera-free-ai-glasses-amid-privacy-controversy-starting-at-349-dollars",
-          "pageTitle": "Meta unveils camera-free AI glasses amid privacy controversy, starting at $349",
-          "canonical": "https://www.digitaltoday.co.kr/en/view/107359/meta-unveils-camera-free-ai-glasses-amid-privacy-controversy-starting-at-349-dollars",
-          "bodyChars": 2086,
+          "finalUrl": "https://finance.biggo.com/news/75e8a7d8-08a9-4ee7-910a-335e00b04c2d",
+          "pageTitle": "Meta Unveils $1,299 VR Glasses and Camera-Free Ray-Bans at Connect — BigGo Finance",
+          "canonical": "https://finance.biggo.com/news/75e8a7d8-08a9-4ee7-910a-335e00b04c2d",
+          "bodyChars": 9318,
           "topicOverlap": 9
         }
       ],
@@ -1044,6 +970,83 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcjhqREtNNFBtclpROWtCX25UaDE4UVdZUVVLQTVRU2lGaTl5N2hEZm1OcWJrZDBNbktHNkk2ekJIU2dTWEtOWXRJYVp4VGlYYV9GT0h2N2xZTFliSXQ2QnVoRnJhbWM0NDhVazlBazl4Z3FIb2E4bWhKUzNJNjZBbm8ya3NnM0pyZlVBazZzbjl3blZQUGRLSVk0MV85SjdtVlVWUjVoaF9uWFhmNlBURHFWZ3dZYkFQaEEybnlDLUU?oc=5",
+      "title": "10 Things That Separate What AI Does Well From What Human Intelligence Does Better - Augusta Free Press",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "augustafreepress.com"
+      ],
+      "independentDomains": [
+        "augustafreepress.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://augustafreepress.com/commercial/10-things-that-separate-what-ai-does-well-from-what-human-intelligence-does-better/",
+          "domain": "augustafreepress.com",
+          "publisherFamily": "augustafreepress.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://augustafreepress.com/commercial/10-things-that-separate-what-ai-does-well-from-what-human-intelligence-does-better/",
+          "pageTitle": "10 Things That Separate What AI Does Well From What Human Intelligence Does Better",
+          "canonical": "https://augustafreepress.com/commercial/10-things-that-separate-what-ai-does-well-from-what-human-intelligence-does-better/",
+          "bodyChars": 7456,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE40TGtvSHVVUE1jRnZNbWU2TG1lNmllWWc5NDhDLWVSenItS0JyMGcxY2hwaEVjLVZZeWZxNTFTLUhWZmwxSG9LM0U0VVViWXNyaHN3WFhkYnZwVlk2OFhHcExhOUViMzRHWml0RW0xUXk5aXNFMkppenMzUE9QRFk?oc=5",
+      "title": "OpenAI’s Altman and Anthropic’s Amodei address UN security council - theguardian.com",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "theguardian.com",
+        "newscord.org"
+      ],
+      "independentDomains": [
+        "theguardian.com",
+        "newscord.org"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
+          "domain": "theguardian.com",
+          "publisherFamily": "theguardian.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
+          "pageTitle": "OpenAI’s Altman and Anthropic’s Amodei address UN security council | United Nations | The Guardian",
+          "canonical": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
+          "bodyChars": 4134,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://newscord.org/article/guterres-warns-rogue-artificial-agents-at-un-general-assembly-as-nyc-imposes-no--Story_20260922_Guterreswelcomesworlb20d5af5",
+          "domain": "newscord.org",
+          "publisherFamily": "newscord.org",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://newscord.org/article/guterres-warns-rogue-artificial-agents-at-un-general-assembly-as-nyc-imposes-no--Story_20260922_Guterreswelcomesworlb20d5af5",
+          "pageTitle": "Antonio Guterres Urges Stronger UN AI Safeguards as Donald Trump Rejects Global Control: how 74 outlets framed it | NewsCord",
+          "canonical": "https://newscord.org/article/guterres-warns-rogue-artificial-agents-at-un-general-assembly-as-nyc-imposes-no--Story_20260922_Guterreswelcomesworlb20d5af5",
+          "bodyChars": 4617,
+          "topicOverlap": 8
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxORnNIMVpJOUhibXRiSV8wSnBkWTdCTUx3TWk2d1QxX1Q3ck1ubWtJVmVha1Buci1xTlBnNE1FcEhnSlNLVE5kb0ZpbjNmTUlGbUk5aVNBc3FCcnJocTJMT3ZQdmFtelo3dldhOWEyeFU2VUtSOXNKdURXT29mY1BYQ1I4b2FObko2eXJJTFFJeWxwdU9taV9nZmVCaw?oc=5",
@@ -1139,7 +1142,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNdmdMNjd3d1lJbS1NSThrdElRZ19DMlhiTWZxVkV6bXZINXptck9nTGluS2RsRXBmMlZsbWgxclpvWG5XTzJmNUtIMXNJV2UzMkY4TVJ0Tk9rb0ZjdEliOElGNWswVHF5ZnEyT1hIQkZmTWVwUDJOM0piTHA4eG5tMWJYbmNVaGNsQmpGZTkwb3dqYTZiNUc1dmxBcTI?oc=5",
-      "title": "NYSE Teams Up With Blockchain.com to Offer Tokenized Stocks - Yahoo Finance",
+      "title": "NYSE Teams Up With Blockchain.com to Offer Tokenized Stocks - finance.yahoo.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -1157,7 +1160,7 @@
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOX3BIQ1VLZG1pVXRhamp5czg4VUt1UDZ2ZXQxUzNGLWxyd1RmdTM5ZVhMZF9LaUhodVhkeXRCcXhHRUJmVk1yME9BUzFuaUFjaVFCSUpSOTBEUFdPME5qY2V2SGpqSUtzSlZ2bkZ4WlNDTHhfa0hYMl9QVHdETVRhZi0yaTNhdlRhLU9VZ2ZoV0d4bkpRTUtldkx3ZV8xcklJMWd4cF9QRjBEd2hySnJrQXZxUTJSYk9IRWdCdFRBa0c3RGNGQlRJN3hsd1dxRlZCcjJmMGtwUQ?oc=5",
@@ -1384,16 +1387,22 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWDBXSVlKYjVLV1hzNnphbmpRampOMGcxUDBCVDdfanV2QmNUWk5fTW5PMFJ1SzB1VUZUQ25GUG55YXgycE13eU5jSlNiUGk5MUZTSFhHQU9pSlJXX1g3Uk82QXc4YktHdVUycnF4OEplZWRyY2txSVZEQTBHMHU3VHhHSW9NUW9HdnUwelBYdHFFSWlhWnJyUVdTUWI4dE5IODNGY2NDZC0?oc=5",
-      "title": "US diplomats told to say ‘super intelligence’ — not ‘artificial intelligence’ — after Trump’s call - apnews.com",
+      "title": "US diplomats told to say ‘super intelligence’ — not ‘artificial intelligence’ — after Trump’s call - AP News",
       "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
+      "evidenceLevel": "strong",
+      "validSourceCount": 4,
+      "independentPublisherCount": 4,
       "independentPublisherFamilies": [
-        "news4jax.com"
+        "news4jax.com",
+        "couriernews.com",
+        "tribdem.com",
+        "stcatharinesstandard.ca"
       ],
       "independentDomains": [
-        "news4jax.com"
+        "news4jax.com",
+        "couriernews.com",
+        "tribdem.com",
+        "stcatharinesstandard.ca"
       ],
       "sources": [
         {
@@ -1408,36 +1417,44 @@
           "canonical": "https://www.news4jax.com/news/politics/2026/09/23/us-diplomats-told-to-use-term-super-intelligence-not-artificial-intelligence-after-trumps-call/",
           "bodyChars": 3935,
           "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeDY3NVVfOWVmSUQzeGNOVzNINFZ5T014ZVVYV1RkZGVYdXdNMlZodnF6MUY5VUdnakx1YmFBbl93WW42alY5RDluc0FrTlgyMU8xN3pXMC1YckxKenhPN1R2c0d3Y003ZllNaWhsUTVRdTJYaF9hbS1CMWRPMW9tenlHdHYwSzJwTUVHMnNXeDNOaVhUbXAzS2tZc2ZUc2FjUUlMcVhaeTVoUVpLNV9sNk53dFc4UdIBuwFBVV95cUxQRFFnS1M5WENMU2FQMVpQczNnQng4bXJCNnkybEVYTkQyWnhVYm8xY1hwX2hJNlVsOVlLSUdleUtIUUUwT1VhVHFNUFdvcERpbHhoY2F1SmgteTVxZHNIQU91am52dFF6VVIyTGhuTTdYRjFNTEhoNnJnYjQ1dDJHVXpEVk5MRkJnWWF6dVNqWlIzdUFIaXhfSnhDMUhEVGZCbUJkeFh5cmxrd2Z0QWZEY0ZCZ1AwMEZUNWdN?oc=5",
-      "title": "AI firm leaders tell UN Security Council that it could be a risk to all humanity - PBS",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "pbs.org"
-      ],
-      "independentDomains": [
-        "pbs.org"
-      ],
-      "sources": [
+        },
         {
-          "suppliedUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
-          "domain": "pbs.org",
-          "publisherFamily": "pbs.org",
-          "resolvedFrom": "research-story-link",
+          "suppliedUrl": "https://www.couriernews.com/news/business/us-diplomats-told-to-say-super-intelligence-not-artificial-intelligence-after-trumps-call/article_2149bbe9-6bf3-5d7a-ae24-d21196f175c6.html",
+          "domain": "couriernews.com",
+          "publisherFamily": "couriernews.com",
+          "resolvedFrom": "article-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
-          "pageTitle": "AI firm leaders tell UN Security Council that it could be a risk to all humanity | PBS News",
-          "canonical": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
-          "bodyChars": 2380,
+          "finalUrl": "https://www.couriernews.com/news/business/us-diplomats-told-to-say-super-intelligence-not-artificial-intelligence-after-trumps-call/article_2149bbe9-6bf3-5d7a-ae24-d21196f175c6.html",
+          "pageTitle": "US diplomats told to say ‘super intelligence’ — not ‘artificial intelligence' — after Trump's call | Business | couriernews.com",
+          "canonical": "https://apnews.com/article/trump-super-intelligence-rebrand-ai-diplomats-02123c7bf18c692a12b2b3e3b9ce30c5",
+          "bodyChars": 4616,
+          "topicOverlap": 6
+        },
+        {
+          "suppliedUrl": "https://www.tribdem.com/news/u-s-diplomats-told-to-say-super-intelligence-not-artificial-intelligence-after-trumps-call/article_2fb804ad-3651-5568-afcd-917f110ba4eb.html",
+          "domain": "tribdem.com",
+          "publisherFamily": "tribdem.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.tribdem.com/news/u-s-diplomats-told-to-say-super-intelligence-not-artificial-intelligence-after-trumps-call/article_2fb804ad-3651-5568-afcd-917f110ba4eb.html",
+          "pageTitle": "U.S. diplomats told to say ‘super intelligence’ – not ‘artificial intelligence' – after Trump's call | News | tribdem.com",
+          "canonical": "https://apnews.com/article/trump-super-intelligence-rebrand-ai-diplomats-02123c7bf18c692a12b2b3e3b9ce30c5",
+          "bodyChars": 4137,
+          "topicOverlap": 5
+        },
+        {
+          "suppliedUrl": "https://www.stcatharinesstandard.ca/business/us-diplomats-told-to-use-term-super-intelligence-not-artificial-intelligence-after-trump-s-call/article_839ec8fd-3548-56d9-9ac9-7cb588dd7405.html",
+          "domain": "stcatharinesstandard.ca",
+          "publisherFamily": "stcatharinesstandard.ca",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.stcatharinesstandard.ca/business/us-diplomats-told-to-use-term-super-intelligence-not-artificial-intelligence-after-trump-s-call/article_839ec8fd-3548-56d9-9ac9-7cb588dd7405.html",
+          "pageTitle": "US diplomats told to say ‘super intelligence’ - not ‘artificial intelligence' - after Trump's call",
+          "canonical": "https://www.thespec.com/business/us-diplomats-told-to-use-term-super-intelligence-not-artificial-intelligence-after-trump-s-call/article_c82773c9-b0dc-57d0-9b09-b6583ea7b901.html",
+          "bodyChars": 5866,
           "topicOverlap": 7
         }
       ],
@@ -1445,35 +1462,31 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOX29Cd1lFYzFaMndQRHZSZkRwQUxhcDRQSll6SmJLTDdTZEJWYnhtSnZlczM1VkRMeGJqN0wwdDBZTGVzZmpSV0tpeENtZTE3Vlk3VmMwRWdLb0FianA3RkdZcWV5bkNFRVE2YV94cVk5X2s4ZmY4MExiVGEzNnA1aQ?oc=5",
-      "title": "Lawyers Discuss Artificial Intelligence's Risks & Rewards For Hollywood - Deadline",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "deadline.com"
-      ],
-      "independentDomains": [
-        "deadline.com"
-      ],
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNDdXZDNGRzdSazAzSVZ0enh0dW11QTVZZS1vVDNKcXY1aXI1d3JRNWp0dUM0ZkREQTc0V3JleHpwMlBTbEVYMHpYbVRBSU1sZEt0azByeFVOQkplVmliaUNrR0dWczV0d3VXV3ZuNUVtLU9IQjc1Z0FOcnpCU0VadDNVclM0Y0t4NEVPa3RHUTZsWWpybXZPU1NIVTNrRUNUNHlzNG9XSFQ1dUdTcmc?oc=5",
+      "title": "AI glasses: The lens technology bringing AI into your line of sight - NBC News",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
       "sources": [
         {
-          "suppliedUrl": "https://deadline.com/2026/09/ai-hollywood-risks-rewards-lawyers-1237111607/",
-          "domain": "deadline.com",
-          "publisherFamily": "deadline.com",
+          "suppliedUrl": "https://www.nbcnews.com/video/ai-glasses-the-lens-technology-bringing-ai-into-your-line-of-sight-270415941510",
+          "domain": "nbcnews.com",
+          "publisherFamily": "nbcnews.com",
           "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://deadline.com/2026/09/ai-hollywood-risks-rewards-lawyers-1237111607/",
-          "pageTitle": "Lawyers Discuss Artificial Intelligence&#039;s Risks & Rewards For Hollywood",
-          "canonical": "https://deadline.com/2026/09/ai-hollywood-risks-rewards-lawyers-1237111607/",
-          "bodyChars": 4452,
-          "topicOverlap": 6
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.nbcnews.com/video/ai-glasses-the-lens-technology-bringing-ai-into-your-line-of-sight-270415941510",
+          "pageTitle": "AI glasses: The lens technology bringing AI into your line of sight",
+          "canonical": "https://www.nbcnews.com/video/ai-glasses-the-lens-technology-bringing-ai-into-your-line-of-sight-270415941510",
+          "bodyChars": 241,
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdFNGMkFCcDNETkhJNnowdEVGS3RQenJ1T2ZRUEZFRTlpdnROV1dGT2tPTG11OFQ3Y0xsdHJBcUFTLU9IVGswQmlqZzF5SnczeDA4SklSSk5wb203TkFaek4yS1BmS0g4SGNPenRuUXhDYVEtWVBuQ2lGcXRkLVVBMkI1eUhFSy1ERndkWFNQUm91SHBsMWdTZjh2b2IxYVpLNE5EdXdaQ2NXYkowaFRCMW1pRGJlNGlqaGxuSXRDMFY?oc=5",
@@ -1507,127 +1520,6 @@
       "sourceVerificationStatus": "unverified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KSllHMS1Cb2QyZVQ5QVh2SEJzamI0N2tfSjE0OGJYQ2hzdERiMldGZnpGZ3AtYUk2NU1FNGVLNGEwcU9pQUJUa0F4V0lZVXVfd1RGbGZQZF81b29EMWFoYUp5X051YkNsYjJmclJLR3Z4dw?oc=5",
-      "title": "Sam Altman’s remarks at the United Nations Security Council - OpenAI",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 7,
-      "independentPublisherFamilies": [
-        "theguardian.com",
-        "wixx.com",
-        "933thedrive.com",
-        "gulfnews.com",
-        "breitbart.com",
-        "unn.ua",
-        "cnbc.com"
-      ],
-      "independentDomains": [
-        "theguardian.com",
-        "wixx.com",
-        "933thedrive.com",
-        "gulfnews.com",
-        "breitbart.com",
-        "unn.ua",
-        "cnbc.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
-          "domain": "theguardian.com",
-          "publisherFamily": "theguardian.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
-          "pageTitle": "OpenAI’s Altman and Anthropic’s Amodei address UN security council | United Nations | The Guardian",
-          "canonical": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
-          "bodyChars": 4134,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://wixx.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
-          "domain": "wixx.com",
-          "publisherFamily": "wixx.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://wixx.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
-          "pageTitle": "Exclusive-OpenAI&#8217;s Sam Altman to brief UN Security Council next week | 101 WIXX | Your Hit Music Station",
-          "canonical": "https://wixx.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
-          "bodyChars": 2737,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://www.933thedrive.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
-          "domain": "933thedrive.com",
-          "publisherFamily": "933thedrive.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.933thedrive.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
-          "pageTitle": "OpenAI&#8217;s Sam Altman to brief UN Security Council next week | 93.3 The Drive",
-          "canonical": "https://www.933thedrive.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
-          "bodyChars": 1734,
-          "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://gulfnews.com/world/americas/openais-sam-altman-to-brief-un-security-council-next-week-1.500680159",
-          "domain": "gulfnews.com",
-          "publisherFamily": "gulfnews.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://gulfnews.com/world/americas/openais-sam-altman-to-brief-un-security-council-next-week-1.500680159",
-          "pageTitle": "Sam Altman to Brief UN Security Council on AI Risks and Global Regulation Next Week",
-          "canonical": "https://gulfnews.com/world/americas/openais-sam-altman-to-brief-un-security-council-next-week-1.500680159",
-          "bodyChars": 1640,
-          "topicOverlap": 7
-        },
-        {
-          "suppliedUrl": "https://www.breitbart.com/tech/2026/09/22/ai-doomers-unite-anthropics-dario-amodei-and-openais-sam-altman-to-address-un-security-council/",
-          "domain": "breitbart.com",
-          "publisherFamily": "breitbart.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.breitbart.com/tech/2026/09/22/ai-doomers-unite-anthropics-dario-amodei-and-openais-sam-altman-to-address-un-security-council/",
-          "pageTitle": "AI Doomers Unite: Anthropic&#039;s Dario Amodei and OpenAI&#039;s Sam Altman to Address UN Security Council",
-          "canonical": "https://www.breitbart.com/tech/2026/09/22/ai-doomers-unite-anthropics-dario-amodei-and-openais-sam-altman-to-address-un-security-council/",
-          "bodyChars": 3333,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://unn.ua/en/news/sam-altman-will-address-the-un-security-council-on-the-risks-of-artificial-intelligence",
-          "domain": "unn.ua",
-          "publisherFamily": "unn.ua",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://unn.ua/en/news/sam-altman-will-address-the-un-security-council-on-the-risks-of-artificial-intelligence",
-          "pageTitle": "Sam Altman will address the UN Security Council on the risks of artificial intelligence | УНН",
-          "canonical": "https://unn.ua/en/news/sam-altman-will-address-the-un-security-council-on-the-risks-of-artificial-intelligence",
-          "bodyChars": 1810,
-          "topicOverlap": 5
-        },
-        {
-          "suppliedUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
-          "domain": "cnbc.com",
-          "publisherFamily": "cnbc.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
-          "pageTitle": "Altman, Amodei expected to join UN Security Council meeting about AI",
-          "canonical": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
-          "bodyChars": 2201,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA1R1FfVlpxTExFMktuUmtSaGcwRjkyUEZUNDBocmk2UEdySmtqVGszSWdQbGRUMTVDTEtVQnJ2NXpMNHhoV1VNSUxSRjN1Z0VhY2FrQThyZFd4UXZVM2FkcENEV19BV2xiQUFPdXhSeXJxczRBblR0WnNiSQ?oc=5",
       "title": "Historic UN Security Council Briefing on AI - Marcus on AI",
       "status": "block",
@@ -1641,61 +1533,43 @@
       "sourceVerificationStatus": "unverified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNmRudERzel9EemdGTXAyOEwwNkRKN2lxQzlPT0Z0SmY3bFFIMUlUb044c3JQa1JwODhGRFZGa0diWXBIb21sbEY2aE5fTUZzMDZIQnRoT1lLbGNaRkRNczVTUTlvSzE2bzNzVEtqMV9YWEZkcXhDX1FXRE4zVTlUUlFEVlRxMnRhOWdmelc5WURmM1VuWUstTFBQdlZ0MnNJQmdOeldOUW8yZk1uZTAxZHFn?oc=5",
-      "title": "How to understand Trump's national security defense in his press ban - NPR",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "npr.org"
-      ],
-      "independentDomains": [
-        "npr.org"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.npr.org/2026/09/23/nx-s1-5978862/how-to-understand-trumps-national-security-defense-in-his-press-ban",
-          "domain": "npr.org",
-          "publisherFamily": "npr.org",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.npr.org/2026/09/23/nx-s1-5978862/how-to-understand-trumps-national-security-defense-in-his-press-ban",
-          "pageTitle": "How to understand Trump's national security defense in his press ban : NPR",
-          "canonical": "https://www.npr.org/2026/09/23/nx-s1-5978862/how-to-understand-trumps-national-security-defense-in-his-press-ban",
-          "bodyChars": 762,
-          "topicOverlap": 6
-        }
-      ],
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPZjB2VlMybXdDdXNYUVc3NHJOR05Da1F5SnlrVzY5R09MaWhKZDc4eDR3TF9HWlpIVjFiRGZFWmJrc3lKX1JXbDBEdjNKUklYN2ZUR2tETXd4cTdMRW0xT3NEU25DOUJIMkdnclItVG4zLWNuM09CVG1sbDlKSFJkQ25EaXc3RjVSUkFXNGpxTFhFQWRpNllnc3dKSmVVSFV1THRHQ3ZYMXNYY0xkS3pSMHlrZnRCQTVx?oc=5",
+      "title": "Security Alert: Increased Security Presence and Disruptions in Santa Marta (September 23, 2026) - U.S. Embassy in Colombia (.gov)",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
+      "sourceVerificationStatus": "unverified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeDY3NVVfOWVmSUQzeGNOVzNINFZ5T014ZVVYV1RkZGVYdXdNMlZodnF6MUY5VUdnakx1YmFBbl93WW42alY5RDluc0FrTlgyMU8xN3pXMC1YckxKenhPN1R2c0d3Y003ZllNaWhsUTVRdTJYaF9hbS1CMWRPMW9tenlHdHYwSzJwTUVHMnNXeDNOaVhUbXAzS2tZc2ZUc2FjUUlMcVhaeTVoUVpLNV9sNk53dFc4UdIBuwFBVV95cUxQRFFnS1M5WENMU2FQMVpQczNnQng4bXJCNnkybEVYTkQyWnhVYm8xY1hwX2hJNlVsOVlLSUdleUtIUUUwT1VhVHFNUFdvcERpbHhoY2F1SmgteTVxZHNIQU91am52dFF6VVIyTGhuTTdYRjFNTEhoNnJnYjQ1dDJHVXpEVk5MRkJnWWF6dVNqWlIzdUFIaXhfSnhDMUhEVGZCbUJkeFh5cmxrd2Z0QWZEY0ZCZ1AwMEZUNWdN?oc=5",
-      "title": "AI firm leaders tell UN Security Council that it could be a risk to all humanity - PBS",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTUJkT19NU0M4dmlIY1owb3ROSklOVzJDalJMME5YQ2JqR0JnYXhTQXRPWklLNzh3TkRUM0ZuZ0JtTnloQkdfRzN3aFBUUVl6UHFpTEU5NjB1aFhfT2hSSzVRZWlFWTQtcVRRQnIzY2NCNHZuYXcwcjVwaUFhS3A4Wm4tSnNmYlpHeUNvcjNFNjJYX1d3YmJUYVhzTlBpOWZ2TklUSEdPZ3JQNHB2OS0wLTRFclp5aHB1NkFGUHp5M1JZMWI3X050TnRGbw?oc=5",
+      "title": "Mondelez International stock heads into the open after a new product launch - AD HOC NEWS",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "pbs.org"
+        "ad-hoc-news.de"
       ],
       "independentDomains": [
-        "pbs.org"
+        "ad-hoc-news.de"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
-          "domain": "pbs.org",
-          "publisherFamily": "pbs.org",
+          "suppliedUrl": "https://www.ad-hoc-news.de/boerse/news/corporate-news/mondelez-international-stock-heads-into-the-open-after-a-new-product/70161288",
+          "domain": "ad-hoc-news.de",
+          "publisherFamily": "ad-hoc-news.de",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
-          "pageTitle": "AI firm leaders tell UN Security Council that it could be a risk to all humanity | PBS News",
-          "canonical": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
-          "bodyChars": 2380,
+          "finalUrl": "https://www.ad-hoc-news.de/boerse/news/corporate-news/mondelez-international-stock-heads-into-the-open-after-a-new-product/70161288",
+          "pageTitle": "Mondelez International stock heads into the open after a new product launch",
+          "canonical": "https://www.ad-hoc-news.de/boerse/news/corporate-news/mondelez-international-stock-heads-into-the-open-after-a-new-product/70161288",
+          "bodyChars": 1238,
           "topicOverlap": 7
         }
       ],
@@ -1754,12 +1628,10 @@
       "status": "pass",
       "evidenceLevel": "strong",
       "validSourceCount": 8,
-      "independentPublisherCount": 8,
+      "independentPublisherCount": 6,
       "independentPublisherFamilies": [
         "theverge.com",
-        "mashable.com",
         "ua.news",
-        "techcrunch.com",
         "gadgetreview.com",
         "247wallst.com",
         "yahoo.com",
@@ -1767,9 +1639,7 @@
       ],
       "independentDomains": [
         "theverge.com",
-        "mashable.com",
         "ua.news",
-        "techcrunch.com",
         "gadgetreview.com",
         "247wallst.com",
         "tech.yahoo.com",
@@ -1790,19 +1660,6 @@
           "topicOverlap": 5
         },
         {
-          "suppliedUrl": "https://mashable.com/tech/muse-charm-reveal-meta-connect-2026",
-          "domain": "mashable.com",
-          "publisherFamily": "mashable.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://mashable.com/tech/muse-charm-reveal-meta-connect-2026",
-          "pageTitle": "Meta to release Muse Charm, a Tamagotchi-like device for the Muse AI agent | Mashable",
-          "canonical": "https://mashable.com/tech/muse-charm-reveal-meta-connect-2026",
-          "bodyChars": 2345,
-          "topicOverlap": 9
-        },
-        {
           "suppliedUrl": "https://ua.news/en/technologies/meta-gotuie-avtonomnii-pristrii-muse-charm-dlia-shi-agenta-the-verge",
           "domain": "ua.news",
           "publisherFamily": "ua.news",
@@ -1813,19 +1670,6 @@
           "pageTitle": "Meta prepares Muse Charm AI agent device — The Verge | UA.NEWS",
           "canonical": "https://ua.news/en/technologies/meta-gotuie-avtonomnii-pristrii-muse-charm-dlia-shi-agenta-the-verge",
           "bodyChars": 2649,
-          "topicOverlap": 8
-        },
-        {
-          "suppliedUrl": "https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/",
-          "pageTitle": "Meta made a Tamagotchi-like wearable for its Muse AI agent | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/",
-          "bodyChars": 3300,
           "topicOverlap": 8
         },
         {
@@ -1851,7 +1695,7 @@
           "finalUrl": "https://247wallst.com/investing/2026/09/11/mark-zuckerbergs-100-a-month-muse-bet-signals-metas-desperate-pivot-away-from-ads/",
           "pageTitle": "Mark Zuckerberg&#039;s $100-a-Month Muse Bet Signals Meta&#039;s Desperate Pivot Away From Ads - 24/7 Wall St.",
           "canonical": "https://247wallst.com/investing/2026/09/11/mark-zuckerbergs-100-a-month-muse-bet-signals-metas-desperate-pivot-away-from-ads/",
-          "bodyChars": 7155,
+          "bodyChars": 7339,
           "topicOverlap": 10
         },
         {
@@ -1879,6 +1723,32 @@
           "canonical": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
           "bodyChars": 3495,
           "topicOverlap": 9
+        },
+        {
+          "suppliedUrl": "https://247wallst.com/investing/2026/09/23/metas-muse-just-put-instacarts-grocery-empire-on-notice/",
+          "domain": "247wallst.com",
+          "publisherFamily": "247wallst.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://247wallst.com/investing/2026/09/23/metas-muse-just-put-instacarts-grocery-empire-on-notice/",
+          "pageTitle": "Meta&#039;s Muse Just Put Instacart&#039;s Grocery Empire on Notice - 24/7 Wall St.",
+          "canonical": "https://247wallst.com/investing/2026/09/23/metas-muse-just-put-instacarts-grocery-empire-on-notice/",
+          "bodyChars": 6336,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.gadgetreview.com/metas-muse-ai-used-human-contractors-for-calls-some-of-them-were-racist",
+          "domain": "gadgetreview.com",
+          "publisherFamily": "gadgetreview.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.gadgetreview.com/metas-muse-ai-used-human-contractors-for-calls-some-of-them-were-racist",
+          "pageTitle": "Meta&#039;s Muse AI Used Human Contractors for Calls. Some Of Them Were Racist. - Gadget Review",
+          "canonical": "https://www.gadgetreview.com/metas-muse-ai-used-human-contractors-for-calls-some-of-them-were-racist",
+          "bodyChars": 5780,
+          "topicOverlap": 11
         }
       ],
       "recoveryAttempts": 0,
@@ -1886,45 +1756,39 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSHBObE1ZM3ZSc0QwNURQWkZkS2tORVNRMHhNUUhvNjNZRjR4RHNIVWlyUE5qZV82WVowbEFFX2RhR09TeE5WMHQ4S3l0TkdZTjN3YWdvVUNfRUZYdTZVOW9jc3YtQlNHdWNjcFh4cl9jNlk4VDkxMlFJc18ybzlLN3B4NjZxZVB3cFNBTy1mSXlLVmZlbDRpdXd4WVljVEtaZGxkRHpIMTBSZw?oc=5",
-      "title": "Tech leaders to UN: For the sake of humanity, please control the AI technology we created - apnews.com",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "tribdem.com",
-        "enidnews.com"
-      ],
-      "independentDomains": [
-        "tribdem.com",
-        "enidnews.com"
-      ],
+      "title": "Tech leaders to UN: For the sake of humanity, please control the AI technology we created - AP News",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPN0RpNTlON193V09wVEdOLVlSRVFKYmROeWNaREFSUlVjU1hLbjVBNjBNUzM0Z2pEZW9Fa09IZkI0aWZibS1YMmpMSTdBUDhPaXc4QkUzY3NaenpkalZtWEFScEhoVjlWb3daSHlKNHJfWl85NDFlWU9FbzVNVjhBck8zT0lpNDRfUkFFR2EyZHpfaUNaMTJrTVdlVUtjaDJDU3hZU1g2aEFUSnVwQVRZWGt5OFp6bzJVaHQ2RTdSU0lKZDFx?oc=5",
+      "title": "Jonesboro Fire Department uses technology to alert drivers of approaching emergency vehicles - K8 News | Jonesboro, Arkansas",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
       "sources": [
         {
-          "suppliedUrl": "https://www.tribdem.com/news/tech-leaders-to-un-for-the-sake-of-humanity-please-control-the-ai-technology-we/article_b933c802-15b7-5cb3-96a1-adafeffca08e.html",
-          "domain": "tribdem.com",
-          "publisherFamily": "tribdem.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.tribdem.com/news/tech-leaders-to-un-for-the-sake-of-humanity-please-control-the-ai-technology-we/article_b933c802-15b7-5cb3-96a1-adafeffca08e.html",
-          "pageTitle": "Tech leaders to UN: For the sake of humanity, please control the AI technology we created | News | tribdem.com",
-          "canonical": "https://apnews.com/article/ai-artificial-intelligence-un-security-council-64519ea66b38e2600026f4481ad7f211",
-          "bodyChars": 3951,
-          "topicOverlap": 6
-        },
-        {
-          "suppliedUrl": "https://www.enidnews.com/region/tech-leaders-to-un-for-the-sake-of-humanity-please-control-the-ai-technology-we/article_9bab5959-3629-5438-a5c7-83bfad38d047.html",
-          "domain": "enidnews.com",
-          "publisherFamily": "enidnews.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.enidnews.com/region/tech-leaders-to-un-for-the-sake-of-humanity-please-control-the-ai-technology-we/article_9bab5959-3629-5438-a5c7-83bfad38d047.html",
-          "pageTitle": "Tech leaders to UN: For the sake of humanity, please control the AI technology we created | Associated Press | syndication news | enidnews.com",
-          "canonical": "https://apnews.com/article/ai-artificial-intelligence-un-security-council-64519ea66b38e2600026f4481ad7f211",
-          "bodyChars": 3990,
-          "topicOverlap": 7
+          "suppliedUrl": "https://www.kait8.com/video/2026/09/23/jonesboro-fire-department-uses-technology-alert-drivers-approaching-emergency-vehicles/",
+          "domain": "kait8.com",
+          "publisherFamily": "kait8.com",
+          "resolvedFrom": "research-story-link",
+          "ok": false,
+          "reason": "insufficient-article-body",
+          "finalUrl": "https://www.kait8.com/video/2026/09/23/jonesboro-fire-department-uses-technology-alert-drivers-approaching-emergency-vehicles/",
+          "pageTitle": "Jonesboro Fire Department uses technology to alert drivers of approaching emergency vehicles",
+          "canonical": "https://www.kait8.com/video/2026/09/23/jonesboro-fire-department-uses-technology-alert-drivers-approaching-emergency-vehicles/",
+          "bodyChars": 0,
+          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -2004,6 +1868,37 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcmxTek1DQjl3aV90T1RkNGVvQUxLOVh6aGdSUzBNZ0JORlpSMmJwRUlHYm05Q0N5WXlvVnM2djVXQlVLMU9tdGtPYkJXWkhVRVJsYXhCZWlFVjlZOVdCYldMWEI2LWtfVG5kWjZGeEVSS3QxdzU0cUFLeUFPdGI0YVk4ZkE1bkFYNkV2MGw4ZmpWYWx2TnpNTXdYQkRNTXktLXJqWUFRd3UzY29yR2YxOHZ2Q2RnRHdYUDkwOEI3RWQwaHRvU04yY3lkMlJzRXBjeWtJMVVncy0?oc=5",
+      "title": "University showcases role as regional engine on Southeast Kansas Bio-Technology Tour - Pittsburg State University",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "pittstate.edu"
+      ],
+      "independentDomains": [
+        "pittstate.edu"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.pittstate.edu/gorillaconnection/2026/09/university-showcases-role-as-regional-engine-on-southeast-kansas-bio-technology-tour.html",
+          "domain": "pittstate.edu",
+          "publisherFamily": "pittstate.edu",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.pittstate.edu/gorillaconnection/2026/09/university-showcases-role-as-regional-engine-on-southeast-kansas-bio-technology-tour.html",
+          "pageTitle": "University showcases role as regional engine on Southeast Kansas Bio-Technology Tour",
+          "canonical": "",
+          "bodyChars": 5942,
+          "topicOverlap": 8
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUDNQX0tGbE10ejIzY3RZcURWVkpYZjlzU2NaRTdMSVBYTmF1TE81MTgxQVYxbWR5QXQzZGltZndYV1ZCSVBUN0NhTERWQUIyazRoaVk0bDRYR1RQMThNX2ZKZVZsX2tUeG1vZnBqajQ5VVM2dXBVR09Kb0l6bklqSTFPZGVkaDkydTlfWGxTWkRmcFJ0cnVuZGxSd1dNeXVsczUteF9ldGFGaHlXUS11cXNzWmdqWExRMGlvV19oMA?oc=5",
       "title": "The hour before the school bus: How connected technology can help calm the morning rush - ADT",
       "status": "pass",
@@ -2033,99 +1928,6 @@
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQX2dtaDZQbGJoRXRVbXJXQ2ZjaDdjMjJNUnRFUkFCajRaMkZnVWNHS3M1RlBKTDFhZk0xN0ZScV9CLWV1ZUxoeVhBY1VzWmVQTWtYMWlNRlZ2bjdHbVJxUlZKU3VGNGpUdXc0Y3B4NGdjRDktUXNLYUhZNWdlMU16WWlFYTR5QkktT3V2c2J2b0ZtRllJNms5cEtnVkVaWnQyM3h0QURrczA0NVJIUUlCTWhJS3dfYmVHQjE4REQyTjZTZ01RbUlxNQ?oc=5",
-      "title": "Caroline Board of Supervisors approve Carmel Technology and Enterprise Center - Fredericksburg Free Press",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "fredericksburgfreepress.com"
-      ],
-      "independentDomains": [
-        "fredericksburgfreepress.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.fredericksburgfreepress.com/2026/09/23/caroline-board-of-supervisors-approve-carmel-technology-and-enterprise-center/",
-          "domain": "fredericksburgfreepress.com",
-          "publisherFamily": "fredericksburgfreepress.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.fredericksburgfreepress.com/2026/09/23/caroline-board-of-supervisors-approve-carmel-technology-and-enterprise-center/",
-          "pageTitle": "Caroline Board of Supervisors approve Carmel Technology and Enterprise Center &#8211; Fredericksburg Free Press",
-          "canonical": "https://www.fredericksburgfreepress.com/2026/09/23/caroline-board-of-supervisors-approve-carmel-technology-and-enterprise-center/",
-          "bodyChars": 7539,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOQmc1SkdUNlplcVhjUVVxMnFRUzFCVkFORnFDQjJhY3JCaUpjYWJjNkdsQ21tZS1YUG05elAzTHd3elZpNXhvZ1dSTHh3OE0xanoweUFWcFJPOFhucklrY2l4YWRXWl9iV09DdXJuamxwUW0wLURUQkNKa25KYklCVFkxZDBhb1ozRzRyU1A2TWlyOGVyeWlWb3dBUXNYNlJlOEM2M0Y2V2NGNkVBU2k1RXlPMXI2b2xneGxETV9R?oc=5",
-      "title": "Neighbors react to potential data center coming to Wood Haven Technology Park - WSLS",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "wsls.com"
-      ],
-      "independentDomains": [
-        "wsls.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.wsls.com/video/news/2026/09/24/neighbors-react-to-potential-data-center-coming-to-wood-haven-technology-park/",
-          "domain": "wsls.com",
-          "publisherFamily": "wsls.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.wsls.com/video/news/2026/09/24/neighbors-react-to-potential-data-center-coming-to-wood-haven-technology-park/",
-          "pageTitle": "Neighbors react to potential data center coming to Wood Haven Technology Park",
-          "canonical": "https://www.wsls.com/video/news/2026/09/24/neighbors-react-to-potential-data-center-coming-to-wood-haven-technology-park/",
-          "bodyChars": 668,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNY1JRbkVIbWlSMldJb2xKaTNMZlk2RnJ1dTBkYllEMURIeTNDdzIzZXBWbEo1ODMtWmlESklSdS1Cek9FVXlGQWM3MzhrUUF5aXZYdTFIaTN5MW1GOFE3OTJsT3VMeTVzdWx4M2dZOFFDcUZxRTNCc0tqNFVtUDVrYWJ4S3ZFeWlZOTBBeWQ1a3Racl81SkRMWjhOV1VyaHdNZElHR2lkV1dvRlp5?oc=5",
-      "title": "Bitcoin ETF Flows Turn Positive After $4.6 Billion Rebound - Bloomberg.com",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "theedgemalaysia.com"
-      ],
-      "independentDomains": [
-        "theedgemalaysia.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://theedgemalaysia.com/node/819103",
-          "domain": "theedgemalaysia.com",
-          "publisherFamily": "theedgemalaysia.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://theedgemalaysia.com/node/819103",
-          "pageTitle": "Bitcoin ETF flows turn positive after US$4.6 bil rebound",
-          "canonical": "https://theedgemalaysia.com/node/819103",
-          "bodyChars": 2156,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
     },
     {
       "link": "https://techcrunch.com/2026/09/23/youtube-is-making-comments-more-fun-and-fandom-more-lucrative-for-creators/",
@@ -2177,7 +1979,7 @@
           "finalUrl": "https://www.businessinsider.com/comma-ai-driving-tech-faces-federal-probe-after-fatal-crashes-2026-9",
           "pageTitle": "Comma AI's Driving Tech Faces Federal Probe After Fatal Crashes - Business Insider",
           "canonical": "https://www.businessinsider.com/comma-ai-driving-tech-faces-federal-probe-after-fatal-crashes-2026-9",
-          "bodyChars": 2587,
+          "bodyChars": 2739,
           "topicOverlap": 9
         },
         {
@@ -2212,7 +2014,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPV1l2cEdDNUpVTVd4dFVhOExUWURmMnNIdEg4ckg2M1lzaEEyRjdQVnRKbkFMM0d3aFppMXRMeFlMbWFiV25HLXFKNl9rbVoyejJ4eEl4ZXpfZ3d4b2gydG1PTFJRaDhqUG9yRXBxWE5DZnRVTDhNOVZlbXl1b0FxWUhuajktNHlTNDJ5WEdFcElNdGRsOG9hQTVxaEtraXJfdEVNNDRxSlBkbS0xYmVSYlJNMWNuYjI4Z184?oc=5",
-      "title": "Reimagining the SOC for the agentic era in Microsoft Defender - microsoft.com",
+      "title": "Reimagining the SOC for the agentic era in Microsoft Defender - Microsoft",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -2245,8 +2047,39 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeDY3NVVfOWVmSUQzeGNOVzNINFZ5T014ZVVYV1RkZGVYdXdNMlZodnF6MUY5VUdnakx1YmFBbl93WW42alY5RDluc0FrTlgyMU8xN3pXMC1YckxKenhPN1R2c0d3Y003ZllNaWhsUTVRdTJYaF9hbS1CMWRPMW9tenlHdHYwSzJwTUVHMnNXeDNOaVhUbXAzS2tZc2ZUc2FjUUlMcVhaeTVoUVpLNV9sNk53dFc4UdIBuwFBVV95cUxQRFFnS1M5WENMU2FQMVpQczNnQng4bXJCNnkybEVYTkQyWnhVYm8xY1hwX2hJNlVsOVlLSUdleUtIUUUwT1VhVHFNUFdvcERpbHhoY2F1SmgteTVxZHNIQU91am52dFF6VVIyTGhuTTdYRjFNTEhoNnJnYjQ1dDJHVXpEVk5MRkJnWWF6dVNqWlIzdUFIaXhfSnhDMUhEVGZCbUJkeFh5cmxrd2Z0QWZEY0ZCZ1AwMEZUNWdN?oc=5",
+      "title": "AI firm leaders tell UN Security Council that it could be a risk to all humanity - PBS",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "pbs.org"
+      ],
+      "independentDomains": [
+        "pbs.org"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
+          "domain": "pbs.org",
+          "publisherFamily": "pbs.org",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
+          "pageTitle": "AI firm leaders tell UN Security Council that it could be a risk to all humanity | PBS News",
+          "canonical": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
+          "bodyChars": 2380,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObjhJUG9MT21IWFl4VmhiRnA2RTEzdVRoNEN6Zy1seEUxNzR6Z18talhoVFAtSmF5aHBfS3ota2ZhbnhnMnQ4TGFBMFo2NVl0MzRUUzVxS0cwS3pzcXlvalFYaVE5dnJncjYzRU9yeHRRbzFNR3BKaXVzQjBObnNDXzQzWUE1LWN1NVNjU2hVT0JtZXFNdE9ES2ZrSU50dmc0MlFkbFpzeEpJOVhfN0xJ?oc=5",
-      "title": "My (complicated) relationship with AI: often seductive, occasionally frustrating and always demanding vigilance - The Guardian",
+      "title": "My (complicated) relationship with AI: often seductive, occasionally frustrating and always demanding vigilance - theguardian.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -2269,7 +2102,7 @@
           "pageTitle": "My (complicated) relationship with AI: often seductive, occasionally frustrating and always demanding vigilance | Setareh Seyedghorban | The Guardian",
           "canonical": "https://www.theguardian.com/commentisfree/2026/sep/24/my-complicated-relationship-with-ai-chatgpt-factchecking",
           "bodyChars": 5249,
-          "topicOverlap": 10
+          "topicOverlap": 9
         }
       ],
       "recoveryAttempts": 0,
@@ -2307,6 +2140,37 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOX29Cd1lFYzFaMndQRHZSZkRwQUxhcDRQSll6SmJLTDdTZEJWYnhtSnZlczM1VkRMeGJqN0wwdDBZTGVzZmpSV0tpeENtZTE3Vlk3VmMwRWdLb0FianA3RkdZcWV5bkNFRVE2YV94cVk5X2s4ZmY4MExiVGEzNnA1aQ?oc=5",
+      "title": "Lawyers Discuss Artificial Intelligence's Risks & Rewards For Hollywood - Deadline",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "deadline.com"
+      ],
+      "independentDomains": [
+        "deadline.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://deadline.com/2026/09/ai-hollywood-risks-rewards-lawyers-1237111607/",
+          "domain": "deadline.com",
+          "publisherFamily": "deadline.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://deadline.com/2026/09/ai-hollywood-risks-rewards-lawyers-1237111607/",
+          "pageTitle": "Lawyers Discuss Artificial Intelligence&#039;s Risks & Rewards For Hollywood",
+          "canonical": "https://deadline.com/2026/09/ai-hollywood-risks-rewards-lawyers-1237111607/",
+          "bodyChars": 4452,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZm5kS0U2MWhHTHRCUnd4bjcxR05jNnBOcWpQNkFyNlZmZXhhN3p0bUdNbnctbzBkblRwNHM4MExTd1RnZ2o2QmxOZ1Bna3Zob2pudGhVenQ3dURtSktnQWZCR2poREhZTXVPNEJRQ1NlVXo4RF9yUHEwWE9tUmJsLVkwM0ZZMXdGeG8zU200akpjWFBLWWZPTGoycmw3RVJtUmV3anNfeW9wbS13clFtLUhjb2l6VEE3Z1EtRHM0WkxyQQ?oc=5",
       "title": "Lee Rainie quoted by The Washington Sun on President Donald Trump’s push to rename AI - Elon University",
       "status": "pass",
@@ -2338,189 +2202,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUkxFVS1EclFZbHJqXzliZDJiSDdDWlNtUlVKX3RHM3pfanN2d2hBZGFwS09QUlc2Rm5kcjQ5N0xrV3VhN0lMcVRtSzlJLUFWeEZYSDJtd0x2VUhrQ05icU5hSmM1MkY3Q2FDMDFEdXFYS2ljSjZIbC10MExNQUFsVkdGUmxTVU1PZXo3WWVn0gGTAUFVX3lxTFBfN2pUdjN1WjlHelBFOTJ1RFVPVlpoVVczbUdfSnFLU0F6TDltYVBva2RkclB4WlRrRlFkeUJuNFNhTi01bUs2MGc5eU1tVll3SlZBbGRJb3RzWkdaODVhNVYzZ05fMlhjNm5XQTB2dndVcjJaS2N6anRNTHc3cTU4aVpoX05vZnJIUlRLV3dlTkJxYw?oc=5",
-      "title": "CNBC Daily Open: Nothing artificial about 'Super Intelligence' - CNBC",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "cnbc.com"
-      ],
-      "independentDomains": [
-        "cnbc.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.cnbc.com/2026/09/23/trump-super-intelligence-artificial-intelligence.html",
-          "domain": "cnbc.com",
-          "publisherFamily": "cnbc.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cnbc.com/2026/09/23/trump-super-intelligence-artificial-intelligence.html",
-          "pageTitle": "CNBC Daily Open: Nothing artificial about 'Super Intelligence'",
-          "canonical": "https://www.cnbc.com/2026/09/23/trump-super-intelligence-artificial-intelligence.html",
-          "bodyChars": 3697,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQM1Z0QzVucTYtcXlKckpuUTRQVWNPc19DUXNRSzkxODNfQms0MThaY0kxYjRwckhYUDJTOWkwS3hlZ29seXVDSjQwa1hwTllQREw5OUZkNGZJV3hNdFY1WHdWeUJmSjlOd2JWXzJ6b1dkWEVGbVhaYUVxejd0Q2hOY1ZpRXFQM2dLbnlBMWRXeWF4RXNJNFNjVUpBQmdWVnhzRm5oZFM5alZNMlgyNHhyRFg1dXFjdWdBR1hGTEViakxKQ0hhdWloam1IVWJtOTVvb1ZtRA?oc=5",
-      "title": "'Super Intelligence': the president’s new term for AI, explained - Nextgov/FCW",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 2,
-      "independentPublisherCount": 2,
-      "independentPublisherFamilies": [
-        "nextgov.com",
-        "defenseone.com"
-      ],
-      "independentDomains": [
-        "nextgov.com",
-        "defenseone.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.nextgov.com/artificial-intelligence/2026/09/super-intelligence-presidents-new-term-ai-explained/416164/?oref=ng-homepage-river",
-          "domain": "nextgov.com",
-          "publisherFamily": "nextgov.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.nextgov.com/artificial-intelligence/2026/09/super-intelligence-presidents-new-term-ai-explained/416164/?oref=ng-homepage-river",
-          "pageTitle": "'Super Intelligence': the president’s new term for AI, explained - Nextgov/FCW",
-          "canonical": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
-          "bodyChars": 3342,
-          "topicOverlap": 5
-        },
-        {
-          "suppliedUrl": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
-          "domain": "defenseone.com",
-          "publisherFamily": "defenseone.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
-          "pageTitle": "'Super Intelligence': the president’s new term for AI, explained - Defense One",
-          "canonical": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
-          "bodyChars": 3345,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQMWRBeklLd0tsZnB5SzBUMGVIbVNrMnB5UXh6N0VpRmtfVjV6SGxVLV8tb3dZR2E1NjZGX0JyMERtTDhEQWlaZGszd0lkelhobEphX0Q1REhwbTlCZXUwcm9XeHNjQXRzUFh2NzlDN29MTkZJMEk1YTNoZkxPbDRiYw?oc=5",
-      "title": "Gallup poll reveals widespread global AI optimism, not doom and gloom - Mashable",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "mashable.com"
-      ],
-      "independentDomains": [
-        "mashable.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://mashable.com/tech/gallup-poll-reveals-widespread-global-ai-optimism",
-          "domain": "mashable.com",
-          "publisherFamily": "mashable.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://mashable.com/tech/gallup-poll-reveals-widespread-global-ai-optimism",
-          "pageTitle": "Gallup poll reveals widespread global AI optimism | Mashable",
-          "canonical": "https://mashable.com/tech/gallup-poll-reveals-widespread-global-ai-optimism",
-          "bodyChars": 3261,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUWt0SlExQ2pOLUJPRXlvam9hOEhoMXB3Sy1iVmVMZ3lteFpEeDdvT2tRZjdkX1hQczZlVWgyMEhnRnFfOXp4SWhlandPWW5OdFRGS0VFN2NscFpSejk5OUZkNjYxVVExQ0xJT3VpQTZaOWhjc3MzN2F0YTRNRlRobDZFdUhvRWthWHgwOUt2WUQ5c1pOaFdGSzNnR2lVUWNh?oc=5",
-      "title": "Feds accuse Secret Service software provider of hiding Russian ties - Courthouse News",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "courthousenews.com"
-      ],
-      "independentDomains": [
-        "courthousenews.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.courthousenews.com/feds-accuse-secret-service-software-provider-of-hiding-russian-ties/",
-          "domain": "courthousenews.com",
-          "publisherFamily": "courthousenews.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.courthousenews.com/feds-accuse-secret-service-software-provider-of-hiding-russian-ties/",
-          "pageTitle": "Feds accuse Secret Service software provider of hiding Russian ties | Courthouse News Service",
-          "canonical": "",
-          "bodyChars": 3760,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB0eGd1VzBEQTF5OG1WMlRfcnBKbThhZjVoS2JYWHV5OUtNRHRRZ2UxTUJvVGFSeXBYN1NSMUh5TUctOXhXWjZpVEoyaXRrajVpNF9LRzd1RXFoeTV3Z3RRSlhuZjlnLVRLMkZIQ0FB?oc=5",
-      "title": "The 'godfather' of AI on where the technology is headed - WBUR",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "wbur.org"
-      ],
-      "independentDomains": [
-        "wbur.org"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.wbur.org/hereandnow/2026/09/23/geoffrey-hinton-ai",
-          "domain": "wbur.org",
-          "publisherFamily": "wbur.org",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.wbur.org/hereandnow/2026/09/23/geoffrey-hinton-ai",
-          "pageTitle": "The 'godfather' of AI on where the technology is headed | Here & Now",
-          "canonical": "https://www.wbur.org/hereandnow/2026/09/23/geoffrey-hinton-ai",
-          "bodyChars": 569,
-          "topicOverlap": 3
-        },
-        {
-          "suppliedUrl": "https://www.ualrpublicradio.org/2026-09-23/the-godfather-of-ai-on-where-the-technology-is-headed?_amp=true",
-          "domain": "ualrpublicradio.org",
-          "publisherFamily": "ualrpublicradio.org",
-          "resolvedFrom": "article-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.ualrpublicradio.org/2026-09-23/the-godfather-of-ai-on-where-the-technology-is-headed?_amp=true",
-          "pageTitle": "The 'godfather' of AI on where the technology is headed",
-          "canonical": "https://www.ualrpublicradio.org/2026-09-23/the-godfather-of-ai-on-where-the-technology-is-headed",
-          "bodyChars": 473,
-          "topicOverlap": 3
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdnRoTmZld3BIaGtwcW9RM2N4aTVSSm9rMWRCaW5fZDk2RWJxallIdWt5TlhvcGJiVmZuNHhVbnF3NlZsTTd4SnFNbDExUmNYUWVxRVNhakJiSGp0UEdFWm9PQjVfZFEzQ3Z4RHFGUkt6UkpEb0VLR3lXczBKVzg3V3BMSzZmZWl0Zm85M0RvNUtaTWZtSjBNeWtmWG1VZVFZd0JxcDllbw?oc=5",
       "title": "UiPath introduces new workflow automation, software testing features - SiliconANGLE",
       "status": "pass",
@@ -2544,7 +2225,7 @@
           "finalUrl": "https://siliconangle.com/2026/09/23/uipath-introduces-new-workflow-automation-software-testing-features/",
           "pageTitle": "UiPath introduces new workflow automation, software testing features - SiliconANGLE",
           "canonical": "https://siliconangle.com/2026/09/23/uipath-introduces-new-workflow-automation-software-testing-features/",
-          "bodyChars": 5352,
+          "bodyChars": 5336,
           "topicOverlap": 8
         }
       ],
@@ -2614,33 +2295,6 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPN0RpNTlON193V09wVEdOLVlSRVFKYmROeWNaREFSUlVjU1hLbjVBNjBNUzM0Z2pEZW9Fa09IZkI0aWZibS1YMmpMSTdBUDhPaXc4QkUzY3NaenpkalZtWEFScEhoVjlWb3daSHlKNHJfWl85NDFlWU9FbzVNVjhBck8zT0lpNDRfUkFFR2EyZHpfaUNaMTJrTVdlVUtjaDJDU3hZU1g2aEFUSnVwQVRZWGt5OFp6bzJVaHQ2RTdSU0lKZDFx?oc=5",
-      "title": "Jonesboro Fire Department uses technology to alert drivers of approaching emergency vehicles - K8 News | Jonesboro, Arkansas",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.kait8.com/video/2026/09/23/jonesboro-fire-department-uses-technology-alert-drivers-approaching-emergency-vehicles/",
-          "domain": "kait8.com",
-          "publisherFamily": "kait8.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "insufficient-article-body",
-          "finalUrl": "https://www.kait8.com/video/2026/09/23/jonesboro-fire-department-uses-technology-alert-drivers-approaching-emergency-vehicles/",
-          "pageTitle": "Jonesboro Fire Department uses technology to alert drivers of approaching emergency vehicles",
-          "canonical": "https://www.kait8.com/video/2026/09/23/jonesboro-fire-department-uses-technology-alert-drivers-approaching-emergency-vehicles/",
-          "bodyChars": 0,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQVY2elAtNUFxZXN2anlLS18ydlc0Y2k1WHdLODU3ZEF4U3c4NUlfMC0yYnJoMU1udjdERlVCYnViYVBpck8xUzRJVHRzQnJGYVFzTEliZWZzUGZpWWdsajlZMDYtZW1UVHVZaXdIYWJPNF9xdkdqTFNsQk5ERERYdFh6aTdFUGswcmdvLWZOT1M3VHc?oc=5",
       "title": "Prince William County, Va., Taps a New Technology Director - GovTech",
       "status": "block",
@@ -2668,6 +2322,173 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KSllHMS1Cb2QyZVQ5QVh2SEJzamI0N2tfSjE0OGJYQ2hzdERiMldGZnpGZ3AtYUk2NU1FNGVLNGEwcU9pQUJUa0F4V0lZVXVfd1RGbGZQZF81b29EMWFoYUp5X051YkNsYjJmclJLR3Z4dw?oc=5",
+      "title": "Sam Altman’s remarks at the United Nations Security Council - OpenAI",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 8,
+      "independentPublisherCount": 8,
+      "independentPublisherFamilies": [
+        "theguardian.com",
+        "wixx.com",
+        "933thedrive.com",
+        "gulfnews.com",
+        "breitbart.com",
+        "unn.ua",
+        "cnbc.com",
+        "biggo.com"
+      ],
+      "independentDomains": [
+        "theguardian.com",
+        "wixx.com",
+        "933thedrive.com",
+        "gulfnews.com",
+        "breitbart.com",
+        "unn.ua",
+        "cnbc.com",
+        "finance.biggo.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
+          "domain": "theguardian.com",
+          "publisherFamily": "theguardian.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
+          "pageTitle": "OpenAI’s Altman and Anthropic’s Amodei address UN security council | United Nations | The Guardian",
+          "canonical": "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei",
+          "bodyChars": 4134,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://wixx.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
+          "domain": "wixx.com",
+          "publisherFamily": "wixx.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://wixx.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
+          "pageTitle": "Exclusive-OpenAI&#8217;s Sam Altman to brief UN Security Council next week | 101 WIXX | Your Hit Music Station",
+          "canonical": "https://wixx.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
+          "bodyChars": 2737,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://www.933thedrive.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
+          "domain": "933thedrive.com",
+          "publisherFamily": "933thedrive.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.933thedrive.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
+          "pageTitle": "OpenAI&#8217;s Sam Altman to brief UN Security Council next week | 93.3 The Drive",
+          "canonical": "https://www.933thedrive.com/2026/09/18/openais-sam-altman-to-brief-un-security-council-next-week/",
+          "bodyChars": 1734,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://gulfnews.com/world/americas/openais-sam-altman-to-brief-un-security-council-next-week-1.500680159",
+          "domain": "gulfnews.com",
+          "publisherFamily": "gulfnews.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://gulfnews.com/world/americas/openais-sam-altman-to-brief-un-security-council-next-week-1.500680159",
+          "pageTitle": "Sam Altman to Brief UN Security Council on AI Risks and Global Regulation Next Week",
+          "canonical": "https://gulfnews.com/world/americas/openais-sam-altman-to-brief-un-security-council-next-week-1.500680159",
+          "bodyChars": 1640,
+          "topicOverlap": 7
+        },
+        {
+          "suppliedUrl": "https://www.breitbart.com/tech/2026/09/22/ai-doomers-unite-anthropics-dario-amodei-and-openais-sam-altman-to-address-un-security-council/",
+          "domain": "breitbart.com",
+          "publisherFamily": "breitbart.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.breitbart.com/tech/2026/09/22/ai-doomers-unite-anthropics-dario-amodei-and-openais-sam-altman-to-address-un-security-council/",
+          "pageTitle": "AI Doomers Unite: Anthropic&#039;s Dario Amodei and OpenAI&#039;s Sam Altman to Address UN Security Council",
+          "canonical": "https://www.breitbart.com/tech/2026/09/22/ai-doomers-unite-anthropics-dario-amodei-and-openais-sam-altman-to-address-un-security-council/",
+          "bodyChars": 3333,
+          "topicOverlap": 10
+        },
+        {
+          "suppliedUrl": "https://unn.ua/en/news/sam-altman-will-address-the-un-security-council-on-the-risks-of-artificial-intelligence",
+          "domain": "unn.ua",
+          "publisherFamily": "unn.ua",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://unn.ua/en/news/sam-altman-will-address-the-un-security-council-on-the-risks-of-artificial-intelligence",
+          "pageTitle": "Sam Altman will address the UN Security Council on the risks of artificial intelligence | УНН",
+          "canonical": "https://unn.ua/en/news/sam-altman-will-address-the-un-security-council-on-the-risks-of-artificial-intelligence",
+          "bodyChars": 1810,
+          "topicOverlap": 5
+        },
+        {
+          "suppliedUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
+          "domain": "cnbc.com",
+          "publisherFamily": "cnbc.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
+          "pageTitle": "Altman, Amodei expected to join UN Security Council meeting about AI",
+          "canonical": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html",
+          "bodyChars": 2201,
+          "topicOverlap": 8
+        },
+        {
+          "suppliedUrl": "https://finance.biggo.com/news/4c08c8cd-a013-4e73-ab7c-79c321e9de71",
+          "domain": "finance.biggo.com",
+          "publisherFamily": "biggo.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://finance.biggo.com/news/4c08c8cd-a013-4e73-ab7c-79c321e9de71",
+          "pageTitle": "UN Security Council to Hear From DeepSeek, OpenAI and Anthropic on AI Risks — BigGo Finance",
+          "canonical": "https://finance.biggo.com/news/4c08c8cd-a013-4e73-ab7c-79c321e9de71",
+          "bodyChars": 5815,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeDY3NVVfOWVmSUQzeGNOVzNINFZ5T014ZVVYV1RkZGVYdXdNMlZodnF6MUY5VUdnakx1YmFBbl93WW42alY5RDluc0FrTlgyMU8xN3pXMC1YckxKenhPN1R2c0d3Y003ZllNaWhsUTVRdTJYaF9hbS1CMWRPMW9tenlHdHYwSzJwTUVHMnNXeDNOaVhUbXAzS2tZc2ZUc2FjUUlMcVhaeTVoUVpLNV9sNk53dFc4UdIBuwFBVV95cUxQRFFnS1M5WENMU2FQMVpQczNnQng4bXJCNnkybEVYTkQyWnhVYm8xY1hwX2hJNlVsOVlLSUdleUtIUUUwT1VhVHFNUFdvcERpbHhoY2F1SmgteTVxZHNIQU91am52dFF6VVIyTGhuTTdYRjFNTEhoNnJnYjQ1dDJHVXpEVk5MRkJnWWF6dVNqWlIzdUFIaXhfSnhDMUhEVGZCbUJkeFh5cmxrd2Z0QWZEY0ZCZ1AwMEZUNWdN?oc=5",
+      "title": "AI firm leaders tell UN Security Council that it could be a risk to all humanity - PBS",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "pbs.org"
+      ],
+      "independentDomains": [
+        "pbs.org"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
+          "domain": "pbs.org",
+          "publisherFamily": "pbs.org",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
+          "pageTitle": "AI firm leaders tell UN Security Council that it could be a risk to all humanity | PBS News",
+          "canonical": "https://www.pbs.org/newshour/world/ai-firm-leaders-tell-un-security-council-that-it-could-be-a-risk-to-all-humanity",
+          "bodyChars": 2380,
+          "topicOverlap": 7
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR2txb3RqODJqWDBDLUdGUTdTbVJSZEdyNDhMd1g2OWV2RjQtRVBPcTR3VE5kZU9wc2pDc3pvVWxIUnhleXQtQ3lERGdadV95RmxQSUxOaFJJZWp1NFk5cGRiS2xtN01GTUdkNjFIcUxUVnhUZThkSDJTS3c4emVIXzFzT2JnZ0E?oc=5",
       "title": "Trump Cites National Security as He Faces Pushback on Press Ban, D.C. Arch and More - The New York Times",
       "status": "block",
@@ -2679,6 +2500,37 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNmRudERzel9EemdGTXAyOEwwNkRKN2lxQzlPT0Z0SmY3bFFIMUlUb044c3JQa1JwODhGRFZGa0diWXBIb21sbEY2aE5fTUZzMDZIQnRoT1lLbGNaRkRNczVTUTlvSzE2bzNzVEtqMV9YWEZkcXhDX1FXRE4zVTlUUlFEVlRxMnRhOWdmelc5WURmM1VuWUstTFBQdlZ0MnNJQmdOeldOUW8yZk1uZTAxZHFn?oc=5",
+      "title": "How to understand Trump's national security defense in his press ban - NPR",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "npr.org"
+      ],
+      "independentDomains": [
+        "npr.org"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.npr.org/2026/09/23/nx-s1-5978862/how-to-understand-trumps-national-security-defense-in-his-press-ban",
+          "domain": "npr.org",
+          "publisherFamily": "npr.org",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.npr.org/2026/09/23/nx-s1-5978862/how-to-understand-trumps-national-security-defense-in-his-press-ban",
+          "pageTitle": "How to understand Trump's national security defense in his press ban : NPR",
+          "canonical": "https://www.npr.org/2026/09/23/nx-s1-5978862/how-to-understand-trumps-national-security-defense-in-his-press-ban",
+          "bodyChars": 762,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbzV4b1RJeC1yQko4bHd2emRxcHhjalM0bTFabzdZeHBaRXkyVDVNNXRrc2lDdFVxcVItWjlQUDJRQXRKcGl1aDZoZDZmSWVLdUdRdzduTG5PeHIyZVVQOFlYNjdXMkw2TThNV01fT2ZzLVdUQjJodVE3RTMwNzB5cHk1N1Y1cWNfTGN4TWZKM2tsUHpBN3dBS2Z5dGs1N29qOUtCSV92TEFCY0RXcU1LM1dITTAtQQ?oc=5",
@@ -2704,7 +2556,7 @@
           "finalUrl": "https://siliconangle.com/2026/09/23/oracle-puts-database-security-controls-beneath-ai-agents-oracleaicybersecurity/",
           "pageTitle": "Oracle puts database security controls beneath AI agents - SiliconANGLE",
           "canonical": "https://siliconangle.com/2026/09/23/oracle-puts-database-security-controls-beneath-ai-agents-oracleaicybersecurity/",
-          "bodyChars": 5940,
+          "bodyChars": 5952,
           "topicOverlap": 8
         }
       ],
@@ -2744,7 +2596,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQcmt4MDhleU1ELVgyS0tEM0tTMHFmbkNTZTNsSUNpZ0JjZmpEb0VXTGEwTVFxbDV4ZTFmYnZtdWI5Slg0VFZTVF9DVXdpTmY2M0hpNFUxV3RDQ1prQTZ1Y19hMWRKRTJJQWU4QW5vZnk4M1lWOGxualliVXg1QzFQOFkydWNkNDcxV2lRMlhHU085SWhQOVBDa1kwOWI1VGhJWU5iTTBIc1RLWF9nQ3cwbnpFMEc0VU10VHhSdFJKXy1Tbjg?oc=5",
-      "title": "UK shares findings of damning climate crisis national security report suppressed under Starmer - The Guardian",
+      "title": "UK shares findings of damning climate crisis national security report suppressed under Starmer - theguardian.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -2767,130 +2619,11 @@
           "pageTitle": "UK shares findings of damning climate crisis national security report suppressed under Starmer | Climate crisis | The Guardian",
           "canonical": "https://www.theguardian.com/environment/2026/sep/23/uk-climate-crisis-national-security-report-suppressed-starmer-ed-miliband",
           "bodyChars": 5007,
-          "topicOverlap": 11
+          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE13b0Q5VWs0M2FuZkRILU1ER2I0eTZGbkY2TnZGTVlNNmZrQ2NsVG5jeXk2Q3FKY0o5X3FGVE9LZG5neWxHZ2FScHhSTGFxZGQ0SkZGX2F3SzA2cFhTQ1BwYl9wQVN1Ti1sUTNpTDVtRndxUmdUOFM0Uw?oc=5",
-      "title": "DOJ defends Trump White House media ban, citing national security and \"professionalism and decorum\" - CBS News",
-      "status": "pass",
-      "evidenceLevel": "strong",
-      "validSourceCount": 7,
-      "independentPublisherCount": 6,
-      "independentPublisherFamilies": [
-        "cbsnews.com",
-        "co.ke",
-        "aol.com",
-        "13wham.com",
-        "thehill.com",
-        "deadline.com"
-      ],
-      "independentDomains": [
-        "cbsnews.com",
-        "streamlinefeed.co.ke",
-        "aol.com",
-        "13wham.com",
-        "thehill.com",
-        "deadline.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.cbsnews.com/news/doj-defends-trump-white-house-media-ban/",
-          "domain": "cbsnews.com",
-          "publisherFamily": "cbsnews.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.cbsnews.com/news/doj-defends-trump-white-house-media-ban/",
-          "pageTitle": "DOJ defends Trump White House media ban, citing national security and \"professionalism and decorum\" - CBS News",
-          "canonical": "https://www.cbsnews.com/news/doj-defends-trump-white-house-media-ban/",
-          "bodyChars": 8098,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://streamlinefeed.co.ke/news/doj-defends-trumps-white-house-media-ban-citing-national-security-and-access-as-a-privilege",
-          "domain": "streamlinefeed.co.ke",
-          "publisherFamily": "co.ke",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://streamlinefeed.co.ke/news/doj-defends-trumps-white-house-media-ban-citing-national-security-and-access-as-a-privilege",
-          "pageTitle": "DOJ Defends Trump's White House Media Ban, Citing National Security and Access as a 'Privilege' | Streamline",
-          "canonical": "https://streamlinefeed.co.ke/news/doj-defends-trumps-white-house-media-ban-citing-national-security-and-access-as-a-privilege",
-          "bodyChars": 6691,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://www.aol.com/articles/defending-trump-media-ban-doj-090816000.html",
-          "domain": "aol.com",
-          "publisherFamily": "aol.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.aol.com/articles/defending-trump-media-ban-doj-090816000.html",
-          "pageTitle": "Defending Trump media ban, DOJ cites national security and says White House access is a ‘privilege’ - AOL",
-          "canonical": "https://www.nbcnews.com/politics/politics-news/trump-media-ban-white-house-access-privilege-national-security-doj-rcna599347",
-          "bodyChars": 4956,
-          "topicOverlap": 11
-        },
-        {
-          "suppliedUrl": "https://www.aol.com/articles/trump-turns-national-security-crutch-115057000.html",
-          "domain": "aol.com",
-          "publisherFamily": "aol.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.aol.com/articles/trump-turns-national-security-crutch-115057000.html",
-          "pageTitle": "Trump leans on ‘national security’ crutch to justify media ban citing Iran War and his ballroom - AOL",
-          "canonical": "https://www.independent.co.uk/news/world/americas/us-politics/trump-media-ban-national-security-ballroom-b3054967.html",
-          "bodyChars": 3471,
-          "topicOverlap": 10
-        },
-        {
-          "suppliedUrl": "https://13wham.com/news/nation-world/doj-department-of-justice-calls-white-house-media-access-a-privilege-ahead-of-hearing-in-banned-outlets-lawsuit-cnn-ms-now-politico-pools-first-amendment-rights-news-organizations-temporary-restraining-order-president-trump-fake-news-national-security",
-          "domain": "13wham.com",
-          "publisherFamily": "13wham.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://13wham.com/news/nation-world/doj-department-of-justice-calls-white-house-media-access-a-privilege-ahead-of-hearing-in-banned-outlets-lawsuit-cnn-ms-now-politico-pools-first-amendment-rights-news-organizations-temporary-restraining-order-president-trump-fake-news-national-security",
-          "pageTitle": "Judge holds off on ruling in Trump White House media outlet ban hearing",
-          "canonical": "https://wpde.com/news/nation-world/doj-department-of-justice-calls-white-house-media-access-a-privilege-ahead-of-hearing-in-banned-outlets-lawsuit-cnn-ms-now-politico-pools-first-amendment-rights-news-organizations-temporary-restraining-order-president-trump-fake-news-national-security",
-          "bodyChars": 4762,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://thehill.com/homenews/administration/6105819-doj-trump-administration-defense-white-house-media-ban/amp/",
-          "domain": "thehill.com",
-          "publisherFamily": "thehill.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://thehill.com/homenews/administration/6105819-doj-trump-administration-defense-white-house-media-ban/amp/",
-          "pageTitle": "Trump administration presses court to drop CNN, MS Now, Politico lawsuit over media ban",
-          "canonical": "https://thehill.com/homenews/administration/6105819-doj-trump-administration-defense-white-house-media-ban/",
-          "bodyChars": 3584,
-          "topicOverlap": 9
-        },
-        {
-          "suppliedUrl": "https://deadline.com/2026/09/trump-cnn-ban-lawsuit-latest-1237110879/",
-          "domain": "deadline.com",
-          "publisherFamily": "deadline.com",
-          "resolvedFrom": "article-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://deadline.com/2026/09/trump-cnn-ban-lawsuit-latest-1237110879/",
-          "pageTitle": "Trump Insists White House Ban On CNN, MS Now Is Constitutional",
-          "canonical": "https://deadline.com/2026/09/trump-cnn-ban-lawsuit-latest-1237110879/",
-          "bodyChars": 8739,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUkhIbURJQ0VQTTA1Z016RFotUWZFZGZKV29Ta3h0YTRtQm5YV3ItV3V1OVJnemJJdTRtcXJJV3F0T1RzSUxrMXdoSnZLLVVLU1cwaDU3cm9JUTZHTjhINFpxSTV0eXNzbTl2aGhlbktnS2RpUUJPb3pocE5PSHowUjRJWWtHVHpFT0xHdGdCUEVuMlJ1OGdlamRQSklaVjV6Wm9HZVZRTHFodWk0OTFPWW1NRGlZeXYyczBXUkhIaWFDUnczN0E?oc=5",
@@ -2925,7 +2658,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSUxtS1IzZFVIdU82cC1TWnpES1RmdmVkNkozYkt2X1FLREpXWkFyM0x3NndOdjRkTXg2SWJnWlJrWm5vUjl2ZXI0aFFnVldDT2gwUWozQ1hLelhvYnZKakxtdXZhWjUtYV9ib3RRVGQwTFdRVEpiXzlWekl4V2RjT1l3bTdqRFFaSGZiSFhOQ3AybkFiZFE?oc=5",
-      "title": "Bitcoin Falls Below $84,000 as Hot US Data Sends Yields Higher - Yahoo Finance",
+      "title": "Bitcoin Falls Below $84,000 as Hot US Data Sends Yields Higher - finance.yahoo.com",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -2978,7 +2711,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYVZzS1p6eVpLSHg1YzVsdGg1NlpKcXVlbFVqSnF5S3hpSEZBRGVGeVp3S2tvbW1OUll5TXdwSlM0Wm1PMDdBenA1MXhZakVUQjRGX2pZbHhUQlJRTGM0UmZYSTk0Z3d3MWpiRmZjQU1ZR0NVUlZaX1cybDhXd2wyV3BzV2tSTGQwcC1aaDlqZw?oc=5",
-      "title": "Bitcoin Is Down Just 1.2% for 2026 After Clearing $86,000. Can It End the Year Green? - Yahoo Finance",
+      "title": "Bitcoin Is Down Just 1.2% for 2026 After Clearing $86,000. Can It End the Year Green? - finance.yahoo.com",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -3010,59 +2743,6 @@
           "canonical": "https://247wallst.com/investing/cryptocurrency/2026/09/23/bitcoin-is-down-just-1-2-for-2026-after-clearing-86000-can-it-end-the-year-green/",
           "bodyChars": 7604,
           "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9lWGhHNU1PaFFLeE9oTnR2M3dpY05kSDJLbFB1TjA3NmpZc1RSV3U3MW1yeWpQOXlEYTEyVC0ta0M0WXBteEhpS0VYVkZKalFHZ3daT3NRWldsNjNTaHpTVmlmc3F1Nk5UQmo3RXQ5SHVUWVgzLXZpaQ?oc=5",
-      "title": "Crypto ownership grows, but long-term integration lags - qz.com",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [
-        {
-          "suppliedUrl": "https://qz.com/crypto-ownership-grows-but-long-term-integration-lags-",
-          "domain": "qz.com",
-          "publisherFamily": "qz.com",
-          "resolvedFrom": "research-story-link",
-          "ok": false,
-          "reason": "unreachable-or-non-html"
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
-      "link": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
-      "title": "VC firm Bessemer now has another $5.75B to invest in (what else?) AI",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "techcrunch.com"
-      ],
-      "independentDomains": [
-        "techcrunch.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
-          "pageTitle": "VC firm Bessemer now has another $5.75B to invest in (what else?) AI | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
-          "bodyChars": 2164,
-          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -3325,6 +3005,83 @@
       "sourceVerificationStatus": "verified"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQM1Z0QzVucTYtcXlKckpuUTRQVWNPc19DUXNRSzkxODNfQms0MThaY0kxYjRwckhYUDJTOWkwS3hlZ29seXVDSjQwa1hwTllQREw5OUZkNGZJV3hNdFY1WHdWeUJmSjlOd2JWXzJ6b1dkWEVGbVhaYUVxejd0Q2hOY1ZpRXFQM2dLbnlBMWRXeWF4RXNJNFNjVUpBQmdWVnhzRm5oZFM5alZNMlgyNHhyRFg1dXFjdWdBR1hGTEViakxKQ0hhdWloam1IVWJtOTVvb1ZtRA?oc=5",
+      "title": "'Super Intelligence': the president’s new term for AI, explained - Nextgov/FCW",
+      "status": "pass",
+      "evidenceLevel": "strong",
+      "validSourceCount": 2,
+      "independentPublisherCount": 2,
+      "independentPublisherFamilies": [
+        "nextgov.com",
+        "defenseone.com"
+      ],
+      "independentDomains": [
+        "nextgov.com",
+        "defenseone.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.nextgov.com/artificial-intelligence/2026/09/super-intelligence-presidents-new-term-ai-explained/416164/?oref=ng-homepage-river",
+          "domain": "nextgov.com",
+          "publisherFamily": "nextgov.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.nextgov.com/artificial-intelligence/2026/09/super-intelligence-presidents-new-term-ai-explained/416164/?oref=ng-homepage-river",
+          "pageTitle": "'Super Intelligence': the president’s new term for AI, explained - Nextgov/FCW",
+          "canonical": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
+          "bodyChars": 3342,
+          "topicOverlap": 5
+        },
+        {
+          "suppliedUrl": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
+          "domain": "defenseone.com",
+          "publisherFamily": "defenseone.com",
+          "resolvedFrom": "article-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
+          "pageTitle": "'Super Intelligence': the president’s new term for AI, explained - Defense One",
+          "canonical": "https://www.defenseone.com/technology/2026/09/super-intelligence-presidents-new-term-ai-explained/416153/",
+          "bodyChars": 3345,
+          "topicOverlap": 5
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOaUE4TUtRdmJDU1JFbzlreEZYaWZDNGlKallZaEI1aVFUSi1YOVJiejVwNGI2SE1DclhYNTRiaExHTXNSb2pBVmxqd1ExWXBPMzFzQzJXUWhrTXJOQndpRW92V3lqa05wNXR0SWdacElWM191a1laSjhCSjQ4UVJ4anNDdEJ4Z3NvcTJHck8xRmZKd0lVUWlkTDNXN1FmUUVzUFQwSkpDbWRPRUJXN284RGVUcXhuZ1hPR09BZnFmNEd0Wk9mWDJMQkNB?oc=5",
+      "title": "SIGNUS USA® Celebrates Successful American Debut Showcasing Flagship German Spine Technology - Ortho Spine News",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "orthospinenews.com"
+      ],
+      "independentDomains": [
+        "orthospinenews.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://orthospinenews.com/2026/09/23/signus-usa-celebrates-successful-american-debut-showcasing-flagship-german-spine-technology/",
+          "domain": "orthospinenews.com",
+          "publisherFamily": "orthospinenews.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://orthospinenews.com/2026/09/23/signus-usa-celebrates-successful-american-debut-showcasing-flagship-german-spine-technology/",
+          "pageTitle": "SIGNUS USA® Celebrates Successful American Debut Showcasing Flagship German Spine Technology &#8211; Ortho Spine News",
+          "canonical": "https://orthospinenews.com/2026/09/23/signus-usa-celebrates-successful-american-debut-showcasing-flagship-german-spine-technology/",
+          "bodyChars": 2488,
+          "topicOverlap": 10
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQQ25UWWR5ZktHUHhNRnRtWUxTbG9BZXJZZElUWFA1WVVqSTA2NHIwczNQMV9JUlRfbzRJVExYZVNTME5ySFhiUEJ3STgtUjdkZ3Awa2xXNUFOcEg0QWlVNnBkakFfTHNoRVZyQk1hbGIxNHJEa3ZnNDRfWk1sTGlTa0l6QlRURS1FS1F6TllBWE9nRVdsUTI1V0FGWmlLVE5ZbUg1dFA5ak85eldKOS1NeURsNFUwTlhJNDFnNmFWRVQyd2psZE1BTHpfWmtmYkZFYjhFazlkMms4TzZhYy15Uw?oc=5",
       "title": "Bybit Odds: View to Victory official product launch with a 17,000 USDT total prize pool! - Bybit",
       "status": "pass",
@@ -3387,8 +3144,90 @@
       "sourceVerificationStatus": "partial"
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPUG1YWk1XQnM1TXBJQ0ZpdjdST05kU3F6eWZPOHlNNmQyVUwzQVV5YVFlNVo3eWxZcnE4UmNWUUlHTS1HMjZwbG9TWHVQOG1qS1RDZncwV0x5T2IybGt0MEkzMWhZYW0zRjhIRlM4ei0tWnZFQXZjbDg4Zkl3R1RwWmNidWRQT05wMTduNWl1YVFXNExuZVJBZnpLRlNldDJRRG1aRUlGUTBRSDFON1UwQk0xdVFGMXBVWFVrd3J5M1VHcDEyNER5ZmZSOXp4WEJt?oc=5",
+      "title": "Mitsotakis at Stanford: Greek Government Seeks to Strengthen Country’s Position on International Stage - The National Herald",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "thenationalherald.com"
+      ],
+      "independentDomains": [
+        "thenationalherald.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.thenationalherald.com/mitsotakis-at-stanford-greek-government-seeks-to-strengthen-countrys-position-on-international-stage/",
+          "domain": "thenationalherald.com",
+          "publisherFamily": "thenationalherald.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.thenationalherald.com/mitsotakis-at-stanford-greek-government-seeks-to-strengthen-countrys-position-on-international-stage/",
+          "pageTitle": "Mitsotakis at Stanford: Greek Government Seeks to Strengthen Country’s Position on International Stage - The National Herald",
+          "canonical": "https://www.thenationalherald.com/mitsotakis-at-stanford-greek-government-seeks-to-strengthen-countrys-position-on-international-stage/",
+          "bodyChars": 7513,
+          "topicOverlap": 12
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8wQkd0NTU4T1hvVWljQl9qWC1DTF9xbHR6UHZweFdLWkdnXzlvcDc4bk9naVFXUnRkSHRtOE9XVkgzWWQ4VGRXUUQ2bWRPaHpocmc?oc=5",
+      "title": "Threats and counter-threats complicate new US-Iran diplomacy - Iran International",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "iranintl.com"
+      ],
+      "independentDomains": [
+        "iranintl.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.iranintl.com/en/202609239893",
+          "domain": "iranintl.com",
+          "publisherFamily": "iranintl.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.iranintl.com/en/202609239893",
+          "pageTitle": "Threats and counter-threats complicate new US-Iran diplomacy | Iran International",
+          "canonical": "https://www.iranintl.com/en/202609239893",
+          "bodyChars": 24546,
+          "topicOverlap": 6
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPSHBObE1ZM3ZSc0QwNURQWkZkS2tORVNRMHhNUUhvNjNZRjR4RHNIVWlyUE5qZV82WVowbEFFX2RhR09TeE5WMHQ4S3l0TkdZTjN3YWdvVUNfRUZYdTZVOW9jc3YtQlNHdWNjcFh4cl9jNlk4VDkxMlFJc18ybzlLN3B4NjZxZVB3cFNBTy1mSXlLVmZlbDRpdXd4WVljVEtaZGxkRHpIMTBSZw?oc=5",
+      "title": "Tech leaders to UN: For the sake of humanity, please control the AI technology we created - AP News",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB1ZmdGWG5ublkyVnNGaHplY002MVBfV1g0a1Fpckd0N2lRM0RsSWk4R0R1cjQtVXd5T2dhRERVdFc1MVctWndZWTQ5TTY3dlhwOHNVTXVrNnh4SmkyVjRodWQySmF6Zzd5SkdNdHNSY2bSAXZBVV95cUxNdE0zQ2N1bUlzeERWOEpqWGcxNnRwemNMZWtmemdsRnIwbXpuRnJvdTdON2xnNUF5ZmZoX212SWZORE13Y2pONVd6NnR0S3lYTDJNM2pqN0lLVGhZTDJBeHJVbnQ5XzVkSVlLMHZqdDBzUnlEbGZB?oc=5",
+      "title": "Bitcoin hits highest level since January at $86,000, as the market debates whether the 'crypto winter' is over - CNBC",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPc2tBSFlwWW5FZEdxa05RSm1oOGpBdUEwUEdmZ0NDcGlUTGN4OTA3N3JUeG01Wk9UZ25LMmhOc0owdTRvbndrRXpCSEZ3Xy1SVjBHcDN3bDg1RkVKMnprQzEwQWNMMmxuUXA4enlzWERNLXZiZkhEaDN4eVNhQ1VHdklwdms3dDZmcDlSYXZBVUtKT3VxUlU5RW51Z0FFcE82ZnpTQWFUSXZpTnlsTk1neVB3R2tFWXlfZm16VkdhZjFIZ2F4ejdiS2Nn?oc=5",
-      "title": "'Crypto winter is over,' analyst says as bitcoin tops $86,000: Chart of the Day - Yahoo Finance",
+      "title": "'Crypto winter is over,' analyst says as bitcoin tops $86,000: Chart of the Day - finance.yahoo.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -3531,31 +3370,31 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcmxTek1DQjl3aV90T1RkNGVvQUxLOVh6aGdSUzBNZ0JORlpSMmJwRUlHYm05Q0N5WXlvVnM2djVXQlVLMU9tdGtPYkJXWkhVRVJsYXhCZWlFVjlZOVdCYldMWEI2LWtfVG5kWjZGeEVSS3QxdzU0cUFLeUFPdGI0YVk4ZkE1bkFYNkV2MGw4ZmpWYWx2TnpNTXdYQkRNTXktLXJqWUFRd3UzY29yR2YxOHZ2Q2RnRHdYUDkwOEI3RWQwaHRvU04yY3lkMlJzRXBjeWtJMVVncy0?oc=5",
-      "title": "University showcases role as regional engine on Southeast Kansas Bio-Technology Tour - Pittsburg State University",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9wS05QQW1RemlBaEY5TXMydkROd3dzQ0xBVndpRTAyZkpVblNTM0ltRFZCdDRRb0dkNE54bUN0RXZ2c2E0aERhQmotdjh1WVNPZlVrVXFEb0czWUpCaWlCN0ZZdktSNTNMejZ5OW8ydUFVVl8yb2t6YlBsONIBgAFBVV95cUxNUDE5REZobnBEZS16VmNwSWdhd21DSjBlQmxudTY5V0JFcVoyeEoyZllMX3VlbkE4OWtCOEpoX2lEdTJ6Mk41U1F5Y00zU1VUZFVKaWlyYUk2Qk9zR2t0ZjBlUS1iVkl4MndqNmUwS2IxeGhQMzF5TTkwTVV3WkJQQQ?oc=5",
+      "title": "Auto industry leaning into hybrid technology - ABC7 Los Angeles",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "pittstate.edu"
+        "abc7.com"
       ],
       "independentDomains": [
-        "pittstate.edu"
+        "abc7.com"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://www.pittstate.edu/gorillaconnection/2026/09/university-showcases-role-as-regional-engine-on-southeast-kansas-bio-technology-tour.html",
-          "domain": "pittstate.edu",
-          "publisherFamily": "pittstate.edu",
+          "suppliedUrl": "https://abc7.com/post/auto-industry-leaning-hybrid-technology/19806024/",
+          "domain": "abc7.com",
+          "publisherFamily": "abc7.com",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.pittstate.edu/gorillaconnection/2026/09/university-showcases-role-as-regional-engine-on-southeast-kansas-bio-technology-tour.html",
-          "pageTitle": "University showcases role as regional engine on Southeast Kansas Bio-Technology Tour",
-          "canonical": "",
-          "bodyChars": 5942,
-          "topicOverlap": 8
+          "finalUrl": "https://abc7.com/post/auto-industry-leaning-hybrid-technology/19806024/",
+          "pageTitle": "Auto industry leaning into hybrid technology - ABC7 Los Angeles",
+          "canonical": "https://abc7.com/post/auto-industry-leaning-hybrid-technology/19806024/",
+          "bodyChars": 1937,
+          "topicOverlap": 5
         }
       ],
       "recoveryAttempts": 0,
@@ -3595,6 +3434,19 @@
     {
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPT0Z3MDRZT0dMU1I4SzgxZF95TTgxLUtsNENmSm1jNmMxNUxQeFFQd3R6NndFNXNGTVFjbHd3SUQ2U1RXeGtlWVRlT2JTLUNnNThJdHhyNGpOWnJXRDZGb3NUZDFUZElGSVJwcVQtQ0VfWS04RlpkaEFjMXBQVzJua2hvZWxjT0hhOUlFdw?oc=5",
       "title": "Police Step Up U.N. Security After 3 People Emerge From Manhole - The New York Times",
+      "status": "block",
+      "evidenceLevel": "none",
+      "validSourceCount": 0,
+      "independentPublisherCount": 0,
+      "independentPublisherFamilies": [],
+      "independentDomains": [],
+      "sources": [],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMy1zczlyTndkUEtpNlg3VXZrY0NuQXY3Z3RVU0F5NmFEZ21FWjF1TV81Mk5jZnVsUXM4ejIzT2dYbkR6SHpjRHowUzFPQnBUNDNMNmwzcV9jcTRfZGRHMjM2RjJaZzY0Qy1rbTdpY1YzVDRPNE9nN0NlZm9ScFhUQUVQMDNnOXdpNVBXcDNZa0RYX3R1TUloRlRxMEFrYXVxOGh3?oc=5",
+      "title": "Bitcoin’s Quantum Problem Is Really A Social Problem - Forbes",
       "status": "block",
       "evidenceLevel": "none",
       "validSourceCount": 0,
@@ -3768,68 +3620,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://www.theverge.com/news/999195/microsoft-surface-pro-12-inch-surface-laptop-13-inch-qualcomm-x2-plus",
-      "title": "Microsoft refreshes its smaller Surface Pro and Laptop with Qualcomm’s X2 Plus",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "theverge.com"
-      ],
-      "independentDomains": [
-        "theverge.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theverge.com/news/999195/microsoft-surface-pro-12-inch-surface-laptop-13-inch-qualcomm-x2-plus",
-          "domain": "theverge.com",
-          "publisherFamily": "theverge.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/news/999195/microsoft-surface-pro-12-inch-surface-laptop-13-inch-qualcomm-x2-plus",
-          "pageTitle": "Microsoft refreshes its smaller Surface Pro and Laptop with Qualcomm’s X2 Plus | The Verge",
-          "canonical": "https://www.theverge.com/news/999195/microsoft-surface-pro-12-inch-surface-laptop-13-inch-qualcomm-x2-plus",
-          "bodyChars": 4106,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
-      "link": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
-      "title": "Microsoft’s new Surface Mouse has haptic feedback and a customizable action button",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "theverge.com"
-      ],
-      "independentDomains": [
-        "theverge.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
-          "domain": "theverge.com",
-          "publisherFamily": "theverge.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
-          "pageTitle": "Microsoft’s new Surface Mouse has haptic feedback and a customizable action button | The Verge",
-          "canonical": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
-          "bodyChars": 3162,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOOU1CZVdfZlFKYmhQdGF1MTlaUl9SMGNxY19WSWZhWmdxRVZTb20yY29yc1JoSXB6R2tYVnRad1BhWWZaZ1NoNnZYZjhPTndnM3Y2aWlEV0JnbDZGUGVrTUV5TnNlN0tOWkF3X2EtanVwZ24yeW5odHhxQ0puY2s0UllVbE5jMTRXcUFWbVdSaFU2U2hhZTVQem1MOWdfb3R1TWZ5dGo5S0d5ZWxXMm9FbzN4RUlNSTEtNEg2a0F1c2hlbnNkdjZtNU5yYXN3OGktY0FBVWpxcl9XSmFVM0RvSHlRQWpVYWM5WUNMUmVpLUFENTBrWFplag?oc=5",
       "title": "Governor Newsom announces world-leading experts to deliver on his AI executive order, including advancing creation of a “kill switch” - California State Portal | CA.gov",
       "status": "pass",
@@ -3861,17 +3651,35 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPQXZ0a1VPSkt0WEprT0lHdU9oSGRkMmZ2THJxMzNzRUlIcmtUa2VPc3NTU1V1T2lRclRFbWxKYVZLUVRkVm1iRmhyVEZYbnFMSDdWYnBTdnNaWS1GWGhMZzBHZHlXZVA0SXkxNXUtM1E4bXVoTm5kNmpZLVRwMWxLV3U1MUVERk9qaDlDVENkakhRdDU5aThvOEFiRDBBR2R4blVlVVgyS3N4NWFQeEZCVFFKUklCSWFnemlwOQ?oc=5",
-      "title": "AI uses routine CT images to evaluate cardiovascular risk - Cardiovascular Business",
-      "status": "block",
-      "evidenceLevel": "none",
-      "validSourceCount": 0,
-      "independentPublisherCount": 0,
-      "independentPublisherFamilies": [],
-      "independentDomains": [],
-      "sources": [],
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNTG5RQ3pSQWJMM0l1czh6dXo0NlFmWWtkOE9WZUx3c3dSQng3U28xNGdPY09iWlRfWUp4YU1vcDFKNHlEWHBoc1UyRV8yUXlSNnZCWHpjcFB6UjJNemdJRG9SU1h4N29qcWtVUng4UW9aeGJ2dUlPd0h4Unh5ZmYtQktlcw?oc=5",
+      "title": "The next AI divide is between learning and earning - The World Economic Forum",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "weforum.org"
+      ],
+      "independentDomains": [
+        "weforum.org"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.weforum.org/stories/artificial-intelligence/ai-young-skills-jobs/",
+          "domain": "weforum.org",
+          "publisherFamily": "weforum.org",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.weforum.org/stories/artificial-intelligence/ai-young-skills-jobs/",
+          "pageTitle": "The next AI divide is the distance between learning and earning | World Economic Forum",
+          "canonical": "https://www.weforum.org/stories/artificial-intelligence/ai-young-skills-jobs/",
+          "bodyChars": 7383,
+          "topicOverlap": 8
+        }
+      ],
       "recoveryAttempts": 0,
-      "sourceVerificationStatus": "unverified"
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQQ1hSZVA3UXRLNWE3RU8wUWRTN3Z5SGRTQWkzRGRScVVHdDhfWFliZXdLSXlDdzdoX3NhN3BjdzNEUTJ2NmJRMVYyN2RteUdidHd0ejNtS1hZSlFPUWw5Si1GblRRQktKM055MDQ3V2kzWlVuREpNSmJZelozbFZuVGU2MW1STXdqN09mUEJRa3hHUkNXbEdRUEhBV0gzVHg4RjRmQ0VRcExrNURXZnExcURyWmVheEQwSTVDTEhCODJGZUNWV09OSUFn?oc=5",
@@ -3898,6 +3706,37 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOUWt0SlExQ2pOLUJPRXlvam9hOEhoMXB3Sy1iVmVMZ3lteFpEeDdvT2tRZjdkX1hQczZlVWgyMEhnRnFfOXp4SWhlandPWW5OdFRGS0VFN2NscFpSejk5OUZkNjYxVVExQ0xJT3VpQTZaOWhjc3MzN2F0YTRNRlRobDZFdUhvRWthWHgwOUt2WUQ5c1pOaFdGSzNnR2lVUWNh?oc=5",
+      "title": "Feds accuse Secret Service software provider of hiding Russian ties - courthousenews.com",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "courthousenews.com"
+      ],
+      "independentDomains": [
+        "courthousenews.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.courthousenews.com/feds-accuse-secret-service-software-provider-of-hiding-russian-ties/",
+          "domain": "courthousenews.com",
+          "publisherFamily": "courthousenews.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.courthousenews.com/feds-accuse-secret-service-software-provider-of-hiding-russian-ties/",
+          "pageTitle": "Feds accuse Secret Service software provider of hiding Russian ties | Courthouse News Service",
+          "canonical": "",
+          "bodyChars": 3760,
+          "topicOverlap": 9
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxONTByR0lyeVpMQ2pucHVQWWh2bnJyYlo1Qnh2ZGY4S1RTeDV6MkJOQ3BmWUtGbkRKZXJZWDNxaldKTHozcWNRc3FGd2ZDamN2OExvcVJXUGxxaDI5bnc1dndFQVA2bDhlaUFuSjJ6Mkg3M2FjLVhJUDV5aHFZRjhJRFBobV9lS2dzeFJaZE5tYVVzTGZRVmJKOUJiVkVaOTRNaUE?oc=5",
@@ -3931,31 +3770,62 @@
       "sourceVerificationStatus": "partial"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9wS05QQW1RemlBaEY5TXMydkROd3dzQ0xBVndpRTAyZkpVblNTM0ltRFZCdDRRb0dkNE54bUN0RXZ2c2E0aERhQmotdjh1WVNPZlVrVXFEb0czWUpCaWlCN0ZZdktSNTNMejZ5OW8ydUFVVl8yb2t6YlBsONIBgAFBVV95cUxNUDE5REZobnBEZS16VmNwSWdhd21DSjBlQmxudTY5V0JFcVoyeEoyZllMX3VlbkE4OWtCOEpoX2lEdTJ6Mk41U1F5Y00zU1VUZFVKaWlyYUk2Qk9zR2t0ZjBlUS1iVkl4MndqNmUwS2IxeGhQMzF5TTkwTVV3WkJQQQ?oc=5",
-      "title": "Auto industry leaning into hybrid technology - ABC7 Los Angeles",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB0eGd1VzBEQTF5OG1WMlRfcnBKbThhZjVoS2JYWHV5OUtNRHRRZ2UxTUJvVGFSeXBYN1NSMUh5TUctOXhXWjZpVEoyaXRrajVpNF9LRzd1RXFoeTV3Z3RRSlhuZjlnLVRLMkZIQ0FB?oc=5",
+      "title": "The 'godfather' of AI on where the technology is headed - WBUR",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
       "independentPublisherCount": 1,
       "independentPublisherFamilies": [
-        "abc7.com"
+        "wbur.org"
       ],
       "independentDomains": [
-        "abc7.com"
+        "wbur.org"
       ],
       "sources": [
         {
-          "suppliedUrl": "https://abc7.com/post/auto-industry-leaning-hybrid-technology/19806024/",
-          "domain": "abc7.com",
-          "publisherFamily": "abc7.com",
+          "suppliedUrl": "https://www.wbur.org/hereandnow/2026/09/23/geoffrey-hinton-ai",
+          "domain": "wbur.org",
+          "publisherFamily": "wbur.org",
           "resolvedFrom": "research-story-link",
           "ok": true,
           "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://abc7.com/post/auto-industry-leaning-hybrid-technology/19806024/",
-          "pageTitle": "Auto industry leaning into hybrid technology - ABC7 Los Angeles",
-          "canonical": "https://abc7.com/post/auto-industry-leaning-hybrid-technology/19806024/",
-          "bodyChars": 1937,
-          "topicOverlap": 5
+          "finalUrl": "https://www.wbur.org/hereandnow/2026/09/23/geoffrey-hinton-ai",
+          "pageTitle": "The 'godfather' of AI on where the technology is headed | Here & Now",
+          "canonical": "https://www.wbur.org/hereandnow/2026/09/23/geoffrey-hinton-ai",
+          "bodyChars": 569,
+          "topicOverlap": 3
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "partial"
+    },
+    {
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQX2dtaDZQbGJoRXRVbXJXQ2ZjaDdjMjJNUnRFUkFCajRaMkZnVWNHS3M1RlBKTDFhZk0xN0ZScV9CLWV1ZUxoeVhBY1VzWmVQTWtYMWlNRlZ2bjdHbVJxUlZKU3VGNGpUdXc0Y3B4NGdjRDktUXNLYUhZNWdlMU16WWlFYTR5QkktT3V2c2J2b0ZtRllJNms5cEtnVkVaWnQyM3h0QURrczA0NVJIUUlCTWhJS3dfYmVHQjE4REQyTjZTZ01RbUlxNQ?oc=5",
+      "title": "Caroline Board of Supervisors approve Carmel Technology and Enterprise Center - Fredericksburg Free Press",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "fredericksburgfreepress.com"
+      ],
+      "independentDomains": [
+        "fredericksburgfreepress.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://www.fredericksburgfreepress.com/2026/09/23/caroline-board-of-supervisors-approve-carmel-technology-and-enterprise-center/",
+          "domain": "fredericksburgfreepress.com",
+          "publisherFamily": "fredericksburgfreepress.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://www.fredericksburgfreepress.com/2026/09/23/caroline-board-of-supervisors-approve-carmel-technology-and-enterprise-center/",
+          "pageTitle": "Caroline Board of Supervisors approve Carmel Technology and Enterprise Center &#8211; Fredericksburg Free Press",
+          "canonical": "https://www.fredericksburgfreepress.com/2026/09/23/caroline-board-of-supervisors-approve-carmel-technology-and-enterprise-center/",
+          "bodyChars": 7539,
+          "topicOverlap": 10
         }
       ],
       "recoveryAttempts": 0,
@@ -3963,7 +3833,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaExueENocGhzYUtQek9mdGVxSkZQUUxXdENTV1VIYUhObWdjNFFSRFB0cExkNDJyTWRFalp5RnIzT3hlU0pScWlIWkk1UGNiRUZTbE11cVpvcEF1VzRHSGNjWVJBZnd3S3dyTFRrMk1IZ0Zzbk5pbDB0alV6SnNFbFg3VQ?oc=5",
-      "title": "Are we killing ourselves with technology? - meridianstar.com",
+      "title": "Are we killing ourselves with technology? - Meridian Star",
       "status": "pass",
       "evidenceLevel": "single-source",
       "validSourceCount": 1,
@@ -3986,7 +3856,7 @@
           "pageTitle": "Are we killing ourselves with technology? | Meridian Star",
           "canonical": "https://meridianstar.com/2026/09/23/are-we-killing-ourselves-with-technology/",
           "bodyChars": 5797,
-          "topicOverlap": 2
+          "topicOverlap": 4
         }
       ],
       "recoveryAttempts": 0,
@@ -4004,37 +3874,6 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOQTlkT0dzTlZZN1pCLWpmdTdUY3Jzb0lrN2FEVG9scE5hdFhUZE1TdkZmZjByaE9VSTlweDNXV2xPYTg5SVh4N2I1VTZsblhYcFVZSDRDbl8zazAxOXJOSHlfQkZEbUhJUHFzX0FTWnVuRDFNUzREZnBnTU5nT1BDdGRYMVhvSVNGVjNSMG9CQVZjVnRfQjdjRDQtMFlMN3Q4VkY5bkNNYVpUclU?oc=5",
-      "title": "Ema raises $77M as AI starts eating into enterprise software and services - TechCrunch",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "techcrunch.com"
-      ],
-      "independentDomains": [
-        "techcrunch.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/",
-          "pageTitle": "Ema raises $77M as AI starts eating into enterprise software and services | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/",
-          "bodyChars": 6831,
-          "topicOverlap": 7
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVk52TllfMkhZN0x1WEkzV3duTUN3dEhabi1OU3FUUm9BeXBGZzF1cG4zd1NibnNrVHplRHhrU0R3UUlDZ1c0S0IzeWE5RkJBU3BERWMtWk51cm1XeE96Umc1bUFCalpBTEt6SDJ4aTM0TzJuWUZHQTFCVXE2STB5N2paUUNscDhUaEc3Yw?oc=5",
@@ -4170,37 +4009,6 @@
       "sourceVerificationStatus": "unverified"
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPWk1YWVB1WEdVLXhfa3l5eFhNUnNUMEFNVXQtTEFGeUJ5NFZ1MGw2YVg1ZVBKdXRHdGZhOXhEWDA3YnUyOWhqci1KeUZiYkVUNzhTdEpWMjMxSTM4bXc4V2JxSVVIMXZqcjl6WXU4c2ZpaWV1ejBCWmU1ZU9YTDhPa0tUN2o?oc=5",
-      "title": "Blockchain-inspired DNA storage codec recovers data from heavily damaged sequences - Tech Xplore",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "techxplore.com"
-      ],
-      "independentDomains": [
-        "techxplore.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://techxplore.com/news/2026-09-blockchain-dna-storage-codec-recovers.html",
-          "domain": "techxplore.com",
-          "publisherFamily": "techxplore.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techxplore.com/news/2026-09-blockchain-dna-storage-codec-recovers.html",
-          "pageTitle": "Blockchain-inspired DNA storage codec recovers data from heavily damaged sequences",
-          "canonical": "https://techxplore.com/news/2026-09-blockchain-dna-storage-codec-recovers.html",
-          "bodyChars": 4440,
-          "topicOverlap": 9
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTE5oU01ueU0zN0t6Mlh0QU1vU3M5bDNTSHUwSU12RmR3M0JaUjlGSUFTbkF1ZGNqWHVCN2JuR1JsRW40RnZvMUlqZk5TOTR3cGI0Z0pGX0R3U1RWZTh2UmRsUUllQlYwa1MyZ0VpRk95cUdOOWVnRjczSkV6UUhrOUN1cVltOG1YVnNJbWRlTEczRGdoWDBuQ3JUM2NOMzhHNjhzTGE3NjY?oc=5",
       "title": "Breakingviews - COMMENTARY: Bitcoin miners reveal the real AI scarcity trade - Reuters",
       "status": "block",
@@ -4212,6 +4020,37 @@
       "sources": [],
       "recoveryAttempts": 0,
       "sourceVerificationStatus": "unverified"
+    },
+    {
+      "link": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
+      "title": "VC firm Bessemer now has another $5.75B to invest in (what else?) AI",
+      "status": "pass",
+      "evidenceLevel": "single-source",
+      "validSourceCount": 1,
+      "independentPublisherCount": 1,
+      "independentPublisherFamilies": [
+        "techcrunch.com"
+      ],
+      "independentDomains": [
+        "techcrunch.com"
+      ],
+      "sources": [
+        {
+          "suppliedUrl": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
+          "domain": "techcrunch.com",
+          "publisherFamily": "techcrunch.com",
+          "resolvedFrom": "research-story-link",
+          "ok": true,
+          "reason": "story-relevant-publisher-article",
+          "finalUrl": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
+          "pageTitle": "VC firm Bessemer now has another $5.75B to invest in (what else?) AI | TechCrunch",
+          "canonical": "https://techcrunch.com/2026/09/23/vc-firm-bessemer-now-has-another-5-75b-to-invest-in-what-else-ai/",
+          "bodyChars": 2164,
+          "topicOverlap": 5
+        }
+      ],
+      "recoveryAttempts": 0,
+      "sourceVerificationStatus": "verified"
     },
     {
       "link": "https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/",
@@ -4379,73 +4218,11 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8wQkd0NTU4T1hvVWljQl9qWC1DTF9xbHR6UHZweFdLWkdnXzlvcDc4bk9naVFXUnRkSHRtOE9XVkgzWWQ4VGRXUUQ2bWRPaHpocmc?oc=5",
-      "title": "Threats and counter-threats complicate new US-Iran diplomacy - iranintl.com",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "iranintl.com"
-      ],
-      "independentDomains": [
-        "iranintl.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.iranintl.com/en/202609239893",
-          "domain": "iranintl.com",
-          "publisherFamily": "iranintl.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.iranintl.com/en/202609239893",
-          "pageTitle": "Threats and counter-threats complicate new US-Iran diplomacy | Iran International",
-          "canonical": "https://www.iranintl.com/en/202609239893",
-          "bodyChars": 24546,
-          "topicOverlap": 5
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMWVFcmFJLW13OXF0VGUyWXhMREZQTWNKSGRHTG1MZmVEUVR1TWRMQjJrajk2d01yaUVJQmVCNVBENWZCU3lyNV9YSlZuWm5kS0lOcVVPZHpHaDNQQ0EwMkI0U2NtUFE1WGlwNWFLczNCTlNJSi1WbEZoWmpJczVyWXFMNDQ2dl8wTVZUUE9TLUxhc1RSWVFUczhoMTV0NmNXa0JSM3Y3RmRvU0VXWHhsbG15eGxfaUNFM0ZrbmVyZw?oc=5",
       "title": "Trump, Putin, and Jinping Are Losing Their Ability to Influence International Affairs, According to The Washington Post - UA.NEWS",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQUktWWGJETDZ6R0FwNnA1LUo2dkhvUVNyMWRZeFlpbkRiLTBXWEdVWGtEdldraHdtTFBta1RyRkh4b1MyQXFpaXM4SjRWU2lNY0ZYMjFwU28zM21EN3lkMDg1ZHZvODBqYnNjZU92MDJvOGwyTEZhbUdRREg2SnRJcXJHNnF0a29aNFhWbFVEcUNmcmNoLW1TWkJmdkE3S0psZ053OGh4QkpmMDZtZkdvbmlnU2hsTkRRdmFkdUN6ZXZfU0xoelVtdk40YS14MXPSAdQBQVVfeXFMTkI1RHVIMkcxb1Bmc05jclZ6a2RteFFwdmxWcFRQTHJpMk0tcEZhWGE1c2RHNjNBNmRRb0lZaVdoUm1senRDR1hzR3AyeXgwNDhFeFNpbVRaM0dBaWZRRHpta2FQZElhODM0U18yQWhNYjhhelE1c1R4TEJlcjFtejBpNV8tS0x0ZElYMHh5aW1Ldk81VVozcjVjUTVBdzNqZ2dPTVJWNzFHQU5tUXJLc1dTbzNscnpNdEwtOEtoN3RkLW90S2RVVnV1MGVkdlQ4VmRvZzk?oc=5",
-      "title": "Australia PM Albanese says OpenAI agent breached government website in June - devdiscourse.com",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "devdiscourse.com"
-      ],
-      "independentDomains": [
-        "devdiscourse.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://www.devdiscourse.com/article/international/3981519-australia-pm-albanese-says-openai-agent-breached-government-website-in-june",
-          "domain": "devdiscourse.com",
-          "publisherFamily": "devdiscourse.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://www.devdiscourse.com/article/international/3981519-australia-pm-albanese-says-openai-agent-breached-government-website-in-june",
-          "pageTitle": "Australia PM Albanese says OpenAI agent breached government website in June | International",
-          "canonical": "https://www.devdiscourse.com/article/international/3981519-australia-pm-albanese-says-openai-agent-breached-government-website-in-june",
-          "bodyChars": 982,
-          "topicOverlap": 10
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "partial"
     },
     {
       "link": "https://techcrunch.com/2026/09/23/vogue-sent-robots-down-the-runway-at-vogue-world-and-people-were-not-impressed/",
@@ -4510,37 +4287,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://techcrunch.com/2026/09/23/if-amazon-doesnt-know-how-to-eliminate-carbon-emissions-then-who-does/",
-      "title": "If Amazon doesn’t know how to eliminate carbon emissions, then who does?",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "techcrunch.com"
-      ],
-      "independentDomains": [
-        "techcrunch.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://techcrunch.com/2026/09/23/if-amazon-doesnt-know-how-to-eliminate-carbon-emissions-then-who-does/",
-          "domain": "techcrunch.com",
-          "publisherFamily": "techcrunch.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://techcrunch.com/2026/09/23/if-amazon-doesnt-know-how-to-eliminate-carbon-emissions-then-who-does/",
-          "pageTitle": "If Amazon doesn’t know how to eliminate carbon emissions, then who does? | TechCrunch",
-          "canonical": "https://techcrunch.com/2026/09/23/if-amazon-doesnt-know-how-to-eliminate-carbon-emissions-then-who-does/",
-          "bodyChars": 5169,
-          "topicOverlap": 8
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://techcrunch.com/2026/09/23/youtubes-conversational-video-editing-tool-lets-creators-make-edits-in-natural-language/",
       "title": "YouTube&#8217;s conversational video editing tool lets creators make edits in natural language",
       "status": "not-eligible",
@@ -4579,37 +4325,6 @@
       "sourceVerificationStatus": "verified"
     },
     {
-      "link": "https://arstechnica.com/cars/2026/09/heres-the-torcal-the-first-fully-electric-bentley/",
-      "title": "Here's the Torcal, the first fully electric Bentley",
-      "status": "pass",
-      "evidenceLevel": "single-source",
-      "validSourceCount": 1,
-      "independentPublisherCount": 1,
-      "independentPublisherFamilies": [
-        "arstechnica.com"
-      ],
-      "independentDomains": [
-        "arstechnica.com"
-      ],
-      "sources": [
-        {
-          "suppliedUrl": "https://arstechnica.com/cars/2026/09/heres-the-torcal-the-first-fully-electric-bentley/",
-          "domain": "arstechnica.com",
-          "publisherFamily": "arstechnica.com",
-          "resolvedFrom": "research-story-link",
-          "ok": true,
-          "reason": "story-relevant-publisher-article",
-          "finalUrl": "https://arstechnica.com/cars/2026/09/heres-the-torcal-the-first-fully-electric-bentley/",
-          "pageTitle": "Here&#039;s the Torcal, the first fully electric Bentley - Ars Technica",
-          "canonical": "https://arstechnica.com/cars/2026/09/heres-the-torcal-the-first-fully-electric-bentley/",
-          "bodyChars": 3697,
-          "topicOverlap": 6
-        }
-      ],
-      "recoveryAttempts": 0,
-      "sourceVerificationStatus": "verified"
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA4aDVWTV9VN3ZUSF9CemZCNXNrWktncnBiOWF4cjRqOUxqcURLMUFWYm1DY3VxM0kwbk5tM1VEYkl1aXFibVFzMHpEUWNvbTBaejBkSk1LV2NzOW5MLXpKMVZuM0xvUnJ2?oc=5",
       "title": "Best New Product Launch Email Templates to Use in 2026 - Designmodo",
       "status": "not-eligible",
@@ -4625,7 +4340,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVVNzbDZ0MFJxOE5lM2RGaVI2YVNabjAtTHpXQjBqbllLQXFnUWt2NTNKVV8taDY0ajh0bVR5aG1Mb2lBSEFhRFhtNmh5MDEyX09RY01LakRwQXk2WnVtdEltZ1lMSTlTQlBSXzR2ZWt1MjRDQk9jVXFkM2dyNGNGWVFfa3lLRWIwazJIbFhKX2Vjd29qc1lsSA?oc=5",
-      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - news.njit.edu",
+      "title": "Innovation, Invention and Impact: NJIT Undergrads Present Summer Research - NJIT News",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4652,8 +4367,22 @@
       "sources": []
     },
     {
-      "link": "https://arstechnica.com/gadgets/2026/09/disney-and-hulu-raise-prices-by-up-to-13-percent-after-doubling-profits/",
-      "title": "Disney+ and Hulu raise prices by up to 13 percent after doubling profits",
+      "link": "https://www.theverge.com/news/999195/microsoft-surface-pro-12-inch-surface-laptop-13-inch-qualcomm-x2-plus",
+      "title": "Microsoft refreshes its smaller Surface Pro and Laptop with Qualcomm’s X2 Plus",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://www.theverge.com/news/999211/microsoft-surface-mouse-haptic-feedback",
+      "title": "Microsoft’s new Surface Mouse has haptic feedback and a customizable action button",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://trends.google.com/trending/rss?geo=US",
+      "title": "paige bueckers",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4661,6 +4390,13 @@
     {
       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5lNVZRdGxWUms3RWVtd29XRnJiWTQ3TTh1aWVRcl9mWG5YV3hqZy1NQmFyc1o5NmxFanUxSEh2RDQ2WkpMRENPSUpzOEFJS09aYnJBZzFoYnJielY1aUcwRWY5WHpMbXdYV3BUcS1vb1cwQ2dV?oc=5",
       "title": "At Brown, Justin Trudeau discusses U.S.-Canada relations, global conflict and the power of storytelling - Brown University",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://techcrunch.com/2026/09/23/if-amazon-doesnt-know-how-to-eliminate-carbon-emissions-then-who-does/",
+      "title": "If Amazon doesn’t know how to eliminate carbon emissions, then who does?",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4675,6 +4411,13 @@
     {
       "link": "https://techcrunch.com/2026/09/23/zoox-grounds-atlanta-test-fleet-after-workers-report-toxic-gas-exposure-symptoms/",
       "title": "Zoox grounds Atlanta test fleet after workers report toxic gas exposure symptoms",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://arstechnica.com/cars/2026/09/heres-the-torcal-the-first-fully-electric-bentley/",
+      "title": "Here's the Torcal, the first fully electric Bentley",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4729,8 +4472,15 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYkFwcnFpOFFycEx0SEwwNUxZazVuTTh6aUNKZ0pUUHlPU2toMkk2WXAyc3RkYTdKWlVsTEVoTmR5VGJaZlhaU21OdHp2aXRWZ0VGNGtJdERKVGUtWXBiMWdKRm9JY04zTnZ3YXp5akdBU2RsS0tHZG9ESTVmR0hOWUYyaWpjYVNCcFF3c3RBVk53NC1SanNTaXpxOHdMei1SNUJPWnhLLTkzU2VOaUE?oc=5",
+      "title": "Trump says US Justice Department could rein in AI companies if needed - Reuters",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNc2FaQzRMdUlsaUZGZXFhdE9UTUtsT3YzcmJlSm5yTXlqQUVXY1FUUTlVWTh0Mkctc253LW5ueEk4YlRvdnkwTmZ3bzI0eE1WTVZuWEVubDZxbGZ5eXJoWEFUbXpMakI3T3NsOWo5VHZLb0VBamRvOENQRmFjbmQ5MEtMNi1vVEQ2cFlV?oc=5",
-      "title": "What CAD Software Should I Choose? A Practical Buyer's Guide for Product Designers in 2026 - Fusion Blog - Autodesk",
+      "title": "What CAD Software Should I Choose? A Practical Buyer's Guide for Product Designers in 2026 - Fusion Blog - autodesk.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4751,7 +4501,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZHI2cW1aa2pYRkxYZUpqaFlYd0xZY0Y0U0dBdnE3dHdEYVhiN3ZqcnJueUNLUTFaNF9TVnUxS0x5U2ZCV2JPU3p6c19EUmtzYlNWUWMxWlBFa2VTb2FkUDFqWUt4dkVKVWpXYzNqVWxoS0xucE4yOTRMV21rdzJ1NjNNcE9pY0hBaFdWdlJsN2VQVlNSRkVsVlJ1S3F6VWMtMHpV?oc=5",
-      "title": "Is it ‘killer robots’ or ‘super intelligence’? At the UN, leaders see both - apnews.com",
+      "title": "Is it ‘killer robots’ or ‘super intelligence’? At the UN, leaders see both - AP News",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4786,7 +4536,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWF9ydjNUVE54eS1wSUNDdVphNl9reDBUUzI4YnNjamRDYU1mUEVUUk8zRGk3b3p3aXZIck5UTUwtSlUtNzhvMERDTTVQWUZtU3Zqd255OC0xa19XQm0xN0V2bXpYT3pHZnVfd2k1NGVhRFVrakEySVhwTFRJR0JqLUhkTVdaNEgwUk13RG5KajdCRXlEc0Nub3pwY0F2YUEzS3g1S3VKX3RuZXM3R0N1UXQwRG1iQjZvZDJ3RWtSdmlNaTjSAcMBQVVfeXFMUFhfcnYzVFROeHktcElDQ3VaYTZfa3gwVFMyOGJzY2pkQ2FNZlBFVFJPM0RpN296d2l2SHJOVE1MLUpVLTc4bzBEQ001UFlGbVN2andueTgtMWtfV0JtMTdFdm16WE96R2Z1X3dpNTRlYURVa2pBMklYcExUSUdCai1IZE1XWjRIMFJNd0RuSmo3QkV5RHNDbm96cGNBdmFBM0t4NUt1Sl90bmVzN0dDdVF0MERtYkI2b2Qyd0VrUnZpTWk4?oc=5",
-      "title": "Palo Alto Networks joins UAH Invention to Innovation Center as Corporate Innovation Partner | Newswise - Newswise",
+      "title": "Palo Alto Networks joins UAH Invention to Innovation Center as Corporate Innovation Partner | Newswise - newswise.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4848,6 +4598,20 @@
       "sources": []
     },
     {
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE01ODRqRUh0NFkzRG5PU3FBbTRuZ1ZvS0VsM1o4YWdFaG8xaWoyckJDODA5R2xrU0E1SmotZVEzdV9LcjBBb0lnalU1RU1jaGNSeko4NHFrZGpDdlhVNzZsLXBLM0RHUUNhNFp1N18zeUxRZ2JTM0tCWUp6Zw?oc=5",
+      "title": "Dutch government publishes call from 21 countries and the EU for international oversight of frontier AI - The Next Web",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://arstechnica.com/gadgets/2026/09/disney-and-hulu-raise-prices-by-up-to-13-percent-after-doubling-profits/",
+      "title": "Disney+ and Hulu raise prices by up to 13 percent after doubling profits",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
       "link": "https://www.technologyreview.com/2026/09/22/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/",
       "title": "Roundtables: The Deadly Failures of The Virtual Border Wall",
       "status": "not-eligible",
@@ -4869,8 +4633,8 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE01ODRqRUh0NFkzRG5PU3FBbTRuZ1ZvS0VsM1o4YWdFaG8xaWoyckJDODA5R2xrU0E1SmotZVEzdV9LcjBBb0lnalU1RU1jaGNSeko4NHFrZGpDdlhVNzZsLXBLM0RHUUNhNFp1N18zeUxRZ2JTM0tCWUp6Zw?oc=5",
-      "title": "Dutch government publishes call from 21 countries and the EU for international oversight of frontier AI - The Next Web",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcTR1LUlyMm52bkI5U19xOTlVeHpDbDlFTGM2WTh4TGNGUUQycW13VDY3bi13aVFyMFBNVEZqeGNZaGdMSm91Z1ZOeVRDODFCQXBQN2JGYW8zWG4zXzBBVVl4QlpQcnR1UzNSSWFHSWUyZ1AyNTJZQ19vc081bnBfa0RWMUMzNlQ2Z0lzXzlnd3FMQTExQkQ1bE9tU1p5UFlWemRZWWxLeFNsVWVPS2I2ZWJkNjU0NHVMRlFR?oc=5",
+      "title": "UN relief chief urges stronger humanitarian diplomacy to defend international humanitarian law - OCHA",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4884,70 +4648,63 @@
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "99 to beat",
+      "title": "shohei ohtani",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "sakutaro higashi",
+      "title": "sounders",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "aroldis chapman",
+      "title": "manny machado",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "rangers",
+      "title": "dodgers game",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "cleveland guardians",
+      "title": "mary peltola",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "mike budenholzer",
+      "title": "padres",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "steph curry",
+      "title": "astros",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "jim acosta",
+      "title": "robbie ray",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "wings vs storm",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://trends.google.com/trending/rss?geo=US",
-      "title": "ksi",
+      "title": "rockies",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -4960,22 +4717,8 @@
       "sources": []
     },
     {
-      "link": "https://arstechnica.com/tech-policy/2026/09/china-silent-as-us-touts-plan-for-ai-safety-alerts-that-omits-tech-experts/",
-      "title": "Trump’s China rivalry and “AI race” delusion may endanger US, experts say",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://arstechnica.com/gadgets/2026/09/xprize-wildfire-winners-spotted-fires-within-10-min-but-couldnt-stop-them/",
-      "title": "XPRIZE Wildfire winners spotted fires within 10 min—but couldn’t stop them",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcTR1LUlyMm52bkI5U19xOTlVeHpDbDlFTGM2WTh4TGNGUUQycW13VDY3bi13aVFyMFBNVEZqeGNZaGdMSm91Z1ZOeVRDODFCQXBQN2JGYW8zWG4zXzBBVVl4QlpQcnR1UzNSSWFHSWUyZ1AyNTJZQ19vc081bnBfa0RWMUMzNlQ2Z0lzXzlnd3FMQTExQkQ1bE9tU1p5UFlWemRZWWxLeFNsVWVPS2I2ZWJkNjU0NHVMRlFR?oc=5",
-      "title": "UN relief chief urges stronger humanitarian diplomacy to defend international humanitarian law - OCHA",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdEljbFotbFNVU2Nyb1oyaElIUXJJc1ltUmF5a1FrMl9xbEwyNG9LOWwyZ3F2dUZIUl9QYnd6OXU1cU10UGx0QzkxaVp6QkoxY3ZYSm1qc3FvbFprT29VcldJZ3V1Y1YtZ1A3MjEtTUo2dk9laHFBaWZBMFNOMmZDVC16aDBhYUdmdmZFdUJ4d0hoMW5hZTgxRk1ETQ?oc=5",
+      "title": "Oil price dips to $100 on hopes of US-Iran diplomacy, partial recovery in Saudi exports - Reuters",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5052,28 +4795,28 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeURITVRSSk1qeERYM3J4NkxRY09MdWJXY01CVjBGbG5uQUJuOUtWOXNuTFllNUExNFptYTQ0WUpmNjNXZTczN3ZhX2ZpNS14V216RUM1aTNXZElmcURNN3FOeEZGeThpRHlqUS1NYnlRMWRiWWxXVnc2Sm93TmlSb0FXaDNBNmdLdjJveXdBaHF2R0IxZm9fSUhFeGtSTFVVeWZxaU5Uamh2TVpxem9TOWNMLW1zcnZwdWItb3l0amE?oc=5",
-      "title": "Software Defined Vehicle Architecture: A Guide for Automotive OEMs - The Auto Channel",
+      "title": "Software Defined Vehicle Architecture: A Guide for Automotive OEMs - theautochannel.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTk5COHRzOGk3aXRzUGFOcTZlT0xENnRFeU4wTWlHRzN0VXRxbUxjUXlqUm9zOVNIUnFzTlpyZlAtMXBqSGdtTmdxNGlHZ3N0ZEJFbXo1dGdTb1FfYllEMjdoNV9CQ1VQOE1RUjRMOTdSdE12UnhfV29NdXJ1SVZNQV9UVkk0R2wwNlpjQk9JT24wOE91VF8wNXFNRU1Uc3VYQzdBUlRmcWtPd2YyYzhlTUJ3?oc=5",
-      "title": "[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide - dailyprincetonian.com",
+      "title": "[SPONSORED] Top Self-Improvement Apps for Students in 2026 Guide - The Daily Princetonian",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNLUx0b1ZPb1Axa1c5VlMyOTNuT05QUGFhY1diMmtnRjdCMy1FWkJSWGwzeUdadEtMRXF0emkydGRwaTB0QlMzRUdxSFgzdUs3N01henZOV0dzMnI5dkM2STMwOFljTlFUanJfMDVXQlV2RmhESjVVRHlFNXFJVXU1enFB?oc=5",
-      "title": "A dealmaker’s guide to how AI is shifting the software stack - PwC",
+      "title": "A dealmaker’s guide to how AI is shifting the software stack - pwc.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
     },
     {
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHBKYjdqNGFYWC1feGxjMVBYWFp6RTlFS3FyTEFKMWxuQVRGTkctbHh5c0d3UUl5c1otd0RBVndLNnlraHRlR1JqX0xaSi1Va3JJVnF3YTRrUkFXOTQyb1lwcklReUpjNUs3Rm1Fd1UzSTVWZlJqcjhnMlVqVDZWUnRfOVhqQkV6VUJLenMwVU5XeW41V3RCVXhYcmdtNlRqbF9QUll3?oc=5",
-      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - Bloomberg.com",
+      "title": "What If the Software Panic Was Overblown? A Discerning Investor’s Guide - bloomberg.com",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5144,6 +4887,20 @@
     {
       "link": "https://techcrunch.com/2026/09/23/eight-sleeps-new-pod-6-comes-in-smaller-and-solo-sizes-starting-at-1999/",
       "title": "Eight Sleep&#8217;s new Pod 6 comes in smaller and solo sizes, starting at $1,999",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://arstechnica.com/tech-policy/2026/09/china-silent-as-us-touts-plan-for-ai-safety-alerts-that-omits-tech-experts/",
+      "title": "Trump’s China rivalry and “AI race” delusion may endanger US, experts say",
+      "status": "not-eligible",
+      "evidenceLevel": "none",
+      "sources": []
+    },
+    {
+      "link": "https://arstechnica.com/gadgets/2026/09/xprize-wildfire-winners-spotted-fires-within-10-min-but-couldnt-stop-them/",
+      "title": "XPRIZE Wildfire winners spotted fires within 10 min—but couldn’t stop them",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5240,13 +4997,6 @@
       "sources": []
     },
     {
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcVNBYnFyaE4wRmxyUzM1RnVpMjUwUmVfc1MyQVJUaUVqX2dtc0ZMdzJQemlaWHVMRHY4RjBEbVhFdWtyUFhuV21pREtMZ3pnMkJnbG03UnlNQTdnMFliTmRlRzVMODRlNVFWVnpXRXpZYU5raXZIbjhMUGNBOFBCdk1hMEhyMmRyUzVfTXVDeFJ4UQ?oc=5",
-      "title": "Apple debuts iPhone 18 Pro and iPhone 18 Pro Max - Apple",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWGFtdWNJcy1ibGVLaFZWM3pvYmZ6VEg4NkhWVFhMd1I4ZmgzMlNWUi1JZ2JUeHBQbV9aUW1KYktSclRGM0lJcXJ4YVpHR2l0bjRvX2RZdHc2dFE1bFhzdzJFTFlWdi1ITWRuLUZHQXVqdDc1ZF85WWFPYmQxSXBXajVDaU5FYnItQVUtY2M3UmtDd1N2VEhvTHIyNHFfZUxmakxTVF81LTNIclQ4ejduLVJR?oc=5",
       "title": "Introducing Apple Watch Series 12, with the all-new Health Sensing System - Apple",
       "status": "not-eligible",
@@ -5311,7 +5061,7 @@
     },
     {
       "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpKX0ZNT2R5SmROOGl4cFE3VUFoYTZFZHY2eC1ubjFsRUMwWGljMXZvY2YtOVdST0Vja0hZVHM1Q0hPdDkzc3RZT3RvVHh4bGwtOHVRa3p6WmRwOTRtUUNwbHM4aUxUT3dQelUtN0c2elgwTFhVTG51ZUZWQkJVblpqdkM5TjkwOFQw?oc=5",
-      "title": "Husband and wife invent new wind turbine technology - Enlit World",
+      "title": "Husband and wife invent new wind turbine technology - enlit.world",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
@@ -5361,13 +5111,6 @@
     {
       "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOR1daRkYwN3h2eTRLWTRWRVA4V0dpaHAtZUFzSWdQQ1RrN0J0aXc1VzlZWkVIYmgzTVZMUVU2aG4wZmZibnRGaFFBTFJ6dENFeUdSaFZlTXZJdkNzUEZrQW42azNrX3NTZzBnVGNXSFEtaF9Hd3ROVmIyYTdKMDNlQ280VHEzbHJnX1RBTXFB?oc=5",
       "title": "Join the Phil Weiser for Colorado Fellowship Program! - University of Colorado Boulder",
-      "status": "not-eligible",
-      "evidenceLevel": "none",
-      "sources": []
-    },
-    {
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ZLXBYMW5rT3dzaGo3bGJNa194S25HdXdWS0pnU3VYLVZWUTNGZlEyWFdfTEhGOWplTWhWWlRWY1gtdngwaUQzaU9OYlc4a0JWNTVlczl4YXBaQQ?oc=5",
-      "title": "Tommy Joyce - Department of Energy (.gov)",
       "status": "not-eligible",
       "evidenceLevel": "none",
       "sources": []
