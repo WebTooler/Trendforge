@@ -40,6 +40,7 @@ const content=[
   '## Six\n\nFinally, the closing section states what remains unresolved and marks the limit of the supplied material. The article gets a complete endpoint without introducing a new factual premise. The result is a compact evidence-led structure in which each heading serves a distinct purpose and no section exists only to increase the heading count. The closing explanation also keeps reported information separate from interpretation and avoids turning uncertainty into a prediction. This gives the reader a clear boundary around the evidence while preserving a useful ending. The fixture therefore tests adaptive structure, sufficient substance, and evidence discipline together rather than rewarding empty headings or artificial padding.'
 ].join('\\n\\n\\n');
 const result=validateDraft({...base,content,blueprint:{mode:'narrow',targetWords:{min:300,max:750,soft:450},maxH2:6}});
+if(!result.passed) console.error('ADAPTIVE FIXTURE ERRORS', JSON.stringify(result.errors), JSON.stringify(result.metrics));
 assert.equal(result.passed,true);
 assert.ok(!result.errors.some(x=>/H2 count .* exceeds evidence blueprint maximum/i.test(x)));
 const repeatedParagraph='Bitcoin ETFs hold a reported share of bitcoin. The report says the holdings increased over time and describes the change in detail. This paragraph adds context about the reported holdings and their increase for readers.';
