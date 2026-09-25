@@ -1,11 +1,11 @@
 name: TrendForge Pipeline
 
-# DEVELOPMENT LOCK:
-# Production/AI pipeline is intentionally manual-only while TrendForge V2
-# changes are being developed. This prevents pushes and the 6-hour schedule
-# from consuming AI/image-provider quotas before the final controlled test.
+# Production schedule restored after the controlled end-to-end validation.
+# Manual dispatch remains available for targeted runs and debugging.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
 
 concurrency:
   group: trendforge-pipeline-${{ github.ref }}
