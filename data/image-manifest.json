@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-24T06:38:03.600Z",
+  "generatedAt": "2026-09-25T15:12:19.776Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
@@ -9,69 +9,63 @@
   "skipped": 0,
   "failed": 0,
   "images": {
-    "meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset": {
+    "google-s-first-orbital-ai-data-center-test-launches-on-october-1": {
       "status": "generated",
-      "image": "/Trendforge/images/articles/meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset.1024x576.png",
+      "image": "/Trendforge/images/articles/google-s-first-orbital-ai-data-center-test-launches-on-october-1.1024x576.png",
       "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
       "width": 1024,
       "height": 576,
       "steps": 4,
-      "elapsedMs": 2271,
-      "bytes": 683860,
+      "elapsedMs": 1921,
+      "bytes": 1108568,
       "visualBrief": {
         "version": 2,
-        "mode": "documentary-person",
-        "primarySubject": "Mark Zuckerberg, the central person named by the story",
-        "scene": "A restrained documentary technology-publication photograph of the central person publicly speaking, being interviewed, or addressing an industry audience in a context that directly matches the article.",
+        "mode": "environment-infrastructure",
+        "primarySubject": "the specific data center or physical infrastructure central to the story",
+        "scene": "A realistic editorial photograph of the named infrastructure or environment, captured as the concrete subject rather than as generic technology scenery.",
         "supportingElements": [
-          "softly blurred audience or event environment",
-          "Meta-specific event context without invented logos or text"
+          "one contextual scale or human element only when useful"
         ],
-        "composition": "Medium or medium-wide horizontal frame; subject slightly off-center; back, side, over-the-shoulder, cropped, silhouette, or natural-distance framing so the face is not clearly identifiable.",
-        "company": "Meta",
-        "namedPerson": "Mark Zuckerberg",
-        "category": "Digital Life",
+        "composition": "Architectural or documentary framing with one dominant physical structure and clear visual hierarchy.",
+        "company": "Google",
+        "namedPerson": "Planet Labs",
+        "category": "Technology",
         "storyAnchors": [
-          "meta",
-          "connect",
-          "2026",
-          "unveils",
-          "glasses",
-          "rumored",
-          "mixed",
-          "reality"
+          "google",
+          "first",
+          "orbital",
+          "data",
+          "center",
+          "test",
+          "launches",
+          "october"
         ],
         "avoid": [
           "generic office imagery",
           "random tablet or laptop",
           "generic futuristic technology",
           "glowing holograms, floating code, HUDs and neon sci-fi effects",
-          "prominent readable text or fake headlines",
-          "generic product hero replacing the person",
-          "invented facial likeness",
-          "random consumer electronics as the main subject"
+          "prominent readable text or fake headlines"
         ]
       },
       "relevance": {
-        "passed": false,
+        "passed": true,
         "anchors": [
-          "meta",
-          "connect",
-          "2026",
-          "unveils",
-          "glasses",
-          "rumored",
-          "mixed",
-          "reality"
+          "google",
+          "first",
+          "orbital",
+          "data",
+          "center",
+          "test",
+          "launches",
+          "october"
         ],
         "matchedAnchors": [
-          "meta"
+          "data",
+          "center"
         ],
-        "entityMatches": [
-          "meta",
-          "mark zuckerberg"
-        ],
-        "score": 0.125
+        "entityMatches": [],
+        "score": 0.25
       },
       "promptLength": 1900
     }

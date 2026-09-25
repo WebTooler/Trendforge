@@ -453,6 +453,50 @@ export const articles: Article[] = [
     "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
   },
   {
+    "slug": "google-s-first-orbital-ai-data-center-test-launches-on-october-1",
+    "title": "Google’s First Orbital AI Data Center Test Launches on October 1",
+    "description": "Google is launching a small experimental satellite, Project Suncatcher, to try out AI chips in space. The mission will test heat management, limited run time, and the feasibility of a future constellation.",
+    "category": "Technology",
+    "date": "2026-09-25",
+    "publishedAt": "2026-09-25T15:12:10.057Z",
+    "author": "Tejendra Pal Singh",
+    "readTime": "3 min read",
+    "content": [
+      "## A Test Mission for AI in Space\nOn October 1, Google will launch the first satellite in its Project Suncatcher program. The vehicle is a repurposed platform built by Planet Labs, a satellite‑imaging company, allowing Google to speed up testing without designing a new craft from scratch.",
+      "The satellite, named MVP, carries four custom Tensor Processing Units (TPUs). These accelerators power AI model training and inference, the same chips used on Google’s ground‑based data centers. However, the on‑orbit version can run for only about 15 minutes before the chips must shut down to let cooling systems catch up.",
+      "The design combines heat‑pipe and radiator technology. The TPU heat is conducted through a thermal interface material to aluminum and copper heat pipes, which then transfer it to a radiator that can radiate the heat into space. After each burst, the TPUs pause until the radiators cool the system.",
+      "## Limited Operation, Broad Lessons\nThe mission’s primary goal is to gather data on how the system behaves in orbit and to identify failure points. It will operate for just a few months, after which Google will evaluate what works and what does not.With this first test, Google hopes to understand what does and doesn’t work, allowing it to improve its designs for future missions.",
+      "The satellite’s brief operation period reflects the thermal constraints of orbital AI hardware.Radiator systems exist in space, but they’re designed to remove a relatively small amount of heat. Google’s solution uses a specialized thermal interface material to bridge the heat gap, but even so the system cannot run continuously.",
+      "## Path to a Constellation\nGoogle’s long‑term vision is a network of satellites that can provide continuous AI compute by leveraging near‑constant sunlight. To achieve this, future satellites would need high‑speed laser links to communicate with one another and ground stations.Google’s first experimental satellite will launch on October 1 with the aim of validating Google’s vision for a constellation of AI satellites.",
+      "The company plans additional launches in 2027 to test those laser links, but analysts note that commercial orbital data centers remain years away because of launch costs and technical challenges.",
+      "## What to Watch Next\n- **Performance data** from the MVP mission will reveal how well the TPUs handle space radiation and thermal loads.\n- **Cooling efficiency** results will determine whether the current heat‑pipe and radiator approach can scale to larger systems.\nGoogle plans to launch two additional satellites in 2027 to test those connections.",
+      "Until those milestones are reached, Project Suncatcher will remain a research effort rather than a commercial product. The October launch marks a significant technical step, but the road to an operational orbital AI data center is long and uncertain."
+    ],
+    "sources": [
+      {
+        "title": "Google's first Suncatcher orbital data center test launches October 1",
+        "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/"
+      },
+      {
+        "title": "Google To Launch First Experimental Satellite For Orbital AI Data Center Project - RTTNews",
+        "url": "https://www.rttnews.com/amp/3693813/google-to-launch-first-experimental-satellite-for-orbital-ai-data-center-project.aspx"
+      },
+      {
+        "title": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+        "url": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1"
+      },
+      {
+        "title": "Google to test first orbital AI data centre on October 1 - Daily Times",
+        "url": "https://dailytimes.com.pk/1557806/google-to-test-first-orbital-ai-data-centre-on-october-1/"
+      }
+    ],
+    "image": "/Trendforge/images/articles/google-s-first-orbital-ai-data-center-test-launches-on-october-1.1024x576.png",
+    "imageAlt": "Editorial image for Google’s First Orbital AI Data Center Test Launches on October 1",
+    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
+    "imageLicense": "Model-generated",
+    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
+  },
+  {
     "slug": "how-to-move-passwords-and-passkeys-between-managers-on-android",
     "title": "How to Move Passwords and Passkeys Between Managers on Android",
     "description": "Android now offers a safer way to move passwords and passkeys between supported password managers without first creating a downloadable credential file. Here is how the new transfer flow works and what to check before switching.",
@@ -630,37 +674,6 @@ export const articles: Article[] = [
     ],
     "image": "/Trendforge/images/articles/jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean.1024x576.png",
     "imageAlt": "Editorial image for JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
-    "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
-    "imageLicense": "Model-generated",
-    "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"
-  },
-  {
-    "slug": "meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset",
-    "title": "Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
-    "description": "Meta is set to launch its next‑generation smart glasses, a headset named Phoenix, and new AI integrations at its September 23 event, with details on design, privacy fixes and potential third‑party app support.",
-    "category": "Digital Life",
-    "date": "2026-09-24",
-    "publishedAt": "2026-09-24T06:37:38.171Z",
-    "author": "Tejendra Pal Singh",
-    "readTime": "2 min read",
-    "content": [
-      "Meta’s September 23 Connect event is scheduled to begin with an evening keynote from Mark Zuckerberg. The company has highlighted that the focus will be on building a future for everyone, a theme Zuckerberg has explored in recent commentary on AI, smart glasses, and related technologies.",
-      "## New Smart Glasses With Dual‑Lens Displays\nMeta is reportedly developing a pair of glasses that will feature displays in both lenses. The design is intended to enhance the user interface by providing visual output from both sides of the glasses. The glasses are expected to come in two styles and include extra microphones to facilitate interaction with Meta’s AI assistant. These updates are part of the company’s response to privacy and harassment concerns tied to its current lineup, and the company has already begun addressing those issues with privacy fixes and a new marketing campaign.",
-      "## Phoenix, Meta’s First Mixed‑Reality Headset\nAfter a long absence of new headset releases, Meta is preparing to debut a mixed‑reality headset known as Phoenix. Rumors suggest that Phoenix will be one of the first devices to use Qualcomm’s Snapdragon Reality Elite chip, a processor specifically designed for slimmer form factors suitable for headsets.",
-      "## AI and Ecosystem Expansion\nThe event is also expected to feature updates on Meta’s Muse AI agent and potential new opportunities for third‑party apps on the glasses ecosystem. An avatar of Meta’s CTO may appear during the keynote, adding a virtual dimension to the presentation. Overall, the Connect lineup signals Meta’s intent to advance its smart‑glasses offering while addressing ongoing privacy concerns and broadening its software ecosystem."
-    ],
-    "sources": [
-      {
-        "title": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-        "url": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/"
-      },
-      {
-        "title": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
-        "url": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote"
-      }
-    ],
-    "image": "/Trendforge/images/articles/meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset.1024x576.png",
-    "imageAlt": "Editorial image for Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
     "imageSource": "Cloudflare Workers AI — FLUX.1 Schnell",
     "imageLicense": "Model-generated",
     "imageGeneratedBy": "Cloudflare FLUX.1 Schnell"

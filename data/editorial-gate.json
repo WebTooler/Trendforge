@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T06:37:38.171Z",
+  "generatedAt": "2026-09-25T15:12:10.058Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 1793,
-      "sentenceCount": 12,
+      "normalizedLength": 2828,
+      "sentenceCount": 23,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,13 +31,15 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "engadget.com",
-    "theverge.com"
+    "arstechnica.com",
+    "rttnews.com",
+    "geo.tv",
+    "dailytimes.com.pk"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 2,
-    "usablePassages": 20,
+    "sourceCount": 4,
+    "usablePassages": 55,
     "primarySourceCount": 0
   }
 }

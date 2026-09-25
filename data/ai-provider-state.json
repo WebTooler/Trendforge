@@ -2,14 +2,20 @@
   "version": 10,
   "providers": {
     "Groq": {
-      "failures": 71,
+      "failures": 70,
       "quotaBlockedUntil": 0,
       "lastStatus": 200,
       "lastError": null,
       "lastClass": "success",
       "successes": 58,
-      "lastSuccessAt": "2026-09-24T06:37:57.416Z",
+      "lastSuccessAt": "2026-09-25T15:12:11.882Z",
       "history": [
+        {
+          "at": 1790013192567,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
+        },
         {
           "at": 1790013909409,
           "ok": false,
@@ -204,70 +210,64 @@
           }
         },
         {
-          "at": 1790231858163,
+          "at": 1790349130044,
           "ok": true,
           "class": "success",
           "status": 200,
-          "latencyMs": 1197,
+          "latencyMs": 1385,
           "usage": {
-            "queue_time": 0.165413131,
-            "prompt_tokens": 4570,
-            "prompt_time": 0.266633261,
-            "completion_tokens": 447,
-            "completion_time": 0.504296414,
-            "total_tokens": 5017,
-            "total_time": 0.770929675,
+            "queue_time": 0.032269383,
+            "prompt_tokens": 4992,
+            "prompt_time": 0.317680568,
+            "completion_tokens": 684,
+            "completion_time": 0.779942274,
+            "total_tokens": 5676,
+            "total_time": 1.097622842,
             "completion_tokens_details": {
-              "reasoning_tokens": 27
+              "reasoning_tokens": 14
             }
           }
         },
         {
-          "at": 1790231858685,
-          "ok": false,
-          "class": "rate_limit",
-          "status": 429
-        },
-        {
-          "at": 1790231877416,
+          "at": 1790349131882,
           "ok": true,
           "class": "success",
           "status": 200,
-          "latencyMs": 591,
+          "latencyMs": 930,
           "usage": {
-            "queue_time": 0.182713784,
-            "prompt_tokens": 1312,
-            "prompt_time": 0.06509443,
-            "completion_tokens": 235,
-            "completion_time": 0.246158697,
-            "total_tokens": 1547,
-            "total_time": 0.311253127,
+            "queue_time": 0.068973229,
+            "prompt_tokens": 2025,
+            "prompt_time": 0.119563027,
+            "completion_tokens": 548,
+            "completion_time": 0.638359872,
+            "total_tokens": 2573,
+            "total_time": 0.757922899,
             "completion_tokens_details": {
-              "reasoning_tokens": 191
+              "reasoning_tokens": 341
             }
           }
         }
       ],
-      "lastLatencyMs": 591,
+      "lastLatencyMs": 930,
       "lastUsage": {
-        "queue_time": 0.182713784,
-        "prompt_tokens": 1312,
-        "prompt_time": 0.06509443,
-        "completion_tokens": 235,
-        "completion_time": 0.246158697,
-        "total_tokens": 1547,
-        "total_time": 0.311253127,
+        "queue_time": 0.068973229,
+        "prompt_tokens": 2025,
+        "prompt_time": 0.119563027,
+        "completion_tokens": 548,
+        "completion_time": 0.638359872,
+        "total_tokens": 2573,
+        "total_time": 0.757922899,
         "completion_tokens_details": {
-          "reasoning_tokens": 191
+          "reasoning_tokens": 341
         }
       }
     },
     "Gemini": {
-      "failures": 42,
-      "quotaBlockedUntil": 1790231976646,
-      "lastStatus": 503,
-      "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
-      "lastClass": "server",
+      "failures": 41,
+      "quotaBlockedUntil": 1790035508791,
+      "lastStatus": 429,
+      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 51.227916547s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
+      "lastClass": "quota",
       "history": [
         {
           "at": 1789926372551,
@@ -334,12 +334,6 @@
           "ok": false,
           "class": "quota",
           "status": 429
-        },
-        {
-          "at": 1790231856646,
-          "ok": false,
-          "class": "server",
-          "status": 503
         }
       ]
     },
@@ -358,11 +352,11 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 58,
-      "quotaBlockedUntil": 1790231869824,
-      "lastStatus": 429,
-      "lastError": "429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or rou",
-      "lastClass": "rate_limit",
+      "failures": 56,
+      "quotaBlockedUntil": 1790020704609,
+      "lastStatus": 200,
+      "lastError": "Invalid repair structured output",
+      "lastClass": "error",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z",
       "history": [
@@ -449,30 +443,36 @@
           "ok": false,
           "class": "error",
           "status": 200
-        },
-        {
-          "at": 1790231847302,
-          "ok": false,
-          "class": "rate_limit",
-          "status": 429
-        },
-        {
-          "at": 1790231861824,
-          "ok": false,
-          "class": "rate_limit",
-          "status": 429
         }
       ]
     },
     "Cohere": {
-      "failures": 75,
+      "failures": 72,
       "quotaBlockedUntil": 1790020690741,
-      "lastStatus": 422,
-      "lastError": "422: {\"error_type\":\"INVALID_TOOL_GENERATION\",\"id\":\"991b32f0-946b-47ce-b3b9-6cc9eb6f01d4\",\"message\":\"your request resulted in an invalid tool generation. Try updating the messages or tool definitions\"}",
+      "lastStatus": 200,
+      "lastError": "Empty atomic repair response",
       "lastClass": "error",
       "successes": 12,
       "lastSuccessAt": "2026-09-20T11:24:33.823Z",
       "history": [
+        {
+          "at": 1789928062363,
+          "ok": false,
+          "class": "transient",
+          "status": 200
+        },
+        {
+          "at": 1789962092719,
+          "ok": false,
+          "class": "transient",
+          "status": 200
+        },
+        {
+          "at": 1789986456423,
+          "ok": false,
+          "class": "error",
+          "status": 200
+        },
         {
           "at": 1789987753423,
           "ok": false,
@@ -574,28 +574,10 @@
           "ok": false,
           "class": "error",
           "status": 200
-        },
-        {
-          "at": 1790231840675,
-          "ok": false,
-          "class": "error",
-          "status": 422
-        },
-        {
-          "at": 1790231847096,
-          "ok": false,
-          "class": "error",
-          "status": 422
-        },
-        {
-          "at": 1790231861574,
-          "ok": false,
-          "class": "error",
-          "status": 422
         }
       ]
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-24T06:37:57.416Z"
+  "updatedAt": "2026-09-25T15:12:11.882Z"
 }

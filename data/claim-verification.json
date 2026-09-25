@@ -1,18 +1,18 @@
 {
   "version": 18,
-  "generatedAt": "2026-09-24T06:37:57.549Z",
-  "articlePath": "content/articles/meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset.md",
-  "articleTitle": "Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
+  "generatedAt": "2026-09-25T15:12:12.394Z",
+  "articlePath": "content/articles/google-s-first-orbital-ai-data-center-test-launches-on-october-1.md",
+  "articleTitle": "Google’s First Orbital AI Data Center Test Launches on October 1",
   "verificationMode": "authoritative-evidence-pack-v20-fact-map-synthesis",
-  "sourceCount": 2,
-  "usableSourceCount": 2,
-  "claimCount": 10,
-  "editorialCount": 1,
-  "verified": 8,
-  "partial": 2,
+  "sourceCount": 4,
+  "usableSourceCount": 4,
+  "claimCount": 20,
+  "editorialCount": 0,
+  "verified": 17,
+  "partial": 3,
   "unsupported": 0,
   "sourceUnavailable": 0,
-  "averageConfidence": 76,
+  "averageConfidence": 80,
   "pass": true,
   "policy": {
     "verifiedMin": 62,
@@ -45,77 +45,180 @@
   "sources": [
     {
       "id": "S1",
-      "title": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "url": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "domain": "engadget.com",
-      "passageCount": 16,
-      "articleBodyLength": 2472
+      "title": "Google's first Suncatcher orbital data center test launches October 1",
+      "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "domain": "arstechnica.com",
+      "passageCount": 27,
+      "articleBodyLength": 2931
     },
     {
       "id": "S2",
-      "title": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
-      "url": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
-      "domain": "theverge.com",
+      "title": "Google To Launch First Experimental Satellite For Orbital AI Data Center Project - RTTNews",
+      "url": "https://www.rttnews.com/amp/3693813/google-to-launch-first-experimental-satellite-for-orbital-ai-data-center-project.aspx",
+      "domain": "rttnews.com",
       "passageCount": 4,
-      "articleBodyLength": 862
+      "articleBodyLength": 597
+    },
+    {
+      "id": "S3",
+      "title": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+      "url": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1",
+      "domain": "geo.tv",
+      "passageCount": 12,
+      "articleBodyLength": 1483
+    },
+    {
+      "id": "S4",
+      "title": "Google to test first orbital AI data centre on October 1 - Daily Times",
+      "url": "https://dailytimes.com.pk/1557806/google-to-test-first-orbital-ai-data-centre-on-october-1/",
+      "domain": "dailytimes.com.pk",
+      "passageCount": 12,
+      "articleBodyLength": 1148
     }
   ],
   "claims": [
     {
       "index": 1,
-      "claim": "Meta’s September 23 Connect event is scheduled to begin with an evening keynote from Mark Zuckerberg.",
+      "claim": "On October 1, Google will launch the first satellite in its Project Suncatcher program.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 85,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
+      "confidence": 92,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+      "bestUrl": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1",
+      "bestDomain": "geo.tv",
+      "sourceId": "S3",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F14",
-        "sourceId": "S1",
+        "factId": "F31",
+        "sourceId": "S3",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 66
+        "score": 84
       },
       "provenanceFactMatches": [
         {
-          "factId": "F14",
-          "sourceId": "S1",
+          "factId": "F43",
+          "sourceId": "S4",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 66,
-          "passageIndex": 4
+          "score": 89,
+          "passageIndex": 1
+        },
+        {
+          "factId": "F31",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 84,
+          "passageIndex": 1
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S4-FF43,S3-FF31",
+      "evidence": "Google will launch its first experimental satellite for Project Suncatcher on October 1. Google is set to launch its first experimental satellite for “Project Suncatcher” on October 1, marking a significant step toward its goal of building orbital AI data centres powered by near-constant sunlight.",
+      "bestPassage": "Google will launch its first experimental satellite for Project Suncatcher on October 1. Google is set to launch its first experimental satellite for “Project Suncatcher” on October 1, marking a significant step toward its goal of building orbital AI data centres powered by near-constant sunlight.",
+      "matchedPassages": [
+        "S3-BODY",
+        "S3-P1"
+      ],
+      "sharedTerms": [
+        "october",
+        "google",
+        "launch",
+        "first",
+        "satellite",
+        "its",
+        "project",
+        "suncatcher"
+      ],
+      "entityShared": [
+        "october",
+        "google",
+        "project",
+        "suncatcher"
+      ],
+      "topicShared": [
+        "october",
+        "google",
+        "launch",
+        "first",
+        "suncatcher"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 2,
+      "multiFactSupported": true,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-multi-fact-anchored"
+    },
+    {
+      "index": 2,
+      "claim": "The vehicle is a repurposed platform built by Planet Labs, a satellite‑imaging company, allowing Google to speed up testing without designing a new craft from scratch.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 77,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F29",
+        "sourceId": "S2",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 76
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F29",
+          "sourceId": "S2",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 76,
+          "passageIndex": 1
         }
       ],
       "contextOnlySource": false,
       "bestPassageId": "S1-BODY",
-      "evidence": "Like last year's event, Meta has again opted for an evening keynote, with Zuckerberg taking the stage at 4PM PT/7PM ET on September 23 .",
-      "bestPassage": "Like last year's event, Meta has again opted for an evening keynote, with Zuckerberg taking the stage at 4PM PT/7PM ET on September 23 .",
+      "evidence": "The spacecraft was built by Planet Labs, allowing Google to accelerate its testing rather than develop a satellite from scratch.",
+      "bestPassage": "The spacecraft was built by Planet Labs, allowing Google to accelerate its testing rather than develop a satellite from scratch.",
       "matchedPassages": [
-        "S1-BODY",
-        "S1-P14"
+        "S1-BODY"
       ],
       "sharedTerms": [
-        "meta",
-        "september",
-        "connect",
-        "event",
-        "keynote",
-        "mark",
-        "zuckerberg"
+        "the",
+        "built",
+        "planet",
+        "labs",
+        "satellite",
+        "allow",
+        "google",
+        "spe",
+        "test",
+        "design",
+        "new",
+        "scratch"
       ],
       "entityShared": [
-        "meta",
-        "september",
-        "connect",
-        "mark",
-        "zuckerberg"
+        "planet",
+        "labs",
+        "google"
       ],
       "topicShared": [
-        "meta",
-        "connect",
-        "mark",
-        "zuckerberg"
+        "google",
+        "test"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -137,59 +240,61 @@
       "matchingMode": "fact-map-anchored-source-passage"
     },
     {
-      "index": 2,
-      "claim": "The company has highlighted that the focus will be on building a future for everyone, a theme Zuckerberg has explored in recent commentary on AI, smart glasses, and related technologies.",
+      "index": 3,
+      "claim": "The satellite, named MVP, carries four custom Tensor Processing Units (TPUs).",
       "status": "verified",
       "classification": "supported",
-      "confidence": 74,
-      "bestSource": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
-      "bestUrl": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
-      "bestDomain": "theverge.com",
-      "sourceId": "S2",
+      "confidence": 97,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+      "bestUrl": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1",
+      "bestDomain": "geo.tv",
+      "sourceId": "S3",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F18",
-        "sourceId": "S2",
+        "factId": "F37",
+        "sourceId": "S3",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 68
+        "score": 97
       },
       "provenanceFactMatches": [
         {
-          "factId": "F18",
-          "sourceId": "S2",
+          "factId": "F37",
+          "sourceId": "S3",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 68,
+          "score": 97,
           "passageIndex": 2
         }
       ],
       "contextOnlySource": false,
-      "bestPassageId": "S2-BODY",
-      "evidence": "Meta says that today’s keynote by Mark Zuckerberg will be about how “Meta is building a future for everyone” — something he wrote at length about in a recent essay about AI, smart glasses, and more.",
-      "bestPassage": "Meta says that today’s keynote by Mark Zuckerberg will be about how “Meta is building a future for everyone” — something he wrote at length about in a recent essay about AI, smart glasses, and more.",
+      "bestPassageId": "S3-P7",
+      "evidence": "The refrigerator-sized satellite, named MVP, will carry four of Google’s custom Tensor Processing Units (TPUs) and launch aboard a SpaceX Falcon 9 as part of the Transporter-18 rideshare mission.",
+      "bestPassage": "The refrigerator-sized satellite, named MVP, will carry four of Google’s custom Tensor Processing Units (TPUs) and launch aboard a SpaceX Falcon 9 as part of the Transporter-18 rideshare mission.",
       "matchedPassages": [
-        "S2-BODY",
-        "S2-P2"
+        "S3-P7",
+        "S3-BODY"
       ],
       "sharedTerms": [
         "the",
-        "has",
-        "build",
-        "future",
-        "for",
-        "everyone",
-        "zuckerberg",
-        "recent",
-        "smart",
-        "glass",
-        "and"
+        "satellite",
+        "nam",
+        "mvp",
+        "four",
+        "custom",
+        "tensor",
+        "process",
+        "unit",
+        "tpus"
       ],
       "entityShared": [
-        "zuckerberg"
+        "mvp",
+        "tensor",
+        "process",
+        "unit",
+        "tpus"
       ],
-      "topicShared": [
-        "the",
-        "zuckerberg"
-      ],
+      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -197,74 +302,7 @@
       "attributionUncertainty": {
         "evidenceUncertain": false,
         "claimUncertain": false,
-        "evidenceAttributed": true,
-        "claimAttributed": false,
-        "certaintyEscalation": false,
-        "attributionDropped": false,
-        "blocked": false
-      },
-      "factCoverage": 1,
-      "multiFactSupported": false,
-      "directFactExact": false,
-      "directExact": false,
-      "matchingMode": "fact-map-anchored-source-passage"
-    },
-    {
-      "index": 3,
-      "claim": "Meta is reportedly developing a pair of glasses that will feature displays in both lenses.",
-      "status": "verified",
-      "classification": "supported",
-      "confidence": 72,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
-      "sourceRole": "DIRECT_REPORTING",
-      "coreFactMatch": {
-        "factId": "F4",
-        "sourceId": "S1",
-        "sourceRole": "DIRECT_REPORTING",
-        "score": 72
-      },
-      "provenanceFactMatches": [
-        {
-          "factId": "F4",
-          "sourceId": "S1",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 72,
-          "passageIndex": 7
-        }
-      ],
-      "contextOnlySource": false,
-      "bestPassageId": "S1-P4",
-      "evidence": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
-      "bestPassage": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
-      "matchedPassages": [
-        "S1-P4",
-        "S1-BODY"
-      ],
-      "sharedTerms": [
-        "meta",
-        "report",
-        "glass",
-        "display",
-        "both",
-        "lens"
-      ],
-      "entityShared": [
-        "meta"
-      ],
-      "topicShared": [
-        "meta"
-      ],
-      "numericMismatch": false,
-      "contradicted": false,
-      "offTopic": false,
-      "scopeWarnings": [],
-      "attributionUncertainty": {
-        "evidenceUncertain": false,
-        "claimUncertain": true,
-        "evidenceAttributed": true,
+        "evidenceAttributed": false,
         "claimAttributed": false,
         "certaintyEscalation": false,
         "attributionDropped": false,
@@ -278,47 +316,67 @@
     },
     {
       "index": 4,
-      "claim": "The design is intended to enhance the user interface by providing visual output from both sides of the glasses.",
-      "status": "partial",
-      "classification": "uncertain",
-      "confidence": 49,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
+      "claim": "These accelerators power AI model training and inference, the same chips used on Google’s ground‑based data centers.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 87,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F4",
+        "factId": "F15",
         "sourceId": "S1",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 26
+        "score": 46
       },
       "provenanceFactMatches": [
         {
-          "factId": "F4",
+          "factId": "F15",
           "sourceId": "S1",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 26,
-          "passageIndex": 7
+          "score": 46,
+          "passageIndex": 3
+        },
+        {
+          "factId": "F2",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 36,
+          "passageIndex": 2
         }
       ],
       "contextOnlySource": false,
       "bestPassageId": "S1-BODY",
-      "evidence": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
-      "bestPassage": "There have been reports that Meta is working on a version of the glasses that will come with displays in both lenses, which would open up some interesting possibilities in terms of their UI.",
+      "evidence": "Inside, it has four of Google’s custom TPU AI accelerators, which are used to train AI models and run inference to generate tokens for AI workloads. Announced last year, Suncatcher is Google’s “moonshot” effort to design orbital AI data centers, which AI boosters like Elon Musk and Jeff Bezos have pitched as an alternative to divisive terrestrial data centers .",
+      "bestPassage": "Inside, it has four of Google’s custom TPU AI accelerators, which are used to train AI models and run inference to generate tokens for AI workloads. Announced last year, Suncatcher is Google’s “moonshot” effort to design orbital AI data centers, which AI boosters like Elon Musk and Jeff Bezos have pitched as an alternative to divisive terrestrial data centers .",
       "matchedPassages": [
         "S1-BODY"
       ],
       "sharedTerms": [
+        "accelerator",
+        "power",
+        "models",
+        "train",
+        "and",
+        "inference",
         "the",
-        "design",
-        "intend",
-        "both",
-        "glass"
+        "chip",
+        "google",
+        "ground",
+        "data",
+        "center"
       ],
-      "entityShared": [],
+      "entityShared": [
+        "google"
+      ],
       "topicShared": [
-        "the"
+        "google",
+        "data",
+        "center"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -334,65 +392,62 @@
         "blocked": false
       },
       "factCoverage": 2,
-      "multiFactSupported": false,
+      "multiFactSupported": true,
       "directFactExact": false,
       "directExact": false,
-      "matchingMode": "fact-map-anchored-source-passage"
+      "matchingMode": "fact-map-multi-fact-anchored"
     },
     {
       "index": 5,
-      "claim": "The glasses are expected to come in two styles and include extra microphones to facilitate interaction with Meta’s AI assistant.",
+      "claim": "However, the on‑orbit version can run for only about 15 minutes before the chips must shut down to let cooling systems catch up.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 80,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
+      "confidence": 77,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F15",
-        "sourceId": "S1",
+        "factId": "F42",
+        "sourceId": "S3",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 70
+        "score": 67
       },
       "provenanceFactMatches": [
         {
-          "factId": "F15",
-          "sourceId": "S1",
+          "factId": "F42",
+          "sourceId": "S3",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 70,
+          "score": 67,
           "passageIndex": 5
         }
       ],
       "contextOnlySource": false,
       "bestPassageId": "S1-BODY",
-      "evidence": "These glasses, which will reportedly come in two styles, will instead come with extra microphones for chatting with Meta's AI assistant.",
-      "bestPassage": "These glasses, which will reportedly come in two styles, will instead come with extra microphones for chatting with Meta's AI assistant.",
+      "evidence": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
+      "bestPassage": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
       "matchedPassages": [
-        "S1-BODY",
-        "S1-P15"
+        "S1-BODY"
       ],
       "sharedTerms": [
         "the",
-        "glass",
-        "expect",
-        "come",
-        "two",
-        "styl",
-        "and",
-        "extra",
-        "microphon",
-        "meta",
-        "assistant"
+        "orbit",
+        "can",
+        "run",
+        "for",
+        "minut",
+        "chip",
+        "shut",
+        "down",
+        "cool",
+        "system",
+        "catch"
       ],
-      "entityShared": [
-        "meta"
-      ],
-      "topicShared": [
-        "the",
-        "meta"
-      ],
+      "entityShared": [],
+      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -414,56 +469,50 @@
     },
     {
       "index": 6,
-      "claim": "These updates are part of the company’s response to privacy and harassment concerns tied to its current lineup, and the company has already begun addressing those issues with privacy fixes and a new marketing campaign.",
-      "status": "partial",
-      "classification": "supported_with_context",
-      "confidence": 66,
-      "bestSource": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
-      "bestUrl": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
-      "bestDomain": "theverge.com",
-      "sourceId": "S2",
+      "claim": "The design combines heat‑pipe and radiator technology.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 72,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+      "bestUrl": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1",
+      "bestDomain": "geo.tv",
+      "sourceId": "S3",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F19",
-        "sourceId": "S2",
+        "factId": "F42",
+        "sourceId": "S3",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 64
+        "score": 67
       },
       "provenanceFactMatches": [
         {
-          "factId": "F19",
-          "sourceId": "S2",
+          "factId": "F42",
+          "sourceId": "S3",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 64,
+          "score": 67,
           "passageIndex": 5
         }
       ],
       "contextOnlySource": false,
-      "bestPassageId": "S2-BODY",
-      "evidence": "The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
-      "bestPassage": "The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
+      "bestPassageId": "S3-P12",
+      "evidence": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
+      "bestPassage": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
       "matchedPassages": [
-        "S2-BODY",
-        "S2-P3"
+        "S3-P12",
+        "S3-BODY"
       ],
       "sharedTerms": [
-        "updat",
         "the",
-        "privacy",
+        "design",
+        "combin",
+        "heat",
         "and",
-        "harassment",
-        "fear",
-        "has",
-        "those",
-        "fix",
-        "new",
-        "market",
-        "campaign"
+        "radiator"
       ],
       "entityShared": [],
-      "topicShared": [
-        "the"
-      ],
+      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
@@ -473,9 +522,9 @@
         "claimUncertain": false,
         "evidenceAttributed": false,
         "claimAttributed": false,
-        "certaintyEscalation": true,
+        "certaintyEscalation": false,
         "attributionDropped": false,
-        "blocked": true
+        "blocked": false
       },
       "factCoverage": 1,
       "multiFactSupported": false,
@@ -485,64 +534,68 @@
     },
     {
       "index": 7,
-      "claim": "After a long absence of new headset releases, Meta is preparing to debut a mixed‑reality headset known as Phoenix.",
+      "claim": "The TPU heat is conducted through a thermal interface material to aluminum and copper heat pipes, which then transfer it to a radiator that can radiate the heat into space.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 85,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
+      "confidence": 92,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F1",
+        "factId": "F12",
         "sourceId": "S1",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 78
+        "score": 67
       },
       "provenanceFactMatches": [
         {
-          "factId": "F1",
+          "factId": "F12",
           "sourceId": "S1",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 78,
-          "passageIndex": 8
+          "score": 67,
+          "passageIndex": 7
         }
       ],
       "contextOnlySource": false,
       "bestPassageId": "S1-BODY",
-      "evidence": "It's been a while since we've seen a new headset from Meta, and we've never seen anything from them quite like the device currently known as \"Phoenix.\" The mixed reality headset has been rumored for some time, but it certainly seems like the company is gearing up for it to make its official debut at Connect.",
-      "bestPassage": "It's been a while since we've seen a new headset from Meta, and we've never seen anything from them quite like the device currently known as \"Phoenix.\" The mixed reality headset has been rumored for some time, but it certainly seems like the company is gearing up for it to make its official debut at Connect.",
+      "evidence": "Google’s solution uses a layer of malleable “thermal interface material” that connects the chips to aluminum and copper heat pipes.",
+      "bestPassage": "Google’s solution uses a layer of malleable “thermal interface material” that connects the chips to aluminum and copper heat pipes.",
       "matchedPassages": [
-        "S1-BODY",
-        "S1-P1"
+        "S1-BODY"
       ],
       "sharedTerms": [
-        "new",
-        "headset",
-        "release",
-        "meta",
-        "debut",
-        "mix",
-        "reality",
-        "known",
-        "phoenix"
+        "the",
+        "tpu",
+        "heat",
+        "conduct",
+        "thermal",
+        "interface",
+        "material",
+        "aluminum",
+        "and",
+        "copper",
+        "pip",
+        "radiator",
+        "can",
+        "space"
       ],
       "entityShared": [
-        "meta",
-        "phoenix"
+        "the",
+        "tpu"
       ],
-      "topicShared": [
-        "meta"
-      ],
+      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
       "scopeWarnings": [],
       "attributionUncertainty": {
         "evidenceUncertain": false,
-        "claimUncertain": false,
-        "evidenceAttributed": true,
+        "claimUncertain": true,
+        "evidenceAttributed": false,
         "claimAttributed": false,
         "certaintyEscalation": false,
         "attributionDropped": false,
@@ -556,76 +609,60 @@
     },
     {
       "index": 8,
-      "claim": "Rumors suggest that Phoenix will be one of the first devices to use Qualcomm’s Snapdragon Reality Elite chip, a processor specifically designed for slimmer form factors suitable for headsets.",
+      "claim": "After each burst, the TPUs pause until the radiators cool the system.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 93,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
+      "confidence": 66,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+      "bestUrl": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1",
+      "bestDomain": "geo.tv",
+      "sourceId": "S3",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F5",
-        "sourceId": "S1",
+        "factId": "F42",
+        "sourceId": "S3",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 76
+        "score": 55
       },
       "provenanceFactMatches": [
         {
-          "factId": "F5",
-          "sourceId": "S1",
+          "factId": "F42",
+          "sourceId": "S3",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 76,
-          "passageIndex": 10
+          "score": 55,
+          "passageIndex": 5
         }
       ],
       "contextOnlySource": false,
-      "bestPassageId": "S1-BODY",
-      "evidence": "And while we don't know much about what Phoenix will look like in the way of specs, it seems like a pretty good bet the headset will be among the first devices to use the new Snapdragon Reality Elite chip Qualcomm announced earlier this year.",
-      "bestPassage": "And while we don't know much about what Phoenix will look like in the way of specs, it seems like a pretty good bet the headset will be among the first devices to use the new Snapdragon Reality Elite chip Qualcomm announced earlier this year.",
+      "bestPassageId": "S3-BODY",
+      "evidence": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
+      "bestPassage": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
       "matchedPassages": [
-        "S1-BODY",
-        "S1-P5"
+        "S3-BODY",
+        "S3-P12"
       ],
       "sharedTerms": [
-        "rumor",
-        "phoenix",
-        "one",
+        "each",
+        "burst",
         "the",
-        "first",
-        "devic",
-        "use",
-        "qualcomm",
-        "snapdragon",
-        "reality",
-        "elite",
-        "chip",
-        "specifically",
-        "design",
-        "for",
-        "form",
-        "factor",
-        "headset"
+        "tpus",
+        "radiator",
+        "system"
       ],
       "entityShared": [
-        "phoenix",
-        "qualcomm",
-        "snapdragon",
-        "reality",
-        "elite"
+        "tpus"
       ],
-      "topicShared": [
-        "the"
-      ],
+      "topicShared": [],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
       "scopeWarnings": [],
       "attributionUncertainty": {
-        "evidenceUncertain": false,
+        "evidenceUncertain": true,
         "claimUncertain": false,
-        "evidenceAttributed": true,
+        "evidenceAttributed": false,
         "claimAttributed": false,
         "certaintyEscalation": false,
         "attributionDropped": false,
@@ -639,78 +676,384 @@
     },
     {
       "index": 9,
-      "claim": "The event is also expected to feature updates on Meta’s Muse AI agent and potential new opportunities for third‑party apps on the glasses ecosystem.",
+      "claim": "The mission’s primary goal is to gather data on how the system behaves in orbit and to identify failure points.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 84,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
-      "sourceId": "S1",
+      "confidence": 73,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+      "bestUrl": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1",
+      "bestDomain": "geo.tv",
+      "sourceId": "S3",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F20",
-        "sourceId": "S2",
+        "factId": "F33",
+        "sourceId": "S3",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 56
+        "score": 57
       },
       "provenanceFactMatches": [
         {
-          "factId": "F20",
-          "sourceId": "S2",
+          "factId": "F33",
+          "sourceId": "S3",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 56,
-          "passageIndex": 3
-        },
-        {
-          "factId": "F13",
-          "sourceId": "S1",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 49,
-          "passageIndex": 15
-        },
-        {
-          "factId": "F19",
-          "sourceId": "S2",
-          "sourceRole": "DIRECT_REPORTING",
-          "score": 44,
-          "passageIndex": 5
+          "score": 57,
+          "passageIndex": 7
         }
       ],
       "contextOnlySource": false,
-      "bestPassageId": "S2-FF20,S1-FF13,S2-FF19",
-      "evidence": "That means we can expect more news from Zuckerberg and his team on those topics; perhaps we’ll hear more about Meta’s recently launched Muse AI agent and new glasses hardware. I'm also hoping to hear more about Meta's work to bring more third-party apps to its glasses ecosystem. The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
-      "bestPassage": "That means we can expect more news from Zuckerberg and his team on those topics; perhaps we’ll hear more about Meta’s recently launched Muse AI agent and new glasses hardware. I'm also hoping to hear more about Meta's work to bring more third-party apps to its glasses ecosystem. The company is dealing with an outpouring of privacy and harassment concerns stemming from the product line’s built-in camera, which has led to them being derided as “pervert glasses.” Meta has already tried to tackle that reputation with recent privacy fixes and a new marketing campaign, but it could introduce more updates on the Connect stage.",
+      "bestPassageId": "S3-BODY",
+      "evidence": "Google stressed the first mission is about gathering data and recognising and identifying failure points, not showcasing an operational orbital data centre.",
+      "bestPassage": "Google stressed the first mission is about gathering data and recognising and identifying failure points, not showcasing an operational orbital data centre.",
       "matchedPassages": [
-        "S1-BODY"
+        "S3-BODY",
+        "S3-P3"
       ],
       "sharedTerms": [
         "the",
-        "expect",
-        "updat",
-        "meta",
-        "muse",
-        "agent",
+        "mission",
+        "goal",
+        "gather",
+        "data",
+        "system",
         "and",
-        "new",
-        "third",
-        "party",
-        "apps",
-        "glass",
-        "ecosystem"
+        "identify",
+        "failure",
+        "point"
       ],
-      "entityShared": [
-        "meta",
-        "muse"
-      ],
+      "entityShared": [],
       "topicShared": [
-        "the",
-        "meta"
+        "data"
       ],
       "numericMismatch": false,
       "contradicted": false,
       "offTopic": false,
       "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 10,
+      "claim": "It will operate for just a few months, after which Google will evaluate what works and what does not.With this first test, Google hopes to understand what does and doesn’t work, allowing it to improve its designs for future missions.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 94,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F4",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 82
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F4",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 82,
+          "passageIndex": 9
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "With this first test, Google hopes to understand what does and doesn’t work, allowing it to improve its designs for future missions.",
+      "bestPassage": "With this first test, Google hopes to understand what does and doesn’t work, allowing it to improve its designs for future missions.",
+      "matchedPassages": [
+        "S1-BODY",
+        "S1-P4"
+      ],
+      "sharedTerms": [
+        "operate",
+        "for",
+        "few",
+        "month",
+        "google",
+        "evaluate",
+        "work",
+        "and",
+        "does",
+        "not",
+        "first",
+        "test",
+        "hop",
+        "understand",
+        "doesn",
+        "allow",
+        "improve",
+        "its",
+        "design",
+        "future",
+        "mission"
+      ],
+      "entityShared": [
+        "google"
+      ],
+      "topicShared": [
+        "google",
+        "first",
+        "test"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 11,
+      "claim": "The satellite’s brief operation period reflects the thermal constraints of orbital AI hardware.Radiator systems exist in space, but they’re designed to remove a relatively small amount of heat.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 82,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F10",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 69
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F10",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 69,
+          "passageIndex": 7
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "Radiator systems exist in space, but they’re designed to remove a relatively small amount of heat.",
+      "bestPassage": "Radiator systems exist in space, but they’re designed to remove a relatively small amount of heat.",
+      "matchedPassages": [
+        "S1-BODY",
+        "S1-P10"
+      ],
+      "sharedTerms": [
+        "the",
+        "satellite",
+        "thermal",
+        "orbital",
+        "hardware",
+        "radiator",
+        "system",
+        "exist",
+        "space",
+        "but",
+        "design",
+        "remove",
+        "relatively",
+        "small",
+        "amount",
+        "heat"
+      ],
+      "entityShared": [
+        "radiator"
+      ],
+      "topicShared": [
+        "orbital"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 12,
+      "claim": "Google’s solution uses a specialized thermal interface material to bridge the heat gap, but even so the system cannot run continuously.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 80,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F12",
+        "sourceId": "S1",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 61
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F12",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 61,
+          "passageIndex": 7
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "Google’s solution uses a layer of malleable “thermal interface material” that connects the chips to aluminum and copper heat pipes.",
+      "bestPassage": "Google’s solution uses a layer of malleable “thermal interface material” that connects the chips to aluminum and copper heat pipes.",
+      "matchedPassages": [
+        "S1-BODY",
+        "S1-P12"
+      ],
+      "sharedTerms": [
+        "google",
+        "solution",
+        "thermal",
+        "interface",
+        "material",
+        "the",
+        "heat",
+        "but",
+        "system",
+        "run",
+        "continuously"
+      ],
+      "entityShared": [
+        "google"
+      ],
+      "topicShared": [
+        "google"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 13,
+      "claim": "Google’s long‑term vision is a network of satellites that can provide continuous AI compute by leveraging near‑constant sunlight.",
+      "status": "partial",
+      "classification": "supported_with_context",
+      "confidence": 63,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F31",
+        "sourceId": "S3",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 34
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F31",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 34,
+          "passageIndex": 1
+        },
+        {
+          "factId": "F44",
+          "sourceId": "S4",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 30,
+          "passageIndex": 1
+        },
+        {
+          "factId": "F3",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 28,
+          "passageIndex": 2
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S3-FF31,S4-FF44,S1-FF3",
+      "evidence": "Google is set to launch its first experimental satellite for “Project Suncatcher” on October 1, marking a significant step toward its goal of building orbital AI data centres powered by near-constant sunlight. The mission will test whether space can support future AI data centres powered by near-constant sunlight. Google’s first experimental satellite will launch on October 1 with the aim of validating Google’s vision for a constellation of AI satellites .",
+      "bestPassage": "Google is set to launch its first experimental satellite for “Project Suncatcher” on October 1, marking a significant step toward its goal of building orbital AI data centres powered by near-constant sunlight. The mission will test whether space can support future AI data centres powered by near-constant sunlight. Google’s first experimental satellite will launch on October 1 with the aim of validating Google’s vision for a constellation of AI satellites .",
+      "matchedPassages": [
+        "S1-BODY"
+      ],
+      "sharedTerms": [
+        "google",
+        "vision",
+        "satellit",
+        "can",
+        "near",
+        "constant",
+        "sunlight"
+      ],
+      "entityShared": [
+        "google"
+      ],
+      "topicShared": [
+        "google"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [
+        "can provide"
+      ],
       "attributionUncertainty": {
         "evidenceUncertain": true,
         "claimUncertain": true,
@@ -727,55 +1070,165 @@
       "matchingMode": "fact-map-multi-fact-anchored"
     },
     {
-      "index": 10,
-      "claim": "An avatar of Meta’s CTO may appear during the keynote, adding a virtual dimension to the presentation.",
+      "index": 14,
+      "claim": "To achieve this, future satellites would need high‑speed laser links to communicate with one another and ground stations.Google’s first experimental satellite will launch on October 1 with the aim of validating Google’s vision for a constellation of AI satellites.",
       "status": "verified",
       "classification": "supported",
-      "confidence": 71,
-      "bestSource": "What To Expect At Meta Connect 2026: New AI Glasses, A Mixed Reality Headset And More - Engadget",
-      "bestUrl": "https://www.engadget.com/2262932/what-to-expect-at-meta-connect-2026-new-ai-glasses-a-mixed-reality-headset-and-more/",
-      "bestDomain": "engadget.com",
+      "confidence": 92,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
       "sourceId": "S1",
       "sourceRole": "DIRECT_REPORTING",
       "coreFactMatch": {
-        "factId": "F12",
+        "factId": "F3",
         "sourceId": "S1",
         "sourceRole": "DIRECT_REPORTING",
-        "score": 67
+        "score": 73
       },
       "provenanceFactMatches": [
         {
-          "factId": "F12",
+          "factId": "F3",
           "sourceId": "S1",
           "sourceRole": "DIRECT_REPORTING",
-          "score": 67,
-          "passageIndex": 12
+          "score": 73,
+          "passageIndex": 2
         }
       ],
       "contextOnlySource": false,
       "bestPassageId": "S1-BODY",
-      "evidence": "The Information also recently reported that an avatar of Meta's CTO could make an appearance during the Connect keynote.",
-      "bestPassage": "The Information also recently reported that an avatar of Meta's CTO could make an appearance during the Connect keynote.",
+      "evidence": "Google’s first experimental satellite will launch on October 1 with the aim of validating Google’s vision for a constellation of AI satellites .",
+      "bestPassage": "Google’s first experimental satellite will launch on October 1 with the aim of validating Google’s vision for a constellation of AI satellites .",
       "matchedPassages": [
         "S1-BODY",
-        "S1-P12"
+        "S1-P3"
       ],
       "sharedTerms": [
-        "avatar",
-        "meta",
-        "cto",
-        "dur",
+        "future",
+        "satellit",
+        "need",
+        "high",
+        "spe",
+        "laser",
+        "communicate",
+        "one",
+        "and",
+        "ground",
+        "google",
+        "first",
+        "experimental",
+        "satellite",
+        "launch",
+        "october",
         "the",
-        "keynote",
-        "virtual"
+        "aim",
+        "validat",
+        "vision",
+        "for",
+        "constellation"
       ],
       "entityShared": [
-        "meta",
-        "cto"
+        "google",
+        "october"
       ],
       "topicShared": [
-        "meta",
-        "the"
+        "google",
+        "first",
+        "launch",
+        "october"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 1,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 15,
+      "claim": "The company plans additional launches in 2027 to test those laser links, but analysts note that commercial orbital data centers remain years away because of launch costs and technical challenges.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 83,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to test first orbital AI data centre on October 1 - Daily Times",
+      "bestUrl": "https://dailytimes.com.pk/1557806/google-to-test-first-orbital-ai-data-centre-on-october-1/",
+      "bestDomain": "dailytimes.com.pk",
+      "sourceId": "S4",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F30",
+        "sourceId": "S2",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 58
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F30",
+          "sourceId": "S2",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 58,
+          "passageIndex": 3
+        },
+        {
+          "factId": "F36",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 49,
+          "passageIndex": 6
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S4-BODY",
+      "evidence": "Google plans additional launches in 2027 but expects Suncatcher will remain years away from becoming a commercial product. Google plans to launch two satellites in 2027 to test those laser links.",
+      "bestPassage": "Google plans additional launches in 2027 but expects Suncatcher will remain years away from becoming a commercial product. Google plans to launch two satellites in 2027 to test those laser links.",
+      "matchedPassages": [
+        "S4-BODY"
+      ],
+      "sharedTerms": [
+        "the",
+        "plan",
+        "additional",
+        "launch",
+        "2027",
+        "test",
+        "those",
+        "laser",
+        "link",
+        "but",
+        "commercial",
+        "orbital",
+        "data",
+        "remain",
+        "year",
+        "away",
+        "cost",
+        "and",
+        "technical",
+        "challeng"
+      ],
+      "entityShared": [],
+      "topicShared": [
+        "launch",
+        "test",
+        "orbital",
+        "data",
+        "center"
       ],
       "numericMismatch": false,
       "contradicted": false,
@@ -783,8 +1236,408 @@
       "scopeWarnings": [],
       "attributionUncertainty": {
         "evidenceUncertain": true,
-        "claimUncertain": true,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 2,
+      "multiFactSupported": true,
+      "directFactExact": true,
+      "directExact": true,
+      "matchingMode": "fact-map-multi-fact-anchored"
+    },
+    {
+      "index": 16,
+      "claim": "**Performance data** from the MVP mission will reveal how well the TPUs handle space radiation and thermal loads.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 79,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F39",
+        "sourceId": "S3",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 51
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F39",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 51,
+          "passageIndex": 4
+        },
+        {
+          "factId": "F37",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 44,
+          "passageIndex": 2
+        },
+        {
+          "factId": "F40",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 40,
+          "passageIndex": 4
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "The mission will assess how Google’s TPUs withstand launch forces, radiation, and thermal extremes. The refrigerator-sized satellite, named MVP, will carry four of Google’s custom Tensor Processing Units (TPUs) and launch aboard a SpaceX Falcon 9 as part of the Transporter-18 rideshare mission. Google said its Trillium TPUs held up well in ground tests, surviving radiation doses greater than what a five-year space mission would deliver.",
+      "bestPassage": "The mission will assess how Google’s TPUs withstand launch forces, radiation, and thermal extremes. The refrigerator-sized satellite, named MVP, will carry four of Google’s custom Tensor Processing Units (TPUs) and launch aboard a SpaceX Falcon 9 as part of the Transporter-18 rideshare mission. Google said its Trillium TPUs held up well in ground tests, surviving radiation doses greater than what a five-year space mission would deliver.",
+      "matchedPassages": [
+        "S1-BODY"
+      ],
+      "sharedTerms": [
+        "data",
+        "the",
+        "mvp",
+        "mission",
+        "well",
+        "tpus",
+        "handle",
+        "space",
+        "radiation",
+        "and",
+        "thermal"
+      ],
+      "entityShared": [
+        "mvp",
+        "tpus"
+      ],
+      "topicShared": [
+        "data"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
         "evidenceAttributed": true,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 3,
+      "multiFactSupported": true,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-multi-fact-anchored"
+    },
+    {
+      "index": 17,
+      "claim": "**Cooling efficiency** results will determine whether the current heat‑pipe and radiator approach can scale to larger systems.",
+      "status": "partial",
+      "classification": "supported_with_context",
+      "confidence": 55,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google's first Suncatcher orbital data center test launches October 1",
+      "bestUrl": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "bestDomain": "arstechnica.com",
+      "sourceId": "S1",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F42",
+        "sourceId": "S3",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 37
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F42",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 37,
+          "passageIndex": 5
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S1-BODY",
+      "evidence": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
+      "bestPassage": "Google’s design combines heat pipes and radiators, but the system can only run in roughly 15-minute bursts before the TPUs must shut down to let radiators catch up.",
+      "matchedPassages": [
+        "S1-BODY"
+      ],
+      "sharedTerms": [
+        "cool",
+        "the",
+        "current",
+        "heat",
+        "and",
+        "radiator",
+        "can",
+        "system"
+      ],
+      "entityShared": [
+        "cool"
+      ],
+      "topicShared": [],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": true,
+        "claimUncertain": true,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 2,
+      "multiFactSupported": false,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-anchored-source-passage"
+    },
+    {
+      "index": 18,
+      "claim": "Google plans to launch two additional satellites in 2027 to test those connections.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 94,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to test first orbital AI data centre on October 1 - Daily Times",
+      "bestUrl": "https://dailytimes.com.pk/1557806/google-to-test-first-orbital-ai-data-centre-on-october-1/",
+      "bestDomain": "dailytimes.com.pk",
+      "sourceId": "S4",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F47",
+        "sourceId": "S4",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 94
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F47",
+          "sourceId": "S4",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 94,
+          "passageIndex": 5
+        },
+        {
+          "factId": "F36",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 84,
+          "passageIndex": 6
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S4-FF47,S3-FF36",
+      "evidence": "Google plans to launch two additional satellites in 2027 to test those connections. Google plans to launch two satellites in 2027 to test those laser links.",
+      "bestPassage": "Google plans to launch two additional satellites in 2027 to test those connections. Google plans to launch two satellites in 2027 to test those laser links.",
+      "matchedPassages": [
+        "S4-P5",
+        "S4-BODY"
+      ],
+      "sharedTerms": [
+        "google",
+        "plan",
+        "launch",
+        "two",
+        "additional",
+        "satellit",
+        "2027",
+        "test",
+        "those",
+        "connection"
+      ],
+      "entityShared": [
+        "google"
+      ],
+      "topicShared": [
+        "google",
+        "launch",
+        "test"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": false,
+        "attributionDropped": false,
+        "blocked": false
+      },
+      "factCoverage": 2,
+      "multiFactSupported": true,
+      "directFactExact": true,
+      "directExact": true,
+      "matchingMode": "fact-map-multi-fact-anchored"
+    },
+    {
+      "index": 19,
+      "claim": "Until those milestones are reached, Project Suncatcher will remain a research effort rather than a commercial product.",
+      "status": "partial",
+      "classification": "supported_with_context",
+      "confidence": 66,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google To Launch First Experimental Satellite For Orbital AI Data Center Project - RTTNews",
+      "bestUrl": "https://www.rttnews.com/amp/3693813/google-to-launch-first-experimental-satellite-for-orbital-ai-data-center-project.aspx",
+      "bestDomain": "rttnews.com",
+      "sourceId": "S2",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F30",
+        "sourceId": "S2",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 40
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F30",
+          "sourceId": "S2",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 40,
+          "passageIndex": 3
+        },
+        {
+          "factId": "F5",
+          "sourceId": "S1",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 30,
+          "passageIndex": 9
+        },
+        {
+          "factId": "F28",
+          "sourceId": "S2",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 30,
+          "passageIndex": 1
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S2-FF30,S1-FF5,S2-FF28",
+      "evidence": "Google plans additional launches in 2027 but expects Suncatcher will remain years away from becoming a commercial product. The 2027 launches are still on the agenda, but the team expects it will be years before Suncatcher evolves from “project” to “product.” Google under Alphabet Inc. (GOOG) is preparing to launch its first experimental satellite as part of Project Suncatcher, an ambitious effort to develop AI data centers in orbit.",
+      "bestPassage": "Google plans additional launches in 2027 but expects Suncatcher will remain years away from becoming a commercial product. The 2027 launches are still on the agenda, but the team expects it will be years before Suncatcher evolves from “project” to “product.” Google under Alphabet Inc. (GOOG) is preparing to launch its first experimental satellite as part of Project Suncatcher, an ambitious effort to develop AI data centers in orbit.",
+      "matchedPassages": [
+        "S2-BODY"
+      ],
+      "sharedTerms": [
+        "are",
+        "project",
+        "suncatcher",
+        "remain",
+        "effort",
+        "commercial",
+        "product"
+      ],
+      "entityShared": [
+        "project",
+        "suncatcher"
+      ],
+      "topicShared": [
+        "suncatcher"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": true,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
+        "claimAttributed": false,
+        "certaintyEscalation": true,
+        "attributionDropped": false,
+        "blocked": true
+      },
+      "factCoverage": 3,
+      "multiFactSupported": true,
+      "directFactExact": false,
+      "directExact": false,
+      "matchingMode": "fact-map-multi-fact-anchored"
+    },
+    {
+      "index": 20,
+      "claim": "The October launch marks a significant technical step, but the road to an operational orbital AI data center is long and uncertain.",
+      "status": "verified",
+      "classification": "supported",
+      "confidence": 82,
+      "temporalWarning": null,
+      "eventDate": null,
+      "bestSource": "Google to launch first orbital AI data centre test on October 1 - Geo News",
+      "bestUrl": "https://www.geo.tv/latest/683551-google-to-launch-first-orbital-ai-data-centre-test-on-october-1",
+      "bestDomain": "geo.tv",
+      "sourceId": "S3",
+      "sourceRole": "DIRECT_REPORTING",
+      "coreFactMatch": {
+        "factId": "F31",
+        "sourceId": "S3",
+        "sourceRole": "DIRECT_REPORTING",
+        "score": 52
+      },
+      "provenanceFactMatches": [
+        {
+          "factId": "F31",
+          "sourceId": "S3",
+          "sourceRole": "DIRECT_REPORTING",
+          "score": 52,
+          "passageIndex": 1
+        }
+      ],
+      "contextOnlySource": false,
+      "bestPassageId": "S3-BODY",
+      "evidence": "Google is set to launch its first experimental satellite for “Project Suncatcher” on October 1, marking a significant step toward its goal of building orbital AI data centres powered by near-constant sunlight.",
+      "bestPassage": "Google is set to launch its first experimental satellite for “Project Suncatcher” on October 1, marking a significant step toward its goal of building orbital AI data centres powered by near-constant sunlight.",
+      "matchedPassages": [
+        "S3-BODY"
+      ],
+      "sharedTerms": [
+        "the",
+        "october",
+        "launch",
+        "mark",
+        "significant",
+        "step",
+        "but",
+        "operational",
+        "orbital",
+        "data",
+        "and"
+      ],
+      "entityShared": [
+        "the",
+        "october"
+      ],
+      "topicShared": [
+        "october",
+        "launch",
+        "orbital",
+        "data",
+        "center"
+      ],
+      "numericMismatch": false,
+      "contradicted": false,
+      "offTopic": false,
+      "scopeWarnings": [],
+      "attributionUncertainty": {
+        "evidenceUncertain": false,
+        "claimUncertain": false,
+        "evidenceAttributed": false,
         "claimAttributed": false,
         "certaintyEscalation": false,
         "attributionDropped": false,
@@ -797,12 +1650,5 @@
       "matchingMode": "fact-map-anchored-source-passage"
     }
   ],
-  "editorial": [
-    {
-      "index": 11,
-      "claim": "Overall, the Connect lineup signals Meta’s intent to advance its smart‑glasses offering while addressing ongoing privacy concerns and broadening its software ecosystem.",
-      "type": "editorial-analysis",
-      "status": "editorial-excluded"
-    }
-  ]
+  "editorial": []
 }
