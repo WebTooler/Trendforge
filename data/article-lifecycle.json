@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-25T15:12:20.878Z",
+  "generatedAt": "2026-09-25T15:13:09.687Z",
   "policy": {
     "refreshCandidateScore": 75,
     "watchScore": 45,
@@ -11,10 +11,10 @@
     "preservesPublicationGates": true
   },
   "summary": {
-    "articles": 22,
+    "articles": 24,
     "refreshCandidates": 0,
-    "watch": 16,
-    "fresh": 6,
+    "watch": 17,
+    "fresh": 7,
     "stale": 0,
     "duplicateClusters": 0
   },
@@ -246,6 +246,20 @@
       "reasons": []
     },
     {
+      "file": "microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience.md",
+      "title": "Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
+      "category": "Technology",
+      "publishedAt": "2026-09-24T02:15:33.773Z",
+      "ageDays": 1.5,
+      "ageState": "fresh",
+      "words": 529,
+      "sourceCount": 4,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": []
+    },
+    {
       "file": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.md",
       "title": "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
       "category": "World",
@@ -314,6 +328,22 @@
       "ageState": "fresh",
       "words": 421,
       "sourceCount": 3,
+      "refreshScore": 42,
+      "status": "fresh",
+      "action": "no-action",
+      "reasons": [
+        "content below 450 words"
+      ]
+    },
+    {
+      "file": "meta-s-connect-2026-unveils-new-glasses-and-a-rumored-mixed-reality-headset.md",
+      "title": "Meta’s Connect 2026 Unveils New Glasses and a Rumored Mixed‑Reality Headset",
+      "category": "Digital Life",
+      "publishedAt": "2026-09-24T06:37:38.171Z",
+      "ageDays": 1.4,
+      "ageState": "fresh",
+      "words": 301,
+      "sourceCount": 2,
       "refreshScore": 42,
       "status": "fresh",
       "action": "no-action",
@@ -611,6 +641,21 @@
       "priority": 14
     },
     {
+      "file": "microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience.md",
+      "title": "Microsoft Eyes $10 B+ Investment in Middle East Tech, AI, and Digital Resilience",
+      "category": "Technology",
+      "publishedAt": "2026-09-24T02:15:33.773Z",
+      "ageDays": 1.5,
+      "ageState": "fresh",
+      "words": 529,
+      "sourceCount": 4,
+      "refreshScore": 46,
+      "status": "watch",
+      "action": "watch",
+      "reasons": [],
+      "priority": 15
+    },
+    {
       "file": "trump-announces-u-s-permanent-control-over-greenland-security-denmark-and-greenland-to-sig.md",
       "title": "Trump Announces U.S. “Permanent Control” Over Greenland Security, Denmark and Greenland to Sign Deal",
       "category": "World",
@@ -623,7 +668,7 @@
       "status": "watch",
       "action": "watch",
       "reasons": [],
-      "priority": 15
+      "priority": 16
     },
     {
       "file": "u-s-agencies-board-oil-tankers-after-cyberattacks-target-navigation-and-propulsion-systems.md",
@@ -638,7 +683,7 @@
       "status": "watch",
       "action": "watch",
       "reasons": [],
-      "priority": 16
+      "priority": 17
     }
   ],
   "duplicateClusters": []
