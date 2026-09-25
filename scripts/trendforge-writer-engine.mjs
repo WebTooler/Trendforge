@@ -109,7 +109,7 @@ export async function generateWithTrendForgeWriter({prompt,category='Technology'
     '- Do not silently convert rumor, expectation, or leak language into confirmed launch/announcement language.',
     '- Keep separate products, prototypes, variants, and rumored devices separate unless the evidence explicitly establishes they are the same product.',
     '- If the evidence contains both pre-event and post-event material, prefer the current post-event evidence for the current state while preserving earlier reporting only as historical context.'
-  ].join('\\n');
+  ].join('\\n') : '';
   let architectureGuide='';
   if (blueprint) {
     const architectureLines=[
