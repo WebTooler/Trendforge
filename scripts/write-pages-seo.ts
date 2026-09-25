@@ -14,7 +14,7 @@ function escapeXml(value: string) {
 }
 
 function validDate(value: string) {
-  return /^\\d{4}-\\d{2}-\\d{2}(?:T.*)?$/.test(value);
+  return /^\d{4}-\d{2}-\d{2}(?:T.*)?$/.test(value);
 }
 
 function entry(url: string, lastModified: string, frequency: string, priority: string) {
@@ -28,7 +28,7 @@ function entry(url: string, lastModified: string, frequency: string, priority: s
     `    <changefreq>${frequency}</changefreq>`,
     `    <priority>${priority}</priority>`,
     '  </url>',
-  ].join('\\n');
+  ].join('\n');
 }
 
 const today = new Date().toISOString().slice(0, 10);
@@ -47,7 +47,7 @@ const urls = [
   ),
 ];
 
-const locs = urls.map((item) => item.match(/<loc>(.*?)<\\/loc>/)?.[1]).filter(Boolean);
+const locs = urls.map((item) => item.match(/<loc>(.*?)<\/loc>/)?.[1]).filter(Boolean);
 if (new Set(locs).size !== locs.length) {
   throw new Error('Duplicate URL detected in sitemap.');
 }
@@ -55,8 +55,8 @@ if (locs.some((url) => !url!.startsWith(`${siteUrl}/`))) {
   throw new Error('Sitemap contains a URL outside the canonical GitHub Pages site.');
 }
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\\n${urls.join('\\n')}\\n</urlset>\\n`;
-const robots = `User-agent: *\\nAllow: /\\n\\nSitemap: ${siteUrl}/sitemap.xml\\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`;
+const robots = `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`;
 
 await mkdir('out', { recursive: true });
 await writeFile('out/sitemap.xml', sitemap, 'utf8');
