@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T05:19:59.193Z",
+  "updatedAt": "2026-09-25T12:09:10.521Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,7 +12,7 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 35,
+    "runCount": 36,
     "topicCount": 471,
     "articleCount": 23,
     "latestEditorialScore": 75,
@@ -31,7 +31,7 @@
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 245,
+      "failures": 252,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -46,8 +46,8 @@
     },
     "Cohere": {
       "successRate": 15,
-      "successes": 317,
-      "failures": 1816,
+      "successes": 329,
+      "failures": 1891,
       "cooldownRuns": 0,
       "latestStatus": 422,
       "latestClass": "error"
@@ -55,15 +55,15 @@
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 996,
+      "failures": 1038,
       "cooldownRuns": 4,
       "latestStatus": 503,
       "latestClass": "server"
     },
     "Groq": {
       "successRate": 39,
-      "successes": 1176,
-      "failures": 1824,
+      "successes": 1234,
+      "failures": 1895,
       "cooldownRuns": 2,
       "latestStatus": 200,
       "latestClass": "success"
@@ -71,15 +71,15 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 105,
+      "failures": 108,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
       "successRate": 4,
-      "successes": 59,
-      "failures": 1379,
+      "successes": 61,
+      "failures": 1437,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "rate_limit"
@@ -248,7 +248,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 35,
+    "memoryRuns": 36,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
