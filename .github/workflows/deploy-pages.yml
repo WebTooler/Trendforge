@@ -66,9 +66,6 @@ jobs:
       - name: Generate search index
         run: npx tsx scripts/generate-search-index.ts
 
-      - name: Generate explicit static sitemap
-        run: npx tsx scripts/generate-sitemap.ts
-
       - name: Prepare audit telemetry for Control Center
         run: npm run audit:run
 
@@ -91,6 +88,9 @@ jobs:
 
       - name: Build static site
         run: npm run build
+
+      - name: Write deterministic GitHub Pages SEO artifacts
+        run: npx tsx scripts/write-pages-seo.ts
 
       - name: Validate production artifact
         shell: bash
