@@ -1,73 +1,12 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-25T15:12:19.776Z",
+  "generatedAt": "2026-09-25T15:48:50.707Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 1,
+  "generated": 0,
   "skipped": 0,
   "failed": 0,
-  "images": {
-    "google-s-first-orbital-ai-data-center-test-launches-on-october-1": {
-      "status": "generated",
-      "image": "/Trendforge/images/articles/google-s-first-orbital-ai-data-center-test-launches-on-october-1.1024x576.png",
-      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
-      "width": 1024,
-      "height": 576,
-      "steps": 4,
-      "elapsedMs": 1921,
-      "bytes": 1108568,
-      "visualBrief": {
-        "version": 2,
-        "mode": "environment-infrastructure",
-        "primarySubject": "the specific data center or physical infrastructure central to the story",
-        "scene": "A realistic editorial photograph of the named infrastructure or environment, captured as the concrete subject rather than as generic technology scenery.",
-        "supportingElements": [
-          "one contextual scale or human element only when useful"
-        ],
-        "composition": "Architectural or documentary framing with one dominant physical structure and clear visual hierarchy.",
-        "company": "Google",
-        "namedPerson": "Planet Labs",
-        "category": "Technology",
-        "storyAnchors": [
-          "google",
-          "first",
-          "orbital",
-          "data",
-          "center",
-          "test",
-          "launches",
-          "october"
-        ],
-        "avoid": [
-          "generic office imagery",
-          "random tablet or laptop",
-          "generic futuristic technology",
-          "glowing holograms, floating code, HUDs and neon sci-fi effects",
-          "prominent readable text or fake headlines"
-        ]
-      },
-      "relevance": {
-        "passed": true,
-        "anchors": [
-          "google",
-          "first",
-          "orbital",
-          "data",
-          "center",
-          "test",
-          "launches",
-          "october"
-        ],
-        "matchedAnchors": [
-          "data",
-          "center"
-        ],
-        "entityMatches": [],
-        "score": 0.25
-      },
-      "promptLength": 1900
-    }
-  }
+  "images": {}
 }

@@ -263,11 +263,11 @@
       }
     },
     "Gemini": {
-      "failures": 41,
-      "quotaBlockedUntil": 1790035508791,
-      "lastStatus": 429,
-      "lastError": "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\\nPlease retry in 51.227916547s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n",
-      "lastClass": "quota",
+      "failures": 42,
+      "quotaBlockedUntil": 1790351423998,
+      "lastStatus": 503,
+      "lastError": "503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+      "lastClass": "server",
       "history": [
         {
           "at": 1789926372551,
@@ -334,6 +334,12 @@
           "ok": false,
           "class": "quota",
           "status": 429
+        },
+        {
+          "at": 1790351303998,
+          "ok": false,
+          "class": "server",
+          "status": 503
         }
       ]
     },
@@ -352,11 +358,11 @@
       "lastClass": "error"
     },
     "OpenRouter": {
-      "failures": 56,
-      "quotaBlockedUntil": 1790020704609,
-      "lastStatus": 200,
-      "lastError": "Invalid repair structured output",
-      "lastClass": "error",
+      "failures": 58,
+      "quotaBlockedUntil": 1790351328197,
+      "lastStatus": 429,
+      "lastError": "429: {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provider key (https://openrouter.ai/settings/integrations), or rou",
+      "lastClass": "rate_limit",
       "successes": 2,
       "lastSuccessAt": "2026-09-17T17:01:23.899Z",
       "history": [
@@ -443,42 +449,30 @@
           "ok": false,
           "class": "error",
           "status": 200
+        },
+        {
+          "at": 1790351300252,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
+        },
+        {
+          "at": 1790351320197,
+          "ok": false,
+          "class": "rate_limit",
+          "status": 429
         }
       ]
     },
     "Cohere": {
-      "failures": 72,
+      "failures": 76,
       "quotaBlockedUntil": 1790020690741,
-      "lastStatus": 200,
-      "lastError": "Empty atomic repair response",
+      "lastStatus": 422,
+      "lastError": "422: {\"error_type\":\"INVALID_TOOL_GENERATION\",\"id\":\"6ad2246d-f89e-49c6-aff8-0ebe8d80ed58\",\"message\":\"your request resulted in an invalid tool generation. Try updating the messages or tool definitions\"}",
       "lastClass": "error",
       "successes": 12,
       "lastSuccessAt": "2026-09-20T11:24:33.823Z",
       "history": [
-        {
-          "at": 1789928062363,
-          "ok": false,
-          "class": "transient",
-          "status": 200
-        },
-        {
-          "at": 1789962092719,
-          "ok": false,
-          "class": "transient",
-          "status": 200
-        },
-        {
-          "at": 1789986456423,
-          "ok": false,
-          "class": "error",
-          "status": 200
-        },
-        {
-          "at": 1789987753423,
-          "ok": false,
-          "class": "error",
-          "status": 200
-        },
         {
           "at": 1789987775897,
           "ok": false,
@@ -574,10 +568,34 @@
           "ok": false,
           "class": "error",
           "status": 200
+        },
+        {
+          "at": 1790351295249,
+          "ok": false,
+          "class": "error",
+          "status": 422
+        },
+        {
+          "at": 1790351299927,
+          "ok": false,
+          "class": "error",
+          "status": 422
+        },
+        {
+          "at": 1790351313268,
+          "ok": false,
+          "class": "error",
+          "status": 422
+        },
+        {
+          "at": 1790351319534,
+          "ok": false,
+          "class": "error",
+          "status": 422
         }
       ]
     }
   },
   "rotationCursor": 0,
-  "updatedAt": "2026-09-25T15:12:11.882Z"
+  "updatedAt": "2026-09-25T15:48:40.197Z"
 }
