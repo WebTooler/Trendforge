@@ -3,6 +3,21 @@ import { buildEditorialEvidenceBrief } from './editorial-evidence-brief.mjs';
 import { deriveEvidenceArticleBlueprint } from './evidence-article-blueprint.mjs';
 import { scoreEvidenceCoverage } from './evidence-coverage.mjs';
 import { buildAuthoritativeEvidencePack, validateAuthoritativeEvidencePack } from './authoritative-evidence-pack.mjs';
+import { deriveTemporalContext, temporalStatus } from './story-fact-map.mjs';
+
+
+const temporal=deriveTemporalContext({
+  candidate:{title:'Meta Connect 2026 unveils new glasses',description:'Meta will hold its Connect event on September 23, 2026.'},
+  sources:[
+    {id:'S1',publishedAt:'2026-09-18T12:00:00Z'},
+    {id:'S2',publishedAt:'2026-09-23T20:00:00Z'}
+  ]
+});
+assert.equal(temporal.eventDate,'2026-09-23T00:00:00.000Z');
+assert.equal(temporal.sources[0].temporalStatus,'pre-event');
+assert.equal(temporal.sources[1].temporalStatus,'post-event');
+assert.equal(temporalStatus({eventDate:new Date('2026-09-23T00:00:00Z'),sourceDate:new Date('2026-09-18T00:00:00Z')}),'pre-event');
+assert.equal(temporalStatus({eventDate:new Date('2026-09-23T00:00:00Z'),sourceDate:new Date('2026-09-24T00:00:00Z')}),'post-event');
 
 const candidate={
   title:'Acme launches Nova AI model with lower inference costs',
@@ -48,6 +63,7 @@ const sources=[
 
 const brief=buildEditorialEvidenceBrief({candidate,sources});
 assert.ok(brief.storyFactMap,'story fact map must be emitted');
+assert.ok(brief.temporal,'temporal context must be emitted');
 assert.ok(brief.storyFactMap.coreFacts.length>=4,'core facts must be extracted');
 assert.ok(brief.storyFactMap.capacity.directCoreFactCount>=3,'direct story facts must be available');
 assert.ok(brief.sources.some(s=>s.sourceRole==='PRIMARY'));
@@ -56,6 +72,20 @@ assert.equal(brief.storyFactMap.policy.contextCannotCompensateForCore,true);
 assert.equal(brief.storyFactMap.policy.synthesisMustReuseVerifiedFacts,true);
 assert.ok(brief.storyFactMap.capacity.synthesisCapacity);
 assert.ok(Array.isArray(brief.storyFactMap.capacity.synthesisCapacity.allowedFactIds));
+
+// Evidence integrity regressions:
+// 1) relevantPassageCount is a raw-passage metric and must never exceed rawPassageCount.
+// 2) sentence-level evidence depth is tracked separately.
+// 3) independently corroborating publishers must retain separate fact-map entries.
+assert.ok(brief.metrics.relevantPassageCount<=brief.metrics.rawPassageCount,
+  'relevant passage count must not exceed raw passage count');
+assert.ok(brief.metrics.relevantEvidenceUnitCount>=brief.metrics.relevantPassageCount,
+  'sentence-level evidence units must be at least the represented raw passages');
+const corroboratedLaunchFacts=brief.storyFactMap.facts.filter(f=>/launched.*nova|nova.*launched/i.test(f.text));
+assert.ok(new Set(corroboratedLaunchFacts.map(f=>f.sourceId)).size>=2,
+  'cross-source corroboration must survive fact-map deduplication');
+assert.ok(brief.supportedClaims.some(c=>c.passageId==='S1-P1'),
+  'claims must carry stable source-passage provenance IDs');
 
 const coverage=scoreEvidenceCoverage({sources:brief.sources,evidenceBrief:brief});
 const blueprint=deriveEvidenceArticleBlueprint({...coverage,evidenceBrief:brief});

@@ -7,7 +7,7 @@ import { validateAuthoritativeEvidencePack } from './authoritative-evidence-pack
 
 type Trend = { title:string; link:string; source:string; sourceName?:string; publishedAt?:string; category:string; description?:string; eligible?:boolean; score?:number; sources?:{title?:string;url:string;publishedAt?:string}[] };
 type VerificationRecord = { link:string; sources?:{title?:string;url?:string;domain?:string;ok?:boolean;status?:number;finalUrl?:string;discovered?:boolean;resolvedFrom?:string}[]; independentReachableDomains?:string[]; relevantReachableSourceCount?:number; status?:string };
-type EvidencePackItem = { title:string; url:string; description:string; kind:string; passages:string[]; articleBody:string; articleBodyLength:number; publisherFamily?:string; verified?:boolean; primary?:boolean; lineage?:Record<string, unknown>; sourceRole?:string };
+type EvidencePackItem = { title:string; url:string; description:string; kind:string; passages:string[]; articleBody:string; articleBodyLength:number; publisherFamily?:string; verified?:boolean; primary?:boolean; lineage?:Record<string, unknown>; sourceRole?:string; extraction?:{relevantPassages?:Array<{rawPassageIndex?:number;text?:string}>}|null };
 const stopWords = new Set(['about','after','again','also','been','being','could','from','have','into','more','most','over','said','some','than','that','their','there','these','they','this','what','when','which','with','will','would','your','technology','tech','digital','latest','news','update','updates','guide','how','today','artificial','intelligence','company','companies','industry','development','developments','story','stories','article','articles']);
 const topicWords=(text='')=>new Set(text.toLowerCase().split(/[^a-z0-9]+/).filter(w=>w.length>=4&&!stopWords.has(w)));
 const publisherName=(item:Trend)=>{const explicit=(item.sourceName||item.source||'').trim();if(explicit&&explicit.toLowerCase()!=='google news')return explicit;const m=item.description?.match(/<font[^>]*>([^<]+)<\/font>/i);return m?.[1]?.trim()||explicit||'Unknown publisher';};
@@ -54,8 +54,17 @@ async function main(){
   if(fs.existsSync(outputDir))for(const file of fs.readdirSync(outputDir).filter(n=>n.endsWith('.md'))){const raw=fs.readFileSync(`${outputDir}/${file}`,'utf8');const title=raw.match(/^title:\s*"([\s\S]*?)"\s*$/m)?.[1];if(title)existingTitles.add(title.toLowerCase().trim());const category=raw.match(/^category:\s*"([\s\S]*?)"\s*$/m)?.[1]||'';const body=raw.replace(/^---[\s\S]*?---/,'').slice(0,6500);existingTopics.push(`${category} ${title??''} ${body}`);}
   const verification=loadVerification();
   const eligible=trends.filter(i=>i.eligible&&!existingTitles.has(i.title.toLowerCase().trim())&&!existingTopicMatches(i,existingTopics)).sort((a,b)=>(b.score??0)-(a.score??0));
+  // Adaptive V2 passes the exact pre-writer candidate link. Never silently
+  // replace it with the first independently eligible trend: that would break
+  // the candidate -> authoritative evidence-pack handoff.
+  const requestedLink=String(process.env.TRENDFORGE_WRITER_CANDIDATE_LINK||'').trim();
   const findRelated=(candidate:Trend)=>{const pa=publisherName(candidate);return trends.filter(item=>{if(item===candidate||item.link===candidate.link||existingTopicMatches(item,existingTopics))return false;const pb=publisherName(item);if(!isCrediblePublisher(pb)||pa.toLowerCase()===pb.toLowerCase())return false;const evidence=verifiedEvidence(item,verification);return evidence.sources.length>=2&&relatedEnough(candidate,item);}).sort((a,b)=>(b.score??0)-(a.score??0))[0];};
-  const trend=eligible.find(candidate=>{const evidence=verifiedEvidence(candidate,verification);return evidence.sources.length>=1;});
+  const requestedCandidate=requestedLink?eligible.find(candidate=>candidate.link===requestedLink):null;
+  if(requestedLink&&!requestedCandidate){
+    console.log(`Requested pre-writer candidate not eligible/available in scored trends; publication blocked: ${requestedLink}`);
+    process.exit(0);
+  }
+  const trend=requestedCandidate||eligible.find(candidate=>{const evidence=verifiedEvidence(candidate,verification);return evidence.sources.length>=1;});
   if(!trend){console.log('No new eligible trend with at least one independent reachable verified publisher evidence source and semantic uniqueness found.');process.exit(0);}
   const category=classifyArticleCategory(trend);
   process.env.TRENDFORGE_WRITER_CATEGORY=category;
@@ -93,7 +102,7 @@ async function main(){
   const evidencePack:EvidencePackItem[]=(pack.sources??[]).map((source:any)=>({
     title:source.title,url:source.url,description:'',kind:source.extraction?.kind||'pre-writer',
     passages:source.passages||[],articleBody:source.body||'',articleBodyLength:(source.body||'').length,
-    publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage,sourceRole:source.sourceRole||'CONTEXT'
+    publisherFamily:source.publisherFamily,verified:source.verified,primary:source.primary,lineage:source.lineage,sourceRole:source.sourceRole||'CONTEXT',extraction:source.extraction||null
   }));
   const sources=evidencePack.map(s=>({title:s.title,url:s.url,publishedAt:trend.publishedAt,role:s.sourceRole||sourceRole(s)}));
   const sourceRelationship=sources.length>=2?'same-candidate strong verified evidence':'single-source verified evidence';
@@ -112,14 +121,30 @@ async function main(){
   // directly referenced by core facts, with a hard total character budget.
   const coreFacts=Array.isArray(storyFactMap?.coreFacts)?storyFactMap.coreFacts:[];
   const sourceIdFor=(s:any)=>s.publisherFamily||domainOf(s.url)||s.url;
+  // Core fact passageIndex values refer to raw passage IDs preserved by
+  // editorial-evidence-brief, not to the reindexed normalized source.passages array.
+  // Resolve them through extraction.relevantPassages so writer evidence uses the
+  // exact immutable passage text instead of silently falling back to passage #1.
   const corePassageRefs=new Map<string,Set<number>>();
-  for(const fact of coreFacts){const id=String(fact.sourceId||'');if(!id)continue;if(!corePassageRefs.has(id))corePassageRefs.set(id,new Set());const idx=Number(fact.passageIndex);if(Number.isInteger(idx)&&idx>=0)corePassageRefs.get(id)!.add(idx);}
+  for(const fact of coreFacts){
+    const id=String(fact.sourceId||''); if(!id)continue;
+    if(!corePassageRefs.has(id))corePassageRefs.set(id,new Set());
+    const idx=Number(fact.passageIndex);
+    if(Number.isInteger(idx)&&idx>=1)corePassageRefs.get(id)!.add(idx);
+  }
   const evidenceChunks=evidencePack.map((s,i)=>{
-    const refs=corePassageRefs.get(String(sourceIdFor(s)))||new Set<number>();
-    const selected=[...refs].sort((a,b)=>a-b).map(n=>s.passages[n]).filter(Boolean);
-    const fallback=s.passages.slice(0,1);
-    const passages=[...new Set((selected.length?selected:fallback).map(x=>String(x).trim()).filter(Boolean))].slice(0,2).map(x=>x.slice(0,900));
-    return `SOURCE S${i+1}\nPublisher/article: ${s.title}\nURL: ${s.url}\nRole: ${s.sourceRole||sourceRole(s)}\n${passages.map((p,j)=>`[S${i+1}-P${j+1}] ${p}`).join('\\n')}`;
+    const sourceId=`S${i+1}`;
+    const refs=corePassageRefs.get(sourceId)||new Set<number>();
+    const extracted=Array.isArray((s as any).extraction?.relevantPassages)?(s as any).extraction.relevantPassages:[];
+    const byRawIndex=new Map<number,string>();
+    for(const p of extracted){
+      const rawIndex=Number(p?.rawPassageIndex);
+      if(Number.isInteger(rawIndex)&&rawIndex>=1&&typeof p?.text==='string'&&p.text.trim())byRawIndex.set(rawIndex,p.text);
+    }
+    const selected=[...refs].sort((a,b)=>a-b).map(n=>byRawIndex.get(n)).filter(Boolean) as string[];
+    const fallback=s.passages.slice(0,3);
+    const passages=[...new Set((selected.length?selected:fallback).map(x=>String(x).trim()).filter(Boolean))].slice(0,8).map(x=>x.slice(0,900));
+    return `SOURCE ${sourceId}\nPublisher/article: ${s.title}\nURL: ${s.url}\nRole: ${s.sourceRole||sourceRole(s)}\n${passages.map((p,j)=>`[${sourceId}-P${j+1}] ${p}`).join('\\n')}`;
   });
   const MAX_WRITER_EVIDENCE_CHARS=9000;
   let evidenceText='';

@@ -3,6 +3,11 @@ const stop=new Set('about after again also been being could from have into more 
 const tokens=t=>new Set(clean(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(w=>w.length>=4&&!stop.has(w)));
 const overlap=(a,b)=>{const A=tokens(a),B=tokens(b),shared=[...A].filter(x=>B.has(x));return{shared,count:shared.length,coverage:shared.length/Math.max(1,A.size)};};
 const phraseOverlap=(a,b)=>{const words=x=>clean(x).toLowerCase().replace(/[^a-z0-9]+/g,' ').split(/\s+/).filter(Boolean);const grams=x=>{const s=new Set();for(let i=0;i<x.length-1;i++)s.add(x[i]+' '+x[i+1]);return s};const A=grams(words(a)),B=grams(words(b));return[...A].filter(x=>B.has(x)).length;};
+const parseDate=value=>{const ms=Date.parse(String(value||''));return Number.isFinite(ms)?new Date(ms):null};
+const inferEventDate=text=>{const value=String(text||'');const m=value.match(/\b(?:on|at|during|for)\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:st|nd|rd|th)?(?:,?\s+(\d{4}))?/i);if(!m)return null;const year=Number(m[3]||new Date().getUTCFullYear());const ms=Date.parse(`${m[1]} ${m[2]}, ${year} UTC`);return Number.isFinite(ms)?new Date(ms):null};
+const temporalStatus=({eventDate=null,sourceDate=null}={})=>{if(!eventDate||!sourceDate)return 'unknown';return sourceDate.getTime()<eventDate.getTime()?'pre-event':'post-event'};
+const deriveTemporalContext=({candidate={},sources=[]}={})=>{const explicitEvent=parseDate(candidate.eventDate||candidate.eventAt||candidate.keyEventDate);const inferredEvent=explicitEvent||inferEventDate(`${candidate.title||''}. ${candidate.description||''}`);const sourceDates=(sources||[]).map((source,index)=>{const date=parseDate(source.publishedAt||source.published||source.date||source.updatedAt||source.extractedAt);return {sourceId:source.id||`S${index+1}`,sourceDate:date?date.toISOString():null,temporalStatus:temporalStatus({eventDate:inferredEvent,sourceDate:date})};});return {version:1,eventDate:inferredEvent?inferredEvent.toISOString():null,eventDateSource:explicitEvent?'metadata':inferredEvent?'description-or-title':'none',sources:sourceDates};};
+
 const sourceRole=({candidate={},source={}}={})=>{
   if(source.primary===true)return 'PRIMARY';
   const title=overlap(source.title||'',candidate.title||'');
@@ -12,6 +17,7 @@ const sourceRole=({candidate={},source={}}={})=>{
   return 'CONTEXT';
 };
 function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
+  const temporal=deriveTemporalContext({candidate,sources});
   const claims=Array.isArray(evidenceBrief?.supportedClaims)?evidenceBrief.supportedClaims:[];
   const sourceById=new Map((sources||[]).map((s,i)=>[s.id||'S'+(i+1),s]));
   const facts=claims.map((claim,index)=>{
@@ -29,6 +35,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
       sourceId:claim.sourceId,
       sourceRole:role,
       passageIndex:claim.passageIndex,
+      passageId:claim.passageId||`${claim.sourceId}-P${claim.passageIndex||'unknown'}`,
       text:clean(claim.text),
       attribution:claim.attribution===true,
       numbers:Array.isArray(claim.numbers)?claim.numbers:[],
@@ -40,7 +47,9 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
   }).filter(x=>x.text);
   const dedup=[];
   for(const fact of facts){
-    const duplicate=dedup.find(x=>phraseOverlap(x.text,fact.text)>=2);
+    // The same factual statement appearing in two publishers is corroboration.
+    // Only collapse near-duplicates within the same source.
+    const duplicate=dedup.find(x=>x.sourceId===fact.sourceId&&phraseOverlap(x.text,fact.text)>=2);
     if(duplicate){
       if(fact.core&&!duplicate.core)Object.assign(duplicate,{core:true});
       continue;
@@ -67,7 +76,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
   const synthesisMaxWords=Math.min(100,Math.max(0,Math.floor(Math.min(coreChars/20,finalCoreFacts.length*12))));
   const synthesisStatementCapacity=Math.min(3,Math.floor(finalCoreFacts.length/2));
   const synthesisAllowed=synthesisStatementCapacity>=1&&synthesisMaxWords>=35;
-  const synthesisAllowedFactIds=finalCoreFacts.slice(0,Math.min(12,finalCoreFacts.length)).map(x=>x.factId);
+  const synthesisAllowedFactIds=finalCoreFacts.map(x=>x.factId);
   let level='none';
   if(finalCoreFacts.length>=10&&coreChars>=3500)level='high';
   else if(finalCoreFacts.length>=6&&coreChars>=2200)level='medium';
@@ -76,6 +85,7 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     version:1,
     story:{title:clean(candidate.title),description:clean(candidate.description)},
     sourceRoles:[...new Set((sources||[]).map((s,i)=>({id:s.id||'S'+(i+1),role:s.sourceRole||sourceRole({candidate,source:s})})))],
+    temporal,
     facts:dedup,
     coreFacts:finalCoreFacts,
     contextFacts,
@@ -84,4 +94,4 @@ function buildStoryFactMap({candidate={},sources=[],evidenceBrief=null}={}){
     policy:{coreFactsOnlyForCoreNarrative:true,contextCannotCompensateForCore:true,sourceRoleRequired:true,claimToFactMappingRequired:true,synthesisMustReuseVerifiedFacts:true,synthesisCannotIntroduceNewPremise:true}
   };
 }
-export { buildStoryFactMap, sourceRole };
+export { buildStoryFactMap, sourceRole, deriveTemporalContext, temporalStatus, inferEventDate };

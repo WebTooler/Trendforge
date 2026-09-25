@@ -59,6 +59,15 @@ jobs:
         run: node scripts/pre-writer-pipeline.mjs
       - name: AI provider state check
         run: node scripts/ai-provider-router.mjs
+      - name: Writer runtime syntax preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Checking writer/runtime JavaScript before any provider request..."
+          node --check scripts/trendforge-writer-engine.mjs
+          node --check scripts/generate-article-adaptive.mjs
+          node --check scripts/ai-provider-router.mjs
+          echo "Writer/runtime syntax preflight: PASS"
       - name: Deterministic Claim Verifier fixtures
         run: node scripts/test-claim-verifier-deterministic.mjs
       - name: Reset current-run generation diagnostics
@@ -106,6 +115,8 @@ jobs:
         id: grounding_repair_1
         if: steps.claim_verification.outcome == 'failure'
         continue-on-error: true
+        env:
+          GROUNDING_REPAIR_PASS: '1'
         run: node scripts/repair-article-grounding.mjs
       - name: Re-verify repaired article claims
         id: claim_reverification_1
@@ -116,6 +127,8 @@ jobs:
         id: grounding_repair_2
         if: steps.claim_verification.outcome == 'failure' && steps.claim_reverification_1.outcome != 'success'
         continue-on-error: true
+        env:
+          GROUNDING_REPAIR_PASS: '2'
         run: node scripts/repair-article-grounding.mjs
       - name: Final claim verification
         id: claim_verification_final

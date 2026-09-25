@@ -20,6 +20,20 @@ const selected=serialized.candidates.find(item=>item.candidate.link===candidate.
 assert.ok(selected);
 assert.equal(validateAuthoritativeEvidencePack(selected),true);
 
+// Regression: Editorial Evidence Brief V3 stores sentence-level relevantPassages,
+// while relevantPassageCount remains a raw-passage metric. One raw passage can
+// therefore produce multiple relevant evidence units and must remain valid.
+const sentenceUnitBrief={
+  version:3,
+  metrics:{rawPassageCount:1,relevantPassageCount:1,relevantEvidenceUnitCount:2,supportedClaimCount:2},
+  supportedClaims:[{id:'C1',sourceId:'S1',text:'Fact one'},{id:'C2',sourceId:'S1',text:'Fact two'}],
+  relevantPassages:[{sourceId:'S1',passageId:'P1',text:'Fact one.'},{sourceId:'S1',passageId:'P2',text:'Fact two.'}],
+  sourceSupportMapping:[{claimId:'C1',sourceId:'S1',passageIndex:1},{claimId:'C2',sourceId:'S1',passageIndex:1}],
+  storyFactMap:{version:1,coreFacts:[{id:'F1'}],capacity:{maxFactualClaims:4}}
+};
+const sentenceUnitPack=buildAuthoritativeEvidencePack({candidate,sources:[sources[0]],coverage,blueprint,evidenceBrief:sentenceUnitBrief});
+assert.equal(validateAuthoritativeEvidencePack(sentenceUnitPack),true);
+
 // Mirror the writer's canonical-source mapping: only pack.sources may become evidencePack.
 // No upstream verification sources or fresh network fetches are introduced here.
 const evidencePack=selected.sources.map(source=>({

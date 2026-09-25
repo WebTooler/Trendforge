@@ -101,7 +101,7 @@ for(const candidate of queue){
   console.log(`Attempt ${attempted}/${queue.length}: ${candidate.category} — ${candidate.title}`);
   if(candidate.decisionScore!==undefined)console.log(`Decision Engine: ${candidate.decision} | score ${candidate.decisionScore}/100 | confidence ${candidate.confidence}/100 | ${candidate.reasons.join('; ')}`);
 
-  const writerEnv={...process.env,TRENDFORGE_WRITER_CANDIDATE_INDEX:String(attempted),TRENDFORGE_WRITER_QUEUE_SIZE:String(queue.length)};
+  const writerEnv={...process.env,TRENDFORGE_WRITER_CANDIDATE_INDEX:String(attempted),TRENDFORGE_WRITER_QUEUE_SIZE:String(queue.length),TRENDFORGE_WRITER_CANDIDATE_LINK:String(candidate.link)};
   const result=spawnSync('npx',['tsx','scripts/generate-article.ts'],{stdio:'inherit',env:writerEnv});
   const after=new Set(fs.existsSync(articlesDir)?fs.readdirSync(articlesDir).filter(name=>name.endsWith('.md')):[]);
   const newArticle=[...after].find(name=>!before.has(name));

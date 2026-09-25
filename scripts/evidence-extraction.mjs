@@ -60,15 +60,18 @@ const paragraphCandidates=(html='')=>[...html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p
 const scoreParagraph=(text,storyTitle)=>{
   const A=tokens(text),B=tokens(storyTitle);
   const overlap=[...B].filter(x=>A.has(x)).length;
+  const rareEntityOverlap=[...B].filter(x=>A.has(x)&&x.length>=7).length;
+  const numericOverlap=[...String(storyTitle).matchAll(/\b\d+(?:[.,]\d+)?\b/g)].filter(m=>String(text).includes(m[0])).length;
   const factual=/\b(?:announced|launched|released|reported|said|found|study|research|survey|percent|million|billion|approved|blocked|investigation|according|official|CEO|chief|company|product|model|agents?|incident|policy|regulator|funding|investment)\b/i.test(text)?3:0;
   const quote=/["“][^"”]{12,}["”]/.test(text)?1:0;
-  return overlap*2+factual+quote;
+  return overlap*2+Math.min(4,rareEntityOverlap*2)+Math.min(4,numericOverlap*2)+factual+quote;
 };
 
-export function extractEvidenceFromHtml(html='',storyTitle=''){
+export function extractEvidenceFromHtml(html='',storyTitle='',storyContext=''){
   const jsonld=articleBodyFromJsonLd(html);
   const paragraphs=paragraphCandidates(html);
-  const scored=paragraphs.map(p=>({...p,score:scoreParagraph(p.text,storyTitle)}));
+  const anchorText=[storyTitle,storyContext,jsonld?.headline||'',jsonld?.description||''].filter(Boolean).join(' ');
+  const scored=paragraphs.map(p=>({...p,score:scoreParagraph(p.text,anchorText)}));
   const high=scored.filter(p=>p.score>0);
   const selected=[];
   const seen=new Set();
@@ -89,7 +92,7 @@ export function extractEvidenceFromHtml(html='',storyTitle=''){
   if(jsonld){
     const jsonParagraphs=splitSentences(jsonld.body).filter(x=>!isJunk(x));
     if(jsonParagraphs.length>=3){
-      const jsonSelected=jsonParagraphs.filter(x=>scoreParagraph(x,storyTitle)>0).slice(0,36);
+      const jsonSelected=jsonParagraphs.filter(x=>scoreParagraph(x,anchorText)>0).slice(0,36);
       if(jsonSelected.length>=3){
         passages=jsonSelected;
         body=jsonSelected.join(' ');

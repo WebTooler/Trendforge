@@ -27,8 +27,6 @@ export function loadCanonicalRepairEvidence({briefTitle, failedClaims, path='dat
       const expectedSourceId=`S${Number(idMatch?.[1]||0)}`;
       const passageIndex=Number(idMatch?.[2]||0)-1;
       const claimSourceId=String(claim?.sourceId||'').trim().toUpperCase();
-      // The URL has already resolved to this canonical source. Therefore a valid
-      // passage ID is authoritative even when the verifier omitted sourceId.
       if(expectedSourceId===String(source.id||'').toUpperCase() &&
          (!claimSourceId||claimSourceId===expectedSourceId) &&
          Number.isInteger(passageIndex)&&passageIndex>=0){
@@ -40,13 +38,24 @@ export function loadCanonicalRepairEvidence({briefTitle, failedClaims, path='dat
       const claimSourceId=String(claim?.sourceId||'').trim().toUpperCase();
       if(expectedSourceId===String(source.id||'').toUpperCase() &&
          (!claimSourceId||claimSourceId===expectedSourceId)){
-        // The strict verifier can select the canonical publisher article body
-        // when it is more semantically relevant than an extracted passage.
         canonicalMatch=String(source.body||'').trim();
       }
     }
     if(!canonicalMatch){
-      canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizeEvidence(passage))||'';
+      const normalizedPassage=normalizeEvidence(passage);
+      canonicalMatch=canonicalPassages.find(p=>normalizeEvidence(p)===normalizedPassage)||'';
+    }
+    // Fact-map provenance may preserve an immutable sentence extracted from a
+    // canonical publisher passage. Exact normalized containment is sufficient
+    // proof of lineage; semantic similarity is deliberately not accepted.
+    if(!canonicalMatch){
+      const normalizedPassage=normalizeEvidence(passage);
+      if(normalizedPassage.length>=20){
+        canonicalMatch=canonicalPassages.find(p=>{
+          const normalizedCanonical=normalizeEvidence(p);
+          return normalizedCanonical.includes(normalizedPassage)||normalizedPassage.includes(normalizedCanonical);
+        })||'';
+      }
     }
     if(!passage||!canonicalMatch) throw new Error(`Failed claim ${index+1} uses evidence outside the canonical passage set.`);
     return {...claim,bestUrl:source.url,bestSource:source.title||source.domain||source.url,bestPassage:canonicalMatch};
