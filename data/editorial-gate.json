@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T15:12:10.058Z",
+  "generatedAt": "2026-09-25T20:56:22.717Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2828,
-      "sentenceCount": 23,
+      "normalizedLength": 2390,
+      "sentenceCount": 15,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,15 +31,13 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "arstechnica.com",
-    "rttnews.com",
-    "geo.tv",
-    "dailytimes.com.pk"
+    "theverge.com",
+    "news.ssbcrack.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 4,
-    "usablePassages": 55,
+    "sourceCount": 2,
+    "usablePassages": 20,
     "primarySourceCount": 0
   }
 }
