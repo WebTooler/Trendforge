@@ -59,7 +59,7 @@ const sourceProvenanceGroups = (sources=[]) => {
     // Same publisher family is not independent evidence. Cross-domain pages are
     // treated as one lineage when their article text strongly overlaps or one
     // page explicitly attributes the other.
-    if(sameUrl || sameFamily || bodySim>=0.32 ||
+    if(sameUrl || sameFamily || bodySim>=0.65 ||
       (titleSim>=0.55&&bodySim>=0.18) ||
       (attribution&&bodySim>=0.12)) union(i,j);
   }

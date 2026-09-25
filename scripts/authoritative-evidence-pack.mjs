@@ -22,7 +22,13 @@ export function validateAuthoritativeEvidencePack(pack){
   if(pack.evidenceBrief!==null&&pack.evidenceBrief!==undefined){
     const b=pack.evidenceBrief;
     if(b.version!==3||!b.metrics||!Array.isArray(b.supportedClaims)||!Array.isArray(b.relevantPassages)||!Array.isArray(b.sourceSupportMapping))return false;
-    if(Number(b.metrics.relevantPassageCount||0)!==b.relevantPassages.length)return false;
+    // V3 relevantPassages are sentence-level evidence units, while
+    // relevantPassageCount remains the historical raw-passage metric.
+    // A source passage may legitimately yield multiple relevant sentence units.
+    // Validate both metrics independently instead of rejecting a valid canonical pack.
+    const relevantUnits=Number(b.metrics.relevantEvidenceUnitCount||0);
+    if(relevantUnits>0 ? relevantUnits!==b.relevantPassages.length : Number(b.metrics.relevantPassageCount||0)!==b.relevantPassages.length)return false;
+    if(Number(b.metrics.relevantPassageCount||0)>Number(b.metrics.rawPassageCount||0))return false;
     if(Number(b.metrics.supportedClaimCount||0)!==b.supportedClaims.length)return false;
     if(!b.storyFactMap||b.storyFactMap.version!==1||!Array.isArray(b.storyFactMap.coreFacts)||!b.storyFactMap.capacity)return false;
     if(!Number.isFinite(Number(b.storyFactMap.capacity.maxFactualClaims)))return false;

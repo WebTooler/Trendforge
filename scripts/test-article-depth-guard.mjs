@@ -9,6 +9,11 @@ assert.equal(rich.passed,true);
 const shallow=assessArticleDepth({content:'## Development\n\nThe report describes the launch.\n\n## Impact\n\nThe report describes an effect.',blueprint:{mode:'bounded'}});
 assert.equal(shallow.passed,false);
 assert.ok(shallow.errors.some(x=>x.includes('underdeveloped H2')||x.includes('too few substantive paragraphs')||x.includes('too shallow')));
+const shortCompleteSection=assessArticleDepth({content:['## Development',richPara('development'),'## Brief Update','The report confirms the launch.','## Evidence',richPara('evidence'),'## Implications',richPara('implications'),'## Uncertainty',richPara('uncertainty'),'## Takeaway',richPara('takeaway')].join('\\n\\n'),blueprint:{mode:'rich'}});
+assert.equal(shortCompleteSection.passed,true);
+assert.equal(shortCompleteSection.thinSections,0);
+assert.ok(!shortCompleteSection.errors.some(x=>x.includes('underdeveloped H2')),'A complete short H2 must not be blocked by a word-count quota.');
+
 const concentrated=assessArticleDepth({content:'## Main\n\n'+Array(110).fill('supported detail').join(' ')+'\n\n## Context\n\nA useful section adds context with concrete detail to explain the evidence clearly for readers.\n\n## Limits\n\nAnother section explains uncertainty and what the evidence does not establish for readers.',blueprint:{mode:'rich'}});
 assert.equal(concentrated.passed,false);
 assert.ok(concentrated.errors.some(x=>x.includes('overly concentrated')));

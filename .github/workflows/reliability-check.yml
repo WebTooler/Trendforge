@@ -1,15 +1,16 @@
 name: TrendForge Reliability Check
 
+permissions:
+  contents: read
+  actions: read
+
 # Phase 1: deterministic build/static verification.
 # The production AI pipeline remains manually locked in publish.yml.
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "fix/evidence-provenance-run401"]
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 concurrency:
   group: reliability-check
@@ -65,6 +66,32 @@ jobs:
 
       - name: Verify Phase 3 canonical claim verifier
         run: npm run claims:deterministic
+
+      - name: Verify temporal claim verification
+        run: npm run temporal:test
+
+      - name: Verify Run 405 claim calibration
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run claims:run405-calibration
+
+      - name: Verify immutable claim provenance anchor
+        run: npm run claims:provenance-anchor
+
+      - name: Verify stable passage provenance regression
+        run: npm run claims:passage-provenance
+
+      - name: Verify evidence extraction headline context
+        run: npm run evidence-extraction:test
+
+      - name: Verify evidence brief publisher headline context
+        run: npm run evidence-brief:publisher-headline:test
+
+      - name: Verify writer evidence passage selection
+        run: npm run writer-evidence-selection:test
+
+      - name: Verify writer evidence claim mapping
+        run: npm run writer-evidence-claim-mapping:test
 
       - name: Verify Phase 3 quality canonical evidence
         run: npm run quality-evidence:test
