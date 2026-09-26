@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T10:32:59.090Z",
+  "generatedAt": "2026-09-26T15:24:00.220Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 1661,
-      "sentenceCount": 11,
+      "normalizedLength": 2935,
+      "sentenceCount": 21,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,14 +31,13 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "finance.yahoo.com",
     "aol.com",
-    "fool.com"
+    "247wallst.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 3,
-    "usablePassages": 14,
+    "sourceCount": 2,
+    "usablePassages": 40,
     "primarySourceCount": 0
   }
 }

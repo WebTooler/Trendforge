@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-26T10:33:03.438Z",
+  "generatedAt": "2026-09-26T15:24:41.435Z",
   "status": "pass",
-  "currentGeneratedArticle": "jim-cramer-recommends-two-ai-stocks-that-have-risen-over-1-400-since-2023",
-  "currentScore": 88,
+  "currentGeneratedArticle": null,
+  "currentScore": null,
   "identity": {
     "method": "brief.title",
-    "rejectedMarker": false
+    "rejectedMarker": true
   },
   "policy": {
     "publishCandidate": 90,
@@ -345,17 +345,18 @@
       "slug": "jim-cramer-recommends-two-ai-stocks-that-have-risen-over-1-400-since-2023",
       "title": "Jim Cramer Recommends Two AI Stocks That Have Risen Over 1,400% Since 2023",
       "category": "AI",
-      "score": 88,
+      "score": 83,
       "decision": "publish_ready",
       "dimensions": {
-        "evidence": 69,
+        "evidence": 75,
         "usefulness": 95,
         "clarity": 100,
         "originality": 100,
-        "sourceStrength": 84
+        "sourceStrength": 50
       },
       "reasons": [
-        "evidence confidence needs improvement"
+        "evidence confidence needs improvement",
+        "source strength/diversity needs improvement"
       ]
     },
     {

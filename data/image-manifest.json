@@ -1,75 +1,12 @@
 {
   "version": 3,
-  "generatedAt": "2026-09-26T10:33:08.621Z",
+  "generatedAt": "2026-09-26T15:24:45.120Z",
   "model": "@cf/black-forest-labs/flux-1-schnell",
   "width": 1024,
   "height": 576,
   "steps": 4,
-  "generated": 1,
+  "generated": 0,
   "skipped": 0,
   "failed": 0,
-  "images": {
-    "jim-cramer-recommends-two-ai-stocks-that-have-risen-over-1-400-since-2023": {
-      "status": "generated",
-      "image": "/Trendforge/images/articles/jim-cramer-recommends-two-ai-stocks-that-have-risen-over-1-400-since-2023.1024x576.png",
-      "generatedBy": "@cf/black-forest-labs/flux-1-schnell",
-      "width": 1024,
-      "height": 576,
-      "steps": 4,
-      "elapsedMs": 1647,
-      "bytes": 854780,
-      "visualBrief": {
-        "version": 2,
-        "mode": "editorial-photography",
-        "primarySubject": "the most concrete physical subject, event, organization, or action explicitly described by the story, centered on cramer, recommends, stocks, that",
-        "scene": "A commissioned technology-publication photograph of that concrete subject or event, not a category-level representation.",
-        "supportingElements": [
-          "only contextual elements that directly explain the story"
-        ],
-        "composition": "One hero subject with one or two supporting elements, natural editorial lighting and strong negative space.",
-        "company": "Nvidia",
-        "namedPerson": null,
-        "category": "AI",
-        "storyAnchors": [
-          "cramer",
-          "recommends",
-          "stocks",
-          "that",
-          "have",
-          "risen",
-          "over",
-          "since"
-        ],
-        "avoid": [
-          "generic office imagery",
-          "random tablet or laptop",
-          "generic futuristic technology",
-          "glowing holograms, floating code, HUDs and neon sci-fi effects",
-          "prominent readable text or fake headlines"
-        ]
-      },
-      "relevance": {
-        "passed": true,
-        "anchors": [
-          "cramer",
-          "recommends",
-          "stocks",
-          "that",
-          "have",
-          "risen",
-          "over",
-          "since"
-        ],
-        "matchedAnchors": [
-          "cramer",
-          "recommends",
-          "stocks",
-          "that"
-        ],
-        "entityMatches": [],
-        "score": 0.5
-      },
-      "promptLength": 1900
-    }
-  }
+  "images": {}
 }
