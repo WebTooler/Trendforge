@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T21:48:37.565Z",
+  "updatedAt": "2026-09-26T05:24:28.821Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,7 +14,7 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 38,
+    "runs": 39,
     "topics": 500,
     "articles": 25
   },
@@ -343,7 +343,7 @@
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 67,
+        "claimConfidence": 68,
         "evidencePassRate": 27
       },
       "conclusion": "insufficient-data",
@@ -358,7 +358,7 @@
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 67,
+        "claimConfidence": 68,
         "evidencePassRate": 27
       },
       "conclusion": "insufficient-data",
@@ -373,7 +373,7 @@
       },
       "outcomeMetrics": {
         "editorialScore": null,
-        "claimConfidence": 67,
+        "claimConfidence": 68,
         "evidencePassRate": 27
       },
       "conclusion": "insufficient-data",
@@ -381,6 +381,6 @@
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-25T17:31:04.178Z"
+    "previousUpdatedAt": "2026-09-25T21:48:37.565Z"
   }
 }
