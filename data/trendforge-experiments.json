@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T05:24:28.821Z",
+  "updatedAt": "2026-09-26T11:44:24.565Z",
   "mode": "shadow",
   "policy": {
     "advisoryOnly": true,
@@ -14,9 +14,9 @@
     "noWinnerBeforeMinimumSample": true
   },
   "sample": {
-    "runs": 39,
+    "runs": 40,
     "topics": 500,
-    "articles": 25
+    "articles": 26
   },
   "learningInput": {
     "version": 2,
@@ -88,58 +88,6 @@
   "assignments": {
     "headline-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcmcwcmdRd0E2clpBS3hvcTUyQ29hZVZUNUxlRjVTX0ZZMzhqWl8zenpIRHJJektYM3FsWEhWeDhwcHJvQmYzdFEwU3BMU1B3bFBuZjdER3l5cDRWVVptY3BDVjhDOWpRSDdOR3NwMy1VT0V3Q2dKRXRXVFNWZWswdEViN28yZFBaSVowUV8yQkFFdkV4R3Nuc2tiOS0?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNM0tDWlNLeG1ubFpLUkF2YkNuNzZTVXJEcElndks0UWJmOGFzVmpxbU0yTHo2am82QS01UEVVUndDMTY0U2dIUjdWV21RbER2dEpKQ21UaXY2ZDZSQURHZW56ejVKb01ySk5UaFcxcXNwVW1ZUndJb1czUk5kQ0lpcXg2Q0k2aFQ1MXZRWVZkQmM3OGM?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/25/techcrunch-disrupt-2026-ricursive-intelligences-anna-goldie-and-azalia-mirhoseini-on-when-ai-starts-designing-its-own-hardware/",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNT1VmRFk3WV9xdG9GXzU0LWppZFc5UHNweTdxcmdYMDRxdVZmeGxIcW1OM0t6R05ELVJmckJuTFRiRm1IYVYydU1ueWF5X2lxMXc4N00zb2tHbnlENWFTU0s4ZkRQSG4wNkVUTEprVGl4OU96OUl3eWFvLUVFenI0Y2tIVHp0MGJ2Wi1JbG9GS2VidF9yRUo4dG1idEwtSV8yNlFpc2dpc2R0SEdTV29TdlV4dnB1UURLVTZ4MnplY21zU0ZtOG9HQ0p3V05SclV5MElqajhOYmJCUFprdU9V?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kdlJMeHZiV1NSb3dWT3F6Y1pMdjQyNWFQSFdpTU1fbkxfZ0RXZmhLYmRKLUltYlA3MFlJZnVOMEw5eDZ0VTFrVG1Rd2Z1UHdodlk2R3FjaXlFZ1N2VXpnZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVzBhMkxQOFpzOVkteUV6ZzVmb09FRGw5MnROdWVZeDhkY0tYODdqMzF3dFZTRU9LSmFaMXhSbG56ajhQQVRUNk0tT18wMURRZld1dUw3bjdaRHhLNlVETW9vb0hjT2FOYXFHMzJUbUMtSlNFQTY3bFp1S1BRUkJyZkNULWM2ZWY0aDFVVkZXMU1mYzV1dEdmNWxoUllzOWZFQkFzV0dEb3UwOExCUG1mNHc1SGhIVTdvUExLZ3NSeTJmUQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE02VDZpSWpzOWRrdlRJMXkxMzBLYkdyYlpPUDFFX1ZCSzBPeHVaYVNyVjE4bmhPdC1GOVZPSHdiRGczZ29QVE5PblVXOFJVVjlweUJsUGllSV9fNXlwRVBxWHRnVXVJVUJW?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UYkVqcjdyTnc2VTJOYlJWbGJBQkZGYXpfblhsQXEzWXJjU0tmMEdUSUV4QXc1N19tWndxVGRNQVg0ZUZKU2pzaWJHSWRDakpsOWZ6TDJlVWhPUlp0NmdIbjZCLVRTV0dOV1lLSmJRdHRGSVgyQTZESUFIZl9EUQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTE1XSWM0dHZXSUNnNEdvZTBaRDhBUmFFUzlQOEtJOFRadDdvZUhOVTE0Yy1FcTRGWTZOLXVicG53dFhfS2wwRjVLZmFDdzBOcjdqaHRveGpfTVhQd003ZEw3Um5DUTROTFMzME8xWkE3SzZYUVBrZkdUNmp0a2dUNWZGVDM1N1piM0RkSjVBbkx1TnFwYl95QWJjTHJqd3FxY2xBZEUxSGFfVkE3akE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdmZfdUNGN3BYN0UyOElfQWtLT2lXd2tJN3AwdkxseWVYaFJvOVB3OElTdFBYMXJPUTdjVU9UbUhUOXRWRHJrNkJib2w0TWd0dXkxZ1haNjZ5SnBrZURramk4aUZ4VHpESUVWSEU1eUxmamFCU2VQTnJBLU9wdGVMM1U4TzQwUHlEVG9TOFg2MjEtbGc?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTkJvdXMwTU8zQUtQZjlDWkJ1ZzdncHNJb01ROE5KQ2Y2Wk1ZRThlVDRjSEUwaG5VUFZCeGw2TXluTUt4elI5TGJhb3dzd1NkQkJiaEhCaXZ5Z282dkx1S1hFMFJTOGYyb0hZU0ZISXAzTWZqMzJscDRkamo5UEtMelMyS0JvUTRnMDd0SU8tWW9GMk5sMUpDRG5UMFZETXJvdm9OWTlhVGtYSXAtanI1eHMwWWZwYkVMUzRveUZCMndsOVpOZEE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/25/kiteworks-urges-customers-to-shut-down-their-servers-amid-imminent-threat-of-cyberattack/",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQaGw3RlJYTjQ4WEUxOE9wb3hCSC0tVVN0UmxxcnAyZHNVNTdXOG8tcjFfOTFNaDdaWkhXU21xeml3VGlPN0wyQmNQUWRabWF4NG9zTUxlWTFScExGcUlhQVUzSWtTMXBFc3k4dDZONnBCSGlWQ2NKeEpudmloNEs5bGF3?oc=5",
-        "bucket": "control"
-      },
-      {
         "key": "https://www.theverge.com/ai-artificial-intelligence/1000784/meta-muse-filesystem",
         "bucket": "control"
       },
@@ -166,62 +114,62 @@
       {
         "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JY0lKNS1ELTFCUU9XSmFNZ1lzVW1tSWRnTW16V0RQZ1Jkb25aZE5mM21mY1ZzWFNSTXFuVHdub0pkeTlwcUd2NlVhQVJiSnNkQ0Q5VzRELWJtRGtiNDlxYVVxdm9PME5obkk2RWc1Yk9OWHR0VmJEeHBTb2JRSm8?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVElNeFptdmZTaUdTcnY3WHc2Uzg4YzE5M0pXUkpoM0FoUTJDb3NIVXlWaFNlOThUazROcm9MUXZnVkZnbXRvQWdzM0lrS2l3LUptR0hiM1JMXzRoTFdmZDU1eTFuUENWT2NfSlQxMFJ5RmxUaFJxOWZ5YkdSeFliWEVzdm1TajZVTmtBVWdnVUp6S05GWEhIcA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVDk4a000c3RTd1ctY2lGZy1wRGpVdVBWTDBMRUFkZktLck9nVVJkdkw1UmRoTE8yNlBDQ2ZfNnhnLTc3Ry0wTXU1TkYzYVRsYVdaVlRELUhZTXI1UGlVbmQ0cnR0ZDJPMC1VQUJPcjFTMzIyX1dxSklYZERPc0UwNDFsalpnRWZwUHNNWGlEVEZmSndIcUNoeDF4YWpNei1Pa3c?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPTnhsZjJCMEtycm9XbERHVkNqLUNCb3Bvc2FScHg1Um40cl9jNTgxUGs1dFBSZUhYbFlySGVydlY1NnVuUFNlaDhrSm1WNVJUU2hKRzNNZ2JvLTZzOHJDYUtKSTR4azhwQ1QxRUJUM3BNT2V0c3lZSTNmTlNkUWt3ejBNSGEzTzY1bm1tR3RpcmxscngyZTlBVTU3cmVKeGJEejlyRnF5VEtEWTQ4Y2dZVnd5MjItMVlMYkdoT1RLcVNOb0lpZjZqaUN2d2hEUjdVZkp0WHAzNFJnWUI4MFFyQ0VHS2RWQVprNlBZMUx5X1doWWJaNFdCSElvTlFPSGQxc1dBMGgwVEJSYWdHMmNXa3lLZzk?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWHJJUS1KRU5tbElCTlFrVHd6Q2JCbVM3UVU4ZWJpQVkwVVUzWHlBakd5UUQtOXdtdmw5WTlmdXBCb0d3WWNsNFdxX1VldTZpZERpLVlZMmpTbG1QZGxyN2JwX0x5b2g4WUNmNDdZVTAxNmxJWnNzNmtkcTlmei10THBJN1d1UjRialI4d01MdTJSNXVlVTR6VQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbWZoVWRuVFhfN1VRaWJ3QmkyNzBjdnRsQllrUnM2SkpOaWpuUXlRMEFvX3dhYi1wUHRVWGllM0prRzl1ay1UMnZ1bnAwYUFGZDdJR1lqVVJxUVVwa3E0bExwN3ctWHlPZ2wyWHJsQk5hbjBla2hNZGJRUjIyZjF0UDFQSDdya1lELWZXTDg1WWx3djRMWHczUklDbGdZSkFQcEduSU0tUGt2Q0g0aVRoQl8wRl82S3hYdkN5UmItMkZIbUZYd2lF?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONkRKOWR4aERsUjlJUC1Oc1FlNHRaeWYyaWQ1eVlESlE2cFlLcm5mMmdSUzhVWEZkaGo5RXRZVzZoWjZKRXhBZVc2WVdZVW5ENy1pcUJnLWlIck4wY2tNQWxjWkhHSVJadUZ5SnVoV0pCRmZ5eEN5SHNnOXc4d19WanZZYUFEcmdzR0FiSXc4eGNMYzZGWjdSXzQ1UDc0b21FNlRUN09lWEtEbVRyREY3WGJhdktNN3FYMzZr?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB3aEFESjgxdm55Q2diZEJfUHlXVl9yWDRPY0RfMGFsbDczdDBzMzY5MzdSRmtvTkZZZzdObUJaQlBKR05OYkVYVlZHN2pCcHNGR29DeHFkbDBHTklnZk8tTWZvQW0xamFsVVFXSGUwSmZmM2JwckpkWFplMGE?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2xZVUV0VVJxU2IwREh6REYwME1nQzBMcHVyLTBnN3M4eFdiUHRwMkxOZmEteGpGdC0za1NnRjVIdllFaUt0RmJpYW40NklQOWZYZzZGQlRGRXFLZ0tIRXRKMWVkaFFaUkVjdjNjNTZ1djZjdnRnUjJETDFzQ09aQWt3cDFqVXNFaDJuc3pRNkVYLVBZdGl2S0p2dWFSQ3FiQVVmY1M5NHo?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSy1vbFlCQl9YY1E0cWthQWxEMW9HM1k5dTFnVG9oN2FrN1RweTJNWEM3Zk5uTzRCMkhJcGlINVhvMHZqLUFNQmw5XzlTbHdOaFZFdzY1RjM1ZDk0S19NS2hSbTRaeGtKUVhONjREbTYxUmFpS3VjQ19MeEtEU3FRNllZX2VFZE10SUpzMXJvd040YlBJczZUOEYzUU45WG02VWRFRnpuNEFodnJwZWk2R0pGN2tZR1huejRneGdGYkJXZDQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQ0dYWVhzcDdCNlgzSERiRWxqV25ZZUpiWDN6OEpUdW5YVmtMLU0yRFp3Sm5DSks3VVExOWZBOTJHMUYwaUNGRmtseUhxc2I4czJHdzRtTmREUlVmbTJKRTFTSGNjRmczcVYweEREclZXQ0p6elcwc3huNDFwY2Vycjg1UFQwanMwQkF6VnF3RWNvT0hVbll5dTY2ZzVFdw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpKX0ZNT2R5SmROOGl4cFE3VUFoYTZFZHY2eC1ubjFsRUMwWGljMXZvY2YtOVdST0Vja0hZVHM1Q0hPdDkzc3RZT3RvVHh4bGwtOHVRa3p6WmRwOTRtUUNwbHM4aUxUT3dQelUtN0c2elgwTFhVTG51ZUZWQkJVblpqdkM5TjkwOFQw?oc=5",
+        "bucket": "control"
       }
     ],
     "intro-style": [
       {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcmcwcmdRd0E2clpBS3hvcTUyQ29hZVZUNUxlRjVTX0ZZMzhqWl8zenpIRHJJektYM3FsWEhWeDhwcHJvQmYzdFEwU3BMU1B3bFBuZjdER3l5cDRWVVptY3BDVjhDOWpRSDdOR3NwMy1VT0V3Q2dKRXRXVFNWZWswdEViN28yZFBaSVowUV8yQkFFdkV4R3Nuc2tiOS0?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNM0tDWlNLeG1ubFpLUkF2YkNuNzZTVXJEcElndks0UWJmOGFzVmpxbU0yTHo2am82QS01UEVVUndDMTY0U2dIUjdWV21RbER2dEpKQ21UaXY2ZDZSQURHZW56ejVKb01ySk5UaFcxcXNwVW1ZUndJb1czUk5kQ0lpcXg2Q0k2aFQ1MXZRWVZkQmM3OGM?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/25/techcrunch-disrupt-2026-ricursive-intelligences-anna-goldie-and-azalia-mirhoseini-on-when-ai-starts-designing-its-own-hardware/",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNT1VmRFk3WV9xdG9GXzU0LWppZFc5UHNweTdxcmdYMDRxdVZmeGxIcW1OM0t6R05ELVJmckJuTFRiRm1IYVYydU1ueWF5X2lxMXc4N00zb2tHbnlENWFTU0s4ZkRQSG4wNkVUTEprVGl4OU96OUl3eWFvLUVFenI0Y2tIVHp0MGJ2Wi1JbG9GS2VidF9yRUo4dG1idEwtSV8yNlFpc2dpc2R0SEdTV29TdlV4dnB1UURLVTZ4MnplY21zU0ZtOG9HQ0p3V05SclV5MElqajhOYmJCUFprdU9V?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kdlJMeHZiV1NSb3dWT3F6Y1pMdjQyNWFQSFdpTU1fbkxfZ0RXZmhLYmRKLUltYlA3MFlJZnVOMEw5eDZ0VTFrVG1Rd2Z1UHdodlk2R3FjaXlFZ1N2VXpnZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVzBhMkxQOFpzOVkteUV6ZzVmb09FRGw5MnROdWVZeDhkY0tYODdqMzF3dFZTRU9LSmFaMXhSbG56ajhQQVRUNk0tT18wMURRZld1dUw3bjdaRHhLNlVETW9vb0hjT2FOYXFHMzJUbUMtSlNFQTY3bFp1S1BRUkJyZkNULWM2ZWY0aDFVVkZXMU1mYzV1dEdmNWxoUllzOWZFQkFzV0dEb3UwOExCUG1mNHc1SGhIVTdvUExLZ3NSeTJmUQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE02VDZpSWpzOWRrdlRJMXkxMzBLYkdyYlpPUDFFX1ZCSzBPeHVaYVNyVjE4bmhPdC1GOVZPSHdiRGczZ29QVE5PblVXOFJVVjlweUJsUGllSV9fNXlwRVBxWHRnVXVJVUJW?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UYkVqcjdyTnc2VTJOYlJWbGJBQkZGYXpfblhsQXEzWXJjU0tmMEdUSUV4QXc1N19tWndxVGRNQVg0ZUZKU2pzaWJHSWRDakpsOWZ6TDJlVWhPUlp0NmdIbjZCLVRTV0dOV1lLSmJRdHRGSVgyQTZESUFIZl9EUQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTE1XSWM0dHZXSUNnNEdvZTBaRDhBUmFFUzlQOEtJOFRadDdvZUhOVTE0Yy1FcTRGWTZOLXVicG53dFhfS2wwRjVLZmFDdzBOcjdqaHRveGpfTVhQd003ZEw3Um5DUTROTFMzME8xWkE3SzZYUVBrZkdUNmp0a2dUNWZGVDM1N1piM0RkSjVBbkx1TnFwYl95QWJjTHJqd3FxY2xBZEUxSGFfVkE3akE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdmZfdUNGN3BYN0UyOElfQWtLT2lXd2tJN3AwdkxseWVYaFJvOVB3OElTdFBYMXJPUTdjVU9UbUhUOXRWRHJrNkJib2w0TWd0dXkxZ1haNjZ5SnBrZURramk4aUZ4VHpESUVWSEU1eUxmamFCU2VQTnJBLU9wdGVMM1U4TzQwUHlEVG9TOFg2MjEtbGc?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTkJvdXMwTU8zQUtQZjlDWkJ1ZzdncHNJb01ROE5KQ2Y2Wk1ZRThlVDRjSEUwaG5VUFZCeGw2TXluTUt4elI5TGJhb3dzd1NkQkJiaEhCaXZ5Z282dkx1S1hFMFJTOGYyb0hZU0ZISXAzTWZqMzJscDRkamo5UEtMelMyS0JvUTRnMDd0SU8tWW9GMk5sMUpDRG5UMFZETXJvdm9OWTlhVGtYSXAtanI1eHMwWWZwYkVMUzRveUZCMndsOVpOZEE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/25/kiteworks-urges-customers-to-shut-down-their-servers-amid-imminent-threat-of-cyberattack/",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQaGw3RlJYTjQ4WEUxOE9wb3hCSC0tVVN0UmxxcnAyZHNVNTdXOG8tcjFfOTFNaDdaWkhXU21xeml3VGlPN0wyQmNQUWRabWF4NG9zTUxlWTFScExGcUlhQVUzSWtTMXBFc3k4dDZONnBCSGlWQ2NKeEpudmloNEs5bGF3?oc=5",
-        "bucket": "control"
-      },
-      {
         "key": "https://www.theverge.com/ai-artificial-intelligence/1000784/meta-muse-filesystem",
         "bucket": "control"
       },
@@ -248,62 +196,62 @@
       {
         "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JY0lKNS1ELTFCUU9XSmFNZ1lzVW1tSWRnTW16V0RQZ1Jkb25aZE5mM21mY1ZzWFNSTXFuVHdub0pkeTlwcUd2NlVhQVJiSnNkQ0Q5VzRELWJtRGtiNDlxYVVxdm9PME5obkk2RWc1Yk9OWHR0VmJEeHBTb2JRSm8?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVElNeFptdmZTaUdTcnY3WHc2Uzg4YzE5M0pXUkpoM0FoUTJDb3NIVXlWaFNlOThUazROcm9MUXZnVkZnbXRvQWdzM0lrS2l3LUptR0hiM1JMXzRoTFdmZDU1eTFuUENWT2NfSlQxMFJ5RmxUaFJxOWZ5YkdSeFliWEVzdm1TajZVTmtBVWdnVUp6S05GWEhIcA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVDk4a000c3RTd1ctY2lGZy1wRGpVdVBWTDBMRUFkZktLck9nVVJkdkw1UmRoTE8yNlBDQ2ZfNnhnLTc3Ry0wTXU1TkYzYVRsYVdaVlRELUhZTXI1UGlVbmQ0cnR0ZDJPMC1VQUJPcjFTMzIyX1dxSklYZERPc0UwNDFsalpnRWZwUHNNWGlEVEZmSndIcUNoeDF4YWpNei1Pa3c?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPTnhsZjJCMEtycm9XbERHVkNqLUNCb3Bvc2FScHg1Um40cl9jNTgxUGs1dFBSZUhYbFlySGVydlY1NnVuUFNlaDhrSm1WNVJUU2hKRzNNZ2JvLTZzOHJDYUtKSTR4azhwQ1QxRUJUM3BNT2V0c3lZSTNmTlNkUWt3ejBNSGEzTzY1bm1tR3RpcmxscngyZTlBVTU3cmVKeGJEejlyRnF5VEtEWTQ4Y2dZVnd5MjItMVlMYkdoT1RLcVNOb0lpZjZqaUN2d2hEUjdVZkp0WHAzNFJnWUI4MFFyQ0VHS2RWQVprNlBZMUx5X1doWWJaNFdCSElvTlFPSGQxc1dBMGgwVEJSYWdHMmNXa3lLZzk?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWHJJUS1KRU5tbElCTlFrVHd6Q2JCbVM3UVU4ZWJpQVkwVVUzWHlBakd5UUQtOXdtdmw5WTlmdXBCb0d3WWNsNFdxX1VldTZpZERpLVlZMmpTbG1QZGxyN2JwX0x5b2g4WUNmNDdZVTAxNmxJWnNzNmtkcTlmei10THBJN1d1UjRialI4d01MdTJSNXVlVTR6VQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbWZoVWRuVFhfN1VRaWJ3QmkyNzBjdnRsQllrUnM2SkpOaWpuUXlRMEFvX3dhYi1wUHRVWGllM0prRzl1ay1UMnZ1bnAwYUFGZDdJR1lqVVJxUVVwa3E0bExwN3ctWHlPZ2wyWHJsQk5hbjBla2hNZGJRUjIyZjF0UDFQSDdya1lELWZXTDg1WWx3djRMWHczUklDbGdZSkFQcEduSU0tUGt2Q0g0aVRoQl8wRl82S3hYdkN5UmItMkZIbUZYd2lF?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONkRKOWR4aERsUjlJUC1Oc1FlNHRaeWYyaWQ1eVlESlE2cFlLcm5mMmdSUzhVWEZkaGo5RXRZVzZoWjZKRXhBZVc2WVdZVW5ENy1pcUJnLWlIck4wY2tNQWxjWkhHSVJadUZ5SnVoV0pCRmZ5eEN5SHNnOXc4d19WanZZYUFEcmdzR0FiSXc4eGNMYzZGWjdSXzQ1UDc0b21FNlRUN09lWEtEbVRyREY3WGJhdktNN3FYMzZr?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB3aEFESjgxdm55Q2diZEJfUHlXVl9yWDRPY0RfMGFsbDczdDBzMzY5MzdSRmtvTkZZZzdObUJaQlBKR05OYkVYVlZHN2pCcHNGR29DeHFkbDBHTklnZk8tTWZvQW0xamFsVVFXSGUwSmZmM2JwckpkWFplMGE?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2xZVUV0VVJxU2IwREh6REYwME1nQzBMcHVyLTBnN3M4eFdiUHRwMkxOZmEteGpGdC0za1NnRjVIdllFaUt0RmJpYW40NklQOWZYZzZGQlRGRXFLZ0tIRXRKMWVkaFFaUkVjdjNjNTZ1djZjdnRnUjJETDFzQ09aQWt3cDFqVXNFaDJuc3pRNkVYLVBZdGl2S0p2dWFSQ3FiQVVmY1M5NHo?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSy1vbFlCQl9YY1E0cWthQWxEMW9HM1k5dTFnVG9oN2FrN1RweTJNWEM3Zk5uTzRCMkhJcGlINVhvMHZqLUFNQmw5XzlTbHdOaFZFdzY1RjM1ZDk0S19NS2hSbTRaeGtKUVhONjREbTYxUmFpS3VjQ19MeEtEU3FRNllZX2VFZE10SUpzMXJvd040YlBJczZUOEYzUU45WG02VWRFRnpuNEFodnJwZWk2R0pGN2tZR1huejRneGdGYkJXZDQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQ0dYWVhzcDdCNlgzSERiRWxqV25ZZUpiWDN6OEpUdW5YVmtMLU0yRFp3Sm5DSks3VVExOWZBOTJHMUYwaUNGRmtseUhxc2I4czJHdzRtTmREUlVmbTJKRTFTSGNjRmczcVYweEREclZXQ0p6elcwc3huNDFwY2Vycjg1UFQwanMwQkF6VnF3RWNvT0hVbll5dTY2ZzVFdw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpKX0ZNT2R5SmROOGl4cFE3VUFoYTZFZHY2eC1ubjFsRUMwWGljMXZvY2YtOVdST0Vja0hZVHM1Q0hPdDkzc3RZT3RvVHh4bGwtOHVRa3p6WmRwOTRtUUNwbHM4aUxUT3dQelUtN0c2elgwTFhVTG51ZUZWQkJVblpqdkM5TjkwOFQw?oc=5",
+        "bucket": "control"
       }
     ],
     "cta-placement": [
       {
-        "key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNcmcwcmdRd0E2clpBS3hvcTUyQ29hZVZUNUxlRjVTX0ZZMzhqWl8zenpIRHJJektYM3FsWEhWeDhwcHJvQmYzdFEwU3BMU1B3bFBuZjdER3l5cDRWVVptY3BDVjhDOWpRSDdOR3NwMy1VT0V3Q2dKRXRXVFNWZWswdEViN28yZFBaSVowUV8yQkFFdkV4R3Nuc2tiOS0?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNM0tDWlNLeG1ubFpLUkF2YkNuNzZTVXJEcElndks0UWJmOGFzVmpxbU0yTHo2am82QS01UEVVUndDMTY0U2dIUjdWV21RbER2dEpKQ21UaXY2ZDZSQURHZW56ejVKb01ySk5UaFcxcXNwVW1ZUndJb1czUk5kQ0lpcXg2Q0k2aFQ1MXZRWVZkQmM3OGM?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/25/techcrunch-disrupt-2026-ricursive-intelligences-anna-goldie-and-azalia-mirhoseini-on-when-ai-starts-designing-its-own-hardware/",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNT1VmRFk3WV9xdG9GXzU0LWppZFc5UHNweTdxcmdYMDRxdVZmeGxIcW1OM0t6R05ELVJmckJuTFRiRm1IYVYydU1ueWF5X2lxMXc4N00zb2tHbnlENWFTU0s4ZkRQSG4wNkVUTEprVGl4OU96OUl3eWFvLUVFenI0Y2tIVHp0MGJ2Wi1JbG9GS2VidF9yRUo4dG1idEwtSV8yNlFpc2dpc2R0SEdTV29TdlV4dnB1UURLVTZ4MnplY21zU0ZtOG9HQ0p3V05SclV5MElqajhOYmJCUFprdU9V?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kdlJMeHZiV1NSb3dWT3F6Y1pMdjQyNWFQSFdpTU1fbkxfZ0RXZmhLYmRKLUltYlA3MFlJZnVOMEw5eDZ0VTFrVG1Rd2Z1UHdodlk2R3FjaXlFZ1N2VXpnZw?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVzBhMkxQOFpzOVkteUV6ZzVmb09FRGw5MnROdWVZeDhkY0tYODdqMzF3dFZTRU9LSmFaMXhSbG56ajhQQVRUNk0tT18wMURRZld1dUw3bjdaRHhLNlVETW9vb0hjT2FOYXFHMzJUbUMtSlNFQTY3bFp1S1BRUkJyZkNULWM2ZWY0aDFVVkZXMU1mYzV1dEdmNWxoUllzOWZFQkFzV0dEb3UwOExCUG1mNHc1SGhIVTdvUExLZ3NSeTJmUQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE02VDZpSWpzOWRrdlRJMXkxMzBLYkdyYlpPUDFFX1ZCSzBPeHVaYVNyVjE4bmhPdC1GOVZPSHdiRGczZ29QVE5PblVXOFJVVjlweUJsUGllSV9fNXlwRVBxWHRnVXVJVUJW?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UYkVqcjdyTnc2VTJOYlJWbGJBQkZGYXpfblhsQXEzWXJjU0tmMEdUSUV4QXc1N19tWndxVGRNQVg0ZUZKU2pzaWJHSWRDakpsOWZ6TDJlVWhPUlp0NmdIbjZCLVRTV0dOV1lLSmJRdHRGSVgyQTZESUFIZl9EUQ?oc=5",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTE1XSWM0dHZXSUNnNEdvZTBaRDhBUmFFUzlQOEtJOFRadDdvZUhOVTE0Yy1FcTRGWTZOLXVicG53dFhfS2wwRjVLZmFDdzBOcjdqaHRveGpfTVhQd003ZEw3Um5DUTROTFMzME8xWkE3SzZYUVBrZkdUNmp0a2dUNWZGVDM1N1piM0RkSjVBbkx1TnFwYl95QWJjTHJqd3FxY2xBZEUxSGFfVkE3akE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdmZfdUNGN3BYN0UyOElfQWtLT2lXd2tJN3AwdkxseWVYaFJvOVB3OElTdFBYMXJPUTdjVU9UbUhUOXRWRHJrNkJib2w0TWd0dXkxZ1haNjZ5SnBrZURramk4aUZ4VHpESUVWSEU1eUxmamFCU2VQTnJBLU9wdGVMM1U4TzQwUHlEVG9TOFg2MjEtbGc?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTkJvdXMwTU8zQUtQZjlDWkJ1ZzdncHNJb01ROE5KQ2Y2Wk1ZRThlVDRjSEUwaG5VUFZCeGw2TXluTUt4elI5TGJhb3dzd1NkQkJiaEhCaXZ5Z282dkx1S1hFMFJTOGYyb0hZU0ZISXAzTWZqMzJscDRkamo5UEtMelMyS0JvUTRnMDd0SU8tWW9GMk5sMUpDRG5UMFZETXJvdm9OWTlhVGtYSXAtanI1eHMwWWZwYkVMUzRveUZCMndsOVpOZEE?oc=5",
-        "bucket": "variant"
-      },
-      {
-        "key": "https://techcrunch.com/2026/09/25/kiteworks-urges-customers-to-shut-down-their-servers-amid-imminent-threat-of-cyberattack/",
-        "bucket": "control"
-      },
-      {
-        "key": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQaGw3RlJYTjQ4WEUxOE9wb3hCSC0tVVN0UmxxcnAyZHNVNTdXOG8tcjFfOTFNaDdaWkhXU21xeml3VGlPN0wyQmNQUWRabWF4NG9zTUxlWTFScExGcUlhQVUzSWtTMXBFc3k4dDZONnBCSGlWQ2NKeEpudmloNEs5bGF3?oc=5",
-        "bucket": "control"
-      },
-      {
         "key": "https://www.theverge.com/ai-artificial-intelligence/1000784/meta-muse-filesystem",
         "bucket": "control"
       },
@@ -330,6 +278,58 @@
       {
         "key": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JY0lKNS1ELTFCUU9XSmFNZ1lzVW1tSWRnTW16V0RQZ1Jkb25aZE5mM21mY1ZzWFNSTXFuVHdub0pkeTlwcUd2NlVhQVJiSnNkQ0Q5VzRELWJtRGtiNDlxYVVxdm9PME5obkk2RWc1Yk9OWHR0VmJEeHBTb2JRSm8?oc=5",
         "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOVElNeFptdmZTaUdTcnY3WHc2Uzg4YzE5M0pXUkpoM0FoUTJDb3NIVXlWaFNlOThUazROcm9MUXZnVkZnbXRvQWdzM0lrS2l3LUptR0hiM1JMXzRoTFdmZDU1eTFuUENWT2NfSlQxMFJ5RmxUaFJxOWZ5YkdSeFliWEVzdm1TajZVTmtBVWdnVUp6S05GWEhIcA?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVDk4a000c3RTd1ctY2lGZy1wRGpVdVBWTDBMRUFkZktLck9nVVJkdkw1UmRoTE8yNlBDQ2ZfNnhnLTc3Ry0wTXU1TkYzYVRsYVdaVlRELUhZTXI1UGlVbmQ0cnR0ZDJPMC1VQUJPcjFTMzIyX1dxSklYZERPc0UwNDFsalpnRWZwUHNNWGlEVEZmSndIcUNoeDF4YWpNei1Pa3c?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPTnhsZjJCMEtycm9XbERHVkNqLUNCb3Bvc2FScHg1Um40cl9jNTgxUGs1dFBSZUhYbFlySGVydlY1NnVuUFNlaDhrSm1WNVJUU2hKRzNNZ2JvLTZzOHJDYUtKSTR4azhwQ1QxRUJUM3BNT2V0c3lZSTNmTlNkUWt3ejBNSGEzTzY1bm1tR3RpcmxscngyZTlBVTU3cmVKeGJEejlyRnF5VEtEWTQ4Y2dZVnd5MjItMVlMYkdoT1RLcVNOb0lpZjZqaUN2d2hEUjdVZkp0WHAzNFJnWUI4MFFyQ0VHS2RWQVprNlBZMUx5X1doWWJaNFdCSElvTlFPSGQxc1dBMGgwVEJSYWdHMmNXa3lLZzk?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWHJJUS1KRU5tbElCTlFrVHd6Q2JCbVM3UVU4ZWJpQVkwVVUzWHlBakd5UUQtOXdtdmw5WTlmdXBCb0d3WWNsNFdxX1VldTZpZERpLVlZMmpTbG1QZGxyN2JwX0x5b2g4WUNmNDdZVTAxNmxJWnNzNmtkcTlmei10THBJN1d1UjRialI4d01MdTJSNXVlVTR6VQ?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbWZoVWRuVFhfN1VRaWJ3QmkyNzBjdnRsQllrUnM2SkpOaWpuUXlRMEFvX3dhYi1wUHRVWGllM0prRzl1ay1UMnZ1bnAwYUFGZDdJR1lqVVJxUVVwa3E0bExwN3ctWHlPZ2wyWHJsQk5hbjBla2hNZGJRUjIyZjF0UDFQSDdya1lELWZXTDg1WWx3djRMWHczUklDbGdZSkFQcEduSU0tUGt2Q0g0aVRoQl8wRl82S3hYdkN5UmItMkZIbUZYd2lF?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONkRKOWR4aERsUjlJUC1Oc1FlNHRaeWYyaWQ1eVlESlE2cFlLcm5mMmdSUzhVWEZkaGo5RXRZVzZoWjZKRXhBZVc2WVdZVW5ENy1pcUJnLWlIck4wY2tNQWxjWkhHSVJadUZ5SnVoV0pCRmZ5eEN5SHNnOXc4d19WanZZYUFEcmdzR0FiSXc4eGNMYzZGWjdSXzQ1UDc0b21FNlRUN09lWEtEbVRyREY3WGJhdktNN3FYMzZr?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB3aEFESjgxdm55Q2diZEJfUHlXVl9yWDRPY0RfMGFsbDczdDBzMzY5MzdSRmtvTkZZZzdObUJaQlBKR05OYkVYVlZHN2pCcHNGR29DeHFkbDBHTklnZk8tTWZvQW0xamFsVVFXSGUwSmZmM2JwckpkWFplMGE?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PU3pBdGY0NWJMSWFUTFRDUGx3RklNQlNENWdlQjBiNG9meUo5andqSHFER0lkNlhEaFVwOXpLYWZseVJ1YVZsU2Q4RzBWT1RoeUhTM19YaFljM2ZHcm5yMHYxTlc?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2xZVUV0VVJxU2IwREh6REYwME1nQzBMcHVyLTBnN3M4eFdiUHRwMkxOZmEteGpGdC0za1NnRjVIdllFaUt0RmJpYW40NklQOWZYZzZGQlRGRXFLZ0tIRXRKMWVkaFFaUkVjdjNjNTZ1djZjdnRnUjJETDFzQ09aQWt3cDFqVXNFaDJuc3pRNkVYLVBZdGl2S0p2dWFSQ3FiQVVmY1M5NHo?oc=5",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSy1vbFlCQl9YY1E0cWthQWxEMW9HM1k5dTFnVG9oN2FrN1RweTJNWEM3Zk5uTzRCMkhJcGlINVhvMHZqLUFNQmw5XzlTbHdOaFZFdzY1RjM1ZDk0S19NS2hSbTRaeGtKUVhONjREbTYxUmFpS3VjQ19MeEtEU3FRNllZX2VFZE10SUpzMXJvd040YlBJczZUOEYzUU45WG02VWRFRnpuNEFodnJwZWk2R0pGN2tZR1huejRneGdGYkJXZDQ?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+        "bucket": "control"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQ0dYWVhzcDdCNlgzSERiRWxqV25ZZUpiWDN6OEpUdW5YVmtMLU0yRFp3Sm5DSks3VVExOWZBOTJHMUYwaUNGRmtseUhxc2I4czJHdzRtTmREUlVmbTJKRTFTSGNjRmczcVYweEREclZXQ0p6elcwc3huNDFwY2Vycjg1UFQwanMwQkF6VnF3RWNvT0hVbll5dTY2ZzVFdw?oc=5",
+        "bucket": "variant"
+      },
+      {
+        "key": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpKX0ZNT2R5SmROOGl4cFE3VUFoYTZFZHY2eC1ubjFsRUMwWGljMXZvY2YtOVdST0Vja0hZVHM1Q0hPdDkzc3RZT3RvVHh4bGwtOHVRa3p6WmRwOTRtUUNwbHM4aUxUT3dQelUtN0c2elgwTFhVTG51ZUZWQkJVblpqdkM5TjkwOFQw?oc=5",
+        "bucket": "control"
       }
     ]
   },
@@ -337,8 +337,8 @@
     {
       "experimentId": "headline-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
@@ -352,8 +352,8 @@
     {
       "experimentId": "intro-style",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
@@ -367,8 +367,8 @@
     {
       "experimentId": "cta-placement",
       "sample": {
-        "control": 9,
-        "variant": 11,
+        "control": 10,
+        "variant": 10,
         "total": 20
       },
       "outcomeMetrics": {
@@ -381,6 +381,6 @@
     }
   ],
   "history": {
-    "previousUpdatedAt": "2026-09-25T21:48:37.565Z"
+    "previousUpdatedAt": "2026-09-26T05:24:28.821Z"
   }
 }
