@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "generatedAt": "2026-09-25T20:56:25.753Z",
+  "generatedAt": "2026-09-26T10:33:03.438Z",
   "status": "pass",
-  "currentGeneratedArticle": "meta-s-muse-now-shows-its-entire-filesystem-to-users",
+  "currentGeneratedArticle": "jim-cramer-recommends-two-ai-stocks-that-have-risen-over-1-400-since-2023",
   "currentScore": 88,
   "identity": {
     "method": "brief.title",
@@ -342,6 +342,23 @@
       ]
     },
     {
+      "slug": "jim-cramer-recommends-two-ai-stocks-that-have-risen-over-1-400-since-2023",
+      "title": "Jim Cramer Recommends Two AI Stocks That Have Risen Over 1,400% Since 2023",
+      "category": "AI",
+      "score": 88,
+      "decision": "publish_ready",
+      "dimensions": {
+        "evidence": 69,
+        "usefulness": 95,
+        "clarity": 100,
+        "originality": 100,
+        "sourceStrength": 84
+      },
+      "reasons": [
+        "evidence confidence needs improvement"
+      ]
+    },
+    {
       "slug": "jpmorgan-s-266-000-bitcoin-valuation-vs-81-000-market-price-what-the-numbers-mean",
       "title": "JPMorgan’s $266,000 Bitcoin Valuation vs. $81,000 Market Price: What the Numbers Mean",
       "category": "Crypto",
@@ -381,16 +398,19 @@
       "slug": "meta-s-muse-now-shows-its-entire-filesystem-to-users",
       "title": "Meta’s Muse Now Shows Its Entire Filesystem to Users",
       "category": "Digital Life",
-      "score": 88,
-      "decision": "publish_ready",
+      "score": 78,
+      "decision": "review",
       "dimensions": {
-        "evidence": 82,
+        "evidence": 75,
         "usefulness": 95,
         "clarity": 100,
         "originality": 83,
-        "sourceStrength": 82
+        "sourceStrength": 41
       },
-      "reasons": []
+      "reasons": [
+        "evidence confidence needs improvement",
+        "source strength/diversity needs improvement"
+      ]
     },
     {
       "slug": "microsoft-eyes-10-b-investment-in-middle-east-tech-ai-and-digital-resilience",

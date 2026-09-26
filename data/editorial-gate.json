@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T20:56:22.717Z",
+  "generatedAt": "2026-09-26T10:32:59.090Z",
   "provider": "Groq",
   "editorial": {
     "passed": true,
@@ -22,8 +22,8 @@
       "noHighSimilaritySource": true
     },
     "metrics": {
-      "normalizedLength": 2390,
-      "sentenceCount": 15,
+      "normalizedLength": 1661,
+      "sentenceCount": 11,
       "maxSourceSimilarity": 0,
       "maxCommonPhrase": 0
     }
@@ -31,13 +31,14 @@
   "semanticDuplicateCheck": "passed",
   "sourceRelationshipCheck": "passed",
   "verifiedEvidenceDomains": [
-    "theverge.com",
-    "news.ssbcrack.com"
+    "finance.yahoo.com",
+    "aol.com",
+    "fool.com"
   ],
   "primarySourceCount": 0,
   "grounding": {
-    "sourceCount": 2,
-    "usablePassages": 20,
+    "sourceCount": 3,
+    "usablePassages": 14,
     "primarySourceCount": 0
   }
 }
