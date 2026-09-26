@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-26T16:44:14.760Z",
+  "updatedAt": "2026-09-26T21:30:21.629Z",
   "mode": "shadow",
   "policy": {
     "observationalOnly": true,
@@ -12,26 +12,26 @@
     "minimumPerformanceRuns": 5
   },
   "metrics": {
-    "runCount": 41,
+    "runCount": 42,
     "topicCount": 500,
     "articleCount": 26,
     "latestEditorialScore": 75,
-    "latestClaimConfidence": 69,
-    "latestEvidencePassRate": 27,
-    "latestEvidenceBlockRate": 10,
-    "singleSourceReadyRate": 30,
+    "latestClaimConfidence": 0,
+    "latestEvidencePassRate": 29,
+    "latestEvidenceBlockRate": 7,
+    "singleSourceReadyRate": 33,
     "publishCandidateRate": 0
   },
   "changes": {
-    "editorialScore": -1,
-    "claimConfidence": 2,
-    "evidencePassRate": -3
+    "editorialScore": 0,
+    "claimConfidence": -69,
+    "evidencePassRate": 2
   },
   "providers": {
     "Cerebras": {
       "successRate": 0,
       "successes": 0,
-      "failures": 287,
+      "failures": 294,
       "cooldownRuns": 0,
       "latestStatus": 402,
       "latestClass": "error"
@@ -46,8 +46,8 @@
     },
     "Cohere": {
       "successRate": 15,
-      "successes": 389,
-      "failures": 2272,
+      "successes": 401,
+      "failures": 2353,
       "cooldownRuns": 0,
       "latestStatus": 422,
       "latestClass": "error"
@@ -55,15 +55,15 @@
     "Gemini": {
       "successRate": 0,
       "successes": 0,
-      "failures": 1249,
+      "failures": 1293,
       "cooldownRuns": 4,
       "latestStatus": 503,
       "latestClass": "server"
     },
     "Groq": {
       "successRate": 41,
-      "successes": 1535,
-      "failures": 2246,
+      "successes": 1599,
+      "failures": 2317,
       "cooldownRuns": 2,
       "latestStatus": 200,
       "latestClass": "success"
@@ -71,15 +71,15 @@
     "OpenAI": {
       "successRate": 0,
       "successes": 0,
-      "failures": 123,
+      "failures": 126,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "quota"
     },
     "OpenRouter": {
       "successRate": 4,
-      "successes": 71,
-      "failures": 1728,
+      "successes": 73,
+      "failures": 1788,
       "cooldownRuns": 0,
       "latestStatus": 429,
       "latestClass": "rate_limit"
@@ -100,16 +100,16 @@
       }
     },
     "Crypto": {
-      "topicSamples": 117,
+      "topicSamples": 128,
       "averageScore": 72,
-      "averageConfidence": 84,
+      "averageConfidence": 85,
       "evidenceLevels": {
-        "none": 87,
-        "single-source-verified": 12,
-        "strong": 18
+        "none": 88,
+        "single-source-verified": 13,
+        "strong": 27
       },
       "decisions": {
-        "review": 111,
+        "review": 122,
         "hold": 6
       }
     },
@@ -140,27 +140,28 @@
       }
     },
     "Innovation": {
-      "topicSamples": 33,
+      "topicSamples": 27,
       "averageScore": 57,
       "averageConfidence": 60,
       "evidenceLevels": {
-        "none": 33
+        "none": 27
       },
       "decisions": {
-        "hold": 32,
+        "hold": 26,
         "review": 1
       }
     },
     "Product Launches": {
-      "topicSamples": 54,
+      "topicSamples": 49,
       "averageScore": 60,
-      "averageConfidence": 65,
+      "averageConfidence": 66,
       "evidenceLevels": {
-        "none": 40,
-        "single-source-verified": 14
+        "none": 35,
+        "single-source-verified": 13,
+        "strong": 1
       },
       "decisions": {
-        "hold": 43,
+        "hold": 38,
         "review": 11
       }
     },
@@ -169,9 +170,9 @@
       "averageScore": 69,
       "averageConfidence": 87,
       "evidenceLevels": {
-        "strong": 5,
-        "single-source-verified": 7,
-        "none": 10
+        "strong": 7,
+        "single-source-verified": 6,
+        "none": 9
       },
       "decisions": {
         "review": 22
@@ -220,19 +221,19 @@
       "id": "editorial-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average editorial score changed by -1 points versus the previous run."
+      "detail": "Average editorial score changed by +0 points versus the previous run."
     },
     {
       "id": "claim-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Average claim confidence changed by +2 points versus the previous run."
+      "detail": "Average claim confidence changed by -69 points versus the previous run."
     },
     {
       "id": "evidence-trend",
       "type": "trend",
       "confidence": "medium",
-      "detail": "Evidence pass rate changed by -3 percentage points versus the previous run."
+      "detail": "Evidence pass rate changed by +2 percentage points versus the previous run."
     },
     {
       "id": "current-bottlenecks",
@@ -247,7 +248,7 @@
     "mode": "shadow"
   },
   "source": {
-    "memoryRuns": 41,
+    "memoryRuns": 42,
     "learningVersion": 2,
     "experimentationVersion": 1
   }
